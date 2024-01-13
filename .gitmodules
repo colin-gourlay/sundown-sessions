@@ -1,0 +1,3 @@
+[submodule "sundown-sessions/themes/ananke"]
+	path = sundown-sessions/themes/ananke
+	url = https://github.com/theNewDynamic/gohugo-theme-ananke.git
