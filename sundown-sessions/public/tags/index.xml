@@ -5,7 +5,7 @@
     <link>https://example.org/tags/</link>
     <description>Recent content in Tags on Sundown Sessions</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-gb</language>
     <atom:link href="https://example.org/tags/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

@@ -1,9 +1,9 @@
 title = 'Sundown Sessions'
-
+languageCode = 'en-gb'
 
 
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
+
 theme = 'ananke'
 
 [[params.ananke_socials]]

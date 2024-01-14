@@ -1,23 +1,23 @@
 ---
-title: 'Sundown Sessions #1: Featuring The Big Now'
+title: 'Sundown Sessions #1: Broadcast DD MM YYYY'
+description: "featuring The Big Now"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
-
  
           - IST IST
-          
+                    
           - Becky Becky 
           
           - Nick Cave & The Bad Seeds
           
           - The Filthy Tongues
           
-          - and much much more...
+          - and much, much more...
 '
 featured_image: "/images/001-splash-logo.jpeg"
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-01-13T16:30:09Z
-draft: true
+draft: true 
 ---
 
 # Playlist

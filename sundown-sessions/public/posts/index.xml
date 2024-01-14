@@ -5,15 +5,15 @@
     <link>https://example.org/posts/</link>
     <description>Recent content in Posts on Sundown Sessions</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>en-gb</language>
     <lastBuildDate>Sat, 13 Jan 2024 16:30:09 +0000</lastBuildDate>
     <atom:link href="https://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Sundown Sessions #1: Featuring The Big Now</title>
+      <title>Sundown Sessions #1: Broadcast DD MM YYYY</title>
       <link>https://example.org/posts/001-sundown-sessions-featuring-the-big-now/</link>
       <pubDate>Sat, 13 Jan 2024 16:30:09 +0000</pubDate>
       <guid>https://example.org/posts/001-sundown-sessions-featuring-the-big-now/</guid>
-      <description>&lt;p&gt;Live from K107, THE SUNDOWN SESSIONS returns with&amp;hellip;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;IST IST&lt;/li&gt;&#xA;&lt;li&gt;Becky Becky&lt;/li&gt;&#xA;&lt;li&gt;Nick Cave &amp;amp; The Bad Seeds&lt;/li&gt;&#xA;&lt;li&gt;The Filthy Tongues&lt;/li&gt;&#xA;&lt;li&gt;and much much more&amp;hellip;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
+      <description>&lt;p&gt;Live from K107, THE SUNDOWN SESSIONS returns with&amp;hellip;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;IST IST&lt;/li&gt;&#xA;&lt;li&gt;Becky Becky&lt;/li&gt;&#xA;&lt;li&gt;Nick Cave &amp;amp; The Bad Seeds&lt;/li&gt;&#xA;&lt;li&gt;The Filthy Tongues&lt;/li&gt;&#xA;&lt;li&gt;and much, much more&amp;hellip;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
   </channel>
 </rss>
