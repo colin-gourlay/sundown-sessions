@@ -1,10 +1,15 @@
 title = 'Sundown Sessions'
 languageCode = 'en-gb'
+theme = 'ananke'
+
+
+
+
 
 
 baseURL = 'https://example.org/'
 
-theme = 'ananke'
+
 
 [[params.ananke_socials]]
 name = "linkedin"
