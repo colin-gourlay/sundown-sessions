@@ -3,13 +3,13 @@ title: 'Sundown Sessions #2: Broadcast DD MM YYYY'
 description: "featuring The Receiving End"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  
-          - IST IST
+          - Chikinki
                     
-          - Becky Becky 
+          - She Wants Revenge
           
-          - Nick Cave & The Bad Seeds
+          - Cocteau Twins
           
-          - The Filthy Tongues
+          - Masters Of Reality
           
           - and much, much more...
 '
