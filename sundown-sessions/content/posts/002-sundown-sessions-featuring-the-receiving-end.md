@@ -44,22 +44,22 @@ draft: true
 
 - NEWS
 
-6. White Lies - Farewell To The Fairground
-7. Chikinki - You Said
-8. The Bravery - An Honest Mistake
-9. Doves - One Of These Days
-10. Jim Morrison - A Feast Of Friends
+1. White Lies - Farewell To The Fairground (4:16)
+2. Chikinki - You Said (4:01)
+3. The Bravery - An Honest Mistake (3:39)
+4. Doves - One Of These Days (4:50)
+5. Jim Morrison - A Feast Of Friends (2:10)
 
 - ADVERTISING BREAK
 
-11. Air - Sexy Boy
-12. She Wants Revenge - These Things
-13. Ist Ist - You're Mine
-14. Nick Cave & The Bad Seeds - Jubilee Street
+1. Air - Sexy Boy (4:58)
+2. She Wants Revenge - These Things (5:12)
+3. Ist Ist - You're Mine (2:41)
+4. Nick Cave & The Bad Seeds - Jubilee Street (6:35)
 
 - ADVERTISING BREAK
 
-15. Cocteau Twins - Pink Orange Red
-16. Masters Of Reality - 100 Years (Of Tears To The Wind)
-17. The Cult - Life > Death
-18. The Filthy Tongues - Nae Tongues 
+5. Cocteau Twins - Pink Orange Red
+6. Masters Of Reality - 100 Years (Of Tears To The Wind)
+7. The Cult - Life > Death
+8. The Filthy Tongues - Nae Tongues 
