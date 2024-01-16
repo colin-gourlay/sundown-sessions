@@ -1,5 +1,7 @@
 title = 'Sundown Sessions'
 baseURL = 'http://localhost:1313/'
-languageCode = 'en-gb'
+languageCode = 'en-GB'
 theme = 'ananke'
 copyright = 'Colin Gourlay'
+enableGitInfo = 'true'
+timeZone = 'Europe/London'
