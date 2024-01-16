@@ -1,4 +1,5 @@
 title = 'Sundown Sessions'
+baseURL = 'https://example.org/'
 languageCode = 'en-gb'
 theme = 'ananke'
 
@@ -9,7 +10,7 @@ theme = 'ananke'
 
 
 
-baseURL = 'https://example.org/'
+
 
 
 
