@@ -1,25 +1,21 @@
-title = 'Sundown Sessions'
-baseURL = 'https://example.org/'
-languageCode = 'en-gb'
-theme = 'ananke'
-
-
-
-
-
-
-
-
-
-
-
-
-[[params.ananke_socials]]
+[[ananke_socials]]
 name = "linkedin"
 url = "https://www.linkedin.com/in/colingourlay"
 
 
-[params]
+
+
+
+[params.contact]
+email = 'info@example.org'
+phone = '+1 202-555-1212'
+
+
+
+
+
+
+subtitle = 'The Best Widgets on Earth'
 text_color = ""
 author = ""
 favicon = ""

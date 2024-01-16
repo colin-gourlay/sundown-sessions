@@ -1,0 +1,5 @@
+title = 'Sundown Sessions'
+baseURL = 'http://localhost:1313/'
+languageCode = 'en-gb'
+theme = 'ananke'
+copyright = 'Colin Gourlay'
