@@ -19,48 +19,51 @@ show_reading_time: true
 date: 2024-01-13T16:30:09Z
 draft: true 
 ---
+## Playlist
 
-# Playlist
-
-1. Queens Of The Stone Age - Feet Don't Fail Me (5:41)
-2. Franz Ferdinand - Take Me Out (3:57)
-3. Sparks - Propaganda (0:23)
-4. Sparks - At Home At Work At Play (3:05)
-5. Squeeze - Take Me I'm Yours (3:46)
-
-- ADVERTISING BREAK
-
-1. David Latto & The Lang Spoons - Geordie Munro (3:05)
-2. The Big Now - Fast Cars, Soul Music (4:15)
-3. The Big Now - You'll Be Sorry (3:40)
-4. Roachford - Cuddly Toy (3:48)
+1. Queens Of The Stone Age - Feet Don't Fail Me
+2. Franz Ferdinand - Take Me Out
+3. Sparks - Propaganda
+4. Sparks - At Home At Work At Play
+5. Squeeze - Take Me I'm Yours
 
 - ADVERTISING BREAK
 
-1. Ist Ist - Fat Cats Drown In Milk (3:19)
-2. Interpol - Slow Hands (3:04)
-3. Becky Becky - House Of The Black Madonna (10:16)
+1. David Latto & The Lang Spoons - Geordie Munro
+2. The Big Now - Fast Cars, Soul Music
+3. The Big Now - You'll Be Sorry
+4. Roachford - Cuddly Toy
+
+- ADVERTISING BREAK
+
+1. IST IST - Fat Cats Drown In Milk
+2. Interpol - Slow Hands
+3. Becky Becky - House Of The Black Madonna
 
 - NEWS
 
-1. The Motors - Dancing The Night Away (6:34)
-2. John Grant - Marz (3:58)
-3. Jacco Gardner - Clear The Air (3:39)
-4. Pink Floyd - See Emily Play (2:54)
-5. The Move - Hello Suzie (5:19)
+1. The Motors - Dancing The Night Away
+2. John Grant - Marz
+3. Jacco Gardner - Clear The Air
+4. Pink Floyd - See Emily Play
+5. The Move - Hello Suzie
 
 - ADVERTISING BREAK
 
-1. ELO - Four Little Diamonds (4:09)
-2. The Detroit Cobras - Cry On (2:15)
-3. The Teskey Brothers - Rain (4:14)
-4. The Vintage Explosition - Don't Knock Upon My Door (3:06)
-5. Del Shannon - Runaway (2:16)
+1. ELO - Four Little Diamonds
+2. The Detroit Cobras - Cry On
+3. The Teskey Brothers - Rain
+4. The Vintage Explosion - Don't Knock Upon My Door
+5. Del Shannon - Runaway
 
 - ADVERTISING BREAK
 
-1. Vermin Poets - Like Poets Often Do (3:18)
-2. Pavement - Here (3:56)
-3. The Velvet Underground - I'm Waiting For The Man (4:39)
-4. Nick Cave & The Bad Seeds - From Her To Eternity (5:35)
-5. The Filthy Tongues - Nae Tongues (3:13)
+1. Vermin Poets - Like Poets Often Do
+2. Pavement - Here
+3. The Velvet Underground - I'm Waiting For The Man
+4. Nick Cave & The Bad Seeds - From Her To Eternity
+5. The Filthy Tongues - Nae Tongues
+
+## Show Notes 
+
+
