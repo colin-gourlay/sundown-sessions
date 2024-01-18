@@ -48,24 +48,24 @@ draft: true
 
 - NEWS
 
-6. Simple Minds - Chelsea Girl
-7. Elvis Costello And The Attractions - (I Don't Want To Go) To Chelsea
-8. Skids - TV Stars
-9. Big Country - You Dreamer
-10. Kirsten Adamson - My Father's Songs
+1. Simple Minds - Chelsea Girl (4:34)
+2. Elvis Costello And The Attractions - (I Don't Want To Go) To Chelsea (3:10)
+3. Skids - TV Stars (1:44)
+4. Big Country - You Dreamer (4:50)
+5. Kirsten Adamson - My Father's Songs (3:19)
 
 - ADVERTISING BREAK
 
-11. Elbow - Grounds For Divorce
-12. Aimee Mann - I Should Have Known
-13. Unbelievable Truth - Building
-14. Radiohead - Paranoid Android
+1. Elbow - Grounds For Divorce (3:39)
+2. Aimee Mann - I Should Have Known (4:53)
+3. Unbelievable Truth - Building (5:03)
+4. Radiohead - Paranoid Android (6:27)
 
 - ADVERTISING BREAK
 
-15. Visage - Malpaso Man
-16. Simple Minds - Love Song
-17. Sparks - Beat The Clock
-18. Filthy Tongues - Nae Tongues
+1. Visage - Malpaso Man (4:14)
+2. Simple Minds - Love Song (5:04)
+3. Sparks - Beat The Clock (4:23)
+4. Filthy Tongues - Nae Tongues (3:13)
 
 ## Show Notes 
