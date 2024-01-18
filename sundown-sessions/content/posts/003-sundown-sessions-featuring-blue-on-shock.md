@@ -40,32 +40,32 @@ draft: true
 
 - ADVERTISING BREAK
 
-15. Depeche Mode - New Life
-16. A Projection - Darwin's Eden
-17. Ist Ist - Jennifers Lips
-18. Pete Shelley - Homosapien
-19. Magazine - The Light Pours Out Of Me
+1. Depeche Mode - New Life (3:45)
+2. A Projection - Darwin's Eden (3:47)
+3. IST IST - Jennifer's Lips (2:45)
+4. Pete Shelley - Homosapien (4:34)
+5. Magazine - The Light Pours Out Of Me (4:36)
 
 - NEWS
 
-1. Simple Minds - Chelsea Girl
-2. Elvis Costello And The Attractions - (I Don't Want To Go) To Chelsea
-3. Skids - TV Stars
-4. Big Country - You Dreamer
-5. Kirsten Adamson - My Father's Songs
+6. Simple Minds - Chelsea Girl
+7. Elvis Costello And The Attractions - (I Don't Want To Go) To Chelsea
+8. Skids - TV Stars
+9. Big Country - You Dreamer
+10. Kirsten Adamson - My Father's Songs
 
 - ADVERTISING BREAK
 
-1. Elbow - Grounds For Divorce
-2. Aimee Mann - I Should Have Known
-3. Unbelievable Truth - Building
-4. Radiohead - Paranoid Android
+11. Elbow - Grounds For Divorce
+12. Aimee Mann - I Should Have Known
+13. Unbelievable Truth - Building
+14. Radiohead - Paranoid Android
 
 - ADVERTISING BREAK
 
-1. Visage - Malpaso Man
-2. Simple Minds - Love Song
-3. Sparks - Beat The Clock
-4. Filthy Tongues - Nae Tongues
+15. Visage - Malpaso Man
+16. Simple Minds - Love Song
+17. Sparks - Beat The Clock
+18. Filthy Tongues - Nae Tongues
 
 ## Show Notes 
