@@ -26,7 +26,7 @@ draft: true
 2. Electrafixion - Lowdown
 3. A House - Call Me Blue
 4. The Tears - Refugees
-5. Red Lorry Yellow Lorry
+5. Red Lorry Yellow Lorry - Talk About The Weather
 
 - ADVERTISING BREAK
 
