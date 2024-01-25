@@ -17,7 +17,7 @@ featured_image: "/images/005-show-logo.jpeg"
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-01-20T14:30:09Z
-draft: false
+draft: true
 ---
 
 ## Playlist

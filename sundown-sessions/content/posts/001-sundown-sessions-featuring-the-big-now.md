@@ -17,7 +17,7 @@ featured_image: "/images/001-show-logo.jpeg"
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-01-13T16:30:09Z
-draft: false 
+draft: true 
 ---
 ## Playlist
 
@@ -64,6 +64,17 @@ draft: false
 4. Nick Cave & The Bad Seeds - From Her To Eternity
 5. The Filthy Tongues - Nae Tongues
 
-## Show Notes 
+## Show Notes
+
+| Artiste                        | Track    | Duration    | Notes                   |
+| ----------------------- | --- | --- | ------------------ |
+| Queens Of The Stone Age                        | Feet Don't Fail Me    | 5:41    | Opening track on the 2017 album: **Villains**                   |
+| Franz Ferdinand                        | Take Me Out    | 3:57    | Released 2004 on Domino Records. 2nd single from their eponymous debut studio album.                     |
+| Sparks                        | Propaganda    | 0:23    | Lifted from their 4th studio album **Propaganda** released 1974. Peaked at No. 9 in the U.K.                    |
+| Sparks                        | At Home At Work At Play    | 3:05    | "Propaganda/At Home, at Work, at Play" **b/w** "Marry Me"  <br>released in France as a single                   |
+| Squeeze                 | Take Me I'm Yours    | 3:46    | Released as the first single from the band's debut 1978 album **Squeeze**. The track peaked at number 19 in the UK Singles Chart in May 1978.              |
+|  |     |     |  |
+
+ 
 
 
