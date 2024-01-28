@@ -79,11 +79,12 @@ draft: true
 | Roachford | Cuddly Toy | 3:48 |  |
 | IST IST | Fat Cats Drown In Milk | 3:19 | Lifted from the 2021 Album **The Art Of Lying** |
 | Interpol | Slow Hands | 3:04 | Released as the lead single from their second studio album, **Antics** back in 2004 |
-| Becky Becky | House Of The Black Madonna | (10:16) | Kirkcaldys very own John Peel championed this band. This track was recorded exclusively for Alistair to be showcased on his Monday night slot on K107 - Art School Dancing |
+| Becky Becky | House Of The Black Madonna | 10:16 | Kirkcaldys very own John Peel championed this band. This track was recorded exclusively for Alistair to be showcased on his Monday night slot on K107 - Art School Dancing |
+| The Motors | Dancing The Night Away | 6:34 | The Motors. The rare musical conundrum that only the 70s could have thrown up. A New Wave Heavy Metal Pop Band!<br><br>Look out for the Old Grey Whistle Test performance of this - something else! |
+| John Grant | Marz | 3:58 | ASD feat. so many 'undiscovered' artists. Play the next two back to back to honor that show. <br><br>Glasgay Festival - intimate gig where his (and the songs) vulnerability really shone. We knew after that he was going to be 'big'  |
+| Jacco Gardner | Clear The Air | 3:39 | Opening track on the 2013 album **Cabinet of Curiosities** |
+| Pink Floyd | See Emily Play | 2:54 |  |
+| The Move | Hello Suzie | 5:19 | Ether - this is for you! |
 |  |  |  |  |
-
-
-
- 
 
 
