@@ -64,6 +64,7 @@ draft: true
 4. Nick Cave & The Bad Seeds - From Her To Eternity
 5. The Filthy Tongues - Nae Tongues
 
+
 ## Show Notes
 
 | Artiste | Track | Duration | Notes |
@@ -81,10 +82,16 @@ draft: true
 | Interpol | Slow Hands | 3:04 | Released as the lead single from their second studio album, **Antics** back in 2004 |
 | Becky Becky | House Of The Black Madonna | 10:16 | Kirkcaldys very own John Peel championed this band. This track was recorded exclusively for Alistair to be showcased on his Monday night slot on K107 - Art School Dancing |
 | The Motors | Dancing The Night Away | 6:34 | The Motors. The rare musical conundrum that only the 70s could have thrown up. A New Wave Heavy Metal Pop Band!<br><br>Look out for the Old Grey Whistle Test performance of this - something else! |
-| John Grant | Marz | 3:58 | ASD feat. so many 'undiscovered' artists. Play the next two back to back to honor that show. <br><br>Glasgay Festival - intimate gig where his (and the songs) vulnerability really shone. We knew after that he was going to be 'big'  |
+| John Grant | Marz | 3:58 | ASD feat. so many 'undiscovered' artists. Play the next two back to back to honor that show. <br><br>Glasgay Festival - intimate gig where his (and the songs) vulnerability really shone. We knew after that he was going to be 'big' |
 | Jacco Gardner | Clear The Air | 3:39 | Opening track on the 2013 album **Cabinet of Curiosities** |
 | Pink Floyd | See Emily Play | 2:54 |  |
 | The Move | Hello Suzie | 5:19 | Ether - this is for you! |
+| ELO | Four Little Diamonds | 4:09 | From the album Secret Messages |
+| The Detroit Cobras | Cry On | 2:15 | Untimely death of Rachel Nagy’s at the age 48. She fronted the garage rock band, known for playing covers of obscure songs from the 1960s. This is one such song lifted from their second album **Life, Love and Leaving** - originally by Irma Thomas (1961) |
+| The Teskey Brothers | Rain  | 4:14 | Otis Redding? |
+| The Vintage Explosion | Don't Knock Upon My Door  | 3:06 | Old is the new 'new'. This, believe it or not is an original composition! |
+| Del Shannon | Runaway  | 2:16 | DelaMax - This is for you! |
 |  |  |  |  |
-
+|  |  |  |  |
+|  |  |  |  |
 
