@@ -44,13 +44,13 @@ jobs:
           HUGO_ENV: production
         run: |
           hugo \
-            --source sundown-sessions \
+            --source src \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: ./sundown-sessions/public
+          path: ./src/public
 
   deploy:
     environment:
