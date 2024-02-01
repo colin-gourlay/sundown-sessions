@@ -1,6 +1,6 @@
 # Project Title
 
-![Sundown Sessions Logo](sundown-sessions/static/images/sundown-sessions-logo.jpg)
+![Sundown Sessions Logo](src/static/images/sundown-sessions-logo.jpg)
 
 ## Overview
 
