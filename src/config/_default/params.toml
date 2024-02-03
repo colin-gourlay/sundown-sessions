@@ -7,6 +7,10 @@ name = "twitter"
 url = "https://twitter.com/sundown_session"
 
 [[ananke_socials]]
+name = "mastodon"
+url = "https://mastodon.scot/@sundown_sessions"
+
+[[ananke_socials]]
 name = "linkedin"
 url = "https://www.linkedin.com/in/colingourlay"
 
