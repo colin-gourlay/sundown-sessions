@@ -1,3 +1,7 @@
+#[[ananke_socials]]
+#name = "instagram"
+#url = ""
+
 [[ananke_socials]]
 name = "facebook"
 url = "https://www.facebook.com/groups/1087350798933125"
@@ -5,6 +9,14 @@ url = "https://www.facebook.com/groups/1087350798933125"
 [[ananke_socials]]
 name = "twitter"
 url = "https://twitter.com/sundown_session"
+
+#[[ananke_socials]]
+#name = "pinterest"
+#url = ""
+
+#[[ananke_socials]]
+#name = "tiktok"
+#url = ""
 
 [[ananke_socials]]
 name = "mastodon"
