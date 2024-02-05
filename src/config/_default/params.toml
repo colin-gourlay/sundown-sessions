@@ -14,9 +14,9 @@ url = "https://twitter.com/sundown_session"
 #name = "pinterest"
 #url = ""
 
-#[[ananke_socials]]
-#name = "tiktok"
-#url = ""
+[[ananke_socials]]
+name = "tiktok"
+url = "https://www.tiktok.com/@sundownsessionsshow"
 
 [[ananke_socials]]
 name = "mastodon"
