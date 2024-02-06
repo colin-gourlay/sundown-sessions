@@ -64,6 +64,7 @@ draft: true
 3. The Cult - Life > Death
 4. The Filthy Tongues - Nae Tongues
 
+
 ## Show Notes
 
 | Artiste | Track | Duration | Notes |
@@ -72,5 +73,10 @@ draft: true
 | Frankie Goes To Hollywood | Born To Run | 3:59 | Lifted from **Welcome To The Pleasuredome** this was title track of Springsteen's third studio album album Born to Run (1975) |
 | Bauhaus | Ziggy Stardust | 3:13 | Released as their eighth single in October 1982 |
 | Far Corporation | Stairway To Heaven | 8:46 | Assembled by Frank Farian, Far Corporation was a supergroup (featuring members from Toto amongst others) that were the first act to chart with a cover version of Led Zeppelin's "Stairway to Heaven"; reached number 8 in October 1985. |
+| David Latto & The Lang Spoons | Geordie Munro | 3:05 |  |
+| The Receiving End | That's The Way I Operate | 4:22 |  |
+| The Receiving End | He's The Man | 3:56 |  |
+| The Receiving End | Nothing's Wrong | 3:57 |  |
+|  |  |  |  |
 |  |  |  |  |
 
