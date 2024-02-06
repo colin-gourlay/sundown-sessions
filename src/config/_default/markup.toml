@@ -1,0 +1,51 @@
+[goldmark]
+
+[goldmark.extensions]
+definitionList = true
+footnote = true
+linkify = true
+linkifyProtocol = 'https'
+strikethrough = true
+table = true
+taskList = true
+
+[goldmark.extensions.cjk]
+eastAsianLineBreaks = false
+eastAsianLineBreaksStyle = 'simple'
+enable = false
+escapedSpace = false
+
+[goldmark.extensions.passthrough]
+enable = false
+
+[goldmark.extensions.passthrough.delimiters]
+block = []
+inline = []
+
+[goldmark.extensions.typographer]
+apostrophe = '&rsquo;'
+disable = false
+ellipsis = '&hellip;'
+emDash = '&mdash;'
+enDash = '&ndash;'
+leftAngleQuote = '&laquo;'
+leftDoubleQuote = '&ldquo;'
+leftSingleQuote = '&lsquo;'
+rightAngleQuote = '&raquo;'
+rightDoubleQuote = '&rdquo;'
+rightSingleQuote = '&rsquo;'
+
+[markup.goldmark.parser]
+autoHeadingID = true
+autoHeadingIDType = 'github'
+wrapStandAloneImageWithinParagraph = true
+
+[goldmark.parser.attribute]
+block = false
+title = true
+
+[goldmark.renderer]
+hardWraps = false
+unsafe = false
+xhtml = false
+
