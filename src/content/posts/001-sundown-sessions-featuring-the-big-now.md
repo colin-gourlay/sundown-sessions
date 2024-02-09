@@ -103,5 +103,3 @@ draft: true
 | The Velvet Underground        | I'm Waiting For The Man    | 4:39     | Appears on the debut studio album **The Velvet Underground & Nico** (1967)                                                                                                                                                                                    |
 | Nick Cave & The Bad Seeds     | From Her To Eternity       | 5:35     | Another debut studio album! **From Her To Eternity** (1984)                                                                                                                                                                                                   |
 | The Filthy Tongues            | Nae Tongues                | 3:13     |                                                                                                                                                                                                                                                               |
-
-
