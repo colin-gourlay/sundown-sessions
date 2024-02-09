@@ -66,6 +66,14 @@ draft: true
 
 ## Show Notes
 
+### Additional Resources
+
+- The Teskey Brothers Story
+  - 180 Grams podcast: https://open.spotify.com/show/5n49kEwq2st3GST82veWoI
+
+
+### Playlist
+
 | Artiste                       | Track                      | Duration | Notes                                                                                                                                                                                                                                                         |
 |-------------------------------|----------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Queens Of The Stone Age       | Feet Don't Fail Me         | 5:41     | Opening track on the 2017 album: **Villains**                                                                                                                                                                                                                 |
