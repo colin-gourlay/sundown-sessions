@@ -20,7 +20,7 @@ date: 2024-02-06T13:30:09Z
 draft: true
 ---
 
-## Playlist
+# Playlist
 
 1. Kula Shaker - Hush
 2. Frankie Goes To Hollywood - Born To Run
@@ -67,16 +67,23 @@ draft: true
 
 ## Show Notes
 
-| Artiste | Track | Duration | Notes |
-| ---- | ---- | ---- | ---- |
-| Kula Shaker | Hush | 2:54 | Kula Shaker biggest hit.  Song written by Joe South, for Billy Joe Royal. The song was later covered by Somebody's Image n 1967. It was also covered by Deep Purple in 1968. |
-| Frankie Goes To Hollywood | Born To Run | 3:59 | Lifted from **Welcome To The Pleasuredome** this was title track of Springsteen's third studio album album Born to Run (1975) |
-| Bauhaus | Ziggy Stardust | 3:13 | Released as their eighth single in October 1982 |
-| Far Corporation | Stairway To Heaven | 8:46 | Assembled by Frank Farian, Far Corporation was a supergroup (featuring members from Toto amongst others) that were the first act to chart with a cover version of Led Zeppelin's "Stairway to Heaven"; reached number 8 in October 1985. |
-| David Latto & The Lang Spoons | Geordie Munro | 3:05 |  |
-| The Receiving End | That's The Way I Operate | 4:22 |  |
-| The Receiving End | He's The Man | 3:56 |  |
-| The Receiving End | Nothing's Wrong | 3:57 |  |
-|  |  |  |  |
-|  |  |  |  |
+### Additional Resources
+
+### Playlist
+
+| Artiste                       | Track                    | Duration | Notes                                                                                                                                                                                                                                    |
+|-------------------------------|--------------------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Kula Shaker                   | Hush                     | 2:54     | Kula Shaker biggest hit.  Song written by Joe South, for Billy Joe Royal. The song was later covered by Somebody's Image n 1967. It was also covered by Deep Purple in 1968.                                                             |
+| Frankie Goes To Hollywood     | Born To Run              | 3:59     | Lifted from **Welcome To The Pleasuredome** this was title track of Springsteen's third studio album album Born to Run (1975)                                                                                                            |
+| Bauhaus                       | Ziggy Stardust           | 3:13     | Released as their eighth single in October 1982                                                                                                                                                                                          |
+| Far Corporation               | Stairway To Heaven       | 8:46     | Assembled by Frank Farian, Far Corporation was a supergroup (featuring members from Toto amongst others) that were the first act to chart with a cover version of Led Zeppelin's "Stairway to Heaven"; reached number 8 in October 1985. |
+| David Latto & The Lang Spoons | Geordie Munro            | 3:05     |                                                                                                                                                                                                                                          |
+| The Receiving End             | That's The Way I Operate | 4:22     |                                                                                                                                                                                                                                          |
+| The Receiving End             | He's The Man             | 3:56     |                                                                                                                                                                                                                                          |
+| The Receiving End             | Nothing's Wrong          | 3:57     |                                                                                                                                                                                                                                          |
+| Royal Blood                   | Figure It Out            | 3:03     | Recorded for the the debut album **Royal Blood**. It was released as a single and peaked at number 43 in the UK singles chart in 2014                                                                                                    |  |
+| PJ Harvey                     | Sheela-na-gig            | 3:12     | The song was released as the second (and final) single from her debut studio album, **Dry**, in February 1992 peaking at number 69 in the UK singles chart                                                                               |  |
+| The White Stripes             | Seven Nation Army        | 3:52     | Opening track on their fourth studio album, **Elephant** (2003).                                                                                                                                                                         |  |
+| Manic Street Preachers        | Nobody Loved You         | 4:43     | Second single from their fifth studio album, **This Is My Truth Tell Me Yours**, which was released in September 1998                                                                                                                    |  |
+| ELO                           | Here Is The News         | 3:45     | Here Is The News!                                                                                                                                                                                                                        |  |
 
