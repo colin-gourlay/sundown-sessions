@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #017: Broadcast DD MM YYYY'
+title: 'Show #17: Broadcast DD MM YYYY'
 description: "featuring ? Gregg from Kirkcaldy AMC"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #5: Broadcast DD MM YYYY'
+title: 'Show #5: Broadcast DD MM YYYY'
 description: "featuring Linda Birrell from Breathe Easy"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

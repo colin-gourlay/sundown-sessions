@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #9: Broadcast DD MM YYYY'
+title: 'Show #9: Broadcast DD MM YYYY'
 description: "featuring ?? from Kirkcaldy & District Stroke Club"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

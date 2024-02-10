@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #7: Broadcast DD MM YYYY'
+title: 'Show #7: Broadcast DD MM YYYY'
 description: "featuring ?? from Clued Up Project"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #6: Broadcast DD MM YYYY'
+title: 'Show #6: Broadcast DD MM YYYY'
 description: "featuring ?? from Love Oor Lang Toun"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

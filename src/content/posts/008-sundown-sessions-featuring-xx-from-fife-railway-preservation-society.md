@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #8: Broadcast DD MM YYYY'
+title: 'Show #8: Broadcast DD MM YYYY'
 description: "featuring ?? from The Kingdom of Fife Railway Preservation Society"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

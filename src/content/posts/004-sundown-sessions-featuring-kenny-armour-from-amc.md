@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #4: Broadcast DD MM YYYY'
+title: 'Show #4: Broadcast DD MM YYYY'
 description: "featuring Kenny Armour from AMC"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

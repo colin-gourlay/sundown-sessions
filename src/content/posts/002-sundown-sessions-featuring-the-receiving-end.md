@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #2: Broadcast DD MM YYYY'
+title: 'Show #2: Broadcast DD MM YYYY'
 description: "featuring The Receiving End"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

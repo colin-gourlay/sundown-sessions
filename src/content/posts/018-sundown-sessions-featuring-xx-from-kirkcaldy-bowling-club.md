@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #018: Broadcast DD MM YYYY'
+title: 'Show #18: Broadcast DD MM YYYY'
 description: "featuring ? from Kirkcaldy Bowling Club"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #10: Broadcast DD MM YYYY'
+title: 'Show #10: Broadcast DD MM YYYY'
 description: "featuring ?? from Featuring xx from Fife Alcohol Support Service"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

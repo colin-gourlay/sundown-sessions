@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #3: Broadcast DD MM YYYY'
+title: 'Show #3: Broadcast DD MM YYYY'
 description: "featuring Blue On Shock"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  

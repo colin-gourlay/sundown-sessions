@@ -1,5 +1,5 @@
 ---
-title: 'Sundown Sessions #13: Broadcast DD MM YYYY'
+title: 'Show #13: Broadcast DD MM YYYY'
 description: "featuring ?? from Valleyfield Sports Hub"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  
