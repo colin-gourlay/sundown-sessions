@@ -1,3 +1,5 @@
+favicon = "favicon.ico"
+
 [[ananke_socials]]
 name = "instagram"
 url = ""
@@ -5,7 +7,6 @@ url = ""
 [[ananke_socials]]
 name = "facebook"
 url = "https://www.facebook.com/groups/1087350798933125"
-
 
 [[ananke_socials]]
 name = "twitter"
