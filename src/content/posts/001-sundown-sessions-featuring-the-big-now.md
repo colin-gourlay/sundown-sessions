@@ -64,17 +64,17 @@ draft: true
 4. Nick Cave & The Bad Seeds - From Her To Eternity
 5. The Filthy Tongues - Nae Tongues
 
-## Show Notes
+### Show Notes
 
-### Additional Resources
+##### Additional Resources:
 
 - The Teskey Brothers Story
   - 180 Grams podcast: https://open.spotify.com/show/5n49kEwq2st3GST82veWoI
 
 
-### Playlist
+##### Track Info:
 
-| Artiste                       | Track                      | Duration | Notes                                                                                                                                                                                                                                                         |
+| Artist                        | Track                      | Duration | Notes                                                                                                                                                                                                                                                         |
 |-------------------------------|----------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Queens Of The Stone Age       | Feet Don't Fail Me         | 5:41     | Opening track on the 2017 album: **Villains**                                                                                                                                                                                                                 |
 | Franz Ferdinand               | Take Me Out                | 3:57     | Released 2004 on Domino Records. 2nd single from their eponymous debut studio album.                                                                                                                                                                          |
