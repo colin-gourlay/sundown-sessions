@@ -64,7 +64,6 @@ draft: true
 3. The Cult - Life > Death
 4. The Filthy Tongues - Nae Tongues
 
-
 ## Show Notes
 
 ### Additional Resources

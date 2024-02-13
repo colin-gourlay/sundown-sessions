@@ -65,6 +65,4 @@ draft: true
 5. Furniture - Brilliant Mind
 6. The Filthy Tongues - Nae Tongues
 
-
-
 ## Show Notes 

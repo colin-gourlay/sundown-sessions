@@ -67,7 +67,5 @@ draft: true
 5. Joy Division - She's Lost Control
 6. The Filthy Tongues - Nae Tongues
 
-
-
 ## Show Notes 
 

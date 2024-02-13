@@ -57,11 +57,9 @@ draft: true
 - ADVERTISING BREAK
 
 1. Virgin Prunes - Caucasian Walk
-2. Sex Gang Children  - Sebastiane
+2. Sex Gang Children - Sebastiane
 3. Mephisto Walz - I Wanna Be Your Dog
 4. Xmal Deutshcland - Incubus Succubus
 5. The Filthy Tongues - Nae Tongues
-
-
 
 ## Show Notes 

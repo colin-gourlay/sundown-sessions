@@ -58,7 +58,7 @@ draft: true
 - ADVERTISING BREAK
 
 1. IST IST - Wolves
-2. In A Letter Form -  Terror (Is A State Of Mind)
+2. In A Letter Form - Terror (Is A State Of Mind)
 3. The Slow Readers Club - Plant The Seed
 4. The Exploding Boy - Alarms In Silence
 5. Filthy Tongues - Nae Tongues

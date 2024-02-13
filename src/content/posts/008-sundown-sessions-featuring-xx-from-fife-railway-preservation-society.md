@@ -51,7 +51,7 @@ draft: true
 - ADVERTISING BREAK
 
 1. Heaven 17 - Penthouse And Pavement
-2. BEF w. Billy Mackenzie  - The Secret Life Of Arabia
+2. BEF w. Billy Mackenzie - The Secret Life Of Arabia
 3. Visage - Visage
 4. Duran Duran - Planet Earth
 
@@ -61,7 +61,5 @@ draft: true
 2. The Rhada Krishna Temple - Govinda
 3. The Beatles - Within You Without You
 4. The Filthy Tongues - Nae Tongues
-
-
 
 ## Show Notes 

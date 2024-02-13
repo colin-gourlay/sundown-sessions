@@ -67,6 +67,4 @@ draft: true
 6. Two Fingers - Fools Rhythm
 7. The Filthy Tongues - Nae Tongues
 
-
-
 ## Show Notes
