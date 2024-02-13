@@ -19,6 +19,7 @@ show_reading_time: true
 date: 2024-02-08T20:20:00Z
 draft: true 
 ---
+
 # Playlist
 
 1. Queens Of The Stone Age - Feet Don't Fail Me
@@ -69,8 +70,7 @@ draft: true
 ##### Additional Resources:
 
 - The Teskey Brothers Story
-  - 180 Grams podcast: https://open.spotify.com/show/5n49kEwq2st3GST82veWoI
-
+    - 180 Grams podcast: https://open.spotify.com/show/5n49kEwq2st3GST82veWoI
 
 ##### Track Info:
 
