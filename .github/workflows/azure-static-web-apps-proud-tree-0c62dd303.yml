@@ -25,6 +25,8 @@ jobs:
           whoami 
       #      - name: Configure git
 #        run: git config --global --add safe.directory /github/workspace
+      - name: Correct permissions 
+        run: sudo chown -R $(whoami) /github/workspace/
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
