@@ -15,12 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
-      - name: Configure git
-        run: git config --global --add safe.directory /github/workspace
-      - uses: actions/checkout@v3
-        with:
-          submodules: false
-          lfs: false
+#      - name: Configure git
+#        run: git config --global --add safe.directory /github/workspace
+#      - uses: actions/checkout@v3
+#        with:
+#          submodules: false
+#          lfs: false
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
