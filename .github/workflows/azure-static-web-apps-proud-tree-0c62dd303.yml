@@ -29,6 +29,8 @@ jobs:
         run: git config --global --add safe.directory /github/workspace
       - name: checkout again
         uses: actions/checkout@v2
+        with:
+          submodules: true
         #sudo chown -R $(whoami) /github/workspace/
       - name: Build And Deploy
         id: builddeploy
