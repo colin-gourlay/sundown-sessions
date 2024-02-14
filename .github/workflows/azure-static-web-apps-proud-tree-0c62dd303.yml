@@ -27,6 +27,8 @@ jobs:
 #        run: git config --global --add safe.directory /github/workspace
       - name: Correct permissions 
         run: git config --global --add safe.directory /github/workspace
+      - name: checkout again
+        uses: actions/checkout@v2
         #sudo chown -R $(whoami) /github/workspace/
       - name: Build And Deploy
         id: builddeploy
