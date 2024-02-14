@@ -60,4 +60,4 @@ draft: true
 3. Hugh Cornwall - English Towns
 4. The Barracudas - Outside My Door
 5. Soen - Lotus
-6. Filthy Tongues - Nae Tongues 
+6. Filthy Tongues - Nae Tongues
