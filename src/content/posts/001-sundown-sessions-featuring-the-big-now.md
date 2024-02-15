@@ -17,7 +17,7 @@ featured_image: "/images/001-show-logo.jpeg"
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-02-08T20:20:00Z
-draft: false 
+draft: true 
 ---
 
 # Playlist
@@ -65,14 +65,13 @@ draft: false
 4. Nick Cave & The Bad Seeds - From Her To Eternity
 5. The Filthy Tongues - Nae Tongues
 
-### Show Notes
+## Show Notes
 
-##### Additional Resources:
+### Additional Resources
 
-- The Teskey Brothers Story
-    - 180 Grams podcast: https://open.spotify.com/show/5n49kEwq2st3GST82veWoI
+- The Teskey Brothers Story: [180 Grams podcast](https://open.spotify.com/show/5n49kEwq2st3GST82veWoI)
 
-##### Track Info:
+### Track Info
 
 | Artist                        | Track                      | Duration | Notes                                                                                                                                                                                                                                                         |
 |-------------------------------|----------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
