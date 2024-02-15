@@ -10,6 +10,11 @@ on:
       - main
 
 jobs:
+  setup:
+    runs-on: int-runner-set
+    container:
+      image: ci-image:v1.0.0
+      options: --user 1001
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
@@ -19,7 +24,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           submodules: true
-      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
