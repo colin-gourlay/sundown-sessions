@@ -17,9 +17,9 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v3
-      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
         with:
           submodules: true
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
       - name: Build And Deploy
         id: builddeploy
         uses: Azure/static-web-apps-deploy@v1
