@@ -18,7 +18,7 @@ jobs:
       - name: checkout
         uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: 'recursive'
           lfs: false
       - name: debugging
         run: |
@@ -26,9 +26,9 @@ jobs:
       - name: Correct permissions
         run: git config --global --add safe.directory /github/workspace
       - name: checkout again
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
-          submodules: true
+          submodules: 'recursive'
           set-safe-directory: /github/workspace
       - name: Build And Deploy
         id: builddeploy
