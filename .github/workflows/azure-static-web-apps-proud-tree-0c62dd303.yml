@@ -10,18 +10,14 @@ on:
       - main
 
 jobs:
-  fix_runner:
-    runs-on: ubuntu-latest
-    steps:
-      - name: Change Owner of Container Working Directory
-        run: chown root:root
   build_and_deploy_job:
     if: github.event_name == 'push' || (github.event_name == 'pull_request' && github.event.action != 'closed')
     runs-on: ubuntu-latest
     name: Build and Deploy Job
     steps:
       - name: checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
+      - run: git config --global --add safe.directory "$GITHUB_WORKSPACE"
         with:
           submodules: true
       - name: Build And Deploy
