@@ -1,5 +1,5 @@
 +++
-title: 'Show #{{title}}: Broadcast DD MM YYYY'
+title: 'Show #XXX: Broadcast DD MM YYYY'
 description: "featuring "
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
 
