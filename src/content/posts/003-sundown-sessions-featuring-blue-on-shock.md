@@ -20,7 +20,7 @@ date: 2024-02-07T14:30:09Z
 draft: true
 ---
 
-## Playlist
+# Playlist
 
 1. The Stranglers - 96 Tears
 2. Johnny Cash - Hurt
@@ -68,4 +68,14 @@ draft: true
 3. Sparks - Beat The Clock
 4. Filthy Tongues - Nae Tongues
 
-## Show Notes 
+## Show Notes
+
+### Additional Resources
+
+- 
+
+### Track Info
+
+| Artist | Track | Duration | Notes |
+|--------|-------|----------|-------|
+|        |       |          |       |
