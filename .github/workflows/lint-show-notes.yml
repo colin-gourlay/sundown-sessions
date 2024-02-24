@@ -1,14 +1,14 @@
-name: LintShowNotes
+name: Lint Show Notes
 
 on:
   push:
     branches:
       - main
     paths:
-      - "**/content/**/001*"
+      - "**/content/posts/001-sundown-sessions-featuring-the-big-now.md"
   pull_request:
     paths:
-      - "**/content/**/001*"
+      - "**/content/posts/001-sundown-sessions-featuring-the-big-now.md"
 
 jobs:
   lintShowNotes:
@@ -26,4 +26,4 @@ jobs:
       - name: Lint show notes
         run: |
           npm i -g markdownlint-cli2
-          markdownlint-cli2 "**/content/**/001*"
+          markdownlint-cli2 "**/content/posts/001-sundown-sessions-featuring-the-big-now.md"
