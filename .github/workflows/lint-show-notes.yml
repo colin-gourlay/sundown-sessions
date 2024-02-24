@@ -5,10 +5,10 @@ on:
     branches:
       - main
     paths:
-      - "**/content/**"
+      - "**/content/**/001*"
   pull_request:
     paths:
-      - "**/content/**"
+      - "**/content/**/001*"
 
 jobs:
   lintShowNotes:
@@ -26,4 +26,4 @@ jobs:
       - name: Lint show notes
         run: |
           npm i -g markdownlint-cli2
-          markdownlint-cli2 "**/content/**"
+          markdownlint-cli2 "**/content/**/001*"

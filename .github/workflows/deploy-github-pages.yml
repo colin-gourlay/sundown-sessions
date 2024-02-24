@@ -1,8 +1,10 @@
-name: Deploy to production
+name: Deploy to GitHub pages
 
 on:
   push:
-    branches: ["main"]
+    branches:
+      - main
+  pull_request:
 
 permissions:
   contents: read
@@ -10,7 +12,7 @@ permissions:
   id-token: write
 
 concurrency:
-  group: "pages"
+  group: pages
   cancel-in-progress: false
 
 defaults:
@@ -21,7 +23,7 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.120.4
+      HUGO_VERSION: 0.123.3
     steps:
       - name: Install Hugo CLI
         run: |
@@ -29,26 +31,24 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
       - name: Install Dart Sass
         run: sudo snap install dart-sass
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          submodules: recursive
-      - name: Setup Pages
+      - name: Checkout source using v4.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - name: Setup pages using v4.0.0
         id: pages
-        uses: actions/configure-pages@v4
+        uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
-          HUGO_ENVIRONMENT: production
-          HUGO_ENV: production
+          HUGO_ENVIRONMENT: githubPages
+          HUGO_ENV: githubPages
         run: |
           hugo \
             --source src \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Upload artifact using v3.0.1
+        uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa
         with:
           path: ./src/public
 
@@ -59,6 +59,6 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages using v4.0.4
         id: deployment
-        uses: actions/deploy-pages@v4
+        uses: actions/deploy-pages@decdde0ac072f6dcbe43649d82d9c635fff5b4e4
