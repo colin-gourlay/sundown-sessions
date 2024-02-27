@@ -1,4 +1,6 @@
 ---
+# TODO: IDENTIFY CANDIDATE TEMPLATE ITEMS BENEATH THIS TEXT
+
 title: 'Show #1: Broadcast DD MM YYYY'
 description: "featuring The Big Now"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
@@ -17,7 +19,7 @@ featured_image: "/images/001-show-logo.jpeg"
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-02-20T20:20:00Z
-draft: true 
+draft: true
 ---
 
 # Playlist
