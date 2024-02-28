@@ -1,7 +1,8 @@
 ---
+title: 'Show #1: Broadcast DD MM YYYY'
 # TODO: IDENTIFY CANDIDATE TEMPLATE ITEMS BENEATH THIS TEXT
 
-title: 'Show #1: Broadcast DD MM YYYY'
+
 description: "featuring The Big Now"
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  
