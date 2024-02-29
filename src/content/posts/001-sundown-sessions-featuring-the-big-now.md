@@ -1,5 +1,6 @@
 ---
 title: 'Show #1: Broadcast DD MM YYYY'
+slug: 'featuring-the-big-now'
 # TODO: IDENTIFY CANDIDATE TEMPLATE ITEMS BENEATH THIS TEXT
 
 

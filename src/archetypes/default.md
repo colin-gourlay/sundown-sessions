@@ -1,5 +1,7 @@
 +++
-title: 'Show #{{SHOW_NUMBER}}: Broadcast {{DD MM YYYY}}'
+title: 'Show #{{SHOW_NUMBER}}: Broadcast {{DD_MM_YYYY}}'
+slug: 'featuring-{{FEATURED_GUEST}}'
+
 
 
 description: "featuring "
