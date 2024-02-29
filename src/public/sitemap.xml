@@ -2,72 +2,53 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/posts/003-sundown-sessions-featuring-blue-on-shock/</loc>
-    <lastmod>2024-02-27T12:02:34+00:00</lastmod>
+    <loc>http://localhost:1313/shows/003-sundown-sessions-featuring-blue-on-shock/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/002-sundown-sessions-featuring-the-receiving-end/</loc>
-    <lastmod>2024-02-23T21:30:53+00:00</lastmod>
+    <loc>http://localhost:1313/shows/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/featuring-the-big-now/</loc>
-    <lastmod>2024-02-28T12:51:09+00:00</lastmod>
+    <loc>http://localhost:1313/shows/002-sundown-sessions-featuring-the-receiving-end/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/016-sundown-sessions-featuring-xx-from-kirkcaldy-blind-social-club/</loc>
-    <lastmod>2024-02-14T19:54:05+00:00</lastmod>
+    <loc>http://localhost:1313/shows/featuring-the-big-now/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/017-sundown-sessions-featuring-xx-from-/</loc>
-    <lastmod>2024-02-14T19:43:02+00:00</lastmod>
+    <loc>http://localhost:1313/shows/016-sundown-sessions-featuring-xx-from-kirkcaldy-blind-social-club/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/018-sundown-sessions-featuring-xx-from-kirkcaldy-bowling-club/</loc>
-    <lastmod>2024-02-13T15:03:34+00:00</lastmod>
+    <loc>http://localhost:1313/shows/017-sundown-sessions-featuring-xx-from-/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/015-sundown-sessions-featuring-xx-from-kirkcaldy-amateur-dramatic-society/</loc>
-    <lastmod>2024-02-14T19:57:52+00:00</lastmod>
+    <loc>http://localhost:1313/shows/018-sundown-sessions-featuring-xx-from-kirkcaldy-bowling-club/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/014-sundown-sessions-featuring-xx-from-kirkcaldy-food-bank/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/015-sundown-sessions-featuring-xx-from-kirkcaldy-amateur-dramatic-society/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/020-sundown-sessions-featuring-rvs/</loc>
-    <lastmod>2024-02-22T03:22:06+00:00</lastmod>
+    <loc>http://localhost:1313/shows/014-sundown-sessions-featuring-xx-from-kirkcaldy-food-bank/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/013-sundown-sessions-featuring-xx-from-valleyfield-sports-hub/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/020-sundown-sessions-featuring-rvs/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/012-sundown-sessions-featuring-xx-from-supported/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/013-sundown-sessions-featuring-xx-from-valleyfield-sports-hub/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/011-sundown-sessions-featuring-xx-from-hourglass-scotland/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/012-sundown-sessions-featuring-xx-from-supported/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/010-sundown-sessions-featuring-xx-from-fife-alcohol-support-service/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/011-sundown-sessions-featuring-xx-from-hourglass-scotland/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/009-sundown-sessions-featuring-xx-from-kirkcaldy-and-district-stroke-club/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/010-sundown-sessions-featuring-xx-from-fife-alcohol-support-service/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/008-sundown-sessions-featuring-xx-from-fife-railway-preservation-society/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/009-sundown-sessions-featuring-xx-from-kirkcaldy-and-district-stroke-club/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/007-sundown-sessions-featuring-xx-from-clued-up-project/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/008-sundown-sessions-featuring-xx-from-fife-railway-preservation-society/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/006-sundown-sessions-featuring-xx-from-love-our-lang-toon/</loc>
-    <lastmod>2024-02-10T23:24:10+00:00</lastmod>
+    <loc>http://localhost:1313/shows/007-sundown-sessions-featuring-xx-from-clued-up-project/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/005-sundown-sessions-featuring-linda-birrell-from-breathe-easy/</loc>
-    <lastmod>2024-02-10T23:24:10+00:00</lastmod>
+    <loc>http://localhost:1313/shows/006-sundown-sessions-featuring-xx-from-love-our-lang-toon/</loc>
   </url><url>
-    <loc>http://localhost:1313/posts/004-sundown-sessions-featuring-kenny-armour-from-amc/</loc>
-    <lastmod>2024-02-13T19:53:25+00:00</lastmod>
+    <loc>http://localhost:1313/shows/005-sundown-sessions-featuring-linda-birrell-from-breathe-easy/</loc>
+  </url><url>
+    <loc>http://localhost:1313/shows/004-sundown-sessions-featuring-kenny-armour-from-amc/</loc>
   </url><url>
     <loc>http://localhost:1313/about/</loc>
+    <lastmod>2024-02-29T00:12:07+00:00</lastmod>
   </url><url>
     <loc>http://localhost:1313/contact/</loc>
+    <lastmod>2024-02-29T00:12:07+00:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/posts/019-sundown-sessions-featuring-maggies-cancer-care/</loc>
-    <lastmod>2024-02-17T16:33:22+00:00</lastmod>
-  </url><url>
-    <loc>http://localhost:1313/posts/</loc>
-    <lastmod>2024-02-23T21:30:53+00:00</lastmod>
+    <loc>http://localhost:1313/shows/019-sundown-sessions-featuring-maggies-cancer-care/</loc>
   </url><url>
     <loc>http://localhost:1313/</loc>
     <lastmod>2024-02-13T19:53:25+00:00</lastmod>
