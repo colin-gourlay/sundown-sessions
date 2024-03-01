@@ -1,10 +1,11 @@
 ---
 title: 'Show #1: Broadcast DD MM YYYY'
 slug: 'featuring-the-big-now'
+description: 'featuring The Big Now'
 # TODO: IDENTIFY CANDIDATE TEMPLATE ITEMS BENEATH THIS TEXT
 
 
-description: "featuring The Big Now"
+
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  
           - IST IST

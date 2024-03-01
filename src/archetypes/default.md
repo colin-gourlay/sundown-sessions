@@ -1,10 +1,10 @@
 +++
-title: 'Show #{{SHOW_NUMBER}}: Broadcast {{DD_MM_YYYY}}'
-slug: 'featuring-{{FEATURED_GUEST}}'
+title: 'Show #{{SHOW_NUMBER}}: Broadcast {{BROADCAST_DATE}}'
+slug: 'featuring-{{FEATURED_GUEST_SLUG}}'
+description: 'featuring {{FEATURED_GUEST}}'
 
 
 
-description: "featuring "
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
 
           - 
