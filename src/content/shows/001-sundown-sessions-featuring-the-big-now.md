@@ -2,10 +2,6 @@
 title: 'Show #1: Broadcast DD MM YYYY'
 slug: 'featuring-the-big-now'
 description: 'featuring The Big Now'
-# TODO: IDENTIFY CANDIDATE TEMPLATE ITEMS BENEATH THIS TEXT
-
-
-
 summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
  
           - IST IST
@@ -18,6 +14,11 @@ summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
           
           - and much, much more...
 '
+# TODO: IDENTIFY CANDIDATE TEMPLATE ITEMS BENEATH THIS TEXT
+
+
+
+
 featured_image: "/images/001-show-logo.jpeg"
 read_more_copy: Show notes...
 show_reading_time: true
