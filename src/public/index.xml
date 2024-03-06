@@ -142,18 +142,18 @@
       <description>&lt;p&gt;Live from K107, THE SUNDOWN SESSIONS returns with&amp;hellip;&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;The River Detectives&lt;/li&gt;&#xA;&lt;li&gt;Angelfish&lt;/li&gt;&#xA;&lt;li&gt;Codeine Velvet Club&lt;/li&gt;&#xA;&lt;li&gt;The Exploding Boy&lt;/li&gt;&#xA;&lt;li&gt;and much, much more&amp;hellip;&lt;/li&gt;&#xA;&lt;/ul&gt;</description>
     </item>
     <item>
-      <title></title>
-      <link>http://localhost:1313/contact/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>http://localhost:1313/contact/</guid>
-      <description> Your Name Email Address An email address is required. Message </description>
-    </item>
-    <item>
       <title>About</title>
       <link>http://localhost:1313/about/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>http://localhost:1313/about/</guid>
       <description>Colin Gourlay in Studio 2 at K107 (Dec 2023) The Sundown Sessions is a show broadcast from the K107 radio station in Kirkcaldy, Scotland. The show can be heard on the FM frequency at 107.1 and is also streamed online.&#xA;The purpose and aims of the show include:&#xA;Community Engagement: To engage with and serve the local community by providing relevant programming and information.&#xA;Local News and Information: The sharing of local news, events, and information to keep listeners informed about what&amp;rsquo;s happening in the area.</description>
+    </item>
+    <item>
+      <title>Contact</title>
+      <link>http://localhost:1313/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>http://localhost:1313/contact/</guid>
+      <description>Would you like to dedicate a song request to someone special? Is your charity or local organization interested in joining the show to raise awareness for your cause? Are you a local band with upcoming gigs you want to share with our listeners? Are you a local band seeking exposure on the airwaves? Do you have any feedback for the show? Your input is invaluable for our continuous improvement. Your Name Email Address An email address is required.</description>
     </item>
     <item>
       <title>Show #19: Broadcast DD MM YYYY</title>
