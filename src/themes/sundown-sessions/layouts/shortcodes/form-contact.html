@@ -19,6 +19,8 @@
 
 </form>
 
+<div id="toast" style="display: none;">Form submitted successfully!</div>
+
 <script>
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
@@ -38,11 +40,14 @@
             .then(data => {
                 // Handle success response
                 console.log(data);
+                // Display toast
+                document.getElementById('toast').style.display = 'block';
+                // Clear form fields
+                document.getElementById('contact-form').reset();
             })
             .catch(error => {
                 // Handle error
                 console.error('There was a problem with your fetch operation:', error);
             });
     });
-
 </script>
