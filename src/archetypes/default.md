@@ -18,10 +18,6 @@ featured_image: '/images/{{SHOW_NUMBER}}-show-logo.jpeg'
 read_more_copy: 'Show notes...'
 show_reading_time: true
 date: '{{BROADCAST_DATE}}T{{SHOW_TIME}}'
-
-
-
-
 draft: true
 +++
 
