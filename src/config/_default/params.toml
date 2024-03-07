@@ -1,4 +1,5 @@
 favicon = "favicon.ico"
+custom_css = ["css/tables.css"]
 
 [[ananke_socials]]
 name = "instagram"
