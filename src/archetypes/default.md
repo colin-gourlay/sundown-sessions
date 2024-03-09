@@ -21,30 +21,10 @@ date: '{{BROADCAST_DATE}}T{{SHOW_TIME}}'
 draft: true
 +++
 
-# Playlist
+{{< include_content "/shows/{{SHOW_NUMBER}}/playlist" >}}
 
-1. 
 
-- ADVERTISING BREAK
 
-1. David Latto & The Lang Spoons - Geordie Munro
-
-- ADVERTISING BREAK
-
-1. 
-
-NEWS
-
-1. 
-
-- ADVERTISING BREAK
-
-1. 
-
-- ADVERTISING BREAK
-
-1. 
-2. The Filthy Tongues - Nae Tongues
 
 ## Show Notes
 
