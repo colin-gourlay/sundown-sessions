@@ -14,7 +14,7 @@ summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
 
           - and much, much more...
 '
-featured_image: '/images/{{SHOW_NUMBER}}-show-logo.jpeg'
+featured_image: '{{SHOW_NUMBER}}-show-logo.jpeg'
 read_more_copy: 'Show notes...'
 show_reading_time: true
 date: '{{BROADCAST_DATE}}T{{SHOW_TIME}}'
