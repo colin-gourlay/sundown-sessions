@@ -20,13 +20,11 @@ show_reading_time: true
 date: '{{BROADCAST_DATE}}T{{SHOW_TIME}}'
 draft: true
 +++
-
 {{< include_content "/shows/{{SHOW_NUMBER}}/playlist" >}}
+{{< include_content "/shows/{{SHOW_NUMBER}}/show-notes" >}}
 
 
 
-
-## Show Notes
 
 ### Additional Resources
 
