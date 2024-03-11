@@ -21,11 +21,15 @@ date: 2024-02-20T20:20:00Z
 draft: true
 ---
 {{< include_content "/shows/1/playlist" >}}
+
+---
+
 {{< include_content "/shows/1/show-notes" >}}
-
-
-
 {{< include_content "/shows/1/additional-resources" >}}
+
+
+
+
 {{< include_content "/shows/1/track-info" >}}
 
 
