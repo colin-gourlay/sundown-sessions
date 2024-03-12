@@ -1,25 +1,3 @@
----
-title: 'Show #4: Broadcast DD MM YYYY'
-description: "featuring Kenny Armour from AMC"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - The River Detectives
-                    
-          - Angelfish
-          
-          - Codeine Velvet Club
-          
-          - The Exploding Boy
-          
-          - and much, much more...
-'
-featured_image: "/images/004-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-19T14:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. The Silencers - I Can Feel It
@@ -62,5 +40,3 @@ draft: true
 3. The Slow Readers Club - Plant The Seed
 4. The Exploding Boy - Alarms In Silence
 5. Filthy Tongues - Nae Tongues
-
-## Show Notes 

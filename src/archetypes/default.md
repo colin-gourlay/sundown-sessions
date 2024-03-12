@@ -27,15 +27,4 @@ draft: true
 
 {{< include_content "/shows/{{SHOW_NUMBER}}/show-notes" >}}
 {{< include_content "/shows/{{SHOW_NUMBER}}/additional-resources" >}}
-
-
-
-
-### Additional Resources
-
-- 
-
-### Track Info
-
-| Artist                        | Track                      | Duration | Notes                                                                                                                                                                                                                                                         |
-|-------------------------------|----------------------------|----------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+{{< include_content "/shows/{{SHOW_NUMBER}}/track-info" >}}

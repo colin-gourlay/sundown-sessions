@@ -24,10 +24,6 @@ draft: true
 
 ---
 
-
 {{< include_content "/shows/2/show-notes" >}}
 {{< include_content "/shows/2/additional-resources" >}}
-
-
-
 {{< include_content "/shows/2/track-info" >}}
