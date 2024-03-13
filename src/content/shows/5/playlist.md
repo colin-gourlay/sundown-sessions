@@ -1,25 +1,3 @@
----
-title: 'Show #5: Broadcast DD MM YYYY'
-description: "featuring Linda Birrell from Breathe Easy"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Red Lorry Yellow Lorry
-                    
-          - Grinderman
-          
-          - Becky Becky
-          
-          - The House Of Love
-          
-          - and much, much more...
-'
-featured_image: "/images/005-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-20T14:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. Inspiral Carpets - Bitches Brew
@@ -62,5 +40,3 @@ draft: true
 3. Sixpence None The Richer - Us
 4. Propaganda - Sorry For Laughing
 5. The Filthy Tongues - Nae Tongues
-
-## Show Notes 
