@@ -1,25 +1,3 @@
----
-title: 'Show #6: Broadcast DD MM YYYY'
-description: "featuring ?? from Love Oor Lang Toun"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Wizzard
-                    
-          - Magazine
-          
-          - Southern Death Cult
-          
-          - Talking Heads
-          
-          - and much, much more...
-'
-featured_image: "/images/006-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-21T14:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. The Freshies - I'm In Love With The Girl On The Manchester Virgin Megastore Checkout Desk
@@ -63,5 +41,3 @@ draft: true
 4. Comsat Angels - Independence Day
 5. Talking Heads - Psycho Killer
 6. The Filthy Tongues - Nae Tongues
-
-## Show Notes 

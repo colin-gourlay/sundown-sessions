@@ -20,10 +20,10 @@ show_reading_time: true
 date: 2024-01-20T14:30:09Z
 draft: true
 ---
-{{< include_content "/shows/4/playlist" >}}
+{{< include_content "/shows/5/playlist" >}}
 
 ---
 
-{{< include_content "/shows/4/show-notes" >}}
-{{< include_content "/shows/4/additional-resources" >}}
-{{< include_content "/shows/4/track-info" >}}
+{{< include_content "/shows/5/show-notes" >}}
+{{< include_content "/shows/5/additional-resources" >}}
+{{< include_content "/shows/5/track-info" >}}
