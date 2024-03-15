@@ -1,25 +1,3 @@
----
-title: 'Show #7: Broadcast DD MM YYYY'
-description: "featuring ?? from Clued Up Project"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Skeletal Family
-                    
-          - Gaye Bykers On Acid
-          
-          - Virgin Prunes
-          
-          - Sex Gang Children
-          
-          - and much, much more...
-'
-featured_image: "/images/007-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-22T14:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. Fields Of The Nephilim - Moonchild
@@ -61,5 +39,3 @@ draft: true
 3. Mephisto Walz - I Wanna Be Your Dog
 4. Xmal Deutshcland - Incubus Succubus
 5. The Filthy Tongues - Nae Tongues
-
-## Show Notes 

@@ -2,7 +2,7 @@
 title: 'Show #6: Broadcast DD MM YYYY'
 slug: 'featuring-XX-love-oor-lang-toun'
 description: 'featuring ?? from Love Oor Lang Toun'
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
+summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
  
           - Wizzard
                     
