@@ -1,7 +1,7 @@
 ---
 title: 'Show #8: Broadcast DD MM YYYY'
 slug: 'featuring-XX-kingdom-of-fife-railway-preservation-society'
-description: "featuring ?? from The Kingdom of Fife Railway Preservation Society"
+description: 'featuring ?? from The Kingdom of Fife Railway Preservation Society'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
  
           - Dragons
@@ -14,7 +14,7 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
           
           - and much, much more...
 '
-featured_image: "/images/8-show-logo.jpeg"
+featured_image: '/images/8-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-01-22T15:30:09Z
