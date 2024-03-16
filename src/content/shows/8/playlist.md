@@ -1,25 +1,3 @@
----
-title: 'Show #8: Broadcast DD MM YYYY'
-description: "featuring ?? from The Kingdom of Fife Railway Preservation Society"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Dragons
-                    
-          - Fingerprintz
-          
-          - B.E.F.
-          
-          - The Beatles
-          
-          - and much, much more...
-'
-featured_image: "/images/008-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-22T15:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. Elbow - Leaders Of The Free World
@@ -61,5 +39,3 @@ draft: true
 2. The Rhada Krishna Temple - Govinda
 3. The Beatles - Within You Without You
 4. The Filthy Tongues - Nae Tongues
-
-## Show Notes 
