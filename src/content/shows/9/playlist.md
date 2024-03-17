@@ -1,25 +1,3 @@
----
-title: 'Show #9: Broadcast DD MM YYYY'
-description: "featuring ?? from Kirkcaldy & District Stroke Club"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Death Cult
-                    
-          - The Mission
-          
-          - The The
-          
-          - Icicle Works
-          
-          - and much, much more...
-'
-featured_image: "/images/009-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-26T15:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. Razorlight - Get It And Go
@@ -64,5 +42,3 @@ draft: true
 4. Conrad Keely - Original Machines
 5. Furniture - Brilliant Mind
 6. The Filthy Tongues - Nae Tongues
-
-## Show Notes 
