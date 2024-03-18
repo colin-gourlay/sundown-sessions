@@ -1,5 +1,5 @@
 ---
-title: 'Show #2: Broadcast DD MM YYYY'
+title: 'Show #2: Broadcast 12th June 2024'
 slug: 'featuring-the-receiving-end'
 description: 'featuring The Receiving End'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
@@ -14,11 +14,17 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
           
           - and much, much more...
 '
+keywords:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
 featured_image: '2-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-02-21T20:20:00Z
-draft: true
+date: 2024-06-12T22:00:00Z
+draft: false
 ---
 {{< include_content "/shows/2/playlist" >}}
 

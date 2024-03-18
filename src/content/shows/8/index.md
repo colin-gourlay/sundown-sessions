@@ -14,6 +14,12 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
           
           - and much, much more...
 '
+keywords:
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
 featured_image: '8-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true

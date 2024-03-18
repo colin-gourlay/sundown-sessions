@@ -28,6 +28,12 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
           - and much, much more...
 '
+keywords: 
+  - '$FEATURED_GUEST'
+  - '$FEATURED_ARTIST_1'
+  - '$FEATURED_ARTIST_2'
+  - '$FEATURED_ARTIST_3'
+  - '$FEATURED_ARTIST_4'
 featured_image: '$SHOW_NUMBER-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true

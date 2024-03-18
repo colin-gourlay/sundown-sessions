@@ -1,3 +1,4 @@
+<!-- TODO: CG to complete... -->
 <!DOCTYPE html>
 <html lang="{{ site.LanguageCode | default site.Language.Lang  }}" {{- with partialCached "func/GetLanguageDirection" "GetLanguageDirection" }} dir="{{ . }}" {{- end }}>
   <head>
@@ -37,6 +38,11 @@
       <link rel="canonical" href="{{ .Permalink }}">
     {{ end }}
 
+    {{ with .Params.keywords }}
+    <meta name="keywords" content="{{ delimit . ", " }}">
+    {{ end }}
+    
+    
     {{/* NOTE: These Hugo Internal Templates can be found starting at https://github.com/gohugoio/hugo/tree/master/tpl/tplimpl/embedded/templates */}}
     {{- template "_internal/opengraph.html" . -}}
     {{- template "_internal/schema.html" . -}}
@@ -46,6 +52,7 @@
       {{ template "_internal/google_analytics.html" . }}
     {{ end }}
 	{{ block "head" . }}{{ partial "head-additions.html" . }}{{ end }}
+    
   </head>
 
   <body class="ma0 {{ $.Param "body_classes"  | default "avenir bg-near-white"}}{{ with getenv "HUGO_ENV" }} {{ . }}{{ end }}">

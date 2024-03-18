@@ -14,6 +14,12 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
           
           - and much, much more...
 '
+keywords: 
+  - 'The Big Now'
+  - 'IST IST'
+  - 'Becky Becky'
+  - 'Nick Cave & The Bad Seeds'
+  - 'The Filthy Tongues'
 featured_image: '1-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
