@@ -1,8 +1,8 @@
 ---
-title: 'Show #10: Broadcast DD MM YYYY'
+title: 'Show #10: Broadcast 7th August 2024'
 slug: 'featuring-XX-fife-alcohol-support-service'
-description: 'featuring ?? from Featuring xx from Fife Alcohol Support Service'
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
+description: 'featuring ?? from Fife Alcohol Support Service'
+summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
  
           - Porcupine Tree 
                     
@@ -15,16 +15,16 @@ summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
           - and much, much more...
 '
 keywords:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '?? from Fife Alcohol Support Service'
+  - 'Porcupine Tree'
+  - 'Teenage Fanclub'
+  - 'Dr. Feelgood'
+  - 'The Stranglers'
 featured_image: '10-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-01-27T15:30:09Z
-draft: true
+date: 2024-08-10T22:00:00Z
+draft: false
 ---
 {{< include_content "/shows/10/playlist" >}}
 

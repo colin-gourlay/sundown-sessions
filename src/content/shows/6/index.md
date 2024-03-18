@@ -1,5 +1,5 @@
 ---
-title: 'Show #6: Broadcast DD MM YYYY'
+title: 'Show #6: Broadcast 10th July 2024'
 slug: 'featuring-XX-love-oor-lang-toun'
 description: 'featuring ?? from Love Oor Lang Toun'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
@@ -15,16 +15,16 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
           - and much, much more...
 '
 keywords:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '?? from Love Oor Lang Toun'
+  - 'Wizzard'
+  - 'Magazine'
+  - 'Southern Death Cult'
+  - 'Talking Heads'
 featured_image: '6-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-01-21T14:30:09Z
-draft: true
+date: 2024-07-10T22:00:00Z
+draft: false
 ---
 {{< include_content "/shows/6/playlist" >}}
 

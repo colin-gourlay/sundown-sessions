@@ -15,11 +15,11 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
           - and much, much more...
 '
 keywords:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - 'The Receiving End'
+  - 'Chikinki'
+  - 'She Wants Revenge'
+  - 'Cocteau Twins'
+  - 'Masters Of Reality'
 featured_image: '2-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true

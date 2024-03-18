@@ -1,5 +1,5 @@
 ---
-title: 'Show #7: Broadcast DD MM YYYY'
+title: 'Show #7: Broadcast 17th July 2024'
 slug: 'featuring-XX-clued-up-project'
 description: "featuring ?? from Clued Up Project"
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
@@ -15,16 +15,16 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
           - and much, much more...
 '
 keywords:
-  - ''
-  - ''
-  - ''
-  - ''
-  - ''
+  - '?? from Clued Up Project'
+  - 'Skeletal Family'
+  - 'Gaye Bykers On Acid'
+  - 'Virgin Prunes'
+  - 'Sex Gang Children'
 featured_image: '7-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-01-22T14:30:09Z
-draft: true
+date: 2024-07-17T22:00:00Z
+draft: false
 ---
 {{< include_content "/shows/7/playlist" >}}
 
