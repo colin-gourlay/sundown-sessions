@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script to generate a markdown file
+# TODO: CG to complete...
 # Usage: ./new-show.sh 1 '5th June 2024' 'the-big-now' 'The Big Now' 'IST IST' 'Becky Becky' 'Nick Cave & The Bad Seeds' 'The Filthy Tongues' '2024-06-05T22:00:00Z'
 SHOW_NUMBER=$1
 BROADCAST_DATE=$2
