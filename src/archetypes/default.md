@@ -1,30 +1,29 @@
-+++
-title: 'Show #{{SHOW_NUMBER}}: Broadcast {{BROADCAST_DATE}}'
-slug: 'featuring-{{FEATURED_GUEST_SLUG}}'
-description: 'featuring {{FEATURED_GUEST}}'
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
-          
-          - {{FEATURED_ARTIST_1}}
+---
+title: 'Show #1: Broadcast 5th June 2024'
+slug: 'featuring-the-big-now'
+description: 'featuring The Big Now'
+summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
-          - {{FEATURED_ARTIST_2}}
+          - IST IST
 
-          - {{FEATURED_ARTIST_3}}
+          - Becky Becky
 
-          - {{FEATURED_ARTIST_4}}
+          - Nick Cave & The Bad Seeds
+
+          - The Filthy Tongues
 
           - and much, much more...
 '
-featured_image: '{{SHOW_NUMBER}}-show-logo.jpeg'
-read_more_copy: 'Show notes...'
+featured_image: '1-show-logo.jpeg'
+read_more_copy: Show notes...
 show_reading_time: true
-date: '{{BROADCAST_DATE}}T{{SHOW_TIME}}'
+date: '2024-06-05T22:00:00Z'
 draft: true
-+++
-{{< include_content "/shows/{{SHOW_NUMBER}}/playlist" >}}
+---
+{{< include_content "/shows/1/playlist" >}}
 
 ---
 
-
-{{< include_content "/shows/{{SHOW_NUMBER}}/show-notes" >}}
-{{< include_content "/shows/{{SHOW_NUMBER}}/additional-resources" >}}
-{{< include_content "/shows/{{SHOW_NUMBER}}/track-info" >}}
+{{< include_content "/shows/1/show-notes" >}}
+{{< include_content "/shows/1/additional-resources" >}}
+{{< include_content "/shows/1/track-info" >}}
