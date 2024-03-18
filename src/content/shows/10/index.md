@@ -23,7 +23,7 @@ keywords:
 featured_image: '10-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-08-10T22:00:00Z
+date: 2024-08-07T22:00:00Z
 draft: false
 ---
 {{< include_content "/shows/10/playlist" >}}

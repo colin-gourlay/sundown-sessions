@@ -1,25 +1,3 @@
----
-title: 'Show #11: Broadcast DD MM YYYY'
-description: "featuring ?? from Featuring xx from HourGlass Scotland"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Edgar Broughton Band  
-                    
-          - The Detroit Cobras
-          
-          - CousteauX
-          
-          - Wire
-          
-          - and much, much more...
-'
-featured_image: "/images/011-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-28T15:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. Love - My Flash On You
@@ -66,6 +44,3 @@ draft: true
 4. Sea Power - Remember Me
 5. Joy Division - She's Lost Control
 6. The Filthy Tongues - Nae Tongues
-
-## Show Notes 
-
