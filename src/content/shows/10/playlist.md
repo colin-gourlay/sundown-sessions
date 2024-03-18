@@ -1,25 +1,3 @@
----
-title: 'Show #10: Broadcast DD MM YYYY'
-description: "featuring ?? from Featuring xx from Fife Alcohol Support Service"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Porcupine Tree 
-                    
-          - Teenage Fanclub
-          
-          - Dr. Feelgood
-          
-          - The Stranglers
-          
-          - and much, much more...
-'
-featured_image: "/images/010-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-27T15:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. Jackie Lomax - Sour Milk Sea
@@ -66,5 +44,3 @@ draft: true
 5. Martha & The Muffins - Echo Beach
 6. Two Fingers - Fools Rhythm
 7. The Filthy Tongues - Nae Tongues
-
-## Show Notes
