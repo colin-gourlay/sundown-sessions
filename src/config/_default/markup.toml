@@ -9,6 +9,9 @@ strikethrough = true
 table = true
 taskList = true
 
+
+
+
 [goldmark.extensions.cjk]
 eastAsianLineBreaks = false
 eastAsianLineBreaksStyle = 'simple'
@@ -48,4 +51,8 @@ title = true
 hardWraps = false
 unsafe = false
 xhtml = false
+
+#[goldmark.renderer.extensions]
+#linkify = true
+
 

@@ -1,10 +1,10 @@
 # Playlist
 
-1. Queens Of The Stone Age - Feet Don't Fail Me
-2. Franz Ferdinand - Take Me Out
-3. Sparks - Propaganda
-4. Sparks - At Home At Work At Play
-5. Squeeze - Take Me I'm Yours
+1. {{< artist-wikilink "Queens Of The Stone Age" >}} - Feet Don't Fail Me
+2. {{< artist-wikilink "Franz Ferdinand" >}} - Take Me Out
+3. {{< artist-wikilink "Sparks" >}} - Propaganda
+4. {{< artist-wikilink "Sparks" >}} - At Home At Work At Play
+5. {{< artist-wikilink "Squeeze" >}} - Take Me I'm Yours
 
 - ADVERTISING BREAK
 
