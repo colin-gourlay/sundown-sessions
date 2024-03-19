@@ -1,25 +1,3 @@
----
-title: 'Show #12: Broadcast DD MM YYYY'
-description: "featuring ?? from SupportED -The Linda Tremble Foundation"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - The Exploding Boy 
-                    
-          - The Wolfmen
-          
-          - Department S
-          
-          - Southern Death Cult
-          
-          - and much, much more...
-'
-featured_image: "/images/012-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-29T15:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. Bauhaus - International Bulletproof Talent
@@ -63,6 +41,3 @@ draft: true
 3. Department S - Is Vic There
 4. Southern Death Cult - Flowers In The Forest
 5. The Filthy Tongues - Nae Tongues
-
-## Show Notes 
-
