@@ -36,7 +36,7 @@
 
 - ADVERTISING BREAK
 
-1. Dave Edmnuds - Girls Talk
+1. Dave Edmunds - Girls Talk
 2. Nick Lowe - Cruel To Be Kind
 3. Department S - Is Vic There
 4. Southern Death Cult - Flowers In The Forest

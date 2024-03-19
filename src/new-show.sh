@@ -70,7 +70,7 @@ EOF
 cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
 ## Playlist
 
-1. 
+1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 
 - ADVERTISING BREAK
 
@@ -78,19 +78,19 @@ cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
 
 - ADVERTISING BREAK
 
-1. 
+1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 
 - NEWS
 
-1. 
+1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 
 - ADVERTISING BREAK
 
-1. 
+1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 
 - ADVERTISING BREAK
 
-1. 
+1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 2. The Filthy Tongues - Nae Tongues
 
 EOF

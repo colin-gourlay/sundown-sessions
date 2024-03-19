@@ -8,10 +8,10 @@
 
 - ADVERTISING BREAK
 
-1. David Latto & The Lang Spoons - Geordie Munro
-2. The Big Now - Fast Cars, Soul Music
-3. The Big Now - You'll Be Sorry
-4. Roachford - Cuddly Toy
+1. {{< artist-wikilink "David Latto & The Lang Spoons" >}} - Geordie Munro
+2. {{< artist-wikilink "The Big Now" >}} - Fast Cars, Soul Music
+3. {{< artist-wikilink "The Big Now" >}} - You'll Be Sorry
+4. {{< artist-wikilink "Roachford" >}} - Cuddly Toy
 
 - ADVERTISING BREAK
 
