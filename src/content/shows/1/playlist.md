@@ -15,9 +15,9 @@
 
 - ADVERTISING BREAK
 
-1. IST IST - Fat Cats Drown In Milk
-2. Interpol - Slow Hands
-3. Becky Becky - House Of The Black Madonna
+1. {{< artist-wikilink "IST IST" >}} - Fat Cats Drown In Milk
+2. {{< artist-wikilink "Interpol" >}} - Slow Hands
+3. {{< artist-wikilink "Becky Becky" >}} - House Of The Black Madonna
 
 - NEWS
 
