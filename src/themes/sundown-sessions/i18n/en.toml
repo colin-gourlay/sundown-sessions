@@ -1,9 +1,6 @@
 [more]
 other = "More"
 
-[allTitle]
-other = "All {{.Title }}"
-
 [recentTitle]
 other = "Recent {{.Title }}"
 
