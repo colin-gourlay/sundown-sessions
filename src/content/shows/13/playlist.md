@@ -1,25 +1,3 @@
----
-title: 'Show #13: Broadcast DD MM YYYY'
-description: "featuring ?? from Valleyfield Sports Hub"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - A Projection
-                    
-          - Aimee Mann
-          
-          - Kitchens Of Distinction
-          
-          - Blackfield
-          
-          - and much, much more...
-'
-featured_image: "/images/013-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-01-30T15:30:09Z
-draft: true
----
-
 ## Playlist
 
 1. Stranglers - Big In America
@@ -62,7 +40,3 @@ draft: true
 2. Porcupine Tree - Open Car
 3. Metallica - Call Of Ktulu
 4. The Filthy Tongues - Nae Tongues
-
-## Show Notes 
-
-
