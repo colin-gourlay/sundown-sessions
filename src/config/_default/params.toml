@@ -1,5 +1,6 @@
 favicon = "favicon.ico"
 custom_css = ["css/tables.css"]
+mainSections = ["shows"]
 
 #[[ananke_socials]]
 #name = "instagram"
