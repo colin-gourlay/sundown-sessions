@@ -30,7 +30,7 @@ draft: true
 
 - ADVERTISING BREAK
 
-1. David Latto & The Lang Spoons - Geordie Munro
+1. David Latto - Geordie Munro
 2. Interview with ?? from Kirkcaldy Amateur Dramatic Society
 
 - ADVERTISING BREAK

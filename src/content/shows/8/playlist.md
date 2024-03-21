@@ -7,7 +7,7 @@
 
 - ADVERTISING BREAK
 
-1. David Latto & The Lang Spoons - Geordie Munro
+1. David Latto - Geordie Munro
 2. Interview with ?? from The Kingdom of Fife Railway Preservation Society
 
 - ADVERTISING BREAK

@@ -29,7 +29,7 @@ draft: true
 
 - ADVERTISING BREAK
 
-1. David Latto & The Lang Spoons - Geordie Munro
+1. David Latto - Geordie Munro
 2. Interview with ?? from Kirkcaldy Foodbank
 
 - ADVERTISING BREAK
@@ -76,7 +76,7 @@ scratch
 
 - ADVERTISING BREAK
 
-1. David Latto & The Lang Spoons - Geordie Munro 3:05
+1. David Latto - Geordie Munro 3:05
 2. Interview with ?? from Kirkcaldy Foodbank
 
 - ADVERTISING BREAK

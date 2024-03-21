@@ -1,6 +1,6 @@
 # TODO: CG to complete
 
-- [x] show logo
+- [ ] show logo
 - [ ] additional resources
 - [ ] index
 - [ ] playlist

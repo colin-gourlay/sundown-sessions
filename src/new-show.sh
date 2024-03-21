@@ -74,7 +74,7 @@ cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
 
 - ADVERTISING BREAK
 
-1. David Latto & The Lang Spoons - Geordie Munro
+1. David Latto - Geordie Munro
 
 - ADVERTISING BREAK
 

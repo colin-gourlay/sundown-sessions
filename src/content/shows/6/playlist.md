@@ -9,7 +9,7 @@
 
 - ADVERTISING BREAK
 
-7. David Latto & The Lang Spoons - Geordie Munro
+7. David Latto - Geordie Munro
 8. Interview with ?? from Love Oor Lang Toun
 
 - ADVERTISING BREAK

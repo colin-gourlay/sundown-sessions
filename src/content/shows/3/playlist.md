@@ -10,7 +10,7 @@
 
 - ADVERTISING BREAK
 
-1. David Latto & The Lang Spoons - Geordie Munro
+1. David Latto - Geordie Munro
 2. Blue On Shock - Love Is A Venture
 3. Blue On Shock - Brand New Chevy
 4. Blue On Shock - The Fighting's Never Won
