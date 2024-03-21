@@ -68,13 +68,13 @@ draft: true
 EOF
 
 cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
-## Playlist
+# Playlist
 
 1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 
 - ADVERTISING BREAK
 
-1. David Latto - Geordie Munro
+1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
 
 - ADVERTISING BREAK
 
