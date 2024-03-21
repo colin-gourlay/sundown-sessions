@@ -3,6 +3,6 @@
 - [ ] show logo
 - [ ] additional resources
 - [ ] index
-- [ ] playlist
+- [x] playlist
 - [ ] show notes
 - [ ] track info
