@@ -1,6 +1,6 @@
 ---
-title: 'Squeeze (2)'
-featured_image: 'artists/squeeze-2.jpg'
+title: 'Squeeze'
+featured_image: 'artists/squeeze.jpg'
 ---
 Rock to New Wave band, formed in March 1974 in London, UK.
 Jools Holland played the keyboards from 1974 to 1980 and 1985 to 1990.
