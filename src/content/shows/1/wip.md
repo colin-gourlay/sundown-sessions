@@ -2,7 +2,7 @@
 
 - [x] show logo
 - [ ] additional resources
-- [ ] index
+- [x] index
 - [x] playlist
 - [ ] show notes
 - [ ] track info

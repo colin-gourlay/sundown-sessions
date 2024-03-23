@@ -2,7 +2,7 @@
 title: 'Show #16: Broadcast 18th September 2024'
 slug: 'featuring-XX-kirkcaldy-blind-social-club'
 description: 'featuring ?? from Kirkcaldy Blind Social Club'
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
+summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
  
           - Isobel Campbell & Mark Lanegan 
                     

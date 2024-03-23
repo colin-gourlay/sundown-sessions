@@ -2,7 +2,7 @@
 title: 'Show #14: Broadcast 4th September 2024'
 slug: 'featuring-XX-kirkcaldy-foodbank'
 description: 'featuring ?? from Kirkcaldy Foodbank'
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
+summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
  
           - The March Violets
                     

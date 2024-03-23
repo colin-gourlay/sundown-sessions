@@ -2,7 +2,7 @@
 title: 'Show #15: Broadcast 11th September 2024'
 slug: 'featuring-XX-kirkcaldy-amateur-dramatic-society'
 description: 'featuring ?? from Kirkcaldy Amateur Dramatic Society'
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
+summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
  
           - White China
                     
