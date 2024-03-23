@@ -25,9 +25,6 @@ other = "Email Address"
 [message]
 other = "Message"
 
-[send]
-other = "Send"
-
 [taxonomyPageList]
 other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
 
