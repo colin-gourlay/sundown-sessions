@@ -1,26 +1,4 @@
----
-title: 'Show #16: Broadcast DD MM YYYY'
-description: "featuring ?? from Kirkcaldy Blind Social Club"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Isobel Campbell & Mark Lanegan 
-                    
-          - Gaye Bykers On Acid 
-          
-          - Magnapop
-          
-          - Felt
-          
-          - and much, much more...
-'
-featured_image: "/images/016-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-02-08T18:30:09Z
-draft: true
----
-
-## Playlist
+# Playlist
 
 1. The Motors - Airport
 2. Elvis Costello & The Attractions - Olivers Army
@@ -67,5 +45,3 @@ draft: true
 2. Anna Calvi - Desire
 3. Felt - Primitive Painters
 4. The Filthy Tongues - Nae Tongues
-
-## Show Notes
