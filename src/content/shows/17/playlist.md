@@ -1,26 +1,4 @@
----
-title: 'Show #17: Broadcast DD MM YYYY'
-description: "featuring ? Gregg from Kirkcaldy AMC"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Pete
-                    
-          - Pixies
-          
-          - Tubeway Army
-          
-          - Southern Death Cult
-          
-          - and much, much more...
-'
-featured_image: "/images/017-show-logo.jpeg"
-read_more_copy: Show notes...
-show_reading_time: true
-date: 2024-02-08T18:30:09Z
-draft: true
----
-
-## Playlist
+# Playlist
 
 1. Fields Of The Nephilim - The Watchman
 2. Balaam & The Angel - I'll Show You Something Special
@@ -58,5 +36,3 @@ draft: true
 2. The Southern Death Cult - Moya
 3. Chameleons - Sycophants
 4. The Filthy Tongues - Nae Tongues
-
-## Show Notes
