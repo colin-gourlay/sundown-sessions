@@ -25,9 +25,6 @@ other = "Email Address"
 [message]
 other = "Message"
 
-[taxonomyPageList]
-other = "Below you will find pages that utilize the taxonomy term “{{ .Title }}”"
-
 [readingTime]
 one = "One minute read"
 other = "{{ .Count }} minutes read"
