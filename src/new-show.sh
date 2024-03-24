@@ -55,7 +55,7 @@ featured_image: '$SHOW_NUMBER-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
 date: '$SHOW_DATE_TIME'
-draft: true
+draft: false
 ---
 {{< include_content "/shows/$SHOW_NUMBER/playlist" >}}
 
