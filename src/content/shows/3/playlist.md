@@ -14,7 +14,7 @@
 2. {{< artist-wikilink "Blue On Shock" >}} - Love Is A Venture
 3. {{< artist-wikilink "Blue On Shock" >}} - Brand New Chevy
 4. {{< artist-wikilink "Blue On Shock" >}} - The Fighting's Never Won
-5. {{< artist-wikilink "Blue On Shock" >}}- It Aint Easy
+5. {{< artist-wikilink "Blue On Shock" >}}- It Ain't Easy
 
 - ADVERTISING BREAK
 
