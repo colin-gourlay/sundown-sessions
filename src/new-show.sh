@@ -25,7 +25,6 @@ mkdir "./content/shows/$SHOW_NUMBER/"
 
 cat << EOF > "./content/shows/$SHOW_NUMBER/additional-resources.md"
 ### Additional Resources
-
 EOF
 
 cat << EOF > ./archetypes/default.md
