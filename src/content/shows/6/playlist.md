@@ -9,7 +9,7 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "David Latto - Geordie Munro
+1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
 2. Interview with ?? from Love Oor Lang Toun
 
 - ADVERTISING BREAK
