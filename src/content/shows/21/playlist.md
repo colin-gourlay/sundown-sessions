@@ -22,4 +22,3 @@
 
 1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 2. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
-
