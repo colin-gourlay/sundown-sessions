@@ -53,7 +53,7 @@ keywords:
 featured_image: '$SHOW_NUMBER-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: '$SHOW_DATE_TIME'
+date: $SHOW_DATE_TIME
 draft: false
 ---
 {{< include_content "/shows/$SHOW_NUMBER/playlist" >}}
@@ -63,7 +63,6 @@ draft: false
 {{< include_content "/shows/$SHOW_NUMBER/show-notes" >}}
 {{< include_content "/shows/$SHOW_NUMBER/additional-resources" >}}
 {{< include_content "/shows/$SHOW_NUMBER/track-info" >}}
-
 EOF
 
 cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
