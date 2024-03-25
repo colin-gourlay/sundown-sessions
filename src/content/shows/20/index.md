@@ -1,7 +1,8 @@
 ---
-title: 'Show #20: Broadcast DD MM YYYY'
+title: 'Show #20: Broadcast 16th October 2024'
+slug: 'featuring-XX-rvs-east-fife-community-transport-good-neighbours'
 description: "featuring xx from RVS East Fife Community Transport & Good Neighbours"
-summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
+summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
  
           - Love And Rockets
                     
@@ -13,10 +14,22 @@ summary: 'Live from K107, THE SUNDOWN SESSIONS returns with...
           
           - and much, much more...
 '
-featured_image: "/images/020-show-logo.jpeg"
+keywords:
+  - '?? from RVS East Fife Community Transport & Good Neighbours'
+  - 'Love And Rockets'
+  - 'Sebadoh'
+  - 'Moke'
+  - 'The Dandy Warhols'
+featured_image: '20-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-02-06T13:30:09Z
-draft: true
+date: 2024-10-16T22:00:00Z
+draft: false
+---
+{{< include_content "/shows/20/playlist" >}}
+
 ---
 
+{{< include_content "/shows/20/show-notes" >}}
+{{< include_content "/shows/20/additional-resources" >}}
+{{< include_content "/shows/20/track-info" >}}

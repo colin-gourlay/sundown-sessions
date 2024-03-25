@@ -1,7 +1,7 @@
 ---
 title: 'Show #7: Broadcast 17th July 2024'
 slug: 'featuring-XX-clued-up-project'
-description: "featuring ?? from Clued Up Project"
+description: 'featuring ?? from Clued Up Project'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
  
           - Skeletal Family
