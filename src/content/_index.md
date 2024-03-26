@@ -8,4 +8,3 @@ cascade:
 A radio show broadcast on K107 FM on Wednesday evenings from 8pm - 10pm (GMT)
 
 This site is a supplement to that show
-
