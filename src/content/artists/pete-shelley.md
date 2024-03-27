@@ -2,7 +2,10 @@
 title: 'Pete Shelley'
 featured_image: 'artists/pete-shelley.jpg'
 ---
-Not to be confused with Peter Shelley.
+
+## About
+
+Not to be confused with [a=Peter Shelley].
 
 English singer, songwriter and guitarist, born 17 April 1955 in Leigh, Lancashire. Died from a heart attack 6 December 2018 in Tallinn, Estonia, where he lived.
 

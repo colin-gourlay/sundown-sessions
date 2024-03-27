@@ -2,6 +2,9 @@
 title: 'Nick Cave & The Bad Seeds'
 featured_image: 'artists/nick-cave-the-bad-seeds.jpg'
 ---
+
+## About
+
 An alternative/art rock band formed in 1983 in Melbourne, Australia. The group has had an international line-up throughout their career.
 
 Current line-up:

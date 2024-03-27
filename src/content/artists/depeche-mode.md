@@ -2,6 +2,9 @@
 title: 'Depeche Mode'
 featured_image: 'artists/depeche-mode.jpg'
 ---
+
+## About
+
 English electronic music band formed March 1980 in Basildon, Essex, and named after a popular French fashion magazine. The group's original line-up consisted of Dave Gahan (lead vocals, occasional songwriter since 2005) Martin Gore (keyboards, guitar, vocals, chief songwriter after 1981) Andy Fletcher (keyboards) and Vince Clarke (keyboards, and chief songwriter from 1980 until 1981). 
 
 Depeche Mode released their debut record "Speak & Spell," in 1981, bringing them into the British new-wave scene. Soon after the release of the album, Clarke decided to quit the band, leaving them to record their next album, 1982's "A Broken Frame," as a trio. Gore took over lead songwriting duties and, later in 1982, Alan Wilder (keyboards, drums, occasional songwriter) officially joined the band to fill Clarke's spot, thus establishing a line-up that would continue for the next thirteen years.
@@ -19,10 +22,10 @@ The release of 2001's "Exciter," confirmed Depeche Mode's willingness to remain 
 Depeche Mode have had fifty songs in the UK Singles Chart and thirteen top 10 albums in the UK charts, two of which debuted at No. 1. Depeche Mode have to this day sold over 100 million records worldwide, making them one of the most commercially successful electronic bands and one of the world's best-selling music artists. Q magazine calls Depeche Mode "the most popular electronic band the world has ever known," and included the band in the list of the "50 Bands That Changed the World!" Depeche Mode also rank number 98 on VH1's "100 Greatest Artists Of All Time."
 
 Current lineup:
-Martin L. Gore: keyboards, guitar, vocals
-Dave Gahan: lead vocals
+[a=Martin L. Gore]: keyboards, guitar, vocals
+[a=Dave Gahan]: lead vocals
 
 Former members:
-Vince Clarke (1980-81): keyboards, backing vocals
-Alan Wilder (1982-95): keyboards, drums, backing vocals
-Andrew Fletcher†: (1980-2022) keyboards
+[a=Vince Clarke] (1980-81): keyboards, backing vocals
+[a=Alan Wilder] (1982-95): keyboards, drums, backing vocals
+[a=Andrew Fletcher]†: (1980-2022) keyboards

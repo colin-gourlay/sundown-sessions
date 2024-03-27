@@ -2,9 +2,12 @@
 title: 'Big Country'
 featured_image: 'artists/big-country.jpg'
 ---
+
+## About
+
 Scotland based guitarband formed in the early 1980's.
-Managed By Ian Grant of Grant Edwards Management
-Lineup:[/b]
+Managed By [a=Ian Grant] of [a=Grant Edwards Management]
+[b]Lineup:[/b]
 Stuart Adamson: Vocals, Guitar, Synthesizer. Born April 11 1958, died December 16 2001 (suicide)
 Bruce Watson: Guitar
 Tony Butler: Bass (until 2012)
@@ -17,5 +20,5 @@ Scott Whitley: Bass (2015 - 2021)
 Gil Allan: Bass (since 2021)
 Years active:	1981–2000, 2007, 2010–present
 
-Please note that the UK releases during the '80's should be on the Mercury label, this is not actually mentioned on the label or sleeves of the earliest singles. The only information refers to Phonogram who were the publishing house for Mercury at that time, which is why their name and logo will appear.[/b]
+[b]Please note that the UK releases during the '80's should be on the Mercury label, this is not actually mentioned on the label or sleeves of the earliest singles. The only information refers to Phonogram who were the publishing house for Mercury at that time, which is why their name and logo will appear.[/b]
 

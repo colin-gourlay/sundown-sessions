@@ -2,6 +2,9 @@
 title: 'Garbage'
 featured_image: 'artists/garbage.jpg'
 ---
+
+## About
+
 Alternative / modern rock band from Madison, Wisconsin, USA.
 
 Shirley Manson - vocals, keyboards, guitar

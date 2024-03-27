@@ -2,6 +2,9 @@
 title: 'Skids'
 featured_image: 'artists/skids.jpg'
 ---
+
+## About
+
 Scottish punk band. Formed in Dunfermline during the summer of 1977.
 
 Comprising the songwriting axis of Richard Jobson (vocals) and Stuart Adamson (guitar), together with the rhythm section of William Simpson (bass) and Tom Kellichan (drums), they rode into British consciousness on the new wave backwash to the ebbing tide of punk. The release of their self-financed, attention-grabbing Charles EP came at the time Richard Branson's Virgin label were busy accruing an eclectic roster of post-punk hopefuls. Consequently, with almost indecent haste, the band were tethered to what was to prove an optimistic eight-album deal. 
