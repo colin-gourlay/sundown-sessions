@@ -1,4 +1,4 @@
-## Playlist
+# Playlist
 
 1. {{< artist-wikilink "Stranglers" >}} - Big In America
 2. {{< artist-wikilink "Johnny Cash" >}} - I Walk The Line

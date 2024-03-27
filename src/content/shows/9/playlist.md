@@ -1,4 +1,4 @@
-## Playlist
+# Playlist
 
 1. {{< artist-wikilink "Razorlight" >}} - Get It And Go
 2. {{< artist-wikilink "Julian Cope" >}} - World Shut Your Mouth

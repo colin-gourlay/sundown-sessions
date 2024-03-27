@@ -1,4 +1,4 @@
-## Playlist
+# Playlist
 
 1. {{< artist-wikilink "REM" >}} - Get Up
 2. {{< artist-wikilink "A House" >}} - Freak Out

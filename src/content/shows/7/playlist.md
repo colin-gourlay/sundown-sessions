@@ -1,4 +1,4 @@
-## Playlist
+# Playlist
 
 1. {{< artist-wikilink "Fields Of The Nephilim" >}} - Moonchild
 2. {{< artist-wikilink "Balaam & The Angel" >}} - The Wave

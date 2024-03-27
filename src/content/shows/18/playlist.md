@@ -1,4 +1,4 @@
-## Playlist
+# Playlist
 
 1. {{< artist-wikilink "Aimee Mann" >}} - Sugarcoated
 2. {{< artist-wikilink "The Countess Of Fife" >}} - Trapped

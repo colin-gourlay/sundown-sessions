@@ -1,4 +1,4 @@
-## Playlist
+# Playlist
 
 1. {{< artist-wikilink "Jackie Lomax" >}} - Sour Milk Sea
 2. {{< artist-wikilink "I Got You On Tape" >}} - Spinning For The Cause

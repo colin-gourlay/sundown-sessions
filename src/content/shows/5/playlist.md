@@ -1,4 +1,4 @@
-## Playlist
+# Playlist
 
 1. {{< artist-wikilink "Inspiral Carpets" >}} - Bitches Brew
 2. {{< artist-wikilink "Electrafixion" >}} - Lowdown
