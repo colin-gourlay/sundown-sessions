@@ -3,4 +3,4 @@ title: "Shows"
 ---
 Complete Catalogue of Radio Shows
 
-Featuring Playlists and Show Notes from Each Broadcast
+Featuring: playlists, track details, show notes and more from each broadcast
