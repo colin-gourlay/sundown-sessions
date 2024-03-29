@@ -1,2 +1,3 @@
 {{ $link := .Get 0 }}
-<a href="/artists/{{ $link | urlize }}">{{ $link }}</a>
+{{ $firstChar := index $link 0 }}
+<a href="/artists/{{printf "%c" $firstChar}}/{{ $link | urlize }}">{{ $link }}</a>
