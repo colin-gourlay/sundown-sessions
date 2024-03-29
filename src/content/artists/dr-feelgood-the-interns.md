@@ -1,8 +1,0 @@
----
-title: 'Dr. Feelgood & The Interns'
-featured_image: 'artists/dr-feelgood-the-interns.jpg'
----
-
-## About
-
-Willie "Piano Red" Perryman, who had amused and entertained rhythm and blues audiences since the 1940s with his zany, inimitable style, joined OKeh in 1961. Perryman and his group of musicians, at that time not yet named, gathered in Columbia's Nashville studio at 2:30 in the afternoon on May 31, 1961, and by 6:30 had recorded eight new songs, including a remake of Piano Red's 1950 hit "The Wrong Yo-Yo" [RCA Victor 50-0106]. They also recorded an original song which the Beatles would make very famous a few years later — "Mister Moonlight" — and another novelty song, "Doctor Feel-Good," about a "doctor of love" who only liked women who weighed over 400 lbs. When the latter song was released on January 5, 1962, the group became known as Dr. Feelgood & the Interns. Although "Dr. Feel-Good" [Okeh 7144] and second followup "Right String But the Wrong Yo-Yo" [Okeh 7156] both charted, and a subsequent album was issued, we have been left all these years with the question, "Who were the Interns?" We knew that "Dr. Feelgood" was Willie Perryman, who played piano on the session, but there was no information on the album or anywhere else, it seemed, to identify the backing group. One well-known reference source even claims Willie Perryman was the whole group! But after digging up the recording session sheet from the Sony Archives, I can now say with assurance that the others were Roy Lee Johnson, Jr. (guitar), Howard Hobbs (bass), Bobby Lee Tuggle (drums), Curtis Smith (guitar), and Beverly Watkins (guitar). - Mike Callahan (Both Sides Now Publications)

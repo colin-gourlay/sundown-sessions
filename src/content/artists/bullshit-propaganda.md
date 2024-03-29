@@ -1,8 +1,0 @@
----
-title: 'Bullshit Propaganda'
-featured_image: 'artists/bullshit-propaganda.jpg'
----
-
-## About
-
-Bullshit Propaganda is a punk/hardcore-band from Hellevoetsluis, Holland. Since the summer of 1993 Bullshit Propaganda is John, Niels and Bowy. Started by Bowy as a pure punkband in 1991, with Ron and Vincent on bass and guitar, Bowy and B.P. have developed into a furious hardcoreband, inspired by bands like E.N.T., Discharge, F.Y.P. and Doom. After a past full of bad luck (too much to mention here) the band is back again with a brandnew second demo-tape "Belo-Fi". It contains 5 of B.P.'s latest songs (plus a song from Dr.And The Crippens), so it'll give a good impression of what the band is and what it stands for (much more than the first tape "F.G.F.O.", a gig recorded in 1993 featuring Bowy, Vincent and John). B.P.'s songs are fast and heavy, contain no egotrips like longdrawn solos or accoustic intros, and often don't take longer than about 2 minutes. Probably the most important aspect of B.P.'s music are the lyrics that, although sometimes quite unintelligible, are the heart of the band's outbursts of rage. The songs deal with divers social abuse that worries the band and feature personal, heavy emotions and/or ciritical, attacking statements. In spite of the state of the world, B.P. enjoy making music, they just aim to make some people think about certain things and hopefully even change their attitude/behaviour towards for example war, animal-rights, religion, sexism, pollution, racism. The band hopes they're going to succeed a bit with the Belo-Fi demo, which will be used mostly for promotional, because the base of hardcore is playing live!

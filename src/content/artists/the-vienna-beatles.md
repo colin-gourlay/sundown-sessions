@@ -1,8 +1,0 @@
----
-title: 'The Vienna Beatles'
-featured_image: 'artists/the-vienna-beatles.jpg'
----
-
-## About
-
- the Vienna Beatles emerged around 1963/64 and were led by the brothers Sigi and Willi Nentwich, who had a rather unusual, businesslike vision of a Rock-n-Roll career: Their group was not simply trying to copy the sound of the Fab Four, but also, and importantly so, their looks and outfits. Following that logic (and lacking own hair of fitting length), the band entered the stage wearing rather odd looking Beatle wigs, a shtick that certainly created a high recognition value to say the least. Besides eccentric hairdos, the group perfected a pretty raw live sound that quickly earned them local prominence. Around 1965 Hannes Patek engaged the Vienna Beatles to play at Star Club Wien frequently, as his former backing group, the Austrian Evergreens had left the club. Moreover, he offhandedly picked the crazy band with the silliest name in town to perform as back-up for his next recording session. Patek’s spontaneous intuition would prove right again, as the session resulted into one of the hardest Garage Rock documents in Austrian history. The band brought a guest to the venerable Symphonia recording studio, a forgotten Elvis impersonator/club star of the name Errol Ribeiro, an Indian immigrant rocker whose English was almost accent-free while his vocal style was refreshingly unique. The resulting Fats Domino rendition “Sick and tired” was used as the B-side of Patek's newest 45 release put out on the Austrian Polydor subsidiary. As both sides of that legendary recording session are compiled here, we'll see you in a bit for the rest of the story.
