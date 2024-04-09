@@ -108,6 +108,11 @@ cat << EOF > "./content/shows/$SHOW_NUMBER/show-notes.md"
 
 EOF
 
+cat << EOF > "./content/shows/$SHOW_NUMBER/discussion-points.md"
+## Show discussion points
+
+EOF
+
 cat << EOF > "./content/shows/$SHOW_NUMBER/track-info.md"
 ### Track Info
 
