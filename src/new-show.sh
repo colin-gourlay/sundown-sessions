@@ -108,6 +108,27 @@ cat << EOF > "./content/shows/$SHOW_NUMBER/show-notes.md"
 
 EOF
 
+cat << EOF > "./content/shows/$SHOW_NUMBER/featured-guest.md"
+## Featured guest: $FEATURED_GUEST
+
+{{< figure src="$SHOW_NUMBER-guest-logo.jpeg" title="$FEATURED_GUEST" alt="$FEATURED_GUEST" width="75%" >}}
+
+### Contact details
+
+- **email:** [email@example.com](mailto:)
+- **phone:** +1 (234) 567-8910
+- **website:** [www.example.com]()
+
+### Social Media
+
+- [Facebook]()
+- [Instagram]()
+- [Twitter]()
+- [LinkedIn]()
+- [YouTube]()
+
+EOF
+
 cat << EOF > "./content/shows/$SHOW_NUMBER/discussion-points.md"
 ## Show discussion points
 
