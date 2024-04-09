@@ -26,10 +26,13 @@ show_reading_time: true
 date: 2024-06-19T22:00:00Z
 draft: false
 ---
+
 {{< include_content "/shows/3/playlist" >}}
 
 ---
 
 {{< include_content "/shows/3/show-notes" >}}
-{{< include_content "/shows/3/additional-resources" >}}
+
+---
+
 {{< include_content "/shows/3/track-info" >}}
