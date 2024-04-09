@@ -23,10 +23,6 @@ SHOW_DATE_TIME=$9
 
 mkdir "./content/shows/$SHOW_NUMBER/"
 
-cat << EOF > "./content/shows/$SHOW_NUMBER/additional-resources.md"
-### Additional Resources
-EOF
-
 cat << EOF > ./archetypes/default.md
 ---
 title: 'Show #$SHOW_NUMBER: Broadcast $BROADCAST_DATE'
