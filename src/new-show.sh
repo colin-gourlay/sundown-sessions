@@ -56,13 +56,17 @@ show_reading_time: true
 date: $SHOW_DATE_TIME
 draft: false
 ---
+
 {{< include_content "/shows/$SHOW_NUMBER/playlist" >}}
 
 ---
 
 {{< include_content "/shows/$SHOW_NUMBER/show-notes" >}}
-{{< include_content "/shows/$SHOW_NUMBER/additional-resources" >}}
+
+---
+
 {{< include_content "/shows/$SHOW_NUMBER/track-info" >}}
+
 EOF
 
 cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
@@ -90,6 +94,7 @@ cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
 
 1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 2. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
+
 EOF
 
 cat << EOF > "./content/shows/$SHOW_NUMBER/show-notes.md"
