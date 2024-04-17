@@ -9,3 +9,4 @@ Formed by Andrew Roachford in 1987. Line up comprised: Andrew Roachford (vocals,
 **CAUTION! IMPORTANT INFO!**
 Andrew Roachford is often credited as "Roachford" alone. In these cases, the credit have to be displayed under the name Andrew Roachford as a name variation.
 
+Andrew Roachford

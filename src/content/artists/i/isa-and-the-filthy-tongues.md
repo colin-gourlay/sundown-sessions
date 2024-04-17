@@ -6,3 +6,7 @@ featured_image: artists/i/isa-and-the-filthy-tongues.jpg
 
 [a5372625] - Vocals, [a760038] - Drums, [a760041] - Guitar and [a1048296] - Bassist.
 
+Derek Kelly
+Martin Metcalfe
+Fin Wilson
+Stacey Chavis

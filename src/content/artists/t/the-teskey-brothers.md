@@ -5,3 +5,7 @@ featured_image: artists/t/the-teskey-brothers.jpg
 ## About
 
 Blues & soul band from Melbourne, Australia, formed 2008 
+Sam Teskey
+Liam Gough
+Brendon Love
+Josh Teskey

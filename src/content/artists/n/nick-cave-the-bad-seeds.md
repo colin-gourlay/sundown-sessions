@@ -13,3 +13,9 @@ Martyn P. Casey: bass (1990–present)
 Jim Sclavunos: percussion, drums (1994–present)
 Warren Ellis: violin, accordion, mandolin (1997–present)
 George Vjestica: guitar (2013–present)
+Nick Cave
+Thomas Wydler
+Warren Ellis
+Jim Sclavunos
+Martyn P. Casey
+George Vjestica
