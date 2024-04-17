@@ -2,6 +2,7 @@
 title: The Heroic Enthusiasts
 featured_image: artists/t/the-heroic-enthusiasts.jpg
 ---
-## About
+### Current Lineup
 
+James Tabbi, Tom Ferrara
 

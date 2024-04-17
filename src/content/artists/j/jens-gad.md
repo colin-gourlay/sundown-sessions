@@ -13,3 +13,4 @@ His skills as producer have been mainly developed in the last 10 years as
 permanent partner of Enigma producer Michael Cretu.
 
 Jens is a passionate guitarist (nearly all Enigma's guitars) and drummer. 
+

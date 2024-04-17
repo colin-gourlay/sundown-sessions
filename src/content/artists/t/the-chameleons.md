@@ -10,3 +10,8 @@ The year 2000 saw an end to the 'hostilities' and a reforming of the group; and 
 
 John Lever passed away in 2017 and Dave left the band afterwards leaving Mark and Reg as the only two original members. The Chameleons continue to perform as of 2024.
 
+
+### Current Lineup
+
+Mark Burgess, Reg Smithies
+

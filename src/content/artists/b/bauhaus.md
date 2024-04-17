@@ -11,3 +11,8 @@ Bauhaus disbanded in 1983 , but reunited for a tour in 1998.
 Daniel Ash, David Haskins and Kevin Haskins founded [a18082] and Peter Murphy made [a59922] collaboration for a year and later as solo artist.
 The band reformed and toured again in 2005, but ultimately broke up in 2008, after releasing the final studio album "Go Away White".
 
+
+### Current Lineup
+
+Peter Murphy, Daniel Ash, Kevin Haskins, David Haskins
+

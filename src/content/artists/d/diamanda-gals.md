@@ -14,3 +14,4 @@ Galás first rose to international prominence with her quadrophonic performances
 
 Later she created the controversial Plague Mass - a requiem for those dead and dying of AIDS - performed at Saint John the Divine cathedral in New York City. From there, Galás attacked the Roman Catholic church and the society in general for its indifference for the AIDS pandemic.
 
+

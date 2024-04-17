@@ -13,3 +13,8 @@ Beggars Banquet compiled several sessions and outtakes onto a self-titled album,
 The band was very popular within the scene that became known as the Gothic scene - a name that's often attributed to Astbury. He lived around the corner from Andi Sex Gang, who lived in a building called Visigoth Towers. As a joke, Astbury called him the Gothic Goblin (or Count Visigoth, according to some reports) and his followers the Goths. The name not only stuck, but came to be applied on The Southern Death Cult in retrospect. 
  
 
+
+### Current Lineup
+
+Ian Astbury, Barry Jepson, David Burroughs, Haq Nawaz Qureshi
+

@@ -51,3 +51,8 @@ Adam MacDougall - 2007-2015
 [u]Drummers[/u]
 Bill Dobrow - 2005-mid-2005
 Steve Gorman - 1989-2015
+
+### Current Lineup
+
+Rich Robinson, Chris Robinson, Sven Pipien, Isaiah Mitchell
+

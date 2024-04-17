@@ -26,3 +26,8 @@ Robert Webb (trumpet, 2001)
 Ali Kennen (vocals, 2001)  
  
 
+
+### Current Lineup
+
+Paul Roberts, Les Davidson, Alan Fealdman, Keith Miller, Mike Taylor, Mick Dyche
+

@@ -24,3 +24,8 @@ Jan Pijnenburg
 Michael Eschauzier
 André van Geldorp
 Charles Pesch
+
+### Current Lineup
+
+Robbie van Leeuwen, Martin Van Wijk, Cornelis Van Der Beek, Klaasje Van Der Wal, Gerben De Bruijn, Bert Meulink, André Van Geldorp, Paul Heppener
+

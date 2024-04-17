@@ -18,3 +18,8 @@ On 7th December 2022, Kula Shaker tweeted that original keyboardist Jay Darlingt
 
 On September 28, 2023, Kula Shaker announced that their forthcoming 7th studio album will be titled "Natural Magick", released on January 26, 2024. The album will be the first since Peasants, Pigs & Astronauts to feature original keyboardist Jay Darlington.
 
+
+### Current Lineup
+
+Crispian Mills, Alonza Bevan, Paul Winter-Hart, Jay Darlington
+

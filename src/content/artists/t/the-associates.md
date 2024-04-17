@@ -20,3 +20,8 @@ Aside from an aborted Associates reunion with Alan Rankine in the mid-90s, MacKe
 
 Tragically his first release for the label was a posthumous one. The death of his mother in 1996 was likely the trigger of an emotional breakdown that led him deeper and deeper into a depressed state. Billy MacKenzie died aged 39, on 22nd January 1997 from an overdose of prescribed and over-the-counter pills.
 
+
+### Current Lineup
+
+Billy MacKenzie, Alan Rankine, Steve Reid
+

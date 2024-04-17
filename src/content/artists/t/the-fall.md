@@ -12,3 +12,8 @@ Formed in 1976 through a poetry-style collective beginnings, The Fall released a
 
 The band went through numerous personnel changes over the years (with well over 30 different line-ups). From July 2007 The Fall comprised: Mark E. Smith, vocals; Pete Greenway, guitar; Dave "The Eagle" Spurr, bass; Elena Poulou, keyboards; Keiron Melling, drums. In 2014, Daren Garratt became a full-time member as a second drummer but left 9th October 2015. Elena Poulou (Smith's then wife) last gig was 28th April 2016. Mike Clapham  joined on keyboards from 23rd May 2017 until their final gig.
 
+
+### Current Lineup
+
+Mark E. Smith, Dave Spurr, Peter Greenway, Keiron Melling
+

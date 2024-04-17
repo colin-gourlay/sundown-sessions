@@ -2,6 +2,7 @@
 title: Attic Lights
 featured_image: artists/a/attic-lights.jpg
 ---
-## About
+### Current Lineup
 
+Kevin Sherry, Colin McArdle, Jamie Houston, Noel O'Donnell
 

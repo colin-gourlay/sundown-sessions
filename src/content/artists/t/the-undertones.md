@@ -12,3 +12,8 @@ Feargal Sharkey launched a short-lived solo career, while the O'Neills won criti
 
 Original Line-up: John and Damian O’Neill - guitar;  Michael Bradley - bass;  Billy Doherty - drums;  Feargal Sharkey - vocals.
 
+
+### Current Lineup
+
+Damian O'Neill, John O'Neill, Billy Doherty, Michael Bradley, Paul McLoone
+

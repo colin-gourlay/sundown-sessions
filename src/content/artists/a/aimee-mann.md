@@ -5,3 +5,4 @@ featured_image: artists/a/aimee-mann.jpg
 ## About
 
 American rock singer, songwriter, guitarist and bassist, born September 8, 1960 in Richmond, Virginia.
+

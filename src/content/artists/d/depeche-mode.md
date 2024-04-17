@@ -28,3 +28,8 @@ Former members:
 Vince Clarke (1980-81): keyboards, backing vocals
 Alan Wilder (1982-95): keyboards, drums, backing vocals
 Andrew Fletcher†: (1980-2022) keyboards
+
+### Current Lineup
+
+Martin L. Gore, Dave Gahan
+

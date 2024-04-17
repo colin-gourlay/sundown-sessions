@@ -9,3 +9,8 @@ Elvis Costello & The Attractions were a UK New Wave and rock group formed in Lon
 In 2002, the band, without Bruce Thomas, was reconstituted as Elvis Costello & The Imposters. 
 
 In 2003, Elvis Costello & The Attractions were inducted into the Rock and Roll Hall of Fame.
+
+### Current Lineup
+
+Pete Thomas, Bruce Thomas, Steve Nieve, Declan Patrick Aloysius Macmanus
+

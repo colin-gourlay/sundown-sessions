@@ -21,3 +21,8 @@ Colin Edwin - bass (1993–2010)
 Randy McStine - guitar, backing vocals (2022–present)
 Nathan Navarro - bass (2022–present)
 John Wesley (3) - guitar, backing vocals (2002–2010)
+
+### Current Lineup
+
+Richard Barbieri, Steven Wilson, Gavin Harrison
+

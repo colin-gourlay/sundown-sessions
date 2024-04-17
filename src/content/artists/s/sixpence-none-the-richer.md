@@ -16,3 +16,8 @@ Matt Slocum — guitar, cello
 Justin Cary — bass (1997–2004, 2008–)
 Jason Lehning — drums (2008–)
 
+
+### Current Lineup
+
+Leigh Nash, Matt Slocum, Justin Cary
+

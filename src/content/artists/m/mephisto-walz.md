@@ -27,3 +27,8 @@ For the next few years, Bari-Bari played and recorded with Scarlet’s Remains a
 
 In 2011 "IIIrd Incarnation" was recorded with both Bari-Bari and Sara Reid on vocals. A more aggressive guitar style was reintroduced. Two years later, "New Apostles" was recorded with Bari-Bari and Myriam Galvin now on vocals. It featured Christian Omar Madrigal Izzo on four tracks. 2017’s "Scoundrel” was written and recorded by Bari-Bari and Myriam, with Omar Madrigal Izzo again performing on select songs.
 
+
+### Current Lineup
+
+Barry Galvin, Sara Reid
+

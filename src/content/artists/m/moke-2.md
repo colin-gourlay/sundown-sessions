@@ -13,3 +13,8 @@ Marcin Felis: bass
 Rob Klerkx: drums
 Eddy Steeneken: keyboards
 
+
+### Current Lineup
+
+Robin Berlijn, Felix Maginn, Rob Klerkx, Marcin Felis, Eddy Steeneken
+

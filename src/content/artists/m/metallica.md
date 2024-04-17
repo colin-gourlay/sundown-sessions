@@ -17,3 +17,8 @@ In 1996, the band experimented with Rock music style Alternative Rock, this coul
 In 2001, as the band was preparing to begin work on a new album, Newsted quit the group, citing personal and musical reasons.  Work on the new album was further complicated when Hetfield entered rehab for alcohol abuse.  The album, called "St. Anger", was eventually completed in 2003 with producer Bob Rock handling the bass.  Upon its release, "St. Anger" drew mostly negative reviews.  Following the recording, Robert Trujillo, formerly of Suicidal Tendencies, was hired as bassist.  The making of the album was captured in the documentary “Some Kind Of Monster”.
 
 In 2008, "Death Magnetic", produced by Rick Rubin, would surface and was hailed by many as Metallica's return to thrash metal.  The following year, Metallica was inducted into Rock And Roll Hall of Fame.  Former bassist Jason Newsted was present and Cliff Burton's father appeared on Cliff's behalf.  Dave Mustaine, who was not inducted, was invited to the ceremony by the band but declined to attend.  In 2011, Metallica collaborated with Lou Reed on the album, “Lulu”, which was largely panned by critics and ignored by consumers.
+
+### Current Lineup
+
+Kirk Hammett, Lars Ulrich, James Hetfield, Robert Trujillo
+

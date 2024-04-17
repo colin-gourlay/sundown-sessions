@@ -62,3 +62,8 @@ Charles Lloyd – tenor saxophone, flute (1972) (on "Full Circle" (1972))
 Bobbye Hall – percussion (1972) (on "Full Circle" (1972))
 Chico Batera – percussion (1972) (on "Full Circle" (1972))
 Bob Glaub – bass (1978) (on "An American Prayer" (1978))
+
+### Current Lineup
+
+Ray Manzarek, Robby Krieger, John Densmore
+

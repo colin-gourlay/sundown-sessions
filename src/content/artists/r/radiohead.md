@@ -17,3 +17,8 @@ The band's third album, "[url=http://www.discogs.com/Radiohead-OK-Computer/maste
 "[url=http://www.discogs.com/Radiohead-Hail-To-The-Thief/master/16962]Hail To The Thief[/url]" (2003) was seen as a conventional return to the guitar and piano-led rock sound. After fulfilling their contract with EMI, Radiohead released "[url=http://www.discogs.com/Radiohead-In-Rainbows/master/21520]In Rainbows[/url]" (2007) famously via a pay-what-you-want model. Their latest album,  "[url=https://www.discogs.com/Radiohead-A-Moon-Shaped-Pool/master/998252]A Moon Shaped Pool[/url]", was released in May 2016.
  
 Radiohead's original influences were cited as alternative rock and post-punk bands like [url=http://www.discogs.com/artist/Smiths,+The]The Smiths[/url], Pixies, Magazine, Joy Division and Siouxsie & The Banshees, who Thom Yorke claims inspired him to become a performer, and R.E.M. (with lead singer of the band, Thom Yorke, referring to himself as an 'R.E.M. groupie').
+
+### Current Lineup
+
+Thom Yorke, Jonny Greenwood, Phil Selway, Colin Greenwood, Ed O'Brien
+

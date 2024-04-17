@@ -14,3 +14,8 @@ Brent DeBoer (1998–present): drums
 
 Past members:
 Eric Hedford (1994–1998): drums
+
+### Current Lineup
+
+Courtney Taylor-Taylor, Brent DeBoer, Zia McCabe, Peter Holmström
+

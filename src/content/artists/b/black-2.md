@@ -14,3 +14,8 @@ Former members:
 Dane Goulding - bass (1981-1982)
 Greg Leyland - drums (1981-1982)
 Dave "Dix" Dickie - keyboards, guitar (1981-1983)
+
+### Current Lineup
+
+Colin Vearncombe
+

@@ -16,3 +16,8 @@ Hamilton - Bass, Vocals, Guitar
 Wood - Drums
 Phil Sumner - Cornet, Keyboards
 Abi Fry - Viola
+
+### Current Lineup
+
+Abi Fry, Scott Wilkinson, Phil Sumner, Martin Noble, Matthew Wood, Neil Wilkinson
+

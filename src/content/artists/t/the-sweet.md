@@ -13,3 +13,8 @@ Since 1982, various incarnations of the band have appeared from time to time, wi
 Brian Connolly (5 October 1945 – 10 February 1997)
 Mick Tucker (17 July 1947 – 14 February 2002)
 Steve Priest (23 February 1948 – 4 June 2020)
+
+### Current Lineup
+
+Andy Scott, Steve Priest, Lee Small, Bruce Bisland, Paul Manzi
+

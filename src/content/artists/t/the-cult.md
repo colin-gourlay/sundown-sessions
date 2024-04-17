@@ -9,3 +9,8 @@ British rock band formed as Death Cult in 1983 in Bradford, West Yorkshire. Offi
 Core members:
 Ian Astbury - Lead Vocals /  Music / Song Writer
 Billy Duffy - Lead Guitarist / Music / Song Writer
+
+### Current Lineup
+
+Ian Astbury, Billy Duffy, Charlie Jones, John Tempesta, Damon Fox, Mike Mangan, Grant Fitzpatrick
+

@@ -18,3 +18,8 @@ Following Adamson's departure, the final dissolution of the band was soon to fol
 
 And then they came back. They reformed in 2017, recorded two new albums, a covers album, released a few live ones and a couple of acoustic albums too; while touring the UK, a lot.
 
+
+### Current Lineup
+
+Richard Jobson, J.J. Johnson, Mike Baillie, Bill Simpson
+

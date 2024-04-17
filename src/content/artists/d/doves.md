@@ -11,3 +11,8 @@ Years active: 1998 – 2010 (hiatus), 2018 –
 
 During the band's hiatus, Jimi Goodwin released a solo album, while the Williams brothers regrouped as Black Rivers.
 
+
+### Current Lineup
+
+Jimi Goodwin, Jez Williams, Andy Williams
+

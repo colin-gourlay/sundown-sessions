@@ -8,3 +8,8 @@ Relatively short-lived (1979 to 1981, then reformed in June 2016 to present) new
 
 Line up: David Fenton Guitar, Vocals; Ed Bazalgette Guitar; Steve Smith Bass, Vocals; Howard Smith Drums.
 Line up 2020: David Fenton Guitar, Vocals; Ed Bazalgette Guitar; Steve Smith Bass, Vocals; Michael Bowes Drums; Dan Fenton Guitar, Vocals.
+
+### Current Lineup
+
+David Fenton, Edward Bazalgette, Michael Bowes, Steve Smith
+

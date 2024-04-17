@@ -9,3 +9,8 @@ Adam and the Ants (sometimes stylized with a backwards "D" in "ADAM" & a "hard",
 The second incarnation of Adam and the Ants featured guitarist Marco Pirroni and drummer-producer Chris Hughes and was noted for its use of Burundi style drumming. It lasted from February 1980 to March 1982 and achieved major commercial success in the UK and abroad.
 
 Marco continued to collaborate with Adam throughout his solo career, until shorty after his comeback in 2010.
+
+### Current Lineup
+
+Marco Pirroni, Stuart Goddard
+

@@ -2,6 +2,7 @@
 title: Electrafixion
 featured_image: artists/e/electrafixion.jpg
 ---
-## About
+### Current Lineup
 
+Will Sergeant, Ian McCulloch, Leon De Sylva, Tony McGuigan
 

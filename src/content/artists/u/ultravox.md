@@ -12,3 +12,8 @@ In 1979, John Foxx left after an American tour to pursue solo projects, with Sim
 This became the most successful and well-known, 'classic' 80s line-up. They recorded 10 (UK) Top Twenty singles and 7 (UK) Top Twenty Albums, among them single hits such as "Vienna," "Hymn," and "Dancing With Tears In My Eyes."
 
 In May 1986, prior to the recording of the ill-received U-Vox album, Warren Cann was asked to quit by the rest of the band due to "irreconcilable differences". 
+
+### Current Lineup
+
+Midge Ure, Warren Cann, Billy Currie, Christopher Allen
+

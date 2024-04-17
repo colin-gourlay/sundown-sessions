@@ -12,3 +12,8 @@ Previously the guitarist in garage band The Go, Jack White's musical output in t
 
 By the time of the following year's [url=http://www.discogs.com/White-Stripes-De-Stijl/master/399]De Stijl[/url] [The Style], the media buzz surrounding the White Stripes had reached new heights. Of particular note was the duo's reception in the UK, where their music was lauded in national media, including [i]The Daily Telegraph, The Sun[/i] and even Radio 4's [i]Today[/i] programme - not normally known for its liberal music policy. The influential John Peel was quoted as comparing their importance to that of Jimi Hendrix and the Sex Pistols - although both those acts were originators, whereas the Whites clearly powerful interpreters. They certainly dispelled any question of hype, upon release of a third album, "[url=http://www.discogs.com/White-Stripes-White-Blood-Cells/master/10332]White Blood Cells[/url]", followed by "[url=http://www.discogs.com/White-Stripes-Elephant/master/10341]Elephant[/url]" in 2003. The latter recorded at London's tiny Toe Rag Studios, using pre-60s analogue equipment and only eight tracks. Produced by Jack White, the highly-successful album offered a contrast to the digital conformity of music emerging in the new millennium, reaching the top-ten in the US & going platinum in the UK.
 
+
+### Current Lineup
+
+Jack White, Meg White
+

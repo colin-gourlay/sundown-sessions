@@ -13,3 +13,8 @@ Kirk Riddle - Bass
 Mel Collins - Flute, Tenor Saxophone
 With
 Keath Bleasby - Percussion
+
+### Current Lineup
+
+Mel Collins, Phillip Goodhand-Tait, Ian David Jelfs, Kirk Riddle, Chris Burrows
+

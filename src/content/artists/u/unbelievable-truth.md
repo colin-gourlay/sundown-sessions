@@ -12,3 +12,8 @@ Andy Yorke (vocals, guitar - brother of Thom Yorke, Radiohead)
 Jason Moulster (bass)
 Nigel Powell (drums)
 Jim Crosskey
+
+### Current Lineup
+
+Nigel Powell, Jason Moulster, Andy Yorke, Jim Crosskey
+

@@ -9,3 +9,8 @@ The band was signed by Virgin Records UK and recorded their first album, **Metro
 Martha and Mark spent much of the 1990's scoring music for various television and film projects. The birth of their daughter, in 1992, inspired Martha to write and record an album of original children's music, **Songs From The Tree House**, which won the 1996 Juno Award for Best Children's Album.
 (Edited from official Myspace)
 
+
+### Current Lineup
+
+Martha Johnson, Mark Gane
+

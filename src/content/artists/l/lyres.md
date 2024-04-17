@@ -12,3 +12,8 @@ Current line-up:
 Steve Aquino (guitar)
 Paul Murphy (drums)
 Dave Szczepaniak (bass)
+
+### Current Lineup
+
+Rick Coraccio, Jeff Conolly, Peter Greenberg, Paul Murphy, Steve Aquino, Mark Ray
+

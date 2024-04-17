@@ -14,3 +14,8 @@ In 1984, both Guggi and Dik left the band and the music business. Mary D'Nellon 
 
 The band toured as a four-piece and finally released a new album, The Moon Looked Down and Laughed, in the summer of 1986. Gavin Friday left the group in November 1986 to pursue a solo career, effectively ending the group. This was formally confirmed by a short comment at the bottom of the sleeve of a live album, The Hidden Lie, released in 1987. D'Nellon, Strongman and Busaras went on to record and perform as [a423992].
 
+
+### Current Lineup
+
+Pod, David Watson Jr., David Kelly, Trevor Rowen
+

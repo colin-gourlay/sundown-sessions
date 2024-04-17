@@ -12,3 +12,8 @@ Alex Baird (drums)
 Steve Prudence (bass) [1978 - 1980]
 Michael Cotton (bass/vocals) [1981]
 
+
+### Current Lineup
+
+Alex Baird, John Alder, Nick Watkinson, Steve Prudence, Paddy O'Toole, Mike Cotton
+

@@ -18,3 +18,8 @@ Their first album, The New Song And Dance, was produced by Tim O'Heir, came out 
 
 From this album came the [r=208761] remix 12", which set the band in a more club-oriented direction, carrying the already dance-rock sound further into dance realms. Subsequent work has included more club-friendly remixes and further distribution world-wide. 
 
+
+### Current Lineup
+
+Anthony Roman, PJ O'Connor, Greg Collins, Dave Milone, Gerard Garone, Jimmy Mullen
+

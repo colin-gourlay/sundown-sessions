@@ -10,3 +10,8 @@ Japan comprised David Sylvian (vocals), his brother Steve Jansen (drums), Richar
 After three albums with Ariola-Hansa, they switched to Virgin Records in 1980 and found their fortunes dramatically improving thanks to the surge of popularity in the New Romantic movement. Japan's androgynous image made them suddenly fashionable and they registered several UK Top 20 singles. Their albums Gentlemen Take Polaroids (1980) and Tin Drum (1981) were also well received.  Rob Dean left the band after Gentlemen Take Polaroids but continued working with the band for one more tour thereafter.
 
 Disagreements between Karn and Sylvian undermined the band's progress just as they were achieving some long-overdue success, and they split in late 1982.  The members diversified into collaborative work and solo careers, reuniting (minus Dean) in 1991 for a project under the moniker of Rain Tree Crow.
+
+### Current Lineup
+
+David Sylvian, Mick Karn, Masami Tsuchiya, Steve Jansen, Richard Barbieri
+

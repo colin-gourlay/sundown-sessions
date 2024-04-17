@@ -14,3 +14,8 @@ Aaron Gilbert - Keyboards, Programming, Background Vocals
 Colin Fox - Bass, Instruments, Background Vocals
 Rowly - Drums
 
+
+### Current Lineup
+
+Greg Gilbert, Colin Fox, Rowly, Aaron Gilbert
+

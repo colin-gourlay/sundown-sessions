@@ -20,3 +20,8 @@ Daniel Platzman – Drums/Backing vocals/Guitars\Viola\Keys (2011–2024)
 Dave Lemke – Bass/Backing vocals (2008–2009)
 Brittany Tolman – Piano/Keys/Backing vocals\Guitars (2009–2011)
 Theresa Flaminio – Piano/Keys\Backing vocals (2011)
+
+### Current Lineup
+
+Ben McKee, Dan Reynolds, Wayne Sermon
+

@@ -15,3 +15,8 @@ In 2006, Greg Hawkes and Elliot Easton, together with Todd Rundgren and Kasim Su
 In 2011 The Cars (without Benjamin Orr who had passed away on October 4, 2000) released a new album and went on tour again with Greg Hawkes taking over on bass and Ric Ocasek as sole lead singer.
 
 Inducted into the Rock and Roll Hall of Fame in 2018, and reunited once more to perform at the induction ceremony. Ric Ocasek passed away on September 15, 2019.
+
+### Current Lineup
+
+Ric Ocasek, Elliot Easton, Greg Hawkes, David Robinson
+

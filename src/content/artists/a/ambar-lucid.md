@@ -19,3 +19,4 @@ In her later teens, Ambar's sonic palette began to expand past the shiny world o
 Coupled with what Ambar refers to as a "conscious spiritual journey," this psychedelic discovery sparked a new evolution in Ambar's sound and aesthetic, creating a whole new world for the dynamic artist: a rainbow-hued cosmic realm of flowers, mushrooms, faeries, and butterflies, all enveloped in a soundscape of soulful vocals, trippy psych-rock, and lush electronics as heard on her transcendent Garden of Lucid album, released in 2020.
 
 Inspired by a transformative trip to the desert, Ambar's latest kaleidoscopic single, "Get Lost in the Music," continues her journey into that prismatic world. With more new music on the way, Ambar is on a mission to touch as many souls as she can through her inimitable sonic storytelling. Above all, she just wants to manifest a little radical self-love and empowerment with her music: "I'm healing our generational trauma."
+

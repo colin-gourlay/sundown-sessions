@@ -11,3 +11,8 @@ This original lineup lasted until 1980, after which Ware and Marsh left to form 
 Mainly known for a synthesizer based pop sound, in particular the song “Don’t You Want Me”.
 
 In 1982 The Human League released a remix album, Love and Dancing, under the band name [a24230] as a nod to Barry White's disco-era [a18983].
+
+### Current Lineup
+
+Philip Oakey, Joanne Catherall, Susanne Sulley
+

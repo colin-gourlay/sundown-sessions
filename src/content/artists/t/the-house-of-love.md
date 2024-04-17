@@ -11,3 +11,8 @@ The initial line-up included principle songwriter Guy Chadwick (vocals, guitar),
 In 2005, the group reformed with Chadwick, Bickers, Evans and Matt Jury (bass). They recorded two further studio albums and toured sporadically.
 
 In 2021 Chadwick disbanded the 2005 line-up and recruited three new members to tour the US and record a new album, released in 2022.
+
+### Current Lineup
+
+Guy Chadwick, Keith Michael Osborne, Hugo Degenhardt, Harry Osborne
+

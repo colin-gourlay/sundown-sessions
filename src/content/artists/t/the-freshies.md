@@ -11,3 +11,8 @@ In 1981, The Freshies recorded The Johnny Radar Story, their highest budget rele
 In 1982 Sievey revived The Freshies as a duo with Barbara O'Donovan. They released one single, Fasten Your Seatbelts, before once again dismantling. 
 
 37 years later, after the death of Sievey, inspired by the documentary Being Frank, Barry Spencer and Rick Sarko reformed The Freshies with two new members. The group release new material on their YouTube channel.
+
+### Current Lineup
+
+Mike Doherty, Chris Sievey, Rick Sarko, Barry Spencer, Bob Dixon
+

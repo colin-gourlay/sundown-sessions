@@ -8,3 +8,8 @@ The Essence formed in 1984 and hail from Rotterdam in The Netherlands.  The band
 
 After the release of "[r=377157]" in 1991, the band went through a period of transition until the release of "Glow" in 1995.  Hans Diener remains the only founding member of the band still active.
 
+
+### Current Lineup
+
+Hans Diener, Mark Tan, George Tan
+

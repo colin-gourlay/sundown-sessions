@@ -15,3 +15,8 @@ Similarly, Roxy Music have had success with some of their 49 single/EP releases.
 The 18 Roxy Music hit singles/EPs have spent time in the UK Top 40 music charts for 128 weeks, with 44 of these within the Top 10. The single with the most time in the UK Charts is ‘[m=58323]’, which entered the charts in April 1979 and overall spent 14 weeks charting.
 
 Roxy Music’s first album to enter the UK Charts was the self-entitled ‘[m=58135]’ (Island ILPS9200) making its debut on 29/07/1972.  It stayed in the charts for 16 weeks with its highest position being no.10. The album briefly reappeared in February 2018 under the HDCD release (Virgin ROXYCD1) for one week reaching no.47. The first single to chart for Roxy Music was ‘[m=58141]’ (Island WIP6144) on 19/08/1972 and it remained in the UK charts for 12 weeks achieving a high position of no.4 in its fifth week on the charts. (Source: Official Charts Company (UK) (April 2020)).
+
+### Current Lineup
+
+Phil Manzanera, Bryan Ferry, Paul Thompson, Andy Mackay
+

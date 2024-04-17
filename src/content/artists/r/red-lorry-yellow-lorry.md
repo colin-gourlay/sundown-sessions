@@ -6,3 +6,8 @@ featured_image: artists/r/red-lorry-yellow-lorry.jpg
 
 Post punk, goth rock band
 Formed in Leeds, U.K. in 1981
+
+### Current Lineup
+
+Chris Reed, Simon 'Dingo' Archer, Martin Henderson, David Wolfenden, Gary Weight
+

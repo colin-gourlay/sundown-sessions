@@ -11,3 +11,8 @@ Inspired by the burgeoning UK punk scene, Wire are often cited as one of the mor
 Wire are arguably a definitive art punk or post-punk ensemble, mostly due to their richly detailed and atmospheric sound, often obscure lyrical themes, and, to a lesser extent, their Situationist political stance. The group exhibited a steady development from an early raucous punk style with 1977's "[m50645]," to a more complex, structured sound involving increased use of guitar effects and synthesizers on both 1978's "[m50617]," and 1979's "[m50606]." The band gained a reputation for experimenting with song arrangements throughout its career.
 
 In 2004 founding member Gilbert left the band. In 2010 [a989243] joined.
+
+### Current Lineup
+
+Colin Newman, Graham Lewis, Robert Grey, Matthew Simms
+

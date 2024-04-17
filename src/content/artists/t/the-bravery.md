@@ -14,3 +14,8 @@ Anthony Burulcich: Drums
 John Conway: Keyboards
 Mike Hindert: Bass
 Michael Zakarin: Guitar
+
+### Current Lineup
+
+Sam Endicott, Michael Zakarin, John Conway, Anthony Burulcich, Michael Hindert
+

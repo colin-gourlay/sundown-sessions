@@ -15,3 +15,8 @@ In 2000 they put out their first release proper, an E.P. on a small indie label 
 Winner of the 2008 Mercury Prize (for best British album) for [i]The Seldom Seen Kid[/i].
 
 Drummer Richard Jupp left the band of his own choice to pursue drum tutoring in 2016.
+
+### Current Lineup
+
+Guy Garvey, Craig Potter, Mark Potter, Pete Turner, Alex Reeves
+

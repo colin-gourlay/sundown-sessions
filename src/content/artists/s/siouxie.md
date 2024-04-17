@@ -2,6 +2,7 @@
 title: Siouxie
 featured_image: artists/s/siouxie.jpg
 ---
-## About
+### Current Lineup
 
+Vesku Koivusalo
 

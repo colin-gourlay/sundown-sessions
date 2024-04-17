@@ -13,3 +13,8 @@ Now established as huge stars in the UK and Europe (though like so many other "B
 It was the beginning of the end for Frankie Goes To Hollywood - six months later, Johnson announced he was leaving the band for a solo contract with MCA. In the subsequent high-profile legal battle, ZTT lost their claim of contract-breaking against Johnson, a ruling which effectively brought the curtain down on the label's golden age. Rutherford quit too, leaving a diminished group who subsequently disbanded without releasing anything.
 
 The original line-up reunited to play one song, "Welcome To The Pleasure Dome", during the National Lottery's Big Eurovision Welcome concert on 7th May 2023.
+
+### Current Lineup
+
+Paul Rutherford, Peter Gill, Ryan Molloy, Mark O'Toole
+

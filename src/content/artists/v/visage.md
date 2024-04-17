@@ -9,3 +9,8 @@ Pioneers of the New Romantic movement, the synth-pop group Visage emerged in 197
 Adding Ultravox keyboardist Billy Currie as well as three members of Magazine -- bassist Barry Adamson, guitarist John McGeoch, and keyboardist Dave Formula -- Visage signed to Martin Rushent's Genetic Records to release "Tar," in September of 1979, followed a year later by their self-titled debut LP. The album yielded a major single in "Fade To Grey," an instant club classic which heralded synth-pop's imminent commercial breakthrough. The follow-up, "Mind of a Toy," was a Top 20 hit. Next came their sophomore album, 1982's "The Anvil." Midge, John, Dave and Billy left in 1983. "Beat Boy," was Visage's 1984 release, the band now consisting of Steve Strange, Rusty Egan, Steve Barnacle and Gary Barnacle. In 2013, Visage returned with the line-up of Steve Strange and Steve Barnacle, with new members Robin Simon (ex-Ultravox guitarist) and Lauren Duvall (on vocals).
 
 Steve Strange died on the 12th of February, 2015.
+
+### Current Lineup
+
+Rusty Egan, Steve Barnacle, Robin Simon, Billy Currie, Lorraine, Logan Sky, Lauren Duvall, Steven Harrington
+

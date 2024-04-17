@@ -16,3 +16,8 @@ In 2000, The The, now consisting of Johnson, Schermerhorn, bassist Spencer Campb
 Since 2003 the reclusive Johnson has kept well away from the public eye and has concentrated primarily on soundtrack work, scoring numerous documentaries, films and art installations.
 In April 2014 The The announced that on June 30th 2014 a re-mastered, re-packaged version of "Soul Mining" would be released to commemorate the 30th Anniversary of its original release. 
 
+
+### Current Lineup
+
+Matt Johnson
+

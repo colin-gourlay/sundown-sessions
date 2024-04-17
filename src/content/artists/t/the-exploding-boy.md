@@ -8,3 +8,8 @@ Postpunk indie band from Stockholm, Sweden. Founded in 2006 and named after a so
 
 Contact:
 E-Mail: theexplodingboyofficial@gmail.com
+
+### Current Lineup
+
+Lars Andersson, Mattias Svensson, Johan Sjöblom, Stefan Axell, Nicklas Isgren
+

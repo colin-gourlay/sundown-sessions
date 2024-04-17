@@ -18,3 +18,8 @@ Phillip Tubbs – Keys/Electroc guitar
 Greg Leah / Greg Leeah – Drums
 Steve Herrada – Keys
 Emily Davis – Acoustic guitar
+
+### Current Lineup
+
+Greg Gonzalez, Randy Miller, Jacob Tomsky
+

@@ -15,3 +15,4 @@ The band released two albums: "[m=52561]" (1992) and "[m=52590]" (1993).
 The band's final tour was to support U2 in August 1993, after which the trio officially disbanded.
 
 Since that PJ Harvey started recording music solo under the same name.
+

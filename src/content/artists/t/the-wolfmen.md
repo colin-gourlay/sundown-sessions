@@ -2,6 +2,7 @@
 title: The Wolfmen
 featured_image: artists/t/the-wolfmen.jpg
 ---
-## About
+### Current Lineup
 
+Mark Lee Goodale
 

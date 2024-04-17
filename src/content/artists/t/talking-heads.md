@@ -9,3 +9,8 @@ Talking Heads were an American rock band formed in 1975 in New York City and dis
 Inducted into Rock And Roll Hall of Fame in 2002 (Performer).
 
 Genres: New wave, Post-Punk, Art Punk, Pop Rock, Art Pop, Funk Rock, Ethno  and Disco.
+
+### Current Lineup
+
+David Byrne, Chris Frantz, Tina Weymouth, Jerry Harrison
+

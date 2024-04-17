@@ -16,3 +16,8 @@ Bobbie Paterson (bass)
 Douglas Macintyre (guitar, backing vocals)
 Gordon Wilson (drums)
 
+
+### Current Lineup
+
+Paul McGeechan, James Grant, Douglas MacIntyre, Bobby Paterson, Gordon Wilson
+

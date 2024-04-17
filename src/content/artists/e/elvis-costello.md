@@ -8,3 +8,4 @@ English musician, singer-songwriter, and record producer born 25 August, 1954, L
 Son of Ross McManus, Elvis Costello has been married to Diana Krall since 2003.
 
 For other 'bands/aliases' (i.e. The Imposters, Confederates), see  Declan Patrick Aloysius MacManus.
+

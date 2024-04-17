@@ -13,3 +13,8 @@ Julian Taylor - Bass, backing vocals, trumpet
 Pete Cuthbert - Drums
 Toby Hounsham - Keyboards (1997–2000)
 Anthony Christmas - Drums (1997–2000)
+
+### Current Lineup
+
+Jonny Bull, Pete Cuthbert, Julian Taylor, Louis Eliot
+

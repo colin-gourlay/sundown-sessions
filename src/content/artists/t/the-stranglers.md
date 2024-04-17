@@ -19,3 +19,8 @@ Ellis left the band in 2000, passing the reins to guitarist [a629600]; when Robe
 Jet Black started experiencing health issues in 2007 that caused him to miss gigs; technician [url=https://www.discogs.com/artist/4478856-Ian-Barnard-2]Ian Barnard[/url] played in such instances. Black's live role was lessened in the 2013 tour, with [a4000000] playing the first halves of UK gigs and solely playing US gigs. Black played no gigs following March 2015, officially retiring in 2018; Macaulay's role as Black's replacement was officiated in 2016.
 
 After contracting COVID-19 in hospital, Dave Greenfield died on the 3rd of May 2020. Following the release of Dark Matters, [a568270] became the band's new keyboardist for their final full tour in 2021-2022. Following his own poor health, Jet Black died on the 6th of December 2022.
+
+### Current Lineup
+
+J.J. Burnel, Toby Hounsham, Baz Warne, Jim Macaulay
+

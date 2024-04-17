@@ -2,6 +2,7 @@
 title: China White
 featured_image: artists/c/china-white.jpg
 ---
-## About
+### Current Lineup
 
+C. Kimbell, Simon Atkinson, Damian Stephens
 

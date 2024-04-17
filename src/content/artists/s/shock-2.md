@@ -19,3 +19,8 @@ Karen Sparks [1979-1980]
 Sean Crawford [a.k.a.Tok] [1980-82]
 Penny Dunlop [1980]
 Carole Caplin [1980-82]
+
+### Current Lineup
+
+Barbie Wilde
+

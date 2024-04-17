@@ -13,3 +13,8 @@ Angelfish was a short-lived mid-1990s alternative rock group originating from Ed
 
 The music video for "Suffocate Me" was famously aired once by MTV during 120 Minutes, where it was seen by [a12332] co-founder [a177032]. Manson was asked to join Garbage, and accepted. The Angelfish side-project was dissolved, while Goodbye Mr. Mackenzie continued on for another two years without Manson.
 
+
+### Current Lineup
+
+Shirley Manson, Derek Kelly, Martin Metcalfe, Fin Wilson
+

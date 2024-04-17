@@ -11,3 +11,8 @@ Bootblacks' sound is characterized by its brooding and atmospheric melodies, dri
 Since their formation, Bootblacks have released several critically acclaimed albums, including "Veins" (2016), "Fragments" (2018), and "Thin Skies" (2020). The band has also toured extensively throughout North America and Europe, performing at renowned venues and festivals.
 
 With the addition of Fagerberg, Bootblacks are looking to explore new sonic territories and expand their already formidable musical horizons. Fans can look forward to more exciting music and performances from the band in the years to come.
+
+### Current Lineup
+
+Barrett Hiatt, Kalle Fagerberg, Ryan Macdonald
+

@@ -12,3 +12,8 @@ Richard 'Cass' Lewis: bass
 Martin "Ace" Kent: guitar
 Mark Richardson (5): drums (1996-now)
 Robbie France: drums (on 1995's [m=47320])
+
+### Current Lineup
+
+Richard 'Cass' Lewis, Mark Richardson, Martin "Ace" Kent, Deborah Anne Dyer
+

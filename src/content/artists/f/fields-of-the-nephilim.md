@@ -78,3 +78,8 @@ Tony Pettitt
 Gavin King
 Lee Newell
 Adam Leach
+
+### Current Lineup
+
+Carl McCoy, Tony Pettitt, Gavin King, Lee Newell, Adam Leach
+
