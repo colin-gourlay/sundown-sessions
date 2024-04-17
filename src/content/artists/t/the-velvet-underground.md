@@ -23,7 +23,8 @@ Vocals, Guitar and Bass Guitar
 Percussion
 
 Angus MacLise was the original drummer, but did not officially record with the band.
-Lou Reed
-John Cale
-Sterling Morrison
-Moe Tucker
+
+### Current Lineup
+
+Lou Reed, John Cale, Sterling Morrison, Moe Tucker
+

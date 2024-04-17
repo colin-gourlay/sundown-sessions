@@ -42,5 +42,8 @@ Chris Denis - vocals (1965)
 
 Inducted into Rock And Roll Hall of Fame in 1996 (Performer).
 Group name was taken from both Pink Anderson and Floyd "Dipper Boy" Council as a tribute to the American blues music they loved.
-David Gilmour
-Nick Mason
+
+### Current Lineup
+
+David Gilmour, Nick Mason
+

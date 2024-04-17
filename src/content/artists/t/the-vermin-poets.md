@@ -2,7 +2,7 @@
 title: The Vermin Poets
 featured_image: artists/t/the-vermin-poets.jpg
 ---
-Billy Childish
-Wolf Howard
-Julie Hamper
-Neil Palmer (7)
+### Current Lineup
+
+Billy Childish, Wolf Howard, Julie Hamper, Neil Palmer
+
