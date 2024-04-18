@@ -2,7 +2,7 @@
 title: Burundi Black
 featured_image: artists/b/burundi-black.jpg
 ---
-### Current Lineup
+## Current Lineup
 
 Mike Steïphenson
 

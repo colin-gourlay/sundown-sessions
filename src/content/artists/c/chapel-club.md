@@ -2,7 +2,7 @@
 title: Chapel Club
 featured_image: artists/c/chapel-club.jpg
 ---
-### Current Lineup
+## Current Lineup
 
 Michael Eran Hibbert
 

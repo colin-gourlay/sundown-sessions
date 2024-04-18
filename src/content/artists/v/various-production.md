@@ -2,7 +2,7 @@
 title: Various Production
 featured_image: artists/v/various-production.jpg
 ---
-### Current Lineup
+## Current Lineup
 
 Adam Phillips, Stuart Kirby
 

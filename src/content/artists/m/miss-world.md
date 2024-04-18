@@ -2,7 +2,7 @@
 title: Miss World
 featured_image: artists/m/miss-world.jpg
 ---
-### Current Lineup
+## Current Lineup
 
 Martin Chambers, Jonathan Perkins, Peter Noone, Jimmy Taylor
 
