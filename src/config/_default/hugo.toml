@@ -1,5 +1,5 @@
 title = 'Sundown Sessions'
-baseURL = 'http://localhost:1313/'
+baseURL = 'http://localhost:1313'
 languageCode = 'en-GB'
 theme = 'sundown-sessions'
 copyright = 'Colin Gourlay'
