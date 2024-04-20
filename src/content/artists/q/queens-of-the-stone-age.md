@@ -1,6 +1,6 @@
 ---
 title: Queens Of The Stone Age
-featured_image: /queens-of-the-stone-age.jpg
+featured_image: queens-of-the-stone-age.jpg
 ---
 ## About
 
