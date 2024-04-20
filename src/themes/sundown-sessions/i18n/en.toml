@@ -4,9 +4,6 @@ other = "More"
 [recentTitle]
 other = "Recent {{.Title }}"
 
-[readMore]
-other = "read more"
-
 [by]
 other = "By"
 
