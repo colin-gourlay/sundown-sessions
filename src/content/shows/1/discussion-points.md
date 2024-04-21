@@ -1,7 +1,17 @@
 ## Show discussion points
 
-- Sparks '_your favourite bands favourite band_'
-  - Movie: [The Sparks Brothers](https://www.imdb.com/title/tt8610436/)
-  - Movie Trailer: [Official Trailer](https://www.imdb.com/video/vi1807859737/)
-- Hear about the story of the Teskey Brothers on [180 Grams podcast](https://open.spotify.com/show/5n49kEwq2st3GST82veWoI)
-- Learn about the upcoming Fife Chamber of Commerce Annual Business Awards Ceremony at [2024 Fife Business Awards](https://fifebusinessawards.com/award-finalists/)
+- _Sparks 'your favourite bands favourite band'_
+  - [The Sparks Brothers](https://www.imdb.com/title/tt8610436/)
+  - [Official trailer](https://www.imdb.com/video/vi1807859737/)
+- _Art School Dancing_ 
+  - [Official Facebook Page](https://www.facebook.com/groups/111016498936043)
+  - [Show archive](https://unlistenablerubbish.wordpress.com)
+- _The Motors_
+  - Old Grey Whistle Test (1978): [Dancing The Night Away](https://www.youtube.com/watch?v=a8X1EKyhLHw)
+- _Teskey Brothers_ 
+  - [180 Grams podcast](https://open.spotify.com/show/5n49kEwq2st3GST82veWoI)
+- _Fife Chamber of Commerce_ 
+  - [2024 Fife Business Awards](https://fifebusinessawards.com)
+  - [K107 Nominations](https://fifebusinessawards.com/award-finalists/)
+    - Community & Partnership Award
+    - Marketing & Creativity & Innovation Award
