@@ -1,5 +1,3 @@
-# Track Info
-
 | Artiste                   | Track                            | Duration | Notes                                                                                                                                                                                                                                                                      |
 |---------------------------|----------------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | Kula Shaker               | Hush                             | 2:54     | Kula Shaker biggest hit.  Song written by Joe South, for Billy Joe Royal. The song was later covered by Somebody's Image in 1967. It was also covered by Deep Purple in 1968.                                                                                              |

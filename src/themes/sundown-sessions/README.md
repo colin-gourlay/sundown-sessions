@@ -14,7 +14,6 @@ Features
 - Custom Robots.txt (changes values based on environment)
 - Internal templates for meta data, google analytics, and DISQUS or COMMENTO comments
 - RSS Discovery
-- Table of Contents (must declare `toc: true` in post parameter)
 - Stackbit configuration ([Stackbit](https://www.stackbit.com))
 
 Also includes examples of Hugo Features or Functions:
