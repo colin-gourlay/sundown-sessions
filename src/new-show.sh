@@ -93,17 +93,6 @@ cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
 
 EOF
 
-cat << EOF > "./content/shows/$SHOW_NUMBER/show-notes.md"
-# Show Notes
-
-{{< include_content "/shows/$SHOW_NUMBER/featured-guest" >}}
-
----
-
-{{< include_content "/shows/$SHOW_NUMBER/discussion-points" >}}
-
-EOF
-
 cat << EOF > "./content/shows/$SHOW_NUMBER/featured-guest.md"
 ## Featured guest: $FEATURED_GUEST
 
