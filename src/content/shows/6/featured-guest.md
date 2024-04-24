@@ -1,5 +1,4 @@
-## Featured guest: 
-
+#
 {{< figure src="" title="" alt="" width="75%" >}}
 
 ### Contact details

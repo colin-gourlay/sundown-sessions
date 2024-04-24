@@ -92,8 +92,7 @@ cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
 EOF
 
 cat << EOF > "./content/shows/$SHOW_NUMBER/featured-guest.md"
-## Featured guest: $FEATURED_GUEST
-
+#
 {{< figure src="$SHOW_NUMBER-guest-logo.jpeg" title="$FEATURED_GUEST" alt="$FEATURED_GUEST" width="75%" >}}
 
 ### Contact details
