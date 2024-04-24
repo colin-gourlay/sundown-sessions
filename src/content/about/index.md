@@ -3,7 +3,7 @@ title: 'About'
 description: 'A community radio show broadcasting from Kirkcaldy, Scotland'
 menu:
   main:
-    weight: 1
+    weight: 2
 ---
 {{< figure src="about-sundown-sessions.jpeg" title="Colin Gourlay in Studio 2 (Dec 2023)" >}}
 
