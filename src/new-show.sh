@@ -59,7 +59,7 @@ draft: false
 
 ---
 
-## Featured guest:
+## Featured guest: $FEATURED_GUEST
 {{< include_content "/shows/$SHOW_NUMBER/featured-guest" >}}
 
 ---
