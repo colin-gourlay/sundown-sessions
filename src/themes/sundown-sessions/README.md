@@ -1,9 +1,3 @@
-# Ananke, A theme for [Hugo](https://gohugo.io/), a framework for building websites.
-
-The intent of this theme is to provide a solid starting place for Hugo sites with basic features and include best practices for performance, accessibility, and rapid development.
-
-![screenshot](https://raw.githubusercontent.com/budparr/gohugo-theme-ananke/master/images/screenshot.png)
-
 [DEMO](https://gohugo-ananke-theme-demo.netlify.com/)
 
 Features
@@ -43,39 +37,6 @@ Also includes examples of Hugo Features or Functions:
 
 
 This theme uses the "Tachyons" CSS library. This will allow you to manipulate the design of the theme by changing class names in HTML without touching the original CSS files. For more information see the [Tachyons website](https://tachyons.io/).
-
-
-
-## Installation
-
-### As a Hugo Module (recommended)
-
-> ⚠️ If you installed a [Hugo binary](https://gohugo.io/getting-started/installing/#binary-cross-platform), you may not have Go installed on your machine. To check if Go is installed:
-> ```
-> $ go version
-> ```
->  Go modules were considered production ready in v1.14. [Download Go](https://golang.org/dl/).
-
-1. From your project's root directory, initiate the hugo module system if you haven't already:
-
-   ```
-   $ hugo mod init github.com/<your_user>/<your_project>
-   ```
-
-2. Add the theme's repo to your `config.toml`:
-
-   ```toml
-   theme = ["github.com/theNewDynamic/gohugo-theme-ananke"]
-   ```
-
-### As Git Submodule
-
-Inside the folder of your Hugo site run:
-
-```
-$ git submodule add https://github.com/theNewDynamic/gohugo-theme-ananke.git themes/ananke
-```
-For more information read the official [setup guide](//gohugo.io/getting-started/quick-start/) of Hugo.
 
 
 
@@ -371,14 +332,3 @@ Note: The above command will not work on Windows. If you are running a Windows O
 set HUGO_ENV=production
 hugo
 ```
-
-## Contributing
-
-If you find a bug or have an idea for a feature, feel free to use the [issue tracker](https://github.com/theNewDynamic/gohugo-theme-ananke/issues) to let me know.
-
-
-
-
-TODO:
-
-- fix hard-coded link to [section](https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/layouts/index.html#L32)
