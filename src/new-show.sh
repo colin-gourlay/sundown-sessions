@@ -113,7 +113,7 @@ cat << EOF > "./content/shows/$SHOW_NUMBER/featured-guest.md"
 EOF
 
 cat << EOF > "./content/shows/$SHOW_NUMBER/discussion-points.md"
-## Show discussion points
+#
 
 EOF
 

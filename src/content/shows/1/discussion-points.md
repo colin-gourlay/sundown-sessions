@@ -1,5 +1,4 @@
-## Show discussion points
-
+#
 - _Sparks 'your favourite bands favourite band'_
   - [The Sparks Brothers](https://www.imdb.com/title/tt8610436/)
   - [Official trailer](https://www.imdb.com/video/vi1807859737/)
