@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "The Motors" >}} - Airport
 2. {{< artist-wikilink "Elvis Costello & The Attractions" >}} - Olivers Army
 3. {{< artist-wikilink "XTC" >}} - Senses Working Overtime

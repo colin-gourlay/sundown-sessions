@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "The Silencers" >}} - I Can Feel It
 2. {{< artist-wikilink "Hipsway" >}} - Tinder
 3. {{< artist-wikilink "Attic Lights" >}} - Dirty Thirst

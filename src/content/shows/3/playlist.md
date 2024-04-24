@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "The Stranglers" >}} - 96 Tears
 2. {{< artist-wikilink "Johnny Cash" >}} - Hurt
 3. {{< artist-wikilink "Billy Mackenzie" >}} - Never Turn Your Back On Mother Earth

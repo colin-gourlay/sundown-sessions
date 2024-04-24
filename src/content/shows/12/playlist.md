@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Bauhaus" >}} - International Bulletproof Talent
 2. {{< artist-wikilink "The Mission" >}} - Grotesque
 3. {{< artist-wikilink "Red Lorry Yellow Lorry" >}} - Happy To See Me

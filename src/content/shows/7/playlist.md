@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Fields Of The Nephilim" >}} - Moonchild
 2. {{< artist-wikilink "Balaam & The Angel" >}} - The Wave
 3. {{< artist-wikilink "Killing Joke" >}} - Kings And Queens

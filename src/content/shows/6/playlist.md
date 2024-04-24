@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "The Freshies" >}} - I'm In Love With The Girl On The Manchester Virgin Megastore Checkout Desk
 2. {{< artist-wikilink "The Freshies" >}} - I Can't Get Bouncing Babies By The Teardrop Explodes
 3. {{< artist-wikilink "The Motors" >}} - Forget About You

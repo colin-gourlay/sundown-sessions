@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Stranglers" >}} - Big In America
 2. {{< artist-wikilink "Johnny Cash" >}} - I Walk The Line
 3. {{< artist-wikilink "The Associates" >}} - White Car In Germany

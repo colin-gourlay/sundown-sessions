@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Love" >}} - My Flash On You
 2. {{< artist-wikilink "Clear Light" >}} - Think Again
 3. {{< artist-wikilink "The Doors" >}} - Strange Days

@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Inspiral Carpets" >}} - Bitches Brew
 2. {{< artist-wikilink "Electrafixion" >}} - Lowdown
 3. {{< artist-wikilink "A House" >}} - Call Me Blue

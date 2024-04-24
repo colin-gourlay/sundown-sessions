@@ -66,8 +66,6 @@ draft: false
 EOF
 
 cat << EOF > "./content/shows/$SHOW_NUMBER/playlist.md"
-# Playlist
-
 1. {{< artist-wikilink "[ARTIST]" >}} - [Track]
 
 - ADVERTISING BREAK

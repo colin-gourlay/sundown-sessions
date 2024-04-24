@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Fields Of The Nephilim" >}} - The Watchman
 2. {{< artist-wikilink "Balaam & The Angel" >}} - I'll Show You Something Special
 3. {{< artist-wikilink "Killing Joke" >}} - Love Like Blood

@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Elbow" >}} - Leaders Of The Free World
 2. {{< artist-wikilink "Martha Wainwright" >}} - You Cheated Me
 3. {{< artist-wikilink "Aimee Mann" >}}- Stupid Thing

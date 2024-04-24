@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Hipsway" >}} - The Honeythief
 2. {{< artist-wikilink "The Silencers" >}} - Painted Moon
 3. {{< artist-wikilink "Lloyd Cole & The Commotions" >}} - My Bag

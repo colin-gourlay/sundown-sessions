@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "REM" >}} - Get Up
 2. {{< artist-wikilink "A House" >}} - Freak Out
 3. {{< artist-wikilink "Red Lorry Yellow Lorry" >}} - Beating My Head

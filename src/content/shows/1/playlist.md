@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Queens Of The Stone Age" >}} - Feet Don't Fail Me
 2. {{< artist-wikilink "Franz Ferdinand" >}} - Take Me Out
 3. {{< artist-wikilink "Sparks" >}} - Propaganda

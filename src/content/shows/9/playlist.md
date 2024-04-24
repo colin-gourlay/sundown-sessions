@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Razorlight" >}} - Get It And Go
 2. {{< artist-wikilink "Julian Cope" >}} - World Shut Your Mouth
 3. {{< artist-wikilink "Kaiser Chiefs" >}} - Never Miss A Beat

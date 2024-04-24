@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Phil Lynott & Midge Ure" >}} - Yellow Pearl
 2. {{< artist-wikilink "The Rezillos" >}} - Top Of The Pops
 3. {{< artist-wikilink "Siouxie" >}} - Into A Swan

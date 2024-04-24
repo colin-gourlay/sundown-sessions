@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Kula Shaker" >}} - Hush
 2. {{< artist-wikilink "Frankie Goes To Hollywood" >}} - Born To Run
 3. {{< artist-wikilink "Bauhaus" >}} - Ziggy Stardust

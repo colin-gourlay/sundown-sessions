@@ -1,5 +1,3 @@
-# Playlist
-
 1. {{< artist-wikilink "Blondie" >}} - Hanging On The Telephone
 2. {{< artist-wikilink "The Mission" >}} - Beyond The Pale
 3. {{< artist-wikilink "The Cult" >}} - 83rd Dream
