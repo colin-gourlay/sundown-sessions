@@ -7,9 +7,6 @@ other = "Recent {{.Title }}"
 [by]
 other = "By"
 
-[whatsInThis]
-other = "What's in this {{ .Type }}"
-
 [related]
 other = "Related"
 
