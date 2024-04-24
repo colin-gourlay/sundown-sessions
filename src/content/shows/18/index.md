@@ -20,6 +20,7 @@ keywords:
   - 'Dragons'
   - 'The Beatles'
   - 'The Revillos'
+toc: true
 featured_image: '18-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-10-02T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/18/playlist" >}}
 
 ---
 
-{{< include_content "/shows/18/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/18/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/18/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/18/track-info" >}}

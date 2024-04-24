@@ -20,6 +20,7 @@ keywords:
   - 'The Detroit Cobras'
   - 'CousteauX'
   - 'Wire'
+toc: true
 featured_image: '11-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-08-14T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/11/playlist" >}}
 
 ---
 
-{{< include_content "/shows/11/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/11/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/11/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/11/track-info" >}}

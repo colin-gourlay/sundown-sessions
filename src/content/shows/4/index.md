@@ -20,6 +20,7 @@ keywords:
   - 'Angelfish'
   - 'Codeine Velvet Club'
   - 'The Exploding Boy'
+toc: true
 featured_image: '4-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-06-26T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/4/playlist" >}}
 
 ---
 
-{{< include_content "/shows/4/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/4/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/4/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/4/track-info" >}}

@@ -27,12 +27,20 @@ date: 2024-06-12T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/2/playlist" >}}
 
 ---
 
-{{< include_content "/shows/2/show-notes" >}}
+## Featured guest: 
+{{< include_content "/shows/2/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/2/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/2/track-info" >}}

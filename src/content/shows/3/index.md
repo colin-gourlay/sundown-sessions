@@ -20,6 +20,7 @@ keywords:
   - 'Aimee Mann'
   - 'The Unbelievable Truth'
   - 'Sparks'
+toc: true
 featured_image: '3-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-06-19T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/3/playlist" >}}
 
 ---
 
-{{< include_content "/shows/3/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/3/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/3/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/3/track-info" >}}

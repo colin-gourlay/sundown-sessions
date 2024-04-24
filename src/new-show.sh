@@ -46,6 +46,7 @@ keywords:
   - '$FEATURED_ARTIST_2'
   - '$FEATURED_ARTIST_3'
   - '$FEATURED_ARTIST_4'
+toc: true
 featured_image: '$SHOW_NUMBER-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -53,14 +54,22 @@ date: $SHOW_DATE_TIME
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/$SHOW_NUMBER/playlist" >}}
 
 ---
 
-{{< include_content "/shows/$SHOW_NUMBER/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/$SHOW_NUMBER/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/$SHOW_NUMBER/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/$SHOW_NUMBER/track-info" >}}
 
 EOF

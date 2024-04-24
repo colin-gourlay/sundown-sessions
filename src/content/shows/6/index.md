@@ -20,6 +20,7 @@ keywords:
   - 'Magazine'
   - 'Southern Death Cult'
   - 'Talking Heads'
+toc: true
 featured_image: '6-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-06-10T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/6/playlist" >}}
 
 ---
 
-{{< include_content "/shows/6/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/6/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/6/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/6/track-info" >}}

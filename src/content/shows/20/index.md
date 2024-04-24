@@ -20,6 +20,7 @@ keywords:
   - 'Sebadoh'
   - 'Moke'
   - 'The Dandy Warhols'
+toc: true
 featured_image: '20-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-10-16T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/20/playlist" >}}
 
 ---
 
-{{< include_content "/shows/20/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/20/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/20/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/20/track-info" >}}

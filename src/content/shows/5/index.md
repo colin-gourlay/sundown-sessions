@@ -20,6 +20,7 @@ keywords:
   - 'Grinderman'
   - 'Becky Becky'
   - 'The House Of Love'
+toc: true
 featured_image: '5-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-06-03T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/5/playlist" >}}
 
 ---
 
-{{< include_content "/shows/5/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/5/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/5/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/5/track-info" >}}

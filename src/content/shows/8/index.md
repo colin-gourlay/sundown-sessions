@@ -20,6 +20,7 @@ keywords:
   - 'Fingerprintz'
   - 'B.E.F.'
   - 'The Beatles'
+toc: true
 featured_image: '8-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-07-24T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/8/playlist" >}}
 
 ---
 
-{{< include_content "/shows/8/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/8/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/8/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/8/track-info" >}}

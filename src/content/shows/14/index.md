@@ -20,6 +20,7 @@ keywords:
   - 'Siobhan Wilson'
   - 'John Lennon'
   - 'Talking Heads'
+toc: true
 featured_image: '14-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -27,12 +28,20 @@ date: 2024-09-04T22:00:00Z
 draft: false
 ---
 
+## Playlist
 {{< include_content "/shows/14/playlist" >}}
 
 ---
 
-{{< include_content "/shows/14/show-notes" >}}
+## Featured guest:
+{{< include_content "/shows/14/featured-guest" >}}
 
 ---
 
+## Show discussion points
+{{< include_content "/shows/14/discussion-points" >}}
+
+---
+
+## Track info
 {{< include_content "/shows/14/track-info" >}}
