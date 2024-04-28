@@ -3,21 +3,43 @@ title: 'Show #1: Broadcast 5th June 2024'
 slug: 'featuring-the-big-now'
 description: 'featuring The Big Now'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
- 
-          - IST IST
+
+- The Big Now
+
+- IST IST
                     
-          - Becky Becky 
+- Becky Becky 
           
-          - Nick Cave & The Bad Seeds
+- Nick Cave & The Bad Seeds
           
-          - The Filthy Tongues
+- The Filthy Tongues
           
-          - and much, much more...
+- and much, much more...
 '
-keywords: 
+keywords:
   - 'The Big Now'
+  - 'Queens of the Stone Age'
+  - 'Franz Ferdinand'
+  - 'Sparks'
+  - 'Squeeze'
+  - 'David Latto & The Lang Spoons'
+  - 'Roachford'
   - 'IST IST'
+  - 'Interpol'
   - 'Becky Becky'
+  - 'The Motors'
+  - 'John Grant'
+  - 'Jacco Gardner'
+  - 'Pink Floyd'
+  - 'The Move'
+  - 'Electric Light Orchestra'
+  - 'The Detroit Cobras'
+  - 'The Teskey Brothers'
+  - 'The Vintage Explosion'
+  - 'Del Shannon'
+  - 'Vermin Poets'
+  - 'Pavement'
+  - 'The Velvet Underground'
   - 'Nick Cave & The Bad Seeds'
   - 'The Filthy Tongues'
 toc: true
