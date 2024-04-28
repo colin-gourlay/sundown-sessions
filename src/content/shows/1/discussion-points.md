@@ -2,6 +2,8 @@
 - _Sparks 'your favourite bands favourite band'_
   - [The Sparks Brothers](https://www.imdb.com/title/tt8610436/)
   - [Official trailer](https://www.imdb.com/video/vi1807859737/)
+- _Interpol_
+  - [Touring Europe](https://twitter.com/Interpol/status/1782319169746207097) to mark the 20th anniversary of **_'Antics'_**
 - _Art School Dancing_ 
   - [Official Facebook Page](https://www.facebook.com/groups/111016498936043)
   - [Show archive](https://unlistenablerubbish.wordpress.com)
