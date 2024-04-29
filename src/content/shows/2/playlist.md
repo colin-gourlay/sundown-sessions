@@ -16,7 +16,7 @@
 2. {{< artist-wikilink "PJ Harvey" >}} - Sheela-na-gig
 3. {{< artist-wikilink "The White Stripes" >}} - Seven Nation Army
 4. {{< artist-wikilink "Manic Street Preachers" >}} - Nobody Loved You
-5. {{< artist-wikilink "Electric Light Orchestra" >}} - Here Is The News
+5. {{< artist-wikilink "Electric Light Orchestra" >}} - Here Is the News
 
 - NEWS
 
@@ -24,13 +24,13 @@
 2. {{< artist-wikilink "Chikinki" >}} - You Said
 3. {{< artist-wikilink "The Bravery" >}} - An Honest Mistake
 4. {{< artist-wikilink "Doves" >}} - One Of These Days
-5. {{< artist-wikilink "Jim Morrison" >}} - A Feast Of Friends
+5. {{< artist-wikilink "Jim Morrison" >}} - A Feast of Friends
 
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Air" >}} - Sexy Boy
 2. {{< artist-wikilink "She Wants Revenge" >}} - These Things
-3. {{< artist-wikilink "Ist Ist" >}} - You're Mine
+3. {{< artist-wikilink "IST IST" >}} - You're Mine
 4. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Jubilee Street
 
 - ADVERTISING BREAK
