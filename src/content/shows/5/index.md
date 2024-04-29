@@ -1,30 +1,50 @@
 ---
 title: 'Show #5: Broadcast 3rd July 2024'
-slug: 'featuring-linda-birrell-breathe-easy'
-description: 'featuring Linda Birrell from Breathe Easy'
+slug: 'featuring-agnes-from-breathe-easy'
+description: 'featuring Agnes from Breathe Easy'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Red Lorry Yellow Lorry
-                    
-          - Grinderman
-          
-          - Becky Becky
-          
-          - The House Of Love
-          
-          - and much, much more...
+
+- Agnes from Breathe Easy
+
+- Red Lorry Yellow Lorry
+        
+- Grinderman
+
+- Becky Becky
+
+- The House Of Love
+
+- and much, much more...
 '
 keywords:
-  - 'Linda Birrell from Breathe Easy'
-  - 'Red Lorry Yellow Lorry'
-  - 'Grinderman'
-  - 'Becky Becky'
-  - 'The House Of Love'
+ - 'Agnes from Breathe Easy'
+ - 'Inspiral Carpets'
+ - 'Electrafixion'
+ - 'A House'
+ - 'The Tears'
+ - 'Red Lorry Yellow Lorry'
+ - 'David Latto & The Lang Spoons'
+ - 'Big Country'
+ - 'R.E.M.'
+ - 'T. Rex'
+ - 'The Filthy Tongues'
+ - 'Grinderman'
+ - 'White Lies'
+ - 'Chapel Club'
+ - 'LNZNDRF'
+ - 'Ennio Morricone'
+ - 'The Chameleons'
+ - 'Lucid Evolution'
+ - 'Becky Becky'
+ - 'The House of Love'
+ - 'The Ronson Hangup'
+ - 'Sixpence None The Richer'
+ - 'Propaganda'
 toc: true
 featured_image: '5-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-06-03T22:00:00Z
+date: 2024-04-28T22:00:00Z
 draft: false
 ---
 
@@ -33,7 +53,7 @@ draft: false
 
 ---
 
-## Featured guest:
+## Featured guest: Agnes from Breathe Easy
 {{< include_content "/shows/5/featured-guest" >}}
 
 ---
