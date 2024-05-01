@@ -1,1 +1,10 @@
 #
+- _Royal Blood_ 
+  - [Touring](https://twitter.com/royalblooduk/status/1777244995059118447/photo/2) to mark the 10th anniversary of **_Royal Blood_**
+- _Manic Street Preachers_
+  - **_Lifeblood_** [20th Anniversary Edition](https://manicstreetpreachers.lnk.to/Lifeblood20) includes remixes by Steven Wilson
+- _IST IST_
+  - Their 4th album **_Light A Bigger Fire_** will be released on 20th September - available to [pre-order here](https://www.ististmusic.com/)
+- _Nick Cave & The Bad Seeds_
+  - The new album **_Wild God_** will be released on 30 August - available to [pre-order here](https://linktr.ee/nickcave)
+  - [The Wild God Tour - UK & Europe 2024](https://www.nickcave.com/tour-dates/)
