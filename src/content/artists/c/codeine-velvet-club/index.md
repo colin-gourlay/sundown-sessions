@@ -8,5 +8,5 @@ Codeine Velvet Club is a Scottish alternative rock band formed in 2008 by Lou Hi
 
 ### Current Lineup
 
-John Lawler, Lou Hickey
+Ross McFarlane, John Lawler, Lou Hickey
 
