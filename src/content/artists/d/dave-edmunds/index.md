@@ -1,6 +1,7 @@
 ---
 title: Dave Edmunds
 featured_image: artists/d/dave-edmunds/dave-edmunds.jpg
+artist_page: true
 ---
 ## About
 

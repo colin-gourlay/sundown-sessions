@@ -1,6 +1,7 @@
 ---
 title: Modern English
 featured_image: artists/m/modern-english/modern-english.jpg
+artist_page: true
 ---
 ## About
 

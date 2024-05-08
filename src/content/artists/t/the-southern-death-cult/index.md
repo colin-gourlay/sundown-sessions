@@ -1,6 +1,7 @@
 ---
 title: The Southern Death Cult
 featured_image: artists/t/the-southern-death-cult/the-southern-death-cult.jpg
+artist_page: true
 ---
 ## About
 

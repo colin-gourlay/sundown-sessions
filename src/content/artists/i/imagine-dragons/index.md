@@ -1,6 +1,7 @@
 ---
 title: Imagine Dragons
 featured_image: artists/i/imagine-dragons/imagine-dragons.jpg
+artist_page: true
 ---
 ## About
 

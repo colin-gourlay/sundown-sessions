@@ -1,6 +1,7 @@
 ---
 title: Veil Veil Vanish
 featured_image: artists/v/veil-veil-vanish/veil-veil-vanish.jpg
+artist_page: true
 ---
 ## About
 

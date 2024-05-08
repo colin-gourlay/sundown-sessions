@@ -1,6 +1,7 @@
 ---
 title: Astral Projection
 featured_image: artists/a/astral-projection/astral-projection.jpg
+artist_page: true
 ---
 ## About
 

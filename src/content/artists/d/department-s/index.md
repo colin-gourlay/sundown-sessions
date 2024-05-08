@@ -1,6 +1,7 @@
 ---
 title: Department S
 featured_image: artists/d/department-s/department-s.jpg
+artist_page: true
 ---
 ## About
 

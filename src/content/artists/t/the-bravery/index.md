@@ -1,6 +1,7 @@
 ---
 title: The Bravery
 featured_image: artists/t/the-bravery/the-bravery.jpg
+artist_page: true
 ---
 ## About
 

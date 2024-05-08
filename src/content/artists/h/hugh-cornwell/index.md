@@ -1,6 +1,7 @@
 ---
 title: Hugh Cornwell
 featured_image: artists/h/hugh-cornwell/hugh-cornwell.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Nick Lowe
 featured_image: artists/n/nick-lowe/nick-lowe.jpg
+artist_page: true
 ---
 ## About
 

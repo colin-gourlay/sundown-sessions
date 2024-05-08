@@ -1,6 +1,7 @@
 ---
 title: Morrissey
 featured_image: artists/m/morrissey/morrissey.jpg
+artist_page: true
 ---
 ## About
 

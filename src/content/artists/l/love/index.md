@@ -1,6 +1,7 @@
 ---
 title: Love
 featured_image: artists/l/love/love.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: The Icicle Works
 featured_image: artists/t/the-icicle-works/the-icicle-works.jpg
+artist_page: true
 ---
 ## About
 

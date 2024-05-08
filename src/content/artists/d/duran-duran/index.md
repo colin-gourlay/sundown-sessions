@@ -1,6 +1,7 @@
 ---
 title: Duran Duran
 featured_image: artists/d/duran-duran/duran-duran.jpg
+artist_page: true
 ---
 ## About
 

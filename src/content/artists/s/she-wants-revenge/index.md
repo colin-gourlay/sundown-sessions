@@ -1,6 +1,7 @@
 ---
 title: She Wants Revenge
 featured_image: artists/s/she-wants-revenge/she-wants-revenge.jpg
+artist_page: true
 ---
 ## About
 

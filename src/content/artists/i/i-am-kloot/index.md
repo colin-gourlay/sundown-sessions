@@ -1,6 +1,7 @@
 ---
 title: I Am Kloot
 featured_image: artists/i/i-am-kloot/i-am-kloot.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: The House Of Love
 featured_image: artists/t/the-house-of-love/the-house-of-love.jpg
+artist_page: true
 ---
 ## About
 

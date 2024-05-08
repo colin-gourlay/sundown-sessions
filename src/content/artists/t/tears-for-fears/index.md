@@ -1,6 +1,7 @@
 ---
 title: Tears For Fears
 featured_image: artists/t/tears-for-fears/tears-for-fears.jpg
+artist_page: true
 ---
 ## About
 

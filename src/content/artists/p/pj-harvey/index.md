@@ -1,6 +1,7 @@
 ---
 title: PJ Harvey
 featured_image: artists/p/pj-harvey/pj-harvey.jpg
+artist_page: true
 ---
 ## About
 

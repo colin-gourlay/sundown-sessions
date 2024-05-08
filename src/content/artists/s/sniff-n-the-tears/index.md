@@ -1,6 +1,7 @@
 ---
 title: Sniff n the Tears
 featured_image: artists/s/sniff-n-the-tears/sniff-n-the-tears.jpg
+artist_page: true
 ---
 ## About
 

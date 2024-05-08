@@ -1,6 +1,7 @@
 ---
 title: Radio 4
 featured_image: artists/r/radio-4/radio-4.jpg
+artist_page: true
 ---
 ## About
 

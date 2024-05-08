@@ -1,6 +1,7 @@
 ---
 title: Grinderman
 featured_image: artists/g/grinderman/grinderman.jpg
+artist_page: true
 ---
 ## About
 

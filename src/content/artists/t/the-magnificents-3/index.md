@@ -1,6 +1,7 @@
 ---
 title: The Magnificents (3)
 featured_image: artists/t/the-magnificents-3/the-magnificents-3.jpg
+artist_page: true
 ---
 ## About
 

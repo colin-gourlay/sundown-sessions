@@ -1,6 +1,7 @@
 ---
 title: Pavement
 featured_image: artists/p/pavement/pavement.jpg
+artist_page: true
 ---
 ## About
 

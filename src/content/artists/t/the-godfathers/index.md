@@ -1,6 +1,7 @@
 ---
 title: The Godfathers
 featured_image: artists/t/the-godfathers/the-godfathers.jpg
+artist_page: true
 ---
 ## About
 

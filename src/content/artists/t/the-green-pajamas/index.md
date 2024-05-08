@@ -1,6 +1,7 @@
 ---
 title: The Green Pajamas
 featured_image: artists/t/the-green-pajamas/the-green-pajamas.jpg
+artist_page: true
 ---
 ## About
 

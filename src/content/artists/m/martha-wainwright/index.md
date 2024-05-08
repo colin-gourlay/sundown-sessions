@@ -1,6 +1,7 @@
 ---
 title: Martha Wainwright
 featured_image: artists/m/martha-wainwright/martha-wainwright.jpg
+artist_page: true
 ---
 ## About
 

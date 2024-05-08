@@ -1,6 +1,7 @@
 ---
 title: Red Lorry Yellow Lorry
 featured_image: artists/r/red-lorry-yellow-lorry/red-lorry-yellow-lorry.jpg
+artist_page: true
 ---
 ## About
 

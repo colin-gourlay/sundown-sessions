@@ -1,6 +1,7 @@
 ---
 title: The Teskey Brothers
 featured_image: artists/t/the-teskey-brothers/the-teskey-brothers.jpg
+artist_page: true
 ---
 ## About
 

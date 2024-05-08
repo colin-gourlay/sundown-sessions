@@ -1,6 +1,7 @@
 ---
 title: Metallica
 featured_image: artists/m/metallica/metallica.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Cocteau Twins
 featured_image: artists/c/cocteau-twins/cocteau-twins.jpg
+artist_page: true
 ---
 ## About
 

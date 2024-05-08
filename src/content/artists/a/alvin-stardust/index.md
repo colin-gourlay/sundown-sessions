@@ -1,6 +1,7 @@
 ---
 title: Alvin Stardust
 featured_image: artists/a/alvin-stardust/alvin-stardust.jpg
+artist_page: true
 ---
 ## About
 

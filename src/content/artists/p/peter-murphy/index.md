@@ -1,6 +1,7 @@
 ---
 title: Peter Murphy
 featured_image: artists/p/peter-murphy/peter-murphy.jpg
+artist_page: true
 ---
 ## About
 

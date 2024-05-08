@@ -1,6 +1,7 @@
 ---
 title: Sixpence None The Richer
 featured_image: artists/s/sixpence-none-the-richer/sixpence-none-the-richer.jpg
+artist_page: true
 ---
 ## About
 

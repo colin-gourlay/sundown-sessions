@@ -1,6 +1,7 @@
 ---
 title: Johnny Marr
 featured_image: artists/j/johnny-marr/johnny-marr.jpg
+artist_page: true
 ---
 ## About
 

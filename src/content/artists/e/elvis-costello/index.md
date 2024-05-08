@@ -1,6 +1,7 @@
 ---
 title: Elvis Costello
 featured_image: artists/e/elvis-costello/elvis-costello.jpg
+artist_page: true
 ---
 ## About
 

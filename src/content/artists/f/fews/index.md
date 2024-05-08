@@ -1,6 +1,7 @@
 ---
 title: Fews
 featured_image: artists/f/fews/fews.jpg
+artist_page: true
 ---
 ## About
 

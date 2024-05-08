@@ -1,6 +1,7 @@
 ---
 title: Miracle Legion
 featured_image: artists/m/miracle-legion/miracle-legion.jpg
+artist_page: true
 ---
 ## About
 

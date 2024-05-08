@@ -1,6 +1,7 @@
 ---
 title: Magnapop
 featured_image: artists/m/magnapop/magnapop.jpg
+artist_page: true
 ---
 ## About
 

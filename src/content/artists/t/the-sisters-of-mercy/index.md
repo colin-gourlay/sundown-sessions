@@ -1,6 +1,7 @@
 ---
 title: The Sisters Of Mercy
 featured_image: artists/t/the-sisters-of-mercy/the-sisters-of-mercy.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: The Sweet
 featured_image: artists/t/the-sweet/the-sweet.jpg
+artist_page: true
 ---
 ## About
 

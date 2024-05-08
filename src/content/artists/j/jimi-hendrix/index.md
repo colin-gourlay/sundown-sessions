@@ -1,6 +1,7 @@
 ---
 title: Jimi Hendrix
 featured_image: artists/j/jimi-hendrix/jimi-hendrix.jpg
+artist_page: true
 ---
 ## About
 

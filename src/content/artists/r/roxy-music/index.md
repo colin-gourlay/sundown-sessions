@@ -1,6 +1,7 @@
 ---
 title: Roxy Music
 featured_image: artists/r/roxy-music/roxy-music.jpg
+artist_page: true
 ---
 ## About
 

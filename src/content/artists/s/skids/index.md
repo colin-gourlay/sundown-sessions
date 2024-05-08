@@ -1,6 +1,7 @@
 ---
 title: Skids
 featured_image: artists/s/skids/skids.jpg
+artist_page: true
 ---
 ## About
 

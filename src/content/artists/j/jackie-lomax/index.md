@@ -1,6 +1,7 @@
 ---
 title: Jackie Lomax
 featured_image: artists/j/jackie-lomax/jackie-lomax.jpg
+artist_page: true
 ---
 ## About
 

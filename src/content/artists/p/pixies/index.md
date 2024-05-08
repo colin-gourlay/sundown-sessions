@@ -1,6 +1,7 @@
 ---
 title: Pixies
 featured_image: artists/p/pixies/pixies.jpg
+artist_page: true
 ---
 ## About
 

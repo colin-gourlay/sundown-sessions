@@ -1,6 +1,7 @@
 ---
 title: The Cult
 featured_image: artists/t/the-cult/the-cult.jpg
+artist_page: true
 ---
 ## About
 

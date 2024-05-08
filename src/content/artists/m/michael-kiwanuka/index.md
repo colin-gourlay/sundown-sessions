@@ -1,6 +1,7 @@
 ---
 title: Michael Kiwanuka
 featured_image: artists/m/michael-kiwanuka/michael-kiwanuka.jpg
+artist_page: true
 ---
 ## About
 

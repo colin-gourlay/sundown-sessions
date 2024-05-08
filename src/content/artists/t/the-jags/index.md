@@ -1,6 +1,7 @@
 ---
 title: The Jags
 featured_image: artists/t/the-jags/the-jags.jpg
+artist_page: true
 ---
 ## About
 

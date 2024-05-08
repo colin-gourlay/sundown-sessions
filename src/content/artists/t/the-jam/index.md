@@ -1,6 +1,7 @@
 ---
 title: The Jam
 featured_image: artists/t/the-jam/the-jam.jpg
+artist_page: true
 ---
 ## About
 

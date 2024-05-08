@@ -1,6 +1,7 @@
 ---
 title: Graham Coxon
 featured_image: artists/g/graham-coxon/graham-coxon.jpg
+artist_page: true
 ---
 ## About
 

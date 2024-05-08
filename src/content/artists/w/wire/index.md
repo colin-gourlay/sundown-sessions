@@ -1,6 +1,7 @@
 ---
 title: Wire
 featured_image: artists/w/wire/wire.jpg
+artist_page: true
 ---
 ## About
 

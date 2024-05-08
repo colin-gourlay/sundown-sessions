@@ -1,6 +1,7 @@
 ---
 title: The The
 featured_image: artists/t/the-the/the-the.jpg
+artist_page: true
 ---
 ## About
 

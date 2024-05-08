@@ -1,6 +1,7 @@
 ---
 title: Bernard Butler
 featured_image: artists/b/bernard-butler/bernard-butler.jpg
+artist_page: true
 ---
 ## About
 

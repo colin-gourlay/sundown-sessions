@@ -1,6 +1,7 @@
 ---
 title: Death Cult
 featured_image: artists/d/death-cult/death-cult.jpg
+artist_page: true
 ---
 ## About
 

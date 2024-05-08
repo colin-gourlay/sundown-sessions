@@ -1,6 +1,7 @@
 ---
 title: Hector (6)
 featured_image: artists/h/hector-6/hector-6.jpg
+artist_page: true
 ---
 ## About
 

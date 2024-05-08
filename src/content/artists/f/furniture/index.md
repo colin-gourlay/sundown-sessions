@@ -1,6 +1,7 @@
 ---
 title: Furniture
 featured_image: artists/f/furniture/furniture.jpg
+artist_page: true
 ---
 ## About
 

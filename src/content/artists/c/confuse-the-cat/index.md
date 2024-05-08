@@ -1,6 +1,7 @@
 ---
 title: Confuse The Cat
 featured_image: artists/c/confuse-the-cat/confuse-the-cat.jpg
+artist_page: true
 ---
 ## About
 

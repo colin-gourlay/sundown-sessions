@@ -1,6 +1,7 @@
 ---
 title: Ennio Morricone
 featured_image: artists/e/ennio-morricone/ennio-morricone.jpg
+artist_page: true
 ---
 ## About
 

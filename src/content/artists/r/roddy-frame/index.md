@@ -1,6 +1,7 @@
 ---
 title: Roddy Frame
 featured_image: artists/r/roddy-frame/roddy-frame.jpg
+artist_page: true
 ---
 ## About
 

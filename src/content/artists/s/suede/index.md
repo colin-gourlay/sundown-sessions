@@ -1,6 +1,7 @@
 ---
 title: Suede
 featured_image: artists/s/suede/suede.jpg
+artist_page: true
 ---
 ## About
 

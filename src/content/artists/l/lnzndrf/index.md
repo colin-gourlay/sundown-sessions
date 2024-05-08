@@ -1,6 +1,7 @@
 ---
 title: LNZNDRF
 featured_image: artists/l/lnzndrf/lnzndrf.jpg
+artist_page: true
 ---
 ## About
 

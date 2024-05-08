@@ -1,6 +1,7 @@
 ---
 title: Martha And The Muffins
 featured_image: artists/m/martha-and-the-muffins/martha-and-the-muffins.jpg
+artist_page: true
 ---
 ## About
 

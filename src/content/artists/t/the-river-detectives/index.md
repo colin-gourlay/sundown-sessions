@@ -1,6 +1,7 @@
 ---
 title: The River Detectives
 featured_image: artists/t/the-river-detectives/the-river-detectives.jpg
+artist_page: true
 ---
 ## About
 

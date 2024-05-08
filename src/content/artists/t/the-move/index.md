@@ -1,6 +1,7 @@
 ---
 title: The Move
 featured_image: artists/t/the-move/the-move.jpg
+artist_page: true
 ---
 ## About
 

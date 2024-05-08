@@ -1,6 +1,7 @@
 ---
 title: Håvard Rem
 featured_image: artists/h/hvard-rem/hvard-rem.jpg
+artist_page: true
 ---
 ## About
 

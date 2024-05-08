@@ -1,6 +1,7 @@
 ---
 title: Gaye Bykers On Acid
 featured_image: artists/g/gaye-bykers-on-acid/gaye-bykers-on-acid.jpg
+artist_page: true
 ---
 ## About
 

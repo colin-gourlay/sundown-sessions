@@ -1,6 +1,7 @@
 ---
 title: Voice Of The Beehive
 featured_image: artists/v/voice-of-the-beehive/voice-of-the-beehive.jpg
+artist_page: true
 ---
 ## About
 

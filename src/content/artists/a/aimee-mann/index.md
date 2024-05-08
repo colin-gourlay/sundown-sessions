@@ -1,6 +1,7 @@
 ---
 title: Aimee Mann
 featured_image: artists/a/aimee-mann/aimee-mann.jpg
+artist_page: true
 ---
 ## About
 

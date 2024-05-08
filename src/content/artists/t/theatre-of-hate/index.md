@@ -1,6 +1,7 @@
 ---
 title: Theatre Of Hate
 featured_image: artists/t/theatre-of-hate/theatre-of-hate.jpg
+artist_page: true
 ---
 ## About
 

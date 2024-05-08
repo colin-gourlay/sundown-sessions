@@ -1,6 +1,7 @@
 ---
 title: Lyres
 featured_image: artists/l/lyres/lyres.jpg
+artist_page: true
 ---
 ## About
 

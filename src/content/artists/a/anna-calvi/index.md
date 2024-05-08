@@ -1,6 +1,7 @@
 ---
 title: Anna Calvi
 featured_image: artists/a/anna-calvi/anna-calvi.jpg
+artist_page: true
 ---
 ## About
 

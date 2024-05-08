@@ -1,6 +1,7 @@
 ---
 title: Melys
 featured_image: artists/m/melys/melys.jpg
+artist_page: true
 ---
 ## About
 

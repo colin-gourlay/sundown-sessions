@@ -1,6 +1,7 @@
 ---
 title: Simple Minds
 featured_image: artists/s/simple-minds/simple-minds.jpg
+artist_page: true
 ---
 ## About
 

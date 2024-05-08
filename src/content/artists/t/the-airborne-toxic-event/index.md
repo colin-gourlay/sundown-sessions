@@ -1,6 +1,7 @@
 ---
 title: The Airborne Toxic Event
 featured_image: artists/t/the-airborne-toxic-event/the-airborne-toxic-event.jpg
+artist_page: true
 ---
 ## About
 

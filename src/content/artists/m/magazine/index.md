@@ -1,6 +1,7 @@
 ---
 title: Magazine
 featured_image: artists/m/magazine/magazine.jpg
+artist_page: true
 ---
 ## About
 

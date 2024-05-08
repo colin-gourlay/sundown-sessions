@@ -1,6 +1,7 @@
 ---
 title: Visage
 featured_image: artists/v/visage/visage.jpg
+artist_page: true
 ---
 ## About
 

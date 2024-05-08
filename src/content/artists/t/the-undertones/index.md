@@ -1,6 +1,7 @@
 ---
 title: The Undertones
 featured_image: artists/t/the-undertones/the-undertones.jpg
+artist_page: true
 ---
 ## About
 

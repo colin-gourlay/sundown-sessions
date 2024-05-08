@@ -1,6 +1,7 @@
 ---
 title: Pete Shelley
 featured_image: artists/p/pete-shelley/pete-shelley.jpg
+artist_page: true
 ---
 ## About
 

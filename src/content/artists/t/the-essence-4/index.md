@@ -1,6 +1,7 @@
 ---
 title: The Essence (4)
 featured_image: artists/t/the-essence-4/the-essence-4.jpg
+artist_page: true
 ---
 ## About
 

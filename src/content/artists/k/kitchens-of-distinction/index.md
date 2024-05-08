@@ -1,6 +1,7 @@
 ---
 title: Kitchens Of Distinction
 featured_image: artists/k/kitchens-of-distinction/kitchens-of-distinction.jpg
+artist_page: true
 ---
 ## About
 

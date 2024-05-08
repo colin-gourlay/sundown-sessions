@@ -1,6 +1,7 @@
 ---
 title: Delays
 featured_image: artists/d/delays/delays.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Radio Stars
 featured_image: artists/r/radio-stars/radio-stars.jpg
+artist_page: true
 ---
 ## About
 

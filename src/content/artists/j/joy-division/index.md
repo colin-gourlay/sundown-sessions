@@ -1,6 +1,7 @@
 ---
 title: Joy Division
 featured_image: artists/j/joy-division/joy-division.jpg
+artist_page: true
 ---
 ## About
 

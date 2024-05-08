@@ -1,6 +1,7 @@
 ---
 title: Circus (11)
 featured_image: artists/c/circus-11/circus-11.jpg
+artist_page: true
 ---
 ## About
 

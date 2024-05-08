@@ -1,6 +1,7 @@
 ---
 title: Josef K
 featured_image: artists/j/josef-k/josef-k.jpg
+artist_page: true
 ---
 ## About
 

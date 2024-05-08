@@ -1,6 +1,7 @@
 ---
 title: Frankie Goes To Hollywood
 featured_image: artists/f/frankie-goes-to-hollywood/frankie-goes-to-hollywood.jpg
+artist_page: true
 ---
 ## About
 

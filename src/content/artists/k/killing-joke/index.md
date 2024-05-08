@@ -1,6 +1,7 @@
 ---
 title: Killing Joke
 featured_image: artists/k/killing-joke/killing-joke.jpg
+artist_page: true
 ---
 ## About
 

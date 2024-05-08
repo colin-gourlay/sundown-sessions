@@ -1,6 +1,7 @@
 ---
 title: The Comsat Angels
 featured_image: artists/t/the-comsat-angels/the-comsat-angels.jpg
+artist_page: true
 ---
 ## About
 

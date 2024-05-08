@@ -1,6 +1,7 @@
 ---
 title: Yeah Yeah Yeahs
 featured_image: artists/y/yeah-yeah-yeahs/yeah-yeah-yeahs.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Virgin Prunes
 featured_image: artists/v/virgin-prunes/virgin-prunes.jpg
+artist_page: true
 ---
 ## About
 

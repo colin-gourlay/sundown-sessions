@@ -1,6 +1,7 @@
 ---
 title: Kula Shaker
 featured_image: artists/k/kula-shaker/kula-shaker.jpg
+artist_page: true
 ---
 ## About
 

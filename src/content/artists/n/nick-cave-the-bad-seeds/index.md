@@ -1,6 +1,7 @@
 ---
 title: Nick Cave & The Bad Seeds
 featured_image: artists/n/nick-cave-the-bad-seeds/nick-cave-the-bad-seeds.jpg
+artist_page: true
 ---
 ## About
 

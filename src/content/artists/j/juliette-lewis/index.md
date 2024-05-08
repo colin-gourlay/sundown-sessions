@@ -1,6 +1,7 @@
 ---
 title: Juliette Lewis
 featured_image: artists/j/juliette-lewis/juliette-lewis.jpg
+artist_page: true
 ---
 ## About
 

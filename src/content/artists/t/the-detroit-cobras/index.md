@@ -1,6 +1,7 @@
 ---
 title: The Detroit Cobras
 featured_image: artists/t/the-detroit-cobras/the-detroit-cobras.jpg
+artist_page: true
 ---
 ## About
 

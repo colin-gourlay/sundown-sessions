@@ -1,6 +1,7 @@
 ---
 title: Best Picture
 featured_image: artists/b/best-picture/best-picture.jpg
+artist_page: true
 ---
 ## About
 

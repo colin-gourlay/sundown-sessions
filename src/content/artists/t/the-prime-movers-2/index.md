@@ -1,6 +1,7 @@
 ---
 title: The Prime Movers (2)
 featured_image: artists/t/the-prime-movers-2/the-prime-movers-2.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Talking Heads
 featured_image: artists/t/talking-heads/talking-heads.jpg
+artist_page: true
 ---
 ## About
 

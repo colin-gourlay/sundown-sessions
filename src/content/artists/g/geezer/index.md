@@ -1,6 +1,7 @@
 ---
 title: Geezer
 featured_image: artists/g/geezer/geezer.jpg
+artist_page: true
 ---
 ## About
 

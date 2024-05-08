@@ -1,6 +1,7 @@
 ---
 title: Moby
 featured_image: artists/m/moby/moby.jpg
+artist_page: true
 ---
 ## About
 

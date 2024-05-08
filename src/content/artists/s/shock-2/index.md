@@ -1,6 +1,7 @@
 ---
 title: Shock (2)
 featured_image: artists/s/shock-2/shock-2.jpg
+artist_page: true
 ---
 ## About
 

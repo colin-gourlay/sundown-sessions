@@ -1,6 +1,7 @@
 ---
 title: Elbow
 featured_image: artists/e/elbow/elbow.jpg
+artist_page: true
 ---
 ## About
 

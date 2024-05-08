@@ -1,6 +1,7 @@
 ---
 title: The Slow Readers Club
 featured_image: artists/t/the-slow-readers-club/the-slow-readers-club.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: The March Violets
 featured_image: artists/t/the-march-violets/the-march-violets.jpg
+artist_page: true
 ---
 ## About
 

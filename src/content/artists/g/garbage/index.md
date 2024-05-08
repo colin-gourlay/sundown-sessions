@@ -1,6 +1,7 @@
 ---
 title: Garbage
 featured_image: artists/g/garbage/garbage.jpg
+artist_page: true
 ---
 ## About
 

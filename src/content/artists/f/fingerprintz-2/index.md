@@ -1,6 +1,7 @@
 ---
 title: Fingerprintz (2)
 featured_image: artists/f/fingerprintz-2/fingerprintz-2.jpg
+artist_page: true
 ---
 ## About
 

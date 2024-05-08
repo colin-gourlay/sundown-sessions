@@ -1,6 +1,7 @@
 ---
 title: Sailor
 featured_image: artists/s/sailor/sailor.jpg
+artist_page: true
 ---
 ## About
 

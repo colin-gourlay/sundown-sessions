@@ -1,6 +1,7 @@
 ---
 title: Big Country
 featured_image: artists/b/big-country/big-country.jpg
+artist_page: true
 ---
 ## About
 

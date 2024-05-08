@@ -1,6 +1,7 @@
 ---
 title: Depeche Mode
 featured_image: artists/d/depeche-mode/depeche-mode.jpg
+artist_page: true
 ---
 ## About
 

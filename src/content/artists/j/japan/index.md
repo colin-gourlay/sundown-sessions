@@ -1,6 +1,7 @@
 ---
 title: Japan
 featured_image: artists/j/japan/japan.jpg
+artist_page: true
 ---
 ## About
 

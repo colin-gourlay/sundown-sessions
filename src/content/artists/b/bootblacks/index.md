@@ -1,6 +1,7 @@
 ---
 title: Bootblacks
 featured_image: artists/b/bootblacks/bootblacks.jpg
+artist_page: true
 ---
 ## About
 

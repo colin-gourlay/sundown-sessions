@@ -1,6 +1,7 @@
 ---
 title: Electric Light Orchestra
 featured_image: artists/e/electric-light-orchestra/electric-light-orchestra.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Teenage Fanclub
 featured_image: artists/t/teenage-fanclub/teenage-fanclub.jpg
+artist_page: true
 ---
 ## About
 

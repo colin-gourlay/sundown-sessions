@@ -1,6 +1,7 @@
 ---
 title: Angelfish (2)
 featured_image: artists/a/angelfish-2/angelfish-2.jpg
+artist_page: true
 ---
 ## About
 

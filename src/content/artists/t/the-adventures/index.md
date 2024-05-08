@@ -1,6 +1,7 @@
 ---
 title: The Adventures
 featured_image: artists/t/the-adventures/the-adventures.jpg
+artist_page: true
 ---
 ## About
 

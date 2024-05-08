@@ -1,6 +1,7 @@
 ---
 title: The Big Dish
 featured_image: artists/t/the-big-dish/the-big-dish.jpg
+artist_page: true
 ---
 ## About
 

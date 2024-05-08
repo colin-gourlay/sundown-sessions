@@ -1,6 +1,7 @@
 ---
 title: The Human League
 featured_image: artists/t/the-human-league/the-human-league.jpg
+artist_page: true
 ---
 ## About
 

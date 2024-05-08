@@ -1,6 +1,7 @@
 ---
 title: Mandy, Indiana
 featured_image: artists/m/mandy-indiana/mandy-indiana.jpg
+artist_page: true
 ---
 ## About
 

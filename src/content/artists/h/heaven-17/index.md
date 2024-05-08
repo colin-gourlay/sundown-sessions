@@ -1,6 +1,7 @@
 ---
 title: Heaven 17
 featured_image: artists/h/heaven-17/heaven-17.jpg
+artist_page: true
 ---
 ## About
 

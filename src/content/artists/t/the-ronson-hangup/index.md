@@ -1,6 +1,7 @@
 ---
 title: The Ronson Hangup
 featured_image: artists/t/the-ronson-hangup/the-ronson-hangup.jpg
+artist_page: true
 ---
 ## About
 

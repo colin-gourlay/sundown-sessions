@@ -1,6 +1,7 @@
 ---
 title: Billy MacKenzie
 featured_image: artists/b/billy-mackenzie/billy-mackenzie.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: The Records
 featured_image: artists/t/the-records/the-records.jpg
+artist_page: true
 ---
 ## About
 

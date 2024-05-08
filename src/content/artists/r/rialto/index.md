@@ -1,6 +1,7 @@
 ---
 title: Rialto
 featured_image: artists/r/rialto/rialto.jpg
+artist_page: true
 ---
 ## About
 

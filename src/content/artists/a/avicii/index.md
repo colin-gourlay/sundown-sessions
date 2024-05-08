@@ -1,6 +1,7 @@
 ---
 title: Avicii
 featured_image: artists/a/avicii/avicii.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Isa And The Filthy Tongues
 featured_image: artists/i/isa-and-the-filthy-tongues/isa-and-the-filthy-tongues.jpg
+artist_page: true
 ---
 ## About
 

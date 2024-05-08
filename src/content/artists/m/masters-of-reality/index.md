@@ -1,6 +1,7 @@
 ---
 title: Masters Of Reality
 featured_image: artists/m/masters-of-reality/masters-of-reality.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Billy Preston
 featured_image: artists/b/billy-preston/billy-preston.jpg
+artist_page: true
 ---
 ## About
 

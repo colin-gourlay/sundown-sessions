@@ -1,6 +1,7 @@
 ---
 title: Sheryl Crow
 featured_image: artists/s/sheryl-crow/sheryl-crow.jpg
+artist_page: true
 ---
 ## About
 

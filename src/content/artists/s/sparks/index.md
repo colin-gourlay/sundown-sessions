@@ -1,6 +1,7 @@
 ---
 title: Sparks
 featured_image: artists/s/sparks/sparks.jpg
+artist_page: true
 ---
 ## About
 

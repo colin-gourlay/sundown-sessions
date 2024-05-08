@@ -1,6 +1,7 @@
 ---
 title: Andy Prieboy
 featured_image: artists/a/andy-prieboy/andy-prieboy.jpg
+artist_page: true
 ---
 ## About
 

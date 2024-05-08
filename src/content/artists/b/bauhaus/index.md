@@ -1,6 +1,7 @@
 ---
 title: Bauhaus
 featured_image: artists/b/bauhaus/bauhaus.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Radiohead
 featured_image: artists/r/radiohead/radiohead.jpg
+artist_page: true
 ---
 ## About
 

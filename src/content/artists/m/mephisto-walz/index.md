@@ -1,6 +1,7 @@
 ---
 title: Mephisto Walz
 featured_image: artists/m/mephisto-walz/mephisto-walz.jpg
+artist_page: true
 ---
 ## About
 

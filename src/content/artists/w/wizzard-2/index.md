@@ -1,6 +1,7 @@
 ---
 title: Wizzard (2)
 featured_image: artists/w/wizzard-2/wizzard-2.jpg
+artist_page: true
 ---
 ## About
 

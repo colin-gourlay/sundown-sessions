@@ -1,6 +1,7 @@
 ---
 title: The Stranglers
 featured_image: artists/t/the-stranglers/the-stranglers.jpg
+artist_page: true
 ---
 ## About
 

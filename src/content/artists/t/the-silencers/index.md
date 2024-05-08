@@ -1,6 +1,7 @@
 ---
 title: The Silencers
 featured_image: artists/t/the-silencers/the-silencers.jpg
+artist_page: true
 ---
 ## About
 

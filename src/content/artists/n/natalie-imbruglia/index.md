@@ -1,6 +1,7 @@
 ---
 title: Natalie Imbruglia
 featured_image: artists/n/natalie-imbruglia/natalie-imbruglia.jpg
+artist_page: true
 ---
 ## About
 

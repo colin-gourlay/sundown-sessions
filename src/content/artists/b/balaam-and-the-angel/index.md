@@ -1,6 +1,7 @@
 ---
 title: Balaam And The Angel
 featured_image: artists/b/balaam-and-the-angel/balaam-and-the-angel.jpg
+artist_page: true
 ---
 ## About
 

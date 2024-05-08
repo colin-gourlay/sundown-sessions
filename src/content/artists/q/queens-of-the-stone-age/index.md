@@ -1,6 +1,7 @@
 ---
 title: Queens Of The Stone Age
 featured_image: artists/q/queens-of-the-stone-age/queens-of-the-stone-age.jpg
+artist_page: true
 ---
 ## About
 

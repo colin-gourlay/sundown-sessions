@@ -1,6 +1,7 @@
 ---
 title: Ultravox
 featured_image: artists/u/ultravox/ultravox.jpg
+artist_page: true
 ---
 ## About
 

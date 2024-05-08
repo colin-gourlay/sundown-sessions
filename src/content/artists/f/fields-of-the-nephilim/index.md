@@ -1,6 +1,7 @@
 ---
 title: Fields Of The Nephilim
 featured_image: artists/f/fields-of-the-nephilim/fields-of-the-nephilim.jpg
+artist_page: true
 ---
 ## About
 

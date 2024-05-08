@@ -1,6 +1,7 @@
 ---
 title: Adam And The Ants
 featured_image: artists/a/adam-and-the-ants/adam-and-the-ants.jpg
+artist_page: true
 ---
 ## About
 

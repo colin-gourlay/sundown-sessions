@@ -1,6 +1,7 @@
 ---
 title: Barracudas
 featured_image: artists/b/barracudas/barracudas.jpg
+artist_page: true
 ---
 ## About
 

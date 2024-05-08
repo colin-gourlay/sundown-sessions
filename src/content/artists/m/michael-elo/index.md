@@ -1,6 +1,7 @@
 ---
 title: Michael Elo
 featured_image: artists/m/michael-elo/michael-elo.jpg
+artist_page: true
 ---
 ## About
 

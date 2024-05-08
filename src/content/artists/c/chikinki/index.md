@@ -1,6 +1,7 @@
 ---
 title: Chikinki
 featured_image: artists/c/chikinki/chikinki.jpg
+artist_page: true
 ---
 ## About
 

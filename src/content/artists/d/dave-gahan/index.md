@@ -1,6 +1,7 @@
 ---
 title: Dave Gahan
 featured_image: artists/d/dave-gahan/dave-gahan.jpg
+artist_page: true
 ---
 ## About
 

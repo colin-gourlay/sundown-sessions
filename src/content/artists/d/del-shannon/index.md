@@ -1,6 +1,7 @@
 ---
 title: Del Shannon
 featured_image: artists/d/del-shannon/del-shannon.jpg
+artist_page: true
 ---
 ## About
 

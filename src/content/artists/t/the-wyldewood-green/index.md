@@ -1,6 +1,7 @@
 ---
 title: The Wyldewood Green
 featured_image: artists/t/the-wyldewood-green/the-wyldewood-green.jpg
+artist_page: true
 ---
 ## About
 

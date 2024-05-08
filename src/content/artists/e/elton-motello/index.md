@@ -1,6 +1,7 @@
 ---
 title: Elton Motello
 featured_image: artists/e/elton-motello/elton-motello.jpg
+artist_page: true
 ---
 ## About
 

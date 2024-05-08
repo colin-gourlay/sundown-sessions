@@ -1,6 +1,7 @@
 ---
 title: IST IST
 featured_image: artists/i/ist-ist/ist-ist.jpg
+artist_page: true
 ---
 ## About
 

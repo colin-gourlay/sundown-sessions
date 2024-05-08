@@ -1,6 +1,7 @@
 ---
 title: Razorlight
 featured_image: artists/r/razorlight/razorlight.jpg
+artist_page: true
 ---
 ## About
 

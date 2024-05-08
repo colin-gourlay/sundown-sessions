@@ -1,6 +1,7 @@
 ---
 title: Mick Harvey
 featured_image: artists/m/mick-harvey/mick-harvey.jpg
+artist_page: true
 ---
 ## About
 

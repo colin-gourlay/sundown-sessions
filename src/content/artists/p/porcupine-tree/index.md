@@ -1,6 +1,7 @@
 ---
 title: Porcupine Tree
 featured_image: artists/p/porcupine-tree/porcupine-tree.jpg
+artist_page: true
 ---
 ## About
 

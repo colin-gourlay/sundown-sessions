@@ -1,6 +1,7 @@
 ---
 title: British Sea Power
 featured_image: artists/b/british-sea-power/british-sea-power.jpg
+artist_page: true
 ---
 ## About
 

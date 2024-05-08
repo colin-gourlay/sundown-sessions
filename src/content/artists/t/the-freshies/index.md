@@ -1,6 +1,7 @@
 ---
 title: The Freshies
 featured_image: artists/t/the-freshies/the-freshies.jpg
+artist_page: true
 ---
 ## About
 

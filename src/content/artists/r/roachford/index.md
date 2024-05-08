@@ -1,6 +1,7 @@
 ---
 title: Roachford
 featured_image: artists/r/roachford/roachford.jpg
+artist_page: true
 ---
 ## About
 

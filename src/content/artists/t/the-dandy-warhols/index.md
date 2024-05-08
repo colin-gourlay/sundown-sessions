@@ -1,6 +1,7 @@
 ---
 title: The Dandy Warhols
 featured_image: artists/t/the-dandy-warhols/the-dandy-warhols.jpg
+artist_page: true
 ---
 ## About
 

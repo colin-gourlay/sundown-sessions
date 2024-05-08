@@ -1,6 +1,7 @@
 ---
 title: The White Stripes
 featured_image: artists/t/the-white-stripes/the-white-stripes.jpg
+artist_page: true
 ---
 ## About
 

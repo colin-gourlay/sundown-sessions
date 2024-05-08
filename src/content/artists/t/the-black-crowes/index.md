@@ -1,6 +1,7 @@
 ---
 title: The Black Crowes
 featured_image: artists/t/the-black-crowes/the-black-crowes.jpg
+artist_page: true
 ---
 ## About
 

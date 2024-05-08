@@ -1,6 +1,7 @@
 ---
 title: Clear Light (2)
 featured_image: artists/c/clear-light-2/clear-light-2.jpg
+artist_page: true
 ---
 ## About
 

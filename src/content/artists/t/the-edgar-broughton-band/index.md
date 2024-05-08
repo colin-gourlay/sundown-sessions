@@ -1,6 +1,7 @@
 ---
 title: The Edgar Broughton Band
 featured_image: artists/t/the-edgar-broughton-band/the-edgar-broughton-band.jpg
+artist_page: true
 ---
 ## About
 

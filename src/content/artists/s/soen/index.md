@@ -1,6 +1,7 @@
 ---
 title: Soen
 featured_image: artists/s/soen/soen.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Shocking Blue
 featured_image: artists/s/shocking-blue/shocking-blue.jpg
+artist_page: true
 ---
 ## About
 

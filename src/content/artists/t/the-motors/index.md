@@ -1,6 +1,7 @@
 ---
 title: The Motors
 featured_image: artists/t/the-motors/the-motors.jpg
+artist_page: true
 ---
 ## About
 

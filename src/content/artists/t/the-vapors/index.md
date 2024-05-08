@@ -1,6 +1,7 @@
 ---
 title: The Vapors
 featured_image: artists/t/the-vapors/the-vapors.jpg
+artist_page: true
 ---
 ## About
 

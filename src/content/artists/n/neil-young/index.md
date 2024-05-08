@@ -1,6 +1,7 @@
 ---
 title: Neil Young
 featured_image: artists/n/neil-young/neil-young.jpg
+artist_page: true
 ---
 ## About
 

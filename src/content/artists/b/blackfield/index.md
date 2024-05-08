@@ -1,6 +1,7 @@
 ---
 title: Blackfield
 featured_image: artists/b/blackfield/blackfield.jpg
+artist_page: true
 ---
 ## About
 

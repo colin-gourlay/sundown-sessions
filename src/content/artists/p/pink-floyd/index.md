@@ -1,6 +1,7 @@
 ---
 title: Pink Floyd
 featured_image: artists/p/pink-floyd/pink-floyd.jpg
+artist_page: true
 ---
 ## About
 

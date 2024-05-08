@@ -1,6 +1,7 @@
 ---
 title: Adam Ant
 featured_image: artists/a/adam-ant/adam-ant.jpg
+artist_page: true
 ---
 ## About
 

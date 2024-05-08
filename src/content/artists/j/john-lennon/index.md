@@ -1,6 +1,7 @@
 ---
 title: John Lennon
 featured_image: artists/j/john-lennon/john-lennon.jpg
+artist_page: true
 ---
 ## About
 

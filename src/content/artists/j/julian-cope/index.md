@@ -1,6 +1,7 @@
 ---
 title: Julian Cope
 featured_image: artists/j/julian-cope/julian-cope.jpg
+artist_page: true
 ---
 ## About
 

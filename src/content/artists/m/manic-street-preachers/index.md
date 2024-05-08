@@ -1,6 +1,7 @@
 ---
 title: Manic Street Preachers
 featured_image: artists/m/manic-street-preachers/manic-street-preachers.jpg
+artist_page: true
 ---
 ## About
 

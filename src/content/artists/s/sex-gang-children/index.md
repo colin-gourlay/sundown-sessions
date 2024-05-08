@@ -1,6 +1,7 @@
 ---
 title: Sex Gang Children
 featured_image: artists/s/sex-gang-children/sex-gang-children.jpg
+artist_page: true
 ---
 ## About
 

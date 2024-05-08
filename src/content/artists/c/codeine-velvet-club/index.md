@@ -1,6 +1,7 @@
 ---
 title: Codeine Velvet Club
 featured_image: artists/c/codeine-velvet-club/codeine-velvet-club.jpg
+artist_page: true
 ---
 ## About
 

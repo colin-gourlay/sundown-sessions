@@ -1,6 +1,7 @@
 ---
 title: The Knack (3)
 featured_image: artists/t/the-knack-3/the-knack-3.jpg
+artist_page: true
 ---
 ## About
 

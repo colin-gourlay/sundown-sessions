@@ -1,6 +1,7 @@
 ---
 title: The Associates
 featured_image: artists/t/the-associates/the-associates.jpg
+artist_page: true
 ---
 ## About
 

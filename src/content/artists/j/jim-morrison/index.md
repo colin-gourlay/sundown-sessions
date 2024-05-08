@@ -1,6 +1,7 @@
 ---
 title: Jim Morrison
 featured_image: artists/j/jim-morrison/jim-morrison.jpg
+artist_page: true
 ---
 ## About
 

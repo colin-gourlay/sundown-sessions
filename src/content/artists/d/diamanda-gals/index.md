@@ -1,6 +1,7 @@
 ---
 title: Diamanda Galás
 featured_image: artists/d/diamanda-gals/diamanda-gals.jpg
+artist_page: true
 ---
 ## About
 

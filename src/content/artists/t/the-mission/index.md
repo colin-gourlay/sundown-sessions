@@ -1,6 +1,7 @@
 ---
 title: The Mission
 featured_image: artists/t/the-mission/the-mission.jpg
+artist_page: true
 ---
 ## About
 

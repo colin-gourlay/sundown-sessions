@@ -1,6 +1,7 @@
 ---
 title: The Ruts
 featured_image: artists/t/the-ruts/the-ruts.jpg
+artist_page: true
 ---
 ## About
 

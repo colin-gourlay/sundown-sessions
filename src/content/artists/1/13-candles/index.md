@@ -1,6 +1,7 @@
 ---
 title: 13 Candles
 featured_image: artists/1/13-candles/13-candles.jpg
+artist_page: true
 ---
 ## About
 

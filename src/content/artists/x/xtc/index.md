@@ -1,6 +1,7 @@
 ---
 title: XTC
 featured_image: artists/x/xtc/xtc.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: The Beatles
 featured_image: artists/t/the-beatles/the-beatles.jpg
+artist_page: true
 ---
 ## About
 

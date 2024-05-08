@@ -1,6 +1,7 @@
 ---
 title: The Doors
 featured_image: artists/t/the-doors/the-doors.jpg
+artist_page: true
 ---
 ## About
 

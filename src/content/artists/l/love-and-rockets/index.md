@@ -1,6 +1,7 @@
 ---
 title: Love And Rockets
 featured_image: artists/l/love-and-rockets/love-and-rockets.jpg
+artist_page: true
 ---
 ## About
 

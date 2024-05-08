@@ -1,6 +1,7 @@
 ---
 title: The Velvet Underground
 featured_image: artists/t/the-velvet-underground/the-velvet-underground.jpg
+artist_page: true
 ---
 ## About
 

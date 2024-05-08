@@ -1,6 +1,7 @@
 ---
 title: Far Corporation
 featured_image: artists/f/far-corporation/far-corporation.jpg
+artist_page: true
 ---
 ## Current Lineup
 

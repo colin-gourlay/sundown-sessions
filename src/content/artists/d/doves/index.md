@@ -1,6 +1,7 @@
 ---
 title: Doves
 featured_image: artists/d/doves/doves.jpg
+artist_page: true
 ---
 ## About
 

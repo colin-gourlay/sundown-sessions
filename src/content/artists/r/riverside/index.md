@@ -1,6 +1,7 @@
 ---
 title: Riverside
 featured_image: artists/r/riverside/riverside.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Jacco Gardner
 featured_image: artists/j/jacco-gardner/jacco-gardner.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Johnny Cash
 featured_image: artists/j/johnny-cash/johnny-cash.jpg
+artist_page: true
 ---
 ## About
 

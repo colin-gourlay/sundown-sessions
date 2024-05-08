@@ -1,6 +1,7 @@
 ---
 title: McAlmont & Butler
 featured_image: artists/m/mcalmont-butler/mcalmont-butler.jpg
+artist_page: true
 ---
 ## About
 

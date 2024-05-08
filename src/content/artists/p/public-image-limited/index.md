@@ -1,6 +1,7 @@
 ---
 title: Public Image Limited
 featured_image: artists/p/public-image-limited/public-image-limited.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Feeder
 featured_image: artists/f/feeder/feeder.jpg
+artist_page: true
 ---
 ## About
 

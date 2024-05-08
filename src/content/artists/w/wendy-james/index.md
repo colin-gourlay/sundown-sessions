@@ -1,6 +1,7 @@
 ---
 title: Wendy James
 featured_image: artists/w/wendy-james/wendy-james.jpg
+artist_page: true
 ---
 ## About
 

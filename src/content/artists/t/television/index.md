@@ -1,6 +1,7 @@
 ---
 title: Television
 featured_image: artists/t/television/television.jpg
+artist_page: true
 ---
 ## About
 

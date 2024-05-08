@@ -1,6 +1,7 @@
 ---
 title: AIR
 featured_image: artists/a/air/air.jpg
+artist_page: true
 ---
 ## About
 

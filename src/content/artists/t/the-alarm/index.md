@@ -1,6 +1,7 @@
 ---
 title: The Alarm
 featured_image: artists/t/the-alarm/the-alarm.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: The Fall
 featured_image: artists/t/the-fall/the-fall.jpg
+artist_page: true
 ---
 ## About
 

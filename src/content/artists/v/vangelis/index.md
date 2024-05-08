@@ -1,6 +1,7 @@
 ---
 title: Vangelis
 featured_image: artists/v/vangelis/vangelis.jpg
+artist_page: true
 ---
 ## About
 

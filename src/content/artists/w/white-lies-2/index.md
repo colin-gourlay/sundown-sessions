@@ -1,6 +1,7 @@
 ---
 title: White Lies (2)
 featured_image: artists/w/white-lies-2/white-lies-2.jpg
+artist_page: true
 ---
 ## About
 

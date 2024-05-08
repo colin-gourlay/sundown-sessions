@@ -1,6 +1,7 @@
 ---
 title: The Countess Of Fife
 featured_image: artists/t/the-countess-of-fife/the-countess-of-fife.jpg
+artist_page: true
 ---
 ## About
 

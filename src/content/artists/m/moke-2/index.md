@@ -1,6 +1,7 @@
 ---
 title: Moke (2)
 featured_image: artists/m/moke-2/moke-2.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: The Damned
 featured_image: artists/t/the-damned/the-damned.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: All About Eve
 featured_image: artists/a/all-about-eve/all-about-eve.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Del Amitri
 featured_image: artists/d/del-amitri/del-amitri.jpg
+artist_page: true
 ---
 ## About
 

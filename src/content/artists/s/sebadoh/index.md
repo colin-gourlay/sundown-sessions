@@ -1,6 +1,7 @@
 ---
 title: Sebadoh
 featured_image: artists/s/sebadoh/sebadoh.jpg
+artist_page: true
 ---
 ## About
 

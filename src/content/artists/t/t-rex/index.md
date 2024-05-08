@@ -1,6 +1,7 @@
 ---
 title: T. Rex
 featured_image: artists/t/t-rex/t-rex.jpg
+artist_page: true
 ---
 ## About
 

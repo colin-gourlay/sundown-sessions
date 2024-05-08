@@ -1,6 +1,7 @@
 ---
 title: Hazel OConnor
 featured_image: artists/h/hazel-oconnor/hazel-oconnor.jpg
+artist_page: true
 ---
 ## About
 

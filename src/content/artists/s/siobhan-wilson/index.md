@@ -1,6 +1,7 @@
 ---
 title: Siobhan Wilson
 featured_image: artists/s/siobhan-wilson/siobhan-wilson.jpg
+artist_page: true
 ---
 ## About
 

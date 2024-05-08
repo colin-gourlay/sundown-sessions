@@ -1,6 +1,7 @@
 ---
 title: Mobiles
 featured_image: artists/m/mobiles/mobiles.jpg
+artist_page: true
 ---
 ## About
 

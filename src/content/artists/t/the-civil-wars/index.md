@@ -1,6 +1,7 @@
 ---
 title: The Civil Wars
 featured_image: artists/t/the-civil-wars/the-civil-wars.jpg
+artist_page: true
 ---
 ## About
 

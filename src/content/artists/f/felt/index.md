@@ -1,6 +1,7 @@
 ---
 title: Felt
 featured_image: artists/f/felt/felt.jpg
+artist_page: true
 ---
 ## About
 

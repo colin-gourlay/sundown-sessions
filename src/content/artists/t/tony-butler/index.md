@@ -1,6 +1,7 @@
 ---
 title: Tony Butler
 featured_image: artists/t/tony-butler/tony-butler.jpg
+artist_page: true
 ---
 ## About
 

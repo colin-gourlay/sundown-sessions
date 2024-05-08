@@ -1,6 +1,7 @@
 ---
 title: Royal Blood (6)
 featured_image: artists/r/royal-blood-6/royal-blood-6.jpg
+artist_page: true
 ---
 ## About
 

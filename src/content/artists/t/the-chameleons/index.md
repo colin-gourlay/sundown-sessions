@@ -1,6 +1,7 @@
 ---
 title: The Chameleons
 featured_image: artists/t/the-chameleons/the-chameleons.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Propaganda
 featured_image: artists/p/propaganda/propaganda.jpg
+artist_page: true
 ---
 ## About
 

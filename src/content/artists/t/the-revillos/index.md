@@ -1,6 +1,7 @@
 ---
 title: The Revillos
 featured_image: artists/t/the-revillos/the-revillos.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Franz Ferdinand
 featured_image: artists/f/franz-ferdinand/franz-ferdinand.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Talk Talk
 featured_image: artists/t/talk-talk/talk-talk.jpg
+artist_page: true
 ---
 ## About
 

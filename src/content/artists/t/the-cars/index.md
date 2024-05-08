@@ -1,6 +1,7 @@
 ---
 title: The Cars
 featured_image: artists/t/the-cars/the-cars.jpg
+artist_page: true
 ---
 ## About
 

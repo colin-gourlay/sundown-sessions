@@ -1,6 +1,7 @@
 ---
 title: Gary Numan
 featured_image: artists/g/gary-numan/gary-numan.jpg
+artist_page: true
 ---
 ## About
 

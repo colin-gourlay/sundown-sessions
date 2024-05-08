@@ -1,6 +1,7 @@
 ---
 title: Black (2)
 featured_image: artists/b/black-2/black-2.jpg
+artist_page: true
 ---
 ## About
 

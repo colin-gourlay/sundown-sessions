@@ -1,6 +1,7 @@
 ---
 title: Skeletal Family
 featured_image: artists/s/skeletal-family/skeletal-family.jpg
+artist_page: true
 ---
 ## About
 

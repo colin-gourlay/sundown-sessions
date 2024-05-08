@@ -1,6 +1,7 @@
 ---
 title: In Letter Form
 featured_image: artists/i/in-letter-form/in-letter-form.jpg
+artist_page: true
 ---
 ## About
 

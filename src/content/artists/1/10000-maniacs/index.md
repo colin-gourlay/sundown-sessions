@@ -1,6 +1,7 @@
 ---
 title: 10,000 Maniacs
 featured_image: artists/1/10000-maniacs/10000-maniacs.jpg
+artist_page: true
 ---
 ## About
 

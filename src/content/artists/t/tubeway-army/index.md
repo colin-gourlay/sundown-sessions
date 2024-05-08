@@ -1,6 +1,7 @@
 ---
 title: Tubeway Army
 featured_image: artists/t/tubeway-army/tubeway-army.jpg
+artist_page: true
 ---
 ## About
 

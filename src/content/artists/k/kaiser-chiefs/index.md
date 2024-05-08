@@ -1,6 +1,7 @@
 ---
 title: Kaiser Chiefs
 featured_image: artists/k/kaiser-chiefs/kaiser-chiefs.jpg
+artist_page: true
 ---
 ## About
 

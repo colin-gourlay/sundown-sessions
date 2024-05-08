@@ -1,6 +1,7 @@
 ---
 title: Interpol
 featured_image: artists/i/interpol/interpol.jpg
+artist_page: true
 ---
 ## About
 

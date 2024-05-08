@@ -1,6 +1,7 @@
 ---
 title: The Nips
 featured_image: artists/t/the-nips/the-nips.jpg
+artist_page: true
 ---
 ## About
 

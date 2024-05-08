@@ -1,6 +1,7 @@
 ---
 title: Lloyd Cole & The Commotions
 featured_image: artists/l/lloyd-cole-the-commotions/lloyd-cole-the-commotions.jpg
+artist_page: true
 ---
 ## About
 

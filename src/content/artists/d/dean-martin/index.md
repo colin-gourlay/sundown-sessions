@@ -1,6 +1,7 @@
 ---
 title: Dean Martin
 featured_image: artists/d/dean-martin/dean-martin.jpg
+artist_page: true
 ---
 ## About
 

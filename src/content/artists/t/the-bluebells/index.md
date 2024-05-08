@@ -1,6 +1,7 @@
 ---
 title: The Bluebells
 featured_image: artists/t/the-bluebells/the-bluebells.jpg
+artist_page: true
 ---
 ## About
 

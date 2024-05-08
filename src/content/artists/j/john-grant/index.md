@@ -1,6 +1,7 @@
 ---
 title: John Grant
 featured_image: artists/j/john-grant/john-grant.jpg
+artist_page: true
 ---
 ## About
 

@@ -1,6 +1,7 @@
 ---
 title: Juicy Lucy
 featured_image: artists/j/juicy-lucy/juicy-lucy.jpg
+artist_page: true
 ---
 ## About
 

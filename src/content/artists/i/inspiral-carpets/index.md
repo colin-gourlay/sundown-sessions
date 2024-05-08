@@ -1,6 +1,7 @@
 ---
 title: Inspiral Carpets
 featured_image: artists/i/inspiral-carpets/inspiral-carpets.jpg
+artist_page: true
 ---
 ## About
 

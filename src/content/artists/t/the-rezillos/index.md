@@ -1,6 +1,7 @@
 ---
 title: The Rezillos
 featured_image: artists/t/the-rezillos/the-rezillos.jpg
+artist_page: true
 ---
 ## About
 

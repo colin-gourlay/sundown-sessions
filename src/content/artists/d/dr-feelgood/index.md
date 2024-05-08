@@ -1,6 +1,7 @@
 ---
 title: Dr. Feelgood
 featured_image: artists/d/dr-feelgood/dr-feelgood.jpg
+artist_page: true
 ---
 ## About
 

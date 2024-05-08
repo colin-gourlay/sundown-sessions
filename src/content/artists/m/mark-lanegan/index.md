@@ -1,6 +1,7 @@
 ---
 title: Mark Lanegan
 featured_image: artists/m/mark-lanegan/mark-lanegan.jpg
+artist_page: true
 ---
 ## About
 

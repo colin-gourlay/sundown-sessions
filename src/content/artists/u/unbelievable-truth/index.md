@@ -1,6 +1,7 @@
 ---
 title: Unbelievable Truth
 featured_image: artists/u/unbelievable-truth/unbelievable-truth.jpg
+artist_page: true
 ---
 ## About
 

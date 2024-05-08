@@ -1,6 +1,7 @@
 ---
 title: Goodbye Mr. Mackenzie
 featured_image: artists/g/goodbye-mr-mackenzie/goodbye-mr-mackenzie.jpg
+artist_page: true
 ---
 ## About
 

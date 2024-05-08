@@ -1,6 +1,7 @@
 ---
 title: Two Fingers
 featured_image: artists/t/two-fingers/two-fingers.jpg
+artist_page: true
 ---
 ## About
 

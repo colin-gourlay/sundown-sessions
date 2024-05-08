@@ -1,6 +1,7 @@
 ---
 title: Blondie
 featured_image: artists/b/blondie/blondie.jpg
+artist_page: true
 ---
 ## About
 

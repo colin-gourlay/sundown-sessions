@@ -1,6 +1,7 @@
 ---
 title: The Exploding Boy
 featured_image: artists/t/the-exploding-boy/the-exploding-boy.jpg
+artist_page: true
 ---
 ## About
 

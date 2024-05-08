@@ -1,6 +1,7 @@
 ---
 title: Cigarettes After Sex
 featured_image: artists/c/cigarettes-after-sex/cigarettes-after-sex.jpg
+artist_page: true
 ---
 ## About
 
