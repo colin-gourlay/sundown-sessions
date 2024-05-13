@@ -1,6 +1,7 @@
 ---
 title: The Receiving End Of Sirens
 featured_image: artists/t/the-receiving-end-of-sirens/the-receiving-end-of-sirens.jpg
+artist_page: true
 ---
 ## About
 

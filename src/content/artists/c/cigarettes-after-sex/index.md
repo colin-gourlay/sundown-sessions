@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-Pop band from El Paso, Texas. US.
+Slowcore band from El Paso, Texas. US.
 Formed 2008.
 
 **Current members:**

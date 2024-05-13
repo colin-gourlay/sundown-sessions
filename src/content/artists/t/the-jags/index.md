@@ -16,5 +16,5 @@ Michael Cotton (bass/vocals) [1981]
 
 ### Current Lineup
 
-Alex Baird, John Alder, Nick Watkinson, Steve Prudence, Paddy O'Toole, Mike Cotton
+Alex Baird, John Alder, Nick Watkinson, Paddy O'Toole, Mike Cotton
 
