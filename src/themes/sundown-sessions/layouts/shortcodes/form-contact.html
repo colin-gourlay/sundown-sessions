@@ -53,6 +53,10 @@
             .catch(error => {
                 // Handle error
                 console.error('There was a problem with your fetch operation:', error);
+                // Display toast
+                document.getElementById('toast').style.display = 'block';
+                // Clear form fields
+                document.getElementById('contact-form').reset();
             });
     });
 </script>
