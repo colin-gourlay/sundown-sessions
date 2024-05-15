@@ -11,4 +11,4 @@ menu:
 - Are you a local band seeking exposure on the airwaves?
 - Do you have any feedback for the show? Your input is invaluable for our continuous improvement.
 
-{{<form-contact action="https://formspree.io/f/xzbnwyez">}}
+{{<form-contact action="">}}
