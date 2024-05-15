@@ -3,6 +3,8 @@
   - [Touring](https://twitter.com/royalblooduk/status/1777244995059118447/photo/2) to mark the 10th anniversary of **_Royal Blood_**
 - _Manic Street Preachers_
   - **_Lifeblood_** [20th Anniversary Edition](https://manicstreetpreachers.lnk.to/Lifeblood20) includes remixes by Steven Wilson
+- _White Lies_
+  - Gigs lined up in [July](https://www.seetickets.com/tour/white-lies)
 - _IST IST_
   - Their 4th album **_Light A Bigger Fire_** will be released on 20th September - available to [pre-order here](https://www.ististmusic.com/)
 - _Nick Cave & The Bad Seeds_
