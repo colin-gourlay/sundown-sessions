@@ -27,7 +27,11 @@
 
         var formData = new FormData(this);
 
-        fetch('https://sundown-sessions.azurewebsites.net/api/HttpTrigger1?code=twP3Kp_aSLnTeU_CvTVcgAPNWsT4jAERc07uwLFBsYIfAzFu5m7erw==', {
+        // fetch('https://sundown-sessions.azurewebsites.net/api/HttpTrigger1?code=twP3Kp_aSLnTeU_CvTVcgAPNWsT4jAERc07uwLFBsYIfAzFu5m7erw==', {
+        //     method: 'POST',
+        //     body: formData
+        // })
+        fetch('https://formspree.io/f/xzbnwyez', {
             method: 'POST',
             body: formData
         })
