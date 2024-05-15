@@ -3,6 +3,10 @@ custom_css = ["css/tables.css"]
 mainSections = ["shows"]
 
 [[ananke_socials]]
+name = "facebook"
+url = "https://www.facebook.com/groups/sundownsessions"
+
+[[ananke_socials]]
 name = "twitter"
 url = "https://twitter.com/sundown_session"
 
@@ -15,10 +19,7 @@ url = "https://mastodon.scot/@sundown_sessions"
 #name = "instagram"
 #url = "https://www.instagram.com/sundownsessionsshow"
 #
-#[[ananke_socials]]
-#name = "facebook"
-#url = "https://www.facebook.com/groups/sundownsessions"
-#
+
 
 #
 #[[ananke_socials]]
