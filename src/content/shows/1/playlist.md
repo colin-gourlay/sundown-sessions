@@ -6,16 +6,16 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
-2. {{< artist-wikilink "The Big Now" >}} - Fast Cars, Soul Music
-3. {{< artist-wikilink "The Big Now" >}} - You'll Be Sorry
+1. David Latto - Geordie Munro
+2. The Big Now - Fast Cars, Soul Music
+3. The Big Now - You'll Be Sorry
 4. {{< artist-wikilink "Roachford" >}} - Cuddly Toy
 
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "IST IST" >}} - Fat Cats Drown In Milk
 2. {{< artist-wikilink "Interpol" >}} - Slow Hands
-3. {{< artist-wikilink "Becky Becky" >}} - House Of The Black Madonna
+3. Becky Becky - House Of The Black Madonna
 
 - NEWS
 
@@ -30,13 +30,13 @@
 1. {{< artist-wikilink "Electric Light Orchestra" >}} - Four Little Diamonds
 2. {{< artist-wikilink "The Detroit Cobras" >}} - Cry On
 3. {{< artist-wikilink "The Teskey Brothers" >}} - Rain
-4. {{< artist-wikilink "The Vintage Explosion" >}} - Don't Knock Upon My Door
+4. The Vintage Explosion - Don't Knock Upon My Door
 5. {{< artist-wikilink "Del Shannon" >}} - Runaway
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Vermin Poets" >}} - Like Poets Often Do
+1. Vermin Poets - Like Poets Often Do
 2. {{< artist-wikilink "Pavement" >}} - Here
 3. {{< artist-wikilink "The Velvet Underground" >}} - I'm Waiting For The Man
 4. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - From Her To Eternity
-5. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
+5. The Filthy Tongues - Nae Tongues
