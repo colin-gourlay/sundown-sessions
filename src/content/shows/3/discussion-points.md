@@ -1,17 +1,12 @@
 #
 - _Billy Mackenzie_
-  - Live At Ronnie Scots
-  - The Taxi from London
-  - The Associates documentary
-      - [Touring](https://twitter.com/royalblooduk/status/1777244995059118447/photo/2) to mark the 10th anniversary of **_Royal Blood_**
+  - [Live At Ronnie Scotts](https://www.youtube.com/watch?v=1lw-r7CIqZY&t=79s)
+  - The Taxi [trip](https://dangerousminds.net/comments/the_glamour_chase_documentary_beauty_despair_singer_billy_mackenzie)
+  - The Associates [documentary](https://www.youtube.com/watch?v=riop6MNVoqA)
 - _Love_
-  - Box set link
-- _Voice Of The Beehive_
-  - Woody from Madness
+  - Anniversary edition [breakdown](https://www.billboard.com/music/rock/love-forever-changes-anniversary-box-set-8307336/)
 - _Simple Minds_
-  - Chelsea Girl on The Old Grey Whistle Test
-- _Elbow_
-  - Grounds for Divorce on Jools
+  - Chelsea Girl - [The Old Grey Whistle Test](https://www.youtube.com/watch?v=Aref3Nj4YaQ)
 - _#ANDYSMANCLUB events_
   - [Delamere Family Running Challenge](https://www.atwevents.co.uk/e/andysmanclub-family-running-challenge-delamere-2024-10087) - 14th July 2024
     - event includes:
