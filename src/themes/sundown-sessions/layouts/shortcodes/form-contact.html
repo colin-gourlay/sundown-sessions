@@ -22,6 +22,20 @@
 <div id="toast" style="display: none;">Form submitted successfully!</div>
 
 <script>
+    window.onerror = function(message, source, lineno, colno, error) {
+        // Check if the message indicates a CORS issue.
+        if (message.indexOf('Cross-Origin') !== -1) {
+            // Handle the CORS problem
+            console.error('A CORS error occurred: ', message);
+
+            // Display the toast
+            document.getElementById('toast').style.display = 'block';
+
+            // Clear form fields
+            document.getElementById('contact-form').reset();
+        }
+    };
+    
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
