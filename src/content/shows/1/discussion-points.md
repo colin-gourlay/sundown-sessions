@@ -7,7 +7,7 @@
 - _The Motors_
   - Old Grey Whistle Test (1978): [Dancing The Night Away](https://www.youtube.com/watch?v=a8X1EKyhLHw)
 - _Art School Dancing_ 
-  - [Official Facebook Page](https://www.facebook.com/groups/111016498936043)
+  - [Official Facebook Group](https://www.facebook.com/groups/111016498936043)
   - [Show archive](https://unlistenablerubbish.wordpress.com)
 - _Teskey Brothers_ 
   - [180 Grams podcast](https://open.spotify.com/show/5n49kEwq2st3GST82veWoI)
