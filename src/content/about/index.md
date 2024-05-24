@@ -7,7 +7,7 @@ menu:
 ---
 {{< figure src="about-sundown-sessions.jpeg" title="Colin Gourlay in Studio 2 (Dec 2023)" >}}
 
-The _Sundown Sessions_ is a show broadcast from the K107 radio station in Kirkcaldy, Scotland. The show can be heard on the FM frequency at 107.1
+The _Sundown Sessions_ is a show broadcast from the K107 radio station in Kirkcaldy, Scotland. The show can be heard on the FM frequency at 107
 and is also streamed online.
 
 The purpose and aims of the show include:
