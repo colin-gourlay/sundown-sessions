@@ -5,5 +5,6 @@ artist_page: true
 ---
 ## About
 
-Daughter of Stuart Adamson and sister of Callum Adamson, born in 1985.
+UK singer songwriter and guitarist.
+She is the daughter of Stuart Adamson and sister of Callum Adamson
 
