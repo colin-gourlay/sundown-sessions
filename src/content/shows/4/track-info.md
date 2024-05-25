@@ -1,26 +1,26 @@
-| Artist                        | Track                                       | Duration | Notes                                                                                              |
-|-------------------------------|---------------------------------------------|----------|----------------------------------------------------------------------------------------------------|
-| The Silencers                 | I Can Feel It                               | 5:18     | Appears on the album **Seconds Of Pleasure** released on 17 May 1993                               |
-| Hipsway                       | Tinder                                      | 5:15     | Appears on the album **Hipsway** released on 01 January 1986                                       |
-| Attic Lights                  | The Dirty Thirst                            | 3:33     | Appears on the album **Friday Night Lights** released on 01 January 2008                           |
-| Win                           | You've Got the Power - Remix                | 6:01     | Appears on the album **Lost In the 80s** released on 15 July 2022                                  |
-| David Latto & The Lang Spoons | Geordie Munro                               | 3:05     | Appears on the album **Geordie Munro** released on 29 July 2022                                    |
-| Roddy Frame                   | Reason For Living                           | 3:16     | Appears on the album **The North Star** released on 15 September 1998                              |
-| the river detectives          | chains                                      | 3:06     | Appears on the album **Saturday Night, Sunday Morning**                                            |
-| The Big Dish                  | Slide                                       | 5:02     | Appears on the album **Swimmer** released on 01 January 1986                                       |
-| Love & Money                  | Strange Kind Of Love                        | 5:15     | Appears on the album **Strange Kind Of Love** released on 17 June 1988                             |
-| The Bluebells                 | Cath                                        | 3:49     | Appears on the album **The Singles Collection** released on 01 January 1998                        |
-| Goodbye Mr MacKenzie          | Now We are Married                          | 4:57     | Appears on the album **The River Sessions Day of Storms** released on 03 October 2011              |
-| Angelfish                     | Suffocate Me                                | 3:40     | Appears on the album **Angelfish** released on 01 January 1994                                     |
-| Garbage                       | I Think I'm Paranoid (2018 - Remaster)      | 3:38     | Appears on the album **Version 2.0 (20th Anniversary Deluxe Edition)** released on 04 May 1998     |
-| Skunk Anansie                 | I Can Dream                                 | 3:32     | Appears on the album **Paranoid & Sunburnt** released in 1995                                      |
-| Public Image Ltd.             | Poptones                                    | 7:46     | Appears on the album **Metal Box** released on 01 January 1979                                     |
-| Teenage Fanclub               | It's All In My Mind                         | 3:41     | Appears on the album **Man-Made** released on 02 May 2005                                          |
-| Julian Cope                   | Planetary Sit-In - Every Girl Has Your Name | 3:32     | Appears on the album **Planetary Sit-In (Every Girl Has Your Name)** released on 16 September 1996 |
-| Codeine Velvet Club           | Hollywood                                   | 4:00     | Appears on the album **Codeine Velvet Club** released on 01 January 2009                           |
-| Melys                         | Chinese Whispers                            | 4:14     | Appears on the album **Chinese Whispers** released on 15 March 2006                                |
-| IST IST                       | Wolves                                      | 3:30     | Appears on the album **Architecture** released on 01 May 2020                                      |
-| In Letter Form                | Terror (Is A State Of Mind)                 | 4:26     | Appears on the album **Fracture. Repair. Repeat.** released on 20 May 2016                         |
-| The Slow Readers Club         | Plant The Seed                              | 3:02     | Appears on the album **Cavalcade** released on 13 April 2015                                       |
-| The Exploding Boy             | Alarms in Silence                           | 3:16     | Appears on the album **Alarms!** released on 18 May 2018                                           |
-| The Filthy Tongues            | Nae Tongues - Bonus Track                   | 3:13     | Appears on the album **Black Valentine (Best of)** released on 03 November 2023                    |
+| Artist                                          | Track                                       | Duration | Notes                                                                                              |
+|-------------------------------------------------|---------------------------------------------|----------|----------------------------------------------------------------------------------------------------|
+| {{< artist-wikilink "The Silencers" >}}         | I Can Feel It                               | 5:18     | Appears on the album **Seconds Of Pleasure** released on 17 May 1993                               |
+| {{< artist-wikilink "Hipsway" >}}               | Tinder                                      | 5:15     | Appears on the album **Hipsway** released on 01 January 1986                                       |
+| {{< artist-wikilink "Attic Lights" >}}          | The Dirty Thirst                            | 3:33     | Appears on the album **Friday Night Lights** released on 01 January 2008                           |
+| Win                                             | You've Got the Power - Remix                | 6:01     | Appears on the album **Lost In the 80s** released on 15 July 2022                                  |
+| David Latto & The Lang Spoons                   | Geordie Munro                               | 3:05     | Appears on the album **Geordie Munro** released on 29 July 2022                                    |
+| {{< artist-wikilink "Roddy Frame" >}}           | Reason For Living                           | 3:16     | Appears on the album **The North Star** released on 15 September 1998                              |
+| the river detectives                            | chains                                      | 3:06     | Appears on the album **Saturday Night, Sunday Morning**                                            |
+| {{< artist-wikilink "The Big Dish" >}}          | Slide                                       | 5:02     | Appears on the album **Swimmer** released on 01 January 1986                                       |
+| Love & Money                                    | Strange Kind Of Love                        | 5:15     | Appears on the album **Strange Kind Of Love** released on 17 June 1988                             |
+| {{< artist-wikilink "The Bluebells" >}}         | Cath                                        | 3:49     | Appears on the album **The Singles Collection** released on 01 January 1998                        |
+| {{< artist-wikilink "Goodbye Mr MacKenzie" >}}  | Now We are Married                          | 4:57     | Appears on the album **The River Sessions Day of Storms** released on 03 October 2011              |
+| Angelfish                                       | Suffocate Me                                | 3:40     | Appears on the album **Angelfish** released on 01 January 1994                                     |
+| {{< artist-wikilink "Garbage" >}}               | I Think I'm Paranoid (2018 - Remaster)      | 3:38     | Appears on the album **Version 2.0 (20th Anniversary Deluxe Edition)** released on 04 May 1998     |
+| {{< artist-wikilink "Skunk Anansie" >}}         | I Can Dream                                 | 3:32     | Appears on the album **Paranoid & Sunburnt** released in 1995                                      |
+| {{< artist-wikilink "Public Image Limited" >}}  | Poptones                                    | 7:46     | Appears on the album **Metal Box** released on 01 January 1979                                     |
+| {{< artist-wikilink "Teenage Fanclub" >}}       | It's All In My Mind                         | 3:41     | Appears on the album **Man-Made** released on 02 May 2005                                          |
+| {{< artist-wikilink "Julian Cope" >}}           | Planetary Sit-In - Every Girl Has Your Name | 3:32     | Appears on the album **Planetary Sit-In (Every Girl Has Your Name)** released on 16 September 1996 |
+| {{< artist-wikilink "Codeine Velvet Club" >}}   | Hollywood                                   | 4:00     | Appears on the album **Codeine Velvet Club** released on 01 January 2009                           |
+| {{< artist-wikilink "Melys" >}}                 | Chinese Whispers                            | 4:14     | Appears on the album **Chinese Whispers** released on 15 March 2006                                |
+| {{< artist-wikilink "IST IST" >}}               | Wolves                                      | 3:30     | Appears on the album **Architecture** released on 01 May 2020                                      |
+| In Letter Form                                  | Terror (Is A State Of Mind)                 | 4:26     | Appears on the album **Fracture. Repair. Repeat.** released on 20 May 2016                         |
+| {{< artist-wikilink "The Slow Readers Club" >}} | Plant The Seed                              | 3:02     | Appears on the album **Cavalcade** released on 13 April 2015                                       |
+| {{< artist-wikilink "The Exploding Boy" >}}     | Alarms in Silence                           | 3:16     | Appears on the album **Alarms!** released on 18 May 2018                                           |
+| The Filthy Tongues                              | Nae Tongues - Bonus Track                   | 3:13     | Appears on the album **Black Valentine (Best of)** released on 03 November 2023                    |
