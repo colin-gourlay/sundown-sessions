@@ -12,7 +12,7 @@ Deborah Anne Dyer a.k.a. Skin: vocals
 Richard 'Cass' Lewis: bass
 Martin "Ace" Kent: guitar
 Mark Richardson (5): drums (1996-now)
-Robbie France: drums (on 1995's [m=47320])
+Robbie France: drums (on 1995's Paranoid & Sunburnt)
 
 ### Current Lineup
 
