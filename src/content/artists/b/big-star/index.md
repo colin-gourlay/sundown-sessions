@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-American rock band founded in 1971 in Memphis, Tennessee and disbanded in 1974. They reformed in 1993. In 2016 the by then only surviving original member Jody Stephens resurfaced in [a4978184].
+American rock band founded in 1971 in Memphis, Tennessee and disbanded in 1974. They reformed in 1993. In 2016 the by then only surviving original member Jody Stephens resurfaced in Big Star's Third.
 Alex Chilton: vocals. (28 December 1950 – 17 March 2010) ✝
 Chris Bell - guitar and vocals. (12 January 1951 – 27 December 1978) ✝
 Andy Hummel - bass and vocals. (26 January 1951 – 19 July 2010) ✝
