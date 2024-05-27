@@ -3,16 +3,18 @@ title: 'Show #6: Broadcast 24th July 2024'
 slug: 'featuring-xx-from-love-oor-lang-toun'
 description: 'featuring XX from Love Oor Lang Toun'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Wizzard
-                    
-          - Magazine
+
+- XX from Love Oor Lang Toun
+
+- Wizzard
+        
+- Magazine
+
+- Southern Death Cult
+
+- Talking Heads
           
-          - Southern Death Cult
-          
-          - Talking Heads
-          
-          - and much, much more...
+- and much, much more...
 '
 keywords:
  - 'XX from Love Oor Lang Toun'
@@ -44,7 +46,7 @@ toc: true
 featured_image: '6-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-07-24T22:00:00Z
+date: 2024-05-26T22:00:00Z
 draft: false
 ---
 
