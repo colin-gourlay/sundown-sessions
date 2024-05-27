@@ -23,7 +23,7 @@ Claudia Brücken left Propaganda in 1986 and the remaining members of the group 
 Derek Forbes, Brian McGee, Michael Mertens, Betsi Miller
 This line-up fizzled out in 1991. 
 
-By 1998 Mertens was working again with Brücken and Freytag, and in 1999 Propaganda's website announced a new album was being recorded. This line-up were set to sign with EastWest, but this was not to be, and the album remains unreleased, although recordings leaked via the internet. Some of the tracks were recorded by Brücken's act Onetwo and released on "[m=286115]".
+By 1998 Mertens was working again with Brücken and Freytag, and in 1999 Propaganda's website announced a new album was being recorded. This line-up were set to sign with EastWest, but this was not to be, and the album remains unreleased, although recordings leaked via the internet. Some of the tracks were recorded by Brücken's act Onetwo and released on "Instead".
 
 In 2004 Mertens, Freytag, Brücken and Dörper reunited for a performance of Dr. Mabuse to benefit The Prince's Trust and to celebrate Trevor Horn's 25 years in the music industry. 
 
@@ -32,7 +32,7 @@ Michael Mertens, Susanne Freytag
 
 In 2011, Brücken performed a live concert in London and was joined onstage by Dörper and Freytag. Around 2014 Mertens, Brücken, Freytag and Dörper started working together on new material, but the planned reunion did not take place as the two parties had different views on live performances. In 2015 Propaganda (i.e. Dörper and Mertens) was credited for remixing Holly Johnson's "Dancing with Fear".
 
-Brücken and Freytag reappeared in 2018 on the live circuit, playing concerts on the continent consisting of Propaganda material, under the name Duel. In the UK they toured as X-Propaganda, with Heaven 17 in 2018. With the name stylized as xPropaganda, the duo released a live version of Propaganda's "Secret Wish" album ("[m=1487849]") in 2018, and an album of all new material in 2022 – with Stephen Lipson as producer, who also produced Propaganda in 1985.
+Brücken and Freytag reappeared in 2018 on the live circuit, playing concerts on the continent consisting of Propaganda material, under the name Duel. In the UK they toured as X-Propaganda, with Heaven 17 in 2018. With the name stylized as xPropaganda, the duo released a live version of Propaganda's "Secret Wish" album ("A Secret Place") in 2018, and an album of all new material in 2022 – with Stephen Lipson as producer, who also produced Propaganda in 1985.
 
 ### Current Lineup
 
