@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-British indie-rock band formed by Crispian Mills and Alonza Bevan whilst at college in 1988.  Various lineup and name changes (previous members included one of Hayley Mills' ex-boyfriends on vocals and previous monikers the band went under included The Kays and [a12672059]), plus thanks to Crispian's pilgrimage in 1993, they are famously tinged with an Eastern-fused sound because of Crispian's Hinduism influences.  
+British indie-rock band formed by Crispian Mills and Alonza Bevan whilst at college in 1988.  Various lineup and name changes (previous members included one of Hayley Mills' ex-boyfriends on vocals and previous monikers the band went under included The Kays and Objects Of Desire), plus thanks to Crispian's pilgrimage in 1993, they are famously tinged with an Eastern-fused sound because of Crispian's Hinduism influences.  
 
 They originally split in 1999 amid personality clashes, record company intrusion and frustration of competing against the press' infamous lynching towards Crispian after some misinterpreted quotes in 1997.  Crispian went on to record a project called Pi (the material never materialised) and The Jeevas. Alonza joined Johnny Marr's band Healers (2) and formed a short-lived band with Paul Winter-Hart called Shep.  Winter-Hart also joined the short-lived Thirteen:13 and drummed for Aqualung.  Jay Darlington joined Oasis (2) as a live and session musician and carried on with Beady Eye when they split in 2009.
 
