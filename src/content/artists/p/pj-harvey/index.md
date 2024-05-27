@@ -11,7 +11,7 @@ Harvey began her career in 1988 when she joined Bristol band Automatic Dlamini a
 In January 1991, following her departure from Automatic Dlamini, Polly Jean Harvey formed her own band with former bandmates Rob Ellis (drums, backing vocals) and Ian Oliver (bass). Harvey decided to name the trio "PJ Harvey" after rejecting other names as "nothing felt right at all or just suggested the wrong type of sound".
 The trio consisted of Harvey on vocals and guitars, Ellis on drums and backing vocals, and Oliver on bass. Oliver later departed to rejoin the still-active Automatic Dlamini. He was subsequently replaced with Steven Vaughan.
 
-The band released two albums: "[m=52561]" (1992) and "[m=52590]" (1993).
+The band released two albums: "Dry" (1992) and "Rid Of Me" (1993).
 
 The band's final tour was to support U2 in August 1993, after which the trio officially disbanded.
 
