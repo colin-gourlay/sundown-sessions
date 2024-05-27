@@ -13,7 +13,7 @@ They were also signed by Island Records in 1997, but due to a takeover and indie
 
 In 2000 they put out their first release proper, an E.P. on a small indie label Ugly Man Records before they were eventually signed to Richard Branson's V2 in 2001.
 
-Winner of the 2008 Mercury Prize (for best British album) for [i]The Seldom Seen Kid[/i].
+Winner of the 2008 Mercury Prize (for best British album) for _The Seldom Seen Kid_.
 
 Drummer Richard Jupp left the band of his own choice to pursue drum tutoring in 2016.
 
