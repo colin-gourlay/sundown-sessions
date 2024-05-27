@@ -5,9 +5,9 @@ artist_page: true
 ---
 ## About
 
-US alternative rock band formed in early 1986 in Boston, Massachusetts. The original lineup consisted of Black Francis (real name [a901966] IV) (vocals, guitar), [a135343] (bass, vocals (1986 to 2013), [a314217] (guitar) and [a280832] (drums).
+US alternative rock band formed in early 1986 in Boston, Massachusetts. The original lineup consisted of Black Francis (real name Charles Michael Kittridge Thompson IV) (vocals, guitar), Kim Deal (bass, vocals (1986 to 2013), Joey Santiago (guitar) and Dave Lovering (drums).
 
-Kim Deal left the band in 2013,  and was briefly replaced for live performances by [a407282], before [a242805] joined the band as permanent bass player.
+Kim Deal left the band in 2013,  and was briefly replaced for live performances by Kim Shattuck, before Paz Lenchantin joined the band as permanent bass player.
 
 ### Current Lineup
 

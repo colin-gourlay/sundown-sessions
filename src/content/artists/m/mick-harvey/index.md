@@ -5,6 +5,6 @@ artist_page: true
 ---
 ## About
 
-Australian musician, born 29 August 1958 in Rochester, Victoria, Australia. Owner of Melbourne based studio [l403579].
+Australian musician, born 29 August 1958 in Rochester, Victoria, Australia. Owner of Melbourne based studio Grace Lane.
 
 

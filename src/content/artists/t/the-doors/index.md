@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-American psychedelic rock/blues rock band formed from "[a759311]" in July, 1965 in Los Angeles, CA, United States by [a260501] and [a242088]. After the death of Jim Morrison on July 3, 1971 in Paris, the other band members released two more albums, but they were not very successful. In April 1973 the band broke up.
+American psychedelic rock/blues rock band formed from "Rick And The Ravens" in July, 1965 in Los Angeles, CA, United States by Jim Morrison and Ray Manzarek. After the death of Jim Morrison on July 3, 1971 in Paris, the other band members released two more albums, but they were not very successful. In April 1973 the band broke up.
 
 Inducted into Rock And Roll Hall of Fame in 1993 (Performer).
 

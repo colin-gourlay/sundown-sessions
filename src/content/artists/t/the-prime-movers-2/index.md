@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-Band from Sierra Madre, CA, USA (1983-1989). Members included [a1547707] (vox/bass), [a1547705] (guitar/vox), [a1547706] (drums), [a2546828] (drums, 2005-2006), [a1695446] (vox, 1985), and [a1567951] (keys/vox/guitar, 1987-1989).
+Band from Sierra Madre, CA, USA (1983-1989). Members included Severs Ramsey (vox/bass), Gary Putman (guitar/vox), Curt Lichter (drums), Gary Falasco (drums, 2005-2006), Gregory Markel (vox, 1985), and Rob Schilling (keys/vox/guitar, 1987-1989).
 
 ### Current Lineup
 

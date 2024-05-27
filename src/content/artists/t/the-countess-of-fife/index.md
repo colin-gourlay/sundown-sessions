@@ -9,5 +9,5 @@ Countess of Fife were formed in 2016 by Fay Fife, singer/writer with Scots punk/
 
 ### Current Lineup
 
-Chris Agnew, Fay Fife, Brian McFie, Willy Molleson, Allan McDowall, Willie Molleson
+Chris Agnew, Fay Fife, Brian McFie, Willy Molleson, Kirsten Adamson, Allan McDowall, Willie Molleson
 

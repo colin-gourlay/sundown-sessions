@@ -55,5 +55,5 @@ Steve Gorman - 1989-2015
 
 ### Current Lineup
 
-Rich Robinson, Chris Robinson, Sven Pipien, Isaiah Mitchell
+Rich Robinson, Chris Robinson, Sven Pipien, Isaiah Mitchell, Nico Bereciartua
 
