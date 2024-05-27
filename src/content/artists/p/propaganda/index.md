@@ -32,7 +32,7 @@ Michael Mertens, Susanne Freytag
 
 In 2011, Brücken performed a live concert in London and was joined onstage by Dörper and Freytag. Around 2014 Mertens, Brücken, Freytag and Dörper started working together on new material, but the planned reunion did not take place as the two parties had different views on live performances. In 2015 Propaganda (i.e. Dörper and Mertens) was credited for remixing Holly Johnson's "Dancing with Fear".
 
-Brücken and Freytag reappeared in 2018 on the live circuit, playing concerts on the continent consisting of Propaganda material, under the name Duel. In the UK they toured as X-Propaganda, with [a12340] in 2018. With the name stylized as [a6770365], the duo released a live version of Propaganda's "Secret Wish" album ("[m=1487849]") in 2018, and an album of all new material in 2022 – with Stephen Lipson as producer, who also produced Propaganda in 1985.
+Brücken and Freytag reappeared in 2018 on the live circuit, playing concerts on the continent consisting of Propaganda material, under the name Duel. In the UK they toured as X-Propaganda, with Heaven 17 in 2018. With the name stylized as xPropaganda, the duo released a live version of Propaganda's "Secret Wish" album ("[m=1487849]") in 2018, and an album of all new material in 2022 – with Stephen Lipson as producer, who also produced Propaganda in 1985.
 
 ### Current Lineup
 
