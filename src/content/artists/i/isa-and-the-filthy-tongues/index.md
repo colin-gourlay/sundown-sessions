@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-[a5372625] - Vocals, [a760038] - Drums, [a760041] - Guitar and [a1048296] - Bassist.
+Stacey Chavis - Vocals, Derek Kelly - Drums, Martin Metcalfe - Guitar and Fin Wilson - Bassist.
 
 
 ### Current Lineup
