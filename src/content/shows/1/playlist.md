@@ -6,7 +6,7 @@
 
 - ADVERTISING BREAK
 
-1. David Latto - Geordie Munro
+1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
 2. The Big Now - Fast Cars, Soul Music
 3. The Big Now - You'll Be Sorry
 4. {{< artist-wikilink "Roachford" >}} - Cuddly Toy
