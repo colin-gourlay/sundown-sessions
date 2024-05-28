@@ -39,4 +39,4 @@
 2. {{< artist-wikilink "Pavement" >}} - Here
 3. {{< artist-wikilink "The Velvet Underground" >}} - I'm Waiting For The Man
 4. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - From Her To Eternity
-5. The Filthy Tongues - Nae Tongues
+5. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
