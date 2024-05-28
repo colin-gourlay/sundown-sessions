@@ -1,3 +1,3 @@
 {{ $link := .Get 0 }}
 {{ $slug := .Get 0 | urlize }}
-<a href="{{ printf "http://localhost:1313/shows/featuring-the-big-now/#featured-guest-%s" $slug | safeURL }}">{{ $link }}</a>
+<a href="{{ printf "%sshows/featuring-%s/#featured-guest-%s" .Site.BaseURL $slug $slug | safeURL}}">{{ $link }}</a>
