@@ -11,6 +11,9 @@
   - [Show archive](https://unlistenablerubbish.wordpress.com)
 - _Teskey Brothers_ 
   - [180 Grams podcast](https://open.spotify.com/show/5n49kEwq2st3GST82veWoI)
+- _Nick Cave & The Bad Seeds_
+  - The new album **_Wild God_** will be released on 30 August - available to [pre-order here](https://linktr.ee/nickcave)
+  - [The Wild God Tour - UK & Europe 2024](https://www.nickcave.com/tour-dates/)
 - _Fife Chamber of Commerce_ 
   - [2024 Fife Business Awards](https://fifebusinessawards.com)
   - [K107 Nominations](https://fifebusinessawards.com/award-finalists/)
