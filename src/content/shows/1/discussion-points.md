@@ -12,7 +12,7 @@
 - _Teskey Brothers_ 
   - [180 Grams podcast](https://open.spotify.com/show/5n49kEwq2st3GST82veWoI)
 - _The Vintage Explosion_
-  - [Usher Hall, Edinburgh tickets](https://www.usherhall.co.uk/whats-on/vintage-explosion)
+  - [Live at Usher Hall, Edinburgh - November 2024](https://www.usherhall.co.uk/whats-on/vintage-explosion)
 - _Nick Cave & The Bad Seeds_
   - The new album **_Wild God_** will be released on 30 August - available to [pre-order here](https://linktr.ee/nickcave)
   - [The Wild God Tour - UK & Europe 2024](https://www.nickcave.com/tour-dates/)
