@@ -15,7 +15,7 @@
 
 1. {{< artist-wikilink "IST IST" >}} - Fat Cats Drown In Milk
 2. {{< artist-wikilink "Interpol" >}} - Slow Hands
-3. {{< artist-wikilink "Becky Becky>}} - House Of The Black Madonna
+3. {{< artist-wikilink "Becky Becky">}} - House Of The Black Madonna
 
 - NEWS
 
