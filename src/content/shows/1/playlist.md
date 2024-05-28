@@ -22,8 +22,8 @@
 1. {{< artist-wikilink "The Motors" >}} - Dancing The Night Away
 2. {{< artist-wikilink "John Grant" >}} - Marz
 3. {{< artist-wikilink "Jacco Gardner" >}} - Clear the Air
-4. {{< artist-wikilink "Pink Floyd" >}} - See Emily Play - 2016 Remastered Version
-5. {{< artist-wikilink "The Move" >}} - Hello Susie - 2007 Remaster
+4. {{< artist-wikilink "Pink Floyd" >}} - See Emily Play
+5. {{< artist-wikilink "The Move" >}} - Hello Susie 
 
 - ADVERTISING BREAK
 
