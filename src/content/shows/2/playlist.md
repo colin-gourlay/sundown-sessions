@@ -38,4 +38,4 @@
 1. {{< artist-wikilink "Cocteau Twins" >}} - Pink Orange Red
 2. {{< artist-wikilink "Masters Of Reality" >}} - 100 Years (Of Tears To The Wind)
 3. {{< artist-wikilink "The Cult" >}} - Life > Death
-4. The Filthy Tongues - Nae Tongues
+4. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
