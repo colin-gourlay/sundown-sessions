@@ -1,5 +1,5 @@
 ---
-title: Royal Blood (6)
+title: Royal Blood
 featured_image: artists/r/royal-blood/royal-blood.jpg
 artist_page: true
 ---

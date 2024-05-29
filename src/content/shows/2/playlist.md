@@ -20,7 +20,7 @@
 
 - NEWS
 
-1. White Lies - Farewell To The Fairground
+1. {{< artist-wikilink "White Lies" >}} - Farewell To The Fairground
 2. {{< artist-wikilink "Chikinki" >}} - You Said
 3. {{< artist-wikilink "The Bravery" >}} - An Honest Mistake
 4. {{< artist-wikilink "Doves" >}} - One Of These Days
