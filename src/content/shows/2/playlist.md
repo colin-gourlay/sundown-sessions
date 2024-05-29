@@ -5,10 +5,10 @@
 
 - ADVERTISING BREAK
 
-1. David Latto - Geordie Munro
-2. The Receiving End - That's The Way I Operate
-3. The Receiving End - He's The Man
-4. The Receiving End - Nothing's Wrong
+1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
+2. {{< featured-guest-wikilink "The Receiving End" >}} - That's The Way I Operate
+3. {{< featured-guest-wikilink "The Receiving End" >}} - He's The Man
+4. {{< featured-guest-wikilink "The Receiving End" >}} - Nothing's Wrong
 
 - ADVERTISING BREAK
 
