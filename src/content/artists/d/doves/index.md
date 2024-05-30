@@ -6,7 +6,7 @@ artist_page: true
 ## About
 
 Alternative rock band from Manchester, England.
-The band comprises twin brothers Jez Williams (guitar, vocals) and Andy Williams (4) (drums, vocals), and Jimi Goodwin (bass, vocals, guitar).
+The band comprises twin brothers Jez Williams (guitar, vocals) and Andy Williams (drums, vocals), and Jimi Goodwin (bass, vocals, guitar).
 
 Years active: 1998 – 2010 (hiatus), 2018 –
 
