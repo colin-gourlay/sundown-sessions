@@ -8,11 +8,11 @@
 
 - ADVERTISING BREAK
 
-1. David Latto - Geordie Munro
-2. Blue On Shock - Love Is A Venture
-3. Blue On Shock - Brand New Chevy
-4. Blue On Shock - The Fighting's Never Won
-5. Blue On Shock - It Ain't Easy
+1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
+2. {{< featured-guest-wikilink "Blue On Shock" >}} - Love Is A Venture
+3. {{< featured-guest-wikilink "Blue On Shock" >}} - Brand New Chevy
+4. {{< featured-guest-wikilink "Blue On Shock" >}} - The Fighting's Never Won
+5. {{< featured-guest-wikilink "Blue On Shock" >}} - It Ain't Easy
 
 - ADVERTISING BREAK
 
