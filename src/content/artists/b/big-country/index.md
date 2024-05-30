@@ -20,9 +20,6 @@ Scott Whitley: Bass (2015 - 2021)
 Gil Allan: Bass (since 2021)
 Years active:	1981–2000, 2007, 2010–present
 
-**Please note that the UK releases during the '80's should be on the Mercury label, this is not actually mentioned on the label or sleeves of the earliest singles. The only information refers to Phonogram who were the publishing house for Mercury at that time, which is why their name and logo will appear.**
-
-
 ### Current Lineup
 
 Mark Brzezicki, Bruce Watson, Jamie Watson, Scott Whitley, Simon Hough
