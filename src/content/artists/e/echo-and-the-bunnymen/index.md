@@ -1,6 +1,6 @@
 ---
 title: Echo & The Bunnymen
-featured_image: artists/e/echo-the-bunnymen/echo-the-bunnymen.jpg
+featured_image: artists/e/echo-and-the-bunnymen/echo-and-the-bunnymen.jpg
 artist_page: true
 ---
 ## About

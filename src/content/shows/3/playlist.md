@@ -2,7 +2,7 @@
 2. {{< artist-wikilink "Johnny Cash" >}} - Hurt
 3. {{< artist-wikilink "Billy Mackenzie" >}} - Never Turn Your Back On Mother Earth
 4. {{< artist-wikilink "The Damned" >}} - Alone Again Or
-5. Echo And The Bunnymen - People Are Strange
+5. {{< artist-wikilink "Echo And The Bunnymen" >}} - People Are Strange
 6. {{< artist-wikilink "Voice Of The Beehive" >}} - I Think I Love You
 7. {{< artist-wikilink "Del Shannon" >}} - Handy Man
 
