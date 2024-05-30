@@ -28,4 +28,3 @@ Angus MacLise was the original drummer, but did not officially record with the b
 ### Current Lineup
 
 Lou Reed, John Cale, Sterling Morrison, Moe Tucker
-
