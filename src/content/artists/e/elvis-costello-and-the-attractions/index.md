@@ -1,6 +1,6 @@
 ---
 title: Elvis Costello & The Attractions
-featured_image: artists/e/elvis-costello-the-attractions/elvis-costello-the-attractions.jpg
+featured_image: artists/e/elvis-costello-and-the-attractions/elvis-costello-and-the-attractions.jpg
 artist_page: true
 ---
 ## About

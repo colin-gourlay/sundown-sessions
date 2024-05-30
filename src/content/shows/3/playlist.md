@@ -25,7 +25,7 @@
 - NEWS
 
 1. {{< artist-wikilink "Simple Minds" >}} - Chelsea Girl
-2. Elvis Costello And The Attractions - (I Don't Want To Go) To Chelsea
+2. {{< artist-wikilink "Elvis Costello And The Attractions" >}} - (I Don't Want To Go) To Chelsea
 3. {{< artist-wikilink "Skids" >}} - TV Stars
 4. {{< artist-wikilink "Big Country" >}} - You Dreamer
 5. {{< artist-wikilink "Kirsten Adamson" >}} - My Father's Songs
