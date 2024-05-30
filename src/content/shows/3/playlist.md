@@ -42,4 +42,4 @@
 1. {{< artist-wikilink "Visage" >}} - Malpaso Man
 2. {{< artist-wikilink "Simple Minds" >}} - Love Song
 3. {{< artist-wikilink "Sparks" >}} - Beat The Clock
-4. Filthy Tongues - Nae Tongues
+4. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
