@@ -8,6 +8,12 @@
   - The Associates [documentary](https://www.youtube.com/watch?v=riop6MNVoqA)
 - _Love_
   - Anniversary edition [breakdown](https://www.billboard.com/music/rock/love-forever-changes-anniversary-box-set-8307336/)
+- _The Wrecking Crew_
+  The Wrecking Crew played for many artists during their active years. They were a prolific group of studio musicians in the 1960s and 1970s. 
+  The band were behind The Beach Boys; The Byrds; The Monkees; The Mamas & the Papas; The Association; Sonny & Cher; Simon & Garfunkel; Nancy Sinatra; Herman's Hermits; The 5th Dimension; The Animals; The Ronettes; Petula Clark; James Brown; Elvis Presley; Frank Sinatra; Bobby Darin; Duke Ellington; Phil Spector; Johnny Cash; Nat King Cole; and many more.
+  - [The Wrecking Crew!](https://www.imdb.com/title/tt1185418/)
+  - [Official Trailer](https://www.youtube.com/watch?v=SX5BCgmr7tg)
+  - [The Pop Museum at K107](https://embedded.autopod.xyz/episodes/show/2487)
 - _Simple Minds_
   - Chelsea Girl - [The Old Grey Whistle Test](https://www.youtube.com/watch?v=Aref3Nj4YaQ)
 - _#ANDYSMANCLUB events_
