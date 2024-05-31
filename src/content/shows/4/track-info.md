@@ -4,7 +4,7 @@
 | {{< artist-wikilink "Hipsway" >}}               | Tinder                                      | 5:15     | Appears on the album **Hipsway** released on 01 January 1986                                       |
 | {{< artist-wikilink "Attic Lights" >}}          | The Dirty Thirst                            | 3:33     | Appears on the album **Friday Night Lights** released on 01 January 2008                           |
 | Win                                             | You've Got the Power - Remix                | 6:01     | Appears on the album **Lost In the 80s** released on 15 July 2022                                  |
-| David Latto & The Lang Spoons                   | Geordie Munro                               | 3:05     | Appears on the album **Geordie Munro** released on 29 July 2022                                    |
+| {{< artist-wikilink "David Latto" >}}           | Geordie Munro                               | 3:05     | Appears on the album **Geordie Munro** released on 29 July 2022                                    |
 | {{< artist-wikilink "Roddy Frame" >}}           | Reason For Living                           | 3:16     | Appears on the album **The North Star** released on 15 September 1998                              |
 | the river detectives                            | chains                                      | 3:06     | Appears on the album **Saturday Night, Sunday Morning**                                            |
 | {{< artist-wikilink "The Big Dish" >}}          | Slide                                       | 5:02     | Appears on the album **Swimmer** released on 01 January 1986                                       |
