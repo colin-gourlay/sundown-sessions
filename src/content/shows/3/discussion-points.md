@@ -1,4 +1,7 @@
 #
+- _Johnny Cash_
+  - Ranked #1 Music Museum in the world by Forbes and National Geographic Traveler.
+    - [The Johnny Cash Museum](https://www.johnnycashmuseum.com/)
 - _Billy Mackenzie_
   - [Live At Ronnie Scotts](https://www.youtube.com/watch?v=1lw-r7CIqZY&t=79s)
   - The Taxi [trip](https://dangerousminds.net/comments/the_glamour_chase_documentary_beauty_despair_singer_billy_mackenzie)
