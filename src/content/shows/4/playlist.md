@@ -6,7 +6,7 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
-2. {{< featured-guest-wikilink "Interview with Kenny Armour from ANDYSMANCLUB" >}}
+2. {{< featured-guest-wikilink "Kenny Armour from ANDYSMANCLUB" >}}
 
 - ADVERTISING BREAK
 
