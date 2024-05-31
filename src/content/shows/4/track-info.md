@@ -11,7 +11,7 @@
 | {{< artist-wikilink "Love And Money" >}}        | Strange Kind Of Love                        | 5:15     | Appears on the album **Strange Kind Of Love** released on 17 June 1988                             |
 | {{< artist-wikilink "The Bluebells" >}}         | Cath                                        | 3:49     | Appears on the album **The Singles Collection** released on 01 January 1998                        |
 | {{< artist-wikilink "Goodbye Mr MacKenzie" >}}  | Now We are Married                          | 4:57     | Appears on the album **The River Sessions Day of Storms** released on 03 October 2011              |
-| Angelfish                                       | Suffocate Me                                | 3:40     | Appears on the album **Angelfish** released on 01 January 1994                                     |
+| {{< artist-wikilink "Angelfish" >}}             | Suffocate Me                                | 3:40     | Appears on the album **Angelfish** released on 01 January 1994                                     |
 | {{< artist-wikilink "Garbage" >}}               | I Think I'm Paranoid (2018 - Remaster)      | 3:38     | Appears on the album **Version 2.0 (20th Anniversary Deluxe Edition)** released on 04 May 1998     |
 | {{< artist-wikilink "Skunk Anansie" >}}         | I Can Dream                                 | 3:32     | Appears on the album **Paranoid & Sunburnt** released in 1995                                      |
 | {{< artist-wikilink "Public Image Limited" >}}  | Poptones                                    | 7:46     | Appears on the album **Metal Box** released on 01 January 1979                                     |

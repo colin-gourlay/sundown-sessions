@@ -19,7 +19,7 @@
 - NEWS
 
 1. {{< artist-wikilink "Goodbye Mr Mackenzie" >}} - Now We Are Married
-2. Angelfish - Suffocate Me
+2. {{< artist-wikilink "Angelfish" >}} - Suffocate Me
 3. {{< artist-wikilink "Garbage" >}} - I Think I'm Paranoid
 4. {{< artist-wikilink "Skunk Anansie" >}} - I Can Dream
 5. {{< artist-wikilink "Public Image Limited" >}} - Poptones
