@@ -6,9 +6,9 @@
 | Win                                             | You've Got the Power - Remix                | 6:01     | Appears on the album **Lost In the 80s** released on 15 July 2022                                  |
 | {{< artist-wikilink "David Latto" >}}           | Geordie Munro                               | 3:05     | Appears on the album **Geordie Munro** released on 29 July 2022                                    |
 | {{< artist-wikilink "Roddy Frame" >}}           | Reason For Living                           | 3:16     | Appears on the album **The North Star** released on 15 September 1998                              |
-| the river detectives                            | chains                                      | 3:06     | Appears on the album **Saturday Night, Sunday Morning**                                            |
+| {{< artist-wikilink "The River Detectives" >}}  | Chains                                      | 3:06     | Appears on the album **Saturday Night, Sunday Morning**                                            |
 | {{< artist-wikilink "The Big Dish" >}}          | Slide                                       | 5:02     | Appears on the album **Swimmer** released on 01 January 1986                                       |
-| Love & Money                                    | Strange Kind Of Love                        | 5:15     | Appears on the album **Strange Kind Of Love** released on 17 June 1988                             |
+| {{< artist-wikilink "Love And Money" >}}        | Strange Kind Of Love                        | 5:15     | Appears on the album **Strange Kind Of Love** released on 17 June 1988                             |
 | {{< artist-wikilink "The Bluebells" >}}         | Cath                                        | 3:49     | Appears on the album **The Singles Collection** released on 01 January 1998                        |
 | {{< artist-wikilink "Goodbye Mr MacKenzie" >}}  | Now We are Married                          | 4:57     | Appears on the album **The River Sessions Day of Storms** released on 03 October 2011              |
 | Angelfish                                       | Suffocate Me                                | 3:40     | Appears on the album **Angelfish** released on 01 January 1994                                     |

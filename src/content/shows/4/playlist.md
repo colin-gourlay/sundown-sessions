@@ -13,7 +13,7 @@
 1. {{< artist-wikilink "Roddy Frame" >}} - Reason For Living
 2. {{< artist-wikilink "The River Detectives" >}} - Chains
 3. {{< artist-wikilink "The Big Dish" >}} - Slide
-4. Love & Money - Strange Kind Of Love
+4. {{< artist-wikilink "Love And Money" >}} - Strange Kind Of Love
 5. {{< artist-wikilink "The Bluebells" >}} - Cath
 
 - NEWS
