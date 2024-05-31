@@ -1,5 +1,5 @@
 ---
-title: Love And Money
+title: Love & Money
 featured_image: artists/l/love-and-money/love-and-money.jpg
 artist_page: true
 ---
