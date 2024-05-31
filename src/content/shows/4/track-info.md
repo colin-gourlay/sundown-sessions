@@ -23,4 +23,4 @@
 | {{< artist-wikilink "In Letter Form" >}}        | Terror (Is A State Of Mind)                 | 4:26     | Appears on the album **Fracture. Repair. Repeat.** released on 20 May 2016                         |
 | {{< artist-wikilink "The Slow Readers Club" >}} | Plant The Seed                              | 3:02     | Appears on the album **Cavalcade** released on 13 April 2015                                       |
 | {{< artist-wikilink "The Exploding Boy" >}}     | Alarms in Silence                           | 3:16     | Appears on the album **Alarms!** released on 18 May 2018                                           |
-| The Filthy Tongues                              | Nae Tongues - Bonus Track                   | 3:13     | Appears on the album **Black Valentine (Best of)** released on 03 November 2023                    |
+| {{< artist-wikilink "The Filthy Tongues" >}}    | Nae Tongues - Bonus Track                   | 3:13     | Appears on the album **Black Valentine (Best of)** released on 03 November 2023                    |

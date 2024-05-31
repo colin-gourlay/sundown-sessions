@@ -37,4 +37,4 @@
 2. {{< artist-wikilink "In Letter Form" >}} - Terror (Is A State Of Mind)
 3. {{< artist-wikilink "The Slow Readers Club" >}} - Plant The Seed
 4. {{< artist-wikilink "The Exploding Boy" >}} - Alarms In Silence
-5. Filthy Tongues - Nae Tongues
+5. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
