@@ -13,6 +13,8 @@
   - [The Wrecking Crew!](https://www.imdb.com/title/tt1185418/)
   - [Official Trailer](https://www.youtube.com/watch?v=SX5BCgmr7tg)
   - [The Pop Museum at K107](https://embedded.autopod.xyz/episodes/show/2487)
+- _Blue On Shock_
+  - [The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)
 - _Simple Minds_
   - Chelsea Girl - [The Old Grey Whistle Test](https://www.youtube.com/watch?v=Aref3Nj4YaQ)
 - _#ANDYSMANCLUB events_
