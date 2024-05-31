@@ -11,7 +11,7 @@ The band took their name from the combination of the mammal/cannabis sort skunk 
 Deborah Anne Dyer a.k.a. Skin: vocals
 Richard 'Cass' Lewis: bass
 Martin "Ace" Kent: guitar
-Mark Richardson (5): drums (1996-now)
+Mark Richardson: drums (1996-now)
 Robbie France: drums (on 1995's Paranoid & Sunburnt)
 
 ### Current Lineup
