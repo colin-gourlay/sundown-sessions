@@ -34,7 +34,7 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "IST IST" >}} - Wolves
-2. In A Letter Form - Terror (Is A State Of Mind)
+2. {{< artist-wikilink "In Letter Form" >}} - Terror (Is A State Of Mind)
 3. {{< artist-wikilink "The Slow Readers Club" >}} - Plant The Seed
 4. {{< artist-wikilink "The Exploding Boy" >}} - Alarms In Silence
 5. Filthy Tongues - Nae Tongues

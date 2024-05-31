@@ -20,7 +20,7 @@
 | {{< artist-wikilink "Codeine Velvet Club" >}}   | Hollywood                                   | 4:00     | Appears on the album **Codeine Velvet Club** released on 01 January 2009                           |
 | {{< artist-wikilink "Melys" >}}                 | Chinese Whispers                            | 4:14     | Appears on the album **Chinese Whispers** released on 15 March 2006                                |
 | {{< artist-wikilink "IST IST" >}}               | Wolves                                      | 3:30     | Appears on the album **Architecture** released on 01 May 2020                                      |
-| In Letter Form                                  | Terror (Is A State Of Mind)                 | 4:26     | Appears on the album **Fracture. Repair. Repeat.** released on 20 May 2016                         |
+| {{< artist-wikilink "In Letter Form" >}}        | Terror (Is A State Of Mind)                 | 4:26     | Appears on the album **Fracture. Repair. Repeat.** released on 20 May 2016                         |
 | {{< artist-wikilink "The Slow Readers Club" >}} | Plant The Seed                              | 3:02     | Appears on the album **Cavalcade** released on 13 April 2015                                       |
 | {{< artist-wikilink "The Exploding Boy" >}}     | Alarms in Silence                           | 3:16     | Appears on the album **Alarms!** released on 18 May 2018                                           |
 | The Filthy Tongues                              | Nae Tongues - Bonus Track                   | 3:13     | Appears on the album **Black Valentine (Best of)** released on 03 November 2023                    |
