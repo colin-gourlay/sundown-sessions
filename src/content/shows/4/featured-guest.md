@@ -1,5 +1,5 @@
 #
-{{< figure src="1-guest-logo.webp" title="Kenny Armour from ANDYSMANCLUB" alt="Andys Man Club Logo" width="75%" >}}
+{{< figure src="4-guest-logo.jpeg" title="Kenny Armour from ANDYSMANCLUB" alt="Kenny Armour from ANDYSMANCLUB" width="75%" >}}
 
 ANDYSMANCLUB is a UK-based men's suicide prevention charity. Offering free-to-attend peer-to-peer support groups across the United Kingdom, 
 on Mondays at 7pm (except for bank holidays).
