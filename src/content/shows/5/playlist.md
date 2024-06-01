@@ -13,7 +13,7 @@
 
 1. {{< artist-wikilink "Big Country" >}} - You Dreamer
 2. {{< artist-wikilink "REM" >}} - Orange Crush - Remastered 2013
-3. {{< artist-wikilink "T. Rex" >}} - Children of the Revolution - Remaster
+3. {{< artist-wikilink "T Rex" >}} - Children of the Revolution - Remaster
 4. {{< artist-wikilink "The Filthy Tongues" >}} - Children of the Filthy
 5. {{< artist-wikilink "Grinderman" >}} - Grinderman
 

@@ -9,7 +9,7 @@
 | {{< featured-guest-wikilink "Agnes from Breathe Easy" >}} |                                                         |          |                                                                 |
 | {{< artist-wikilink "Big Country" >}}                     | You Dreamer                                             | 4:50     |                                                                 |
 | {{< artist-wikilink "REM" >}}                             | Orange Crush - Remastered 2013                          | 3:51     |                                                                 |
-| T. Rex                                                    | Children of the Revolution - Remaster                   | 2:27     |                                                                 |
+| {{< artist-wikilink "T Rex" >}}                           | Children of the Revolution - Remaster                   | 2:27     |                                                                 |
 | The Filthy Tongues                                        | Children of the Filthy                                  | 4:06     |                                                                 |
 | {{< artist-wikilink "Grinderman" >}}                      | Grinderman                                              | 4:33     |                                                                 |
 | White Lies                                                | There Goes Our Love Again - GOOSE Version               | 5:11     |                                                                 |
