@@ -1,40 +1,40 @@
 1. {{< artist-wikilink "Inspiral Carpets" >}} - Bitches Brew
 2. {{< artist-wikilink "Electrafixion" >}} - Lowdown
 3. {{< artist-wikilink "A House" >}} - Call Me Blue
-4. The Tears - Refugees
-5. {{< artist-wikilink "Red Lorry Yellow Lorry" >}} - Talk About The Weather
+4. {{< artist-wikilink "The Tears" >}} - Refugees
+5. {{< artist-wikilink "Red Lorry Yellow Lorry" >}} - Talk About the Weather
 
 - ADVERTISING BREAK
 
-1. David Latto - Geordie Munro
-2. Interview with Linda Birrell from Breathe Easy
+1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
+2. {{< featured-guest-wikilink "Agnes from Breathe Easy" >}}
 
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Big Country" >}} - You Dreamer
-2. {{< artist-wikilink "REM" >}} - Orange Crush
-3. T.Rex - Children Of The Revolution
-4. The Filthy Tongues - Children Of The Filthy
+2. {{< artist-wikilink "R.E.M." >}} - Orange Crush - Remastered 2013
+3. {{< artist-wikilink "T. Rex" >}} - Children of the Revolution - Remaster
+4. {{< artist-wikilink "The Filthy Tongues" >}} - Children of the Filthy
 5. {{< artist-wikilink "Grinderman" >}} - Grinderman
 
 - NEWS
 
-1. White Lies - There Goes Our Love Again
+1. {{< artist-wikilink "White Lies" >}} - There Goes Our Love Again - GOOSE Version
 2. {{< artist-wikilink "Chapel Club" >}} - Surfacing
 3. {{< artist-wikilink "LNZNDRF" >}} - Future You
-4. Ennio Morriconne - The Ecstasy Of Gold
+4. {{< artist-wikilink "Ennio Morricone" >}} - The Ecstasy Of Gold - 2004 Remaster
+5. {{< artist-wikilink "The Filthy Tongues" >}} - Mummy Can't Drive
 
 - ADVERTISING BREAK
 
-1. The Filthy Tongues- Mummy Can't Drive
-2. Chameleons - Nostalgia
-3. Lucid Evolution - Chiron
-4. Becky Becky - Fire And Wings
+1. {{< artist-wikilink "The Chameleons" >}} - Nostalgia
+2. {{< artist-wikilink "Lucid Evolution" >}} - Chiron
+3. {{< artist-wikilink "Becky Becky" >}} - Fire & Wings (live)
+4. {{< artist-wikilink "The House of Love" >}} - Christine - 2018 Remaster
 
 - ADVERTISING BREAK
 
-1. House Of Love - Christine
-2. The Ronson Hang Up - Tragic
-3. {{< artist-wikilink "Sixpence None The Richer" >}} - Us
-4. {{< artist-wikilink "Propaganda" >}} - Sorry For Laughing
-5. The Filthy Tongues - Nae Tongues
+1. {{< artist-wikilink "The Ronson Hangup" >}} - Tragic
+2. {{< artist-wikilink "Sixpence None The Richer" >}} - Us
+3. {{< artist-wikilink "Propaganda" >}} - Sorry For Laughing - Live At The Value Of Entertainment
+4. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues - Bonus Track
