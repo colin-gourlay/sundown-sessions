@@ -8,7 +8,7 @@
 | {{< artist-wikilink "David Latto" >}}                     | Geordie Munro                                           | 3:05     | Appears on the album **Geordie Munro** released on 29 July 2022 |
 | {{< featured-guest-wikilink "Agnes from Breathe Easy" >}} |                                                         |          |                                                                 |
 | {{< artist-wikilink "Big Country" >}}                     | You Dreamer                                             | 4:50     |                                                                 |
-| {{< artist-wikilink "R.E.M." >}}                          | Orange Crush - Remastered 2013                          | 3:51     |                                                                 |
+| {{< artist-wikilink "REM" >}}                             | Orange Crush - Remastered 2013                          | 3:51     |                                                                 |
 | T. Rex                                                    | Children of the Revolution - Remaster                   | 2:27     |                                                                 |
 | The Filthy Tongues                                        | Children of the Filthy                                  | 4:06     |                                                                 |
 | {{< artist-wikilink "Grinderman" >}}                      | Grinderman                                              | 4:33     |                                                                 |
