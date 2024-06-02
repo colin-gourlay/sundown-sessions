@@ -1,5 +1,5 @@
 ---
-title: 'Show #5: Broadcast 3rd July 2024'
+title: 'Show #5: Broadcast 17th July 2024'
 slug: 'featuring-agnes-from-breathe-easy'
 description: 'featuring Agnes from Breathe Easy'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
@@ -44,7 +44,7 @@ toc: true
 featured_image: '5-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-05-25T22:00:00Z
+date: 2024-07-17T22:00:00Z
 draft: false
 ---
 
