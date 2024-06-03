@@ -24,7 +24,7 @@ toc: true
 featured_image: '9-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-05-28T22:00:00Z
+date: 2024-12-28T22:00:00Z
 draft: false
 ---
 
