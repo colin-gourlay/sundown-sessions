@@ -1,5 +1,11 @@
 #
-{{< figure src="" title="" alt="" width="75%" >}}
+{{< figure src="4-guest-logo.jpeg" title="" alt="" width="75%" >}}
+
+INTRO ABOUT BREATHE EASY
+
+### **Meetings**
+
+Navigate through their [full club listings]() or [locate your nearest group]() to find out more.
 
 ### Contact details
 
@@ -14,3 +20,7 @@
 - [Twitter]()
 - [LinkedIn]()
 - [YouTube]()
+
+
+
+
