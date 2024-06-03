@@ -14,12 +14,9 @@ url = "https://twitter.com/sundown_session"
 name = "mastodon"
 url = "https://mastodon.scot/@sundown_sessions"
 
-
-#[[ananke_socials]]
-#name = "instagram"
-#url = "https://www.instagram.com/sundownsessionsshow"
-#
-
+[[ananke_socials]]
+name = "instagram"
+url = "https://www.instagram.com/sundownsessionsshow"
 
 #
 #[[ananke_socials]]
