@@ -28,7 +28,7 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "The Chameleons" >}} - Nostalgia
-2. {{< artist-wikilink "Lucid Evolution" >}} - Chiron
+2. Lucid Evolution - Chiron
 3. {{< artist-wikilink "Becky Becky" >}} - Fire & Wings
 4. {{< artist-wikilink "The House of Love" >}} - Christine
 
