@@ -11,8 +11,8 @@ I currently don't have contact information or social media links for The Big Now
 
 ### Social Media
 
-- ~~[Facebook]~~
-- ~~[Instagram]~~
-- ~~[Twitter]~~
-- ~~[LinkedIn]~~
-- ~~[YouTube]~~
+- ~~**Facebook:**~~
+- ~~**Instagram:**~~
+- ~~**Twitter:**~~
+- ~~**LinkedIn:**~~
+- ~~**YouTube:**~~
