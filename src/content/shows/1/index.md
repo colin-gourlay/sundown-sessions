@@ -38,8 +38,6 @@ keywords:
  - 'The Vintage Explosion'
  - 'Del Shannon'
  - 'Vermin Poets'
- - 'Pavement'
- - 'The Velvet Underground'
  - 'Nick Cave & The Bad Seeds'
  - 'The Filthy Tongues'
 toc: true
