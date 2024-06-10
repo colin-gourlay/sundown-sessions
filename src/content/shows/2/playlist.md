@@ -13,10 +13,9 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Royal Blood" >}} - Figure It Out
-2. {{< artist-wikilink "PJ Harvey" >}} - Sheela-na-gig
-3. {{< artist-wikilink "The White Stripes" >}} - Seven Nation Army
-4. {{< artist-wikilink "Manic Street Preachers" >}} - Nobody Loved You
-5. {{< artist-wikilink "Electric Light Orchestra" >}} - Here Is the News
+2. {{< artist-wikilink "Muse" >}} - Sing For Absolution
+3. {{< artist-wikilink "Manic Street Preachers" >}} - Nobody Loved You
+4. {{< artist-wikilink "Electric Light Orchestra" >}} - Here Is the News
 
 - NEWS
 
