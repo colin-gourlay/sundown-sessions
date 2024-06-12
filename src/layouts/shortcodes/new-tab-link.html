@@ -1,0 +1,3 @@
+{{ $input := .Get 0 | markdownify }}
+{{ $sanitized := $input | safeHTML }}
+{{ replace $sanitized "<a href=" "<a target=\"_blank\" href=" | safeHTML }}
