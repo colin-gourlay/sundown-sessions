@@ -27,9 +27,8 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Air" >}} - Sexy Boy
-2. {{< artist-wikilink "She Wants Revenge" >}} - These Things
-3. {{< artist-wikilink "IST IST" >}} - You're Mine
-4. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Jubilee Street
+2. {{< artist-wikilink "IST IST" >}} - You're Mine
+3. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Jubilee Street
 
 - ADVERTISING BREAK
 
