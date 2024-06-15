@@ -13,7 +13,7 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Royal Blood" >}} - Figure It Out
-2. {{< artist-wikilink "Muse" >}} - Sing For Absolution
+2. {{< artist-wikilink "Muse" >}} - Sing for Absolution
 3. {{< artist-wikilink "Electric Light Orchestra" >}} - Here Is the News
 
 - NEWS
