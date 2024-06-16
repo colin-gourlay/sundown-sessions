@@ -1,0 +1,8 @@
+{{ $trackInfo := .Get 0 }}
+{{ with $trackInfo }}
+    {{ $track := index (split . "--") 0 }}
+    {{ $artist := index (split . "--") 1 }}
+    {{ $artistFirstChar := index $artist 0 | printf "%c" | lower }}
+    {{ $artistUri := printf "artists/%s/%s" $artistFirstChar ($artist | urlize) | absURL }}
+    {{ printf "%s<br><a href='%s'>%s</a>" $track $artistUri $artist | safeHTML }}
+{{ end }}
