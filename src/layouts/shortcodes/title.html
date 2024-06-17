@@ -1,8 +1,13 @@
+
+
+
+
 {{ $trackInfo := .Get 0 }}
 {{ with $trackInfo }}
     {{ $track := index (split . "--") 0 }}
     {{ $artist := index (split . "--") 1 }}
     {{ $artistFirstChar := index $artist 0 | printf "%c" | lower }}
     {{ $artistUri := printf "artists/%s/%s" $artistFirstChar ($artist | urlize) | absURL }}
-    {{ printf "%s<br><a href='%s'>%s</a>" $track $artistUri $artist | safeHTML }}
+    {{ $releaseUri := printf "%s-large.jpeg" $artist | urlize }}
+    {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $releaseUri $track $artistUri $artist | safeHTML }}
 {{ end }}
