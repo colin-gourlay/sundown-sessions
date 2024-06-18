@@ -6,7 +6,7 @@
 | 4  | {{<title "At Home At Work At Play--Sparks">}}                      | Propaganda (1974)                             |   3:05   | Released on [RECORD LABEL] on the 01 November 1974  |
 | 5  | {{<title "Take Me I'm Yours--Squeeze">}}                           | Squeeze (Original UK Version) (1978)          |   3:46   | Released on [RECORD LABEL] on the 01 January 1978   |
 | 6  | {{<title "Geordie Munro--David Latto">}}                           | Geordie Munro (2022)                          |   3:05   | Released on [RECORD LABEL] on the 29 July 2022      |
-| 6  | Interview with {{< featured-guest-wikilink "The Big Now"           |                                               |          |                                                     |
+| 6  | The Big Now           |                                               |          |                                                     |
 | 7  | {{<title "Cuddly Toy--Roachford">}}                                | Roachford (Expanded Edition) (1988)           |   3:48   | Released on [RECORD LABEL] on the 11 July 1988      |
 | 8  | {{<title "Fat Cats Drown in Milk--IST IST">}}                      | The Art of Lying (2021)                       |   3:19   | Released on [RECORD LABEL] on the 26 November 2021  |
 | 9  | {{<title "Slow Hands--Interpol">}}                                 | Antics (2004)                                 |   3:04   | Released on [RECORD LABEL] on the 27 September 2004 |
@@ -24,3 +24,8 @@
 | 21 | {{<title "Like Poets Often Do--Vermin Poets">}}                    | Poets Of England (2010)                       |   3:18   | Released on [RECORD LABEL] on the 15 March 2010     |
 | 22 | {{<title "From Her to Eternity--Nick Cave & The Bad Seeds">}}      | From Her to Eternity (2009 - Remaster) (2009) |   5:35   | Released on [RECORD LABEL] on the 27 April 2009     |
 | 23 | {{<title "Nae Tongues - Bonus Track--The Filthy Tongues">}}        | Black Valentine (Best of) (2023)              |   3:13   | Released on [RECORD LABEL] on the 03 November 2023  |
+
+
+
+
+
