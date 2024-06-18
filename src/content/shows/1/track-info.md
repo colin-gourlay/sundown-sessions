@@ -5,7 +5,7 @@
 | 3  | {{<title "Propaganda--Sparks">}}                                   | Propaganda (1974)                             |   0:23   | Released on [RECORD LABEL] on the 01 November 1974  |
 | 4  | {{<title "At Home At Work At Play--Sparks">}}                      | Propaganda (1974)                             |   3:05   | Released on [RECORD LABEL] on the 01 November 1974  |
 | 5  | {{<title "Take Me I'm Yours--Squeeze">}}                           | Squeeze (Original UK Version) (1978)          |   3:46   | Released on [RECORD LABEL] on the 01 January 1978   |
-| 6  | {{< artist-wikilink "David Latto" >}}                              | Geordie Munro                                 |   3:05   | Released on [RECORD LABEL] on the 29 July 2022      |
+| 6  | {{<title "Geordie Munro--David Latto">}}                           | Geordie Munro (2022)                          |   3:05   | Released on [RECORD LABEL] on the 29 July 2022      |
 | 6  | Interview with {{< featured-guest-wikilink "The Big Now"           |                                               |          |                                                     |
 | 7  | {{<title "Cuddly Toy--Roachford">}}                                | Roachford (Expanded Edition) (1988)           |   3:48   | Released on [RECORD LABEL] on the 11 July 1988      |
 | 8  | {{<title "Fat Cats Drown in Milk--IST IST">}}                      | The Art of Lying (2021)                       |   3:19   | Released on [RECORD LABEL] on the 26 November 2021  |
