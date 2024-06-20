@@ -12,15 +12,11 @@
 2. {{< featured-guest-wikilink "Blue On Shock" >}} - Love Is A Venture
 3. {{< featured-guest-wikilink "Blue On Shock" >}} - Brand New Chevy
 4. {{< featured-guest-wikilink "Blue On Shock" >}} - The Fighting's Never Won
-5. {{< featured-guest-wikilink "Blue On Shock" >}} - It Ain't Easy
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Depeche Mode" >}} - New Life
-2. A Projection - Darwin's Eden
-3. {{< artist-wikilink "IST IST" >}} - Jennifer's Lips
-4. {{< artist-wikilink "Pete Shelley" >}} - Homosapien
-5. {{< artist-wikilink "Magazine" >}} - The Light Pours Out Of Me
+1. {{< artist-wikilink "Pete Shelley" >}} - Homosapien
+2. {{< artist-wikilink "Magazine" >}} - The Light Pours Out Of Me
 
 - NEWS
 
@@ -32,14 +28,9 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Elbow" >}} - Grounds For Divorce
-2. {{< artist-wikilink "Aimee Mann" >}} - I Should Have Known
-3. {{< artist-wikilink "Unbelievable Truth" >}} - Building
-4. {{< artist-wikilink "Radiohead" >}} - Paranoid Android
-
-- ADVERTISING BREAK
-
-1. {{< artist-wikilink "Visage" >}} - Malpaso Man
-2. {{< artist-wikilink "Simple Minds" >}} - Love Song
-3. {{< artist-wikilink "Sparks" >}} - Beat The Clock
-4. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
+1. {{< artist-wikilink "Aimee Mann" >}} - I Should Have Known
+2. {{< artist-wikilink "Unbelievable Truth" >}} - Building
+3. {{< artist-wikilink "Visage" >}} - Malpaso Man
+4. {{< artist-wikilink "Simple Minds" >}} - Love Song
+5. {{< artist-wikilink "Sparks" >}} - Beat The Clock
+6. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
