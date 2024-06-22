@@ -32,7 +32,7 @@ Former members
     * SugarPie Jones – bass, 2000
     * "Jungle" Jim Chandler – "Laid down the primal beat" for the European tour 2004
     * Bill Bateman (Bill "Buster" Bateman) – drums, June 2004 – August 2006
-    * Scott Franklin (3) (Scott "Chopper" Franklin) – bass & guitar, January 2002 – September 2006
+    * Scott Franklin (Scott "Chopper" Franklin) – bass & guitar, January 2002 – September 2006
     * Jen Hanrahan - castanets June 2000 - August 2000.
     * Sean Yseult (Shauna Reynolds) – bass, October/November 2006
 
