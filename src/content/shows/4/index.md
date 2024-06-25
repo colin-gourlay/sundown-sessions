@@ -6,42 +6,39 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - Kenny Armour from ANDYSMANCLUB
 
-- The River Detectives
-        
-- Angelfish
+- Melys
 
-- Codeine Velvet Club
+- Roddy Frame
 
-- The Exploding Boy
+- The Alexander Brothers
+
+- The Mission
 
 - and much, much more...
 '
 keywords:
  - 'Kenny Armour from ANDYSMANCLUB'
- - 'The Silencers'
- - 'Hipsway'
- - 'Attic Lights'
- - 'Win'
- - 'David Latto & The Lang Spoons'
- - 'Roddy Frame'
- - 'the river detectives'
- - 'The Big Dish'
- - 'Love & Money'
- - 'The Bluebells'
- - 'Goodbye Mr MacKenzie'
+ - 'Paul McCartney'
+ - 'Elvis Costello & The Attractions'
+ - 'The Cult'
+ - 'Gaye Bykers On Acid'
+ - 'The Alexander Brothers'
+ - 'Westlife'
  - 'Angelfish'
- - 'Garbage'
- - 'Skunk Anansie'
- - 'Public Image Ltd.'
- - 'Teenage Fanclub'
- - 'Julian Cope'
- - 'Codeine Velvet Club'
+ - 'Skids'
+ - 'Hipsway'
+ - 'Win'
+ - 'Attic Lights'
+ - 'Roddy Frame'
  - 'Melys'
- - 'IST IST'
- - 'In Letter Form'
- - 'The Slow Readers Club'
- - 'The Exploding Boy'
- - 'The Filthy Tongues'
+ - 'Fabienne DelSol'
+ - 'Spoon'
+ - 'The Cramps'
+ - 'The Detroit Cobras'
+ - 'Becky Becky'
+ - 'Simple Minds'
+ - 'Virgin Prunes'
+ - 'The Mission'
 toc: true
 featured_image: '4-show-logo.jpeg'
 read_more_copy: Show notes...
