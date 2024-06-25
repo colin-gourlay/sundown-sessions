@@ -6,11 +6,11 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - Kenny Armour from ANDYSMANCLUB
 
+- Angelfish
+
 - Melys
 
-- Roddy Frame
-
-- The Alexander Brothers
+- The Virgin Prunes
 
 - The Mission
 
