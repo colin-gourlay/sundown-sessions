@@ -1,45 +1,44 @@
 ---
 title: 'Show #5: Broadcast 17th July 2024'
-slug: 'featuring-agnes-from-breathe-easy'
-description: 'featuring Agnes from Breathe Easy'
+slug: 'featuring-white-china'
+description: 'featuring White China'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
-- Agnes from Breathe Easy
+- White China
 
-- Red Lorry Yellow Lorry
-        
-- Grinderman
+- Siobhan Wilson
 
-- Becky Becky
+- Kirsten Adamson
 
-- The House Of Love
+- Electric Six
+
+- The Vapors
 
 - and much, much more...
 '
 keywords:
- - 'Agnes from Breathe Easy'
- - 'Inspiral Carpets'
- - 'Electrafixion'
- - 'A House'
- - 'The Tears'
- - 'Red Lorry Yellow Lorry'
- - 'David Latto & The Lang Spoons'
- - 'Big Country'
- - 'R.E.M.'
- - 'T. Rex'
- - 'The Filthy Tongues'
- - 'Grinderman'
+ - 'White China'
+ - 'Phil Lynott'
+ - 'Jarvis Cocker'
+ - 'The Wolfmen'
  - 'White Lies'
- - 'Chapel Club'
- - 'LNZNDRF'
- - 'Ennio Morricone'
- - 'The Chameleons'
- - 'Lucid Evolution'
- - 'Becky Becky'
- - 'The House of Love'
- - 'The Ronson Hangup'
- - 'Sixpence None The Richer'
- - 'Propaganda'
+ - 'Siobhan Wilson'
+ - 'Aimee Mann'
+ - 'Kirsten Adamson'
+ - 'Muse'
+ - 'Electric Six'
+ - 'Imperial Drag'
+ - 'Marc Bolan'
+ - 'Adam Ant'
+ - 'Rose Villain'
+ - 'Heaven 17'
+ - 'The Human League'
+ - 'Duran Duran'
+ - 'Simple Minds'
+ - 'Japan'
+ - 'Talk Talk'
+ - 'Visage'
+ - 'The Vapors'
 toc: true
 featured_image: '5-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -53,7 +52,7 @@ draft: false
 
 ---
 
-## Featured guest: Agnes from Breathe Easy
+## Featured guest: White China
 {{< include_content "/shows/5/featured-guest" >}}
 
 ---
