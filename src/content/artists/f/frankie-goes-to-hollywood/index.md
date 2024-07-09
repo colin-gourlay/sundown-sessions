@@ -17,5 +17,5 @@ The original line-up reunited to play one song, "Welcome To The Pleasure Dome", 
 
 ### Current Lineup
 
-Paul Rutherford, Peter Gill, Ryan Molloy, Mark O'Toole
+Paul Rutherford, Holly Johnson, Peter Gill, Mark O'Toole, Brian Nash
 
