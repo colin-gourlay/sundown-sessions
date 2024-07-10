@@ -10,5 +10,5 @@ The group was the first British punk band to release a single (New Rose in 1976)
 
 ### Current Lineup
 
-Dave Vanian, Chris Millar, Paul Gray, Ray Burns, Laurence Burrow, William Granville-Taylor
+Dave Vanian, Chris Millar, Paul Gray, Ray Burns, Laurence Burrow
 
