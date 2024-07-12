@@ -1,26 +1,18 @@
 #
-{{< figure src="4-guest-logo.jpeg" title="" alt="" width="75%" >}}
+{{< figure src="5-guest-logo.jpeg" title="White China (c.1984)" alt="White China" width="75%" >}}
 
-INTRO ABOUT BREATHE EASY
-
-### **Meetings**
-
-Navigate through their [full club listings]() or [locate your nearest group]() to find out more.
+White China
 
 ### Contact details
 
-- **email:** [email@example.com](mailto:)
-- **phone:** +1 (234) 567-8910
-- **website:** [www.example.com]()
+- ~~**email:**~~
+- ~~**phone:**~~
+- **website:** [Official website](https://www.white-china.com/)
 
 ### Social Media
 
-- [Facebook]()
-- [Instagram]()
-- [Twitter]()
-- [LinkedIn]()
-- [YouTube]()
-
-
-
-
+- [Facebook](https://www.facebook.com/whitechinascotland)
+- ~~**Instagram:**~~
+- ~~**Twitter:**~~
+- ~~**LinkedIn:**~~
+- ~~**YouTube:**~~
