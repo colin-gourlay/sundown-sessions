@@ -1,6 +1,6 @@
 | #  | Title                                                                  | Album                                              | Duration | Notes                                               |
 |:--:|:-----------------------------------------------------------------------|----------------------------------------------------|:--------:|-----------------------------------------------------|
-| 1  | {{<title "Yellow Pearl - First 7" Remix--Phil Lynott">}}               | The Philip Lynott Album (1982)                     |   2:56   | Released on [RECORD LABEL] on the 01 January 1982   |
+| 1  | {{<title "Yellow Pearl--Phil Lynott">}}                                | The Philip Lynott Album (1982)                     |   2:56   | Released on [RECORD LABEL] on the 01 January 1982   |
 | 2  | {{<title "Fat Children--Jarvis Cocker">}}                              | Jarvis (2020 Complete Edition) (2006)              |   3:25   | Released on [RECORD LABEL] released in 2006         |
 | 3  | {{<title "Needle In The Camels Eye - Alan Moulder Mix--The Wolfmen">}} | Needle In The Camels Eye (2008)                    |   2:57   | Released on [RECORD LABEL] on the 28 April 2008     |
 | 4  | {{<title "There Goes Our Love Again - GOOSE Version--White Lies">}}    | There Goes Our Love Again (Remixes) (2013)         |   5:11   | Released on [RECORD LABEL] on the 01 January 2013   |
