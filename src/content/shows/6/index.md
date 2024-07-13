@@ -1,23 +1,23 @@
 ---
 title: 'Show #6: Broadcast 24th July 2024'
-slug: 'featuring-to-be-determined'
-description: 'featuring TO-BE-DETERMINED'
+slug: 'featuring-the-thieves'
+description: 'featuring The Thieves'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
-- TO-BE-DETERMINED
-
-- Talking Heads
-
-- Grinderman
+- The Thieves
 
 - Ramones
 
-- The Southern Death Cult
+- Plastic Bertrand
+
+- The Human League
+
+- Talking Heads
 
 - and much, much more...
 '
 keywords:
- - 'TO-BE-DETERMINED'
+ - 'The Thieves'
  - 'The Freshies'
  - 'Jags'
  - 'Radio Stars'
@@ -50,7 +50,7 @@ draft: false
 
 ---
 
-## Featured guest: TO-BE-DETERMINED
+## Featured guest: The Thieves
 {{< include_content "/shows/6/featured-guest" >}}
 
 ---
