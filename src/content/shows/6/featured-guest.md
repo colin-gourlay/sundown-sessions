@@ -1,5 +1,5 @@
 #
-{{< figure src="" title="" alt="" width="75%" >}}
+{{< figure src="6-guest-logo.jpeg" title="L-R: Trevor, Tom, Daniel, Mark - The Thieves (c. 1991)" alt="The Thieves (c. 1991)" width="75%" >}}
 
 ### Contact details
 
