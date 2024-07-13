@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-American punk rock band formed in 1974 and disbanded in 1996.
+USA punk rock band formed in 1974 and disbanded in 1996.
 
 Hailing from Forest Hills - a neighborhood of Queens, New York City (USA) - the original line-up consisted of singer Joey Ramone (Jeffrey Hyman, born May 19th, 1951, died April 15th, 2001), guitarist Johnny Ramone (John Cummings, born October 8th, 1948, died September 15th, 2004), bassist Dee Dee Ramone (Douglas Colvin, born September 18th, 1952, died June 5th, 2002) and drummer Tommy Ramone (Tom Erdelyi, born January 29, 1952, died July 11th, 2014).
 
