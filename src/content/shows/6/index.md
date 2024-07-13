@@ -1,47 +1,42 @@
 ---
 title: 'Show #6: Broadcast 24th July 2024'
-slug: 'featuring-xx-from-love-oor-lang-toun'
-description: 'featuring XX from Love Oor Lang Toun'
+slug: 'featuring-to-be-determined'
+description: 'featuring TO-BE-DETERMINED'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
-- XX from Love Oor Lang Toun
-
-- Wizzard
-        
-- Magazine
-
-- Southern Death Cult
+- TO-BE-DETERMINED
 
 - Talking Heads
-          
+
+- Grinderman
+
+- Ramones
+
+- The Southern Death Cult
+
 - and much, much more...
 '
 keywords:
- - 'XX from Love Oor Lang Toun'
+ - 'TO-BE-DETERMINED'
  - 'The Freshies'
- - 'The Motors'
- - 'Elvis Costello & The Attractions'
- - 'XTC'
- - 'Sparks'
- - 'David Latto & The Lang Spoons'
+ - 'Jags'
+ - 'Radio Stars'
+ - 'Nick Lowe'
+ - 'Ramones'
+ - 'John Lennon'
+ - 'Nick Cave & The Bad Seeds'
  - 'Royal Blood'
  - 'IST IST'
  - 'White Lies'
- - 'Becky Becky'
- - 'Squeeze'
  - 'The Adventures'
- - 'Wizzard'
- - 'Nick Cave & The Bad Seeds'
- - 'The Human League'
- - 'John Grant'
- - 'The Detroit Cobras'
  - 'Del Shannon'
  - 'Magazine'
  - 'The Southern Death Cult'
- - 'Burundi Steiphenson Black'
- - 'Comsat Angels'
  - 'Talking Heads'
- - 'The Filthy Tongues'
+ - 'Becky Becky'
+ - 'The Human League'
+ - 'Grinderman'
+ - 'Plastic Bertrand'
 toc: true
 featured_image: '6-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -55,7 +50,7 @@ draft: false
 
 ---
 
-## Featured guest: XX from Love Oor Lang Toun
+## Featured guest: TO-BE-DETERMINED
 {{< include_content "/shows/6/featured-guest" >}}
 
 ---
