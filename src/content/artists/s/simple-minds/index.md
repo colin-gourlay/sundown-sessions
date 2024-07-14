@@ -9,5 +9,5 @@ Scottish rock band founded in 1977 in Glasgow. They were greatly popular from th
 
 ### Current Lineup
 
-Jim Kerr, Sarah Brown, Charlie Burchill, Gordon Goudie, Ged Grimes, Cherisse Osei, Berenice Scott
+Jim Kerr, Sarah Brown, Charlie Burchill, Erik Ljunggren, Gordon Goudie, Ged Grimes, Cherisse Osei, Berenice Scott
 
