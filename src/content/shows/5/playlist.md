@@ -37,3 +37,4 @@
 3. {{< artist-wikilink "Talk Talk" >}} - Talk Talk 
 4. {{< artist-wikilink "Visage" >}} - Visage
 5. {{< artist-wikilink "The Vapors" >}} - News At Ten
+
