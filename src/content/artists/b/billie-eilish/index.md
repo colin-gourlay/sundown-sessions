@@ -11,16 +11,3 @@ She released her E.P. "[url=https://www.discogs.com/master/1240011-Billie-Eilish
 Her downtempo second album, "[url=https://www.discogs.com/master/2234794-Billie-Eilish-Happier-Than-Ever]Happier Than Ever[/url]", released in July 2021, delves into self-reflection of the rise-to-fame she faced in her previous album and the downsides of stardom that came with it.
 Her latest album, "[url=https://www.discogs.com/master/3487663-Billie-Eilish-Hit-Me-Hard-And-Soft]Hit Me Hard And Soft[/url]" was released in May 2024.
 
-### Contact details
-
-- **email:** [email@example.com](mailto:)
-- **phone:** +1 (234) 567-8910
-- **website:** [www.example.com]()
-
-### Social Media
-
-- [Facebook]()
-- [Instagram]()
-- [Twitter]()
-- [LinkedIn]()
-- [YouTube]()
