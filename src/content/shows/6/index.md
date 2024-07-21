@@ -6,13 +6,13 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - The Thieves
 
-- Del Shannon
-
-- Royal Blood
-
 - The Southern Death Cult
 
-- Nick Lowe
+- White Lies
+
+- Grinderman
+
+- The Adventures
 
 - and much, much more...
 '
@@ -22,28 +22,20 @@ keywords:
  - 'Ramones'
  - 'John Lennon'
  - 'Dave Edmunds'
- - 'Nick Lowe'
- - 'The Freshies'
+ - 'Plastic Bertrand'
+ - 'Ennio Morricone'
+ - 'Jack White'
  - 'Billie Eilish'
- - 'Jags'
- - 'Radio Stars'
- - 'Nick Cave & The Bad Seeds'
  - 'Royal Blood'
- - 'IST IST'
  - 'White Lies'
- - 'The Adventures'
- - 'Del Shannon'
+ - 'Cigarettes After Sex'
  - 'Magazine'
  - 'The Southern Death Cult'
- - 'Talking Heads'
+ - 'The Adventures'
+ - 'Del Shannon'
  - 'Becky Becky'
  - 'The Human League'
  - 'Grinderman'
- - 'Plastic Bertrand'
- - 'Jack White'
- - 'Wings'
- - 'Duran Duran'
- - 'a-ha'
 toc: true
 featured_image: '6-show-logo.jpeg'
 read_more_copy: Show notes...
