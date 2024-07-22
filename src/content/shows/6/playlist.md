@@ -1,6 +1,6 @@
 1. {{< artist-wikilink "Love" >}} - Seven and Seven Is
-2. {{< artist-wikilink "Ramones" >}} - Do You Remember Rock 'n' Roll Radio? - 2002 Remaster
-3. {{< artist-wikilink "John Lennon" >}} - New York City - Remastered 2010
+2. {{< artist-wikilink "Ramones" >}} - Rock 'n' Roll Radio?
+3. {{< artist-wikilink "John Lennon" >}} - New York City
 4. {{< artist-wikilink "Dave Edmunds" >}} - Crawling from the Wreckage
 
 - ADVERTISING BREAK
@@ -13,7 +13,7 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Plastic Bertrand" >}} - Ca Plane Pour Moi
-2. {{< artist-wikilink "Ennio Morricone" >}} - The Ecstasy Of Gold - 2004 Remaster
+2. {{< artist-wikilink "Ennio Morricone" >}} - The Ecstasy Of Gold 
 3. {{< artist-wikilink "Jack White" >}} - Another Way to Die
 4. {{< artist-wikilink "Billie Eilish" >}} - No Time To Die
 
@@ -22,7 +22,7 @@
 1. {{< artist-wikilink "Royal Blood" >}} - Supermodel Avalanches
 2. {{< artist-wikilink "White Lies" >}} - I Don't Want To Go To Mars
 3. {{< artist-wikilink "Cigarettes After Sex" >}} - K.
-4. {{< artist-wikilink "Love" >}} - My Flash on You - Stereo Version
+4. {{< artist-wikilink "Love" >}} - My Flash on You
 
 - ADVERTISING BREAK
 
@@ -34,6 +34,6 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Becky Becky" >}} - Sparrow (live)
-2. {{< artist-wikilink "The Human League" >}} - Rock 'N' Roll / Night Clubbing - 2003 Mix
+2. {{< artist-wikilink "The Human League" >}} - Rock 'N' Roll / Night Clubbing
 3. {{< artist-wikilink "Grinderman" >}} - Grinderman
-4. {{< artist-wikilink "Love" >}} - Alone Again Or - 2015 Remaster
+4. {{< artist-wikilink "Love" >}} - Alone Again Or
