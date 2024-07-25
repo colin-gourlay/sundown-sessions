@@ -1,5 +1,5 @@
-1. {{< artist-wikilink "Love" >}} - Seven and Seven Is
-2. {{< artist-wikilink "Ramones" >}} - Rock 'n' Roll Radio?
+1. {{< artist-wikilink "Love" >}} - 7 and 7 Is
+2. {{< artist-wikilink "Ramones" >}} - Rock 'n' Roll Radio
 3. {{< artist-wikilink "John Lennon" >}} - New York City
 4. {{< artist-wikilink "Dave Edmunds" >}} - Crawling from the Wreckage
 
