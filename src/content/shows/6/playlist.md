@@ -17,7 +17,7 @@
 3. {{< artist-wikilink "Jack White" >}} - Another Way to Die
 4. {{< artist-wikilink "Billie Eilish" >}} - No Time To Die
 
-- NEWS
+- ADVERTISING BREAK
 
 1. {{< artist-wikilink "Royal Blood" >}} - Supermodel Avalanches
 2. {{< artist-wikilink "White Lies" >}} - I Don't Want To Go To Mars
