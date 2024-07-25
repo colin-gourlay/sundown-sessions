@@ -5,10 +5,10 @@
 
 - ADVERTISING BREAK
 
-1. The Thieves - Star Spangled Banner
-2. The Thieves - The Party
-3. The Thieves - And Then He Died
-4. The Thieves - Sound Of Music
+1. {{< featured-guest-wikilink "The Thieves" >}} - Star Spangled Banner
+2. {{< featured-guest-wikilink "The Thieves" >}} - The Party
+3. {{< featured-guest-wikilink "The Thieves" >}} - And Then He Died
+4. {{< featured-guest-wikilink "The Thieves" >}} - Sound Of Music
 
 - ADVERTISING BREAK
 
