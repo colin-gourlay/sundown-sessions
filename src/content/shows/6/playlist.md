@@ -28,7 +28,7 @@
 
 1. {{< artist-wikilink "The Southern Death Cult" >}} - Apache
 2. {{< artist-wikilink "The Adventures" >}} - Broken Land
-3. {{< artist-wikilink "Del Shannon" >}} - Lost in a Memory
+3. {{< artist-wikilink "Del Shannon" >}} - Lost In A Memory
 
 - ADVERTISING BREAK
 

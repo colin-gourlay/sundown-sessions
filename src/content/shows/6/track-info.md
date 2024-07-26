@@ -18,7 +18,7 @@
 | 16 | {{<title "My Flash On You--Love">}}                                       | Love (1966)                           |   2:07   |                                                                                |
 | 17 | {{<title "Apache--The Southern Death Cult">}}                             | The Southern Death Cult (1983)        |   2:41   |                                                                                |
 | 18 | {{<title "Broken Land--The Adventures">}}                                 | The Sea Of Love (1988)                |   5:04   |                                                                                |
-| 19 | {{<title "Lost in a Memory--Del Shannon">}}                               | Rock On! (2009)                       |   3:36   | Talking of memories... from the album Rock On - this is Del Shannon            |
+| 19 | {{<title "Lost In A Memory--Del Shannon">}}                               | Rock On! (2009)                       |   3:36   |                                                                                |
 | 20 | {{<title "Sparrow (live)--Becky Becky">}}                                 | Art School Dancing (2015)             |   4:07   | Released on [RECORD LABEL] on the 30 March 2015                                |
 | 21 | {{<title "Rock 'N' Roll / Night Clubbing - 2003 Mix--The Human League">}} | Travelogue (1980)                     |   6:23   | Released on [RECORD LABEL] released in 1980                                    |
 | 22 | {{<title "Grinderman--Grinderman">}}                                      | Grinderman (2007)                     |   4:33   | Released on [RECORD LABEL] on the 05 March 2007                                |
