@@ -30,6 +30,6 @@
 2. {{< artist-wikilink "The Adventures" >}} - Broken Land
 3. {{< artist-wikilink "Del Shannon" >}} - Lost In A Memory
 4. {{< artist-wikilink "Becky Becky" >}} - Sparrow
-5. {{< artist-wikilink "The Human League" >}} - Rock 'N' Roll / Night Clubbing
+5. {{< artist-wikilink "The Human League" >}} - Rock 'n' Roll / Night Clubbing
 6. {{< artist-wikilink "Grinderman" >}} - Grinderman
 7. {{< artist-wikilink "Love" >}} - Alone Again Or
