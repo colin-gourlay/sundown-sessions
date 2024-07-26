@@ -20,7 +20,7 @@
 | 18 | {{<title "Broken Land--The Adventures">}}                           | The Sea Of Love (1988)                |   5:04   |                                                                                |
 | 19 | {{<title "Lost In A Memory--Del Shannon">}}                         | Rock On! (2009)                       |   3:36   |                                                                                |
 | 20 | {{<title "Sparrow--Becky Becky">}}                                  | Art School Dancing (2015)             |   4:07   |                                                                                |
-| 21 | {{<title "Rock 'n' Roll / Night Clubbing--The Human League">}}        | Travelogue (1980)                     |   6:23   |                                                                                |
-| 22 | {{<title "Grinderman--Grinderman">}}                                | Grinderman (2007)                     |   4:33   | Released on [RECORD LABEL] on the 05 March 2007                                |
-| 23 | {{<title "Alone Again Or - 2015 Remaster--Love">}}                  | Forever Changes (1967)                |   3:17   | 1967 - what a time to be alive... see chatgpt                                  |
+| 21 | {{<title "Rock 'n' Roll / Night Clubbing--The Human League">}}      | Travelogue (1980)                     |   6:23   |                                                                                |
+| 22 | {{<title "Alone Again Or--Love">}}                                  | Forever Changes (1967)                |   3:17   |                                                                                |
+| 23 | {{<title "Grinderman--Grinderman">}}                                | Grinderman (2007)                     |   4:33   |                                                                                |
 
