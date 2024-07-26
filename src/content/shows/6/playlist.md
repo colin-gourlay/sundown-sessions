@@ -14,7 +14,7 @@
 
 1. {{< artist-wikilink "Plastic Bertrand" >}} - Ca Plane Pour Moi
 2. {{< artist-wikilink "Ennio Morricone" >}} - The Ecstasy Of Gold 
-3. {{< artist-wikilink "Jack White" >}} - Another Way to Die
+3. {{< artist-wikilink "Jack White" >}} - Another Way To Die
 4. {{< artist-wikilink "Billie Eilish" >}} - No Time To Die
 
 - ADVERTISING BREAK
@@ -22,7 +22,7 @@
 1. {{< artist-wikilink "Royal Blood" >}} - Supermodel Avalanches
 2. {{< artist-wikilink "White Lies" >}} - I Don't Want To Go To Mars
 3. {{< artist-wikilink "Cigarettes After Sex" >}} - K.
-4. {{< artist-wikilink "Love" >}} - My Flash on You
+4. {{< artist-wikilink "Love" >}} - My Flash On You
 
 - ADVERTISING BREAK
 
