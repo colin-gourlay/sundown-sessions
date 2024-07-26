@@ -26,10 +26,9 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Magazine" >}} - The Light Pours Out Of Me
-2. {{< artist-wikilink "The Southern Death Cult" >}} - Apache
-3. {{< artist-wikilink "The Adventures" >}} - Broken Land
-4. {{< artist-wikilink "Del Shannon" >}} - Lost in a Memory
+1. {{< artist-wikilink "The Southern Death Cult" >}} - Apache
+2. {{< artist-wikilink "The Adventures" >}} - Broken Land
+3. {{< artist-wikilink "Del Shannon" >}} - Lost in a Memory
 
 - ADVERTISING BREAK
 
