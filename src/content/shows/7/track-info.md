@@ -1,27 +1,27 @@
-| # | Title | Album | Duration | Notes |
-|:--:|:--|--|:--:|--|
-| 1 | {{<title "The Wave--Balaam And The Angel">}} | The Greatest Story Ever Told (2009) | 3:26 | Released on [RECORD LABEL] on the 01 January 2009 |
-| 2 | {{<title "I Can't Make It Alone--Maria McKee">}} | You Gotta Sin To Get Saved (1993) | 3:39 | Released on [RECORD LABEL] on the 01 January 1993 |
-| 3 | {{<title "Revolution (In the Summertime?)--Cosmic Rough Riders">}} | Enjoy the Melodic Sunshine (Deluxe) (2015) | 3:21 | Released on [RECORD LABEL] on the 06 November 2015 |
-| 4 | {{<title "Ain't That Enough--Teenage Fanclub">}} | Four Thousand, Seven Hundred and Seventy seconds; A Shortcut to Teenage Fanclub (2003) | 3:43 | Released on [RECORD LABEL] on the 03 February 2003 |
-| 5 | {{<title "I'm In Love With The Girl On The Manchester Virgin Megastore Checkout Desk--The Freshies">}} | Punk: Lost & Found (1996) | 2:50 | Released on [RECORD LABEL] on the 01 January 1996 |
-| 6 | {{<title "If You Really Love Me..Buy Me A Shirt--The Freshies">}} | The Very Best Of (1986) | 2:43 | Released on [RECORD LABEL] on the 01 January 1986 |
-| 7 | {{<title "Tell Her I'm Ill--The Freshies">}} | The Very Best Of (1986) | 3:52 | Released on [RECORD LABEL] on the 01 January 1986 |
-| 8 | {{<title "No Money--The Freshies">}} | The Very Best Of (1986) | 4:02 | Released on [RECORD LABEL] on the 01 January 1986 |
-| 9 | {{<title "Anarchy in Timperley--Frank Sidebottom">}} | Little Box of Bobbins: Frank's Fantastic Anthology 1985-1993 (2024) | 2:21 | Released on [RECORD LABEL] on the 19 July 2024 |
-| 10 | {{<title "New Rose--The Damned">}} | Damned Damned Damned (2002) | 2:42 | Released on [RECORD LABEL] released in 2002 |
-| 11 | {{<title "Scared To Dance--Skids">}} | Scared To Dance (1979) | 3:17 | Released on [RECORD LABEL] on the 01 January 1979 |
-| 12 | {{<title "Roxette--Dr. Feelgood">}} | The UA Years (1989) | 2:55 | Released on [RECORD LABEL] on the 15 May 1989 |
-| 13 | {{<title "Making Plans For Nigel--XTC">}} | Drums And Wires (1979) | 4:13 | Released on [RECORD LABEL] on the 17 August 1979 |
-| 14 | {{<title "International Bullet Proof Talent--Bauhaus">}} | Go Away White (2008) | 4:02 | Released on [RECORD LABEL] on the 03 March 2008 |
-| 15 | {{<title "Naked And Savage--The Mission">}} | The First Chapter (2007) | 4:44 | Released on [RECORD LABEL] on the 01 January 2007 |
-| 16 | {{<title "Kings And Queens--Killing Joke">}} | Singles Collection 1979 - 2012 (Deluxe) (2013) | 3:42 | Released on [RECORD LABEL] on the 01 January 2013 |
-| 17 | {{<title "Big Neon Glitter--The Cult">}} | Love (1985) | 4:51 | Released on [RECORD LABEL] on the 18 October 1985 |
-| 18 | {{<title "T Shirt Money--A">}} | Nothing (2002) | 3:25 | Released on [RECORD LABEL] on the 01 January 2002 |
-| 19 | {{<title "This Is Nowhere--The Airborne Toxic Event">}} | The Airborne Toxic Event (UK Version) (2009) | 2:49 | Released on [RECORD LABEL] on the 01 January 2009 |
-| 20 | {{<title "Fantastic 6--Alphabeat">}} | Fantastic 6 (2007) | 3:41 | Released on [RECORD LABEL] on the 23 November 2007 |
-| 21 | {{<title "Zero--Yeah Yeah Yeahs">}} | It's Blitz! (2009) | 4:25 | Released on [RECORD LABEL] on the 01 January 2009 |
-| 22 | {{<title "The Light Pours Out Of Me--Magazine">}} | Magazine... (Where The Power Is) (2000) | 4:40 | Released on [RECORD LABEL] on the 01 January 2000 |
-| 23 | {{<title "Sebastiane--Sex Gang Children">}} | Song and Legend (1983) | 3:13 | Released on [RECORD LABEL] on the 01 July 1983 |
-| 24 | {{<title "Astradyne--Ultravox">}} | Vienna (1980) | 7:07 | Released on [RECORD LABEL] on the 11 July 1980 |
-| 25 | {{<title "Orange Skies--Love">}} | Da Capo (Deluxe Edition) (1966) | 2:50 | Released on [RECORD LABEL] on the 01 November 1966 |
+| #  | Title                                                                                                  | Album                                                                                  | Duration | Notes                                              |
+|:--:|:-------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------|:--------:|----------------------------------------------------|
+| 1  | {{<title "The Wave--Balaam And The Angel">}}                                                           | The Greatest Story Ever Told (2009)                                                    |   3:26   | Released on [RECORD LABEL] on the 01 January 2009  |
+| 2  | {{<title "I Can't Make It Alone--Maria McKee">}}                                                       | You Gotta Sin To Get Saved (1993)                                                      |   3:39   | Released on [RECORD LABEL] on the 01 January 1993  |
+| 3  | {{<title "Revolution (In the Summertime?)--Cosmic Rough Riders">}}                                     | Enjoy the Melodic Sunshine (Deluxe) (2015)                                             |   3:21   | Released on [RECORD LABEL] on the 06 November 2015 |
+| 4  | {{<title "Ain't That Enough--Teenage Fanclub">}}                                                       | Four Thousand, Seven Hundred and Seventy seconds; A Shortcut to Teenage Fanclub (2003) |   3:43   | Released on [RECORD LABEL] on the 03 February 2003 |
+| 5  | {{<title "I'm In Love With The Girl On The Manchester Virgin Megastore Checkout Desk--The Freshies">}} | Punk: Lost & Found (1996)                                                              |   2:50   | Released on [RECORD LABEL] on the 01 January 1996  |
+| 6  | {{<title "If You Really Love Me..Buy Me A Shirt--The Freshies">}}                                      | The Very Best Of (1986)                                                                |   2:43   | Released on [RECORD LABEL] on the 01 January 1986  |
+| 7  | {{<title "Tell Her I'm Ill--The Freshies">}}                                                           | The Very Best Of (1986)                                                                |   3:52   | Released on [RECORD LABEL] on the 01 January 1986  |
+| 8  | {{<title "No Money--The Freshies">}}                                                                   | The Very Best Of (1986)                                                                |   4:02   | Released on [RECORD LABEL] on the 01 January 1986  |
+| 9  | {{<title "Anarchy in Timperley--Frank Sidebottom">}}                                                   | Little Box of Bobbins: Frank's Fantastic Anthology 1985-1993 (2024)                    |   2:21   | Released on [RECORD LABEL] on the 19 July 2024     |
+| 10 | {{<title "New Rose--The Damned">}}                                                                     | Damned Damned Damned (2002)                                                            |   2:42   | Released on [RECORD LABEL] released in 2002        |
+| 11 | {{<title "Scared To Dance--Skids">}}                                                                   | Scared To Dance (1979)                                                                 |   3:17   | Released on [RECORD LABEL] on the 01 January 1979  |
+| 12 | {{<title "Roxette--Dr. Feelgood">}}                                                                    | The UA Years (1989)                                                                    |   2:55   | Released on [RECORD LABEL] on the 15 May 1989      |
+| 13 | {{<title "Making Plans For Nigel--XTC">}}                                                              | Drums And Wires (1979)                                                                 |   4:13   | Released on [RECORD LABEL] on the 17 August 1979   |
+| 14 | {{<title "International Bullet Proof Talent--Bauhaus">}}                                               | Go Away White (2008)                                                                   |   4:02   | Released on [RECORD LABEL] on the 03 March 2008    |
+| 15 | {{<title "Naked And Savage--The Mission">}}                                                            | The First Chapter (2007)                                                               |   4:44   | Released on [RECORD LABEL] on the 01 January 2007  |
+| 16 | {{<title "Kings And Queens--Killing Joke">}}                                                           | Singles Collection 1979 - 2012 (Deluxe) (2013)                                         |   3:42   | Released on [RECORD LABEL] on the 01 January 2013  |
+| 17 | {{<title "Big Neon Glitter--The Cult">}}                                                               | Love (1985)                                                                            |   4:51   | Released on [RECORD LABEL] on the 18 October 1985  |
+| 18 | {{<title "T Shirt Money--A">}}                                                                         | Nothing (2002)                                                                         |   3:25   | Released on [RECORD LABEL] on the 01 January 2002  |
+| 19 | {{<title "This Is Nowhere--The Airborne Toxic Event">}}                                                | The Airborne Toxic Event (UK Version) (2009)                                           |   2:49   | Released on [RECORD LABEL] on the 01 January 2009  |
+| 20 | {{<title "Fantastic 6--Alphabeat">}}                                                                   | Fantastic 6 (2007)                                                                     |   3:41   | Released on [RECORD LABEL] on the 23 November 2007 |
+| 21 | {{<title "Zero--Yeah Yeah Yeahs">}}                                                                    | It's Blitz! (2009)                                                                     |   4:25   | Released on [RECORD LABEL] on the 01 January 2009  |
+| 22 | {{<title "The Light Pours Out Of Me--Magazine">}}                                                      | Magazine... (Where The Power Is) (2000)                                                |   4:40   | Released on [RECORD LABEL] on the 01 January 2000  |
+| 23 | {{<title "Sebastiane--Sex Gang Children">}}                                                            | Song and Legend (1983)                                                                 |   3:13   | Released on [RECORD LABEL] on the 01 July 1983     |
+| 24 | {{<title "Astradyne--Ultravox">}}                                                                      | Vienna (1980)                                                                          |   7:07   | Released on [RECORD LABEL] on the 11 July 1980     |
+| 25 | {{<title "Orange Skies--Love">}}                                                                       | Da Capo (Deluxe Edition) (1966)                                                        |   2:50   | Released on [RECORD LABEL] on the 01 November 1966 |
