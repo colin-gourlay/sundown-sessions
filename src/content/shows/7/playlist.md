@@ -1,39 +1,37 @@
-1. {{< artist-wikilink "Fields Of The Nephilim" >}} - Moonchild
-2. {{< artist-wikilink "Balaam & The Angel" >}} - The Wave
-3. {{< artist-wikilink "Killing Joke" >}} - Kings And Queens
-4. {{< artist-wikilink "FEWS" >}} - ID
-5. {{< artist-wikilink "Pete Murphy" >}} - Boys
+1. {{< artist-wikilink "Balaam And The Angel" >}} - The Wave
+2. {{< artist-wikilink "Maria McKee" >}} - I Can't Make It Alone
+3. {{< artist-wikilink "Cosmic Rough Riders" >}} - Revolution (In the Summertime?)
+4. {{< artist-wikilink "Teenage Fanclub" >}} - Ain't That Enough
+5. {{< artist-wikilink "The Freshies" >}} - I'm In Love With The Girl On The Manchester Virgin Megastore Checkout Desk
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
-2. Interview with ?? from Clued Up Project
+1. {{< artist-wikilink "The Freshies" >}} - If You Really Love Me..Buy Me A Shirt
+2. {{< artist-wikilink "The Freshies" >}} - Tell Her I'm Ill
+3. {{< artist-wikilink "The Freshies" >}} - No Money
+4. {{< artist-wikilink "Frank Sidebottom" >}} - Anarchy in Timperley
+5. {{< artist-wikilink "The Damned" >}} - New Rose
+6. {{< artist-wikilink "Skids" >}} - Scared To Dance
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Ultravox" >}} - Astradyne
-2. {{< artist-wikilink "Yeah Yeah Yeahs" >}} - Zero
-3. {{< artist-wikilink "Airborne Toxic Event" >}} - Happiness Is Overrated
-4. {{< artist-wikilink "White Lies" >}} - Death
+1. {{< artist-wikilink "Dr. Feelgood" >}} - Roxette
+2. {{< artist-wikilink "XTC" >}} - Making Plans For Nigel
+3. {{< artist-wikilink "Bauhaus" >}} - International Bullet Proof Talent
+4. {{< artist-wikilink "The Mission" >}} - Naked And Savage
+5. {{< artist-wikilink "Killing Joke" >}} - Kings And Queens
 
 - NEWS
 
-1. {{< artist-wikilink "XTC" >}} - Making Plans For Nigel
-2. {{< artist-wikilink "Skeletal Family" >}} - Promised Land
-3. {{< artist-wikilink "The Mission" >}} - Within The Deepest Darkness (Fearful)
-4. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Where The Wild Roses Grow
+1. {{< artist-wikilink "The Cult" >}} - Big Neon Glitter
+2. {{< artist-wikilink "A" >}} - T Shirt Money
+3. {{< artist-wikilink "The Airborne Toxic Event" >}} - This Is Nowhere
+4. {{< artist-wikilink "Alphabeat" >}} - Fantastic 6
+5. {{< artist-wikilink "Yeah Yeah Yeahs" >}} - Zero
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "The Chameleons" >}} - Swamp Thing
-2. {{< artist-wikilink "The Southern Death Cult" >}} - Apache
-3. {{< artist-wikilink "The Cult" >}} - Big Neon Glitter
-4. {{< artist-wikilink "Gaye Bykers On Acid" >}} - Everythangs Groovy
-
-- ADVERTISING BREAK
-
-1. {{< artist-wikilink "Virgin Prunes" >}} - Caucasian Walk
+1. {{< artist-wikilink "Magazine" >}} - The Light Pours Out Of Me
 2. {{< artist-wikilink "Sex Gang Children" >}} - Sebastiane
-3. {{< artist-wikilink "Mephisto Walz" >}} - I Wanna Be Your Dog
-4. {{< artist-wikilink "Xmal Deutshcland" >}} - Incubus Succubus
-5. {{< artist-wikilink "The Filthy Tongues" >}} - Nae Tongues
+3. {{< artist-wikilink "Ultravox" >}} - Astradyne
+4. {{< artist-wikilink "Love" >}} - Orange Skies

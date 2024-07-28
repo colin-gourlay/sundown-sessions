@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-Ultravox (earlier stylized as Ultravox!) were a British new wave band, formed in London in 1973 as Tiger Lily (2). Between 1980–86, they scored seven Top Ten albums and seventeen Top 40 singles in the UK, the most successful of which was their 1981 hit "Vienna." 
+Ultravox (earlier stylized as Ultravox!) were a British new wave band, formed in London in 1973 as Tiger Lily. Between 1980–86, they scored seven Top Ten albums and seventeen Top 40 singles in the UK, the most successful of which was their 1981 hit "Vienna." 
 
 The first three LP releases feature the vocals of John Foxx (real name Dennis Leigh), while the rest of the line up of Billy Currie, Warren Cann and Chris Cross were joined by Stevie Shears on guitar for the first two and Robin Simon replacing Shears for the third album, "Systems of Romance," by which the group had dropped the exclamation mark from the band name.
 

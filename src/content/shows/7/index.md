@@ -1,25 +1,45 @@
 ---
-title: 'Show #7: Broadcast 17th July 2024'
-slug: 'featuring-XX-clued-up-project'
-description: 'featuring ?? from Clued Up Project'
+title: 'Show #7: Broadcast 31st July 2024'
+slug: 'featuring-frank-sidebottom-and-the-man-behind-the-mask'
+description: 'featuring Frank Sidebottom and The Man Behind The Mask'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Skeletal Family
-                    
-          - Gaye Bykers On Acid
-          
-          - Virgin Prunes
-          
-          - Sex Gang Children
-          
-          - and much, much more...
+
+- Frank Sidebottom and The Man Behind The Mask
+
+- A
+
+- Alphabeat
+
+- Dr. Feelgood
+
+- Killing Joke
+
+- and much, much more...
 '
 keywords:
-  - '?? from Clued Up Project'
-  - 'Skeletal Family'
-  - 'Gaye Bykers On Acid'
-  - 'Virgin Prunes'
-  - 'Sex Gang Children'
+ - 'Frank Sidebottom and The Man Behind The Mask'
+ - 'Balaam And The Angel'
+ - 'Maria McKee'
+ - 'Cosmic Rough Riders'
+ - 'Teenage Fanclub'
+ - 'The Freshies'
+ - 'Frank Sidebottom'
+ - 'The Damned'
+ - 'Skids'
+ - 'Dr. Feelgood'
+ - 'XTC'
+ - 'Bauhaus'
+ - 'The Mission'
+ - 'Killing Joke'
+ - 'The Cult'
+ - 'A'
+ - 'The Airborne Toxic Event'
+ - 'Alphabeat'
+ - 'Yeah Yeah Yeahs'
+ - 'Magazine'
+ - 'Sex Gang Children'
+ - 'Ultravox'
+ - 'Love'
 toc: true
 featured_image: '7-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -33,7 +53,7 @@ draft: false
 
 ---
 
-## Featured guest:
+## Featured guest: Frank Sidebottom and The Man Behind The Mask
 {{< include_content "/shows/7/featured-guest" >}}
 
 ---
