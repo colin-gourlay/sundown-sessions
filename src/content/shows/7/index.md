@@ -6,13 +6,13 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - Frank Sidebottom and The Man Behind The Mask
 
-- A
-
-- Alphabeat
+- The Damned
 
 - Dr. Feelgood
 
-- Killing Joke
+- The Mission
+
+- Sex Gang Children
 
 - and much, much more...
 '
