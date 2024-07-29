@@ -26,10 +26,9 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Simple Minds" >}} - Changeling
-
+2. {{< artist-wikilink "Heaven 17" >}} - Let's All Make A Bomb
 
 1. {{< artist-wikilink "Rose Villain" >}} - IO, ME ED ALTRI GUAI
-2. {{< artist-wikilink "Heaven 17" >}} - Let's All Make A Bomb 
 3. {{< artist-wikilink "The Human League" >}} - Empire State Human 
 4. {{< artist-wikilink "Duran Duran" >}} - Planet Earth
 
