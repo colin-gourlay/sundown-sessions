@@ -27,9 +27,7 @@
 
 1. {{< artist-wikilink "Simple Minds" >}} - Changeling
 2. {{< artist-wikilink "Heaven 17" >}} - Let's All Make A Bomb
-
-1. {{< artist-wikilink "Rose Villain" >}} - IO, ME ED ALTRI GUAI
-3. {{< artist-wikilink "The Human League" >}} - Empire State Human 
+3. {{< artist-wikilink "The Human League" >}} - Empire State Human
 4. {{< artist-wikilink "Duran Duran" >}} - Planet Earth
 
 - ADVERTISING BREAK
@@ -40,3 +38,4 @@
 4. {{< artist-wikilink "Visage" >}} - Visage
 5. {{< artist-wikilink "The Vapors" >}} - News At Ten
 
+1. {{< artist-wikilink "Rose Villain" >}} - IO, ME ED ALTRI GUAI
