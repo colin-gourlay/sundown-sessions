@@ -29,13 +29,6 @@
 2. {{< artist-wikilink "Heaven 17" >}} - Let's All Make A Bomb
 3. {{< artist-wikilink "The Human League" >}} - Empire State Human
 4. {{< artist-wikilink "Duran Duran" >}} - Planet Earth
-
-- ADVERTISING BREAK
-
-
-2. {{< artist-wikilink "Japan" >}} - Life in Tokyo
-3. {{< artist-wikilink "Talk Talk" >}} - Talk Talk 
-4. {{< artist-wikilink "Visage" >}} - Visage
-5. {{< artist-wikilink "The Vapors" >}} - News At Ten
-
-1. {{< artist-wikilink "Rose Villain" >}} - IO, ME ED ALTRI GUAI
+5. {{< artist-wikilink "Talk Talk" >}} - Talk Talk
+6. {{< artist-wikilink "The Vapors" >}} - News At Ten
+7. {{< artist-wikilink "Rose Villain" >}} - IO, ME ED ALTRI GUAI
