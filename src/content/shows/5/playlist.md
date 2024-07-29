@@ -16,7 +16,7 @@
 2. {{< artist-wikilink "Aimee Mann" >}} - Sugarcoated
 3. {{< artist-wikilink "Kirsten Adamson" >}} - Take Me As I Am
 
-- NEWS
+- ADVERTISING BREAK
 
 1. {{< artist-wikilink "Muse" >}} - Hysteria
 2. {{< artist-wikilink "Electric Six" >}} - Synthesizer
