@@ -20,11 +20,13 @@
 
 1. {{< artist-wikilink "Muse" >}} - Hysteria
 2. {{< artist-wikilink "Electric Six" >}} - Synthesizer
-3. {{< artist-wikilink "Imperial Drag" >}} - Boy Or A Girl
-4. {{< artist-wikilink "Marc Bolan" >}} - Children Of The Revolution
-5. {{< artist-wikilink "Adam & The Ants" >}} - Ligotage
+3. {{< artist-wikilink "Marc Bolan" >}} - Children Of The Revolution
+4. {{< artist-wikilink "Adam & The Ants" >}} - Ligotage
 
 - ADVERTISING BREAK
+
+1. {{< artist-wikilink "Simple Minds" >}} - Changeling
+
 
 1. {{< artist-wikilink "Rose Villain" >}} - IO, ME ED ALTRI GUAI
 2. {{< artist-wikilink "Heaven 17" >}} - Let's All Make A Bomb 
@@ -33,7 +35,7 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Simple Minds" >}} - Changeling 
+
 2. {{< artist-wikilink "Japan" >}} - Life in Tokyo
 3. {{< artist-wikilink "Talk Talk" >}} - Talk Talk 
 4. {{< artist-wikilink "Visage" >}} - Visage
