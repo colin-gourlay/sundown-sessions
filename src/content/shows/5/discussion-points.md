@@ -1,8 +1,11 @@
 #
+- _Siobhan Wilson_
+  - {{< new-tab-link "[Make You Mine](https://www.youtube.com/watch?v=AyC-VbcO0Z0)" >}}
+
+
 - _Kenny Armour #ANDYSMANCLUB run_
     - {{< new-tab-link "[Delamere Family Running Challenge](https://www.atwevents.co.uk/e/andysmanclub-family-running-challenge-delamere-2024-10087)" >}} - 14th July 2024
-- _Siobhan Wilson_
-    - {{< new-tab-link "[Make You Mine](https://www.youtube.com/watch?v=AyC-VbcO0Z0)" >}}
+
 - _Kirsten Adamson_
   - New single
 - _Electric Six tour dates_
