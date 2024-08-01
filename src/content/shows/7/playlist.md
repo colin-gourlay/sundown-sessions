@@ -30,12 +30,10 @@
 1. {{< artist-wikilink "A" >}} - T Shirt Money
 2. {{< artist-wikilink "The Airborne Toxic Event" >}} - This Is Nowhere
 3. {{< artist-wikilink "Alphabeat" >}} - Fantastic 6
-4. {{< artist-wikilink "Yeah Yeah Yeahs" >}} - Zero
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Magazine" >}} - The Light Pours Out Of Me
-2. {{< artist-wikilink "Sex Gang Children" >}} - Sebastiane
+1. {{< artist-wikilink "Sex Gang Children" >}} - Sebastiane
 3. {{< artist-wikilink "Ultravox" >}} - Astradyne
 4. {{< artist-wikilink "Love" >}} - Orange Skies
 
