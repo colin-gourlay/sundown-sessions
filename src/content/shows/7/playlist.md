@@ -18,7 +18,7 @@
 3. {{< artist-wikilink "Dr Feelgood" >}} - Roxette
 4. {{< artist-wikilink "XTC" >}} - Making Plans For Nigel
 
-- NEWS
+- ADVERTISING BREAK
 
 1. {{< artist-wikilink "Bauhaus" >}} - International Bullet Proof Talent
 2. {{< artist-wikilink "The Mission" >}} - Naked And Savage
