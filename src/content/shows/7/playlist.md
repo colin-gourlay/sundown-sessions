@@ -34,6 +34,5 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Sex Gang Children" >}} - Sebastiane
+2. {{< artist-wikilink "Love" >}} - Orange Skies
 3. {{< artist-wikilink "Ultravox" >}} - Astradyne
-4. {{< artist-wikilink "Love" >}} - Orange Skies
-
