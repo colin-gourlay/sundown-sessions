@@ -38,3 +38,4 @@
 2. {{< artist-wikilink "Sex Gang Children" >}} - Sebastiane
 3. {{< artist-wikilink "Ultravox" >}} - Astradyne
 4. {{< artist-wikilink "Love" >}} - Orange Skies
+
