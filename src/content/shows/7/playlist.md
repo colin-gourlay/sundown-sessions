@@ -15,7 +15,7 @@
 
 1. {{< artist-wikilink "The Damned" >}} - New Rose
 2. {{< artist-wikilink "Skids" >}} - Scared To Dance
-3. {{< artist-wikilink "Dr. Feelgood" >}} - Roxette
+3. {{< artist-wikilink "Dr Feelgood" >}} - Roxette
 4. {{< artist-wikilink "XTC" >}} - Making Plans For Nigel
 
 - NEWS
