@@ -13,5 +13,4 @@
 the apple ad
 being frank film
 the biz z80 rom
-john murray radio show
 andi sex gang
