@@ -1,30 +1,50 @@
 ---
-title: 'Show #8: Broadcast 24th July 2024'
-slug: 'featuring-XX-kingdom-of-fife-railway-preservation-society'
-description: 'featuring ?? from The Kingdom of Fife Railway Preservation Society'
+title: 'Show #8: Broadcast 7th August 2024'
+slug: 'featuring-baby-bartok'
+description: 'featuring Baby Bartok'
 summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
- 
-          - Dragons
-                    
-          - Fingerprintz
-          
-          - B.E.F.
-          
-          - The Beatles
-          
-          - and much, much more...
+
+- Baby Bartok
+
+- Wire
+
+- George Thorogood & The Destroyers
+
+- Nick Cave & The Bad Seeds
+
+- Nadine Shah
+
+- and much, much more...
 '
 keywords:
-  - '?? from The Kingdom of Fife Railway Preservation Society'
-  - 'Dragons'
-  - 'Fingerprintz'
-  - 'B.E.F.'
-  - 'The Beatles'
+ - 'Baby Bartok'
+ - 'Gary Numan'
+ - 'Nick Lowe'
+ - 'John Lennon'
+ - 'R.E.M.'
+ - 'Wire'
+ - 'Dragons'
+ - 'IST IST'
+ - 'Delays'
+ - 'Air Traffic'
+ - 'Nadine Shah'
+ - 'The Associates'
+ - 'Simple Minds'
+ - 'Goldfrapp'
+ - 'Willie Nelson'
+ - 'George Thorogood & The Destroyers'
+ - 'Nazareth'
+ - 'Juicy Lucy'
+ - 'Jackie Lomax'
+ - 'Ringo Starr'
+ - 'Billy Preston'
+ - 'Isobel Campbell'
+ - 'Nick Cave & The Bad Seeds'
 toc: true
 featured_image: '8-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: 2024-11-27T22:00:00Z
+date: T22:00:00Z
 draft: false
 ---
 
@@ -33,7 +53,7 @@ draft: false
 
 ---
 
-## Featured guest:
+## Featured guest: Baby Bartok
 {{< include_content "/shows/8/featured-guest" >}}
 
 ---
