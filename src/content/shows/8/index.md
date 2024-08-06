@@ -6,13 +6,13 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - Baby Bartok
 
-- Isobel Campbell
-
-- IST IST
-
 - Dragons
 
-- Air Traffic
+- Delays
+
+- Nadine Shah
+
+- The Associates
 
 - and much, much more...
 '
