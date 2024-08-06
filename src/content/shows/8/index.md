@@ -6,13 +6,13 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - Baby Bartok
 
-- Wire
+- Isobel Campbell
 
-- George Thorogood & The Destroyers
+- IST IST
 
-- Nick Cave & The Bad Seeds
+- Dragons
 
-- Nadine Shah
+- Air Traffic
 
 - and much, much more...
 '
@@ -32,6 +32,7 @@ keywords:
  - 'Simple Minds'
  - 'Goldfrapp'
  - 'Willie Nelson'
+ - 'Mean Gene Kelton'
  - 'George Thorogood & The Destroyers'
  - 'Nazareth'
  - 'Juicy Lucy'
