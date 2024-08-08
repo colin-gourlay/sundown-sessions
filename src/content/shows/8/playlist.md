@@ -8,8 +8,7 @@
 
 1. {{< featured-guest-wikilink "Baby Bartok" >}} - How Does It Feel
 2. {{< featured-guest-wikilink "Baby Bartok" >}} - Smile
-3. {{< featured-guest-wikilink "Baby Bartok" >}} - This High Rise
-4. {{< featured-guest-wikilink "Baby Bartok" >}} - You're Stupid
+3. {{< featured-guest-wikilink "Baby Bartok" >}} - You're Stupid
 
 - ADVERTISING BREAK
 
