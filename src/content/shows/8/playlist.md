@@ -30,7 +30,6 @@
 2. {{< artist-wikilink "Mean Gene Kelton" >}} - My Baby Don't Wear No Panties
 3. {{< artist-wikilink "George Thorogood & The Destroyers" >}} - Love Doctor
 4. {{< artist-wikilink "Nazareth" >}} - Bad, Bad Boy
-5. {{< artist-wikilink "Juicy Lucy" >}} - Who Do You Love?
 
 - ADVERTISING BREAK
 
