@@ -35,6 +35,6 @@
 
 1. {{< artist-wikilink "Jackie Lomax" >}} - Sour Milk Sea
 2. {{< artist-wikilink "Ringo Starr" >}} - It Don't Come Easy
-3. {{< artist-wikilink "Billy Preston" >}} - That's The Way God Planned It
-4. {{< artist-wikilink "Isobel Campbell" >}} - The False Husband
-5. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Into My Arms
+3. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Into My Arms
+
+
