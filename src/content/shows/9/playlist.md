@@ -1,7 +1,7 @@
 1. {{< artist-wikilink "The Revillos" >}} - Motorbike Beat
 2. {{< artist-wikilink "Inspiral Carpets" >}} - Bitches Brew
 3. {{< artist-wikilink "The Alarm" >}} - Sixty Eight Guns
-4. {{< artist-wikilink "Red Lorry Yellow Lorry" >}} - Talk About the Weather
+4. {{< artist-wikilink "Red Lorry Yellow Lorry" >}} - Talk About The Weather
 
 - ADVERTISING BREAK
 
