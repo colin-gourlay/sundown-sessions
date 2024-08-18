@@ -15,10 +15,11 @@
 - NEWS
 
 1. {{< artist-wikilink "The Beatles" >}} - Glass Onion 
+2. {{< artist-wikilink "I Got You On Tape" >}} - Spinning For The Cause
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "I Got You On Tape" >}} - Spinning for the Cause
+1. 
 2. {{< artist-wikilink "CousteauX" >}} - Last Good Day Of The Year
 3. {{< artist-wikilink "The Countess of Fife" >}} - Trapped
 4. {{< artist-wikilink "Black" >}} - Blue
