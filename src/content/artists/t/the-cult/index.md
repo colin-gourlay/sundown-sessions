@@ -12,5 +12,5 @@ Billy Duffy - Lead Guitarist / Music / Song Writer
 
 ### Current Lineup
 
-Ian Astbury, Billy Duffy, Charlie Jones, John Tempesta, Damon Fox, Mike Mangan, Grant Fitzpatrick
+Ian Astbury, Billy Duffy, Charlie Jones, John Tempesta
 
