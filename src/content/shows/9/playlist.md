@@ -23,10 +23,11 @@
 
 1. {{< artist-wikilink "Black" >}} - Blue
 2. {{< artist-wikilink "Electric Light Orchestra" >}} - Don't Bring Me Down
+3. {{< artist-wikilink "Ultravox" >}} - All Stood Still
 
 
 
-1. {{< artist-wikilink "Ultravox" >}} - All Stood Still
+1. 
 2. {{< artist-wikilink "Theatre Of Hate" >}} - Do You Believe In The Westworld? 
 3. {{< artist-wikilink "Death Cult" >}} - A Flower in the Desert
 4. {{< artist-wikilink "Sisters of Mercy" >}} - Alice
