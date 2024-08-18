@@ -25,10 +25,9 @@
 2. {{< artist-wikilink "Electric Light Orchestra" >}} - Don't Bring Me Down
 3. {{< artist-wikilink "Ultravox" >}} - All Stood Still
 
+- ADVERTISING BREAK
 
-
-1. 
-2. {{< artist-wikilink "Theatre Of Hate" >}} - Do You Believe In The Westworld? 
-3. {{< artist-wikilink "Death Cult" >}} - A Flower in the Desert
-4. {{< artist-wikilink "Sisters of Mercy" >}} - Alice
-5. {{< artist-wikilink "The Mission" >}} - Deliverance
+1. {{< artist-wikilink "Theatre Of Hate" >}} - Do You Believe In The Westworld? 
+2. {{< artist-wikilink "Death Cult" >}} - A Flower In The Desert
+3. {{< artist-wikilink "Sisters Of Mercy" >}} - Alice
+4. {{< artist-wikilink "The Mission" >}} - Deliverance
