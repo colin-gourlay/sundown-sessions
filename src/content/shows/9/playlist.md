@@ -17,14 +17,12 @@
 1. {{< artist-wikilink "The Beatles" >}} - Glass Onion 
 2. {{< artist-wikilink "I Got You On Tape" >}} - Spinning For The Cause
 3. {{< artist-wikilink "CousteauX" >}} - Last Good Day Of The Year
+4. {{< artist-wikilink "The Countess Of Fife" >}} - Trapped
 
 - ADVERTISING BREAK
 
-1. 
-2. 
-3. {{< artist-wikilink "The Countess of Fife" >}} - Trapped
-4. {{< artist-wikilink "Black" >}} - Blue
-5. {{< artist-wikilink "Electric Light Orchestra" >}} - Don't Bring Me Down
+1. {{< artist-wikilink "Black" >}} - Blue
+2. {{< artist-wikilink "Electric Light Orchestra" >}} - Don't Bring Me Down
 
 
 
