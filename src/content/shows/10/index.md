@@ -6,13 +6,13 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - The Twist
 
-- Elvis Costello
+- Juicy Lucy
 
-- Dean Martin
-
-- Sananda Maitreya
+- Talk Talk
 
 - The Slow Readers Club
+
+- A Projection
 
 - and much, much more...
 '
