@@ -11,9 +11,10 @@
 
 1. {{< artist-wikilink "Simple Minds" >}} - Life In A Day
 2. {{< artist-wikilink "Orchestral Manoeuvres In The Dark" >}} - Messages
-3. {{< artist-wikilink "Gary Numan" >}} - We Are Glass
-4. {{< artist-wikilink "Visage" >}} - Mind Of A Toy
-5. {{< artist-wikilink "The Beatles" >}} - Glass Onion 
+
+- NEWS
+
+1. {{< artist-wikilink "The Beatles" >}} - Glass Onion 
 
 - ADVERTISING BREAK
 
@@ -23,7 +24,7 @@
 4. {{< artist-wikilink "Black" >}} - Blue
 5. {{< artist-wikilink "Electric Light Orchestra" >}} - Don't Bring Me Down
 
-- NEWS
+
 
 1. {{< artist-wikilink "Ultravox" >}} - All Stood Still
 2. {{< artist-wikilink "Theatre Of Hate" >}} - Do You Believe In The Westworld? 
