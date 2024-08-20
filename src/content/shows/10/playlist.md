@@ -7,6 +7,9 @@
 
 - ADVERTISING BREAK
 
+1. {{< featured-guest-wikilink "The Twist" >}} - Suck
+2. {{< featured-guest-wikilink "The Twist" >}} - Joy
+
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "The Cult" >}} - Dirty Little Rockstar
@@ -24,7 +27,7 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Talk Talk" >}} - Life's What You Make It
-2. {{< artist-wikilink "Neil Young" >}} - Let's Impeach The President
+2. {{< artist-wikilink "Neil Young" >}} - Heart Of Gold
 3. {{< artist-wikilink "Kubb" >}} - Wicked Soul
 4. {{< artist-wikilink "Sananda Maitreya" >}} - Who's Loving You
 
