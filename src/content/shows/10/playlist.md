@@ -35,5 +35,4 @@
 
 1. {{< artist-wikilink "The Slow Readers Club" >}} - All I Hear
 2. {{< artist-wikilink "A Projection" >}} - Careless
-3. {{< artist-wikilink "IST IST" >}} - Nothing More Nothing Less
-4. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Red Right Hand
+3. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Red Right Hand
