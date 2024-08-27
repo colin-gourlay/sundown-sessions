@@ -11,5 +11,5 @@ Kim Deal left the band in 2013,  and was briefly replaced for live performances 
 
 ### Current Lineup
 
-Dave Lovering, Joey Santiago, Charles Michael Kittridge Thompson
+Dave Lovering, Joey Santiago, Charles Michael Kittridge Thompson, Emma Richardson
 

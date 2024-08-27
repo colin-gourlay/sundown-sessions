@@ -1,0 +1,66 @@
+---
+title: 'Show #11: Broadcast 28th August 2024'
+slug: 'featuring-a-celebration-of-elektra-records'
+description: 'featuring A celebration of Elektra Records'
+summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+
+- A celebration of Elektra Records
+
+- King Crimson
+
+- Clear Light
+
+- Fairport Convention
+
+- Santana
+
+- and much, much more...
+'
+keywords:
+ - 'A celebration of Elektra Records'
+ - 'Death In Vegas'
+ - 'Squeeze'
+ - 'Chris Isaak'
+ - 'Fiona Apple'
+ - 'The Cars'
+ - 'Love'
+ - 'Clear Light'
+ - 'The Doors'
+ - 'The Stooges'
+ - 'Pixies'
+ - '10,000 Maniacs'
+ - 'Fairport Convention'
+ - 'The Cult'
+ - 'Sisters of Mercy'
+ - 'King Crimson'
+ - 'Prince'
+ - 'Kristin Hersh'
+ - 'Santana'
+ - 'Talking Heads'
+ - 'Electric Light Orchestra'
+ - 'Nick Cave & The Bad Seeds'
+toc: true
+featured_image: '11-show-logo.jpeg'
+read_more_copy: Show notes...
+show_reading_time: true
+date: T22:00:00Z
+draft: false
+---
+
+## Playlist
+{{< include_content "/shows/11/playlist" >}}
+
+---
+
+## Featured guest: A celebration of Elektra Records
+{{< include_content "/shows/11/featured-guest" >}}
+
+---
+
+## Show discussion points
+{{< include_content "/shows/11/discussion-points" >}}
+
+---
+
+## Track info
+{{< include_content "/shows/11/track-info" >}}
