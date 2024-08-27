@@ -1,5 +1,5 @@
 #
-{{< figure src="11-guest-logo.jpg" title="Elektra Records" alt="Elektra Records" width="75%" >}}
+{{< figure src="11-guest-logo.jpeg" title="Elektra Records" alt="Elektra Records" width="75%" >}}
 
 ### Contact details
 
