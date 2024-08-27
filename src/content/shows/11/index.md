@@ -8,11 +8,11 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - King Crimson
 
-- Clear Light
+- The Cult
 
 - Fairport Convention
 
-- Santana
+- Sisters Of Mercy
 
 - and much, much more...
 '
@@ -43,7 +43,7 @@ toc: true
 featured_image: '11-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
-date: T22:00:00Z
+date: 2024-08-28T22:00:00Z
 draft: false
 ---
 
