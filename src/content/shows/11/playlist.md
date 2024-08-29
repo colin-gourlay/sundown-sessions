@@ -13,9 +13,8 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Pixies" >}} - Where Is My Mind?
-2. {{< artist-wikilink "10,000 Maniacs" >}} - Hey Jack Kerouac
-3. {{< artist-wikilink "Fairport Convention" >}} - John Lee 
+1. {{< artist-wikilink "10,000 Maniacs" >}} - Hey Jack Kerouac
+2. {{< artist-wikilink "Fairport Convention" >}} - John Lee 
 
 - NEWS
 
