@@ -30,6 +30,5 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Talking Heads" >}} - Burning Down the House
-2. {{< artist-wikilink "Electric Light Orchestra" >}} - Mr. Blue Sky
-3. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Wild God
+1. {{< artist-wikilink "Electric Light Orchestra" >}} - Mr. Blue Sky
+2. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Wild God
