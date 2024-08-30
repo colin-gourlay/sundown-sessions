@@ -13,9 +13,8 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Pixies" >}} - Where Is My Mind?
-2. {{< artist-wikilink "10,000 Maniacs" >}} - Hey Jack Kerouac
-3. {{< artist-wikilink "Fairport Convention" >}} - John Lee 
+1. {{< artist-wikilink "10,000 Maniacs" >}} - Hey Jack Kerouac
+2. {{< artist-wikilink "Fairport Convention" >}} - John Lee 
 
 - NEWS
 
@@ -31,6 +30,5 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "Talking Heads" >}} - Burning Down the House
-2. {{< artist-wikilink "Electric Light Orchestra" >}} - Mr. Blue Sky
-3. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Wild God
+1. {{< artist-wikilink "Electric Light Orchestra" >}} - Mr. Blue Sky
+2. {{< artist-wikilink "Nick Cave & The Bad Seeds" >}} - Wild God
