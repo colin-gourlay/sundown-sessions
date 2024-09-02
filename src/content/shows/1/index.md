@@ -22,7 +22,7 @@ keywords:
  - 'Franz Ferdinand'
  - 'Sparks'
  - 'Squeeze'
- - 'David Latto & The Lang Spoons'
+ - 'David Latto'
  - 'Roachford'
  - 'IST IST'
  - 'Interpol'
