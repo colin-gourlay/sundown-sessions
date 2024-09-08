@@ -1,8 +1,6 @@
 #
 - _Royal Blood_ 
   - {{< new-tab-link "[Touring](https://twitter.com/royalblooduk/status/1777244995059118447/photo/2)" >}} to mark the 10th anniversary of **_Royal Blood_**
-- _Manic Street Preachers_
-  - **_Lifeblood_** {{< new-tab-link "[20th Anniversary Edition](https://manicstreetpreachers.lnk.to/Lifeblood20)" >}} includes remixes by Steven Wilson
 - _White Lies_
   - Gigs lined up in {{< new-tab-link "[July](https://www.seetickets.com/tour/white-lies)" >}}
 - _The Doors_
