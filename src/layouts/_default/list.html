@@ -5,17 +5,15 @@
   <!-- render content from: content/shows/_index.md  -->
   {{- .Content -}}
   </section>
-
-
-
-    <section class="flex-ns flex-wrap justify-around mt5">
-      {{ range .Paginator.Pages }}
-        <div class="relative w-100 w-30-l mb4 bg-white">
-          
-        {{ .Render "summary" }}
-        </div>
-      {{ end }}
-    </section>
+  <section class="flex-ns flex-wrap justify-around mt5">
+    <!-- render the summary of each show -->
+    {{ range .Paginator.Pages }}
+      <div class="relative w-100 w-30-l mb4 bg-white">
+          {{ .Render "tile" }}
+      </div>
+    {{ end }}
+  </section>
+    <!-- render pagination controls -->
     {{- template "_internal/pagination.html" . -}}
   </article>
 {{ end }}
