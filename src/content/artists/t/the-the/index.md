@@ -6,7 +6,7 @@ artist_page: true
 ## About
 
 The The is an English musical and multimedia group with singer/songwriter Matt Johnson being the only constant band member. The group has no permanent group line-up, and Johnson has collaborated with a wide range of musicians, changing personnel from project to project.
-The The began recording in 1979/1980 and released their first single “Controversial Subject” in 1980. The first album release came in 1983, the critically acclaimed “Soul Mining", which featured guest appearances from Orange Juice (3) drummer Zeke Manyika, Jools Holland, Thomas Leer and J.G. Thirlwell.
+The The began recording in 1979/1980 and released their first single “Controversial Subject” in 1980. The first album release came in 1983, the critically acclaimed “Soul Mining", which featured guest appearances from Orange Juice drummer Zeke Manyika, Jools Holland, Thomas Leer and J.G. Thirlwell.
 Johnson followed with a new album entitled “Infected” in 1986, recording again with Zeke Manyika, plus singer Neneh Cherry, and a number of session musicians. Four singles were released from the album, with "Heartland" being the most successful, reaching 29 in the UK Chart. The album was accompanied by a full length video “Infected: The Movie” which was shot on location in Bolivia, Peru and New York. Johnson toured the world extensively with the movie. 
 In 1988, Johnson re-formed The The as a four piece band, having recruited ex-The Smiths guitarist Johnny Marr, bassist James Eller and former ABC drummer David Palmer as full time band members. This line-up recorded the album “Mind Bomb”, which debuted at No. 4 in the UK Albums Chart and featured the band's highest charting single to that time, "The Beat(en) Generation" hitting 18 in the UK chart.
 In 1989 keyboard player D.C. Collard was added to the line-up and the band embarked on a lengthy world tour in 1989–90 called “The The Versus The World”, culminating in three sold out gigs at London's Royal Albert Hall at the end of the tour. 
@@ -20,5 +20,5 @@ In April 2014 The The announced that on June 30th 2014 a re-mastered, re-package
 
 ### Current Lineup
 
-Matt Johnson
+Matt Johnson, James Eller, Barrie Cadogan, David Collard
 
