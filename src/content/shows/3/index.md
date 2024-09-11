@@ -2,7 +2,7 @@
 title: 'Show #3: Broadcast 19th June 2024'
 slug: 'featuring-blue-on-shock'
 description: 'featuring Blue On Shock'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Blue On Shock
 
