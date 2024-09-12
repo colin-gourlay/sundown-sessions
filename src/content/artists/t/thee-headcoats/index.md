@@ -9,5 +9,5 @@ Thee Headcoats is one of the various band monikers assumed by garage rock primit
 
 ### Current Lineup
 
-Billy Childish, Bruce Brand, John Rowlands
+Billy Childish, Bruce Brand, John Gawen, John Rowlands
 
