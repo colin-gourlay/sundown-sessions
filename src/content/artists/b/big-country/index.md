@@ -15,9 +15,10 @@ Mark Brzezicki: Drums
 Mike Peters: Vocals, Guitar (2010 - 2013)
 Jamie Watson (Son of Bruce): Guitar (since 2010)
 Derek Forbes: Bass (2012 - 2015)
-Simon Hough: Vocals, Acoustic Guitar (since 2014)
+Simon Hough: Vocals, Acoustic Guitar (2014 - 2024)
 Scott Whitley: Bass (2015 - 2021)
 Gil Allan: Bass (since 2021)
+Tommie Paxton: Vocals, Guitar (since 2024)
 Years active:	1981–2000, 2007, 2010–present
 
 ### Current Lineup
