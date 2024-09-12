@@ -36,7 +36,6 @@ keywords:
  - 'Kirsten Adamson'
  - 'Aimee Mann'
  - 'Unbelievable Truth'
- - 'Radiohead'
  - 'Visage'
  - 'Sparks'
  - 'The Filthy Tongues'
