@@ -1,27 +1,14 @@
 ---
 title: Big Country
+genres: ["Alternative Rock","New Romantic","New Wave","Pop Rock","Post-Punk","Rock","Celtic Rock"]
 featured_image: artists/b/big-country/big-country.jpg
 artist_page: true
 ---
 ## About
 
-Scotland based guitarband formed in the early 1980's.
-Managed By Ian Grant of Grant Edwards Management
-**Lineup:**
-Stuart Adamson: Vocals, Guitar, Synthesizer. Born April 11 1958, died December 16 2001 (suicide)
-Bruce Watson: Guitar
-Tony Butler: Bass (until 2012)
-Mark Brzezicki: Drums
-Mike Peters: Vocals, Guitar (2010 - 2013)
-Jamie Watson (Son of Bruce): Guitar (since 2010)
-Derek Forbes: Bass (2012 - 2015)
-Simon Hough: Vocals, Acoustic Guitar (2014 - 2024)
-Scott Whitley: Bass (2015 - 2021)
-Gil Allan: Bass (since 2021)
-Tommie Paxton: Vocals, Guitar (since 2024)
-Years active:	1981–2000, 2007, 2010–present
+Big Country are a Scottish rock band formed in Dunfermline, Fife, in 1981.
+The height of the band's popularity was in the early to mid 1980s, although they have retained a cult following for many years since. The band's music incorporated Scottish folk and martial music styles, and the band engineered their guitar-driven sound to evoke the sound of bagpipes, fiddles, and other traditional folk instruments.
+The band's "classic" lineup between 1982 and 2000, consisted of Stuart Adamson (vocals, guitar) Bruce Watson (guitar) Tony Butler (bass guitar) and Mark Brzezicki (drums). Following Adamson's death in 2001, the band reformed in 2007, with the surviving members. Between 2010 and 2013, the band reformed with Mike Peters of The Alarm on lead vocals. Since then the band has continued with only two of the original members (Watson and Brzezicki).
 
-### Current Lineup
 
-Mark Brzezicki, Bruce Watson, Jamie Watson, Scott Whitley, Simon Hough
 

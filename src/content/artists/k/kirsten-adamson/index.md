@@ -1,5 +1,6 @@
 ---
 title: Kirsten Adamson
+genres: []
 featured_image: artists/k/kirsten-adamson/kirsten-adamson.jpg
 artist_page: true
 ---

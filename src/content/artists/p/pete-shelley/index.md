@@ -1,13 +1,12 @@
 ---
 title: Pete Shelley
+genres: []
 featured_image: artists/p/pete-shelley/pete-shelley.jpg
 artist_page: true
 ---
 ## About
 
-Not to be confused with Peter Shelley.
+Pete Shelley (born Peter Campbell McNeish; 17 April 1955 – 6 December 2018) was an English singer, songwriter and guitarist. He formed early punk band Buzzcocks with Howard Devoto in 1976, and became the lead singer and guitarist in 1977 when Devoto left. The group released their biggest hit "Ever Fallen in Love (With Someone You Shouldn't've)" in 1978. The band broke up in 1981 and reformed at the end of the decade. Shelley also had a solo career; his song "Homosapien" charted in Australasia and Canada in 1981 and 1982.
 
-English singer, songwriter and guitarist, born 17 April 1955 in Leigh, Lancashire. Died from a heart attack 6 December 2018 in Tallinn, Estonia, where he lived.
 
-Lead singer of the seminal punk band Buzzcocks, Pete Shelley embarked on a solo career in the early 80s. Working with producers Martin Rushent and Stephen Hague he crafted dance floor friendly synth pop.
 
