@@ -10,7 +10,7 @@
 {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
 {{ if $featured_image }}
   {{ if or .Params.artist_page }}
-    <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');background-position: center 30%;">
+    <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
   {{ else }}
     <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');">
   {{ end }}
