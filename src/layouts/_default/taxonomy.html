@@ -1,0 +1,6 @@
+<h1>Artists in {{ .Title }} Genre</h1>
+<ul>
+    {{ range .Pages }}
+    <li><a href="{{ .Permalink }}">{{ .Title }}</a></li>
+    {{ end }}
+</ul>
