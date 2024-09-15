@@ -1,5 +1,6 @@
 ---
 title: IST IST
+genres: []
 featured_image: artists/i/ist-ist/ist-ist.jpg
 artist_page: true
 ---

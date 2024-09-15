@@ -1,5 +1,6 @@
 ---
 title: Becky Becky
+genres: ["Electropop"]
 featured_image: artists/b/becky-becky/becky-becky.jpg
 artist_page: true
 ---

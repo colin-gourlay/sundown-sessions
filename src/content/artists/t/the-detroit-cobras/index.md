@@ -1,13 +1,10 @@
 ---
 title: The Detroit Cobras
+genres: ["Garage Rock"]
 featured_image: artists/t/the-detroit-cobras/the-detroit-cobras.jpg
 artist_page: true
 ---
 ## About
 
-American garage rock band founded in 1994 in Detroit, Michigan.
-
-### Current Lineup
-
-Greg Cartwright, Rachel Nagy, Carol Schumacher, Mary Ramirez, Dale Wilson
+The Detroit Cobras are an American garage rock band from Detroit, Michigan, which was formed in 1994 by guitarist Steve Shaw, guitarist Mary Ramirez, bassist Jeff Meier, drummer Vic Hill, and singer Rachel Nagy. The group was later known (with the exception of Rachel Nagy, and Mary Ramirez) for a constantly changing assortment of musicians. Rachel Nagy died on January 14, 2022.
 
