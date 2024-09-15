@@ -1,5 +1,6 @@
 ---
 title: Queens of the Stone Age
+genres: ["Alternative Rock","Art Rock","Desert Rock","Hard Rock","Rock","Stoner Rock","Garage Rock Revival"]
 featured_image: artists/q/queens-of-the-stone-age/queens-of-the-stone-age.jpg
 artist_page: true
 ---
