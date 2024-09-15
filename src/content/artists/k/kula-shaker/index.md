@@ -1,26 +1,15 @@
 ---
 title: Kula Shaker
+genres: ["Britpop","Folk Rock","Psychedelic Rock","Rock","Neo-Psychedelia"]
 featured_image: artists/k/kula-shaker/kula-shaker.jpg
 artist_page: true
 ---
 ## About
 
-British indie-rock band formed by Crispian Mills and Alonza Bevan whilst at college in 1988.  Various lineup and name changes (previous members included one of Hayley Mills' ex-boyfriends on vocals and previous monikers the band went under included The Kays and Objects Of Desire), plus thanks to Crispian's pilgrimage in 1993, they are famously tinged with an Eastern-fused sound because of Crispian's Hinduism influences.  
-
-They originally split in 1999 amid personality clashes, record company intrusion and frustration of competing against the press' infamous lynching towards Crispian after some misinterpreted quotes in 1997.  Crispian went on to record a project called Pi (the material never materialised) and The Jeevas. Alonza joined Johnny Marr's band Healers and formed a short-lived band with Paul Winter-Hart called Shep.  Winter-Hart also joined the short-lived Thirteen:13 and drummed for Aqualung.  Jay Darlington joined Oasis as a live and session musician and carried on with Beady Eye when they split in 2009.
-
-In 2002 a compilation was released entitled "Kollected", which Crispian compiled and wrote sleeve notes for.  It also featured a previously unreleased Bob Dylan cover, which was also the band's final recorded song before their split. 
-
-In 2004 the band "reformed" for a one-off song "Braj Mandala" on a charity compilation album 'School of Braja' which Crispian had been creative director of, also recording two new songs with The Jeevas too.  Crispian laid down the basics of the song and asked the other members individually to play their parts on it.  Crispian and Alonza soon began writing together again and planned a full return. Jamming in the studio birthed the "Revenge of the King" E.P. and a supporting mini-tour in 2005.   
-
-Harry Broadbent was hired in 2006 and officially became Jay's replacement.  
-
-On 7th December 2022, Kula Shaker tweeted that original keyboardist Jay Darlington is back, and will be playing with them on tour.
-
-On September 28, 2023, Kula Shaker announced that their forthcoming 7th studio album will be titled "Natural Magick", released on January 26, 2024. The album will be the first since Peasants, Pigs & Astronauts to feature original keyboardist Jay Darlington.
+Kula Shaker are an English psychedelic rock band. Led by frontman Crispian Mills, the band came to prominence during the Post-Britpop era of the late 1990s. The band enjoyed commercial success in the UK between 1996 and 1999, notching up a number of Top 10 hits on the UK Singles Chart, including "Tattva", "Hey Dude", "Govinda", "Hush", and "Sound of Drums". The band's debut album, K, reached No. 1 on the UK Albums Chart. It was voted number 879 in Colin Larkin's All Time Top 1000 Albums 3rd Edition (2000).
+The band are known for their interest in traditional Indian music, culture, and mysticism, with a number of their most famous songs, including "Tattva" and "Govinda", featuring lyrics written in Sanskrit. The name Kula Shaker was itself inspired by Kulasekhara, an Indian king from the 9th century. In addition, many of the band's songs feature traditional Indian instruments, such as the sitar, tamboura, and tabla, juxtaposed with guitar-heavy, Western rock instrumentation. Despite achieving commercial success, Kula Shaker were unpopular with many critics, with The Observer's Simon Price describing them in 2014 as a "joke band".
+Kula Shaker disbanded in September 1999 but reformed in 2004 for sessions for the School of Braja compilation album. This led to plans for a full comeback, although the reformation was not widely publicised until the beginning of 2006. The band's third album, Strangefolk, was issued in 2007 and their fourth, Pilgrims Progress, was released in 2010. The band returned with a mostly sold out European tour and new album K 2.0 in 2016 which was well-received both by the media and the fans.
+After taking an extended hiatus, the band released their sixth album, 1st Congregational Church of Eternal Love and Free Hugs in June 2022 and their seventh album, Natural Magick, in 2024.
 
 
-### Current Lineup
-
-Crispian Mills, Alonza Bevan, Paul Winter-Hart, Jay Darlington
 
