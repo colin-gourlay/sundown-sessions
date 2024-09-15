@@ -57,5 +57,14 @@
       {{- partial "menu-contextual.html" . -}}
     </aside>
 
+    {{ if .Params.genres }}
+    <div class="genre-tags">
+      {{ range .Params.genres }}
+      <a href="{{ "genres/" | relLangURL }}{{ . | urlize }}" class="genre-pill">{{ . }}</a>
+      {{ end }}
+    </div>
+    {{ end }}
+
+
   </article>
 {{ end }}
