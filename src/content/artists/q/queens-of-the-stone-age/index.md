@@ -15,5 +15,5 @@ The band has been nominated for Grammy Awards nine times: four times for Best Ha
 
 ## External Links
 
-Facebook: {{< new-tab-link "[Official Facebook Page]({https://www.facebook.com/QOTSA})" >}}
+- {{<new-tab-link "[Official Facebook Page]({https://www.facebook.com/QOTSA})">}}
 
