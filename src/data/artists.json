@@ -899,7 +899,7 @@
     "foreignArtistId": "9efff43b-3b29-4082-824e-bc82f646f93d",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "The Doors were an American rock band formed in Los Angeles in 1965, comprising vocalist Jim Morrison, keyboardist Ray Manzarek, guitarist Robby Krieger and drummer John Densmore. They were among the most influential and controversial rock acts of the 1960s, primarily due to Morrison's lyrics and voice, along with his erratic stage persona and legal issues. The group is widely regarded as an important figure of the era's counterculture.\nThe band took its name from the title of the English writer Aldous Huxley's book The Doors of Perception, itself a reference to a quote by the English poet William Blake. After signing with Elektra Records in 1966, the Doors with Morrison recorded and released six studio albums in five years, some of which are generally considered among the greatest of all time, including their debut The Doors (1967), Strange Days (1967), and L.A. Woman (1971). Dubbed the \"Kings of Acid Rock\", they were one of the most successful bands of their time and by 1972, the Doors had sold over 4 million albums domestically and nearly 8 million singles.\nMorrison died in uncertain circumstances in 1971. The band continued as a trio, releasing two more albums until disbanding in 1973. In 1978, they reformed for the album An American Prayer, which combined new music with Morrison's recitings of his poetry recorded in 1969 and 1970. They reunited again briefly in 1993 when they were inducted into the Rock and Roll Hall of Fame, and for several one-off projects in the 21st century. In 2002, Manzarek, Krieger, and Ian Astbury of the Cult on vocals started performing as \"The Doors of the 21st Century\". Densmore and the Morrison estate successfully sued them over the use of the band's name. After a short time as Riders on the Storm, they settled on the name Manzarek–Krieger and toured until Manzarek's death in 2013.\nThe Doors were the first American band to accumulate eight consecutive Gold LPs. According to the Recording Industry Association of America (RIAA), they have sold 34 million albums in the United States and over 100 million records worldwide, making them one of the best-selling bands of all time. The Doors have been listed as one of the greatest artists of all time by magazines including Rolling Stone, which ranked them 41st on its list of the \"100 Greatest Artists of All Time\".\n\n",
+    "overview": "The Doors were an American rock band formed in Los Angeles in 1965, comprising vocalist Jim Morrison, keyboardist Ray Manzarek, guitarist Robby Krieger and drummer John Densmore. They were among the most influential and controversial rock acts of the 1960s, primarily due to Morrison's lyrics and voice, along with his erratic stage persona and legal issues. The group is widely regarded as an important figure of the era's counterculture.\nThe band took its name from the title of the English writer Aldous Huxley's book The Doors of Perception, itself a reference to a quote by the English poet William Blake. After signing with Elektra Records in 1966, the Doors with Morrison recorded and released six studio albums in five years, some of which are generally considered among the greatest of all time, including their debut The Doors (1967), Strange Days (1967), and L.A. Woman (1971). Dubbed the \"Kings of Acid Rock\", they were one of the most successful bands of their time and by 1972, the Doors had sold over 4 million albums domestically and nearly 8 million singles.\nMorrison died in uncertain circumstances in 1971. The band continued as a trio, releasing two more albums until disbanding in 1973. In 1978, they reformed for the album An American Prayer, which combined new music with Morrison's recitings of his poetry recorded in 1969 and 1970. They reunited again briefly in 1993 when they were inducted into the Rock and Roll Hall of Fame, and for several one-off projects in the 21st century. In 2002, Manzarek, Krieger, and Ian Astbury of the Cult on vocals started performing as \"The Doors of the 21st Century\". Densmore and the Morrison estate successfully sued them over the use of the band's name. After a short time as Riders on the Storm, they settled on the name Manzarek–Krieger and toured until Manzarek's death in 2013.\nThe Doors were the first American band to accumulate eight consecutive Gold LPs. According to the Recording Industry Association of America (RIAA), they have sold 34 million albums in the United States and over 100 million records worldwide, making them one of the best-selling bands of all time. The Doors have been listed as one of the greatest artists of all time by magazines including Rolling Stone, which ranked them 41st on its list of the \"100 Greatest Artists of All Time\".",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -2274,7 +2274,7 @@
     "foreignArtistId": "b4013ff1-d7ce-4b1a-af6e-e0b19ca7f378",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Big Country are a Scottish rock band formed in Dunfermline, Fife, in 1981.\nThe height of the band's popularity was in the early to mid 1980s, although they have retained a cult following for many years since. The band's music incorporated Scottish folk and martial music styles, and the band engineered their guitar-driven sound to evoke the sound of bagpipes, fiddles, and other traditional folk instruments.\nThe band's \"classic\" lineup between 1982 and 2000, consisted of Stuart Adamson (vocals, guitar) Bruce Watson (guitar) Tony Butler (bass guitar) and Mark Brzezicki (drums). Following Adamson's death in 2001, the band reformed in 2007, with the surviving members. Between 2010 and 2013, the band reformed with Mike Peters of The Alarm on lead vocals. Since then the band has continued with only two of the original members (Watson and Brzezicki).\n\n",
+    "overview": "Big Country are a Scottish rock band formed in Dunfermline, Fife, in 1981.\nThe height of the band's popularity was in the early to mid 1980s, although they have retained a cult following for many years since. The band's music incorporated Scottish folk and martial music styles, and the band engineered their guitar-driven sound to evoke the sound of bagpipes, fiddles, and other traditional folk instruments.\nThe band's \"classic\" lineup between 1982 and 2000, consisted of Stuart Adamson (vocals, guitar) Bruce Watson (guitar) Tony Butler (bass guitar) and Mark Brzezicki (drums). Following Adamson's death in 2001, the band reformed in 2007, with the surviving members. Between 2010 and 2013, the band reformed with Mike Peters of The Alarm on lead vocals. Since then the band has continued with only two of the original members (Watson and Brzezicki).",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -2349,6 +2349,18 @@
       {
         "url": "https://imvdb.com/n/big-country",
         "name": "imvdb"
+      },
+      {
+        "url": "https://d-nb.info/gnd/10129883-3",
+        "name": "d-nb"
+      },
+      {
+        "url": "https://www.imdb.com/name/nm0081691/",
+        "name": "imdb"
+      },
+      {
+        "url": "https://www.songkick.com/artists/182193",
+        "name": "songkick"
       }
     ],
     "images": [
@@ -3498,7 +3510,7 @@
     "foreignArtistId": "5a2e9cd3-010a-4aae-9f83-629253284202",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Sharon Katharine Van Etten (born February 26, 1981) is an American singer-songwriter and actress. She has released the albums Because I Was in Love (2009), Epic (2010), Tramp (2012), Are We There (2014), Remind Me Tomorrow (2019) and We've Been Going About This All Wrong (2022).",
+    "overview": "Sharon Katharine Van Etten (born February 26, 1981) is an American singer-songwriter and actress. She has released the albums Because I Was in Love (2009), Epic (2010), Tramp (2012), Are We There (2014), Remind Me Tomorrow (2019) and We've Been Going About This All Wrong (2022).\n\n",
     "artistType": "Person",
     "disambiguation": "US singer-songwriter",
     "links": [
@@ -4687,7 +4699,7 @@
     "foreignArtistId": "d43d12a1-2dc9-4257-a2fd-0a3bb1081b86",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "John R. Cash (born J. R. Cash; February 26, 1932 – September 12, 2003) was an American singer-songwriter. Most of Cash's music contains themes of sorrow, moral tribulation, and redemption, especially songs from the later stages of his career. He was known for his deep, calm, bass-baritone voice, the distinctive sound of his backing band, the Tennessee Three, that was characterized by its train-like chugging guitar rhythms, a rebelliousness coupled with an increasingly somber and humble demeanor, and his free prison concerts. Cash wore a trademark all-black stage wardrobe, which earned him the nickname \"Man in Black\".\nBorn to poor cotton farmers in Kingsland, Arkansas, Cash grew up on gospel music and played on a local radio station in high school. He served four years in the Air Force, much of it in West Germany. After his return to the United States, he rose to fame during the mid-1950s in the burgeoning rockabilly scene in Memphis, Tennessee. He traditionally began his concerts by introducing himself with \"Hello, I'm Johnny Cash\". He began to follow that by \"Folsom Prison Blues\", one of his signature songs. His other signature songs include \"I Walk the Line\", \"Ring of Fire\", \"Get Rhythm\", and \"Man in Black\". He also recorded humorous numbers like \"One Piece at a Time\" and \"A Boy Named Sue\", a duet with his future wife June called \"Jackson\" (followed by many further duets after they married), and railroad songs such as \"Hey, Porter\", \"Orange Blossom Special\", and \"Rock Island Line\". During the last stage of his career, he covered songs by contemporary rock artists; among his most notable covers were \"Hurt\" by Nine Inch Nails, \"Rusty Cage\" by Soundgarden, and \"Personal Jesus\" by Depeche Mode.\nCash is one of the best-selling music artists of all time, having sold more than 90 million records worldwide. His genre-spanning music embraced country, rock and roll, rockabilly, blues, folk, and gospel sounds. This crossover appeal earned him the rare honor of being inducted into the Country Music, Rock and Roll, and Gospel Music Halls of Fame.",
+    "overview": "John R. Cash (born J. R. Cash; February 26, 1932 – September 12, 2003) was an American singer-songwriter. Most of Cash's music contains themes of sorrow, moral tribulation, and redemption, especially songs from the later stages of his career. He was known for his deep, calm, bass-baritone voice, the distinctive sound of his backing band, the Tennessee Three, that was characterized by its train-like chugging guitar rhythms, a rebelliousness coupled with an increasingly somber and humble demeanor, and his free prison concerts. Cash wore a trademark all-black stage wardrobe, which earned him the nickname \"Man in Black\".\nBorn to poor cotton farmers in Kingsland, Arkansas, Cash grew up on gospel music and played on a local radio station in high school. He served four years in the Air Force, much of it in West Germany. After his return to the United States, he rose to fame during the mid-1950s in the burgeoning rockabilly scene in Memphis, Tennessee. He traditionally began his concerts by introducing himself with \"Hello, I'm Johnny Cash\". He began to follow that by \"Folsom Prison Blues\", one of his signature songs. His other signature songs include \"I Walk the Line\", \"Ring of Fire\", \"Get Rhythm\", and \"Man in Black\". He also recorded humorous numbers like \"One Piece at a Time\" and \"A Boy Named Sue\", a duet with his future wife June called \"Jackson\" (followed by many further duets after they married), and railroad songs such as \"Hey, Porter\", \"Orange Blossom Special\", and \"Rock Island Line\". During the last stage of his career, he covered songs by contemporary rock artists; among his most notable covers were \"Hurt\" by Nine Inch Nails, \"Rusty Cage\" by Soundgarden, and \"Personal Jesus\" by Depeche Mode.\nCash is one of the best-selling music artists of all time, having sold more than 90 million records worldwide. His genre-spanning music embraced country, rock and roll, rockabilly, blues, folk, and gospel sounds. This crossover appeal earned him the rare honor of being inducted into the Country Music, Rock and Roll, and Gospel Music Halls of Fame.\n\n",
     "artistType": "Person",
     "disambiguation": "country music legend",
     "links": [
@@ -5002,7 +5014,7 @@
     "foreignArtistId": "5ff6f6eb-31ad-4903-a3c3-4c9283fcde8b",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Rosanne Cash (born May 24, 1955) is an American singer-songwriter and author. She is the eldest daughter of country musician Johnny Cash and his first wife Vivian Cash.\nAlthough Cash is often classified as a country artist, her music draws from many genres, including folk, pop, rock, blues and, most notably, Americana. In the 1980s, she had a string of genre-crossing singles that entered both the country and pop charts, the most commercially successful being her 1981 breakthrough hit \"Seven Year Ache\". It topped the U.S. country singles chart and reached the Top 30 on the U.S. pop chart.\nIn 1990, Cash released Interiors, a spare, introspective album which signaled a break from her pop country past. The following year she ended her marriage to songwriter Rodney Crowell.\nShe moved from Nashville to New York City. She has continued to write, record, and perform, having since released six albums, written three books, and edited a collection of short stories. Her fiction and essays have been published in The New York Times, Rolling Stone, The Oxford American, New York Magazine, and other periodicals and collections.\nCash won a Grammy Award in 1985 for \"I Don't Know Why You Don't Want Me\" and has received 12 other Grammy nominations. She has had 11 No. 1 country hit singles, 21 Top 40 country singles, and two gold records. Cash was the 2014 recipient of Smithsonian magazine's American Ingenuity Award, in the Performing Arts category.\nOn February 8, 2015, Cash won three Grammy awards: for Best Americana Album for The River & the Thread, Best American Roots Song, with John Leventhal; and Best American Roots Performance for her album A Feather's Not A Bird. Cash was honored further in October that year, when she was inducted into the Nashville Songwriters Hall of Fame.",
+    "overview": "Rosanne Cash (born May 24, 1955) is an American singer-songwriter and author. She is the eldest daughter of country musician Johnny Cash and his first wife Vivian Cash.\nAlthough Cash is often classified as a country artist, her music draws from many genres, including folk, pop, rock, blues and, most notably, Americana. In the 1980s, she had a string of genre-crossing singles that entered both the country and pop charts, the most commercially successful being her 1981 breakthrough hit \"Seven Year Ache\". It topped the U.S. country singles chart and reached the Top 30 on the U.S. pop chart.\nIn 1990, Cash released Interiors, a spare, introspective album which signaled a break from her pop country past. The following year she ended her marriage to songwriter Rodney Crowell.\nShe moved from Nashville to New York City. She has continued to write, record, and perform, having since released six albums, written three books, and edited a collection of short stories. Her fiction and essays have been published in The New York Times, Rolling Stone, The Oxford American, New York Magazine, and other periodicals and collections.\nCash won a Grammy Award in 1985 for \"I Don't Know Why You Don't Want Me\" and has received 12 other Grammy nominations. She has had 11 No. 1 country hit singles, 21 Top 40 country singles, and two gold records. Cash was the 2014 recipient of Smithsonian magazine's American Ingenuity Award, in the Performing Arts category.\nOn February 8, 2015, Cash won three Grammy awards: for Best Americana Album for The River & the Thread, Best American Roots Song, with John Leventhal; and Best American Roots Performance for her album A Feather's Not A Bird. Cash was honored further in October that year, when she was inducted into the Nashville Songwriters Hall of Fame.\n\n",
     "artistType": "Person",
     "disambiguation": "",
     "links": [
@@ -5245,7 +5257,7 @@
     "foreignArtistId": "5441c29d-3602-4898-b1a1-b77fa23b8e50",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "David Robert Jones (8 January 1947 – 10 January 2016), known professionally as David Bowie ( BOH-ee), was an English singer, songwriter, musician, and actor. He is regarded as one of the most influential musicians of the 20th century. Bowie was acclaimed by critics and musicians, particularly for his innovative work during the 1970s. His career was marked by reinvention and visual presentation, and his music and stagecraft had a significant impact on popular music.\nBowie developed an interest in music from an early age. He studied art, music and design before embarking on a professional career as a musician in 1963. He released a string of unsuccessful singles with local bands and a self-titled solo album (1967) before achieving his first top-five entry on the UK Singles Chart with \"Space Oddity\" (1969). After a period of experimentation, he re-emerged in 1972 during the glam rock era with the flamboyant and androgynous alter ego Ziggy Stardust. The character was spearheaded by the success of \"Starman\" and its album The Rise and Fall of Ziggy Stardust and the Spiders from Mars (both 1972), which won him widespread popularity. In 1975, Bowie's style shifted towards a sound he characterised as \"plastic soul\", initially alienating many of his UK fans but garnering his first major US crossover success with the number-one single \"Fame\" and the album Young Americans (both 1975). In 1976, Bowie starred in the cult film The Man Who Fell to Earth and released Station to Station. In 1977, he again changed direction with the electronic-inflected album Low, the first of three collaborations with Brian Eno that came to be known as the Berlin Trilogy. \"Heroes\" (1977) and Lodger (1979) followed; each album reached the UK top five and received lasting critical praise.\nAfter uneven commercial success in the late 1970s, Bowie had three number-one hits: the 1980 single \"Ashes to Ashes\", its album Scary Monsters (and Super Creeps) and \"Under Pressure\" (a 1981 collaboration with Queen). He achieved his greatest commercial success in the 1980s with Let's Dance (1983). Between 1988 and 1992, he fronted the hard rock band Tin Machine before resuming his solo career in 1993. Throughout the 1990s and 2000s, Bowie continued to experiment with musical styles, including industrial and jungle. He also continued acting; his roles included Major Jack Celliers in Merry Christmas, Mr. Lawrence (1983), Jareth the Goblin King in Labyrinth (1986), Phillip Jeffries in Twin Peaks: Fire Walk with Me (1992), Andy Warhol in the biopic Basquiat (1996), and Nikola Tesla in The Prestige (2006), among other film and television appearances and cameos. He ceased touring after 2004 and his last live performance was at a charity event in 2006. He returned from a decade-long recording hiatus in 2013 with The Next Day and remained musically active until his death from liver cancer in 2016. He died two days after both his 69th birthday and the release of his final album, Blackstar.\nDuring his lifetime, his record sales, estimated at over 100 million worldwide, made him one of the best-selling musicians of all time. Often dubbed the \"chameleon of rock\" due to his constant musical reinventions, he was inducted into the Rock and Roll Hall of Fame in 1996. Rolling Stone ranked him among the greatest artists in history. As of 2022, Bowie was the best-selling vinyl artist of the 21st century.",
+    "overview": "David Robert Jones (8 January 1947 – 10 January 2016), known professionally as David Bowie ( BOH-ee), was an English singer, songwriter, musician, and actor. He is regarded as one of the most influential musicians of the 20th century. Bowie was acclaimed by critics and musicians, particularly for his innovative work during the 1970s. His career was marked by reinvention and visual presentation, and his music and stagecraft had a significant impact on popular music.\nBowie developed an interest in music from an early age. He studied art, music and design before embarking on a professional career as a musician in 1963. He released a string of unsuccessful singles with local bands and a self-titled solo album (1967) before achieving his first top-five entry on the UK Singles Chart with \"Space Oddity\" (1969). After a period of experimentation, he re-emerged in 1972 during the glam rock era with the flamboyant and androgynous alter ego Ziggy Stardust. The character was spearheaded by the success of \"Starman\" and its album The Rise and Fall of Ziggy Stardust and the Spiders from Mars (both 1972), which won him widespread popularity. In 1975, Bowie's style shifted towards a sound he characterised as \"plastic soul\", initially alienating many of his UK fans but garnering his first major US crossover success with the number-one single \"Fame\" and the album Young Americans (both 1975). In 1976, Bowie starred in the cult film The Man Who Fell to Earth and released Station to Station. In 1977, he again changed direction with the electronic-inflected album Low, the first of three collaborations with Brian Eno that came to be known as the Berlin Trilogy. \"Heroes\" (1977) and Lodger (1979) followed; each album reached the UK top five and received lasting critical praise.\nAfter uneven commercial success in the late 1970s, Bowie had three number-one hits: the 1980 single \"Ashes to Ashes\", its album Scary Monsters (and Super Creeps) and \"Under Pressure\" (a 1981 collaboration with Queen). He achieved his greatest commercial success in the 1980s with Let's Dance (1983). Between 1988 and 1992, he fronted the hard rock band Tin Machine before resuming his solo career in 1993. Throughout the 1990s and 2000s, Bowie continued to experiment with musical styles, including industrial and jungle. He also continued acting; his roles included Major Jack Celliers in Merry Christmas, Mr. Lawrence (1983), Jareth the Goblin King in Labyrinth (1986), Phillip Jeffries in Twin Peaks: Fire Walk with Me (1992), Andy Warhol in the biopic Basquiat (1996), and Nikola Tesla in The Prestige (2006), among other film and television appearances and cameos. He ceased touring after 2004 and his last live performance was at a charity event in 2006. He returned from a decade-long recording hiatus in 2013 with The Next Day and remained musically active until his death from liver cancer in 2016. He died two days after both his 69th birthday and the release of his final album, Blackstar.\nDuring his lifetime, his record sales, estimated at over 100 million worldwide, made him one of the best-selling musicians of all time. Often dubbed the \"chameleon of rock\" due to his constant musical reinventions, he was inducted into the Rock and Roll Hall of Fame in 1996. Rolling Stone ranked him among the greatest artists in history. As of 2022, Bowie was the best-selling vinyl artist of the 21st century.\n\n",
     "artistType": "Person",
     "disambiguation": "English singer‐songwriter",
     "links": [
@@ -5759,7 +5771,7 @@
     "foreignArtistId": "ccb8f30e-4d71-40c4-8b1d-846dafe73e2c",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "George Michael (born Georgios Kyriacos Panayiotou; 25 June 1963 – 25 December 2016) was an English singer-songwriter, record producer and philanthropist. Regarded as a pop culture icon, he is one of the best-selling musicians of all time, with his sales estimated at between 100 million to 125 million records worldwide. Michael was known as a creative force in songwriting, vocal performance, and visual presentation. He achieved 10 number-one songs on the US Billboard Hot 100 and 13 number-one songs on the UK Singles Chart. Michael won numerous music awards, including two Grammy Awards, three Brit Awards, twelve Billboard Music Awards, and four MTV Video Music Awards. He was listed among Billboard's the \"Greatest Hot 100 Artists of All Time\" and Rolling Stone's the \"200 Greatest Singers of All Time\". The Radio Academy named him the most played artist on British radio during the period 1984–2004. Michael was inducted into the Rock and Roll Hall of Fame in 2023.\nBorn in East Finchley, Middlesex, Michael rose to fame after forming the pop duo Wham! with Andrew Ridgeley in 1981. Their first two albums, Fantastic (1983) and Make It Big (1984), reached number one on the US Billboard 200 and UK Albums Chart. They had commercial success with singles \"Wham Rap! (Enjoy What You Do)\", \"Young Guns (Go for It)\", \"Bad Boys\", \"Club Tropicana\", \"Wake Me Up Before You Go-Go\", \"Last Christmas\", \"Everything She Wants\", \"Freedom\", and \"I'm Your Man\". Their 1985 tour in China was the first by a Western popular music act, and generated worldwide media coverage. Michael took part in Band Aid's UK number-one single \"Do They Know It's Christmas?\" in 1984 and performed at the following year's Live Aid concert.\nMichael's first solo single, \"Careless Whisper\" (1984), reached number one in over 20 countries, including the UK and US. The second solo single, \"A Different Corner\", also reached number one in 1986. After Wham! disbanded that year, Michael released the number-one duet with Aretha Franklin, \"I Knew You Were Waiting (For Me)\". His debut solo album, Faith (1987), stayed at number one on the Billboard 200 for 12 weeks and topped the UK Albums Chart. It is one of the best-selling albums of all time, having sold over 25 million copies worldwide. The singles \"Faith\", \"Father Figure\", \"One More Try\", and \"Monkey\" reached number one on the Billboard Hot 100. Michael became the best-selling music artist of 1988, and Faith was awarded Album of the Year at the 1989 Grammy Awards. Michael's second solo album, Listen Without Prejudice Vol. 1 (1990), was also a number one in the UK and yielded the Billboard Hot 100 number one \"Praying for Time\" and the worldwide hit \"Freedom! '90\". Michael went on to release a series of multimillion-selling albums, including Older (1996), Ladies & Gentlemen: The Best of George Michael (1998), Songs from the Last Century (1999), Patience (2004), and Twenty Five (2006). The albums earned him multiple hits such as \"Jesus to a Child\", \"Fastlove\", \"Outside\", \"Amazing\", and \"An Easier Affair\".\nMichael came out as gay in 1998, and was an active LGBT rights campaigner and HIV/AIDS charity fundraiser. His personal life, drug use, and legal troubles made headlines following an arrest for public lewdness in 1998 and multiple drug-related offences. The 2005 documentary A Different Story covered his career and personal life. Michael's 25 Live tour spanned three tours from 2006 to 2008. Michael fell into a coma in 2011 during a bout with pneumonia, but later recovered. He performed his final concert at London's Earls Court in 2012. Michael died of heart disease on Christmas Day in 2016, at his home in Goring-on-Thames, Oxfordshire.",
+    "overview": "George Michael (born Georgios Kyriacos Panayiotou; 25 June 1963 – 25 December 2016) was an English singer-songwriter, record producer and philanthropist. Regarded as a pop culture icon, he is one of the best-selling musicians of all time, with his sales estimated at between 100 million to 125 million records worldwide. Michael was known as a creative force in songwriting, vocal performance, and visual presentation. He achieved 10 number-one songs on the US Billboard Hot 100 and 13 number-one songs on the UK Singles Chart. Michael won numerous music awards, including two Grammy Awards, three Brit Awards, twelve Billboard Music Awards, and four MTV Video Music Awards. He was listed among Billboard's the \"Greatest Hot 100 Artists of All Time\" and Rolling Stone's the \"200 Greatest Singers of All Time\". The Radio Academy named him the most played artist on British radio during the period 1984–2004. Michael was inducted into the Rock and Roll Hall of Fame in 2023.\nBorn in East Finchley, Middlesex, Michael rose to fame after forming the pop duo Wham! with Andrew Ridgeley in 1981. Their first two albums, Fantastic (1983) and Make It Big (1984), reached number one on the US Billboard 200 and UK Albums Chart. They had commercial success with singles \"Wham Rap! (Enjoy What You Do)\", \"Young Guns (Go for It)\", \"Bad Boys\", \"Club Tropicana\", \"Wake Me Up Before You Go-Go\", \"Last Christmas\", \"Everything She Wants\", \"Freedom\", and \"I'm Your Man\". Their 1985 tour in China was the first by a Western popular music act, and generated worldwide media coverage. Michael took part in Band Aid's UK number-one single \"Do They Know It's Christmas?\" in 1984 and performed at the following year's Live Aid concert.\nMichael's first solo single, \"Careless Whisper\" (1984), reached number one in over 20 countries, including the UK and US. The second solo single, \"A Different Corner\", also reached number one in 1986. After Wham! disbanded that year, Michael released the number-one duet with Aretha Franklin, \"I Knew You Were Waiting (For Me)\". His debut solo album, Faith (1987), stayed at number one on the Billboard 200 for 12 weeks and topped the UK Albums Chart. It is one of the best-selling albums of all time, having sold over 25 million copies worldwide. The singles \"Faith\", \"Father Figure\", \"One More Try\", and \"Monkey\" reached number one on the Billboard Hot 100. Michael became the best-selling music artist of 1988, and Faith was awarded Album of the Year at the 1989 Grammy Awards. Michael's second solo album, Listen Without Prejudice Vol. 1 (1990), was also a number one in the UK and yielded the Billboard Hot 100 number one \"Praying for Time\" and the worldwide hit \"Freedom! '90\". Michael went on to release a series of multimillion-selling albums, including Older (1996), Ladies & Gentlemen: The Best of George Michael (1998), Songs from the Last Century (1999), Patience (2004), and Twenty Five (2006). The albums earned him multiple hits such as \"Jesus to a Child\", \"Fastlove\", \"Outside\", \"Amazing\", and \"An Easier Affair\".\nMichael came out as gay in 1998, and was an active LGBT rights campaigner and HIV/AIDS charity fundraiser. His personal life, drug use, and legal troubles made headlines following an arrest for public lewdness in 1998 and multiple drug-related offences. The 2005 documentary A Different Story covered his career and personal life. Michael's 25 Live tour spanned three tours from 2006 to 2008. Michael fell into a coma in 2011 during a bout with pneumonia, but later recovered. He performed his final concert at London's Earls Court in 2012. Michael died of heart disease on Christmas Day in 2016, at his home in Goring-on-Thames, Oxfordshire.\n\n",
     "artistType": "Person",
     "disambiguation": "",
     "links": [
@@ -6500,7 +6512,7 @@
     "foreignArtistId": "070d193a-845c-479f-980e-bef15710653e",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Prince Rogers Nelson (June 7, 1958 – April 21, 2016) was an American singer, multi-instrumentalist, songwriter, record producer, and actor. The recipient of numerous awards and nominations, he is regarded as one of the world's greatest musicians. He was known for his flamboyant, androgynous persona; his wide vocal range, which included a far-reaching falsetto and high-pitched screams; and his skill as a multi-instrumentalist, often preferring to play all or most of the instruments on his recordings.  His music incorporated a wide variety of styles, including funk, R&B, rock, new wave, soul,  synth-pop, pop, jazz, blues, and hip hop. Prince produced his albums himself, pioneering the Minneapolis sound.\nBorn and raised in Minneapolis, Prince signed a record deal with Warner Bros. Records at the age of 19, soon releasing the albums For You (1978) and Prince (1979). He went on to achieve critical success with the influential albums Dirty Mind (1980), Controversy (1981), and 1999 (1982). His sixth album, Purple Rain (1984), was recorded with his new backing band the Revolution and was also the soundtrack to the film of the same name in which he starred. Purple Rain garnered continued success for Prince and was a major commercial achievement, spending six consecutive months atop the US Billboard 200 chart. The soundtrack also won Prince the Academy Award for Best Original Song Score whilst the movie grossed $70.3 million worldwide, against its $7.2 million budget and publications. Critics have regarded Purple Rain as one of the greatest musical films. After disbanding the Revolution, Prince released the album Sign o' the Times (1987), widely hailed by critics as the greatest work of his career.\nIn the midst of a contractual dispute with Warner Bros. in 1993, he changed his stage name to the unpronounceable symbol  (known to fans as the \"Love Symbol\") and was often referred to as The Artist Formerly Known as Prince (or TAFKAP) or simply The Artist. After moving to Arista Records in 1998, Prince reverted to his original name in 2000. Over the next decade, six of his albums entered the U.S. top 10 charts. In April 2016, at the age of 57, Prince died after accidentally overdosing on fentanyl at his Paisley Park home and recording studio in Chanhassen, Minnesota. He was a prolific musician who released 39 albums during his life, with a vast array of unreleased material left in a custom-built bank vault underneath his home after his death, including fully completed albums and over 50 finished music videos. Numerous posthumous collections of his previously unheard work have been issued by his estate.\nPrince sold more than 100 million records worldwide during his lifetime, ranking him among the best-selling music artists of all time. His awards include the Grammy President's Merit Award, the American Music Awards for Achievement and of Merit, the Billboard Icon Award, an Academy Award, and a Golden Globe Award. He was inducted into the Rock and Roll Hall of Fame in 2004, the U.K. Music Hall of Fame in 2006, and the Rhythm and Blues Music Hall of Fame in 2016, and was inducted twice into the Black Music & Entertainment Walk of Fame in 2022. Estimates of the complete number of songs written by Prince range anywhere from 500 to well over 1,000. Some of these songs were made popular after being covered by other musicians, including \"Nothing Compares 2 U\" by Sinéad O'Connor and \"Manic Monday\" by the Bangles.",
+    "overview": "Prince Rogers Nelson (June 7, 1958 – April 21, 2016) was an American singer, multi-instrumentalist, songwriter, record producer, and actor. The recipient of numerous awards and nominations, he is regarded as one of the world's greatest musicians. He was known for his flamboyant, androgynous persona; his wide vocal range, which included a far-reaching falsetto and high-pitched screams; and his skill as a multi-instrumentalist, often preferring to play all or most of the instruments on his recordings.  His music incorporated a wide variety of styles, including funk, R&B, rock, new wave, soul,  synth-pop, pop, jazz, blues, and hip hop. Prince produced his albums himself, pioneering the Minneapolis sound.\nBorn and raised in Minneapolis, Prince signed a record deal with Warner Bros. Records at the age of 19, soon releasing the albums For You (1978) and Prince (1979). He went on to achieve critical success with the influential albums Dirty Mind (1980), Controversy (1981), and 1999 (1982). His sixth album, Purple Rain (1984), was recorded with his new backing band the Revolution and was also the soundtrack to the film of the same name in which he starred. Purple Rain garnered continued success for Prince and was a major commercial achievement, spending six consecutive months atop the US Billboard 200 chart. The soundtrack also won Prince the Academy Award for Best Original Song Score whilst the movie grossed $70.3 million worldwide, against its $7.2 million budget and publications. Critics have regarded Purple Rain as one of the greatest musical films. After disbanding the Revolution, Prince released the album Sign o' the Times (1987), widely hailed by critics as the greatest work of his career.\nIn the midst of a contractual dispute with Warner Bros. in 1993, he changed his stage name to the unpronounceable symbol  (known to fans as the \"Love Symbol\") and was often referred to as The Artist Formerly Known as Prince (or TAFKAP) or simply The Artist. After moving to Arista Records in 1998, Prince reverted to his original name in 2000. Over the next decade, six of his albums entered the U.S. top 10 charts. In April 2016, at the age of 57, Prince died after accidentally overdosing on fentanyl at his Paisley Park home and recording studio in Chanhassen, Minnesota. He was a prolific musician who released 39 albums during his life, with a vast array of unreleased material left in a custom-built bank vault underneath his home after his death, including fully completed albums and over 50 finished music videos. Numerous posthumous collections of his previously unheard work have been issued by his estate.\nPrince sold more than 100 million records worldwide during his lifetime, ranking him among the best-selling music artists of all time. His awards include the Grammy President's Merit Award, the American Music Awards for Achievement and of Merit, the Billboard Icon Award, an Academy Award, and a Golden Globe Award. He was inducted into the Rock and Roll Hall of Fame in 2004, the U.K. Music Hall of Fame in 2006, and the Rhythm and Blues Music Hall of Fame in 2016, and was inducted twice into the Black Music & Entertainment Walk of Fame in 2022. Estimates of the complete number of songs written by Prince range anywhere from 500 to well over 1,000. Some of these songs were made popular after being covered by other musicians, including \"Nothing Compares 2 U\" by Sinéad O'Connor and \"Manic Monday\" by the Bangles.\n\n",
     "artistType": "Person",
     "disambiguation": "“The Artist Formerly Known as…”",
     "links": [
@@ -7473,7 +7485,7 @@
     "foreignArtistId": "f74ae14c-845a-4c00-9a84-b0c8dd24ef2c",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Skids are a Scottish punk rock and new wave band, formed in Dunfermline in 1977 by Stuart Adamson (guitar, keyboards, percussion and backing vocals), William Simpson (bass guitar and backing vocals), Thomas Kellichan (drums) and Richard Jobson (vocals, guitar and keyboards). Their biggest successes were the 1979 single \"Into the Valley\" and the 1980 album The Absolute Game. In 2016, the band announced a 40th-anniversary tour of the UK with their original singer Richard Jobson.",
+    "overview": "Skids are a Scottish punk rock and new wave band, formed in Dunfermline in 1977 by Stuart Adamson (guitar, keyboards, percussion and backing vocals), William Simpson (bass guitar and backing vocals), Thomas Kellichan (drums) and Richard Jobson (vocals, guitar and keyboards). Their biggest successes were the 1979 single \"Into the Valley\" and the 1980 album The Absolute Game. In 2016, the band announced a 40th-anniversary tour of the UK with their original singer Richard Jobson.\n\n",
     "artistType": "Group",
     "disambiguation": "Scottish punk rock/new wave band",
     "links": [
@@ -10519,7 +10531,7 @@
     "foreignArtistId": "aa7a2827-f74b-473c-bd79-03d065835cf7",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Franz Ferdinand are  a Scottish rock band formed in Glasgow in 2002. The band's original line-up was composed of Alex Kapranos (lead vocals, lead guitar, keyboards), Nick McCarthy (rhythm guitar, keyboards, vocals), Bob Hardy (bass guitar, percussion) and Paul Thomson (drums, percussion, backing vocals). Julian Corrie (keyboards, lead guitar, backing vocals) and Dino Bardot (rhythm guitar, backing vocals) joined the band in 2017 after McCarthy left during the previous year, and Audrey Tait (drums, percussion) joined the band after Thomson left in 2021. The band is one of the more popular post-punk revival bands, garnering multiple UK top 20 hits. They have been nominated for several Grammy Awards and have received two Brit Awards—winning one for Best British Group—as well as one NME Award.\nThe band's first single, \"Darts of Pleasure\", just missed out on the Top 40 of the UK Singles Chart, peaking at number 44. Their second single, \"Take Me Out\", proved their big commercial breakthrough, peaking at number three. \"Take Me Out\" charted in several other countries and earned a Grammy nomination for Best Rock Performance by a Duo or Group with Vocal; it became the band's signature song. Their self-titled debut studio album won the 2004 Mercury Prize and earned a Grammy nomination for Best Alternative Album.\nIn 2005, the band released their second studio album, You Could Have It So Much Better, produced by Rich Costey. It peaked within the top-ten in multiple countries and earned Grammy-nominations for Best Alternative Album and for one of the singles, \"Do You Want To\". The band's third studio album, Tonight: Franz Ferdinand, was released in January 2009; by then the band had shifted from a post-punk-focused sound to a more dance-oriented sound. A remix album of Tonight, titled Blood, was released in July 2009.\nFour years after the release of Tonight, the band released their fourth studio album, Right Thoughts, Right Words, Right Action, in August 2013. In 2015, Franz Ferdinand and American rock band Sparks formed the supergroup FFS and released a one-off self-titled album in June 2015. Following the departure of McCarthy, the band released their fifth studio album, Always Ascending, in February 2018.",
+    "overview": "Franz Ferdinand are  a Scottish rock band formed in Glasgow in 2002. The band is one of the more popular post-punk revival bands, garnering multiple UK top 20 hits. They have been nominated for several Grammy Awards and have received two Brit Awards—winning one for Best British Group—as well as one NME Award.\nThe band's original line-up was composed of Alex Kapranos (lead vocals, lead guitar, keyboards), Nick McCarthy (rhythm guitar, keyboards, vocals), Bob Hardy (bass guitar, percussion) and Paul Thomson (drums, percussion, backing vocals). Julian Corrie (keyboards, lead guitar, backing vocals) and Dino Bardot (rhythm guitar, backing vocals) joined the band in 2017 after McCarthy left during the previous year, and Audrey Tait (drums, percussion) joined the band after Thomson left in 2021. \nThe band's first single, \"Darts of Pleasure\", just missed out on the Top 40 of the UK Singles Chart, peaking at number 44. Their second single, \"Take Me Out\", proved their big commercial breakthrough, peaking at number three. \"Take Me Out\" charted in several other countries and earned a Grammy nomination for Best Rock Performance by a Duo or Group with Vocal; it became the band's signature song. Their self-titled debut studio album won the 2004 Mercury Prize and earned a Grammy nomination for Best Alternative Album.\nIn 2005, the band released their second studio album, You Could Have It So Much Better, produced by Rich Costey. It peaked within the top-ten in multiple countries and earned Grammy-nominations for Best Alternative Album and for one of the singles, \"Do You Want To\". The band's third studio album, Tonight: Franz Ferdinand, was released in January 2009; by then the band had shifted from a post-punk-focused sound to a more dance-oriented sound. A remix album of Tonight, titled Blood, was released in July 2009.\nFour years after the release of Tonight, the band released their fourth studio album, Right Thoughts, Right Words, Right Action, in August 2013. In 2015, Franz Ferdinand and American rock band Sparks formed the supergroup FFS and released a one-off self-titled album in June 2015. Following the departure of McCarthy, the band released their fifth studio album, Always Ascending, in February 2018.",
     "artistType": "Group",
     "disambiguation": "Scottish rock band",
     "links": [
@@ -10692,6 +10704,44 @@
         "name": "qobuz"
       }
     ],
+    "nextAlbum": {
+      "artistMetadataId": 138,
+      "foreignAlbumId": "f684cb43-eb20-457a-a832-39bcc7d7ffb3",
+      "oldForeignAlbumIds": [],
+      "title": "The Human Fear",
+      "overview": "",
+      "disambiguation": "",
+      "releaseDate": "2025-01-10T00:00:00Z",
+      "images": [
+        {
+          "url": "https://imagecache.lidarr.audio/v1/caa/1fa6d858-cdcc-4777-b7bf-23e356f44516/39853013268-1200.jpg",
+          "coverType": "cover",
+          "extension": ".jpg"
+        }
+      ],
+      "links": [],
+      "genres": [],
+      "albumType": "Album",
+      "secondaryTypes": [],
+      "ratings": {
+        "votes": 0,
+        "value": 0
+      },
+      "cleanTitle": "thehumanfear",
+      "profileId": 1,
+      "monitored": true,
+      "anyReleaseOk": true,
+      "lastInfoSync": "2024-09-15T17:49:28Z",
+      "added": "2024-09-15T17:49:27Z",
+      "addOptions": {
+        "addType": "automatic",
+        "searchForNewAlbum": false
+      },
+      "artistMetadata": null,
+      "albumReleases": null,
+      "artist": null,
+      "id": 2285
+    },
     "images": [
       {
         "url": "/MediaCover/63/banner.jpg?lastWrite=638418782471675535",
@@ -10763,7 +10813,7 @@
     "foreignArtistId": "0509a681-a362-4800-9075-656041dccdbd",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Squeeze are an English rock band that came to prominence in the United Kingdom during the new wave period of the late 1970s, and continued recording in the 1980s, 1990s and 2010s. In the UK, their singles \"Cool for Cats\", \"Up the Junction\", and \"Labelled with Love\" were top-ten chart hits. Though not as commercially successful in the United States, Squeeze had American hits with \"Tempted\", \"Black Coffee in Bed\", and \"Hourglass\", and were considered a part of the Second British Invasion.\nIn the vast majority of their material, lyrics are written by Chris Difford and music by Glenn Tilbrook, who are guitarists and vocalists in the band. The duo were hailed as \"the heirs to Lennon and McCartney's throne\" during the band's initial popularity in the late 1970s. The group formed in Deptford, London, in 1974, and first broke up in 1982. Squeeze then reformed in 1985, and disbanded again in 1999.\nThe band reunited for tours through the United States and United Kingdom in 2007. In 2010, they issued Spot the Difference, an album of newly recorded versions of older material. The band's first album of all-new material since 1998, Cradle to the Grave, was released in October 2015, followed by another album, The Knowledge, in October 2017.\n\n",
+    "overview": "Squeeze are an English rock band that came to prominence in the United Kingdom during the new wave period of the late 1970s, and continued recording in the 1980s, 1990s and 2010s. In the UK, their singles \"Cool for Cats\", \"Up the Junction\", and \"Labelled with Love\" were top-ten chart hits. Though not as commercially successful in the United States, Squeeze had American hits with \"Tempted\", \"Black Coffee in Bed\", and \"Hourglass\", and were considered a part of the Second British Invasion.\nIn the vast majority of their material, lyrics are written by Chris Difford and music by Glenn Tilbrook, who are guitarists and vocalists in the band. The duo were hailed as \"the heirs to Lennon and McCartney's throne\" during the band's initial popularity in the late 1970s. The group formed in Deptford, London, in 1974, and first broke up in 1982. Squeeze then reformed in 1985, and disbanded again in 1999.\nThe band reunited for tours through the United States and United Kingdom in 2007. In 2010, they issued Spot the Difference, an album of newly recorded versions of older material. The band's first album of all-new material since 1998, Cradle to the Grave, was released in October 2015, followed by another album, The Knowledge, in October 2017.",
     "artistType": "Group",
     "disambiguation": "UK new wave band",
     "links": [
@@ -13040,7 +13090,7 @@
     "foreignArtistId": "0688add2-c282-4ee2-ba61-223ffdb3c201",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Bauhaus were an English rock band formed in Northampton in 1978. Known for their dark image and gloomy sound, Bauhaus are one of the pioneers of gothic rock, although they mixed many genres, including dub, glam rock, psychedelia, and funk. The group consisted of Daniel Ash (guitar, saxophone), Peter Murphy (vocals, occasional instruments), Kevin Haskins (drums) and David J (bass).\nThe band formed under the name Bauhaus 1919, in reference to the first operating year of the German art school Bauhaus, but they shortened this name within a year of formation. Their 1979 debut single \"Bela Lugosi's Dead\" is considered one of the harbingers of gothic rock music and has been influential on contemporary goth culture. Their debut album, In the Flat Field, is regarded as one of the first gothic rock records. Their 1981 second album Mask expanded their sound by incorporating a wider variety of instruments—such as keyboards, saxophone and acoustic guitar—and experimenting with funk-inspired rhythms on tracks like \"Kick in the Eye\". Bauhaus went on to achieve mainstream success in the United Kingdom with their third album, The Sky's Gone Out, which peaked at No. 3 on the UK Albums Chart in 1982. That same year, they also reached No. 15 on the Singles Chart with a standalone cover of David Bowie's \"Ziggy Stardust\", earning them an appearance on Top of the Pops. During recording sessions for their next album, Murphy fell ill and spent much of his time away from the studio, leaving the rest of the band to compensate for his absence. This created a rift between the singer and his bandmates, culminating in the group's dissolution on 5 July 1983, one week before Burning from the Inside was released. Featuring the Top 30 UK single \"She's in Parties\", it would be their final studio album composed entirely of new material for a quarter of a century.\nAfter Bauhaus' breakup, Murphy formed Dalis Car with bassist Mick Karn before beginning a solo career later on, while Ash and Haskins continued as Tones on Tail and, later, reunited with David J to form Love and Rockets. Murphy's solo career enjoyed greater commercial success in the United States than Bauhaus, as did Love and Rockets. Bauhaus eventually reunited for a 1998 tour, again from 2005 to 2008, and in 2019 and 2022.\n\n",
+    "overview": "Bauhaus were an English rock band formed in Northampton in 1978. Known for their dark image and gloomy sound, Bauhaus are one of the pioneers of gothic rock, although they mixed many genres, including dub, glam rock, psychedelia, and funk. The group consisted of Daniel Ash (guitar, saxophone), Peter Murphy (vocals, occasional instruments), Kevin Haskins (drums) and David J (bass).\nThe band formed under the name Bauhaus 1919, in reference to the first operating year of the German art school Bauhaus, but they shortened this name within a year of formation. Their 1979 debut single \"Bela Lugosi's Dead\" is considered one of the harbingers of gothic rock music and has been influential on contemporary goth culture. Their debut album, In the Flat Field, is regarded as one of the first gothic rock records. Their 1981 second album Mask expanded their sound by incorporating a wider variety of instruments—such as keyboards, saxophone and acoustic guitar—and experimenting with funk-inspired rhythms on tracks like \"Kick in the Eye\". Bauhaus went on to achieve mainstream success in the United Kingdom with their third album, The Sky's Gone Out, which peaked at No. 3 on the UK Albums Chart in 1982. That same year, they also reached No. 15 on the Singles Chart with a standalone cover of David Bowie's \"Ziggy Stardust\", earning them an appearance on Top of the Pops. During recording sessions for their next album, Murphy fell ill and spent much of his time away from the studio, leaving the rest of the band to compensate for his absence. This created a rift between the singer and his bandmates, culminating in the group's dissolution on 5 July 1983, one week before Burning from the Inside was released. Featuring the Top 30 UK single \"She's in Parties\", it would be their final studio album composed entirely of new material for a quarter of a century.\nAfter Bauhaus' breakup, Murphy formed Dalis Car with bassist Mick Karn before beginning a solo career later on, while Ash and Haskins continued as Tones on Tail and, later, reunited with David J to form Love and Rockets. Murphy's solo career enjoyed greater commercial success in the United States than Bauhaus, as did Love and Rockets. Bauhaus eventually reunited for a 1998 tour, again from 2005 to 2008, and in 2019 and 2022.",
     "artistType": "Group",
     "disambiguation": "UK gothic rock band",
     "links": [
@@ -13642,7 +13692,7 @@
     "foreignArtistId": "e795e03d-b5d5-4a5f-834d-162cfb308a2c",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Polly Jean Harvey  (born 9 October 1969) is an English singer-songwriter. Primarily known as a vocalist and guitarist, she is also proficient with a wide range of instruments.\nHarvey began her career in 1988 when she joined local band Automatic Dlamini as a vocalist, guitarist and saxophonist. The band's frontman, John Parish, became her long-term collaborator. In 1991, she formed a trio called PJ Harvey and subsequently began her career as PJ Harvey. The trio released two acclaimed studio albums called Dry (1992) and Rid of Me (1993) before disbanding, after which Harvey continued as a solo artist. Since 1995, she has released a further ten studio albums with collaborations from various musicians including Parish, former bandmate Rob Ellis, Mick Harvey, and Eric Drew Feldman, and has also worked extensively with record producer Flood.\nAmong the accolades Harvey has received are both the 2001 and 2011 Mercury Prize for Stories from the City, Stories from the Sea (2000) and Let England Shake (2011), respectively, making her the only artist to have been awarded the prize twice. She has also received eight Brit Award nominations, eight Grammy Award nominations and two further Mercury Prize nominations. Rolling Stone awarded her three accolades: 1992's Best New Artist and Best Singer Songwriter, and 1995's Artist of the Year. Rolling Stone also listed Rid of Me, To Bring You My Love, and Stories from the City, Stories from the Sea on its list of their 500 Greatest Albums of All Time. In 2011, she was awarded for Outstanding Contribution to Music at the NME Awards. In the 2013 Birthday Honours, she was appointed a Member of the Order of the British Empire (MBE) for services to music.",
+    "overview": "Polly Jean Harvey  (born 9 October 1969) is an English singer-songwriter. Primarily known as a vocalist and guitarist, she is also proficient with a wide range of instruments.\nHarvey began her career in 1988 when she joined local band Automatic Dlamini as a vocalist, guitarist and saxophonist. The band's frontman, John Parish, became her long-term collaborator. In 1991, she formed a trio called PJ Harvey and subsequently began her career as PJ Harvey. The trio released two acclaimed studio albums called Dry (1992) and Rid of Me (1993) before disbanding, after which Harvey continued as a solo artist. Since 1995, she has released a further ten studio albums with collaborations from various musicians including Parish, former bandmate Rob Ellis, Mick Harvey, and Eric Drew Feldman, and has also worked extensively with record producer Flood.\nAmong the accolades Harvey has received are both the 2001 and 2011 Mercury Prize for Stories from the City, Stories from the Sea (2000) and Let England Shake (2011), respectively, making her the only artist to have been awarded the prize twice. She has also received eight Brit Award nominations, eight Grammy Award nominations and two further Mercury Prize nominations. Rolling Stone awarded her three accolades: 1992's Best New Artist and Best Singer Songwriter, and 1995's Artist of the Year. Rolling Stone also listed Rid of Me, To Bring You My Love, and Stories from the City, Stories from the Sea on its list of their 500 Greatest Albums of All Time. In 2011, she was awarded for Outstanding Contribution to Music at the NME Awards. In the 2013 Birthday Honours, she was appointed a Member of the Order of the British Empire (MBE) for services to music.\n\n",
     "artistType": "Person",
     "disambiguation": "",
     "links": [
@@ -14073,7 +14123,7 @@
     "foreignArtistId": "32efea44-6cb5-4b4f-bdaa-c8b8f6cef981",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Manic Street Preachers, also known simply as the Manics, are a Welsh rock band formed in Blackwood, Caerphilly, in 1986. The band consists of Nicky Wire (bass guitar, lyrics) and cousins James Dean Bradfield (lead vocals, lead guitar) and Sean Moore (drums, percussion, soundscapes). They form a key part of the 1990s Welsh Cool Cymru cultural movement.\nFollowing the release of their debut single \"Suicide Alley\" in 1988, Manic Street Preachers became a quartet with the addition of Richey Edwards as co-lyricist and rhythm guitarist. The band's early albums were in a punk vein, eventually broadening to a greater alternative rock sound, whilst retaining a leftist political outlook. Their early combination of androgynous glam imagery and lyrics about \"culture, alienation, boredom and despair\" gained them a loyal following.\nManic Street Preachers' first charting single was \"Motown Junk\" in 1991, followed by their debut album, Generation Terrorists, in February 1992. The band's next two albums were Gold Against the Soul in 1993 and The Holy Bible in 1994, the latter being the last album with Edwards, who disappeared in February 1995 and was legally presumed dead in 2008. The band continued as a trio, and achieved commercial success with the albums Everything Must Go (1996) and This Is My Truth Tell Me Yours (1998).\nThe Manics have headlined festivals including Glastonbury, T in the Park, V Festival and Reading, winning eleven NME Awards, eight Q Awards and four BRIT Awards. They were nominated for the Mercury Prize in 1996 and 1999, and have had one nomination for the MTV Europe Music Awards. The band has sold more than ten million albums worldwide. The Manics have two number-one singles in the UK charts: \"If You Tolerate This Your Children Will Be Next\" (1998) and \"The Masses Against the Classes\" (2000), as well as two number-one albums: This Is My Truth Tell Me Yours and The Ultra Vivid Lament (2021). From 1991 to 2010, the band recorded 33 consecutive top 40 singles in the UK.",
+    "overview": "Manic Street Preachers, also known simply as the Manics, are a Welsh rock band formed in Blackwood, Caerphilly, in 1986. The band consists of Nicky Wire (bass guitar, lyrics) and cousins James Dean Bradfield (lead vocals, lead guitar) and Sean Moore (drums, percussion, soundscapes). They form a key part of the 1990s Welsh Cool Cymru cultural movement.\nFollowing the release of their debut single \"Suicide Alley\" in 1988, Manic Street Preachers became a quartet with the addition of Richey Edwards as co-lyricist and rhythm guitarist. The band's early albums were in a punk vein, eventually broadening to a greater alternative rock sound, whilst retaining a leftist political outlook. Their early combination of androgynous glam imagery and lyrics about \"culture, alienation, boredom and despair\" gained them a loyal following.\nManic Street Preachers' first charting single was \"Motown Junk\" in 1991, followed by their debut album, Generation Terrorists, in February 1992. The band's next two albums were Gold Against the Soul in 1993 and The Holy Bible in 1994, the latter being the last album with Edwards, who disappeared in February 1995 and was legally presumed dead in 2008. The band continued as a trio, and achieved commercial success with the albums Everything Must Go (1996) and This Is My Truth Tell Me Yours (1998).\nThe Manics have headlined festivals including Glastonbury, T in the Park, V Festival and Reading, winning eleven NME Awards, eight Q Awards and four BRIT Awards. They were nominated for the Mercury Prize in 1996 and 1999, and have had one nomination for the MTV Europe Music Awards. The band has sold more than ten million albums worldwide. The Manics have two number-one singles in the UK charts: \"If You Tolerate This Your Children Will Be Next\" (1998) and \"The Masses Against the Classes\" (2000), as well as two number-one albums: This Is My Truth Tell Me Yours and The Ultra Vivid Lament (2021). From 1991 to 2010, the band recorded 33 consecutive top 40 singles in the UK.\n\n",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -16655,7 +16705,7 @@
     "foreignArtistId": "f41490ce-fe39-435d-86c0-ab5ce098b423",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Simple Minds are a Scottish rock band formed in Glasgow in 1977, becoming best known internationally for their song \"Don't You (Forget About Me)\" (1985), which topped the Billboard Hot 100 in the United States. Other commercially successful singles include \"Promised You a Miracle\" (1982), \"Glittering Prize\" (1982), \"Someone Somewhere in Summertime\" (1982), \"Waterfront\" (1983), \"Alive and Kicking\" (1985), \"Sanctify Yourself\" (1986), \"Let There Be Love\" (1991), \"She's a River\" (1995), and the UK number one single \"Belfast Child\" (1989).\nSimple Minds have achieved 24 top 40 singles on the UK Singles Chart, and 23 top 40 albums on the UK Albums Chart, including five number one albums: Sparkle in the Rain (1984), Once Upon a Time (1985), Live in the City of Light (1987), Street Fighting Years (1989), and Glittering Prize 81/92 (1992). They have sold more than 60 million albums worldwide, and were the most commercially successful Scottish band of the 1980s. Simple Minds have had chart success in the United States, Australia, Germany, Spain, Italy and New Zealand. Despite various personnel changes, they continue to record and tour.\nIn 2014, Simple Minds were awarded the Q Inspiration Award for their contribution to the music industry and an Ivor Novello Award in 2016 for Outstanding Song Collection from the British Academy of Songwriters, Composers, and Authors (BASCA). Other notable recognitions include nominations for both the MTV Video Music Award for Best Direction and MTV Video Music Award for Best Art Direction for \"Don't You (Forget About Me)\" in 1985, nomination for the Brit Award for British Group in 1986 and for the American Music Award for Favorite Pop/Rock Band/Duo/Group in 1987. \"Belfast Child\" was nominated for the Song of the Year at the Brit Awards 1990.\nSinger Jim Kerr and guitarist Charlie Burchill are the two members who have been with the band throughout its whole history. The other current band members are bassist Ged Grimes,  drummer Cherisse Osei, backing singer Sarah Brown, guitarist and keyboardist Gordy Goudie and keyboardist Erik Ljunggren. Notable former members include keyboardist Mick MacNeil, bassists Derek Forbes and John Giblin and drummers Brian McGee and Mel Gaynor.\n\n",
+    "overview": "Simple Minds are a Scottish rock band formed in Glasgow in 1977, becoming best known internationally for their song \"Don't You (Forget About Me)\" (1985), which topped the Billboard Hot 100 in the United States. Other commercially successful singles include \"Promised You a Miracle\" (1982), \"Glittering Prize\" (1982), \"Someone Somewhere in Summertime\" (1982), \"Waterfront\" (1983), \"Alive and Kicking\" (1985), \"Sanctify Yourself\" (1986), \"Let There Be Love\" (1991), \"She's a River\" (1995), and the UK number one single \"Belfast Child\" (1989).\nSimple Minds have achieved 24 top 40 singles on the UK Singles Chart, and 23 top 40 albums on the UK Albums Chart, including five number one albums: Sparkle in the Rain (1984), Once Upon a Time (1985), Live in the City of Light (1987), Street Fighting Years (1989), and Glittering Prize 81/92 (1992). They have sold more than 60 million albums worldwide, and were the most commercially successful Scottish band of the 1980s. Simple Minds have had chart success in the United States, Australia, Germany, Spain, Italy and New Zealand. Despite various personnel changes (and the reduction of the core band to founder members Jim Kerr and Charlie Burchill), they continue to record and tour.\nIn 2014, Simple Minds were awarded the Q Inspiration Award for their contribution to the music industry and an Ivor Novello Award in 2016 for Outstanding Song Collection from the British Academy of Songwriters, Composers, and Authors (BASCA). Other notable recognitions include nominations for both the MTV Video Music Award for Best Direction and MTV Video Music Award for Best Art Direction for \"Don't You (Forget About Me)\" in 1985, nomination for the Brit Award for British Group in 1986 and for the American Music Award for Favorite Pop/Rock Band/Duo/Group in 1987. \"Belfast Child\" was nominated for the Song of the Year at the Brit Awards 1990.\nSinger Jim Kerr and guitarist Charlie Burchill are the two members who have been with the band throughout its whole history, and the only current permanent members and songwriters. As of 2023, the other current members of the live and studio band are bassist Ged Grimes,  drummer Cherisse Osei, backing singer Sarah Brown, guitarist and keyboardist Gordy Goudie and keyboardist Erik Ljunggren. Notable former members include keyboardist Mick MacNeil, bassists Derek Forbes and John Giblin and drummers Brian McGee and Mel Gaynor.\n\n",
     "artistType": "Group",
     "disambiguation": "Scottish rock band",
     "links": [
@@ -17862,7 +17912,7 @@
     "foreignArtistId": "661ddbff-8045-492d-a9f3-5076d74639e6",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "The Silencers are a Scottish rock band formed in London in 1986 by Jimme O'Neill and Cha Burns, two ex-members of the post-punk outfit Fingerprintz. Their music is characterised by a melodic blend of pop, folk and traditional Celtic influences. Often compared to Scottish bands with a similar sound like Big Country, Del Amitri and The Proclaimers, The Silencers have distinguished themselves with their eclectic sounds, prolific output and continued career. Their first single, \"Painted Moon,\" was a minor international hit and invited critical comparisons to Simple Minds and U2. In 1987 they released their first album A Letter From St. Paul, which included \"Painted Moon\" and another minor hit, \"I See Red.\" Buoyed by the huge European hit \"Bulletproof Heart\", the band's third album Dance to the Holy Man is the band's commercial peak to date. Throughout the 1990s, The Silencers saw a  popular taste shift away from their songwriter-based style of music toward grunge and electronic music.",
+    "overview": "The Silencers are a Scottish rock band formed in London in 1986 by Jimme O'Neill and Cha Burns, two ex-members of the post-punk outfit Fingerprintz. Their music is characterised by a melodic blend of pop, folk and traditional Celtic influences. Often compared to Scottish bands with a similar sound like Big Country, Del Amitri and The Proclaimers, The Silencers have distinguished themselves with their eclectic sounds, prolific output and continued career. Their first single, \"Painted Moon,\" was a minor international hit and invited critical comparisons to Simple Minds and U2. In 1987 they released their first album A Letter From St. Paul, which included \"Painted Moon\" and another minor hit, \"I See Red.\" Buoyed by the huge European hit \"Bulletproof Heart\", the band's third album Dance to the Holy Man is the band's commercial peak to date. Throughout the 1990s, The Silencers saw a  popular taste shift away from their songwriter-based style of music toward grunge and electronic music.\n\n",
     "artistType": "Group",
     "disambiguation": "Scottish rock band",
     "links": [
@@ -18842,7 +18892,7 @@
     "foreignArtistId": "e212efdf-98b2-4dce-92ed-62cfc1e29854",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Skunk Anansie is a British rock band whose members include Skin (lead vocals, guitar), Cass (bass, guitar, backing vocals), Ace (guitar, backing vocals) and Mark Richardson (drums and percussion).\nSkunk Anansie formed in 1994, disbanded in 2001 and reformed in 2009. The name \"Skunk Anansie\" is taken from Akan folk tales of Anansi the spider-man of Ghana, with \"Skunk\" added to \"make the name nastier\".\nThey have released six studio albums: Paranoid & Sunburnt (1995), Stoosh (1996), Post Orgasmic Chill (1999), Wonderlustre (2010), Black Traffic (2012) and Anarchytecture (2016); one compilation album, Smashes and Trashes (2009); and several hit singles, including \"Charity\", \"Hedonism\", \"Selling Jesus\" and \"Weak\".\nThey are often grouped as part of the Britrock movement, as opposed to the contemporary Britpop of their early years due to their overall harder sound. The band, in 2004, was named as one of the most successful UK chart acts between 1952 and 2003 by the Guinness Book of British Hit Singles & Albums, with a total of 142 weeks on both the singles and album charts ranking them at No. 491. Skunk Anansie have sold 5 million records.",
+    "overview": "Skunk Anansie are a British rock band whose members include Skin (lead vocals, guitar), Cass (bass, guitar, backing vocals), Ace (guitar, backing vocals) and Mark Richardson (drums and percussion).\nSkunk Anansie formed in 1994, disbanded in 2001 and reformed in 2009. The name \"Skunk Anansie\" is taken from Akan folk tales of Anansi the spider-man of Ghana, with \"Skunk\" added to \"make the name nastier\".\nThey have released six studio albums: Paranoid & Sunburnt (1995), Stoosh (1996), Post Orgasmic Chill (1999), Wonderlustre (2010), Black Traffic (2012) and Anarchytecture (2016); one compilation album, Smashes and Trashes (2009); and several hit singles, including \"Charity\", \"Hedonism\", \"Selling Jesus\" and \"Weak\".\nThey are often grouped as part of the Britrock movement, as opposed to the contemporary Britpop of their early years due to their overall harder sound. The band, in 2004, was named as one of the most successful UK chart acts between 1952 and 2003 by the Guinness Book of British Hit Singles & Albums, with a total of 142 weeks on both the singles and album charts ranking them at No. 491. Skunk Anansie have sold 5 million records.",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -19259,7 +19309,7 @@
     "foreignArtistId": "e6f8912b-7df9-4aae-b551-2cd03dc29588",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Teenage Fanclub are a Scottish alternative rock band formed in Glasgow in 1989. The group were founded by Norman Blake (vocals, guitar), Raymond McGinley (vocals, lead guitar) and Gerard Love (vocals, bass), all of whom shared lead vocals and songwriting duties until Love's departure in 2018. As of 2023, the band's lineup consists of Blake, McGinley, Francis Macdonald (drums, vocals), Dave McGowan (bass, vocals) and Euros Childs (keyboards, vocals).\nIn concert the band usually alternate among its songwriters, giving equal playing time to each one's songs. Although often pegged as alternative rock, the group have incorporated a wide variety of elements from various music styles.\nTeenage Fanclub have had a succession of drummers, namely Francis Macdonald, Brendan O'Hare and Paul Quinn. Keyboardist Finlay Macdonald (no relation) has also been a member. As of 2023, the band have released 12 studio albums and two compilation albums.\n\n",
+    "overview": "Teenage Fanclub are a Scottish alternative rock band formed in Glasgow in 1989. The group were founded by Norman Blake (vocals, guitar), Raymond McGinley (vocals, lead guitar) and Gerard Love (vocals, bass), all of whom shared lead vocals and songwriting duties until Love's departure in 2018. As of 2023, the band's lineup consists of Blake, McGinley, Francis Macdonald (drums, vocals), Dave McGowan (bass, vocals) and Euros Childs (keyboards, vocals).\nIn concert the band usually alternate among its songwriters, giving equal playing time to each one's songs. Although often pegged as alternative rock, the group have incorporated a wide variety of elements from various music styles.\nTeenage Fanclub have had a succession of drummers, namely Francis Macdonald, Brendan O'Hare and Paul Quinn. Keyboardist Finlay Macdonald (no relation) has also been a member. As of 2023, the band have released 12 studio albums and two compilation albums.",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -19484,7 +19534,7 @@
         "remoteUrl": "https://imagecache.lidarr.audio/v1/tadb/artist/banner/3idyty1695397978.jpg"
       },
       {
-        "url": "/MediaCover/117/poster.jpg?lastWrite=638309940590000000",
+        "url": "/MediaCover/117/poster.jpg?lastWrite=638602808730000000",
         "coverType": "poster",
         "extension": ".jpg",
         "remoteUrl": "https://imagecache.lidarr.audio/v1/tadb/artist/thumb/zi4sqa1695397253.jpg"
@@ -21257,10 +21307,10 @@
       "value": 8.7
     },
     "statistics": {
-      "albumCount": 14,
+      "albumCount": 15,
       "trackFileCount": 0,
-      "trackCount": 488,
-      "totalTrackCount": 542,
+      "trackCount": 496,
+      "totalTrackCount": 550,
       "sizeOnDisk": 0,
       "percentOfTracks": 0
     },
@@ -27660,7 +27710,7 @@
     "foreignArtistId": "f2cb0435-d643-4fab-9587-fdb0279330a7",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Razorlight are an English indie rock band, formed in 2002 in London by lead singer and guitarist Johnny Borrell. Along with Borrell, the current line-up of the band is composed of founding members Björn Ågren on guitar and bassist Carl Delemo, as well as drummer Andy Burrows. This lineup is a reunion of the lineup from the band's second and third albums.\nThe band have gone through several line-up changes, with Borrell remaining the sole permanent member. They released three studio albums before splitting up in 2014. The band reformed in 2017 and released the album Olympus Sleeping in 2018.\nThey are best known for the singles \"Golden Touch\", \"Somewhere Else\", \"In The Morning\" and \"America\", the latter of which was a number-one single on the UK Singles Chart in 2006.",
+    "overview": "Razorlight are an English indie rock band, formed in 2002 in London by lead singer and guitarist Johnny Borrell. Along with Borrell, the current line-up of the band is composed of founding members Björn Ågren on guitar and bassist Carl Delemo, as well as drummer Andy Burrows. This lineup is a reunion of the lineup from the band's second and third albums.\nThe band have gone through several line-up changes, with Borrell remaining the sole permanent member. They released three studio albums before splitting up in 2014. The band reformed in 2017 and released the album Olympus Sleeping in 2018.\nThey are best known for the singles \"Golden Touch\", \"Somewhere Else\", \"In The Morning\" and \"America\", the latter of which was a number-one single on the UK Singles Chart in 2006.\n\n",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -27743,8 +27793,50 @@
       {
         "url": "https://itunes.apple.com/gb/artist/id13457694",
         "name": "apple"
+      },
+      {
+        "url": "https://music.apple.com/gb/artist/13457694",
+        "name": "apple"
       }
     ],
+    "nextAlbum": {
+      "artistMetadataId": 285,
+      "foreignAlbumId": "94b09594-7098-471b-af2c-40a2eab0dec5",
+      "oldForeignAlbumIds": [],
+      "title": "Planet Nowhere",
+      "overview": "",
+      "disambiguation": "",
+      "releaseDate": "2024-10-25T00:00:00Z",
+      "images": [
+        {
+          "url": "https://imagecache.lidarr.audio/v1/caa/f3dc3155-e10f-4757-ad87-e3869ae86265/39872152205-1200.jpg",
+          "coverType": "cover",
+          "extension": ".jpg"
+        }
+      ],
+      "links": [],
+      "genres": [],
+      "albumType": "Album",
+      "secondaryTypes": [],
+      "ratings": {
+        "votes": 0,
+        "value": 0
+      },
+      "cleanTitle": "planetnowhere",
+      "profileId": 1,
+      "monitored": true,
+      "anyReleaseOk": true,
+      "lastInfoSync": "2024-09-15T17:49:31Z",
+      "added": "2024-09-15T17:49:30Z",
+      "addOptions": {
+        "addType": "automatic",
+        "searchForNewAlbum": false
+      },
+      "artistMetadata": null,
+      "albumReleases": null,
+      "artist": null,
+      "id": 2287
+    },
     "images": [
       {
         "url": "/MediaCover/177/banner.jpg?lastWrite=638419766298704240",
@@ -28234,7 +28326,7 @@
     "foreignArtistId": "013fa897-86db-41d3-8e9f-386c8a34f4e6",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Steven Patrick Morrissey ( MORR-iss-ee; born 22 May 1959), known mononymously as Morrissey, is an English singer and songwriter. He came to prominence as the frontman and lyricist of rock band the Smiths, who were active from 1982 to 1987. Since then, he has pursued a successful solo career. Morrissey's music is characterised by his baritone voice and distinctive lyrics with recurring themes of emotional isolation, sexual longing, self-deprecating and dark humour, and anti-establishment stances.\nMorrissey was born to working-class Irish immigrants in Davyhulme, Lancashire, England; the family lived in Queen's Court near the Loreto convent in Hulme and his mother worked nearby at the Hulme Hippodrome bingo hall. They moved because of the 1960s demolitions of almost all the Victorian-era houses in Hulme, known as 'slum clearance', and he grew up in nearby Stretford. As a child, he developed a love of literature, kitchen sink realism, and 1960s pop music. In the late 1970s, he fronted the punk rock band the Nosebleeds with little success before beginning a career in music journalism and writing several books on music and film in the early 1980s. He formed the Smiths with Johnny Marr in 1982 and the band soon attracted national recognition for their eponymous debut album. As the band's frontman, Morrissey attracted attention for his trademark quiff and witty and sardonic lyrics. Deliberately avoiding rock machismo, he cultivated the image of a sexually ambiguous social outsider who embraced celibacy. The Smiths released three further studio albums—Meat Is Murder, The Queen Is Dead, and Strangeways, Here We Come—and had a string of hit singles. The band were critically acclaimed and attracted a cult following. Personal differences between Morrissey and Marr resulted in the separation of the Smiths in 1987.\nIn 1988, Morrissey launched his solo career with Viva Hate. This album and its follow-ups—Kill Uncle (1991), Your Arsenal (1992), and Vauxhall and I (1994)—all did well on the UK Albums Chart and spawned multiple hit singles. He took on Alain Whyte and Boz Boorer as his main co-writers to replace Marr. During this time his image began to shift into that of a burlier figure who toyed with patriotic imagery and working-class masculinity. In the mid-to-late 1990s, his albums Southpaw Grammar (1995) and Maladjusted (1997) also charted but were less well received. Relocating to Los Angeles, he took a musical hiatus from 1998 to 2003 before releasing a successful comeback album, You Are the Quarry, in 2004. Ensuing years saw the release of albums Ringleader of the Tormentors (2006), Years of Refusal (2009), World Peace Is None of Your Business (2014), Low in High School (2017), California Son (2019), and I Am Not a Dog on a Chain (2020), as well as his autobiography and his debut novel, List of the Lost (2015).\nHighly influential, Morrissey has been credited as a seminal figure in the emergence of indie pop, indie rock, and Britpop. In a 2006 poll for the BBC's Culture Show, Morrissey was voted the second-greatest living British cultural icon. His work has been the subject of academic study. He has been a controversial figure throughout his music career due to his forthright opinions and outspoken nature, endorsing vegetarianism and animal rights and criticising royalty and prominent politicians. He has also supported far-right activism with regard to British heritage, and defended a particular vision of national identity while critiquing the effects of immigration on the UK.",
+    "overview": "Steven Patrick Morrissey ( MORR-iss-ee; born 22 May 1959), known mononymously as Morrissey, is an English singer and songwriter. He came to prominence as the frontman and lyricist of rock band the Smiths, who were active from 1982 to 1987. Since then, he has pursued a successful solo career. Morrissey's music is characterised by his baritone voice and distinctive lyrics with recurring themes of emotional isolation, sexual longing, self-deprecating and dark humour, and anti-establishment stances.\nMorrissey was born to working-class Irish immigrants in Davyhulme, Lancashire, England; the family lived in Queen's Court near the Loreto convent in Hulme and his mother worked nearby at the Hulme Hippodrome bingo hall. They moved because of the 1960s demolitions of almost all the Victorian-era houses in Hulme, known as 'slum clearance', and he grew up in nearby Stretford. As a child, he developed a love of literature, kitchen sink realism, and 1960s pop music. In the late 1970s, he fronted the punk rock band the Nosebleeds with little success before beginning a career in music journalism and writing several books on music and film in the early 1980s. He formed the Smiths with Johnny Marr in 1982 and the band soon attracted national recognition for their eponymous debut album. As the band's frontman, Morrissey attracted attention for his trademark quiff and witty and sardonic lyrics. Deliberately avoiding rock machismo, he cultivated the image of a sexually ambiguous social outsider who embraced celibacy. The Smiths released three further studio albums—Meat Is Murder, The Queen Is Dead, and Strangeways, Here We Come—and had a string of hit singles. The band were critically acclaimed and attracted a cult following. Personal differences between Morrissey and Marr resulted in the separation of the Smiths in 1987.\nIn 1988, Morrissey launched his solo career with Viva Hate. This album and its follow-ups—Kill Uncle (1991), Your Arsenal (1992), and Vauxhall and I (1994)—all did well on the UK Albums Chart and spawned multiple hit singles. He took on Alain Whyte and Boz Boorer as his main co-writers to replace Marr. During this time his image began to shift into that of a burlier figure who toyed with patriotic imagery and working-class masculinity. In the mid-to-late 1990s, his albums Southpaw Grammar (1995) and Maladjusted (1997) also charted but were less well received. Relocating to Los Angeles, he took a musical hiatus from 1998 to 2003 before releasing a successful comeback album, You Are the Quarry, in 2004. Ensuing years saw the release of albums Ringleader of the Tormentors (2006), Years of Refusal (2009), World Peace Is None of Your Business (2014), Low in High School (2017), California Son (2019), and I Am Not a Dog on a Chain (2020), as well as his autobiography and his debut novel, List of the Lost (2015).\nHighly influential, Morrissey has been credited as a seminal figure in the emergence of indie pop, indie rock, and Britpop. In a 2006 poll for the BBC's Culture Show, Morrissey was voted the second-greatest living British cultural icon. His work has been the subject of academic study. He has been a controversial figure throughout his music career due to his forthright opinions and outspoken nature, endorsing vegetarianism and animal rights and criticising royalty and prominent politicians. He has also supported far-right activism with regard to British heritage, and defended a particular vision of national identity while critiquing the effects of immigration on the UK.\n\n",
     "artistType": "Person",
     "disambiguation": "English singer / songwriter",
     "links": [
@@ -29712,7 +29804,7 @@
     "foreignArtistId": "88a4cd4e-5dee-4153-8462-0d5e43c75f47",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Feeder are a British rock band formed in Newport, South Wales in 1994. They have released 12 studio albums, 12 compilations, four EPs, and 43 singles while accumulating 25 top 75 singles between 1997 and 2012. At the peak of their commercial success, Feeder won two Kerrang! Awards in 2001 and 2003; they were inducted into their Hall of Fame in August 2019.\nFeeder are one of the prominent acts of the ‘Cool Cymru’ movement in Wales in the 1990s. They are also one of the Britpop-era bands to have continued success long after their peak. Their 2024 album Black/Red debuted at number eight, three decades after the group formed, and 25 years after their first top 10 album Yesterday Went Too Soon.\nThe band was formed in 1994, although an earlier incarnation under the name of \"Reel\" was formed in 1992 by vocalist and guitarist Grant Nicholas, drummer Jon Lee and bassist Simon Blight, three of the four members of Raindancer, after the departure of that band's other member, guitarist John Canham. However, Blight left Reel later in 1992, and the band played with many session bassists before hiring Taka Hirose in 1994 and re-establishing themselves as Feeder; that year, the band signed with The Echo Label.\nFeeder garnered media attention in 2001 for their third album, Echo Park, and its lead single, \"Buck Rogers\", which later became a UK top five Platinum-selling single. Jon Lee died by suicide at his Miami home in January 2002, after which the remaining members began to record and play with former Skunk Anansie drummer Mark Richardson. They released their fourth album, Comfort in Sound, later that year; it touched on themes such as loss and coming to terms with death, while also exploring themes of positivity. Richardson was ultimately made an official member, remaining so until May 2009 when he returned to a reformed Skunk Anansie. Feeder have since worked with a roster of drummers live and in the studio, including Tim Trotter, Karl Brazil and former Elviss drummer Geoff Holroyde. Between 2010 and 2017, the band charted four more top 20 albums, with the latest of these being 2017's The Best of Feeder their second consecutive top 10 album. In 2019, the band signed a deal with Believe UK to release their tenth studio album, Tallulah.\n\n",
+    "overview": "Feeder are a Welsh rock band formed in Newport, South Wales in 1994. They have released 12 studio albums, 12 compilations, four EPs, and 43 singles while accumulating 25 top 75 singles between 1997 and 2012. At the peak of their commercial success, Feeder won two Kerrang! Awards in 2001 and 2003; they were inducted into their Hall of Fame in August 2019.\nFeeder are one of the prominent acts of the ‘Cool Cymru’ movement in Wales in the 1990s. They are also one of the Britpop-era bands to have continued success long after their peak. Their 2024 album Black/Red debuted at number eight, three decades after the group formed, and 25 years after their first top 10 album Yesterday Went Too Soon.\nThe band was formed in 1994, although an earlier incarnation under the name of \"Reel\" was formed in 1992 by vocalist and guitarist Grant Nicholas, drummer Jon Lee and bassist Simon Blight, three of the four members of Raindancer, after the departure of that band's other member, guitarist John Canham. However, Blight left Reel later in 1992, and the band played with many session bassists before hiring Taka Hirose in 1994 and re-establishing themselves as Feeder; that year, the band signed with The Echo Label.\nFeeder garnered media attention in 2001 for their third album, Echo Park, and its lead single, \"Buck Rogers\", which later became a UK top five Platinum-selling single. Jon Lee died by suicide at his Miami home in January 2002, after which the remaining members began to record and play with former Skunk Anansie drummer Mark Richardson. They released their fourth album, Comfort in Sound, later that year; it touched on themes such as loss and coming to terms with death, while also exploring themes of positivity. Richardson was ultimately made an official member, remaining so until May 2009 when he returned to a reformed Skunk Anansie. Feeder have since worked with a roster of drummers live and in the studio, including Tim Trotter, Karl Brazil and former Elviss drummer Geoff Holroyde. Between 2010 and 2017, the band charted four more top 20 albums, with the latest of these being 2017's The Best of Feeder their second consecutive top 10 album. In 2019, the band signed a deal with Believe UK to release their tenth studio album, Tallulah.\nComfort in Sound is one of the most successful albums of all time to be released in the United Kingdom as an independent album, spending a total of 121 non-consecutive weeks in the Top 50 of the U.K. Independent Albums Chart, with 47 of those also non-consecutive spent in the top 10. The album spent two weeks at No.1 on this listing, while also going Platinum for pure sales of over 500,000, passing this number in 2012.\nIn addition to this distinction, the band also have two No.1 albums on the Record Store Chart, which tracks the best-selling albums every week from UK independent record stores. As a result, the band have two Specialist Chart Awards from The Official Charts Company, with their albums Tallulah and Torpedo both making the summit in 2019 and 2022 respectively.\n\n",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -30036,7 +30128,7 @@
     "foreignArtistId": "03143cba-d359-4bd9-8ab3-5ba6590f9933",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "The Icicle Works (also known as Icicle Works in the United States) are an English alternative rock band, named after the 1960 short story \"The Day the Icicle Works Closed\" by science fiction author Frederik Pohl. They had a top 20 UK hit with \"Love Is a Wonderful Colour\" (1983).  In the US and Canada, they had one top 40 hit, the 1984 single \"Birds Fly (Whisper to a Scream)\".\nConsisting of singer/guitarist/keyboardist/songwriter Ian McNabb, drummer Chris Sharrock, and bassist Chris Layhe, the band released four albums from 1984 to 1988. The original band broke up in 1989, but McNabb has continued to perform under the Icicle Works name with various replacement members; this revised Icicle Works line-up still plays sporadic live dates.",
+    "overview": "The Icicle Works (also known as Icicle Works in the United States) are an English alternative rock band, named after the 1960 short story \"The Day the Icicle Works Closed\" by science fiction author Frederik Pohl. They had a top 20 UK hit with \"Love Is a Wonderful Colour\" (1983).  In the US and Canada, they had one top 40 hit, the 1984 single \"Birds Fly (Whisper to a Scream)\".\nConsisting of singer/guitarist/keyboardist/songwriter Ian McNabb, drummer Chris Sharrock, and bassist Chris Layhe, the band released four albums from 1984 to 1988. The original band broke up in 1989, but McNabb has continued to perform under the Icicle Works name with various replacement members; this revised Icicle Works line-up still plays sporadic live dates. As of 2024, the line up consists of Ian McNabb and Chris Layhe",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -32318,7 +32410,7 @@
     "foreignArtistId": "ff621094-2a76-401f-8398-b75b5fd2be24",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "John Martin Marr (born John Martin Maher; 31 October 1963) is a musician, songwriter and singer. He first achieved fame as the guitarist and co-songwriter of the Smiths, who were active from 1982 to 1987. He has since performed with numerous other bands and embarked on a solo career.\nBorn and raised in Manchester, England, Marr formed his first band at the age of 13. He was part of several bands with Andy Rourke before forming the Smiths with Morrissey in 1982. The Smiths attained commercial success and were critically acclaimed, with Marr's jangle pop guitar style becoming a distinctive part of the band's sound, but separated in 1987 due to personal differences between Marr and Morrissey. Since then, Marr has been a member of the Pretenders, the The, Electronic, Modest Mouse, and the Cribs, and he has become a prolific session musician, working with names such as Kirsty MacColl, Pet Shop Boys, Talking Heads, Bryan Ferry and Hans Zimmer.\nHaving released an album titled Boomslang in 2003 under the name Johnny Marr and the Healers, Marr released his first solo album, The Messenger, in 2013. His second solo album, Playland, was released in 2014, followed by a third, Call the Comet, in 2018. Marr's autobiography, Set the Boy Free, was published in 2016.\nIn 2010, Marr was voted the fourth-best guitarist of the last 30 years in a poll conducted by the BBC. Phil Alexander, editor-in-chief of Mojo, described him as \"arguably Britain's last great guitar stylist\". In 2013, NME honoured Marr with its \"Godlike Genius\" award: \"Not content with rewriting the history of music with one of the world's greatest-ever bands, the Smiths, he's continued to push boundaries and evolve throughout his career, working with some of the best and most exciting artists on the planet.\"",
+    "overview": "John Martin Marr (born John Martin Maher; 31 October 1963) is a musician, songwriter and singer. He first achieved fame as the guitarist and co-songwriter of the Smiths, who were active from 1982 to 1987. He has since performed with numerous other bands and embarked on a solo career.\nBorn and raised in Manchester, England, Marr formed his first band at the age of 13. He was part of several bands with Andy Rourke before forming the Smiths with Morrissey in 1982. The Smiths attained commercial success and were critically acclaimed, with Marr's jangle pop guitar style becoming a distinctive part of the band's sound, but separated in 1987 due to personal differences between Marr and Morrissey. Since then, Marr has been a member of the Pretenders, the The, Electronic, Modest Mouse, and the Cribs, and he has become a prolific session musician, working with names such as Kirsty MacColl, Pet Shop Boys, Talking Heads, Bryan Ferry and Hans Zimmer.\nHaving released an album titled Boomslang in 2003 under the name Johnny Marr and the Healers, Marr released his first solo album, The Messenger, in 2013. His second solo album, Playland, was released in 2014, followed by a third, Call the Comet, in 2018. Marr's autobiography, Set the Boy Free, was published in 2016.\nDescribed by Alexis Petridis of The Guardian as \"the 1980s' most inventive and distinctive guitarist\", Marr was voted the fourth-best guitarist of the last 30 years in a poll conducted by the BBC in 2010. Phil Alexander, editor-in-chief of Mojo, described him as \"arguably Britain's last great guitar stylist\". In 2013, NME honoured Marr with its \"Godlike Genius\" award.\n\n",
     "artistType": "Person",
     "disambiguation": "",
     "links": [
@@ -38350,7 +38442,7 @@
     "foreignArtistId": "7a1daf7f-b972-4808-bc03-2e1e3a79dce0",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Lara Sophie Katy Crokaert (Flemish pronunciation: [ˈlaːraː ˈkroːkaːrt]; born 9 January 1970), known professionally as Lara Fabian (Flemish: [ˈlaːraː ˈfaːbijɑn], French: [laʁa fabjɑ̃], Italian: [ˈlaːra faˈbjan]), is an Italian-Belgian and Canadian singer and songwriter. She has sold over 20 million records worldwide and is one of the best-selling Belgian artists of all time.\nBorn in Belgium to a Belgian father and an Italian mother, she moved to Quebec in 1991 and since 1995, has held Canadian citizenship alongside her Belgian one. In 2003, she returned to Brussels to be close to her parents in Belgium and in 2015 lived in Walloon Brabant province in Belgium just outside Brussels. In 2017, she returned permanently to Montreal, Quebec, to be with her family.",
+    "overview": "Lara Sophie Katy Crokaert (Flemish pronunciation: [ˈlaːraː ˈkroːkaːrt]; born 9 January 1970), known professionally as Lara Fabian (Flemish: [ˈlaːraː ˈfaːbijɑn], French: [laʁa fabjɑ̃], Italian: [ˈlaːra faˈbjan]), is an Italian-Belgian and Canadian singer and songwriter. She has sold over 20 million records worldwide and is one of the best-selling Belgian artists of all time.\nBorn in Belgium to a Belgian father and an Italian mother, she moved to Quebec in 1991 and, since 1995, has held Canadian citizenship alongside her Belgian one. In 2003, she returned to Brussels to be close to her parents in Belgium, and in 2015, she lived in Walloon Brabant province in Belgium, just outside Brussels. In 2017, she returned permanently to Montreal, Quebec, to be with her family.",
     "artistType": "Person",
     "disambiguation": "Belgian singer",
     "links": [
@@ -41171,7 +41263,7 @@
       "profileId": 1,
       "monitored": true,
       "anyReleaseOk": true,
-      "lastInfoSync": "2024-09-13T17:48:22Z",
+      "lastInfoSync": "2024-09-15T17:49:29Z",
       "added": "2024-09-13T17:48:22Z",
       "addOptions": {
         "addType": "automatic",
@@ -43086,7 +43178,7 @@
     "foreignArtistId": "7a5e7e9a-2ee5-41ae-bb7d-89852adf0e01",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Haley McCallum (born 1983), professionally known as Haley and formerly Haley Bonar, is a Canadian-born American singer and songwriter who was raised in Rapid City, South Dakota. She has lived in Duluth and currently St. Paul, Minnesota. In 2009, she moved to Portland, Oregon, where she spent a year writing songs for her 2011 album Golder. She plays acoustic guitar, baritone electric guitar, electric guitar, and Rhodes or Wurlitzer electric piano, either solo or with her Twin Cities-based band, including Jeremy Ylvisaker, Robert Skoro, and Jacob Hanson.\n\n",
+    "overview": "Haley McCallum (born 1983), professionally known as Haley and formerly Haley Bonar, is a Canadian-born American singer and songwriter who was raised in Rapid City, South Dakota. She has lived in Duluth and currently St. Paul, Minnesota. In 2009, she moved to Portland, Oregon, where she spent a year writing songs for her 2011 album Golder. She plays acoustic guitar, baritone electric guitar, electric guitar, and Rhodes or Wurlitzer electric piano, either solo or with her Twin Cities-based band, including Jeremy Ylvisaker, Robert Skoro, and Jacob Hanson.",
     "artistType": "Person",
     "disambiguation": "formally Haley Bonar",
     "links": [
@@ -45102,7 +45194,7 @@
     "foreignArtistId": "e389160d-6d98-4657-9a75-9229b41621bc",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "The Vapors are an English new wave and power pop band that initially existed between 1978 and 1981. They had a hit with the song \"Turning Japanese\", which reached No. 3 in the UK Singles Chart in 1980 and No. 36 in the US Billboard Hot 100.\n\n",
+    "overview": "The Vapors are an English new wave and power pop band that initially existed between 1978 and 1981. They had a hit with the song \"Turning Japanese\", which reached No. 3 in the UK Singles Chart in 1980 and No. 36 in the US Billboard Hot 100.",
     "artistType": "Group",
     "disambiguation": "",
     "links": [
@@ -45597,7 +45689,7 @@
     "foreignArtistId": "4d2956d1-a3f7-44bb-9a41-67563e1a0c94",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Blondie is an American rock band formed in New York City in 1974 by singer Debbie Harry and guitarist Chris Stein. The band was a pioneer in the American new wave genre and scene of the mid-1970s.\nThe band's first two albums contained strong elements of punk and new wave, and although highly successful in the UK and Australia, Blondie was regarded as an underground band in the US until the release of their critically acclaimed third album Parallel Lines in 1978. Over the next two years, the band released a string of hit singles, including \"Heart of Glass\" (US #1), \"One Way or Another\", \"Dreaming\", \"Call Me\" (US #1), \"Atomic\", \"The Tide Is High\" (US #1), and \"Rapture\" (US #1). The band became noted for its eclectic mix of musical styles, incorporating elements of disco, pop, reggae, funk and early hip hop music.\nBlondie disbanded after the release of their sixth studio album, The Hunter, in 1982. Harry continued to pursue a solo career with varied results after taking a few years off to care for partner Stein, who was diagnosed with pemphigus, a rare autoimmune disease of the skin. The band re-formed in 1997, achieving renewed success and their sixth number one single in the UK with \"Maria\" in 1999, exactly 20 years after their first UK number one single, \"Heart of Glass\".\nThe group toured and performed throughout the world during the following years, and was inducted into the Rock and Roll Hall of Fame in 2006. Blondie has sold over 40 million records worldwide and continues to actively perform. The band's eleventh studio album, Pollinator, was released on May 5, 2017.\n\n",
+    "overview": "Blondie is an American rock band formed in New York City in 1974 by singer Debbie Harry and guitarist Chris Stein. The band was a pioneer in the American new wave genre and scene of the mid-1970s.\nThe band's first two albums contained strong elements of punk and new wave, and although highly successful in the UK and Australia, Blondie was regarded as an underground band in the US until the release of their critically acclaimed third album Parallel Lines in 1978. Over the next two years, the band released a string of hit singles, including \"Heart of Glass\" (US No. 1), \"One Way or Another\", \"Dreaming\", \"Call Me\" (US No. 1), \"Atomic\", \"The Tide Is High\" (US No. 1), and \"Rapture\" (US No. 1). The band became noted for its eclectic mix of musical styles, incorporating elements of disco, pop, reggae, funk and early hip hop music.\nBlondie disbanded after the release of their sixth studio album, The Hunter, in 1982. Harry continued to pursue a solo career with varied results after taking a few years off to care for partner Stein, who was diagnosed with pemphigus, a rare autoimmune disease of the skin. The band re-formed in 1997, achieving renewed success and their sixth number one single in the UK with \"Maria\" in 1999, exactly 20 years after their first UK number one single, \"Heart of Glass\".\nThe group toured and performed throughout the world during the following years, and was inducted into the Rock and Roll Hall of Fame in 2006. Blondie has sold over 40 million records worldwide and continues to actively perform. The band's eleventh studio album, Pollinator, was released on May 5, 2017.",
     "artistType": "Group",
     "disambiguation": "US rock band",
     "links": [
@@ -45882,7 +45974,7 @@
     "foreignArtistId": "b81550a4-cfbe-4be0-aecb-3630890321e7",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Andy Prieboy (born April 17, 1955) is an American musician, songwriter, and author. He was lead singer of the band Wall of Voodoo from 1983 to 1988. Later, he produced solo albums, musicals, and a novel.",
+    "overview": "Andy Prieboy (born April 17, 1955) is an American musician, songwriter, and author. He was lead singer of the band Wall of Voodoo from 1983 to 1988. Later, he produced solo albums, musicals, and a novel.\n\n",
     "artistType": "Person",
     "disambiguation": "",
     "links": [
@@ -46323,7 +46415,7 @@
     "foreignArtistId": "80ccfede-c258-4575-a7ad-c982e9932e0f",
     "tadbId": 0,
     "discogsId": 0,
-    "overview": "Sheryl Suzanne Crow (born February 11, 1962) is an American singer, musician, songwriter, and actress. She is noted for her optimistic and idealistic subject matter, and incorporation of genres including rock, pop, country, folk, and blues. She has released twelve studio albums, five compilations, and three live albums, and contributed to several film soundtracks. Her most popular songs include \"All I Wanna Do\" (1994), \"Strong Enough\" (1994), \"If It Makes You Happy\" (1996), \"Everyday Is a Winding Road\" (1996), \"My Favorite Mistake\" (1998), \"Picture\" (2002, duet with Kid Rock), and \"Soak Up the Sun\" (2002).\nCrow has sold more than 50 million albums worldwide and won nine Grammy Awards from 32 nominations. In her acting career, Crow has appeared on the television series 30 Rock, Cop Rock, GCB, Cougar Town, Jon Stewart's and Stephen Colbert's Rally to Restore Sanity and/or Fear, One Tree Hill, and NCIS: New Orleans. Crow was inducted into the Rock and Roll Hall of Fame in 2023.",
+    "overview": "Sheryl Suzanne Crow (born February 11, 1962) is an American singer, musician, songwriter, and actress. She is noted for her optimistic and idealistic subject matter, and incorporation of genres including rock, pop, country, folk, and blues. She has released twelve studio albums, five compilations, and three live albums, and contributed to several film soundtracks. Her most popular songs include \"All I Wanna Do\" (1994), \"Strong Enough\" (1994), \"If It Makes You Happy\" (1996), \"Everyday Is a Winding Road\" (1996), \"My Favorite Mistake\" (1998), \"Picture\" (2002, duet with Kid Rock), and \"Soak Up the Sun\" (2002).\nCrow has sold more than 50 million albums worldwide and won nine Grammy Awards from 32 nominations. In her acting career, Crow has appeared on the television series 30 Rock, Cop Rock, GCB, Cougar Town, Jon Stewart's and Stephen Colbert's Rally to Restore Sanity and/or Fear, One Tree Hill, and NCIS: New Orleans. Crow was inducted into the Rock and Roll Hall of Fame in 2023.\n\n",
     "artistType": "Person",
     "disambiguation": "American singer-songwriter and musician",
     "links": [
@@ -48104,5 +48196,776 @@
       "percentOfTracks": 0
     },
     "id": 305
+  },
+  {
+    "artistMetadataId": 462,
+    "status": "continuing",
+    "ended": false,
+    "artistName": "Paul McCartney",
+    "foreignArtistId": "ba550d0e-adac-4864-b88b-407cab5e76af",
+    "tadbId": 0,
+    "discogsId": 0,
+    "overview": "Sir James Paul McCartney  (born 18 June 1942) is an English singer, songwriter and musician who gained worldwide fame with the Beatles, for whom he played bass guitar and shared primary songwriting and lead vocal duties with John Lennon. One of the most successful composers and performers of all time, McCartney is known for his melodic approach to bass-playing, versatile and wide tenor vocal range, and musical eclecticism, exploring genres ranging from pre–rock and roll pop to classical, ballads, and electronica. His songwriting partnership with Lennon is the most successful in modern music history.\nBorn in Liverpool, McCartney taught himself piano, guitar, and songwriting as a teenager, having been influenced by his father, a jazz player, and rock and roll performers such as Little Richard and Buddy Holly. He began his career when he joined Lennon's skiffle group, the Quarrymen, in 1957, which evolved into the Beatles in 1960. Sometimes called \"the cute Beatle\", McCartney later immersed himself in the London avant-garde scene and played a key role in incorporating experimental aesthetics into the Beatles' studio productions. Starting with the 1967 album Sgt. Pepper's Lonely Hearts Club Band, he gradually became the band's de facto leader, providing creative impetus for most of their music and film projects. Many of his Beatles songs, including \"And I Love Her\", \"Yesterday\", \"Eleanor Rigby\", and \"Blackbird\", rank among the most covered songs in history. Although primarily a bassist with the Beatles, he played a number of other instruments, including keyboards, guitars, and drums, on various songs.\nAfter the Beatles disbanded, he debuted as a solo artist with the 1970 album McCartney and went on to form the band Wings with his first wife, Linda, and Denny Laine. Under McCartney's leadership, Wings became one of the most successful bands of the 1970s. He wrote or co-wrote their US or UK number-one hits, such as \"My Love\", \"Band on the Run\", \"Listen to What the Man Said\", \"Silly Love Songs\", and \"Mull of Kintyre\". He resumed his solo career in 1980 and has been touring as a solo artist since 1989. Apart from Wings, his UK or US number-one hits include \"Uncle Albert/Admiral Halsey\" (with Linda), \"Coming Up\", \"Pipes of Peace\", \"Ebony and Ivory\" (with Stevie Wonder), and \"Say Say Say\" (with Michael Jackson). Beyond music, he has been involved in projects to promote international charities related to animal rights, seal hunting, land mines, vegetarianism, poverty, and music education.\nMcCartney has written or co-written a record 32 songs that have topped the Billboard Hot 100 and, as of 2009, he had sales of 25.5 million RIAA-certified units in the US. His honours include two inductions into the Rock and Roll Hall of Fame (as a member of the Beatles in 1988 and as a solo artist in 1999), an Academy Award, a Primetime Emmy Award, 18 Grammy Awards, an appointment as a Member of the Order of the British Empire in 1965, and was appointed Knight Bachelor in 1997 for services to music. As of 2024, he is one of the wealthiest musicians in the world, with an estimated fortune of £1 billion.",
+    "artistType": "Person",
+    "disambiguation": "The Beatles",
+    "links": [
+      {
+        "url": "http://www.mplcommunications.com/mccartney/Discography_Albums.asp",
+        "name": "mplcommunications"
+      },
+      {
+        "url": "http://www.paulmccartney.com/",
+        "name": "paulmccartney"
+      },
+      {
+        "url": "https://www.discogs.com/artist/35301",
+        "name": "discogs"
+      },
+      {
+        "url": "https://www.imdb.com/name/nm0005200/",
+        "name": "imdb"
+      },
+      {
+        "url": "http://musicmoz.org/Bands_and_Artists/M/McCartney,_Paul/",
+        "name": "musicmoz"
+      },
+      {
+        "url": "https://myspace.com/paulmccartney",
+        "name": "myspace"
+      },
+      {
+        "url": "https://www.bbc.co.uk/music/artists/ba550d0e-adac-4864-b88b-407cab5e76af",
+        "name": "bbc"
+      },
+      {
+        "url": "https://twitter.com/PaulMcCartney",
+        "name": "twitter"
+      },
+      {
+        "url": "https://www.facebook.com/PaulMcCartney",
+        "name": "facebook"
+      },
+      {
+        "url": "https://www.allmusic.com/artist/mn0000029884",
+        "name": "allmusic"
+      },
+      {
+        "url": "https://www.last.fm/music/Paul+McCartney",
+        "name": "last"
+      },
+      {
+        "url": "https://secondhandsongs.com/artist/588",
+        "name": "secondhandsongs"
+      },
+      {
+        "url": "http://viaf.org/viaf/100252012",
+        "name": "viaf"
+      },
+      {
+        "url": "https://www.wikidata.org/wiki/Q2599",
+        "name": "wikidata"
+      },
+      {
+        "url": "https://rateyourmusic.com/artist/paul_mccartney",
+        "name": "rateyourmusic"
+      },
+      {
+        "url": "https://commons.wikimedia.org/wiki/File:Paul_McCartney_black_and_white_2010.jpg",
+        "name": "wikimedia"
+      },
+      {
+        "url": "http://muzikum.eu/en/122-5399/paul-mccartney/lyrics.html",
+        "name": "muzikum"
+      },
+      {
+        "url": "https://ocremix.org/artist/14057/paul-mccartney",
+        "name": "ocremix"
+      },
+      {
+        "url": "https://open.spotify.com/artist/4STHEaNw4mPZ2tzheohgXB",
+        "name": "spotify"
+      },
+      {
+        "url": "https://www.setlist.fm/setlists/paul-mccartney-13d6bd15.html",
+        "name": "setlist"
+      },
+      {
+        "url": "https://www.bandsintown.com/a/26655",
+        "name": "bandsintown"
+      },
+      {
+        "url": "https://www.45cat.com/artist/paul-mccartney",
+        "name": "45cat"
+      },
+      {
+        "url": "https://genius.com/artists/Paul-mccartney",
+        "name": "genius"
+      },
+      {
+        "url": "https://play.google.com/store/music/artist?id=A72g5dzetehvvtlwd2o5ulze6ji",
+        "name": "google"
+      },
+      {
+        "url": "https://imvdb.com/n/paul-mccartney",
+        "name": "imvdb"
+      },
+      {
+        "url": "https://www.amazon.com/-/e/B000APEVO6",
+        "name": "amazon"
+      },
+      {
+        "url": "https://itunes.apple.com/gb/artist/id12224",
+        "name": "apple"
+      },
+      {
+        "url": "http://id.loc.gov/authorities/names/n50012135",
+        "name": "loc"
+      },
+      {
+        "url": "https://d-nb.info/gnd/118575708",
+        "name": "d-nb"
+      },
+      {
+        "url": "https://soundcloud.com/paulmccartney",
+        "name": "soundcloud"
+      },
+      {
+        "url": "https://vgmdb.net/artist/8175",
+        "name": "vgmdb"
+      },
+      {
+        "url": "https://www.songkick.com/artists/300543",
+        "name": "songkick"
+      },
+      {
+        "url": "https://giphy.com/paulmccartney",
+        "name": "giphy"
+      },
+      {
+        "url": "https://www.instagram.com/paulmccartney/",
+        "name": "instagram"
+      },
+      {
+        "url": "https://plus.google.com/%2BPaulMcCartney",
+        "name": "google"
+      },
+      {
+        "url": "https://ibdb.com/person.php?id=12124",
+        "name": "ibdb"
+      },
+      {
+        "url": "http://theatricalia.com/person/26hm",
+        "name": "theatricalia"
+      },
+      {
+        "url": "https://www.musik-sammler.de/artist/paul-mccartney/",
+        "name": "musik-sammler"
+      },
+      {
+        "url": "https://www.spirit-of-rock.com/en/band/Paul_McCartney",
+        "name": "spirit-of-rock"
+      },
+      {
+        "url": "https://www.whosampled.com/Paul-McCartney/",
+        "name": "whosampled"
+      },
+      {
+        "url": "http://mvdbase.com/person.php?id=A4031",
+        "name": "mvdbase"
+      },
+      {
+        "url": "http://soundtrackcollector.com/composer/3012/",
+        "name": "soundtrackcollector"
+      },
+      {
+        "url": "http://castalbums.org/people/Paul-McCartney/3953",
+        "name": "castalbums"
+      },
+      {
+        "url": "https://www.deezer.com/artist/1446",
+        "name": "deezer"
+      },
+      {
+        "url": "https://www.onkyomusic.com/GB/artist/paul-mccartney",
+        "name": "onkyomusic"
+      },
+      {
+        "url": "https://www.junodownload.com/artists/Paul+Mccartney/releases/",
+        "name": "junodownload"
+      },
+      {
+        "url": "https://www.7digital.com/artist/paul-mccartney",
+        "name": "7digital"
+      },
+      {
+        "url": "https://www.worldcat.org/identities/lccn-n50012135",
+        "name": "worldcat"
+      },
+      {
+        "url": "https://catalogue.bnf.fr/ark:/12148/cb13897284x",
+        "name": "bnf"
+      },
+      {
+        "url": "https://nla.gov.au/nla.party-1177335",
+        "name": "gov"
+      },
+      {
+        "url": "http://snaccooperative.org/ark:/99166/w6dv1mpz",
+        "name": "snaccooperative"
+      },
+      {
+        "url": "https://tidal.com/artist/8849",
+        "name": "tidal"
+      },
+      {
+        "url": "https://www.musixmatch.com/artist/Paul-McCartney",
+        "name": "musixmatch"
+      },
+      {
+        "url": "https://www.discogs.com/artist/779927",
+        "name": "discogs"
+      },
+      {
+        "url": "https://music.apple.com/gb/artist/12224",
+        "name": "apple"
+      },
+      {
+        "url": "https://music.apple.com/gb/artist/12224",
+        "name": "apple"
+      },
+      {
+        "url": "https://www.youtube.com/channel/UCvGnJy9RnXX0kGSnDPKCZzQ",
+        "name": "youtube"
+      },
+      {
+        "url": "https://open.spotify.com/artist/7wcH6naXfssACcXRregV1H",
+        "name": "spotify"
+      },
+      {
+        "url": "https://www.deezer.com/artist/83460222",
+        "name": "deezer"
+      },
+      {
+        "url": "https://web.archive.org/web/19970131061939/http://cip2.e-technik.uni-erlangen.de:8080/hyplan/gernhard/macca.html",
+        "name": "archive"
+      }
+    ],
+    "images": [
+      {
+        "url": "/MediaCover/306/banner.jpg?lastWrite=638621749025501801",
+        "coverType": "banner",
+        "extension": ".jpg",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/ba550d0e-adac-4864-b88b-407cab5e76af/musicbanner/mccartney-paul-52de0a397c90b.jpg"
+      },
+      {
+        "url": "/MediaCover/306/fanart.jpg?lastWrite=638621749029766744",
+        "coverType": "fanart",
+        "extension": ".jpg",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/ba550d0e-adac-4864-b88b-407cab5e76af/artistbackground/mccartney-paul-53b8c9b0bb1f8.jpg"
+      },
+      {
+        "url": "/MediaCover/306/logo.png?lastWrite=638621749036851101",
+        "coverType": "logo",
+        "extension": ".png",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/ba550d0e-adac-4864-b88b-407cab5e76af/hdmusiclogo/mccartney-paul-5297d2bbbe024.png"
+      },
+      {
+        "url": "/MediaCover/306/poster.jpg?lastWrite=638621749038923207",
+        "coverType": "poster",
+        "extension": ".jpg",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/ba550d0e-adac-4864-b88b-407cab5e76af/artistthumb/mccartney-paul-50f38a0426c5a.jpg"
+      }
+    ],
+    "path": "/config/Paul McCartney",
+    "qualityProfileId": 1,
+    "metadataProfileId": 1,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "rootFolderPath": "/config/",
+    "genres": [
+      "Folk",
+      "Pop",
+      "Pop Rock",
+      "Pop Soul",
+      "Rock",
+      "Rock And Roll",
+      "Singer-Songwriter",
+      "Soft Rock",
+      "Classical"
+    ],
+    "cleanName": "paulmccartney",
+    "sortName": "paul mccartney",
+    "tags": [],
+    "added": "2024-09-17T13:01:01Z",
+    "ratings": {
+      "votes": 6,
+      "value": 9.3
+    },
+    "statistics": {
+      "albumCount": 23,
+      "trackFileCount": 0,
+      "trackCount": 795,
+      "totalTrackCount": 795,
+      "sizeOnDisk": 0,
+      "percentOfTracks": 0
+    },
+    "id": 306
+  },
+  {
+    "artistMetadataId": 468,
+    "status": "continuing",
+    "ended": false,
+    "artistName": "Westlife",
+    "foreignArtistId": "5f000e69-3cfd-4871-8f1b-faa7f0d4bcbc",
+    "tadbId": 0,
+    "discogsId": 0,
+    "overview": "Westlife are an Irish pop group formed in Dublin in 1998. The group consists of members Shane Filan, Mark Feehily, Kian Egan, and Nicky Byrne. Brian McFadden was a member before leaving in 2004. The group disbanded in 2012 after 14 years and later reunited in 2018. \nIn Ireland, the group has 11 number-one albums, 16 number-one singles, and 34 top-fifty singles. They have sold over 55 million records and are holders of four Guinness World Records. Westlife has received numerous accolades including one World Music Award, two Brit Awards, four MTV Awards, and four Record of the Year Awards.\nThe group has released twelve studio albums: four as a five-piece and eight as a four-piece. They rose to fame with their debut international self-titled studio album, Westlife (1999). It was followed by Coast to Coast (2000), World of Our Own (2001), and Turnaround (2003). Following the departure of McFadden, the group released the cover albums ...Allow Us to Be Frank (2004) and The Love Album (2006), the albums Face to Face (2005), Back Home (2007), Where We Are (2009), and Gravity (2010), followed by an eight-year split. \nAfter reforming in 2018, the quartet released the studio albums Spectrum (2019) and Wild Dreams (2021).\n\n",
+    "artistType": "Group",
+    "disambiguation": "",
+    "links": [
+      {
+        "url": "http://musicmoz.org/Bands_and_Artists/W/Westlife/",
+        "name": "musicmoz"
+      },
+      {
+        "url": "https://www.discogs.com/artist/152450",
+        "name": "discogs"
+      },
+      {
+        "url": "https://myspace.com/westlife",
+        "name": "myspace"
+      },
+      {
+        "url": "http://www.westlife.com/",
+        "name": "westlife"
+      },
+      {
+        "url": "https://www.bbc.co.uk/music/artists/5f000e69-3cfd-4871-8f1b-faa7f0d4bcbc",
+        "name": "bbc"
+      },
+      {
+        "url": "https://www.facebook.com/Westlife",
+        "name": "facebook"
+      },
+      {
+        "url": "https://www.youtube.com/user/westlife",
+        "name": "youtube"
+      },
+      {
+        "url": "https://www.wikidata.org/wiki/Q151241",
+        "name": "wikidata"
+      },
+      {
+        "url": "http://muzikum.eu/en/122-4031/westlife/lyrics.html",
+        "name": "muzikum"
+      },
+      {
+        "url": "https://www.allmusic.com/artist/mn0000201983",
+        "name": "allmusic"
+      },
+      {
+        "url": "https://rateyourmusic.com/artist/westlife",
+        "name": "rateyourmusic"
+      },
+      {
+        "url": "https://twitter.com/westlifemusic",
+        "name": "twitter"
+      },
+      {
+        "url": "https://www.instagram.com/westlife/",
+        "name": "instagram"
+      },
+      {
+        "url": "https://vk.com/westlifemusic",
+        "name": "vk"
+      },
+      {
+        "url": "http://westlife.livejournal.com/",
+        "name": "livejournal"
+      },
+      {
+        "url": "https://itunes.apple.com/gb/artist/id807028",
+        "name": "apple"
+      },
+      {
+        "url": "http://viaf.org/viaf/132283213",
+        "name": "viaf"
+      },
+      {
+        "url": "https://d-nb.info/gnd/3049770-X",
+        "name": "d-nb"
+      },
+      {
+        "url": "http://id.loc.gov/authorities/names/nr00020751",
+        "name": "loc"
+      },
+      {
+        "url": "https://www.worldcat.org/identities/lccn-nr00020751",
+        "name": "worldcat"
+      },
+      {
+        "url": "https://catalogue.bnf.fr/ark:/12148/cb140296061",
+        "name": "bnf"
+      },
+      {
+        "url": "https://www.imdb.com/name/nm1387965/",
+        "name": "imdb"
+      },
+      {
+        "url": "https://open.spotify.com/artist/5Z1CCuBsyhEHngq3U5IraY",
+        "name": "spotify"
+      },
+      {
+        "url": "https://www.deezer.com/artist/274",
+        "name": "deezer"
+      },
+      {
+        "url": "https://www.last.fm/music/Westlife",
+        "name": "last"
+      },
+      {
+        "url": "https://www.songkick.com/artists/87892",
+        "name": "songkick"
+      },
+      {
+        "url": "https://imvdb.com/n/westlife",
+        "name": "imvdb"
+      },
+      {
+        "url": "https://tidal.com/artist/1554",
+        "name": "tidal"
+      },
+      {
+        "url": "https://itunes.apple.com/de/artist/id807028",
+        "name": "apple"
+      },
+      {
+        "url": "https://secondhandsongs.com/artist/47",
+        "name": "secondhandsongs"
+      },
+      {
+        "url": "https://www.muziekweb.nl/Link/M00000103837/POPULAR/",
+        "name": "muziekweb"
+      },
+      {
+        "url": "https://genius.com/artists/Westlife",
+        "name": "genius"
+      },
+      {
+        "url": "https://www.whosampled.com/Westlife/",
+        "name": "whosampled"
+      },
+      {
+        "url": "https://tower.jp/artist/188847",
+        "name": "tower"
+      }
+    ],
+    "images": [
+      {
+        "url": "/MediaCover/307/banner.jpg?lastWrite=638621752721910231",
+        "coverType": "banner",
+        "extension": ".jpg",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/5f000e69-3cfd-4871-8f1b-faa7f0d4bcbc/musicbanner/westlife-591ce88362375.jpg"
+      },
+      {
+        "url": "/MediaCover/307/fanart.jpg?lastWrite=638621752724026100",
+        "coverType": "fanart",
+        "extension": ".jpg",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/5f000e69-3cfd-4871-8f1b-faa7f0d4bcbc/artistbackground/westlife-4fe8fc6030986.jpg"
+      },
+      {
+        "url": "/MediaCover/307/logo.png?lastWrite=638621752727138973",
+        "coverType": "logo",
+        "extension": ".png",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/5f000e69-3cfd-4871-8f1b-faa7f0d4bcbc/hdmusiclogo/westlife-589125b78b643.png"
+      },
+      {
+        "url": "/MediaCover/307/poster.jpg?lastWrite=638621752729219819",
+        "coverType": "poster",
+        "extension": ".jpg",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/5f000e69-3cfd-4871-8f1b-faa7f0d4bcbc/artistthumb/westlife-5002eb8fd52a0.jpg"
+      }
+    ],
+    "path": "/config/Westlife",
+    "qualityProfileId": 1,
+    "metadataProfileId": 1,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "rootFolderPath": "/config/",
+    "genres": [
+      "Pop"
+    ],
+    "cleanName": "westlife",
+    "sortName": "westlife",
+    "tags": [],
+    "added": "2024-09-17T13:07:43Z",
+    "ratings": {
+      "votes": 2,
+      "value": 6.0
+    },
+    "statistics": {
+      "albumCount": 12,
+      "trackFileCount": 0,
+      "trackCount": 196,
+      "totalTrackCount": 196,
+      "sizeOnDisk": 0,
+      "percentOfTracks": 0
+    },
+    "id": 307
+  },
+  {
+    "artistMetadataId": 469,
+    "status": "continuing",
+    "ended": false,
+    "artistName": "Fabienne Delsol",
+    "foreignArtistId": "122805dc-68f0-424f-8f33-7a3d141cf4f9",
+    "tadbId": 0,
+    "discogsId": 0,
+    "overview": "Fabienne Delsol is a French singer who performs primarily in English. Influenced by the 1960s, her music is a mix of garage rock, pop and psychedelic music.",
+    "artistType": "Person",
+    "disambiguation": "",
+    "links": [
+      {
+        "url": "https://myspace.com/fabiennedelsol",
+        "name": "myspace"
+      },
+      {
+        "url": "https://www.discogs.com/artist/270827",
+        "name": "discogs"
+      },
+      {
+        "url": "https://www.wikidata.org/wiki/Q3063693",
+        "name": "wikidata"
+      },
+      {
+        "url": "https://www.facebook.com/Fabienne-Delsol-27761244231",
+        "name": "facebook"
+      },
+      {
+        "url": "https://www.instagram.com/fabiennedelsol/",
+        "name": "instagram"
+      },
+      {
+        "url": "https://www.deezer.com/artist/633092",
+        "name": "deezer"
+      },
+      {
+        "url": "https://open.spotify.com/artist/7mv15aFhJmcqNEGeiYWWbt",
+        "name": "spotify"
+      },
+      {
+        "url": "https://music.apple.com/us/artist/50912865",
+        "name": "apple"
+      }
+    ],
+    "images": [],
+    "path": "/config/Fabienne Delsol",
+    "qualityProfileId": 1,
+    "metadataProfileId": 1,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "rootFolderPath": "/config/",
+    "genres": [],
+    "cleanName": "fabiennedelsol",
+    "sortName": "fabienne delsol",
+    "tags": [],
+    "added": "2024-09-17T13:10:46Z",
+    "ratings": {
+      "votes": 0,
+      "value": 0
+    },
+    "statistics": {
+      "albumCount": 4,
+      "trackFileCount": 0,
+      "trackCount": 50,
+      "totalTrackCount": 50,
+      "sizeOnDisk": 0,
+      "percentOfTracks": 0
+    },
+    "id": 308
+  },
+  {
+    "artistMetadataId": 470,
+    "status": "continuing",
+    "ended": false,
+    "artistName": "Spoon",
+    "foreignArtistId": "84eac621-1c5a-49a1-9500-555099c6e184",
+    "tadbId": 0,
+    "discogsId": 0,
+    "overview": "Spoon is an American rock band from Austin, Texas, consisting of members Britt Daniel (vocals, guitar), Jim Eno (drums), Alex Fischel (keyboards, guitar), Gerardo Larios (guitar, keyboards) and Ben Trokan (bass, keyboards). The band was formed in Austin in October 1993 by Daniel and Eno. Critics have described the band's musical style as rock and roll, post-punk, and art rock.\nSpoon released their debut studio album, Telephono, in 1996 through Matador Records. Their next full-length album, A Series of Sneaks, was released in 1998 through Elektra Records. The band subsequently signed with Merge Records, where Spoon achieved greater commercial and critical prominence with the albums Girls Can Tell (2001), Kill the Moonlight (2002), Gimme Fiction (2005), Ga Ga Ga Ga Ga (2007), and Transference (2010). They signed with Loma Vista Recordings and ANTI- for the release of They Want My Soul (2014). The band later returned to Matador to release their ninth album Hot Thoughts (2017), and tenth album Lucifer on the Sofa (2022).\n\n",
+    "artistType": "Group",
+    "disambiguation": "Austin, TX rock band",
+    "links": [
+      {
+        "url": "http://www.spoontheband.com/",
+        "name": "spoontheband"
+      },
+      {
+        "url": "http://musicmoz.org/Bands_and_Artists/S/Spoon/",
+        "name": "musicmoz"
+      },
+      {
+        "url": "https://www.discogs.com/artist/33287",
+        "name": "discogs"
+      },
+      {
+        "url": "https://myspace.com/spoon",
+        "name": "myspace"
+      },
+      {
+        "url": "http://homepage.ntlworld.com/peter.herron/spoon_discography.htm",
+        "name": "ntlworld"
+      },
+      {
+        "url": "https://www.bbc.co.uk/music/artists/84eac621-1c5a-49a1-9500-555099c6e184",
+        "name": "bbc"
+      },
+      {
+        "url": "https://twitter.com/SpoonTheBand",
+        "name": "twitter"
+      },
+      {
+        "url": "https://www.allmusic.com/artist/mn0000131038",
+        "name": "allmusic"
+      },
+      {
+        "url": "https://www.last.fm/music/Spoon",
+        "name": "last"
+      },
+      {
+        "url": "https://www.wikidata.org/wiki/Q1155915",
+        "name": "wikidata"
+      },
+      {
+        "url": "https://secondhandsongs.com/artist/14980",
+        "name": "secondhandsongs"
+      },
+      {
+        "url": "https://rateyourmusic.com/artist/spoon",
+        "name": "rateyourmusic"
+      },
+      {
+        "url": "https://www.facebook.com/spoontheband",
+        "name": "facebook"
+      },
+      {
+        "url": "http://viaf.org/viaf/128181132",
+        "name": "viaf"
+      },
+      {
+        "url": "https://www.imdb.com/name/nm1576106/",
+        "name": "imdb"
+      },
+      {
+        "url": "http://www.purevolume.com/spoon",
+        "name": "purevolume"
+      },
+      {
+        "url": "https://open.spotify.com/artist/0K1q0nXQ8is36PzOKAMbNe",
+        "name": "spotify"
+      },
+      {
+        "url": "https://d-nb.info/gnd/10338022-X",
+        "name": "d-nb"
+      },
+      {
+        "url": "http://id.loc.gov/authorities/names/no2002083701",
+        "name": "loc"
+      },
+      {
+        "url": "https://www.worldcat.org/identities/lccn-no2002083701",
+        "name": "worldcat"
+      },
+      {
+        "url": "https://catalogue.bnf.fr/ark:/12148/cb14648177c",
+        "name": "bnf"
+      },
+      {
+        "url": "https://www.songkick.com/artists/169103",
+        "name": "songkick"
+      },
+      {
+        "url": "https://www.deezer.com/artist/1280",
+        "name": "deezer"
+      },
+      {
+        "url": "https://imvdb.com/n/spoon",
+        "name": "imvdb"
+      },
+      {
+        "url": "https://tidal.com/artist/32458",
+        "name": "tidal"
+      },
+      {
+        "url": "https://itunes.apple.com/us/artist/id703784",
+        "name": "apple"
+      },
+      {
+        "url": "https://spoontheband.bandcamp.com/",
+        "name": "bandcamp"
+      },
+      {
+        "url": "https://music.apple.com/us/artist/703784",
+        "name": "apple"
+      },
+      {
+        "url": "https://www.instagram.com/spoontheband/",
+        "name": "instagram"
+      },
+      {
+        "url": "https://soundcloud.com/spoontheband",
+        "name": "soundcloud"
+      }
+    ],
+    "images": [
+      {
+        "url": "/MediaCover/309/fanart.jpg?lastWrite=638621754770646695",
+        "coverType": "fanart",
+        "extension": ".jpg",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/84eac621-1c5a-49a1-9500-555099c6e184/artistbackground/spoon-51d9c985a0915.jpg"
+      },
+      {
+        "url": "/MediaCover/309/logo.png?lastWrite=638621754772773706",
+        "coverType": "logo",
+        "extension": ".png",
+        "remoteUrl": "http://assets.fanart.tv/fanart/music/84eac621-1c5a-49a1-9500-555099c6e184/hdmusiclogo/spoon-620ad485ed531.png"
+      },
+      {
+        "url": "/MediaCover/309/poster.jpg?lastWrite=636989619200000000",
+        "coverType": "poster",
+        "extension": ".jpg",
+        "remoteUrl": "https://imagecache.lidarr.audio/v1/tadb/artist/thumb/xxxrqt1408559078.jpg"
+      }
+    ],
+    "path": "/config/Spoon",
+    "qualityProfileId": 1,
+    "metadataProfileId": 1,
+    "monitored": true,
+    "monitorNewItems": "all",
+    "rootFolderPath": "/config/",
+    "genres": [
+      "Alternative Rock",
+      "Dance-Punk",
+      "Indie Pop",
+      "Indie Rock",
+      "Post-Punk"
+    ],
+    "cleanName": "spoon",
+    "sortName": "spoon",
+    "tags": [],
+    "added": "2024-09-17T13:11:07Z",
+    "ratings": {
+      "votes": 4,
+      "value": 9.0
+    },
+    "statistics": {
+      "albumCount": 10,
+      "trackFileCount": 0,
+      "trackCount": 166,
+      "totalTrackCount": 166,
+      "sizeOnDisk": 0,
+      "percentOfTracks": 0
+    },
+    "id": 309
   }
 ]
