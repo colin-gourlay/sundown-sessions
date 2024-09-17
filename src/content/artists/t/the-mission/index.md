@@ -1,16 +1,18 @@
 ---
 title: The Mission
+genres: ["Alternative Rock","Gothic","Gothic Rock"]
 featured_image: artists/t/the-mission/the-mission.jpg
 artist_page: true
 ---
 ## About
 
-Gothic rock band from the UK initially consisting of Wayne Hussey, Craig Adams [url=https://www.discogs.com/artist/83146-The-Sisters-Of-Mercy](both ex-Sisters of Mercy)[/url], Simon Hinkler and Mick Brown. 
-Known as The Mission (UK) in the USA
-Having sold over 4 million albums, the band reformed to celebrate 25 years of The Mission. Hussey, Hinkler and Adams reunited in 2011 to kick start a new chapter of the band and continue to tour the world & release new material.
+The Mission (known as the Mission UK in the United States) are an English gothic rock band formed in 1986.
+Initially known as the Sisterhood, the band was started by frontman Wayne Hussey and bassist Craig Adams (both from the Sisters of Mercy), soon adding drummer Mick Brown (Red Lorry Yellow Lorry) and guitarist Simon Hinkler (Artery and Pulp). Aside from Hussey, the lineup has changed several times during the years and the band has been on hiatus twice.
+The band's catalogue consists of ten studio albums: God's Own Medicine (1986), Children (1988), Carved in Sand (1990), Masque (1992), Neverland (1995), Blue (1996), Aura (2001), God Is a Bullet (2007), The Brightest Light (2013), and Another Fall from Grace (2016), with several live albums, compilations, and other miscellaneous releases.
 
 
-### Current Lineup
 
-Wayne Hussey, Craig Adams, Simon Hinkler, Alex Baum
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/themissionuk)" >}}
 

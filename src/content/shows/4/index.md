@@ -25,6 +25,7 @@ keywords:
  - 'The Alexander Brothers'
  - 'Westlife'
  - 'Angelfish'
+ - 'Goodbye Mr Mackenzie'
  - 'Skids'
  - 'Hipsway'
  - 'Win'
