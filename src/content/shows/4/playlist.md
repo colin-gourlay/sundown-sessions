@@ -5,7 +5,7 @@
 
 - ADVERTISING BREAK
 
-1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
+1. {{< artist-wikilink "The Alexander Brothers" >}} - Geordie Munro
 2. Interview with {{< featured-guest-wikilink "Kenny Armour from ANDYSMANCLUB" >}}
 3. {{< artist-wikilink "Westlife" >}} - Unbreakable 
 
