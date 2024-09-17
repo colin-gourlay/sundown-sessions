@@ -11,3 +11,7 @@ Doves went on hiatus in 2010. During this time, Goodwin released his first solo 
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/Doves)" >}}
+

@@ -11,3 +11,7 @@ The band was inactive from the early 2010s onward, with Endicott confirming the 
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/thebravery)" >}}
+

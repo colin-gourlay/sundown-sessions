@@ -10,3 +10,7 @@ Cocteau Twins were a Scottish rock band active from 1979 to 1997. They were form
 The addition of Raymonde in 1983 solidified their final lineup, which produced their biggest hit in the UK, "Pearly-Dewdrops' Drops", peaking at No. 29 on the UK Singles Chart. In 1988 Cocteau Twins signed with Capitol Records in the United States, distributing their fifth album, Blue Bell Knoll, through a major label in the country. After the 1990 release of their most commercially successful album, Heaven or Las Vegas, the band left 4AD for Fontana Records, where they released their final two albums. 
 After nearly 20 years together, the group disbanded in 1997 in part due to issues stemming from the disintegration of Fraser and Guthrie's romantic relationship. In 2005 the band announced that they would reunite to headline Coachella Festival and embark on a world tour but the reunion was cancelled a month later after Fraser "couldn’t bring herself to work with Guthrie". In a 2021 interview, Raymonde claimed that Cocteau Twins "will never reform".
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/ctwins)" >}}
+

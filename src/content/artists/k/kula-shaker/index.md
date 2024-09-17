@@ -13,3 +13,7 @@ After taking an extended hiatus, the band released their sixth album, 1st Congre
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/kulashaker)" >}}
+

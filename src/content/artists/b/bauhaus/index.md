@@ -12,3 +12,7 @@ After Bauhaus' breakup, Murphy formed Dalis Car with bassist Mick Karn before be
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/bauhausmusik)" >}}
+

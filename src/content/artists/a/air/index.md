@@ -10,3 +10,7 @@ Air is a French music duo from Versailles, consisting of Nicolas Godin and Jean-
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/7530846195)" >}}
+
