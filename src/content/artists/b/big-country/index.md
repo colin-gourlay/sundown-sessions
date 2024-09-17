@@ -12,3 +12,7 @@ The band's "classic" lineup between 1982 and 2000, consisted of Stuart Adamson (
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/inabigcountry)" >}}
+

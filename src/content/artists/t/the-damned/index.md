@@ -13,3 +13,7 @@ As one of the first gothic rock bands, the Damned, featuring lead singer Vanian'
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/pages/The-Damned/10644147851)" >}}
+

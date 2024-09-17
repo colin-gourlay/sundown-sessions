@@ -13,3 +13,7 @@ In 2014, Mann released an album with Ted Leo as the Both. Mann also paints and m
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/AimeeMann)" >}}
+

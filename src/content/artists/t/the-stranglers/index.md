@@ -91,3 +91,7 @@ The Stranglers discography at Discogs
 The Stranglers at IMDb 
 The Stranglers discography at MusicBrainz
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/thestranglers)" >}}
+
