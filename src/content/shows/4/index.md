@@ -2,7 +2,7 @@
 title: 'Show #4: Broadcast 26th June 2024'
 slug: 'featuring-kenny-armour-from-andysmanclub'
 description: 'featuring Kenny Armour from ANDYSMANCLUB'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Kenny Armour from ANDYSMANCLUB
 
