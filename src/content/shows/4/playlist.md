@@ -27,10 +27,13 @@
 1. {{< artist-wikilink "Roddy Frame" >}} - Reason For Living
 2. {{< artist-wikilink "Melys" >}} - Chinese Whispers
 3. {{< artist-wikilink "Fabienne DelSol" >}} - Ragunboneman
-4. {{< artist-wikilink "Spoon" >}} - TV Set
-5. {{< artist-wikilink "The Cramps" >}} - The Way I Walk
 
 - ADVERTISING BREAK
+
+1. {{< artist-wikilink "Spoon" >}} - TV Set
+2. {{< artist-wikilink "The Cramps" >}} - The Way I Walk
+
+
 
 1. {{< artist-wikilink "The Detroit Cobras" >}} - Shout Bamalama
 2. {{< artist-wikilink "Becky Becky" >}} - Champagne on Christmas Day
