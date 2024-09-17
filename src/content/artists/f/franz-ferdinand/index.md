@@ -11,3 +11,7 @@ The band's first single, "Darts of Pleasure", just missed out on the Top 40 of t
 In 2005, the band released their second studio album, You Could Have It So Much Better, produced by Rich Costey. It peaked within the top-ten in multiple countries and earned Grammy-nominations for Best Alternative Album and for one of the singles, "Do You Want To". The band's third studio album, Tonight: Franz Ferdinand, was released in January 2009; by then the band had shifted from a post-punk-focused sound to a more dance-oriented sound. A remix album of Tonight, titled Blood, was released in July 2009.
 Four years after the release of Tonight, the band released their fourth studio album, Right Thoughts, Right Words, Right Action, in August 2013. In 2015, Franz Ferdinand and American rock band Sparks formed the supergroup FFS and released a one-off self-titled album in June 2015. Following the departure of McCarthy, the band released their fifth studio album, Always Ascending, in February 2018.
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/officialfranzferdinand)" >}}
+

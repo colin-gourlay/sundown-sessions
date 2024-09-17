@@ -12,3 +12,7 @@ The band reunited for tours through the United States and United Kingdom in 2007
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/squeezeofficial)" >}}
+

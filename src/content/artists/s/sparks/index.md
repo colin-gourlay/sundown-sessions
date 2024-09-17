@@ -12,3 +12,7 @@ The 2002 release of Lil' Beethoven, the duo's self-proclaimed "genre-defining op
 
 
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/sparksofficial)" >}}
+

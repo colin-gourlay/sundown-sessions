@@ -6,6 +6,9 @@ artist_page: true
 ---
 ## About
 
-Dutch multi-instrumentalist and producer born in 1988 in Hoorn, Netherlands. 
+Dutch musician
 
+## External Links
+
+- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/jaccogardnermusic)" >}}
 
