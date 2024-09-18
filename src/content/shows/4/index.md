@@ -34,7 +34,6 @@ keywords:
  - 'Melys'
  - 'Fabienne DelSol'
  - 'Spoon'
- - 'The Cramps'
  - 'The Detroit Cobras'
  - 'Becky Becky'
  - 'Simple Minds'

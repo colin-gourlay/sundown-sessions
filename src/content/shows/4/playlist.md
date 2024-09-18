@@ -31,11 +31,11 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Spoon" >}} - TV Set
-2. {{< artist-wikilink "The Cramps" >}} - The Way I Walk
+2. {{< artist-wikilink "The Detroit Cobras" >}} - Shout Bamalama
 
 
 
-1. {{< artist-wikilink "The Detroit Cobras" >}} - Shout Bamalama
+
 2. {{< artist-wikilink "Becky Becky" >}} - Champagne on Christmas Day
 3. {{< artist-wikilink "Simple Minds" >}} - I Travel
 4. {{< artist-wikilink "Virgin Prunes" >}} - Caucasian Walk
