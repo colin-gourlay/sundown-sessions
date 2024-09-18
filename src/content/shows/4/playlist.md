@@ -32,11 +32,11 @@
 
 1. {{< artist-wikilink "Spoon" >}} - TV Set
 2. {{< artist-wikilink "The Detroit Cobras" >}} - Shout Bamalama
+3. {{< artist-wikilink "Becky Becky" >}} - Champagne on Christmas Day
 
 
 
 
-2. {{< artist-wikilink "Becky Becky" >}} - Champagne on Christmas Day
 3. {{< artist-wikilink "Simple Minds" >}} - I Travel
 4. {{< artist-wikilink "Virgin Prunes" >}} - Caucasian Walk
 5. {{< artist-wikilink "The Mission" >}} - Naked And Savage
