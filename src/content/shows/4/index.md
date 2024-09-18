@@ -37,8 +37,6 @@ keywords:
  - 'The Detroit Cobras'
  - 'Becky Becky'
  - 'Simple Minds'
- - 'Virgin Prunes'
- - 'The Mission'
 toc: true
 featured_image: '4-show-logo.jpeg'
 read_more_copy: Show notes...
