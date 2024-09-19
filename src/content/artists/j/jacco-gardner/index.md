@@ -10,5 +10,10 @@ Dutch musician
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/jaccogardnermusic)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/jaccogardnermusic](https://www.facebook.com/jaccogardnermusic)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/jaccogardner/](https://www.instagram.com/jaccogardner/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/jaccogardner](https://twitter.com/jaccogardner)" >}}
+
 

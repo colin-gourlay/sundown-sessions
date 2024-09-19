@@ -10,5 +10,10 @@ The Teskey Brothers are an Australian blues rock band from Melbourne, named afte
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/theteskeybrothers)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/theteskeybrothers](https://www.facebook.com/theteskeybrothers)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/TheTeskeyBrothers/](https://www.instagram.com/TheTeskeyBrothers/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/teskeybrothers](https://twitter.com/teskeybrothers)" >}}
+
 

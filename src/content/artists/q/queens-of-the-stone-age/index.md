@@ -16,7 +16,10 @@ The band has been nominated for Grammy Awards nine times: four times for Best Ha
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/QOTSA](https://www.facebook.com/QOTSA)" >}}
+
 - {{< new-tab-link "Instagram: [https://www.instagram.com/queensofthestoneage/](https://www.instagram.com/queensofthestoneage/)" >}}
+
 - {{< new-tab-link "Twitter: [https://twitter.com/qotsa](https://twitter.com/qotsa)" >}}
+
 - {{< new-tab-link "Vimeo: [https://vimeo.com/qotsa](https://vimeo.com/qotsa)" >}}
 

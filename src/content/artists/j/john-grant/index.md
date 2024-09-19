@@ -12,5 +12,10 @@ Grant is also known for his collaborations with varied musicians such as Budgie,
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/johngrantmusic)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/johngrantmusic](https://www.facebook.com/johngrantmusic)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/johngrantofficial/](https://www.instagram.com/johngrantofficial/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/johngrantmusic](https://twitter.com/johngrantmusic)" >}}
+
 

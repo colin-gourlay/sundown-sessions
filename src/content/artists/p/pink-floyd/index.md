@@ -15,5 +15,10 @@ By 2013, Pink Floyd had sold more than 250 million records worldwide, making the
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/pinkfloyd)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/pinkfloyd](https://www.facebook.com/pinkfloyd)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/pinkfloyd/](https://www.instagram.com/pinkfloyd/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/PinkFloyd](https://twitter.com/PinkFloyd)" >}}
+
 

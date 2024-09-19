@@ -14,5 +14,10 @@ Interpol's debut album Turn On the Bright Lights (2002) was critically acclaimed
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/interpol)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/interpol](https://www.facebook.com/interpol)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/interpol/](https://www.instagram.com/interpol/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/Interpol](https://twitter.com/Interpol)" >}}
+
 
