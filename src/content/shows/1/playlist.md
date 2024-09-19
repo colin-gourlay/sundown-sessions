@@ -30,7 +30,7 @@
 1. {{< artist-wikilink "Electric Light Orchestra" >}} - Four Little Diamonds
 2. {{< artist-wikilink "The Detroit Cobras" >}} - Cry On
 3. {{< artist-wikilink "The Teskey Brothers" >}} - Rain
-4. The Vintage Explosion - Don't Knock Upon My Door
+4. {{< artist-wikilink "The Vintage Explosion" >}} - Don't Knock Upon My Door
 5. {{< artist-wikilink "Del Shannon" >}} - Runaway
 
 - ADVERTISING BREAK
