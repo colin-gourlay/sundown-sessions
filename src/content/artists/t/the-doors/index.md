@@ -1,70 +1,24 @@
 ---
 title: The Doors
+genres: ["Blues Rock","Classic Rock","Psychedelic Pop","Psychedelic Rock","Rock","Acid Rock"]
 featured_image: artists/t/the-doors/the-doors.jpg
 artist_page: true
 ---
 ## About
 
-American psychedelic rock/blues rock band formed from "Rick And The Ravens" in July, 1965 in Los Angeles, CA, United States by Jim Morrison and Ray Manzarek. After the death of Jim Morrison on July 3, 1971 in Paris, the other band members released two more albums, but they were not very successful. In April 1973 the band broke up.
+The Doors were an American rock band formed in Los Angeles in 1965, comprising vocalist Jim Morrison, keyboardist Ray Manzarek, guitarist Robby Krieger and drummer John Densmore. They were among the most influential and controversial rock acts of the 1960s, primarily due to Morrison's lyrics and voice, along with his erratic stage persona and legal issues. The group is widely regarded as an important figure of the era's counterculture.
+The band took its name from the title of the English writer Aldous Huxley's book The Doors of Perception, itself a reference to a quote by the English poet William Blake. After signing with Elektra Records in 1966, the Doors with Morrison recorded and released six studio albums in five years, some of which are generally considered among the greatest of all time, including their debut The Doors (1967), Strange Days (1967), and L.A. Woman (1971). Dubbed the "Kings of Acid Rock", they were one of the most successful bands of their time and by 1972, the Doors had sold over 4 million albums domestically and nearly 8 million singles.
+Morrison died in uncertain circumstances in 1971. The band continued as a trio, releasing two more albums until disbanding in 1973. In 1978, they reformed for the album An American Prayer, which combined new music with Morrison's recitings of his poetry recorded in 1969 and 1970. They reunited again briefly in 1993 when they were inducted into the Rock and Roll Hall of Fame, and for several one-off projects in the 21st century. In 2002, Manzarek, Krieger, and Ian Astbury of the Cult on vocals started performing as "The Doors of the 21st Century". Densmore and the Morrison estate successfully sued them over the use of the band's name. After a short time as Riders on the Storm, they settled on the name Manzarek–Krieger and toured until Manzarek's death in 2013.
+The Doors were the first American band to accumulate eight consecutive Gold LPs. According to the Recording Industry Association of America (RIAA), they have sold 34 million albums in the United States and over 100 million records worldwide, making them one of the best-selling bands of all time. The Doors have been listed as one of the greatest artists of all time by magazines including Rolling Stone, which ranked them 41st on its list of the "100 Greatest Artists of All Time".
 
-Inducted into Rock And Roll Hall of Fame in 1993 (Performer).
 
-Years active: 1965–1973, 1978, 1993, 1997, 2000, 2011–2012, 2012–2013
 
-Band members:
-Jim Morrison – lead vocals, harmonica, percussion (1965–1971; died 1971)
-Ray Manzarek – keyboards, organ, backing and lead vocals (1965–1973, 1978, 1993, 1997, 2000, 2011–2012, 2012–2013; died 2013)
-Robby Krieger – guitar, backing and lead vocals (1965–1973, 1978, 1993, 1997, 2000, 2011–2012, 2012–2013)
-John Densmore – drums, percussion, backing vocals (1965–1973, 1978, 1993, 1997, 2000, 2011–2012, 2012–2013)
-Patricia Sullivan (Patricia Hansen) – bass (1965)
+## External Links
 
-Touring and live members:
-Jack Conrad – bass (1972)
-Bobby Ray Henson – rhythm guitar (1972)
-Eddie Vedder – vocals (1993)
-Don Was – bass (1993)
-Angelo Barbera – bass (2000)
-Perry Farrell – vocals (2000)
-Pat Monahan – vocals (2000)
-Ian Astbury – vocals (2000)
-Travis Meeks – vocals (2000)
-Scott Weiland – vocals (2000)
-Scott Stapp – vocals (2000)
+- {{< new-tab-link "Facebook: [https://www.facebook.com/thedoors](https://www.facebook.com/thedoors)" >}}
 
-Guest and session members:
-Larry Knechtel – bass (1966–1967) (on "The Doors" (1967))
-Doug Lubahn – bass (1967, 1968–1969) (on "Strange Days" (1967), "Waiting for the Sun" (1968), "The Soft Parade" (1969))
-Kerry Magness – bass (1968) (on "Waiting for the Sun" (1968))
-Leroy Vinnegar – acoustic bass (1968) (on "Waiting for the Sun" (1968))
-Harvey Brooks – bass (1968–1969) (on "The Soft Parade" (1969))
-Curtis Amy – saxophone (1968–1969) (on "The Soft Parade" (1969))
-George Bohanon – trombone (1968–1969) (on "The Soft Parade" (1969))
-Champ Webb – English horn (1968–1969) (on "The Soft Parade" (1969))
-Jesse McReynolds – mandolin (1968–1969) (on "The Soft Parade" (1969))
-Jimmy Buchanan – fiddle (1968–1969) (on "The Soft Parade" (1969))
-Reinol Andino – conga (1968–1969) (on "The Soft Parade" (1969)), percussion (1978) (on "An American Prayer" (1978))
-Ray Neopolitan – bass (1970, 1971) (on "Morrison Hotel" (1970), "Other Voices" (1971))
-Lonnie Mack – bass (1970) (on "Morrison Hotel" (1970))
-John Sebastian (aka G. Puglese) – blues harp (1970) (on "Morrison Hotel" (1970))
-Jerry Scheff – bass (1970–1971, 1978) (on "L.A. Woman" (1971), "Other Voices" (1971), "An American Prayer" (1978))
-Marc Benno – rhythm guitar (1970–1971) (on "L.A. Woman" (1971))
-Jack Conrad – bass (1971, 1972) (on "Other Voices" (1971), "Full Circle" (1972)), rhythm guitar (1972) (on "Full Circle" (1972))
-Willie Ruff – acoustic bass (1971) (on "Other Voices" (1971))
-Wolfgang Melz – bass (1971) (on "Other Voices" (1971))
-Emil Richards – marimba (1971) (on "Other Voices" (1971))
-Francisco Aguabella – percussion (1971) (on "Other Voices" (1971))
-Venetta Fields – vocals (1972) (on "Full Circle" (1972))
-Clydie King – vocals (1972) (on "Full Circle" (1972))
-Melissa Mackay – vocals (1972) (on "Full Circle" (1972))
-Chris Ethridge – bass (1972) (on "Full Circle" (1972))
-Charles Larkey – bass (1972) (on "Full Circle" (1972))
-Leland Sklar – bass (1972) (on "Full Circle" (1972))
-Charles Lloyd – tenor saxophone, flute (1972) (on "Full Circle" (1972))
-Bobbye Hall – percussion (1972) (on "Full Circle" (1972))
-Chico Batera – percussion (1972) (on "Full Circle" (1972))
-Bob Glaub – bass (1978) (on "An American Prayer" (1978))
+- {{< new-tab-link "Instagram: [https://www.instagram.com/thedoors/](https://www.instagram.com/thedoors/)" >}}
 
-### Current Lineup
+- {{< new-tab-link "Twitter: [https://twitter.com/TheDoors](https://twitter.com/TheDoors)" >}}
 
-Ray Manzarek, Robby Krieger, John Densmore
 
