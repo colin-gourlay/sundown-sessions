@@ -1,0 +1,265 @@
+{
+  "artistMetadataId": 30,
+  "status": "continuing",
+  "ended": false,
+  "foreignArtistId": "7dc8f5bd-9d0b-4087-9f73-dc164950bbd8",
+  "tadbId": 0,
+  "discogsId": 0,
+  "artistType": "Group",
+  "disambiguation": "",
+  "links": [
+    {
+      "url": "https://qotsa.com/",
+      "name": "qotsa"
+    },
+    {
+      "url": "http://musicmoz.org/Bands_and_Artists/Q/Queens_of_the_Stone_Age/",
+      "name": "musicmoz"
+    },
+    {
+      "url": "https://www.discogs.com/artist/56168",
+      "name": "discogs"
+    },
+    {
+      "url": "http://www.thefade.net/",
+      "name": "thefade"
+    },
+    {
+      "url": "http://qotsa.mskiteonline.com/",
+      "name": "mskiteonline"
+    },
+    {
+      "url": "https://myspace.com/queensofthestoneage",
+      "name": "myspace"
+    },
+    {
+      "url": "https://www.bbc.co.uk/music/artists/7dc8f5bd-9d0b-4087-9f73-dc164950bbd8",
+      "name": "bbc"
+    },
+    {
+      "url": "https://www.allmusic.com/artist/mn0000376422",
+      "name": "allmusic"
+    },
+    {
+      "url": "https://rateyourmusic.com/artist/queens-of-the-stone-age",
+      "name": "rateyourmusic"
+    },
+    {
+      "url": "https://www.last.fm/music/Queens+of+the+Stone+Age",
+      "name": "last"
+    },
+    {
+      "url": "https://www.imdb.com/name/nm1692949/",
+      "name": "imdb"
+    },
+    {
+      "url": "https://soundcloud.com/qotsa",
+      "name": "soundcloud"
+    },
+    {
+      "url": "https://www.youtube.com/user/QueensStoneAgeVEVO",
+      "name": "youtube"
+    },
+    {
+      "url": "https://www.wikidata.org/wiki/Q1243718",
+      "name": "wikidata"
+    },
+    {
+      "url": "https://secondhandsongs.com/artist/526",
+      "name": "secondhandsongs"
+    },
+    {
+      "url": "https://www.musik-sammler.de/artist/3280/",
+      "name": "musik-sammler"
+    },
+    {
+      "url": "http://viaf.org/viaf/125702051",
+      "name": "viaf"
+    },
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:QOTSA_mg_5853.jpg",
+      "name": "wikimedia"
+    },
+    {
+      "url": "https://itunes.apple.com/us/artist/id857919",
+      "name": "apple"
+    },
+    {
+      "url": "https://play.google.com/store/music/artist?id=Ar3gfgslmbjw6f4hogex4m7lgdq",
+      "name": "google"
+    },
+    
+    {
+      "url": "https://www.bandsintown.com/a/796",
+      "name": "bandsintown"
+    },
+    {
+      "url": "https://www.songkick.com/artists/479466",
+      "name": "songkick"
+    },
+    {
+      "url": "https://www.youtube.com/user/QOTSAmusic",
+      "name": "youtube"
+    },
+    {
+      "url": "https://www.45cat.com/artist/queens-of-the-stone-age",
+      "name": "45cat"
+    },
+    {
+      "url": "https://imvdb.com/n/queens-of-the-stone-age",
+      "name": "imvdb"
+    },
+    {
+      "url": "https://genius.com/artists/Queens-of-the-stone-age",
+      "name": "genius"
+    },
+    {
+      "url": "https://open.spotify.com/artist/4pejUc4iciQfgdX6OKulQn",
+      "name": "spotify"
+    },
+    {
+      "url": "https://www.deezer.com/artist/1177",
+      "name": "deezer"
+    },
+    {
+      "url": "http://7digital.com/artist/queens-of-the-stone-age",
+      "name": "7digital"
+    },
+    {
+      "url": "https://www.spirit-of-rock.com/en/band/Queens_Of_The_Stone_Age",
+      "name": "spirit-of-rock"
+    },
+    {
+      "url": "https://www.setlist.fm/setlists/queens-of-the-stone-age-1bd689ec.html",
+      "name": "setlist"
+    },
+    {
+      "url": "https://d-nb.info/gnd/6071658-7",
+      "name": "d-nb"
+    },
+    {
+      "url": "http://id.loc.gov/authorities/names/no00000859",
+      "name": "loc"
+    },
+    {
+      "url": "https://www.worldcat.org/identities/lccn-no00000859",
+      "name": "worldcat"
+    },
+    {
+      "url": "https://catalogue.bnf.fr/ark:/12148/cb14032583q",
+      "name": "bnf"
+    },
+    {
+      "url": "https://giphy.com/qotsa",
+      "name": "giphy"
+    },
+    {
+      "url": "https://www.whosampled.com/Queens-of-the-Stone-Age/",
+      "name": "whosampled"
+    },
+    {
+      "url": "https://tidal.com/artist/29902",
+      "name": "tidal"
+    },
+    {
+      "url": "https://www.rockalyrics.com/1/queens-of-the-stone-age-lyrics",
+      "name": "rockalyrics"
+    },
+    {
+      "url": "https://music.amazon.co.uk/artists/B001EHSCX0",
+      "name": "amazon"
+    },
+    {
+      "url": "https://www.cdjapan.co.jp/person/700208080",
+      "name": "cdjapan"
+    },
+    {
+      "url": "https://www.livefans.jp/artists/5110",
+      "name": "livefans"
+    },
+    {
+      "url": "https://mora.jp/artist/5458/all",
+      "name": "mora"
+    },
+    {
+      "url": "https://www.musixmatch.com/artist/Queens-of-the-Stone-Age",
+      "name": "musixmatch"
+    },
+    {
+      "url": "https://www.muziekweb.nl/Link/M00000046260/POPULAR/",
+      "name": "muziekweb"
+    },
+    {
+      "url": "https://muzikum.eu/en/queens-of-the-stone-age/lyrics",
+      "name": "muzikum"
+    },
+    {
+      "url": "https://www.qobuz.com/gb-en/interpreter/queens-of-the-stone-age/148265",
+      "name": "qobuz"
+    },
+    {
+      "url": "https://www.qobuz.com/gb-en/interpreter/queens-of-the-stone-age/148265",
+      "name": "qobuz"
+    },
+    {
+      "url": "https://www.spirit-of-metal.com/en/band/Queens_Of_The_Stone_Age",
+      "name": "spirit-of-metal"
+    },
+    {
+      "url": "https://music.youtube.com/channel/UCcYgNw9ne8v1cxcAD_sIOWQ",
+      "name": "youtube"
+    },
+    {
+      "url": "https://music.apple.com/us/artist/857919",
+      "name": "apple"
+    },
+    {
+      "url": "https://music.apple.com/us/artist/857919",
+      "name": "apple"
+    }
+  ],
+  "images": [
+    {
+      "url": "/MediaCover/26/banner.jpg?lastWrite=638318598189220686",
+      "coverType": "banner",
+      "extension": ".jpg",
+      "remoteUrl": "http://assets.fanart.tv/fanart/music/7dc8f5bd-9d0b-4087-9f73-dc164950bbd8/musicbanner/queens-of-the-stone-age-5314d571a9835.jpg"
+    },
+    {
+      "url": "/MediaCover/26/fanart.jpg?lastWrite=638318598200879294",
+      "coverType": "fanart",
+      "extension": ".jpg",
+      "remoteUrl": "http://assets.fanart.tv/fanart/music/7dc8f5bd-9d0b-4087-9f73-dc164950bbd8/artistbackground/queens-of-the-stone-age-4e3a6cc27b98a.jpg"
+    },
+    {
+      "url": "/MediaCover/26/logo.png?lastWrite=638318598242421629",
+      "coverType": "logo",
+      "extension": ".png",
+      "remoteUrl": "http://assets.fanart.tv/fanart/music/7dc8f5bd-9d0b-4087-9f73-dc164950bbd8/hdmusiclogo/queens-of-the-stone-age-5bc6210d9b2a5.png"
+    },
+   
+  ],
+  "path": "/config/Queens of the Stone Age",
+  "qualityProfileId": 1,
+  "metadataProfileId": 1,
+  "monitored": true,
+  "monitorNewItems": "all",
+  "rootFolderPath": "/config/",
+  "cleanName": "queensstoneage",
+  "sortName": "queens stone age",
+  "tags": [],
+  "added": "2022-02-10T22:54:09Z",
+  "ratings": {
+    "votes": 15,
+    "value": 8.7
+  },
+  "statistics": {
+    "albumCount": 8,
+    "trackFileCount": 0,
+    "trackCount": 0,
+    "totalTrackCount": 137,
+    "sizeOnDisk": 0,
+    "percentOfTracks": 0
+  },
+  "id": 26
+}
