@@ -15,5 +15,10 @@ Singer Jim Kerr and guitarist Charlie Burchill are the two members who have been
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/simpleminds)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/simpleminds](https://www.facebook.com/simpleminds)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/simplemindsmusic/](https://www.instagram.com/simplemindsmusic/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/simplemindscom](https://twitter.com/simplemindscom)" >}}
+
 

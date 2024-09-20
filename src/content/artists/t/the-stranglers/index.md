@@ -93,5 +93,9 @@ The Stranglers discography at MusicBrainz
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/thestranglers)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/thestranglers](https://www.facebook.com/thestranglers)" >}}
+
+
+- {{< new-tab-link "Twitter: [https://twitter.com/StranglersSite](https://twitter.com/StranglersSite)" >}}
+
 
