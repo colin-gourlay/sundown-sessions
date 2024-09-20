@@ -12,5 +12,10 @@ Royal Blood are an English rock duo formed in Littlehampton in 2011. The current
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/RoyalBloodUK)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/RoyalBloodUK](https://www.facebook.com/RoyalBloodUK)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/royalblooduk/](https://www.instagram.com/royalblooduk/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/royalblooduk](https://twitter.com/royalblooduk)" >}}
+
 

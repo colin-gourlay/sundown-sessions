@@ -1,6 +1,6 @@
 ---
 title: Kula Shaker
-genres: ["Britpop","Folk Rock","Psychedelic Rock","Rock","Neo-Psychedelia"]
+genres: ["Britpop","Psychedelic Rock","Neo-Psychedelia","Raga Rock"]
 featured_image: artists/k/kula-shaker/kula-shaker.jpg
 artist_page: true
 ---
@@ -15,5 +15,9 @@ After taking an extended hiatus, the band released their sixth album, 1st Congre
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/kulashaker)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/kulashaker](https://www.facebook.com/kulashaker)" >}}
+
+
+- {{< new-tab-link "Twitter: [https://twitter.com/kula_shaker](https://twitter.com/kula_shaker)" >}}
+
 

@@ -14,5 +14,9 @@ White Lies' debut album To Lose My Life..., released in January 2009, was a numb
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/WhiteLies)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/WhiteLies](https://www.facebook.com/WhiteLies)" >}}
+
+
+- {{< new-tab-link "Twitter: [https://twitter.com/whiteliesmusic](https://twitter.com/whiteliesmusic)" >}}
+
 

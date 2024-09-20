@@ -12,5 +12,8 @@ After nearly 20 years together, the group disbanded in 1997 in part due to issue
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/ctwins)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/ctwins](https://www.facebook.com/ctwins)" >}}
+
+
+
 
