@@ -13,5 +13,10 @@ McCartney has written or co-written a record 32 songs that have topped the Billb
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/PaulMcCartney)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/PaulMcCartney](https://www.facebook.com/PaulMcCartney)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/paulmccartney/](https://www.instagram.com/paulmccartney/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/PaulMcCartney](https://twitter.com/PaulMcCartney)" >}}
+
 

@@ -13,5 +13,10 @@ Spoon released their debut studio album, Telephono, in 1996 through Matador Reco
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/spoontheband)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/spoontheband](https://www.facebook.com/spoontheband)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/spoontheband/](https://www.instagram.com/spoontheband/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/SpoonTheBand](https://twitter.com/SpoonTheBand)" >}}
+
 

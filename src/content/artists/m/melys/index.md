@@ -12,5 +12,9 @@ Melys (English translation:"Sweet") are a Welsh independent rock band from Betws
 
 ## External Links
 
-- {{< new-tab-link "[Official Facebook Page](https://www.facebook.com/melysmusic)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/melysmusic](https://www.facebook.com/melysmusic)" >}}
+
+
+- {{< new-tab-link "Twitter: [https://twitter.com/melysmusic](https://twitter.com/melysmusic)" >}}
+
 
