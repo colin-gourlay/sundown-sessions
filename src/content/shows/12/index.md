@@ -6,13 +6,13 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - A celebration of Vertigo Records
 
-- Creedence Clearwater Revival
+- Blue Öyster Cult
 
-- Rainbow
+- Led Zeppelin
 
-- The Doors
+- King Crimson
 
-- Black Sabbath
+- Live
 
 - and much, much more...
 '
