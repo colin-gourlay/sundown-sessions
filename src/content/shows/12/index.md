@@ -6,13 +6,13 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - A celebration of Vertigo Records
 
-- Blue Öyster Cult
+- Nazareth
 
 - Led Zeppelin
 
-- King Crimson
+- Thin Lizzy
 
-- Live
+- Rush
 
 - and much, much more...
 '
