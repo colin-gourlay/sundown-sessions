@@ -1,16 +1,18 @@
 #
-{{< figure src="11-guest-logo.jpeg" title="Elektra Records" alt="Elektra Records" width="75%" >}}
+{{< figure src="12-guest-logo.jpeg" title="Vertigo Records" alt="Vertigo Records" width="75%" >}}
+
+I currently don't have contact information or social media links for Vertigo Records. If you possess such details, kindly share them through the contact page. Upon receiving consent, I will post them here for the benefit of others.
 
 ### Contact details
 
 - ~~**email:**~~
 - ~~**phone:**~~
-- **website:** {{< new-tab-link "[https://www.elektra.com/](https://www.elektra.com/)">}}
+- ~~**website:**~~
 
 ### Social Media
 
-- **Facebook:** {{< new-tab-link "[https://www.facebook.com/Elektra](https://www.facebook.com/Elektra)">}}
-- **Instagram:** {{< new-tab-link "[https://www.instagram.com/elektrarecords/](https://www.instagram.com/elektrarecords/)">}}
+- ~~**Facebook:**~~ 
+- ~~**Instagram:**~~ 
 - ~~**Twitter:**~~
 - ~~**LinkedIn:**~~
-- **YouTube:** {{< new-tab-link "[https://www.youtube.com/elektrarecords](https://www.youtube.com/elektrarecords)">}}
+- ~~**YouTube:**~~ 
