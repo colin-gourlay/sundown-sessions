@@ -2,7 +2,7 @@
 title: 'Show #12: Broadcast 25th September 2024'
 slug: 'featuring-a-celebration-of-vertigo-records'
 description: 'featuring A celebration of Vertigo Records'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'Live on East Coast FM, THE SUNDOWN SESSIONS returns with...
 
 - A celebration of Vertigo Records
 

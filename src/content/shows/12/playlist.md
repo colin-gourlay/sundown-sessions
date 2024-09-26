@@ -1,7 +1,7 @@
 1. {{< artist-wikilink "Lenny Kravitz" >}} - Are You Gonna Go My Way
 2. {{< artist-wikilink "Masters Of Reality" >}} - Dreamtime Stomp
 3. {{< artist-wikilink "Extreme" >}} - Rest In Peace
-4. {{< artist-wikilink "Queens of the Stone Age" >}} - I Sat by the Ocean
+4. {{< artist-wikilink "Queens of the Stone Age" >}} - I Sat By The Ocean
 
 - ADVERTISING BREAK
 
