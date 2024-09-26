@@ -11,8 +11,6 @@
 4. {{< artist-wikilink "Creedence Clearwater Revival" >}} - Travelin' Band
 5. {{< artist-wikilink "Led Zeppelin" >}} - I Can't Quit You Baby
 6. {{< artist-wikilink "Black Sabbath" >}} - Black Sabbath
-7. {{< artist-wikilink "Nazareth" >}} - Woke Up This Morning
-8. {{< artist-wikilink "Big Country" >}} - Republican Party Reptile
 
 - NEWS
 
