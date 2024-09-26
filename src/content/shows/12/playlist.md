@@ -28,4 +28,3 @@
 4. {{< artist-wikilink "Uriah Heep" >}} - Gypsy 
 5. {{< artist-wikilink "Live" >}} - Selling The Drama 
 6. {{< artist-wikilink "Rush" >}} - The Spirit Of Radio 
-7. {{< artist-wikilink "King Crimson" >}} - 21st Century Schizoid Man - Including "Mirrors"
