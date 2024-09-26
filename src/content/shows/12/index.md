@@ -28,8 +28,6 @@ keywords:
  - 'Creedence Clearwater Revival'
  - 'Led Zeppelin'
  - 'Black Sabbath'
- - 'Nazareth'
- - 'Big Country'
  - 'Rainbow'
  - 'ZZ Top'
  - 'Jimi Hendrix'
