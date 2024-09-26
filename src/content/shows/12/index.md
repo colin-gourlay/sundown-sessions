@@ -38,6 +38,7 @@ keywords:
  - 'Thin Lizzy'
  - 'Uriah Heep'
  - 'Live'
+ - 'Status Quo'
  - 'Rush'
 toc: true
 featured_image: '12-show-logo.jpeg'

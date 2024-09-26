@@ -27,4 +27,5 @@
 3. {{< artist-wikilink "Thin Lizzy" >}} - Jailbreak 
 4. {{< artist-wikilink "Uriah Heep" >}} - Gypsy 
 5. {{< artist-wikilink "Live" >}} - Selling The Drama 
-6. {{< artist-wikilink "Rush" >}} - The Spirit Of Radio 
+6. Status Quo - Blue Eyed Lady
+7. {{< artist-wikilink "Rush" >}} - The Spirit Of Radio 
