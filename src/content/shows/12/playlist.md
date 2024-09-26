@@ -18,7 +18,7 @@
 2. {{< artist-wikilink "ZZ Top" >}} - Tush 
 3. {{< artist-wikilink "Jimi Hendrix" >}} - Little Wing 
 4. {{< artist-wikilink "Metallica" >}} - King Nothing 
-5. {{< artist-wikilink "Blue Öyster Cult" >}} - (Don't Fear) The Reaper
+5. Blue Öyster Cult - (Don't Fear) The Reaper
 
 - ADVERTISING BREAK
 

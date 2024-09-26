@@ -32,14 +32,13 @@ keywords:
  - 'ZZ Top'
  - 'Jimi Hendrix'
  - 'Metallica'
- - 'Blue Öyster Cult'
+ - 'Blue Oyster Cult'
  - 'Bad Company'
  - 'May Blitz'
  - 'Thin Lizzy'
  - 'Uriah Heep'
  - 'Live'
  - 'Rush'
- - 'King Crimson'
 toc: true
 featured_image: '12-show-logo.jpeg'
 read_more_copy: Show notes...
