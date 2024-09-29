@@ -1,13 +1,10 @@
 ---
 title: The Silencers
+genres: ["Pop","Rock"]
 featured_image: artists/t/the-silencers/the-silencers.jpg
 artist_page: true
 ---
 ## About
 
- Scottish rock/pop band founded in London in 1986.
-
-### Current Lineup
-
-Jimme O'Neill, James O'Neill, Stevie Kane, Aura O'Neill
+The Silencers are a Scottish rock band formed in London in 1986 by Jimme O'Neill and Cha Burns, two ex-members of the post-punk outfit Fingerprintz. Their music is characterised by a melodic blend of pop, folk and traditional Celtic influences. Often compared to Scottish bands with a similar sound like Big Country, Del Amitri and The Proclaimers, The Silencers have distinguished themselves with their eclectic sounds, prolific output and continued career. Their first single, "Painted Moon," was a minor international hit and invited critical comparisons to Simple Minds and U2. In 1987 they released their first album A Letter From St. Paul, which included "Painted Moon" and another minor hit, "I See Red." Buoyed by the huge European hit "Bulletproof Heart", the band's third album Dance to the Holy Man is the band's commercial peak to date. Throughout the 1990s, The Silencers saw a  popular taste shift away from their songwriter-based style of music toward grunge and electronic music.
 
