@@ -2,7 +2,7 @@
 title: 'Show #13: Broadcast 1st October 2024'
 slug: 'featuring-becky-becky'
 description: 'featuring Becky Becky'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'Live on East Coast FM, THE SUNDOWN SESSIONS returns with...
 
 - Becky Becky
 
@@ -10,7 +10,7 @@ summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
 
 - Jacco Gardner
 
-- The Move
+- Angelfish
 
 - Franz Ferdinand
 
@@ -36,10 +36,8 @@ keywords:
  - 'Pink Floyd'
  - 'Jacco Gardner'
  - 'John Grant'
- - 'Texas'
  - 'The Filthy Tongues'
  - 'The The'
- - 'Kula Shaker'
 toc: true
 featured_image: '13-show-logo.jpeg'
 read_more_copy: Show notes...

@@ -18,7 +18,5 @@
 | 16 | {{<title "Astronomy Domine--Pink Floyd">}}                    | The Piper At The Gates Of Dawn (1967) |   4:11   | Released 05 August 1967   |
 | 17 | {{<title "The Ballad of Little Jane--Jacco Gardner">}}        | Cabinet of Curiosities (2013)         |   4:06   | Released 04 February 2013 |
 | 18 | {{<title "Where Dreams Go To Die--John Grant">}}              | Queen of Denmark (2010)               |   6:04   | Released 19 April 2010    |
-| 19 | {{<title "I Want To Go To Heaven--Texas">}}                   | Ricks Road (1993)                     |   3:26   |                           |
-| 20 | {{<title "Children of the Filthy--The Filthy Tongues">}}      | Jacob's Ladder (2016)                 |   4:06   | Released 22 April 2016    |
-| 21 | {{<title "Infected--The The">}}                               | Infected (1986)                       |   4:48   |                           |
-| 22 | {{<title "Tattva--Kula Shaker">}}                             | K (1996)                              |   3:46   | Released 10 June 1996     |
+| 19 | {{<title "Children of the Filthy--The Filthy Tongues">}}      | Jacob's Ladder (2016)                 |   4:06   | Released 22 April 2016    |
+| 20 | {{<title "Infected--The The">}}                               | Infected (1986)                       |   4:48   |                           |
