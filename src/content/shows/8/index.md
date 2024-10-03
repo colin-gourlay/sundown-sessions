@@ -2,7 +2,7 @@
 title: 'Show #8: Broadcast 7th August 2024'
 slug: 'featuring-baby-bartok'
 description: 'featuring Baby Bartok'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Baby Bartok
 

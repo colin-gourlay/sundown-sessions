@@ -12,7 +12,6 @@
   - The Wrecking Crew played for many artists during their active years. They were a prolific group of studio musicians in the 1960s and 1970s. The band were behind The Beach Boys; The Byrds; The Monkees; The Mamas & the Papas; The Association; Sonny & Cher; Simon & Garfunkel; Nancy Sinatra; Herman's Hermits; The 5th Dimension; The Animals; The Ronettes; Petula Clark; James Brown; Elvis Presley; Frank Sinatra; Bobby Darin; Duke Ellington; Phil Spector; Johnny Cash; Nat King Cole; and many more.
   - {{< new-tab-link "[The Wrecking Crew!](https://www.imdb.com/title/tt1185418/)" >}}
   - {{< new-tab-link "[Official Trailer](https://www.youtube.com/watch?v=SX5BCgmr7tg)" >}}
-  - {{< new-tab-link "[The Pop Museum at K107](https://embedded.autopod.xyz/episodes/show/2487)" >}}
 - _Blue On Shock_
   - {{< new-tab-link "[The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}
 - _Simple Minds_

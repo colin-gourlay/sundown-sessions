@@ -2,7 +2,7 @@
 title: 'Show #7: Broadcast 31st July 2024'
 slug: 'featuring-frank-sidebottom-and-the-man-behind-the-mask'
 description: 'featuring Frank Sidebottom and The Man Behind The Mask'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Frank Sidebottom and The Man Behind The Mask
 

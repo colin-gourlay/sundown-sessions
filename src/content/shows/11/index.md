@@ -2,7 +2,7 @@
 title: 'Show #11: Broadcast 28th August 2024'
 slug: 'featuring-a-celebration-of-elektra-records'
 description: 'featuring A celebration of Elektra Records'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - A celebration of Elektra Records
 

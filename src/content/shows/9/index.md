@@ -2,7 +2,7 @@
 title: 'Show #9: Broadcast 14th August 2024'
 slug: 'featuring-colin-gourlay-from-andysmanclub'
 description: 'featuring Colin Gourlay from ANDYSMANCLUB'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Colin Gourlay from ANDYSMANCLUB
 

@@ -2,7 +2,7 @@
 title: 'Show #5: Broadcast 17th July 2024'
 slug: 'featuring-white-china'
 description: 'featuring White China'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - White China
 

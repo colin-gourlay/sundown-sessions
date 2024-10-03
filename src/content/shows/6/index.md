@@ -2,7 +2,7 @@
 title: 'Show #6: Broadcast 24th July 2024'
 slug: 'featuring-the-thieves'
 description: 'featuring The Thieves'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - The Thieves
 

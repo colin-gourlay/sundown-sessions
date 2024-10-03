@@ -2,7 +2,7 @@
 title: 'Show #10: Broadcast 21st August 2024'
 slug: 'featuring-the-twist'
 description: 'featuring The Twist'
-summary: 'Live on K107, THE SUNDOWN SESSIONS returns with...
+summary: 'THE SUNDOWN SESSIONS returns with...
 
 - The Twist
 
