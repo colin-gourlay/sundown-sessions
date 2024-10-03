@@ -1,6 +1,6 @@
 ---
 title: 'About'
-description: 'A community radio show broadcasting from Kirkcaldy, Scotland'
+description: 'A community radio show broadcasting from Haddington, Scotland'
 menu:
   main:
     weight: 2
