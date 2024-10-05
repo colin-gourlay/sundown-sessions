@@ -1,7 +1,8 @@
 ---
-title: Del Shannon
-genres: ["Country","Pop","Pop Rock","Psychedelic Pop","Rock","Teen Pop"]
+genres: ["Country","Pop","Pop Rock","Psychedelic Pop","Rock","Rock And Roll","Teen Pop"]
 featured_image: artists/d/del-shannon/del-shannon.jpg
+title: Del Shannon
+show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About

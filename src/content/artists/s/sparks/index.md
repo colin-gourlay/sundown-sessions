@@ -1,7 +1,8 @@
 ---
-title: Sparks
 genres: ["Art Rock","Chamber Pop","Club","Dance","Disco","Glam Rock","New Wave","Pop","Synth-Pop","Art Pop","Zolo","Baroque Pop"]
 featured_image: artists/s/sparks/sparks.jpg
+title: Sparks
+show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About

@@ -1,14 +1,15 @@
 ---
-title: IST IST
 genres: []
 featured_image: artists/i/ist-ist/ist-ist.jpg
+title: IST IST
+show_appeared_on: ["1"]
 artist_page: true
 ---
-## About
+## External Links
 
-Manchester-based post-punk group.
+- {{< new-tab-link "Facebook: [https://www.facebook.com/ististmusic](https://www.facebook.com/ististmusic)" >}}
 
-### Current Lineup
 
-Andy Keating, Mat Peters, Joel Kay, Adam Houghton
+- {{< new-tab-link "Twitter: [https://twitter.com/ististmusic](https://twitter.com/ististmusic)" >}}
+
 

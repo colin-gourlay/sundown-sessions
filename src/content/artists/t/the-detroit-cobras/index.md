@@ -1,7 +1,8 @@
 ---
-title: The Detroit Cobras
 genres: ["Garage Rock"]
 featured_image: artists/t/the-detroit-cobras/the-detroit-cobras.jpg
+title: The Detroit Cobras
+show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About

@@ -1,7 +1,8 @@
 ---
-title: Interpol
 genres: ["Alternative Rock","Indie Rock","Post-Punk","Post-Punk Revival"]
 featured_image: artists/i/interpol/interpol.jpg
+title: Interpol
+show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About

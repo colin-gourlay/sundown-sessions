@@ -1,7 +1,8 @@
 ---
-title: Jacco Gardner
 genres: ["Indie Pop","Psychedelic"]
 featured_image: artists/j/jacco-gardner/jacco-gardner.jpg
+title: Jacco Gardner
+show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About

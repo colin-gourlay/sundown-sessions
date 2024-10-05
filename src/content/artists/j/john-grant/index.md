@@ -1,7 +1,8 @@
 ---
-title: John Grant
 genres: ["Alternative Rock","Folk","Folk Rock","Indie Rock"]
 featured_image: artists/j/john-grant/john-grant.jpg
+title: John Grant
+show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About

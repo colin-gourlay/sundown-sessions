@@ -1,7 +1,8 @@
 ---
-title: Roachford
 genres: []
 featured_image: artists/r/roachford/roachford.jpg
+title: Roachford
+show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About

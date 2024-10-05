@@ -57,6 +57,16 @@
       {{- partial "menu-contextual.html" . -}}
     </aside>
 
+    {{ if .Params.show_appeared_on }}
+    ## Featured in the following shows:
+    <ul>
+      {{ range .Params.show_appeared_on }}
+      {{ $slug := partial "extract-slug.html" . }}
+      <li><a href="/shows/{{ $slug }}/">{{ $slug | humanize }}</a></li>
+      {{ end }}
+    </ul>
+    {{ end }}
+    
     {{ if .Params.genres }}
     <div class="genre-tags">
       {{ range .Params.genres }}
@@ -64,6 +74,8 @@
       {{ end }}
     </div>
     {{ end }}
+    
+    
 
 
   </article>

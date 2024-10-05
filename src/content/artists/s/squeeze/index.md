@@ -1,7 +1,8 @@
 ---
-title: Squeeze
 genres: ["New Wave","Pop","Rock"]
 featured_image: artists/s/squeeze/squeeze.jpg
+title: Squeeze
+show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About
@@ -10,9 +11,6 @@ Squeeze are an English rock band that came to prominence in the United Kingdom d
 In the vast majority of their material, lyrics are written by Chris Difford and music by Glenn Tilbrook, who are guitarists and vocalists in the band. The duo were hailed as "the heirs to Lennon and McCartney's throne" during the band's initial popularity in the late 1970s. The group formed in Deptford, London, in 1974, and first broke up in 1982. Squeeze then reformed in 1985, and disbanded again in 1999.
 The band reunited for tours through the United States and United Kingdom in 2007. In 2010, they issued Spot the Difference, an album of newly recorded versions of older material. The band's first album of all-new material since 1998, Cradle to the Grave, was released in October 2015, followed by another album, The Knowledge, in October 2017.
 
-## Discography
-### Albums
-### Singles
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/squeezeofficial](https://www.facebook.com/squeezeofficial)" >}}
