@@ -2,7 +2,6 @@
 genres: ["Alternative Rock","Art Rock","Desert Rock","Hard Rock","Rock","Stoner Rock","Garage Rock Revival"]
 featured_image: artists/q/queens-of-the-stone-age/queens-of-the-stone-age.jpg
 title: Queens of the Stone Age
-show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About
@@ -13,6 +12,11 @@ After Oliveri's and Lanegan's departures in 2004 and 2005, respectively, Homme b
 The band has been nominated for Grammy Awards nine times: four times for Best Hard Rock Performance, three for Best Rock Album, and once for Best Rock Performance and Best Rock Song.
 
 
+
+## Show(s) appeared on
+
+- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
+- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links
 
