@@ -2,7 +2,6 @@
 genres: ["Alternative Rock","Folk","Folk Rock","Indie Rock"]
 featured_image: artists/j/john-grant/john-grant.jpg
 title: John Grant
-show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About
@@ -12,6 +11,11 @@ Grant's debut solo album Queen of Denmark (2010) was named the best album of the
 Grant is also known for his collaborations with varied musicians such as Budgie, CMAT, Elbow, Elton John, Goldfrapp, GusGus, Hercules and Love Affair, Kylie Minogue, Midlake, Robbie Williams, Sinéad O'Connor, Tracey Thorn and Linda Thompson (singer). Since 2018, he has been the lead vocalist of Creep Show, a side project he formed with the members of rock band Wrangler.
 
 
+
+## Show(s) appeared on
+
+- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
+- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links
 

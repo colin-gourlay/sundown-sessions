@@ -2,7 +2,6 @@
 genres: ["Art Rock","Classic Rock","Experimental Rock","Progressive","Progressive Rock","Psychedelic","Psychedelic Pop","Psychedelic Rock","Rock","Space Rock","Symphonic Rock","Rock Opera"]
 featured_image: artists/p/pink-floyd/pink-floyd.jpg
 title: Pink Floyd
-show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About
@@ -13,6 +12,11 @@ Following personal tensions, Wright left Pink Floyd in 1981, followed by Waters 
 By 2013, Pink Floyd had sold more than 250 million records worldwide, making them one of the best-selling music artists of all time. The Dark Side of the Moon and The Wall were inducted into the Grammy Hall of Fame, and these albums and Wish You Were Here are among the best-selling albums of all time. Four Pink Floyd albums topped the US Billboard 200 and five topped the UK Albums Chart. Their hit singles include "Arnold Layne" (1967), "See Emily Play" (1967), "Money" (1973), "Another Brick in the Wall, Part 2" (1979), "Not Now John" (1983), "On the Turning Away" (1987) and "High Hopes" (1994). Pink Floyd were inducted into the US Rock and Roll Hall of Fame in 1996 and the UK Music Hall of Fame in 2005. In 2008, they were awarded the Polar Music Prize in Sweden for their contribution to modern music.
 
 
+
+## Show(s) appeared on
+
+- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
+- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links
 

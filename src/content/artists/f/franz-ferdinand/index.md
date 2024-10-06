@@ -2,7 +2,6 @@
 genres: ["Alternative Dance","Alternative Rock","Art Rock","Dance-Punk","Indie Pop","Indie Rock","Indietronica","New Wave","Pop","Post-Punk","Post-Punk Revival"]
 featured_image: artists/f/franz-ferdinand/franz-ferdinand.jpg
 title: Franz Ferdinand
-show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About
@@ -13,6 +12,11 @@ In 2005, the band released their second studio album, You Could Have It So Much 
 Four years after the release of Tonight, the band released their fourth studio album, Right Thoughts, Right Words, Right Action, in August 2013. In 2015, Franz Ferdinand and American rock band Sparks formed the supergroup FFS and released a one-off self-titled album in June 2015. The band underwent multiple lineup changes following FFS, beginning with McCarthy's departure in 2016. After acquiring Corrie and Bardot, the band released their fifth studio album Always Ascending in February 2018. Thomson departed in 2021 and was replaced by Tait. The band's sixth studio album, The Human Fear, is scheduled for release in 2025.
 
 
+
+## Show(s) appeared on
+
+- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
+- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links
 
