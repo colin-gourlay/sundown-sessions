@@ -6,13 +6,13 @@ summary: 'Live on East Coast FM, THE SUNDOWN SESSIONS returns with...
 
 - TO BE DETERMINED
 
-- Tubeway Army
-
-- The Move
-
-- Wire
-
 - Tears For Fears
+
+- Donovan
+
+- Roxy Music
+
+- Bad Manners
 
 - and much, much more...
 '
