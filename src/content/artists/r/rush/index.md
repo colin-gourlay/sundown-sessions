@@ -1,7 +1,7 @@
 ---
-title: Rush
 genres: ["Aor","Classic Rock","Hard Rock","Pop Rock","Progressive Rock","Rock","Progressive Pop"]
 featured_image: artists/r/rush/rush.jpg
+title: Rush
 artist_page: true
 ---
 ## About
@@ -11,7 +11,9 @@ Rush first achieved moderate success with their second album, Fly by Night (1975
 Rush were known for their virtuosic musicianship, complex compositions and eclectic lyrical motifs drawing heavily on science fiction, fantasy and philosophy. The band's style changed over the years, from a blues-inspired hard rock beginning, later moving into progressive rock, then a period in the 1980s marked by heavy use of synthesizers, before returning to guitar-driven hard rock at the end of the 1980s. Clockwork Angels marked a return to progressive rock. The members of Rush have been acknowledged as some of the most proficient players on their respective instruments, with each winning numerous awards in magazine readers' polls over the years.
 As of 2022, Rush ranks 84th in the US with sales of 26 million albums and industry sources estimate their total worldwide album sales at over 42 million. They have been awarded 14 platinum and 3 multi-platinum albums in the US and 17 platinum albums in Canada. Rush were nominated for seven Grammy Awards, won several Juno Awards, and won an International Achievement Award at the 2009 SOCAN Awards. The band was inducted into the Canadian Music Hall of Fame in 1994 and the Rock and Roll Hall of Fame in 2013. Some consider Rush to be one of the greatest rock bands of all time.
 
+## Show(s) appeared on
 
+- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
 
 ## External Links
 

@@ -1,7 +1,7 @@
 ---
-title: Rainbow
 genres: ["Aor","Classic Rock","Hard Rock","Heavy Metal","Metal","Pop Rock","Progressive Rock","Rock"]
 featured_image: artists/r/rainbow/rainbow.jpg
+title: Rainbow
 artist_page: true
 ---
 ## About
@@ -12,6 +12,10 @@ Over the years Rainbow went through many personnel changes, with each studio alb
 Rainbow were ranked No. 90 on VH1's 100 Greatest Artists of Hard Rock. The band have sold over 28 million records worldwide.
 
 
+
+## Show(s) appeared on
+
+- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
 
 ## External Links
 

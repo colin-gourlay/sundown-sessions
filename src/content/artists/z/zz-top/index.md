@@ -1,7 +1,7 @@
 ---
-title: ZZ Top
 genres: ["Blues Rock","Classic Rock","Hard Rock","New Wave","Rock","Southern Rock","Boogie Rock"]
 featured_image: artists/z/zz-top/zz-top.jpg
+title: ZZ Top
 artist_page: true
 ---
 ## About
@@ -12,6 +12,10 @@ After the release of their tenth album, Recycler (1990), and its accompanying to
 ZZ Top has released 15 studio albums and sold an estimated 50 million records. They have won three MTV Video Music Awards, and in 2004, the members were inducted into the Rock and Roll Hall of Fame. In 2015, Rolling Stone ranked Gibbons the 32nd-greatest guitarist of all time. The band members have supported campaigns and charities including Childline, St. Jude Children's Research Hospital, and the Delta Blues Museum.
 
 
+
+## Show(s) appeared on
+
+- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
 
 ## External Links
 

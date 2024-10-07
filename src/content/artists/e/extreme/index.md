@@ -1,7 +1,7 @@
 ---
-title: Extreme
 genres: ["Acoustic Rock","Alternative Metal","Art Rock","Funk Metal","Glam Metal","Grunge","Hard Rock","Heavy Metal","Progressive Rock","Rock","Symphonic Rock"]
 featured_image: artists/e/extreme/extreme.jpg
+title: Extreme
 artist_page: true
 ---
 ## About
@@ -10,6 +10,10 @@ Extreme is an American rock band formed in Boston, Massachusetts, in 1985, that 
 Extreme achieved their greatest success with their 1990 album Pornograffitti, which peaked at number 10 on the Billboard 200, and was certified gold in May 1991 and double platinum in October 1992. The album featured the acoustic ballad single "More Than Words", which reached No. 1 on the Billboard Hot 100 in the United States.
 
 
+
+## Show(s) appeared on
+
+- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
 
 ## External Links
 

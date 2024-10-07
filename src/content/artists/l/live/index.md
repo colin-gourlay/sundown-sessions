@@ -1,7 +1,7 @@
 ---
-title: Live
 genres: ["Alternative Rock","Pop Rock","Post-Grunge","Rock"]
 featured_image: artists/l/live/live.jpg
+title: Live
 artist_page: true
 ---
 ## About
@@ -12,6 +12,10 @@ When touring, Live has used additional musicians, including Kowalczyk's younger 
 In 2009, Kowalczyk left the band; he was replaced by singer Chris Shinn and the band released the album The Turn in October 2014. Kowalczyk rejoined Live in December 2016 and in 2018, they released a new EP, Local 717. Kowalczyk fired Taylor in June 2022 after taking majority control of the band. Rolling Stone reported that Gracey and Dahlheimer have since been let go as well. Kowalczyk began performing as Live with three touring musicians in October 2022.
 
 
+
+## Show(s) appeared on
+
+- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
 
 ## External Links
 
