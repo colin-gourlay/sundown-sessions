@@ -1,7 +1,7 @@
 ---
-title: Christina Perri
 genres: ["Pop","Singer-Songwriter"]
 featured_image: artists/c/christina-perri/christina-perri.jpg
+title: Christina Perri
 artist_page: true
 ---
 ## About
@@ -10,6 +10,10 @@ Christina Judith Perri (born August 19, 1986) is an American singer and songwrit
 Perri also gained recognition for writing and recording "A Thousand Years," the love theme for the film The Twilight Saga: Breaking Dawn – Part 2 (2012), which appears on the accompanying soundtrack. The song went on to sell over 10 million copies in the United States, being certified Diamond, and the official music video reached two billion views on YouTube in December 2021. She later released her second extended play, A Very Merry Perri Christmas (2012), followed by her second studio album, Head or Heart (2014). After recording the lullaby albums Songs for Carmella (2019) and Songs for Rosie (2021), Perri released her third studio album, A Lighter Shade of Blue (2022). In 2023, she released the albums Songs for Pixie and Songs for Christmas.
 
 
+
+## Show(s) appeared on
+
+- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
 
 ## External Links
 

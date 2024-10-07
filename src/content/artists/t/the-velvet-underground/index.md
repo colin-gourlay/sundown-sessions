@@ -1,7 +1,7 @@
 ---
-title: The Velvet Underground
 genres: ["Art Rock","Experimental Rock","Garage Rock","Pop Rock","Rock","Noise Rock","Proto-Punk"]
 featured_image: artists/t/the-velvet-underground/the-velvet-underground.jpg
+title: The Velvet Underground
 artist_page: true
 ---
 ## About
@@ -12,6 +12,10 @@ In the early 1970s, all but Yule left the band. Yule led an abortive UK tour in 
 After Morrison's death in 1995, the remaining members played a final performance at their Rock and Roll Hall of Fame induction in 1996. Reed died in 2013. In 2004, the Velvet Underground were ranked number 19 on Rolling Stone's list of the "100 Greatest Artists of All Time". The New York Times  wrote that the Velvet Underground was "arguably the most influential American rock band of our time".
 
 
+
+## Show(s) appeared on
+
+- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
 
 ## External Links
 
