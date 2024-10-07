@@ -6,13 +6,13 @@ summary: 'Live on East Coast FM, THE SUNDOWN SESSIONS returns with...
 
 - TO BE DETERMINED
 
-- Tears For Fears
+- Hugh Cornwell
+
+- The Exploding Boy
+
+- The Move
 
 - Donovan
-
-- Roxy Music
-
-- Bad Manners
 
 - and much, much more...
 '

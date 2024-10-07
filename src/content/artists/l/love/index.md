@@ -11,11 +11,9 @@ The band's classic lineup is considered to consist of Lee, the guitarist and sin
 
 ## Show(s) appeared on
 
+- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
 - [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
 - [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
-- [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
-- [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
-- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
 
 ## External Links
 

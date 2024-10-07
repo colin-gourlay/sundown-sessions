@@ -11,8 +11,6 @@ Following an acrimonious ending of the partnership in 1956, Martin pursued a sol
 Starting in 1965, Martin was the host of the television variety program The Dean Martin Show, which centered on Martin's singing and comedic talents and was characterized by his relaxed, easy-going demeanor. From 1974 to 1984, Martin was roastmaster on the popular Dean Martin Celebrity Roast, which drew celebrities, comedians and politicians. Throughout his career, Martin performed in concert stages, nightclubs, audio recordings and appeared in 85 film and television productions and sold 12 million records in the US alone, over 50 million worldwide.
 Martin's best known songs include "Ain't That a Kick in the Head?", "Memories Are Made of This", "That's Amore", "Everybody Loves Somebody", "You're Nobody till Somebody Loves You", "Sway", and "Volare".
 
-
-
 ## Show(s) appeared on
 
 - [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist

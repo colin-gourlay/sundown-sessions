@@ -13,8 +13,8 @@ Friction with the band's label, EMI, resulted in legal action and countersuing. 
 
 ## Show(s) appeared on
 
-- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
 - [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
+- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
 
 ## External Links
 

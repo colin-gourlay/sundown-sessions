@@ -18,7 +18,6 @@ Singer Jim Kerr and guitarist Charlie Burchill are the two members who have been
 - [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
 - [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
 - [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
 
 ## External Links
 

@@ -15,8 +15,8 @@ Following Raven's sudden death in 2007, all four founding members returned to th
 
 ## Show(s) appeared on
 
-- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
 - [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
+- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
 
 ## External Links
 

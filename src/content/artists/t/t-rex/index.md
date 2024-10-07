@@ -12,6 +12,6 @@ In 1977, sole songwriter and constant member Bolan died in a car crash several m
 
 ## Show(s) appeared on
 
-- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
 - [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
+- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
 

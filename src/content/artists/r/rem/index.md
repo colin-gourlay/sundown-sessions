@@ -13,8 +13,8 @@ After the electronic experimental direction of Up (1998), which was commercially
 
 ## Show(s) appeared on
 
-- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
 - [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
+- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
 
 ## External Links
 
