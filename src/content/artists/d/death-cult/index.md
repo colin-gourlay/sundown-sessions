@@ -1,16 +1,14 @@
 ---
-title: Death Cult
+genres: ["Gothic Rock"]
 featured_image: artists/d/death-cult/death-cult.jpg
+title: Death Cult
 artist_page: true
 ---
 ## About
 
-Rock band from West Yorkshire, UK, formed in 1983 by Ian Astbury after the breakup of "positive punk" band The Southern Death Cult, and retaining two thirds of that prior group's name. 
-Raymond Taylor Smith (aka Ray Mondo) was the first drummer for Death Cult and was later replaced in September 1983 by Nigel Preston.
 
-On Friday 13th January 1984, they dropped the "Death" part of the name, subsequently making their first appearance on the Channel 4 television show "The Tube" as simply The Cult.
 
-### Current Lineup
+## Show(s) appeared on
 
-Ian Astbury, Nigel Preston, Jamie Stewart, Billy Duffy
+- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
 

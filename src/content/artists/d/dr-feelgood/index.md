@@ -1,15 +1,23 @@
 ---
-title: Dr. Feelgood
+genres: ["Blues Rock","Rock","Pub Rock","Proto-Punk","British Blues","British Rhythm & Blues"]
 featured_image: artists/d/dr-feelgood/dr-feelgood.jpg
+title: Dr. Feelgood
 artist_page: true
 ---
 ## About
 
-British pub rock/blues rock band formed in 1971 in Canvey, Essex.
- 
-Members : Lee Brilleaux (vocals, harmonica, 1971-94), Wilko Johnson (guitar, 1971-77), John B. Sparks (bass, 1971-82), The Big Figure [John Martin] (drums, 1971-82), Henry McCulloch (guitar, 1977), John "Gypie" Mayo (guitar, 1977-81), Johnny Guitar (guitar 1981-83), Pat McMullen (bass, 1982-83), Buzz Barwell (drums, 1982-84), Gordon Russell (guitar, 1983-1989, 2021-present), Dave Bronze (bass, 1992), Pete Gage (vocals, 1996-1998) ,Phil Mitchell (bass, 1983-present), Kevin Morris (drums, 1984-present), Steve Walwyn (guitar, 1989-2021),  Robert Kane (vocals 1999–present)
+Dr. Feelgood are an English pub rock band formed in 1971. Hailing from Canvey Island, Essex, they are best known for early singles such as "She Does It Right", "Roxette", "Back in the Night" and "Milk and Alcohol". Their original and distinctively British R&B sound was centred on Wilko Johnson's choppy guitar style. Along with Johnson, the initial band line-up included singer Lee Brilleaux and the rhythm section of John B. Sparks, known as "Sparko", on bass guitar and John Martin, known as "The Big Figure", on drums. Although their most commercially productive years were the mid to late-1970s, and in spite of Brilleaux's death in 1994 of lymphoma, a version of the band (featuring none of the original members) continue to tour and record.
 
-### Current Lineup
 
-Phil Mitchell, Kevin Morris, Steve Walwyn, Robert Kane
+
+## Show(s) appeared on
+
+- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
+
+## External Links
+
+- {{< new-tab-link "Facebook: [https://www.facebook.com/Dr.Feelgood.Official](https://www.facebook.com/Dr.Feelgood.Official)" >}}
+
+
+
 
