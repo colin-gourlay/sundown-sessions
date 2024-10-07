@@ -12,12 +12,12 @@ By the time of their fifth studio album Ceremony (1991), tensions and creative d
 
 ## Show(s) appeared on
 
-- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
-- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
 - [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
 - [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
 - [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
+- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
+- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
+- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
 
 ## External Links
 

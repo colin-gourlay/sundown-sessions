@@ -11,8 +11,6 @@ Together with keyboardist Ray Manzarek, Morrison founded the Doors in 1965 in Ve
 Morrison developed an alcohol dependency, which at times affected his performances on stage. In 1971, Morrison died unexpectedly in a Paris apartment at the age of 27, amid several conflicting witness reports. Since no autopsy was performed, the cause of Morrison's death remains disputed.
 Although the Doors recorded two more albums after Jim Morrison died, his death greatly affected the band's fortunes, and they split up two years later. In 1993, Morrison was inducted into the Rock and Roll Hall of Fame along with the other Doors members. Rolling Stone, NME, and Classic Rock have ranked him among the greatest rock singers of all time.
 
-
-
 ## Show(s) appeared on
 
 - [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
