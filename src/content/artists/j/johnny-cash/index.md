@@ -1,7 +1,7 @@
 ---
-title: Johnny Cash
 genres: ["Americana","Blues","Contemporary Folk","Country","Country Pop","Folk","Gospel","Outlaw Country","Rock","Rock And Roll","Rockabilly","Singer-Songwriter","Traditional Country","Country Gospel"]
 featured_image: artists/j/johnny-cash/johnny-cash.jpg
+title: Johnny Cash
 artist_page: true
 ---
 ## About
@@ -11,6 +11,10 @@ Born to poor cotton farmers in Kingsland, Arkansas, Cash grew up on gospel music
 Cash is one of the best-selling music artists of all time, having sold more than 90 million records worldwide. His genre-spanning music embraced country, rock and roll, rockabilly, blues, folk, and gospel sounds. This crossover appeal earned him the rare honor of being inducted into the Country Music, Rock and Roll, and Gospel Music Halls of Fame.
 
 
+
+## Show(s) appeared on
+
+- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
 
 ## External Links
 

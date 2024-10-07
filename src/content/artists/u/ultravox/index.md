@@ -1,20 +1,26 @@
 ---
-title: Ultravox
+genres: ["Art Rock","New Romantic","New Wave","Pop Rock","Post-Punk","Synth-Pop"]
 featured_image: artists/u/ultravox/ultravox.jpg
+title: Ultravox
 artist_page: true
 ---
 ## About
 
-Ultravox (earlier stylized as Ultravox!) were a British new wave band, formed in London in 1973 as Tiger Lily. Between 1980–86, they scored seven Top Ten albums and seventeen Top 40 singles in the UK, the most successful of which was their 1981 hit "Vienna." 
+Ultravox (earlier styled as Ultravox!) were a British new wave band, formed in London in April 1974 as Tiger Lily. Between 1980 and 1986, they scored seven Top Ten albums and seventeen Top 40 singles in the UK, the most successful of which was their 1981 hit "Vienna".
+From 1974 until 1979, singer John Foxx was frontman and the main driving force behind Ultravox. Foxx left the band in March 1979 to embark on a solo career. Midge Ure officially took over as lead singer, guitarist and frontman on 1 November 1979 (despite writing and rehearsing with the band from April of that year) after he and keyboardist Billy Currie worked on the studio project Visage. Ure revitalised the band and steered it to commercial chart success lasting until 1987, at which time the group disbanded.
+A new line-up, led by Currie, was formed in 1992, but achieved limited success with two albums failing to chart and one solitary single reaching 90 in the UK chart. The band's best-known line-up of Currie, Ure, bassist Chris Cross and drummer Warren Cann re-formed in 2008 and performed a series of shows in 2009 and 2010 before releasing a new studio album, Brill!ant, in May 2012 which reached 21 in the British Album Charts. In November 2013, Ultravox performed as special guests on a four-date UK arena tour with Simple Minds. These shows proved to be Ultravox's last, as in 2017 both Currie and Ure indicated that Ultravox had run its course.
 
-The first three LP releases feature the vocals of John Foxx (real name Dennis Leigh), while the rest of the line up of Billy Currie, Warren Cann and Chris Cross were joined by Stevie Shears on guitar for the first two and Robin Simon replacing Shears for the third album, "Systems of Romance," by which the group had dropped the exclamation mark from the band name.
+## Show(s) appeared on
 
-In 1979, John Foxx left after an American tour to pursue solo projects, with Simon also departing. Currie, Cross and Cann were subsequently joined by Midge Ure on vocals and guitar.
-This became the most successful and well-known, 'classic' 80s line-up. They recorded 10 (UK) Top Twenty singles and 7 (UK) Top Twenty Albums, among them single hits such as "Vienna," "Hymn," and "Dancing With Tears In My Eyes."
+- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
+- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
 
-In May 1986, prior to the recording of the ill-received U-Vox album, Warren Cann was asked to quit by the rest of the band due to "irreconcilable differences". 
+## External Links
 
-### Current Lineup
+- {{< new-tab-link "Facebook: [https://www.facebook.com/ultravox](https://www.facebook.com/ultravox)" >}}
 
-Midge Ure, Warren Cann, Billy Currie, Christopher Allen
+- {{< new-tab-link "Instagram: [https://www.instagram.com/ultravoxuk/](https://www.instagram.com/ultravoxuk/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/UltravoxUK](https://twitter.com/UltravoxUK)" >}}
+
 

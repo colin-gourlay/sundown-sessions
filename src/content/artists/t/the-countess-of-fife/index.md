@@ -1,13 +1,23 @@
 ---
-title: The Countess Of Fife
+genres: []
 featured_image: artists/t/the-countess-of-fife/the-countess-of-fife.jpg
+title: The Countess of Fife
 artist_page: true
 ---
 ## About
 
-Countess of Fife were formed in 2016 by Fay Fife, singer/writer with Scots punk/post punk bands The Rezilllos /The Revillos, with guitarist Allan McDowall of influential post punk country outfit So You Think You're A Cowboy. They are based in Edinburgh and their music draws from Country, Punk, early R 'n' B, Soul, Girl Groups and Gospel.
 
-### Current Lineup
 
-Chris Agnew, Fay Fife, Brian McFie, Willy Molleson, Kirsten Adamson, Allan McDowall, Willie Molleson
+## Show(s) appeared on
+
+- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
+
+## External Links
+
+- {{< new-tab-link "Facebook: [https://www.facebook.com/countessoffife](https://www.facebook.com/countessoffife)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/countessoffife/](https://www.instagram.com/countessoffife/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/CountessOfFife](https://twitter.com/CountessOfFife)" >}}
+
 

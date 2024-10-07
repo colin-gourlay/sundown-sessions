@@ -1,18 +1,25 @@
 ---
-title: Talk Talk
+genres: ["Art Rock","Chamber Pop","Modern Classical","New Romantic","New Wave","Post-Rock","Synth-Pop","Art Pop"]
 featured_image: artists/t/talk-talk/talk-talk.jpg
+title: Talk Talk
 artist_page: true
 ---
 ## About
 
-British synth pop / art rock band founded in 1981 in London and disbanded in 1991. The group had a string of international hit singles including "Talk Talk", "Today • It's So Serious", "It's My Life", "Such A Shame", "Life's What You Make It" and "Living In Another World".
+Talk Talk were an English band formed in 1981, led by Mark Hollis (vocals, guitar, piano), Lee Harris (drums), and Paul Webb (bass). Initially a synth-pop group, Talk Talk's first two albums, The Party's Over (1982) and It's My Life (1984), reached top 40 in the UK and produced the international hit singles "Talk Talk", "Today", "It's My Life", and "Such a Shame". They achieved widespread critical success in Europe and the UK with the album The Colour of Spring (1986) along with its singles "Life's What You Make It" and "Living in Another World". 1988's Spirit of Eden moved the group towards a more experimental sound informed by jazz and improvisation, pioneering what became known as post-rock; it was critically acclaimed but commercially unsuccessful.
+Friction with the band's label, EMI, resulted in legal action and countersuing. Webb departed, and the band switched to Polydor for their final studio album, 1991's Laughing Stock, but split soon afterwards. Singer Mark Hollis released one solo album in 1998 before retiring from the music industry; he died in 2019. The band's founding bass player and drummer, Paul Webb and Lee Harris, played in several bands together, including .O.rang; long-term collaborator Tim Friese-Greene continued in the business as a musician and producer.
 
-They moved away from synth-pop to a more experimental form with the album _The Colour Of Spring_ in 1986, and their critical reputation increased. 
-Their final two albums, _Spirit Of Eden_ (1988) and _Laughing Stock_ (1991), are highly acclaimed and remain influential to experimental alternative rock genres.
 
-With Simon Brenner out, Tim Friese-Greene was recruited to assist with the recording of their second album _It's My Life_ (1984) and he soon became the band's producer and de facto fourth member. He played keyboards and became Hollis' frequent songwriting partner, co-writing all the songs on _The Colour Of Spring_ (1986), _Spirit Of Eden_ (1988) and _Laughing Stock_ (1991). Although a major contributor to the band's studio output, Tim Friese-Greene did not regularly play with the touring band, and was absent from the band's publicity material.
 
-### Current Lineup
+## Show(s) appeared on
 
-Mark Hollis, Lee Harris
+- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
+- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
+
+## External Links
+
+- {{< new-tab-link "Facebook: [https://www.facebook.com/talktalkfans](https://www.facebook.com/talktalkfans)" >}}
+
+
+
 

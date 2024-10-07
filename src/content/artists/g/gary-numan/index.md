@@ -1,13 +1,26 @@
 ---
-title: Gary Numan
+genres: ["Dance-Pop","Dark Ambient","Electro-Industrial","Electronic","Funk Rock","Glam Rock","Gothic Rock","Industrial","Industrial Rock","New Wave","Pop Rock","Post-Punk","Synth-Pop","Art Pop","Minimal Wave","Ambient Pop"]
 featured_image: artists/g/gary-numan/gary-numan.jpg
+title: Gary Numan
 artist_page: true
 ---
 ## About
 
-Born 8th of March 1958 in Hammersmith, London, England.
+Gary Anthony James Webb (born 8 March 1958), known professionally as Gary Numan, is an English musician. He entered the music industry as frontman of the new wave band Tubeway Army. After releasing two studio albums with the band, he released his debut solo studio album The Pleasure Principle in 1979, topping the UK Albums Chart. His commercial popularity peaked in the late 1970s and early 1980s with hits including "Are 'Friends' Electric?" and "Cars" (both of which reached number one on the UK Singles Chart). Numan maintains a cult following. He has sold over 10 million records.
+Numan is regarded as a pioneer of electronic music. He developed a signature sound consisting of heavy synthesiser hooks fed through guitar effects pedals, and is also known for his distinctive voice and androgynous "android" persona. He received an Ivor Novello Award, the Inspiration Award, from the British Academy of Songwriters, Composers, and Authors in 2017.
 
-Started his musical career in 1977 as a punk rocker in the band Mean Street, before being sacked in May 1977. He responded to an advert in Melody Maker to join the band The Lasers, alongside Paul Gardiner. Both soon left to form their own punk band, Tubeway Army, with his uncle Jess Lidyard filling in on drums. 
 
-In 1978 Tubeway Army was signed to Beggars Banquet and released a couple of punk singles. By then he was using the name Numan and the band was performing live in pubs and clubs around London, supporting The Lurkers. Whilst recording demos for Beggars, Gary stumbled upon a "Minimoog," that had been left behind in the studio, still programmed to a sound that caught his attention.
+
+## Show(s) appeared on
+
+- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
+
+## External Links
+
+- {{< new-tab-link "Facebook: [https://www.facebook.com/GaryNumanOfficial](https://www.facebook.com/GaryNumanOfficial)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/garynuman/](https://www.instagram.com/garynuman/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/numanofficial](https://twitter.com/numanofficial)" >}}
+
 

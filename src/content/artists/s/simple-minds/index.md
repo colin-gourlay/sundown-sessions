@@ -1,7 +1,7 @@
 ---
-title: Simple Minds
 genres: ["Art Rock","Electronic","New Wave","Pop","Pop Rock","Post-Punk","Rock","Soft Rock","Synth-Pop"]
 featured_image: artists/s/simple-minds/simple-minds.jpg
+title: Simple Minds
 artist_page: true
 ---
 ## About
@@ -11,7 +11,14 @@ Simple Minds have achieved 24 top 40 singles on the UK Singles Chart, and 23 top
 In 2014, Simple Minds were awarded the Q Inspiration Award for their contribution to the music industry and an Ivor Novello Award in 2016 for Outstanding Song Collection from the British Academy of Songwriters, Composers, and Authors (BASCA). Other notable recognitions include nominations for both the MTV Video Music Award for Best Direction and MTV Video Music Award for Best Art Direction for "Don't You (Forget About Me)" in 1985, nomination for the Brit Award for British Group in 1986 and for the American Music Award for Favorite Pop/Rock Band/Duo/Group in 1987. "Belfast Child" was nominated for the Song of the Year at the Brit Awards 1990.
 Singer Jim Kerr and guitarist Charlie Burchill are the two members who have been with the band throughout its whole history, and the only current permanent members and songwriters. As of 2023, the other current members of the live and studio band are bassist Ged Grimes,  drummer Cherisse Osei, backing singer Sarah Brown, guitarist and keyboardist Gordy Goudie and keyboardist Erik Ljunggren. Notable former members include keyboardist Mick MacNeil, bassists Derek Forbes and John Giblin and drummers Brian McGee and Mel Gaynor.
 
+## Show(s) appeared on
 
+- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
+- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
+- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
+- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
+- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
+- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
 
 ## External Links
 

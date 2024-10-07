@@ -1,16 +1,25 @@
 ---
-title: The Vapors
+genres: ["Punk"]
 featured_image: artists/t/the-vapors/the-vapors.jpg
+title: The Vapors
 artist_page: true
 ---
 ## About
 
-Relatively short-lived (1979 to 1981, then reformed in June 2016 to present) new-wave rock band from Guildford, UK, formed around David Fenton. Managed by Bruce Foxton of The Jam and Paul Weller's father, John Weller, they enjoyed worldwide success with their second single "Turning Japanese." After 2 albums, tours of the US, UK and Australia, subsequent disenchantment with the insincerity of the record industry and a lukewarm reception to their second album, the band dissolved. The band started touring again in 2016 and in March 2020, the band released the singles "Crazy" and "Together." In May 2020, the band released their 3rd album "Together."
+The Vapors are an English new wave and power pop band that initially existed between 1978 and 1981. They had a hit with the song "Turning Japanese", which reached No. 3 in the UK Singles Chart in 1980 and No. 36 in the US Billboard Hot 100.
 
-Line up: David Fenton Guitar, Vocals; Ed Bazalgette Guitar; Steve Smith Bass, Vocals; Howard Smith Drums.
-Line up 2020: David Fenton Guitar, Vocals; Ed Bazalgette Guitar; Steve Smith Bass, Vocals; Michael Bowes Drums; Dan Fenton Guitar, Vocals.
 
-### Current Lineup
 
-David Fenton, Edward Bazalgette, Michael Bowes, Steve Smith
+## Show(s) appeared on
+
+- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
+
+## External Links
+
+- {{< new-tab-link "Facebook: [https://www.facebook.com/TheVaporsOfficial](https://www.facebook.com/TheVaporsOfficial)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/thevaporsofficial/](https://www.instagram.com/thevaporsofficial/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/vaporsofficial](https://twitter.com/vaporsofficial)" >}}
+
 

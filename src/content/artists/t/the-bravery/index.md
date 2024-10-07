@@ -1,7 +1,7 @@
 ---
-title: The Bravery
 genres: ["Indie Rock","Rock"]
 featured_image: artists/t/the-bravery/the-bravery.jpg
+title: The Bravery
 artist_page: true
 ---
 ## About
@@ -11,9 +11,14 @@ The band was inactive from the early 2010s onward, with Endicott confirming the 
 
 
 
+## Show(s) appeared on
+
+- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
+- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
+
 ## External Links
 
-- {{< new-tab-link "Facebook: [https://www.facebook.com/thebravery](https://www.facebook.com/thebravery)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/6115148906](https://www.facebook.com/6115148906)" >}}
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/thebravery](https://twitter.com/thebravery)" >}}

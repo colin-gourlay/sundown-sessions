@@ -1,16 +1,14 @@
 ---
-title: The Exploding Boy
+genres: ["Post-Punk","Rock"]
 featured_image: artists/t/the-exploding-boy/the-exploding-boy.jpg
+title: The Exploding Boy
 artist_page: true
 ---
 ## About
 
-Postpunk indie band from Stockholm, Sweden. Founded in 2006 and named after a song from The Cure.
+Swedish post-punk band.
 
-Contact:
-E-Mail: theexplodingboyofficial@gmail.com
+## Show(s) appeared on
 
-### Current Lineup
-
-Lars Andersson, Mattias Svensson, Johan Sjöblom, Stefan Axell, Nicklas Isgren
+- [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
 

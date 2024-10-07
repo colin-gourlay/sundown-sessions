@@ -1,7 +1,7 @@
 ---
-title: The Damned
 genres: ["Gothic Rock","New Wave","Post-Punk","Punk","Punk Rock","Rock"]
 featured_image: artists/t/the-damned/the-damned.jpg
+title: The Damned
 artist_page: true
 ---
 ## About
@@ -12,6 +12,11 @@ The Damned again reformed for a tour in 1991. In 1995, they released a new studi
 As one of the first gothic rock bands, the Damned, featuring lead singer Vanian's baritone singing, dark lyrics and vampire-themed costume, were a major influence on the goth subculture.
 
 
+
+## Show(s) appeared on
+
+- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
+- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
 
 ## External Links
 

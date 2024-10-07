@@ -1,7 +1,7 @@
 ---
-title: Magazine
 genres: ["New Wave","Post-Punk","Punk","Art Punk"]
 featured_image: artists/m/magazine/magazine.jpg
+title: Magazine
 artist_page: true
 ---
 ## About
@@ -11,5 +11,7 @@ Their debut album, Real Life (1978), was critically acclaimed and was one of the
 They reunited in 2009 for a UK tour with Noko on guitar. Magazine released an album of new material, No Thyself, in October 2011, followed by a short UK tour.
 Magazine have been cited as an influence by bands and musicians such as Simple Minds, the Smiths, Radiohead, Pulp and John Frusciante.
 
+## Show(s) appeared on
 
+- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
 

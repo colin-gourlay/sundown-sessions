@@ -1,7 +1,7 @@
 ---
-title: Killing Joke
 genres: ["Alternative Metal","Gothic Rock","Industrial","Industrial Metal","Industrial Rock","Metal","New Wave","Post-Punk","Punk","Rock","Synth-Pop"]
 featured_image: artists/k/killing-joke/killing-joke.jpg
+title: Killing Joke
 artist_page: true
 ---
 ## About
@@ -12,6 +12,11 @@ The band's musical style emerged from the post-punk scene, but stood out due to 
 Following Raven's sudden death in 2007, all four founding members returned to the band's lineup the following year. Coleman and Walker were the only constant members of the band until Walker's death in 2023.
 
 
+
+## Show(s) appeared on
+
+- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
+- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
 
 ## External Links
 

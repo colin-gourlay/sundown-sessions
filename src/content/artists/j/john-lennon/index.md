@@ -1,18 +1,27 @@
 ---
-title: John Lennon
+genres: ["Classic Rock","Experimental","Pop","Pop Rock","Rock","Singer-Songwriter"]
 featured_image: artists/j/john-lennon/john-lennon.jpg
+title: John Lennon
 artist_page: true
 ---
 ## About
 
-Songwriter, rock singer and guitar player, best known for his work with The Beatles during the 1960s and 1970s. Inducted into Songwriters Hall of Fame in 1987. Inducted into Rock And Roll Hall Of Fame in 1994 (Performer).
+John Winston Ono Lennon (born John Winston Lennon; 9 October 1940 – 8 December 1980) was an English singer, songwriter and musician. He gained worldwide fame as the founder, co-lead vocalist and rhythm guitarist of the Beatles. His work included music, writing, drawings and film. His songwriting partnership with Paul McCartney remains the most successful in history as the primary songwriters in the Beatles.
+Born in Liverpool, Lennon became involved in the skiffle craze as a teenager. In 1956, he formed the Quarrymen, which evolved into the Beatles in 1960. Sometimes called "the smart Beatle", Lennon initially was the group's de facto leader, a role he gradually seemed to cede to McCartney. Through his songwriting in the Beatles, he embraced myriad musical influences, initially writing and co-writing rock and pop-oriented hit songs in the band's early years, then later incorporating experimental elements into his compositions in the latter half of the Beatles' career as his songs became known for their increasing innovation. Lennon soon expanded his work into other media by participating in numerous films, including How I Won the War, and authoring In His Own Write and A Spaniard in the Works, both collections of nonsense writings and line drawings. Starting with "All You Need Is Love", his songs were adopted as anthems by the anti-war movement and the larger counterculture of the 1960s. In 1969, he started the Plastic Ono Band with his second wife, multimedia artist Yoko Ono, held the two-week-long anti-war demonstration bed-in for peace, and left the Beatles to embark on a solo career. 
+Lennon and Ono collaborated on many works, including a trilogy of avant-garde albums and several more films. After the Beatles disbanded, Lennon released his solo debut John Lennon/Plastic Ono Band and the international top-10 singles "Give Peace a Chance", "Instant Karma!", "Imagine", and "Happy Xmas (War Is Over)". Moving to New York City in 1971, his criticism of the Vietnam War resulted in a three-year deportation attempt by the Nixon administration. Lennon and Ono separated from 1973 to 1975, during which time he produced Harry Nilsson's album Pussy Cats. He also had chart-topping collaborations with Elton John ("Whatever Gets You thru the Night") and David Bowie ("Fame"). Following a five-year hiatus, Lennon returned to music in 1980 with the Ono collaboration Double Fantasy. He was murdered by Mark David Chapman, three weeks after the album's release.
+As a performer, writer or co-writer, Lennon had 25 number-one singles in the Billboard Hot 100 chart. Double Fantasy, his second-best-selling non-Beatles album, won the 1981 Grammy Award for Album of the Year. That year, he won the Brit Award for Outstanding Contribution to Music. In 2002, Lennon was voted eighth in a BBC history poll of the 100 Greatest Britons. Rolling Stone ranked him the fifth-greatest singer and 38th greatest artist of all time. He was inducted into the Songwriters Hall of Fame (in 1997) and the Rock and Roll Hall of Fame (twice, as a member of the Beatles in 1988 and as a solo artist in 1994).
 
-Born: 9 October 1940 in Liverpool, Lancashire, UK. 
-Died: 8 December 1980 in NYC, NY, USA.
+## Show(s) appeared on
 
-John Winston Ono Lennon (MBE, gave it back) was an English singer, songwriter, and peace activist, who gained worldwide fame as the founder, co-lead vocalist, and rhythm guitarist of the Beatles. His songwriting partnership with Paul McCartney remains the most successful in musical history. In 1969, he started the Plastic Ono Band with his second wife, Yoko Ono (parents of Sean Lennon). After the Beatles disbanded in 1970, Lennon continued as a solo artist and as Ono's collaborator.
+- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
+- [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
 
-Born in Liverpool, Lennon became involved in the skiffle craze as a teenager. In 1956, he formed his first band, The Quarrymen, which evolved into the Beatles in 1960. He was initially the group's de facto leader, a role gradually ceded to McCartney. Lennon was characterized for the rebellious nature and acerbic wit in his music, writing, drawings, on film and in interviews. In 1957 Lennon meets his first wife Cynthia Lennon at the Liverpool College of Art and then married her on the 23rd of August, 1962. On the 8th of April, 1963, Cynthia gave birth to Lennon's first son, Julian Lennon. In the mid-1960s, he had two books published: In His Own Write and A Spaniard in the Works, both collections of nonsensical writings and line drawings. Starting with 1967s [r=476958], his songs were adopted as anthems by the anti-war movement and the larger counterculture.
+## External Links
 
-From 1968 to 1972, Lennon produced more than a dozen records with Ono, including a trilogy of avant-garde albums, his first solo LP John Lennon / Plastic Ono Band, and the international top 10 singles "[r=1222236]", "[r=390001]", "[r=5324554]" and "[r=628431]". Controversial through his political and peace activism, after moving to New York City in 1971, his criticism of the Vietnam War resulted in a three-year attempt by the Nixon administration to deport him. In 1975, Lennon disengaged from the music business to raise his infant son Sean, and in 1980, returned with the Ono collaboration Double Fantasy. He was shot and killed in the archway of his Manhattan apartment building by a Beatles fan, Mark David Chapman, three weeks after the album's release. Lennon's ashes were scattered in New York's Central Park. A memorial was erected at the site of his ashes being scattered, named after a Beatles' song written by Lennon, "[r=7278398]."
+- {{< new-tab-link "Facebook: [https://www.facebook.com/johnlennon](https://www.facebook.com/johnlennon)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/johnlennonofficial/](https://www.instagram.com/johnlennonofficial/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/johnlennon](https://twitter.com/johnlennon)" >}}
+
 

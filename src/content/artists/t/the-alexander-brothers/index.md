@@ -1,17 +1,16 @@
 ---
-title: The Alexander Brothers
+genres: []
 featured_image: artists/t/the-alexander-brothers/the-alexander-brothers.jpg
+title: The Alexander Brothers
 artist_page: true
 ---
 ## About
 
-Scottish easy-listening folk duo. Active from the 1950s.
-The duo consisted of brothers Jack (born 1935) and Tom (born 1934), both were born in Cambusnethan near Wishaw, Lanarkshire.
-Jack played piano and Tom played piano accordion.
-Jack died on the 2nd of November 2013 aged 77.
-Tom died on the 10th of January 2020 aged 85.
+The Alexander Brothers were an easy-listening folk-music duo from Scotland, who had a long career beginning in the 1950s.
 
-### Current Lineup
 
-Tom Alexander, Jack Alexander
+
+## Show(s) appeared on
+
+- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
 

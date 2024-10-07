@@ -2,7 +2,6 @@
 genres: ["Art Rock","Crossover Prog","Pop","Pop Rock","Progressive","Progressive Rock","Rock","Symphonic Prog","Symphonic Rock","Progressive Pop"]
 featured_image: artists/e/electric-light-orchestra/electric-light-orchestra.jpg
 title: Electric Light Orchestra
-show_appeared_on: ["1"]
 artist_page: true
 ---
 ## About
@@ -12,6 +11,15 @@ The group's name is a pun that references both electric light and "light orchest
 During ELO's original 13-year period of active recording and touring, they sold over 50 million records worldwide. They collected 19 CRIA, 21 RIAA, and 38 BPI awards. From 1972 to 1986 ELO accumulated 27 Top 40 songs on the UK Singles Chart, and fifteen Top 20 songs on the US Billboard Hot 100. The band also holds the record for having the most Billboard Hot 100 Top 40 hits (20) without a number one. In 2017, four key members of ELO (Wood, Lynne, Bevan, and Tandy) were inducted into the Rock and Roll Hall of Fame.
 
 
+
+## Show(s) appeared on
+
+- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
+- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
+- [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
+- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
+- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
+- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links
 

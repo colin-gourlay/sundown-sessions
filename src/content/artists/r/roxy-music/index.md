@@ -1,23 +1,25 @@
 ---
-title: Roxy Music
+genres: ["Art Rock","Glam Rock","New Romantic","New Wave","Pop Rock","Progressive Rock","Soft Rock","Synth-Pop","Art Pop","Sophisti-Pop"]
 featured_image: artists/r/roxy-music/roxy-music.jpg
+title: Roxy Music
 artist_page: true
 ---
 ## About
 
-Roxy Music were an English rock band formed in 1970 by Bryan Ferry, who became the band's lead vocalist and chief songwriter, and bassist Graham Simpson. Alongside Ferry, the other longtime members were Phil Manzanera (guitar), Andy Mackay (saxophone and oboe) and Paul Thompson (drums and percussion), and other former members include Brian Eno (synthesizer and "treatments"), Eddie Jobson (synthesiser and violin), and John Gustafson (bass). Although the band took a break from group activities in 1976 and again in 1983, they reunited for a concert tour in 2001, and toured together intermittently between that time and their break-up in 2011. Ferry frequently enlisted members of Roxy Music as session musicians for his solo releases.
+Roxy Music are an English rock band formed in 1970 by lead vocalist and principal songwriter Bryan Ferry and bassist Graham Simpson. By the time the band recorded their first album in 1972, Ferry and Simpson were joined by saxophonist and oboist Andy Mackay, guitarist Phil Manzanera, drummer Paul Thompson and synthesizer player Brian Eno. Other members over the years include keyboardist and violinist Eddie Jobson and bassist John Gustafson. The band split in 1976, reformed in 1978 and split again in 1983. In 2001, Ferry, Mackay, Manzanera and Thompson reunited for a concert tour and have toured together intermittently ever since, most recently in 2022 to celebrate the 50th anniversary of their first album. Ferry has also frequently enlisted band members as backing musicians during his solo career.
+Roxy Music became a successful act in Europe and Australia during the 1970s. This success began with their first album in 1972. The band pioneered more musically sophisticated elements of glam rock while significantly influencing early English punk music, and provided a model for many new wave acts while innovating elements of electronic composition. The group also conveyed their distinctive brand of visual and musical sophistication with their focus on glamorous fashions. Roxy Music's final studio album was Avalon (1982), which was certified Platinum in the United States, where the band had spent their first ten years as a moderately successful cult band.
+Outside of the band, Ferry and Eno have had influential solo careers, with Eno also becoming one of the most significant British record producers of the late 20th century. In 2019, Roxy Music were inducted into the Rock and Roll Hall of Fame.
 
-Inducted into the Rock & Roll Hall of Fame in 2019 (Performers) and Roxy Music frontman Bryan Ferry was awarded a CBE by Her Majesty the Queen of England on 30 November 2011.
 
-Roxy Music have released 28 albums and 38 compilations since the band’s inception back in 1971. Of these, 18 have made the ‘UK Top 40’ music charts with 11 of them reaching the ‘Top 10’ and 4 albums reaching the No.1 position. The albums to hit the top spot are ‘Stranded’ (Dec 1973), ‘Flesh + Blood’ (May 1980), ‘Avalon’ (Jun 1982) and ‘[m58362]’ (Apr 1986). These four albums cumulatively spent 13 weeks at the No.1 position. All 18 charting albums, have in total, been in the chart’s Top 10 for 76 weeks and within the Top 40 for 260 weeks.
 
-Similarly, Roxy Music have had success with some of their 49 single/EP releases. In this case, there has been a chart entry for 18 of these releases, with one single making the No.1 spot. In February 1981, Roxy Music hit the singles chart 'top spot' with the John Lennon composed song ‘Jealous Guy’ and spent 2 weeks at that coveted position, 9 weeks in the chart’s Top 40 (6 weeks in the Top 10) and 11 weeks overall.
+## Show(s) appeared on
 
-The 18 Roxy Music hit singles/EPs have spent time in the UK Top 40 music charts for 128 weeks, with 44 of these within the Top 10. The single with the most time in the UK Charts is ‘Dance Away’, which entered the charts in April 1979 and overall spent 14 weeks charting.
+- [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
 
-Roxy Music’s first album to enter the UK Charts was the self-entitled ‘Roxy Music’ (Island ILPS9200) making its debut on 29/07/1972.  It stayed in the charts for 16 weeks with its highest position being no.10. The album briefly reappeared in February 2018 under the HDCD release (Virgin ROXYCD1) for one week reaching no.47. The first single to chart for Roxy Music was ‘Virginia Plain’ (Island WIP6144) on 19/08/1972 and it remained in the UK charts for 12 weeks achieving a high position of no.4 in its fifth week on the charts. (Source: Official Charts Company (UK) (April 2020)).
+## External Links
 
-### Current Lineup
+- {{< new-tab-link "Facebook: [https://www.facebook.com/roxymusic](https://www.facebook.com/roxymusic)" >}}
 
-Phil Manzanera, Bryan Ferry, Paul Thompson, Andy Mackay
+
+
 
