@@ -1,7 +1,7 @@
 ---
-title: The Doors
-genres: ["Blues Rock","Classic Rock","Psychedelic Pop","Psychedelic Rock","Rock","Acid Rock"]
+genres: ["Blues Rock","Classic Rock","Psychedelic Rock","Rock","Acid Rock"]
 featured_image: artists/t/the-doors/the-doors.jpg
+title: The Doors
 artist_page: true
 ---
 ## About
@@ -12,6 +12,11 @@ Morrison died in uncertain circumstances in 1971. The band continued as a trio, 
 The Doors were the first American band to accumulate eight consecutive Gold LPs. According to the Recording Industry Association of America (RIAA), they have sold 34 million albums in the United States and over 100 million records worldwide, making them one of the best-selling bands of all time. The Doors have been listed as one of the greatest artists of all time by magazines including Rolling Stone, which ranked them 41st on its list of the "100 Greatest Artists of All Time".
 
 
+
+## Show(s) appeared on
+
+- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
+- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
 
 ## External Links
 
