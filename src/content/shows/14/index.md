@@ -1,18 +1,18 @@
 ---
 title: 'Show #14: Broadcast 8th October 2024'
 slug: 'featuring-to-be-determined'
-description: 'featuring TO BE DETERMINED'
+description: 'featuring Adult DVD'
 summary: 'Live on East Coast FM, THE SUNDOWN SESSIONS returns with...
 
-- TO BE DETERMINED
+- Adult DVD
 
-- Hugh Cornwell
+- Wire
 
-- The Exploding Boy
+- Grandaddy
 
-- The Move
+- Thee Headcoats
 
-- Donovan
+- IST IST 
 
 - and much, much more...
 '
