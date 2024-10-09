@@ -10,15 +10,6 @@ other = "By"
 [related]
 other = "Related"
 
-[yourName]
-other = "Your Name"
-
-[emailAddress]
-other = "Email Address"
-
-[message]
-other = "Message"
-
 [readingTime]
 one = "One minute read"
 other = "{{ .Count }} minutes read"
