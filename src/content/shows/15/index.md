@@ -6,13 +6,13 @@ summary: 'Live on East Coast FM, THE SUNDOWN SESSIONS returns with...
 
 - A celebration of the e-bow
 
-- David Bowie
+- Balaam & The Angel
 
-- The Ruts
+- The Mission
 
-- Nazz
+- PJ Harvey
 
-- The Tony Hatch Orchestra
+- XTC
 
 - and much, much more...
 '
