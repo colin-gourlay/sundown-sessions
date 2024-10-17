@@ -1,16 +1,21 @@
-1. {{< artist-wikilink "Balaam And The Angel" >}} - I'll Show You Something Special
+1. {{< artist-wikilink "The Tony Hatch Orchestra" >}} - Theme From Crossroads
+2. {{< artist-wikilink "Wings" >}} - Crossroads
+3. {{< artist-wikilink "Something Happens" >}} - Hello, Hello, Hello, Hello, Hello
+4. {{< artist-wikilink "Nick Lowe" >}} - Half A Boy And Half A Man
+5. {{< artist-wikilink "Dave Edmunds" >}} - Girls Talk
+6. {{< artist-wikilink "Radio Stars" >}} - Nervous Wreck
+
+
+5. 
+6. {{< artist-wikilink "Balaam And The Angel" >}} - I'll Show You Something Special
 2. {{< artist-wikilink "Big Country" >}} - The Storm
 3. {{< artist-wikilink "The Mission" >}} - Dragonfly
 
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "PJ Harvey" >}} - Sheela-na-gig
-2. {{< artist-wikilink "The Tony Hatch Orchestra" >}} - Theme from Crossroads
-3. {{< artist-wikilink "Wings" >}} - Crossroads - Remastered 2014
-4. {{< artist-wikilink "Something Happens" >}} - Hello, Hello, Hello, Hello, Hello (Petrol)
-5. {{< artist-wikilink "Nick Lowe" >}} - Half a Boy and Half a Man
-6. {{< artist-wikilink "Dave Edmunds" >}} - Girls Talk
-7. {{< artist-wikilink "Radio Stars" >}} - Nervous Wreck
+
+
 
 - ADVERTISING BREAK
 
