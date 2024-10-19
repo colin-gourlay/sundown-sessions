@@ -18,7 +18,7 @@ summary: 'THE SUNDOWN SESSIONS returns with...
 '
 keywords:
  - 'The Big Now'
- - 'Queens of the Stone Age'
+ - 'Queens Of The Stone Age'
  - 'Franz Ferdinand'
  - 'Sparks'
  - 'Squeeze'
