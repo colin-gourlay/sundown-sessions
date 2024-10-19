@@ -1,7 +1,7 @@
-1. {{< artist-wikilink "Queens of the Stone Age" >}} - Feet Don't Fail Me
+1. {{< artist-wikilink "Queens Of The Stone Age" >}} - Feet Don't Fail Me
 2. {{< artist-wikilink "Franz Ferdinand" >}} - Take Me Out
 3. {{< artist-wikilink "Sparks" >}} - Propaganda
-4. {{< artist-wikilink "Sparks" >}} - At Home At Work At Play
+4. {{< artist-wikilink "Sparks" >}} - At Home, At Work, At Play
 5. {{< artist-wikilink "Squeeze" >}} - Take Me I'm Yours
 
 - ADVERTISING BREAK
@@ -21,7 +21,7 @@
 
 1. {{< artist-wikilink "The Motors" >}} - Dancing The Night Away
 2. {{< artist-wikilink "John Grant" >}} - Marz
-3. {{< artist-wikilink "Jacco Gardner" >}} - Clear the Air
+3. {{< artist-wikilink "Jacco Gardner" >}} - Clear The Air
 4. {{< artist-wikilink "Pink Floyd" >}} - See Emily Play
 5. {{< artist-wikilink "The Move" >}} - Hello Susie 
 
