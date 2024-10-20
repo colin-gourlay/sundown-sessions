@@ -20,7 +20,7 @@ Muse have won numerous awards, including two Grammy Awards, two Brit Awards, fiv
 
 ## External Links
 
-- {{< new-tab-link "Facebook: [https://www.facebook.com/muse](https://www.facebook.com/muse)" >}}
+- {{< new-tab-link "Facebook: [https://www.facebook.com/8762738724](https://www.facebook.com/8762738724)" >}}
 
 - {{< new-tab-link "Instagram: [https://www.instagram.com/muse/](https://www.instagram.com/muse/)" >}}
 
