@@ -22,7 +22,7 @@
 2. {{< artist-wikilink "Chikinki" >}} - You Said
 3. {{< artist-wikilink "The Bravery" >}} - An Honest Mistake
 4. {{< artist-wikilink "Doves" >}} - One Of These Days
-5. {{< artist-wikilink "Jim Morrison" >}} - A Feast of Friends
+5. {{< artist-wikilink "Jim Morrison" >}} - A Feast Of Friends
 
 - ADVERTISING BREAK
 
