@@ -6,7 +6,7 @@ artist_page: true
 ---
 ## About
 
-Dr. Feelgood are an English pub rock band formed in 1971. Hailing from Canvey Island, Essex, they are best known for early singles such as "She Does It Right", "Roxette", "Back in the Night" and "Milk and Alcohol". Their original and distinctively British R&B sound was centred on Wilko Johnson's choppy guitar style. Along with Johnson, the initial band line-up included singer Lee Brilleaux and the rhythm section of John B. Sparks, known as "Sparko", on bass guitar and John Martin, known as "The Big Figure", on drums. Although their most commercially productive years were the mid to late-1970s, and in spite of Brilleaux's death in 1994 of lymphoma, a version of the band (featuring none of the original members) continue to tour and record.
+Dr. Feelgood are an English pub rock band formed in 1971. Hailing from Canvey Island, Essex, they are best known for early singles such as "She Does It Right", "Roxette", "Back in the Night" and "Milk and Alcohol". Their original and distinctively British R&B sound was centred on Wilko Johnson's choppy guitar style. Along with Johnson, the initial band line-up included singer Lee Brilleaux and the rhythm section of John B. Sparks, known as "Sparko", on bass guitar and John Martin, known as "The Big Figure", on drums. Although their most commercially productive years were the mid to late-1970s, and in spite of Brilleaux's death in 1994, a version of the band (featuring none of the original members) continue to tour and record.
 
 
 
