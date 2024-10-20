@@ -14,7 +14,7 @@
 
 1. {{< artist-wikilink "Royal Blood" >}} - Figure It Out
 2. {{< artist-wikilink "Muse" >}} - Sing For Absolution
-3. {{< artist-wikilink "Electric Light Orchestra" >}} - Here Is the News
+3. {{< artist-wikilink "Electric Light Orchestra" >}} - Here Is The News
 
 - NEWS
 
