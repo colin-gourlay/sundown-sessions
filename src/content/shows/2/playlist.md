@@ -6,14 +6,14 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "David Latto" >}} - Geordie Munro
-2. {{< featured-guest-wikilink "The Receiving End" >}} - That's The Way I Operate
+2. {{< featured-guest-wikilink "The Receiving End" >}} - That's The Way I Operate!
 3. {{< featured-guest-wikilink "The Receiving End" >}} - He's The Man
 4. {{< featured-guest-wikilink "The Receiving End" >}} - Nothing's Wrong
 
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Royal Blood" >}} - Figure It Out
-2. {{< artist-wikilink "Muse" >}} - Sing for Absolution
+2. {{< artist-wikilink "Muse" >}} - Sing For Absolution
 3. {{< artist-wikilink "Electric Light Orchestra" >}} - Here Is the News
 
 - NEWS
