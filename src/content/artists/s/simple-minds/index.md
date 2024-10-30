@@ -1,5 +1,5 @@
 ---
-genres: ["Art Rock","Electronic","New Wave","Pop","Pop Rock","Post-Punk","Rock","Soft Rock","Synth-Pop"]
+genres: ["Art Rock","Electronic","Glam Rock","New Wave","Pop","Pop Rock","Post-Punk","Rock","Soft Rock","Synth-Pop"]
 featured_image: artists/s/simple-minds/simple-minds.jpg
 title: Simple Minds
 artist_page: true
