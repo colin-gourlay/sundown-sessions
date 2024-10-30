@@ -8,6 +8,8 @@ artist_page: true
 
 The Detroit Cobras are an American garage rock band from Detroit, Michigan, which was formed in 1994 by guitarist Steve Shaw, guitarist Mary Ramirez, bassist Jeff Meier, drummer Vic Hill, and singer Rachel Nagy. The group was later known (with the exception of Rachel Nagy, and Mary Ramirez) for a constantly changing assortment of musicians. Rachel Nagy died on January 14, 2022.
 
+
+
 ## Show(s) appeared on
 
 - [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB

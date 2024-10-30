@@ -11,8 +11,6 @@ Formed after the dissolution of Homme's previous band Kyuss, the band originated
 After Oliveri's and Lanegan's departures in 2004 and 2005, respectively, Homme became the band's sole lead vocalist, with multi-instrumentalist Troy Van Leeuwen and drummer Joey Castillo collaborating on 2005's Lullabies to Paralyze and 2007's electronic-influenced Era Vulgaris. After several years of inactivity, the band signed to independent label Matador Records in 2013 and released a loose trilogy of albums over ten years: ...Like Clockwork (2013), Villains (2017), and In Times New Roman... (2023). The trilogy brought further critical acclaim and a new height of commercial success, with ...Like Clockwork becoming the band's first number-one album in the U.S.
 The band has been nominated for Grammy Awards nine times: four times for Best Hard Rock Performance, three for Best Rock Album, and once for Best Rock Performance and Best Rock Song.
 
-
-
 ## Show(s) appeared on
 
 - [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
