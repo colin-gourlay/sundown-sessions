@@ -11,6 +11,8 @@ The band are known for their interest in traditional Indian music, culture, and 
 Kula Shaker disbanded in September 1999 but reformed in 2004 for sessions for the School of Braja compilation album. This led to plans for a full comeback, although the reformation was not widely publicised until the beginning of 2006. The band's third album, Strangefolk, was issued in 2007 and their fourth, Pilgrims Progress, was released in 2010. The band returned with a mostly sold out European tour and new album K 2.0 in 2016 which was well-received both by the media and the fans.
 After taking an extended hiatus, the band released their sixth album, 1st Congregational Church of Eternal Love and Free Hugs in June 2022 and their seventh album, Natural Magick, in 2024.
 
+
+
 ## Show(s) appeared on
 
 - [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
