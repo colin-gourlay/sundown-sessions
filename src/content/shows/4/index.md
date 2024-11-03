@@ -10,9 +10,9 @@ summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Melys
 
-- The Virgin Prunes
+- Goodbye Mr Mackenzie
 
-- The Mission
+- Roddy Frame 
 
 - and much, much more...
 '
