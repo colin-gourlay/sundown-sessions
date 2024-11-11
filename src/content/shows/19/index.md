@@ -4,15 +4,15 @@ slug: 'featuring-tbd'
 description: 'featuring TBD'
 summary: 'Live on East Coast FM, THE SUNDOWN SESSIONS returns with...
 
-- TBD
+- Killing Kind
 
-- The Essence
+- Villagers
 
-- Isobel Campbell
+- FEWS
 
-- Nick Cave & The Bad Seeds
+- The Lathums
 
-- Robert Hazard & The Heroes
+- The House of Love
 
 - and much, much more...
 '
