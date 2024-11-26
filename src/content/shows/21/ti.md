@@ -1,5 +1,11 @@
 OPENING OF SHOW
 
+It's Tuesday Evening here at East Coast FM and the Sundown Sessions is loading...
+
+for the 50 somethings tuned in tonight that will almost certainly mean something to you.
+for those that are fortunate enough to have youth on their side... it's probably worth a 
+brief explanation...
+
 November 1984 I wrote to Santa...
 
 revolutionized home computing in the 1980s by making technology accessible and 'affordable' to the masses. 
