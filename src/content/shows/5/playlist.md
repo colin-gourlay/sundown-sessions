@@ -31,4 +31,3 @@
 4. {{< artist-wikilink "Duran Duran" >}} - Planet Earth
 5. {{< artist-wikilink "Talk Talk" >}} - Talk Talk
 6. {{< artist-wikilink "The Vapors" >}} - News At Ten
-7. {{< artist-wikilink "Rose Villain" >}} - IO, ME ED ALTRI GUAI
