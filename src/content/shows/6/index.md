@@ -10,7 +10,7 @@ summary: 'THE SUNDOWN SESSIONS returns with...
 
 - White Lies
 
-- Grinderman
+- Love
 
 - The Adventures
 
@@ -35,7 +35,6 @@ keywords:
  - 'Del Shannon'
  - 'Becky Becky'
  - 'The Human League'
- - 'Grinderman'
 toc: true
 featured_image: '6-show-logo.jpeg'
 read_more_copy: Show notes...

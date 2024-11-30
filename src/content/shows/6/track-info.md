@@ -22,5 +22,4 @@
 | 20 | {{<title "Sparrow--Becky Becky">}}                                  | Art School Dancing (2015)             |   4:07   |                                                                                |
 | 21 | {{<title "Rock 'n' Roll / Night Clubbing--The Human League">}}      | Travelogue (1980)                     |   6:23   |                                                                                |
 | 22 | {{<title "Alone Again Or--Love">}}                                  | Forever Changes (1967)                |   3:17   |                                                                                |
-| 23 | {{<title "Grinderman--Grinderman">}}                                | Grinderman (2007)                     |   4:33   |                                                                                |
 

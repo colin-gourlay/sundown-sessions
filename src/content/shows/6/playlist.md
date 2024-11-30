@@ -32,4 +32,3 @@
 4. {{< artist-wikilink "Becky Becky" >}} - Sparrow
 5. {{< artist-wikilink "The Human League" >}} - Rock 'n' Roll / Night Clubbing
 6. {{< artist-wikilink "Love" >}} - Alone Again Or
-7. {{< artist-wikilink "Grinderman" >}} - Grinderman
