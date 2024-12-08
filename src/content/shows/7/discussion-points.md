@@ -10,8 +10,3 @@
 
 - _Sex Gang Children_
   - {{< new-tab-link "[Tour: Black Bull, Gateshead 29th November 2024](https://www.bandsintown.com/e/1032022702)" >}}
-
-- _#ANDYSMANCLUB events_
-  - {{< new-tab-link "[Haldon Forest 10k](https://www.atwevents.co.uk/e/andysmanclub-10k-run-haldon-forest-10391) " >}}- 29th September 2024
-
-  For more info on these events email: **_campaigns@andysmanclub.co.uk_** #ANDYSMANCLUB

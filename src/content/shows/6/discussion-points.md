@@ -9,7 +9,3 @@
 - _SpaceX Mars Colonization Program_
     - {{< new-tab-link "[Occupy Mars](https://en.wikipedia.org/wiki/SpaceX_Mars_Colonization_Program)" >}}
     - {{< new-tab-link "[Track Elon Musk's Tesla Roadster in Space](https://www.whereisroadster.com/)" >}}
-- _#ANDYSMANCLUB events_
-    - {{< new-tab-link "[Haldon Forest 10k](https://www.atwevents.co.uk/e/andysmanclub-10k-run-haldon-forest-10391) " >}}- 29th September 2024
-
-  For more info on these events email: **_campaigns@andysmanclub.co.uk_** #ANDYSMANCLUB
