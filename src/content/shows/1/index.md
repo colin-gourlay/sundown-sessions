@@ -48,12 +48,17 @@ date: 2024-06-05T22:00:00Z
 draft: false
 ---
 
+## Listen On Demand
+{{< include_content "/shows/1/listen-again" >}}
+
+---
+
 ## Playlist
 {{< include_content "/shows/1/playlist" >}}
 
 ---
 
-## Featured guest: The Big Now
+## Featured band: The Big Now
 {{< include_content "/shows/1/featured-guest" >}}
 
 ---
