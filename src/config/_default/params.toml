@@ -6,6 +6,10 @@ mainSections = ["shows"]
 name = "facebook"
 url = "https://www.facebook.com/sundownsessionsuk"
 
+[[ananke_socials]]
+name = "instagram"
+url = "https://www.instagram.com/sundownsessionsshow"
+
 #[[ananke_socials]]
 #name = "twitter"
 #url = "https://twitter.com/sundown_session"
@@ -14,9 +18,7 @@ url = "https://www.facebook.com/sundownsessionsuk"
 #name = "mastodon"
 #url = "https://mastodon.scot/@sundown_sessions"
 #
-#[[ananke_socials]]
-#name = "instagram"
-#url = "https://www.instagram.com/sundownsessionsshow"
+
 
 #
 #[[ananke_socials]]
