@@ -40,7 +40,7 @@ featured_image: '6-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-07-24T22:00:00Z
-draft: false
+draft: true
 ---
 
 ## Playlist
