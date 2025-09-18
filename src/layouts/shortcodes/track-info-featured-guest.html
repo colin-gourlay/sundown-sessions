@@ -2,7 +2,7 @@
 {{ with $trackInfo }}
     {{ $track := index (split . "--") 0 }}
     {{ $artist := index (split . "--") 1 }}
-    {{ $featuredGuestAnchor := printf "%sshows/featuring-%s/#featured-guest-%s" $.Site.BaseURL ($artist | urlize) ($artist | urlize) | safeURL }}
+    {{ $featuredGuestAnchor := printf "%sshows/featuring-%s/#featured-band-%s" $.Site.BaseURL ($artist | urlize) ($artist | urlize) | safeURL }}
     {{ $featuredGuestImageUri := printf "%s-large.jpeg" $artist | urlize }}
     {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $featuredGuestImageUri $track $featuredGuestAnchor $artist | safeHTML }}
 {{ end }}
