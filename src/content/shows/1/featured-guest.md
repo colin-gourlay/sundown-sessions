@@ -1,7 +1,8 @@
 #
 {{< figure src="1-guest-logo.jpeg" title="The Big Now (c.1989)" alt="The Big Now" width="75%" >}}
 
-I currently don't have contact information or social media links for The Big Now. If you possess such details, kindly share them through the contact page. Upon receiving consent, I will post them here for the benefit of others.
+At the moment, I don’t have any contact details or social media links for The Big Now. If you know of any, please share
+them via the contact page. With permission, I’ll post them here so others can connect too.
 
 ### Contact details
 
