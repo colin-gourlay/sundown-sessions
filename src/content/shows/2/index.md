@@ -56,7 +56,7 @@ draft: false
 
 ---
 
-## Featured guest: The Receiving End
+## Featured band: The Receiving End
 {{< include_content "/shows/2/featured-guest" >}}
 
 ---
