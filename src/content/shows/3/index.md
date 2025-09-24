@@ -26,7 +26,6 @@ keywords:
  - 'Voice Of The Beehive'
  - 'Del Shannon'
  - 'David Latto'
- - 'Blue On Shock'
  - 'Pete Shelley'
  - 'Magazine'
  - 'Simple Minds'
