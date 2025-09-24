@@ -56,7 +56,7 @@ draft: false
 
 ---
 
-## Featured guest: Blue On Shock
+## Featured band: Blue On Shock
 {{< include_content "/shows/3/featured-guest" >}}
 
 ---
