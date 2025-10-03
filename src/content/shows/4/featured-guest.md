@@ -6,7 +6,8 @@ on Mondays at 7pm (except for bank holidays).
 
 ### **Meetings**
 
-Navigate through their [full club listings](https://andysmanclub.co.uk/full-club-lists/) or [locate your nearest group](https://andysmanclub.co.uk/find-your-nearest-group/) to find out more.
+
+Navigate through their {{< new-tab-link "[full club listings](https://andysmanclub.co.uk/full-club-lists/)" >}} or {{< new-tab-link "[locate your nearest group](https://andysmanclub.co.uk/find-your-nearest-group/)" >}} to find out more.
 
 ### **Contact details**
 
@@ -14,11 +15,11 @@ Navigate through their [full club listings](https://andysmanclub.co.uk/full-club
 
 ### **Social Media**
 
-- [Facebook](https://www.facebook.com/andysmanclub/)
-- [Instagram](https://www.instagram.com/andysmanclubuk/)
-- [Twitter](https://twitter.com/andysmanclubuk)
-- [LinkedIn](https://www.linkedin.com/company/andysmanclub/)
-- [YouTube](https://www.youtube.com/channel/UC8mJx0-NFRJerTgTreJ2U7w)
+- {{< new-tab-link "[Facebook](https://www.facebook.com/andysmanclub/)" >}}
+- {{< new-tab-link "[Instagram](https://www.instagram.com/andysmanclubuk/)" >}}
+- {{< new-tab-link "[Twitter](https://twitter.com/andysmanclubuk)" >}}
+- {{< new-tab-link "[LinkedIn](https://www.linkedin.com/company/andysmanclub/)" >}}
+- {{< new-tab-link "[YouTube](https://www.youtube.com/channel/UC8mJx0-NFRJerTgTreJ2U7w)" >}}
 
 ### **Emergencies**
 
