@@ -53,7 +53,7 @@ draft: false
 
 ---
 
-## Featured guest: White China
+## Featured band: White China
 {{< include_content "/shows/5/featured-guest" >}}
 
 ---
