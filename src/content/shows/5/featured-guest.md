@@ -7,11 +7,11 @@ White China
 
 - ~~**email:**~~
 - ~~**phone:**~~
-- **website:** [Official website](https://www.white-china.com/)
+- ~~**website:**~~
 
 ### Social Media
 
-- [Facebook](https://www.facebook.com/whitechinascotland)
+- {{< new-tab-link "[Facebook](https://www.facebook.com/whitechinascotland)" >}}
 - ~~**Instagram:**~~
 - ~~**Twitter:**~~
 - ~~**LinkedIn:**~~
