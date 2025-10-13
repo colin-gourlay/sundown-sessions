@@ -12,7 +12,7 @@ White China
 ### Social Media
 
 - {{< new-tab-link "[Facebook](https://www.facebook.com/whitechinascotland)" >}}
-- ~~**Instagram:**~~
+- {{< new-tab-link "[Instagram](https://www.instagram.com/whitechinaband/)" >}}
 - ~~**Twitter:**~~
 - ~~**LinkedIn:**~~
 - ~~**YouTube:**~~
