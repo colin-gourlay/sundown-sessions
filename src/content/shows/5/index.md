@@ -8,7 +8,7 @@ summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Siobhan Wilson
 
-- Kirsten Adamson
+- Aimee Mann
 
 - Electric Six
 
