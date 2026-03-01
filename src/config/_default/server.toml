@@ -2,12 +2,9 @@
 for = '/**'
 
 [headers.values]
-# unsafe-inline is required because templates use inline style attributes (e.g. background-image).
-# Tighten this further by migrating inline styles to CSS classes.
-Content-Security-Policy = "default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; font-src 'self'; connect-src 'self'; frame-ancestors 'none'"
-Permissions-Policy = 'camera=(), microphone=(), geolocation=()'
+Content-Security-Policy = 'script-src localhost:1313'
 Referrer-Policy = 'strict-origin-when-cross-origin'
 X-Content-Type-Options = 'nosniff'
 X-Frame-Options = 'DENY'
-X-XSS-Protection = '0'
+X-XSS-Protection = '1; mode=block'
 

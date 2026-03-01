@@ -9,5 +9,5 @@
     {{ $artistFirstChar := index $artist 0 | printf "%c" | lower }}
     {{ $artistUri := printf "artists/%s/%s" $artistFirstChar ($artist | urlize) | absURL }}
     {{ $releaseUri := printf "%s-large.jpeg" $artist | urlize }}
-    {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='%s' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $releaseUri $artist $track $artistUri $artist | safeHTML }}
+    {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $releaseUri $track $artistUri $artist | safeHTML }}
 {{ end }}
