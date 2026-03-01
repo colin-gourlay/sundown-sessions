@@ -27,7 +27,9 @@ The primary objective of our project is to generate a platform for those explora
 
 ## License
 
-This project is licensed under the terms of the [MIT license](LICENSE.md). The MIT license requires that all copies or distributions of this software retain the original copyright notice and license text, ensuring attribution to the original author.
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
+
+This project is licensed under the terms of the [MIT license](LICENSE). The MIT license requires that all copies or distributions of this software retain the original copyright notice and license text, ensuring attribution to the original author.
 
 ## Contribute
 
@@ -57,4 +59,4 @@ In the interest of fostering an inclusive and respectful environment, we adhere 
 
 3. Increase the version numbers in any examples files and the README.md to the new version that this Pull Request would represent. 
 
-4. Your contributions will be under the [MIT License](LICENSE.md) in which the project is licensed.
+4. Your contributions will be under the [MIT License](LICENSE) in which the project is licensed.
