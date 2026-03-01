@@ -1,7 +1,13 @@
-{{ define "header" }}{{ partial "page-header.html" . }}
-{{ end }}
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
 {{ define "main" }}
-<img src="https://colin-gourlay.github.io/sundown-sessions/images/404.jpeg" alt="page not found" style="width: 100%; object-fit: contain"/>
+<article class="mw8 center ph3 pv6 tc">
+  <img src="{{ "images/404.jpeg" | relURL }}" alt="page not found" class="mw-100 mb4 not-found-img"/>
+  <h1 class="f1 fw2 mid-gray mb3">404 &ndash; Page Not Found</h1>
+  <p class="f4 fw1 mid-gray lh-copy mb4">
+    Oops! The page you&rsquo;re looking for doesn&rsquo;t seem to exist.
+  </p>
+  <a href="{{ .Site.Home.RelPermalink }}" class="f5 fw4 link dim br3 ph4 pv3 dib white bg-black">
+    &larr; Go Home
+  </a>
+</article>
 {{ end }}
-
-

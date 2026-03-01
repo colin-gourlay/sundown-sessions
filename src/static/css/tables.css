@@ -33,6 +33,11 @@ table td:nth-child(4) {
     white-space: normal;
 }
 
+.not-found-img {
+    max-height: 60vh;
+    object-fit: contain;
+}
+
 table tr:nth-child(odd) {
     background-color: #f8f9fa;
 }
