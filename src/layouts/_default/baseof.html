@@ -65,5 +65,6 @@
       {{ block "main" . }}{{ end }}
     </main>
     {{ block "footer" . }}{{ partialCached "site-footer.html" . }}{{ end }}
+    {{ partial "live-player.html" . }}
   </body>
 </html>

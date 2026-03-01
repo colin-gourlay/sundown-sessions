@@ -1,0 +1,30 @@
+.live-player {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  border-top: 1px solid #333;
+}
+
+.live-badge {
+  color: #ff4136;
+  border: 1px solid #ff4136;
+  animation: live-pulse 2s ease-in-out infinite;
+}
+
+@keyframes live-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.6; }
+}
+
+.live-audio {
+  width: 100%;
+  max-width: 400px;
+  height: 32px;
+}
+
+/* Prevent page content from being hidden behind the fixed player (~56px tall) */
+body {
+  padding-bottom: 56px;
+}

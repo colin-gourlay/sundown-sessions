@@ -1,6 +1,8 @@
 favicon = "favicon.ico"
-custom_css = ["css/tables.css"]
+custom_css = ["css/tables.css", "css/live-player.css"]
 mainSections = ["shows"]
+# Stream URL for the live radio broadcast. Remove or leave empty to hide the player.
+listen_live_stream_url = "https://radio-stream.mp3"
 
 [[ananke_socials]]
 name = "facebook"
