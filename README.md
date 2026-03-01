@@ -27,7 +27,7 @@ The primary objective of our project is to generate a platform for those explora
 
 ## License
 
-This project is licensed under the terms of the [MIT license](LICENSE.md).
+This project is licensed under the terms of the [MIT license](LICENSE.md). The MIT license requires that all copies or distributions of this software retain the original copyright notice and license text, ensuring attribution to the original author.
 
 ## Contribute
 
