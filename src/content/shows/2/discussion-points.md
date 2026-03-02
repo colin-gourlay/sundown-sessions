@@ -1,4 +1,3 @@
-#
 - _Royal Blood_ 
   - {{< new-tab-link "[Touring](https://twitter.com/royalblooduk/status/1777244995059118447/photo/2)" >}} to mark the 10th anniversary of **_Royal Blood_**
 - _White Lies_

@@ -1,0 +1,22 @@
+name: Lint Markdown
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+
+jobs:
+  lint-markdown:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout source using v4.1.1
+        uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - name: Lint Markdown using v22.0.0
+        uses: DavidAnson/markdownlint-cli2-action@07035fd053f7be764496c0f8d8f9f41f98305101
+        with:
+          globs: |
+            **/*.md
+            !src/themes/**

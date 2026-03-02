@@ -1,4 +1,3 @@
-#
 {{< figure src="9-guest-logo.jpeg" title="Colin Gourlay from ANDYSMANCLUB with Lorraine at East Coast FM" alt="Colin Gourlay from ANDYSMANCLUB with Lorraine at East Coast FM" width="75%" >}}
 
 ANDYSMANCLUB is a UK-based men's suicide prevention charity. Offering free-to-attend peer-to-peer support groups across the United Kingdom,

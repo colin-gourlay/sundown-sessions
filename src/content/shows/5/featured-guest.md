@@ -1,4 +1,3 @@
-#
 {{< figure src="5-guest-logo.jpeg" title="White China (c.1984)" alt="White China" width="75%" >}}
 
 White China
