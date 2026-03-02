@@ -1,4 +1,3 @@
-#
 - _IST IST_
   - {{< new-tab-link "[Live at The Caves, Edinburgh - 1st May 2025](https://tickets.scruffoftheneck.com/event/ist-ist-edinburgh-the-caves/)" >}}
 - _Post Ironic State_
