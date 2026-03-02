@@ -9,7 +9,8 @@ Post-punk band, from South London, UK, lasting until December 1987
 Adrian Borland and Graham Bailey, were formerly Second Layer.
 Before Second Layer, Adrian formed The Outsiders.
 
-Members: 
+Members:
+
 - Adrian Borland (R.I.P.  April 26th 1999)
 - Bi Marshall (Keyboards 1979- December 1980)
 - Colvin "Max" Mayers (R.I.P. Boxing Day 1993)

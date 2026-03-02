@@ -3,7 +3,7 @@
 | Workflow                                                                                                                                                                                                                           | Description                                        |
 |------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------|
 | [![markdown linter](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/lint-markdown.yml/badge.svg)](https://github.com/colin-gourlay/sundown-sessions/blob/main/.github/workflows/lint-markdown.yml)             | The current status of the markdown linter          |
-| [![deployment - production](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/deploy-production.yml/badge.svg)](https://github.com/colin-gourlay/sundown-sessions/blob/main/.github/workflows/lint-markdown.yml) | The current status of the deployment to production |
+| [![deployment - github pages](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/deploy-github-pages.yml/badge.svg)](https://github.com/colin-gourlay/sundown-sessions/blob/main/.github/workflows/deploy-github-pages.yml) | The current status of the deployment to production |
 
 ---
 
