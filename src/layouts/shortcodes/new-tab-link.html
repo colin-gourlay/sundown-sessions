@@ -1,3 +1,4 @@
 {{ $input := .Get 0 | markdownify }}
 {{ $sanitized := $input | safeHTML }}
-{{ replace $sanitized "<a href=" "<a target=\"_blank\" href=" | safeHTML }}
+{{ $withTarget := replace $sanitized "<a href=" "<a target=\"_blank\" rel=\"noopener noreferrer\" href=" }}
+{{ replace $withTarget "</a>" "<span class=\"sr-only\">(opens in a new tab)</span></a>" | safeHTML }}
