@@ -1,3 +1,5 @@
+---
+---
 - _Apple Ad_
   - {{< new-tab-link "[This man has talent...](https://www.the-paulmccartney-project.com/1968/04/apple-publishes-an-ad-to-find-new-talent/)" >}}
   
