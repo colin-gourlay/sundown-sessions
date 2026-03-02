@@ -1,4 +1,5 @@
 ---
+purpose: discussion-points
 ---
 - _REM_
   - {{< new-tab-link "[Induction into Hall of Fame](https://www.youtube.com/watch?v=3Hlujnyzk7k)" >}} 

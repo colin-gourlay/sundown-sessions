@@ -1,4 +1,5 @@
 ---
+purpose: discussion-points
 ---
 - _Siobhan Wilson_
   - {{< new-tab-link "[It Must Have Been The Moon](https://www.youtube.com/watch?v=AyC-VbcO0Z0)" >}}

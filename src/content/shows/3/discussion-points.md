@@ -1,4 +1,5 @@
 ---
+purpose: discussion-points
 ---
 - _Johnny Cash_
   - Ranked #1 Music Museum in the world by Forbes and National Geographic Traveler.

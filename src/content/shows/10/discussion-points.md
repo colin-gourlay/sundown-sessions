@@ -1,2 +1,3 @@
 ---
+purpose: discussion-points
 ---
