@@ -1,3 +1,5 @@
+---
+---
 1. Show Intro - John Craven's Newsround Theme
 2. {{< artist-wikilink "Goodbye Mr MacKenzie" >}} - Open Your Arms 
 3. {{< artist-wikilink "The Silencers" >}} - It's Only Love

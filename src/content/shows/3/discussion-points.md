@@ -1,3 +1,6 @@
+---
+purpose: discussion-points
+---
 - _Johnny Cash_
   - Ranked #1 Music Museum in the world by Forbes and National Geographic Traveler.
     - {{< new-tab-link "[The Johnny Cash Museum](https://www.johnnycashmuseum.com/)" >}}

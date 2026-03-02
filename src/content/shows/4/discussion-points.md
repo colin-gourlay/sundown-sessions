@@ -1,3 +1,6 @@
+---
+purpose: discussion-points
+---
 - *McEwans Lager Adverts*
   - Win {{< new-tab-link "[You've Got The Power](https://www.youtube.com/watch?v=VFclpprR48c)" >}}
   - Hipsway {{< new-tab-link "[Tinder](https://www.youtube.com/watch?v=73g_-hyilY0)" >}}

@@ -1,3 +1,6 @@
+---
+purpose: discussion-points
+---
 - _Sparks 'your favourite bands favourite band'_
   - {{< new-tab-link "[The Sparks Brothers](https://www.imdb.com/title/tt8610436/)" >}}
   - {{< new-tab-link "[Official trailer](https://www.imdb.com/video/vi1807859737/)" >}}
