@@ -18,5 +18,8 @@ other = "{{ .Count }} minutes read"
 one = "One word"
 other = "{{ .Count }} words"
 
+[homeTitle]
+other = "Go to home page"
+
 [pageTitle]
-other = "{{ .Name }} page"
+other = "Go to {{ .Name }}"
