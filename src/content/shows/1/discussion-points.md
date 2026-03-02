@@ -1,4 +1,5 @@
 ---
+purpose: discussion-points
 ---
 - _Sparks 'your favourite bands favourite band'_
   - {{< new-tab-link "[The Sparks Brothers](https://www.imdb.com/title/tt8610436/)" >}}

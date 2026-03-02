@@ -1,4 +1,5 @@
 ---
+purpose: discussion-points
 ---
 Mike Peters of the Alarm (the story of the Poppy Fields):
 https://www.youtube.com/watch?v=l-2g_S2o0g8

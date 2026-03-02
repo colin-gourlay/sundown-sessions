@@ -1,4 +1,5 @@
 ---
+purpose: discussion-points
 ---
 - *McEwans Lager Adverts*
   - Win {{< new-tab-link "[You've Got The Power](https://www.youtube.com/watch?v=VFclpprR48c)" >}}
