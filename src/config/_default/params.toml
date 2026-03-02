@@ -4,6 +4,16 @@ mainSections = ["shows"]
 # Stream URL for the live radio broadcast. Remove or leave empty to hide the player.
 listen_live_stream_url = "https://radio-stream.mp3"
 
+# Optional broadcast schedule. When set, the live player is only shown during these windows.
+# day:       0=Sunday, 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday (UTC)
+# start_utc: broadcast start time in "HH:MM" format (24-hour UTC)
+# end_utc:   broadcast end time in "HH:MM" format (24-hour UTC)
+# A window that crosses midnight is supported (e.g. start_utc="22:00", end_utc="00:00").
+[[listen_live_schedule]]
+day = 2
+start_utc = "22:00"
+end_utc = "00:00"
+
 [[ananke_socials]]
 name = "facebook"
 url = "https://www.facebook.com/sundownsessionsuk"

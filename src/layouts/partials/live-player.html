@@ -1,5 +1,6 @@
 {{ with .Site.Params.listen_live_stream_url }}
-<div id="live-player" class="live-player bg-black white" role="region" aria-label="Live Radio Player">
+{{ $schedule := $.Site.Params.listen_live_schedule }}
+<div id="live-player" class="live-player bg-black white"{{ if $schedule }} style="display:none"{{ end }} role="region" aria-label="Live Radio Player">
   <div class="flex items-center justify-between ph3 ph4-ns pv2">
     <div class="flex items-center">
       <span class="live-badge f6 fw7 ph2 pv1 br2 mr3" aria-hidden="true">&#9679; LIVE</span>
@@ -11,4 +12,32 @@
     </audio>
   </div>
 </div>
+{{ if $schedule }}
+<script>
+(function () {
+  var schedule = JSON.parse({{ $schedule | jsonify }});
+  var now = new Date();
+  var day = now.getUTCDay();
+  var currentMins = now.getUTCHours() * 60 + now.getUTCMinutes();
+  var timeParts = function (t) { return t.split(':').map(Number); };
+  var isLive = schedule.some(function (slot) {
+    var s = timeParts(slot.start_utc);
+    var e = timeParts(slot.end_utc);
+    var startMins = s[0] * 60 + s[1];
+    var endMins = e[0] * 60 + e[1];
+    if (endMins <= startMins) {
+      var prevDay = (day + 6) % 7;
+      return (slot.day === day && currentMins >= startMins) ||
+             (slot.day === prevDay && currentMins < endMins);
+    }
+    return slot.day === day && currentMins >= startMins && currentMins < endMins;
+  });
+  if (isLive) {
+    document.getElementById('live-player').style.display = '';
+  } else {
+    document.body.style.paddingBottom = '0';
+  }
+}());
+</script>
+{{ end }}
 {{ end }}
