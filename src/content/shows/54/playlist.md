@@ -1,3 +1,5 @@
+---
+---
 01. Stevie Ray Vaughan & Double Trouble - Come On (Part III) - 00:03:09
 02. Dr Feelgood - As Long As The Price Is Right - 00:12:18
 03. Alice Cooper - I Love The Dead - 00:17:01

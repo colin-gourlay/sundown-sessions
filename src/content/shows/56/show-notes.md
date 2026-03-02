@@ -1,3 +1,5 @@
+---
+---
 ﻿All things Scarlet Joy – including chat about their upcoming set at Equinox Festival on Sept 21st
 📌 Stay updated on gig news, releases, and more:
 https://www.scarletjoymusic.com
