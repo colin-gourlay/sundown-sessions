@@ -1,3 +1,5 @@
+---
+---
 1. {{< artist-wikilink "Death In Vegas" >}} - So You Say You Lost Your Baby
 2. {{< artist-wikilink "Squeeze" >}} - Third Rail
 3. {{< artist-wikilink "Chris Isaak" >}} - Heart Full of Soul

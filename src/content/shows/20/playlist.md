@@ -1,3 +1,5 @@
+---
+---
 1. {{< artist-wikilink "Dark Hearts" >}} - Talk to Me of Poison
 2. {{< artist-wikilink "Balaam And The Angel" >}} - Forces of Evil
 3. {{< artist-wikilink "Hussey-Regan" >}} - Naked and Savage

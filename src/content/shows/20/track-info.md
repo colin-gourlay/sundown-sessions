@@ -1,3 +1,5 @@
+---
+---
 | # | Title | Album | Duration | Notes |
 |:--:|:--|--|:--:|--|
 | 1 | {{<title "Talk to Me of Poison--Dark Hearts">}} | Talk to Me of Poison (2024) | 5:14 | Released on [RECORD LABEL] on the 18 October 2024 |

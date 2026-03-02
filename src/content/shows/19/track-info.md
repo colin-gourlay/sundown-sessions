@@ -1,3 +1,5 @@
+---
+---
 | #  | Title                                                       | Album                                          | Duration | Notes                                                                                                                                                                            |
 |:--:|:------------------------------------------------------------|------------------------------------------------|:--------:|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 1  | {{<title "Introducing the Band--Suede">}}                   | Dog Man Star (30th Anniversary Edition) (2024) |   2:38   | Providing you all with an eclectic mix of aural delight for your listening pleasure. Kicked the show off with... We'll follow that with... well THIS band needs no introduction! |

@@ -1,3 +1,5 @@
+---
+---
 [00:00.000 --> 00:04.240]  It's Wednesday evening here at East Coast FM and that can be the only one thing. The rock
 [00:04.240 --> 00:10.160]  room opens its doors once again playing some of the finest gothrock, indie rock, at rock,
 [00:10.160 --> 00:16.000]  classic rock, stoner rock and yeah if we've got some time to leave it or not some pop rock
