@@ -37,10 +37,11 @@ url = "https://www.instagram.com/sundownsessionsshow"
 #name = "pinterest"
 #url = "https://www.pinterest.co.uk/sundownsessionsshow/"
 #
-#[[ananke_socials]]
-#name = "tiktok"
-#url = "https://www.tiktok.com/@sundownsessionsshow"
-#
+
+[[ananke_socials]]
+name = "tiktok"
+url = "https://www.tiktok.com/@sundownsessionsshow"
+
 #
 #[[ananke_socials]]
 #name = "linkedin"
