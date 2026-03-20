@@ -41,8 +41,7 @@ url = "https://www.instagram.com/sundownsessionsshow"
 name = "tiktok"
 url = "https://www.tiktok.com/@sundownsessionsshow"
 
-#
-#[[ananke_socials]]
-#name = "linkedin"
-#url = "https://www.linkedin.com/in/colingourlay"
-#
+[[ananke_socials]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/colingourlay"
+follow = false
