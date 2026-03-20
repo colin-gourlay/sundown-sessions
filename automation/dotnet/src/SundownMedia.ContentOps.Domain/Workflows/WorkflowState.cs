@@ -1,3 +1,7 @@
+// <copyright file="WorkflowState.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
+
 namespace SundownMedia.ContentOps.Domain.Workflows;
 
 public enum WorkflowState
@@ -14,5 +18,5 @@ public enum WorkflowState
     PublishRunning,
     PublishPartiallyFailed,
     PublishSucceeded,
-    Cancelled
+    Cancelled,
 }

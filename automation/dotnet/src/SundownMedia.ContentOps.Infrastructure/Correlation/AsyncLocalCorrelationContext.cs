@@ -1,15 +1,20 @@
-using SundownMedia.ContentOps.Contracts.Correlation;
+// <copyright file="AsyncLocalCorrelationContext.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.ContentOps.Infrastructure.Correlation;
-
-public sealed class AsyncLocalCorrelationContext : ICorrelationContext
+namespace SundownMedia.ContentOps.Infrastructure.Correlation
 {
-    private static readonly AsyncLocal<string?> CurrentCorrelationId = new();
+    using SundownMedia.ContentOps.Contracts.Correlation;
 
-    public string CorrelationId => CurrentCorrelationId.Value ?? string.Empty;
-
-    public void Set(string correlationId)
+    public sealed class AsyncLocalCorrelationContext : ICorrelationContext
     {
-        CurrentCorrelationId.Value = correlationId;
+        private static readonly AsyncLocal<string?> CurrentCorrelationId = new();
+
+        public string CorrelationId => CurrentCorrelationId.Value ?? string.Empty;
+
+        public void SetCorrelation(string correlationId)
+        {
+            CurrentCorrelationId.Value = correlationId;
+        }
     }
 }

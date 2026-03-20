@@ -1,3 +1,7 @@
+// <copyright file="TrackSelectionRule.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
+
 namespace SundownMedia.ContentOps.Domain.Tracks;
 
 public static class TrackSelectionRule

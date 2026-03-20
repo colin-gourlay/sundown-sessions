@@ -1,14 +1,19 @@
-using FluentValidation;
-using Microsoft.Extensions.DependencyInjection;
+// <copyright file="ServiceCollectionExtensions.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.ContentOps.Application.DependencyInjection;
-
-public static class ServiceCollectionExtensions
+namespace SundownMedia.ContentOps.Application.DependencyInjection
 {
-    public static IServiceCollection AddContentOpsApplication(this IServiceCollection services)
+    using FluentValidation;
+    using Microsoft.Extensions.DependencyInjection;
+
+    public static class ServiceCollectionExtensions
     {
-        services.AddMediator();
-        services.AddValidatorsFromAssembly(typeof(ServiceCollectionExtensions).Assembly);
-        return services;
+        public static IServiceCollection AddContentOpsApplication(this IServiceCollection services)
+        {
+            services.AddMediator();
+            services.AddValidatorsFromAssembly(typeof(ServiceCollectionExtensions).Assembly);
+            return services;
+        }
     }
 }

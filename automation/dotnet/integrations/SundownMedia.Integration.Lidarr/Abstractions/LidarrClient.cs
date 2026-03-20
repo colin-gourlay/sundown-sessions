@@ -1,12 +1,17 @@
-using SundownMedia.Integration.Lidarr.Models;
+// <copyright file="LidarrClient.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.Integration.Lidarr.Abstractions;
-
-public sealed class LidarrClient : ILidarrClient
+namespace SundownMedia.Integration.Lidarr.Abstractions
 {
-    public Task<LidarrResult<bool>> RefreshLibraryAsync(LidarrRelease release, CancellationToken cancellationToken)
+    using SundownMedia.Integration.Lidarr.Models;
+
+    public sealed class LidarrClient : ILidarrClient
     {
-        var result = new LidarrResult<bool>(false, false, "NotImplemented", "Lidarr client is a reusable integration contract stub.");
-        return Task.FromResult(result);
+        public Task<LidarrResult<bool>> RefreshLibraryAsync(LidarrRelease release, CancellationToken cancellationToken)
+        {
+            var result = new LidarrResult<bool>(false, false, "NotImplemented", "Lidarr client is a reusable integration contract stub.");
+            return Task.FromResult(result);
+        }
     }
 }

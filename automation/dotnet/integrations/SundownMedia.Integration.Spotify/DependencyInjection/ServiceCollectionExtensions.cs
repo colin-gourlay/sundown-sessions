@@ -1,16 +1,21 @@
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using SundownMedia.Integration.Spotify.Abstractions;
-using SundownMedia.Integration.Spotify.Options;
+// <copyright file="ServiceCollectionExtensions.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.Integration.Spotify.DependencyInjection;
-
-public static class ServiceCollectionExtensions
+namespace SundownMedia.Integration.Spotify.DependencyInjection
 {
-    public static IServiceCollection AddSpotifyIntegration(this IServiceCollection services, IConfiguration configuration)
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using SundownMedia.Integration.Spotify.Abstractions;
+    using SundownMedia.Integration.Spotify.Options;
+
+    public static class ServiceCollectionExtensions
     {
-        services.Configure<SpotifyOptions>(configuration.GetSection(SpotifyOptions.SectionName));
-        services.AddSingleton<ISpotifyClient, SpotifyClient>();
-        return services;
+        public static IServiceCollection AddSpotifyIntegration(this IServiceCollection services, IConfiguration configuration)
+        {
+            services.Configure<SpotifyOptions>(configuration.GetSection(SpotifyOptions.SectionName));
+            services.AddSingleton<ISpotifyClient, SpotifyClient>();
+            return services;
+        }
     }
 }

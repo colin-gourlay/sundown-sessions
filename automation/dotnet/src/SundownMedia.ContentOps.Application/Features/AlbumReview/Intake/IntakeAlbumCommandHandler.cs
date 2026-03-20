@@ -1,48 +1,53 @@
-using ErrorOr;
-using Mediator;
-using SundownMedia.ContentOps.Application.Abstractions;
-using SundownMedia.ContentOps.Domain.Workflows;
+// <copyright file="IntakeAlbumCommandHandler.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.ContentOps.Application.Features.AlbumReview.Intake;
-
-public sealed class IntakeAlbumCommandHandler : IRequestHandler<IntakeAlbumCommand, ErrorOr<IntakeAlbumResult>>
+namespace SundownMedia.ContentOps.Application.Features.AlbumReview.Intake
 {
-    private readonly IFileCopyService _fileCopyService;
-    private readonly IWorkflowRepository _workflowRepository;
+    using ErrorOr;
+    using Mediator;
+    using SundownMedia.ContentOps.Application.Abstractions;
+    using SundownMedia.ContentOps.Domain.Workflows;
 
-    public IntakeAlbumCommandHandler(IFileCopyService fileCopyService, IWorkflowRepository workflowRepository)
+    public sealed class IntakeAlbumCommandHandler : IRequestHandler<IntakeAlbumCommand, ErrorOr<IntakeAlbumResult>>
     {
-        _fileCopyService = fileCopyService;
-        _workflowRepository = workflowRepository;
-    }
+        private readonly IFileCopyService _fileCopyService;
+        private readonly IWorkflowRepository _workflowRepository;
 
-    public async ValueTask<ErrorOr<IntakeAlbumResult>> Handle(IntakeAlbumCommand command, CancellationToken cancellationToken)
-    {
-        if (!Directory.Exists(command.SourcePath))
+        public IntakeAlbumCommandHandler(IFileCopyService fileCopyService, IWorkflowRepository workflowRepository)
         {
-            return Error.Validation("Intake.SourcePath", "Source path does not exist.");
+            this._fileCopyService = fileCopyService;
+            this._workflowRepository = workflowRepository;
         }
 
-        var workflowId = Guid.NewGuid();
-        var workflow = new Workflow(workflowId, command.SourcePath, command.WorkingRoot, command.MasterRoot);
-        workflow.StartIntake();
-
-        var destination = Path.Combine(command.WorkingRoot, workflowId.ToString("N"));
-
-        try
+        public async ValueTask<ErrorOr<IntakeAlbumResult>> Handle(IntakeAlbumCommand command, CancellationToken cancellationToken)
         {
-            await _fileCopyService.CopyAlbumAsync(command.SourcePath, destination, cancellationToken);
-            workflow.MarkIntakeSucceeded();
-        }
-        catch (Exception ex)
-        {
-            workflow.MarkIntakeFailed();
-            return Error.Failure("Intake.CopyFailed", ex.Message);
-        }
+            if (!Directory.Exists(command.SourcePath))
+            {
+                return Error.Validation("Intake.SourcePath", "Source path does not exist.");
+            }
 
-        await _workflowRepository.AddAsync(workflow, cancellationToken);
-        await _workflowRepository.SaveChangesAsync(cancellationToken);
+            var workflowId = Guid.NewGuid();
+            var workflow = new Workflow(workflowId, command.SourcePath, command.WorkingRoot, command.MasterRoot);
+            workflow.StartIntake();
 
-        return new IntakeAlbumResult(workflowId, command.CorrelationId);
+            var destination = Path.Combine(command.WorkingRoot, workflowId.ToString("N"));
+
+            try
+            {
+                await this._fileCopyService.CopyAlbumAsync(command.SourcePath, destination, cancellationToken);
+                workflow.MarkIntakeSucceeded();
+            }
+            catch (Exception ex)
+            {
+                workflow.MarkIntakeFailed();
+                return Error.Failure("Intake.CopyFailed", ex.Message);
+            }
+
+            await this._workflowRepository.AddAsync(workflow, cancellationToken);
+            await this._workflowRepository.SaveChangesAsync(cancellationToken);
+
+            return new IntakeAlbumResult(workflowId, command.CorrelationId);
+        }
     }
 }

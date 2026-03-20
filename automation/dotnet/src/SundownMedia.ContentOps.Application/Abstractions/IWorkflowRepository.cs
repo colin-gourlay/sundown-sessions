@@ -1,12 +1,17 @@
-using SundownMedia.ContentOps.Domain.Workflows;
+// <copyright file="IWorkflowRepository.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.ContentOps.Application.Abstractions;
-
-public interface IWorkflowRepository
+namespace SundownMedia.ContentOps.Application.Abstractions
 {
-    Task AddAsync(Workflow workflow, CancellationToken cancellationToken);
+    using SundownMedia.ContentOps.Domain.Workflows;
 
-    Task<Workflow?> GetByIdAsync(Guid workflowId, CancellationToken cancellationToken);
+    public interface IWorkflowRepository
+    {
+        Task AddAsync(Workflow workflow, CancellationToken cancellationToken);
 
-    Task SaveChangesAsync(CancellationToken cancellationToken);
+        Task<Workflow?> GetByIdAsync(Guid workflowId, CancellationToken cancellationToken);
+
+        Task SaveChangesAsync(CancellationToken cancellationToken);
+    }
 }

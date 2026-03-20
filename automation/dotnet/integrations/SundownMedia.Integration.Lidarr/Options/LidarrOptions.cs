@@ -1,3 +1,7 @@
+// <copyright file="LidarrOptions.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
+
 namespace SundownMedia.Integration.Lidarr.Options;
 
 public sealed class LidarrOptions

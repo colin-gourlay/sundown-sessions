@@ -1,8 +1,13 @@
-using SundownMedia.ContentOps.Application.Abstractions;
+// <copyright file="SystemClock.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.ContentOps.Infrastructure.System;
-
-public sealed class SystemClock : IClock
+namespace SundownMedia.ContentOps.Infrastructure.System
 {
-    public DateTime UtcNow => DateTime.UtcNow;
+    using SundownMedia.ContentOps.Application.Abstractions;
+
+    public sealed class SystemClock : IClock
+    {
+        public DateTime UtcNow => DateTime.UtcNow;
+    }
 }
