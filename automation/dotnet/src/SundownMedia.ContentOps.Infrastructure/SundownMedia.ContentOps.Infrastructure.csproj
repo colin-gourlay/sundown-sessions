@@ -1,0 +1,23 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net10.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\SundownMedia.ContentOps.Application\SundownMedia.ContentOps.Application.csproj" />
+    <ProjectReference Include="..\SundownMedia.ContentOps.Contracts\SundownMedia.ContentOps.Contracts.csproj" />
+    <ProjectReference Include="..\SundownMedia.ContentOps.Domain\SundownMedia.ContentOps.Domain.csproj" />
+    <ProjectReference Include="..\..\integrations\SundownMedia.Integration.Lidarr\SundownMedia.Integration.Lidarr.csproj" />
+    <ProjectReference Include="..\..\integrations\SundownMedia.Integration.Spotify\SundownMedia.Integration.Spotify.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Dapper" />
+    <PackageReference Include="Microsoft.Data.Sqlite" />
+    <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
+    <PackageReference Include="Serilog" />
+    <PackageReference Include="TagLibSharp" />
+  </ItemGroup>
+
+</Project>

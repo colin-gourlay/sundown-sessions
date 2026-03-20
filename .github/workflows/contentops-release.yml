@@ -1,0 +1,202 @@
+name: ContentOps Release
+
+on:
+  workflow_dispatch:
+    inputs:
+      version:
+        description: SemVer version to release (for example 0.1.0)
+        required: true
+        default: 0.1.0
+        type: string
+      prerelease:
+        description: Mark release as prerelease
+        required: true
+        default: true
+        type: boolean
+  push:
+    tags:
+      - contentops/v*
+
+permissions:
+  contents: write
+  packages: write
+
+env:
+  DOTNET_DIR: automation/dotnet
+  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/sundownmedia-contentops
+
+jobs:
+  build-test-package:
+    runs-on: ubuntu-latest
+    outputs:
+      release_version: ${{ steps.version.outputs.release_version }}
+      release_tag: ${{ steps.version.outputs.release_tag }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Resolve version
+        id: version
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            VERSION="${{ inputs.version }}"
+          else
+            VERSION="${GITHUB_REF_NAME#contentops/v}"
+          fi
+          echo "release_version=$VERSION" >> "$GITHUB_OUTPUT"
+          echo "release_tag=contentops/v$VERSION" >> "$GITHUB_OUTPUT"
+
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: ${{ env.DOTNET_DIR }}/global.json
+
+      - name: Restore
+        run: dotnet restore SundownMedia.ContentOps.sln
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Build
+        run: dotnet build SundownMedia.ContentOps.sln --configuration Release --no-restore
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Test
+        run: dotnet test SundownMedia.ContentOps.sln --configuration Release --no-build
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Publish binary
+        run: |
+          dotnet publish src/SundownMedia.ContentOps.Cli/SundownMedia.ContentOps.Cli.csproj \
+            --configuration Release \
+            --runtime linux-x64 \
+            --self-contained true \
+            -p:PublishSingleFile=true \
+            -p:DebugType=none \
+            -p:DebugSymbols=false \
+            -p:Version=${{ steps.version.outputs.release_version }} \
+            --output ./publish
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Package binary archive
+        run: |
+          mkdir -p release-assets
+          cp ${{ env.DOTNET_DIR }}/publish/SundownMedia.ContentOps.Cli release-assets/contentops
+          chmod +x release-assets/contentops
+          tar -czf release-assets/sundownmedia-contentops-${{ steps.version.outputs.release_version }}-linux-x64.tar.gz -C release-assets contentops
+
+      - name: Generate usage instructions
+        run: |
+          cat > release-assets/USAGE.txt << 'EOF'
+          SundownMedia ContentOps CLI
+          ===========================
+
+          1) Run the binary directly on Ubuntu
+          ------------------------------------
+          tar -xzf sundownmedia-contentops-<VERSION>-linux-x64.tar.gz
+          chmod +x contentops
+          ./contentops --help
+
+          2) Pull and run the container
+          -----------------------------
+          docker pull ghcr.io/<owner>/sundownmedia-contentops:<VERSION>
+          docker run --rm -it ghcr.io/<owner>/sundownmedia-contentops:<VERSION> --help
+
+          3) External FLAC source mount example
+          -------------------------------------
+          docker run --rm -it \
+            -v /mnt/flac-source:/media/source:ro \
+            -v /mnt/master-store:/media/master \
+            ghcr.io/<owner>/sundownmedia-contentops:<VERSION> intake start --source /media/source/Artist/Album
+
+          4) Build image from Dockerfile
+          ------------------------------
+          docker build -f automation/dotnet/Dockerfile -t contentops:local automation/dotnet
+
+          Notes
+          -----
+          - The app is designed for Ubuntu runtime.
+          - Source directories should be mounted read-only when possible.
+          - Configure Spotify/Lidarr credentials through environment variables or config files.
+          EOF
+
+      - name: Upload release assets artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: contentops-release-assets
+          path: |
+            release-assets/sundownmedia-contentops-${{ steps.version.outputs.release_version }}-linux-x64.tar.gz
+            automation/dotnet/Dockerfile
+            release-assets/USAGE.txt
+
+  publish-container:
+    runs-on: ubuntu-latest
+    needs: build-test-package
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Set up Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Build and push container
+        uses: docker/build-push-action@v6
+        with:
+          context: automation/dotnet
+          file: automation/dotnet/Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAME }}:${{ needs.build-test-package.outputs.release_version }}
+            ${{ env.IMAGE_NAME }}:latest
+
+  release:
+    runs-on: ubuntu-latest
+    needs: [build-test-package, publish-container]
+    steps:
+      - name: Download assets artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: contentops-release-assets
+          path: release-assets
+
+      - name: Create tag for manual dispatch
+        if: github.event_name == 'workflow_dispatch'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const tag = '${{ needs.build-test-package.outputs.release_tag }}';
+            const sha = context.sha;
+            try {
+              await github.rest.git.createRef({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                ref: `refs/tags/${tag}`,
+                sha
+              });
+            } catch (error) {
+              if (error.status !== 422) {
+                throw error;
+              }
+            }
+
+      - name: Publish GitHub release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ needs.build-test-package.outputs.release_tag }}
+          name: ContentOps v${{ needs.build-test-package.outputs.release_version }}
+          prerelease: ${{ github.event_name == 'workflow_dispatch' && inputs.prerelease || false }}
+          files: |
+            release-assets/sundownmedia-contentops-${{ needs.build-test-package.outputs.release_version }}-linux-x64.tar.gz
+            release-assets/Dockerfile
+            release-assets/USAGE.txt
+          body: |
+            This release includes:
+            - self contained Linux binary
+            - production Dockerfile
+            - usage instructions
+            - container image published to GHCR

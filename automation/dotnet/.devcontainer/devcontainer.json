@@ -1,0 +1,18 @@
+{
+  "name": "SundownMedia ContentOps",
+  "image": "mcr.microsoft.com/devcontainers/dotnet:10-ubuntu-24.04",
+  "features": {},
+  "postCreateCommand": "sudo apt-get update && sudo apt-get install -y --no-install-recommends ffmpeg sqlite3 && dotnet restore SundownMedia.ContentOps.sln",
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-dotnettools.csharp",
+        "EditorConfig.EditorConfig"
+      ]
+    }
+  },
+  "mounts": [
+    "source=${localEnv:HOME}/.config/sundown-contentops,target=/home/vscode/.config/sundown-contentops,type=bind",
+    "source=${localEnv:HOME}/.local/state/sundown-contentops,target=/home/vscode/.local/state/sundown-contentops,type=bind"
+  ]
+}
