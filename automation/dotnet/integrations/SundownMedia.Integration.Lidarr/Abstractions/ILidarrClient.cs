@@ -1,8 +1,13 @@
-using SundownMedia.Integration.Lidarr.Models;
+// <copyright file="ILidarrClient.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.Integration.Lidarr.Abstractions;
-
-public interface ILidarrClient
+namespace SundownMedia.Integration.Lidarr.Abstractions
 {
-    Task<LidarrResult<bool>> RefreshLibraryAsync(LidarrRelease release, CancellationToken cancellationToken);
+    using SundownMedia.Integration.Lidarr.Models;
+
+    public interface ILidarrClient
+    {
+        Task<LidarrResult<bool>> RefreshLibraryAsync(LidarrRelease release, CancellationToken cancellationToken);
+    }
 }

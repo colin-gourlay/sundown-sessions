@@ -1,14 +1,19 @@
-using FluentValidation;
+// <copyright file="IntakeAlbumCommandValidator.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.ContentOps.Application.Features.AlbumReview.Intake;
-
-public sealed class IntakeAlbumCommandValidator : AbstractValidator<IntakeAlbumCommand>
+namespace SundownMedia.ContentOps.Application.Features.AlbumReview.Intake
 {
-    public IntakeAlbumCommandValidator()
+    using FluentValidation;
+
+    public sealed class IntakeAlbumCommandValidator : AbstractValidator<IntakeAlbumCommand>
     {
-        RuleFor(command => command.SourcePath).NotEmpty();
-        RuleFor(command => command.WorkingRoot).NotEmpty();
-        RuleFor(command => command.MasterRoot).NotEmpty();
-        RuleFor(command => command.CorrelationId).NotEmpty();
+        public IntakeAlbumCommandValidator()
+        {
+            this.RuleFor(command => command.SourcePath).NotEmpty();
+            this.RuleFor(command => command.WorkingRoot).NotEmpty();
+            this.RuleFor(command => command.MasterRoot).NotEmpty();
+            this.RuleFor(command => command.CorrelationId).NotEmpty();
+        }
     }
 }

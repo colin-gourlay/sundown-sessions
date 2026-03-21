@@ -1,3 +1,7 @@
+// <copyright file="ArgumentParser.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
+
 namespace SundownMedia.ContentOps.Cli;
 
 public static class ArgumentParser

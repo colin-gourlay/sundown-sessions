@@ -1,4 +1,8 @@
-﻿using Mediator;
+﻿// <copyright file="Program.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
+
+using Mediator;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SundownMedia.ContentOps.Application.DependencyInjection;
@@ -20,7 +24,7 @@ if (!ArgumentParser.TryParse(args, out var options) || options is null)
 
 var correlationContext = host.Services.GetRequiredService<ICorrelationContext>();
 var correlationId = options.CorrelationId ?? Guid.NewGuid().ToString("D");
-correlationContext.Set(correlationId);
+correlationContext.SetCorrelation(correlationId);
 
 var sender = host.Services.GetRequiredService<ISender>();
 var command = new IntakeAlbumCommand(options.SourcePath, options.WorkingRoot, options.MasterRoot, correlationId);

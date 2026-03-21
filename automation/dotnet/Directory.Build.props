@@ -14,6 +14,11 @@
     <ManagePackageVersionsCentrally>true</ManagePackageVersionsCentrally>
   </PropertyGroup>
 
+  <!-- SA0001: XML comment analysis is disabled by design; XML documentation is not required for this project. -->
+  <PropertyGroup>
+    <NoWarn>$(NoWarn);SA0001</NoWarn>
+  </PropertyGroup>
+
   <ItemGroup Condition="'$(IsTestProject)' != 'true'">
     <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />
   </ItemGroup>

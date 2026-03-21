@@ -1,8 +1,13 @@
-using SundownMedia.Integration.Spotify.Models;
+// <copyright file="ISpotifyClient.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.Integration.Spotify.Abstractions;
-
-public interface ISpotifyClient
+namespace SundownMedia.Integration.Spotify.Abstractions
 {
-    Task<SpotifyResult<SpotifyTrack>> FindTrackAsync(string isrc, string artist, string title, CancellationToken cancellationToken);
+    using SundownMedia.Integration.Spotify.Models;
+
+    public interface ISpotifyClient
+    {
+        Task<SpotifyResult<SpotifyTrack>> FindTrackAsync(string isrc, string artist, string title, CancellationToken cancellationToken);
+    }
 }

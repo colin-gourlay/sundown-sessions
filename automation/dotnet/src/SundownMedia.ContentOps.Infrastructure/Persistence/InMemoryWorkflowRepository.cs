@@ -1,26 +1,31 @@
-using SundownMedia.ContentOps.Application.Abstractions;
-using SundownMedia.ContentOps.Domain.Workflows;
+// <copyright file="InMemoryWorkflowRepository.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.ContentOps.Infrastructure.Persistence;
-
-public sealed class InMemoryWorkflowRepository : IWorkflowRepository
+namespace SundownMedia.ContentOps.Infrastructure.Persistence
 {
-    private readonly Dictionary<Guid, Workflow> _store = new();
+    using SundownMedia.ContentOps.Application.Abstractions;
+    using SundownMedia.ContentOps.Domain.Workflows;
 
-    public Task AddAsync(Workflow workflow, CancellationToken cancellationToken)
+    public sealed class InMemoryWorkflowRepository : IWorkflowRepository
     {
-        _store[workflow.Id] = workflow;
-        return Task.CompletedTask;
-    }
+        private readonly Dictionary<Guid, Workflow> _store = new();
 
-    public Task<Workflow?> GetByIdAsync(Guid workflowId, CancellationToken cancellationToken)
-    {
-        _store.TryGetValue(workflowId, out var workflow);
-        return Task.FromResult(workflow);
-    }
+        public Task AddAsync(Workflow workflow, CancellationToken cancellationToken)
+        {
+            this._store[workflow.Id] = workflow;
+            return Task.CompletedTask;
+        }
 
-    public Task SaveChangesAsync(CancellationToken cancellationToken)
-    {
-        return Task.CompletedTask;
+        public Task<Workflow?> GetByIdAsync(Guid workflowId, CancellationToken cancellationToken)
+        {
+            this._store.TryGetValue(workflowId, out var workflow);
+            return Task.FromResult(workflow);
+        }
+
+        public Task SaveChangesAsync(CancellationToken cancellationToken)
+        {
+            return Task.CompletedTask;
+        }
     }
 }

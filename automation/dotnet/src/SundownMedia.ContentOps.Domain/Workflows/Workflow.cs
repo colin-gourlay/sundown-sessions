@@ -1,15 +1,19 @@
+// <copyright file="Workflow.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
+
 namespace SundownMedia.ContentOps.Domain.Workflows;
 
 public sealed class Workflow
 {
     public Workflow(Guid id, string sourcePath, string workingRoot, string masterRoot)
     {
-        Id = id;
-        SourcePath = sourcePath;
-        WorkingRoot = workingRoot;
-        MasterRoot = masterRoot;
-        State = WorkflowState.Draft;
-        CreatedAtUtc = DateTime.UtcNow;
+        this.Id = id;
+        this.SourcePath = sourcePath;
+        this.WorkingRoot = workingRoot;
+        this.MasterRoot = masterRoot;
+        this.State = WorkflowState.Draft;
+        this.CreatedAtUtc = DateTime.UtcNow;
     }
 
     public Guid Id { get; }
@@ -24,9 +28,9 @@ public sealed class Workflow
 
     public DateTime CreatedAtUtc { get; }
 
-    public void StartIntake() => State = WorkflowState.IntakeRunning;
+    public void StartIntake() => this.State = WorkflowState.IntakeRunning;
 
-    public void MarkIntakeSucceeded() => State = WorkflowState.IntakeSucceeded;
+    public void MarkIntakeSucceeded() => this.State = WorkflowState.IntakeSucceeded;
 
-    public void MarkIntakeFailed() => State = WorkflowState.IntakeFailed;
+    public void MarkIntakeFailed() => this.State = WorkflowState.IntakeFailed;
 }

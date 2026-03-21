@@ -1,28 +1,33 @@
-using SundownMedia.ContentOps.Application.Abstractions;
+// <copyright file="FileCopyService.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-namespace SundownMedia.ContentOps.Infrastructure.System;
-
-public sealed class FileCopyService : IFileCopyService
+namespace SundownMedia.ContentOps.Infrastructure.System
 {
-    public async Task CopyAlbumAsync(string sourcePath, string destinationPath, CancellationToken cancellationToken)
+    using SundownMedia.ContentOps.Application.Abstractions;
+
+    public sealed class FileCopyService : IFileCopyService
     {
-        Directory.CreateDirectory(destinationPath);
-
-        foreach (var sourceFilePath in Directory.EnumerateFiles(sourcePath, "*", SearchOption.AllDirectories))
+        public async Task CopyAlbumAsync(string sourcePath, string destinationPath, CancellationToken cancellationToken)
         {
-            cancellationToken.ThrowIfCancellationRequested();
-            var relativePath = Path.GetRelativePath(sourcePath, sourceFilePath);
-            var destinationFilePath = Path.Combine(destinationPath, relativePath);
-            var destinationDirectory = Path.GetDirectoryName(destinationFilePath);
+            Directory.CreateDirectory(destinationPath);
 
-            if (!string.IsNullOrWhiteSpace(destinationDirectory))
+            foreach (var sourceFilePath in Directory.EnumerateFiles(sourcePath, "*", SearchOption.AllDirectories))
             {
-                Directory.CreateDirectory(destinationDirectory);
-            }
+                cancellationToken.ThrowIfCancellationRequested();
+                var relativePath = Path.GetRelativePath(sourcePath, sourceFilePath);
+                var destinationFilePath = Path.Combine(destinationPath, relativePath);
+                var destinationDirectory = Path.GetDirectoryName(destinationFilePath);
 
-            await using var sourceStream = File.OpenRead(sourceFilePath);
-            await using var destinationStream = File.Create(destinationFilePath);
-            await sourceStream.CopyToAsync(destinationStream, cancellationToken);
+                if (!string.IsNullOrWhiteSpace(destinationDirectory))
+                {
+                    Directory.CreateDirectory(destinationDirectory);
+                }
+
+                await using var sourceStream = File.OpenRead(sourceFilePath);
+                await using var destinationStream = File.Create(destinationFilePath);
+                await sourceStream.CopyToAsync(destinationStream, cancellationToken);
+            }
         }
     }
 }

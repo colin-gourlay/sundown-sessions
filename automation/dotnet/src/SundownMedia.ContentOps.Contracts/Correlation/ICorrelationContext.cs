@@ -1,8 +1,13 @@
-namespace SundownMedia.ContentOps.Contracts.Correlation;
+// <copyright file="ICorrelationContext.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
 
-public interface ICorrelationContext
+namespace SundownMedia.ContentOps.Contracts.Correlation
 {
-    string CorrelationId { get; }
+    public interface ICorrelationContext
+    {
+        string CorrelationId { get; }
 
-    void Set(string correlationId);
+        void SetCorrelation(string correlationId);
+    }
 }
