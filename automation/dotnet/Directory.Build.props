@@ -21,5 +21,6 @@
 
   <ItemGroup Condition="'$(IsTestProject)' != 'true'">
     <PackageReference Include="StyleCop.Analyzers" PrivateAssets="all" />
+    <AdditionalFiles Include="$(MSBuildThisFileDirectory)stylecop.json" Link="stylecop.json" />
   </ItemGroup>
 </Project>

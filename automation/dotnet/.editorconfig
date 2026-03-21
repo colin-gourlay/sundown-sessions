@@ -2,3 +2,8 @@ root = true
 
 [*.cs]
 dotnet_diagnostic.SA1402.severity = error
+
+[*Tests.cs]
+dotnet_diagnostic.SA1633.severity = none
+dotnet_diagnostic.SA1200.severity = none
+dotnet_diagnostic.CA1707.severity = none

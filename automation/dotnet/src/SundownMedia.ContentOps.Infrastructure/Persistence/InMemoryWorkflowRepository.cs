@@ -9,17 +9,17 @@ namespace SundownMedia.ContentOps.Infrastructure.Persistence
 
     public sealed class InMemoryWorkflowRepository : IWorkflowRepository
     {
-        private readonly Dictionary<Guid, Workflow> _store = new();
+        private readonly Dictionary<Guid, Workflow> store = new();
 
         public Task AddAsync(Workflow workflow, CancellationToken cancellationToken)
         {
-            this._store[workflow.Id] = workflow;
+            this.store[workflow.Id] = workflow;
             return Task.CompletedTask;
         }
 
         public Task<Workflow?> GetByIdAsync(Guid workflowId, CancellationToken cancellationToken)
         {
-            this._store.TryGetValue(workflowId, out var workflow);
+            this.store.TryGetValue(workflowId, out var workflow);
             return Task.FromResult(workflow);
         }
 
