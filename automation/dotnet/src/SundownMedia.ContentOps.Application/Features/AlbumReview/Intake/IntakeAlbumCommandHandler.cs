@@ -11,13 +11,13 @@ namespace SundownMedia.ContentOps.Application.Features.AlbumReview.Intake
 
     public sealed class IntakeAlbumCommandHandler : IRequestHandler<IntakeAlbumCommand, ErrorOr<IntakeAlbumResult>>
     {
-        private readonly IFileCopyService _fileCopyService;
-        private readonly IWorkflowRepository _workflowRepository;
+        private readonly IFileCopyService fileCopyService;
+        private readonly IWorkflowRepository workflowRepository;
 
         public IntakeAlbumCommandHandler(IFileCopyService fileCopyService, IWorkflowRepository workflowRepository)
         {
-            this._fileCopyService = fileCopyService;
-            this._workflowRepository = workflowRepository;
+            this.fileCopyService = fileCopyService;
+            this.workflowRepository = workflowRepository;
         }
 
         public async ValueTask<ErrorOr<IntakeAlbumResult>> Handle(IntakeAlbumCommand command, CancellationToken cancellationToken)
@@ -35,7 +35,7 @@ namespace SundownMedia.ContentOps.Application.Features.AlbumReview.Intake
 
             try
             {
-                await this._fileCopyService.CopyAlbumAsync(command.SourcePath, destination, cancellationToken);
+                await this.fileCopyService.CopyAlbumAsync(command.SourcePath, destination, cancellationToken);
                 workflow.MarkIntakeSucceeded();
             }
             catch (Exception ex)
@@ -44,8 +44,8 @@ namespace SundownMedia.ContentOps.Application.Features.AlbumReview.Intake
                 return Error.Failure("Intake.CopyFailed", ex.Message);
             }
 
-            await this._workflowRepository.AddAsync(workflow, cancellationToken);
-            await this._workflowRepository.SaveChangesAsync(cancellationToken);
+            await this.workflowRepository.AddAsync(workflow, cancellationToken);
+            await this.workflowRepository.SaveChangesAsync(cancellationToken);
 
             return new IntakeAlbumResult(workflowId, command.CorrelationId);
         }
