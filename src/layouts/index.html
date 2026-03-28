@@ -36,13 +36,19 @@
       <section class="w-100">
         <h1 class="f3">{{ i18n "more" }}</h1>
         {{/* Now, range through the next four after the initial $n_posts items. Nest the requirements, "after" then "first" on the outside */}}
-        <div class="flex-ns flex-wrap justify-around">
-          {{ range (first 4 (after $n_posts $section)) }}
-            <div class="relative w-100 w-40-ns mb4">
-              {{ .Render "tile" }}
-            </div>
-          {{ end }}
-        </div>
+        {{ range (first 4 (after $n_posts $section))  }}
+          {{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+          <header class="cover bg-top" style="background-image: url('{{ $featured_image }}');height:180px; opacity: 80%; background-size: cover;">
+              <div class="bg-black-60">
+                  <h1 class="mt0 white athelas f4 fw1" style="line-height: 9; text-align: center">
+                      <a href="{{.RelPermalink}}" class="color-inherit dim link" style="height:180px;">
+                          {{ .Title }}<BR>
+                      </a>
+                  </h1>
+              </div>
+          </header>
+          <br>
+        {{ end }}
 
         {{/* As above, Use $section_name to get the section title, and URL. Use "with" to only show it if it exists */}}
         {{ with .Site.GetPage "section" $section_name }}
