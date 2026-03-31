@@ -9,6 +9,7 @@ namespace SundownMedia.ContentOps.Infrastructure.DependencyInjection
     using SundownMedia.ContentOps.Contracts.Correlation;
     using SundownMedia.ContentOps.Infrastructure.Correlation;
     using SundownMedia.ContentOps.Infrastructure.Persistence;
+    using SundownMedia.ContentOps.Infrastructure.ShowNotes;
     using SundownMedia.ContentOps.Infrastructure.System;
 
     public static class ServiceCollectionExtensions
@@ -19,6 +20,7 @@ namespace SundownMedia.ContentOps.Infrastructure.DependencyInjection
             services.AddSingleton<IWorkflowRepository, InMemoryWorkflowRepository>();
             services.AddSingleton<IClock, SystemClock>();
             services.AddSingleton<IFileCopyService, FileCopyService>();
+            services.AddSingleton<IShowNotesService, ShowNotesService>();
             return services;
         }
     }
