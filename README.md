@@ -79,10 +79,10 @@ To support that requirement, this repository now includes a dedicated automation
 
 ```mermaid
 flowchart LR
-		A[src Hugo website] -->|content output| B[public site]
-		C[automation/dotnet] -->|pre and post processing| A
-		C --> D[Spotify integration library]
-		C --> E[Lidarr integration library]
+  A[src Hugo website] -->|content output| B[public site]
+  C[automation/dotnet] -->|pre and post processing| A
+  C --> D[Spotify integration library]
+  C --> E[Lidarr integration library]
 ```
 
 ### Architectural Choices and Rationale
@@ -102,13 +102,13 @@ flowchart LR
 
 ```mermaid
 flowchart TB
-		CLI[SundownMedia.ContentOps.Cli] --> APP[SundownMedia.ContentOps.Application]
-		APP --> DOMAIN[SundownMedia.ContentOps.Domain]
-		CLI --> INFRA[SundownMedia.ContentOps.Infrastructure]
-		INFRA --> APP
-		INFRA --> DOMAIN
-		INFRA --> SPOT[SundownMedia.Integration.Spotify]
-		INFRA --> LID[SundownMedia.Integration.Lidarr]
+  CLI[SundownMedia.ContentOps.Cli] --> APP[SundownMedia.ContentOps.Application]
+  APP --> DOMAIN[SundownMedia.ContentOps.Domain]
+  CLI --> INFRA[SundownMedia.ContentOps.Infrastructure]
+  INFRA --> APP
+  INFRA --> DOMAIN
+  INFRA --> SPOT[SundownMedia.Integration.Spotify]
+  INFRA --> LID[SundownMedia.Integration.Lidarr]
 ```
 
 #### Result Pattern
@@ -137,25 +137,25 @@ flowchart TB
 
 ```text
 automation/dotnet/
-	SundownMedia.ContentOps.sln
-	Directory.Build.props
-	Directory.Packages.props
-	Dockerfile
-	.devcontainer/devcontainer.json
-	src/
-		SundownMedia.ContentOps.Cli
-		SundownMedia.ContentOps.Application
-		SundownMedia.ContentOps.Domain
-		SundownMedia.ContentOps.Infrastructure
-		SundownMedia.ContentOps.Contracts
-	integrations/
-		SundownMedia.Integration.Spotify
-		SundownMedia.Integration.Lidarr
-	tests/
-		SundownMedia.ContentOps.Domain.Tests
-		SundownMedia.ContentOps.Application.Tests
-		SundownMedia.ContentOps.Infrastructure.Tests
-		SundownMedia.ContentOps.Integration.Tests
+ SundownMedia.ContentOps.sln
+ Directory.Build.props
+ Directory.Packages.props
+ Dockerfile
+ .devcontainer/devcontainer.json
+ src/
+  SundownMedia.ContentOps.Cli
+  SundownMedia.ContentOps.Application
+  SundownMedia.ContentOps.Domain
+  SundownMedia.ContentOps.Infrastructure
+  SundownMedia.ContentOps.Contracts
+ integrations/
+  SundownMedia.Integration.Spotify
+  SundownMedia.Integration.Lidarr
+ tests/
+  SundownMedia.ContentOps.Domain.Tests
+  SundownMedia.ContentOps.Application.Tests
+  SundownMedia.ContentOps.Infrastructure.Tests
+  SundownMedia.ContentOps.Integration.Tests
 ```
 
 ### Testing Strategy
@@ -185,20 +185,20 @@ The workflow `.github/workflows/contentops-release.yml` supports:
 - build, test, and package steps
 - GitHub Release creation
 - release assets:
-	- self-contained Linux binary tarball
-	- Dockerfile
-	- usage instructions file
+  - self-contained Linux binary tarball
+  - Dockerfile
+  - usage instructions file
 - GHCR image publication
 
 ```mermaid
 flowchart LR
-		A[workflow_dispatch or contentops tag] --> B[Build and Test]
-		B --> C[Publish self-contained binary]
-		B --> D[Build and push Docker image]
-		C --> E[Generate usage instructions]
-		D --> F[Create GitHub Release]
-		E --> F
-		C --> F
+  A[workflow_dispatch or contentops tag] --> B[Build and Test]
+  B --> C[Publish self-contained binary]
+  B --> D[Build and push Docker image]
+  C --> E[Generate usage instructions]
+  D --> F[Create GitHub Release]
+  E --> F
+  C --> F
 ```
 
 ### SemVer Strategy
@@ -211,16 +211,16 @@ flowchart LR
 
 1. Binary path:
 
-	 - download release tarball
-	 - extract and execute on Ubuntu
+- download release tarball
+- extract and execute on Ubuntu
 
 2. Container path:
 
-	 - pull GHCR image for the target release
-	 - run with mounted source and destination paths
+- pull GHCR image for the target release
+- run with mounted source and destination paths
 
 3. Build-from-source path:
 
-	 - build image using `automation/dotnet/Dockerfile`
+- build image using `automation/dotnet/Dockerfile`
 
 The release workflow generates and uploads step-by-step usage instructions as a release asset to keep operational guidance coupled to each published version.
