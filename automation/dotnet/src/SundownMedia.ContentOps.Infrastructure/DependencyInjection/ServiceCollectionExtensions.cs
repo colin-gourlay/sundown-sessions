@@ -19,6 +19,7 @@ namespace SundownMedia.ContentOps.Infrastructure.DependencyInjection
             services.AddSingleton<IWorkflowRepository, InMemoryWorkflowRepository>();
             services.AddSingleton<IClock, SystemClock>();
             services.AddSingleton<IFileCopyService, FileCopyService>();
+            services.AddSingleton<IShowNotesWriter, ShowNotesWriter>();
             return services;
         }
     }
