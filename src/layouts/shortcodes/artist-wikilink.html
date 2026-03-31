@@ -1,3 +1,9 @@
 {{ $link := .Get 0 }}
 {{ $firstChar := index $link 0 | printf "%c" | lower }}
-<a href="{{ printf "artists/%s/%s" $firstChar  ($link | urlize) | absURL }}">{{ $link }}</a>
+{{ $slug := $link | urlize }}
+{{ $page := site.GetPage (printf "artists/%s/%s" $firstChar $slug) }}
+{{ if $page -}}
+<a href="{{ $page.RelPermalink }}">{{ $link }}</a>
+{{- else -}}
+<a href="{{ printf "artists/%s/%s/" $firstChar $slug | absURL }}">{{ $link }}</a>
+{{- end }}
