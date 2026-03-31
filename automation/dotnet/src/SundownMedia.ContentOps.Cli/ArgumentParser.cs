@@ -10,13 +10,33 @@ public static class ArgumentParser
     {
         options = null;
 
-        if (args.Length < 7)
+        if (args.Length < 2)
         {
             return false;
         }
 
-        if (!string.Equals(args[0], "intake", StringComparison.OrdinalIgnoreCase) ||
-            !string.Equals(args[1], "start", StringComparison.OrdinalIgnoreCase))
+        if (string.Equals(args[0], "intake", StringComparison.OrdinalIgnoreCase) &&
+            string.Equals(args[1], "start", StringComparison.OrdinalIgnoreCase))
+        {
+            return TryParseIntakeStart(args, out options);
+        }
+
+        if (string.Equals(args[0], "show-notes", StringComparison.OrdinalIgnoreCase) &&
+            args.Length >= 3 &&
+            string.Equals(args[1], "keywords", StringComparison.OrdinalIgnoreCase) &&
+            string.Equals(args[2], "update", StringComparison.OrdinalIgnoreCase))
+        {
+            return TryParseUpdateShowKeywords(args, out options);
+        }
+
+        return false;
+    }
+
+    private static bool TryParseIntakeStart(string[] args, out CliOptions? options)
+    {
+        options = null;
+
+        if (args.Length < 7)
         {
             return false;
         }
@@ -51,7 +71,30 @@ public static class ArgumentParser
             return false;
         }
 
-        options = new CliOptions(source, workingRoot, masterRoot, correlationId);
+        options = new IntakeStartOptions(source, workingRoot, masterRoot, correlationId);
+        return true;
+    }
+
+    private static bool TryParseUpdateShowKeywords(string[] args, out CliOptions? options)
+    {
+        options = null;
+
+        string? showDir = null;
+
+        for (var i = 3; i < args.Length; i++)
+        {
+            if (string.Equals(args[i], "--show-dir", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                showDir = args[++i];
+            }
+        }
+
+        if (string.IsNullOrWhiteSpace(showDir))
+        {
+            return false;
+        }
+
+        options = new UpdateShowKeywordsOptions(showDir);
         return true;
     }
 }

@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SundownMedia.ContentOps.Application.DependencyInjection;
 using SundownMedia.ContentOps.Application.Features.AlbumReview.Intake;
+using SundownMedia.ContentOps.Application.Features.ShowNotes.UpdateKeywords;
 using SundownMedia.ContentOps.Cli;
 using SundownMedia.ContentOps.Contracts.Correlation;
 using SundownMedia.ContentOps.Infrastructure.DependencyInjection;
@@ -23,20 +24,42 @@ if (!ArgumentParser.TryParse(args, out var options) || options is null)
     return;
 }
 
-var correlationContext = host.Services.GetRequiredService<ICorrelationContext>();
-var correlationId = options.CorrelationId ?? Guid.NewGuid().ToString("D");
-correlationContext.SetCorrelation(correlationId);
-
 var sender = host.Services.GetRequiredService<ISender>();
-var command = new IntakeAlbumCommand(options.SourcePath, options.WorkingRoot, options.MasterRoot, correlationId);
-var result = await sender.Send(command, CancellationToken.None);
 
-if (result.IsError)
+if (options is IntakeStartOptions intakeOptions)
 {
-    Console.Error.WriteLine(result.FirstError.Description);
-    Environment.ExitCode = 1;
-    return;
-}
+    var correlationContext = host.Services.GetRequiredService<ICorrelationContext>();
+    var correlationId = intakeOptions.CorrelationId ?? Guid.NewGuid().ToString("D");
+    correlationContext.SetCorrelation(correlationId);
 
-Console.WriteLine($"Workflow created: {result.Value.WorkflowId}");
-Console.WriteLine($"CorrelationId: {result.Value.CorrelationId}");
+    var command = new IntakeAlbumCommand(intakeOptions.SourcePath, intakeOptions.WorkingRoot, intakeOptions.MasterRoot, correlationId);
+    var result = await sender.Send(command, CancellationToken.None);
+
+    if (result.IsError)
+    {
+        Console.Error.WriteLine(result.FirstError.Description);
+        Environment.ExitCode = 1;
+        return;
+    }
+
+    Console.WriteLine($"Workflow created: {result.Value.WorkflowId}");
+    Console.WriteLine($"CorrelationId: {result.Value.CorrelationId}");
+}
+else if (options is UpdateShowKeywordsOptions updateKeywordsOptions)
+{
+    var command = new UpdateShowKeywordsCommand(updateKeywordsOptions.ShowDirectoryPath);
+    var result = await sender.Send(command, CancellationToken.None);
+
+    if (result.IsError)
+    {
+        Console.Error.WriteLine(result.FirstError.Description);
+        Environment.ExitCode = 1;
+        return;
+    }
+
+    Console.WriteLine($"Keywords updated ({result.Value.Keywords.Count}):");
+    foreach (var keyword in result.Value.Keywords)
+    {
+        Console.WriteLine($"  - {keyword}");
+    }
+}
