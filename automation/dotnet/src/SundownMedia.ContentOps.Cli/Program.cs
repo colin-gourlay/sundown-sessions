@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SundownMedia.ContentOps.Application.DependencyInjection;
 using SundownMedia.ContentOps.Application.Features.AlbumReview.Intake;
+using SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatter;
 using SundownMedia.ContentOps.Cli;
 using SundownMedia.ContentOps.Contracts.Correlation;
 using SundownMedia.ContentOps.Infrastructure.DependencyInjection;
@@ -28,15 +29,41 @@ var correlationId = options.CorrelationId ?? Guid.NewGuid().ToString("D");
 correlationContext.SetCorrelation(correlationId);
 
 var sender = host.Services.GetRequiredService<ISender>();
-var command = new IntakeAlbumCommand(options.SourcePath, options.WorkingRoot, options.MasterRoot, correlationId);
-var result = await sender.Send(command, CancellationToken.None);
 
-if (result.IsError)
+if (options is IntakeCliOptions intakeOptions)
 {
-    Console.Error.WriteLine(result.FirstError.Description);
-    Environment.ExitCode = 1;
-    return;
-}
+    var command = new IntakeAlbumCommand(intakeOptions.SourcePath, intakeOptions.WorkingRoot, intakeOptions.MasterRoot, correlationId);
+    var result = await sender.Send(command, CancellationToken.None);
 
-Console.WriteLine($"Workflow created: {result.Value.WorkflowId}");
-Console.WriteLine($"CorrelationId: {result.Value.CorrelationId}");
+    if (result.IsError)
+    {
+        Console.Error.WriteLine(result.FirstError.Description);
+        Environment.ExitCode = 1;
+        return;
+    }
+
+    Console.WriteLine($"Workflow created: {result.Value.WorkflowId}");
+    Console.WriteLine($"CorrelationId: {result.Value.CorrelationId}");
+}
+else if (options is ShowNotesFrontmatterCliOptions showOptions)
+{
+    var command = new CreateShowNotesFrontmatterCommand(
+        showOptions.ShowNumber,
+        showOptions.FeaturedGuest,
+        showOptions.BroadcastDate,
+        showOptions.Keywords,
+        showOptions.OutputPath,
+        correlationId);
+
+    var result = await sender.Send(command, CancellationToken.None);
+
+    if (result.IsError)
+    {
+        Console.Error.WriteLine(result.FirstError.Description);
+        Environment.ExitCode = 1;
+        return;
+    }
+
+    Console.WriteLine($"Show notes frontmatter written to: {result.Value.OutputPath}");
+    Console.WriteLine($"CorrelationId: {result.Value.CorrelationId}");
+}
