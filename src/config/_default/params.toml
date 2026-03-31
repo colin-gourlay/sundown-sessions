@@ -1,8 +1,15 @@
 favicon = "favicon.ico"
 custom_css = ["css/tables.css", "css/live-player.css", "css/tiles.css"]
 mainSections = ["shows"]
+
 # Stream URL for the live radio broadcast. Remove or leave empty to hide the player.
 listen_live_stream_url = "https://radio-stream.mp3"
+
+# The upcoming show number displayed in the live player.
+next_show_number = 60
+
+# The upcoming broadcast date/time displayed in the live player (RFC 3339 / ISO 8601, UTC).
+next_broadcast_date = "2026-04-01T22:00:00Z"
 
 # Optional broadcast schedule. When set, the live player is only shown during these windows.
 # day:       0=Sunday, 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday (UTC)
