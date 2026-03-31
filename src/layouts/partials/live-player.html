@@ -1,16 +1,25 @@
 {{ with .Site.Params.listen_live_stream_url }}
 {{ $schedule := $.Site.Params.listen_live_schedule }}
+{{ $showNumber := $.Site.Params.next_show_number }}
+{{ $broadcastDate := $.Site.Params.next_broadcast_date }}
 <div id="live-player" class="live-player bg-black white"{{ if $schedule }} style="display:none"{{ end }} role="region" aria-label="Live Radio Player">
-  <div class="flex items-center justify-between ph3 ph4-ns pv2">
+  <div id="live-broadcast" class="flex items-center justify-between ph3 ph4-ns pv2">
     <div class="flex items-center">
       <span class="live-badge f6 fw7 ph2 pv1 br2 mr3" aria-hidden="true">&#9679; LIVE</span>
-      <span class="f5 fw4 white-90">Listen Live</span>
+      <span class="f5 fw4 white-90">{{ if $showNumber }}Show #{{ $showNumber }} | {{ end }}Listen Live</span>
     </div>
     <audio id="live-audio" controls preload="none" class="live-audio">
       <source src="{{ . }}" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
   </div>
+  {{ if and $showNumber $broadcastDate }}
+  <div id="next-show" class="flex items-center justify-center ph3 ph4-ns pv2" style="display:none">
+    <span class="f6 white-70 mr2">Next show:</span>
+    <span class="f5 fw7 white mr2">#{{ $showNumber }}</span>
+    <span class="f6 white-70">{{ time $broadcastDate | time.Format "Monday 2 January 2006 at 15:04 UTC" }}</span>
+  </div>
+  {{ end }}
 </div>
 {{ if $schedule }}
 <script>
@@ -32,8 +41,14 @@
     }
     return slot.day === day && currentMins >= startMins && currentMins < endMins;
   });
+  var nextShowEl = document.getElementById('next-show');
   if (isLive) {
     document.getElementById('live-player').style.display = '';
+    if (nextShowEl) { nextShowEl.style.display = 'none'; }
+  } else if (nextShowEl) {
+    document.getElementById('live-player').style.display = '';
+    document.getElementById('live-broadcast').style.display = 'none';
+    nextShowEl.style.display = '';
   } else {
     document.body.style.paddingBottom = '0';
   }
