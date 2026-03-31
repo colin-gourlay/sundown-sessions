@@ -1,6 +1,6 @@
 {{- $page := site.GetPage (printf "shows/%s" .) -}}
 {{- if $page -}}
-{{- $page.Params.slug -}}
+{{- $page.Slug -}}
 {{- else -}}
 {{- . -}} <!-- Fallback to the default identifier if the page is not found -->
 {{- end -}}

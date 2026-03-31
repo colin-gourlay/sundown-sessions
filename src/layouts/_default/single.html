@@ -58,11 +58,13 @@
     </aside>
 
     {{ if .Params.show_appeared_on }}
-    ## Featured in the following shows:
+    <h2>Featured in the following shows:</h2>
     <ul>
       {{ range .Params.show_appeared_on }}
-      {{ $slug := partial "extract-slug.html" . }}
-      <li><a href="/shows/{{ $slug }}/">{{ $slug | humanize }}</a></li>
+      {{- $showPage := site.GetPage (printf "shows/%s" .) -}}
+      {{ if $showPage }}
+      <li><a href="{{ $showPage.RelPermalink }}">{{ $showPage.Title }}</a></li>
+      {{ end }}
       {{ end }}
     </ul>
     {{ end }}
