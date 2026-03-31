@@ -7,26 +7,27 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [contentops/v0.1.0] - 2026-03-21
+
 ### Added
 
-- New features that have been added since the last release
+- ContentOps automation platform under `automation/dotnet/`
+- Self-contained Linux binary for album intake and preparation workflows
+- Production Dockerfile for containerised deployment
+- Spotify and Lidarr integration libraries
+- Clean Architecture solution with Domain, Application, Infrastructure, Cli, and Contracts projects
+- Result pattern via `ErrorOr<T>` for explicit failure handling
+- Mediator-based command/handler structure with source-generated dispatch
+- Correlation ID support per CLI invocation for traceability
+- SQLite persistence with `Testcontainers` and `Respawn` for integration tests
+- Dev container configuration for repeatable development environments
+- Release workflow publishing self-contained binary, Dockerfile, usage instructions, and GHCR image
 
-### Changed
+## [v1.0.0-alpha] - 2024-06-14
 
-- Changes to existing functionality since the last release
+### Added
 
-### Deprecated
+- Show-specific shortcodes and refactored Hugo templates
 
-- Features that are planned to be removed in a future release
-
-### Removed
-
-- Features that have been removed since the last release
-
-### Fixed
-
-- Any bug fixes since the last release
-
-### Security
-
-- Any security fixes since the last release
+[contentops/v0.1.0]: https://github.com/colin-gourlay/sundown-sessions/releases/tag/contentops%2Fv0.1.0
+[v1.0.0-alpha]: https://github.com/colin-gourlay/sundown-sessions/releases/tag/v1.0.0-alpha
