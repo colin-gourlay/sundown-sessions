@@ -41,3 +41,18 @@
     line-clamp: 3;
     overflow: hidden;
 }
+
+.show-tile__badge {
+    position: absolute;
+    top: 0.75rem;
+    right: 0.75rem;
+    background-color: #c0392b;
+    color: #fff;
+    font-size: 0.625rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    padding: 0.25rem 0.6rem;
+    border-radius: 2px;
+    z-index: 1;
+}

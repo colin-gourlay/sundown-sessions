@@ -5,3 +5,4 @@ theme = 'sundown-sessions'
 copyright = 'Colin Gourlay'
 enableGitInfo = 'true'
 timeZone = 'Europe/London'
+buildFuture = true

@@ -1,6 +1,7 @@
 {
   "htmlElements": {
     "tags": [
+      "?xml",
       "a",
       "article",
       "aside",
@@ -222,6 +223,7 @@
       "sans-serif",
       "serif",
       "show-tile",
+      "show-tile__badge",
       "show-tile__gradient",
       "show-tile__image",
       "show-tile__summary",

@@ -3,6 +3,22 @@
  <article class="cf ph3 ph5-l pv3 pv4-l f4 tc-l center measure-wide lh-copy {{ $.Param "text_color" | default "mid-gray" }}">
     {{ .Content }}
   </article>
+  {{/* Show upcoming shows if any exist */}}
+  {{ $upcoming := where .Site.RegularPages "Section" "upcoming" }}
+  {{ if gt (len $upcoming) 0 }}
+  <div class="pa3 pa4-ns w-100 w-70-ns center">
+    {{ with .Site.GetPage "section" "upcoming" }}
+    <h1 class="flex-none">{{ .Title }}</h1>
+    {{ end }}
+    <section class="flex-ns flex-wrap justify-around mt3">
+      {{ range $upcoming }}
+      <div class="relative w-100 w-30-l mb4 bg-white">
+        {{ .Render "tile" }}
+      </div>
+      {{ end }}
+    </section>
+  </div>
+  {{ end }}
   {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
   {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
   {{/* Create a variable with that section to use in multiple places. */}}
