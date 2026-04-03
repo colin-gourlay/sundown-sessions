@@ -40,7 +40,7 @@ keywords:
  - 'Live'
  - 'Status Quo'
  - 'Rush'
-toc: true
+toc: false
 featured_image: '12-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -48,20 +48,18 @@ date: 2024-09-25T22:00:00Z
 draft: true
 ---
 
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/12/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: A celebration of Vertigo Records
+{{< fold "Featured guest: A celebration of Vertigo Records" >}}
 {{< include_content "/shows/12/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/12/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/12/track-info" >}}
+{{< /fold >}}

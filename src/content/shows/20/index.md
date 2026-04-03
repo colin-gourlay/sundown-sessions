@@ -37,7 +37,7 @@ keywords:
  - 'X-Ray Spex'
  - 'The Southern Death Cult'
  - 'Love and Rockets'
-toc: true
+toc: false
 featured_image: '20-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -45,20 +45,18 @@ date: 2024-11-19T22:00:00Z
 draft: true
 ---
 
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/20/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: TBD
+{{< fold "Featured guest: TBD" >}}
 {{< include_content "/shows/20/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/20/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/20/track-info" >}}
+{{< /fold >}}

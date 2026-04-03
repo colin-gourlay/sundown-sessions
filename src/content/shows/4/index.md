@@ -37,7 +37,7 @@ keywords:
  - 'The Detroit Cobras'
  - 'Becky Becky'
  - 'Simple Minds'
-toc: true
+toc: false
 featured_image: '4-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -45,25 +45,22 @@ date: 2024-06-26T22:00:00Z
 draft: false
 ---
 
-## Listen On Demand
+{{< fold "Listen On Demand" >}}
 {{< include_content "/shows/4/listen-again" >}}
+{{< /fold >}}
 
----
-
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/4/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: Kenny Armour from ANDYSMANCLUB
+{{< fold "Featured guest: Kenny Armour from ANDYSMANCLUB" >}}
 {{< include_content "/shows/4/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/4/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/4/track-info" >}}
+{{< /fold >}}

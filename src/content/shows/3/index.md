@@ -38,7 +38,7 @@ keywords:
  - 'Visage'
  - 'Sparks'
  - 'The Filthy Tongues'
-toc: true
+toc: false
 featured_image: '3-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -46,25 +46,22 @@ date: 2024-06-19T22:00:00Z
 draft: false
 ---
 
-## Listen On Demand
+{{< fold "Listen On Demand" >}}
 {{< include_content "/shows/3/listen-again" >}}
+{{< /fold >}}
 
----
-
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/3/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured band: Blue On Shock
+{{< fold "Featured band: Blue On Shock" >}}
 {{< include_content "/shows/3/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/3/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/3/track-info" >}}
+{{< /fold >}}

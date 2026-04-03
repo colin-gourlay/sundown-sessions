@@ -43,7 +43,7 @@ keywords:
  - 'The Ruts'
  - 'Patti Smith'
  - 'John Lennon'
-toc: true
+toc: false
 featured_image: '15-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -51,20 +51,18 @@ date: 2024-10-15T22:00:00Z
 draft: true
 ---
 
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/15/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: A celebration of the e-bow
+{{< fold "Featured guest: A celebration of the e-bow" >}}
 {{< include_content "/shows/15/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/15/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/15/track-info" >}}
+{{< /fold >}}

@@ -88,15 +88,22 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
         content.Should().Contain("description: 'featuring The Big Now'");
         content.Should().Contain("featured_image: '1-show-logo.jpeg'");
         content.Should().Contain("date: 2024-06-05T22:00:00+00:00");
+        content.Should().Contain("toc: false");
         content.Should().Contain("draft: true");
         content.Should().Contain("- 'The Big Now'");
         content.Should().Contain("- 'IST IST'");
         content.Should().Contain("- 'Nick Cave & The Bad Seeds'");
+        content.Should().Contain("{{< fold \"Listen On Demand\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/listen-again\" >}}");
+        content.Should().Contain("{{< fold \"Playlist\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/playlist\" >}}");
+        content.Should().Contain("{{< fold \"Featured band: The Big Now\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/featured-guest\" >}}");
+        content.Should().Contain("{{< fold \"Show discussion points\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/discussion-points\" >}}");
+        content.Should().Contain("{{< fold \"Track info\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/track-info\" >}}");
+        content.Split(["{{< /fold >}}"], StringSplitOptions.None).Length.Should().Be(6);
     }
 
     [Theory]

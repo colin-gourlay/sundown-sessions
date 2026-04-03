@@ -40,7 +40,7 @@ keywords:
  - 'A Projection'
  - 'IST IST'
  - 'Nick Cave & The Bad Seeds'
-toc: true
+toc: false
 featured_image: '10-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -48,20 +48,18 @@ date: 2024-08-21T22:00:00Z
 draft: true
 ---
 
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/10/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: The Twist
+{{< fold "Featured guest: The Twist" >}}
 {{< include_content "/shows/10/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/10/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/10/track-info" >}}
+{{< /fold >}}
