@@ -7,3 +7,7 @@ artist_page: true
 
 Billy Childish, Wolf Howard, Julie Hamper, Neil Palmer
 
+## Show(s) appeared on
+
+- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
+
