@@ -19,6 +19,10 @@ artist_page: true
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/beckybeckymusic](https://www.facebook.com/beckybeckymusic)" >}}
 
+- {{< new-tab-link "Instagram: [https://www.instagram.com/beckybeckymusic/](https://www.instagram.com/beckybeckymusic/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/beckybeckymusic](https://twitter.com/beckybeckymusic)" >}}
+
 
 
 
