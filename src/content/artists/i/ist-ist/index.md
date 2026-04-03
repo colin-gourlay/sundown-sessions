@@ -12,7 +12,7 @@ artist_page: true
 
 - [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
 - [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
-- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
+- [Show #8](/shows/featuring-baby-bartok/) (7th August 2024) - Featuring: Baby Bartok
 - [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
 - [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
@@ -20,6 +20,7 @@ artist_page: true
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/ististmusic](https://www.facebook.com/ististmusic)" >}}
 
+- {{< new-tab-link "Instagram: [https://www.instagram.com/ististmusic/](https://www.instagram.com/ististmusic/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/ististmusic](https://twitter.com/ististmusic)" >}}
 
