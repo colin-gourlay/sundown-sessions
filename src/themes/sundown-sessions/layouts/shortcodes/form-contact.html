@@ -19,33 +19,38 @@
 
 </form>
 
-<div id="toast" style="display: none;">Form submitted successfully!</div>
+<div id="toast" class="fixed bottom-2 right-2 z-max pa3 br2 white f5 fw6 sans-serif" role="alert" aria-live="polite" style="display: none; opacity: 0; transition: opacity 0.3s ease-in-out;"></div>
 
 <script>
+    var toastHideTimeout = null;
+    var TOAST_TRANSITION_MS = 300;
+
+    function showToast(message, isSuccess) {
+        var toast = document.getElementById('toast');
+        toast.textContent = message;
+        toast.className = 'fixed bottom-2 right-2 z-max pa3 br2 white f5 fw6 sans-serif ' + (isSuccess ? 'bg-green' : 'bg-dark-red');
+        toast.style.display = 'block';
+        toast.style.opacity = '1';
+        clearTimeout(toastHideTimeout);
+        toastHideTimeout = setTimeout(function() {
+            toast.style.opacity = '0';
+            setTimeout(function() { toast.style.display = 'none'; }, TOAST_TRANSITION_MS);
+        }, 4000);
+    }
+
     window.onerror = function(message, source, lineno, colno, error) {
-        // Check if the message indicates a CORS issue.
         if (message.indexOf('Cross-Origin') !== -1) {
-            // Handle the CORS problem
             console.error('A CORS error occurred: ', message);
-
-            // Display the toast
-            document.getElementById('toast').style.display = 'block';
-
-            // Clear form fields
+            showToast('Sorry, there was a problem sending your message. Please try again.', false);
             document.getElementById('contact-form').reset();
         }
     };
-    
+
     document.getElementById('contact-form').addEventListener('submit', function(event) {
         event.preventDefault();
 
         var formData = new FormData(this);
 
-        
-        // fetch('https://sundown-sessions.azurewebsites.net/api/HttpTrigger1?code=twP3Kp_aSLnTeU_CvTVcgAPNWsT4jAERc07uwLFBsYIfAzFu5m7erw==', {
-        //     method: 'POST',
-        //     body: formData
-        // })
         fetch('https://formspree.io/f/xzbnwyez', {
             method: 'POST',
             body: formData
@@ -57,19 +62,13 @@
                 return response.json();
             })
             .then(data => {
-                // Handle success response
                 console.log(data);
-                // Display toast
-                document.getElementById('toast').style.display = 'block';
-                // Clear form fields
+                showToast('Your message has been sent successfully!', true);
                 document.getElementById('contact-form').reset();
             })
             .catch(error => {
-                // Handle error
                 console.error('There was a problem with your fetch operation:', error);
-                // Display toast
-                document.getElementById('toast').style.display = 'block';
-                // Clear form fields
+                showToast('Sorry, there was a problem sending your message. Please try again.', false);
                 document.getElementById('contact-form').reset();
             });
     });
