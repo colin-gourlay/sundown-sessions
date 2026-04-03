@@ -3,7 +3,7 @@ title: 'Contact'
 description: 'If you want to get in touch - this is the place!'
 menu:
   main:
-    weight: 3
+    weight: 4
 ---
 - Would you like to dedicate a song request to someone special?
 - Are you a local band with upcoming gigs you want to share with our listeners?
