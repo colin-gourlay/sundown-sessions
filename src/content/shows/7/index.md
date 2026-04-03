@@ -40,7 +40,7 @@ keywords:
  - 'Sex Gang Children'
  - 'Ultravox'
  - 'Love'
-toc: true
+toc: false
 featured_image: '7-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -48,20 +48,18 @@ date: 2024-07-31T22:00:00Z
 draft: true
 ---
 
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/7/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: Frank Sidebottom and The Man Behind The Mask
+{{< fold "Featured guest: Frank Sidebottom and The Man Behind The Mask" >}}
 {{< include_content "/shows/7/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/7/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/7/track-info" >}}
+{{< /fold >}}

@@ -40,7 +40,7 @@ keywords:
  - 'Vermin Poets'
  - 'Nick Cave & The Bad Seeds'
  - 'The Filthy Tongues'
-toc: true
+toc: false
 featured_image: '1-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -48,25 +48,22 @@ date: 2024-06-05T22:00:00Z
 draft: false
 ---
 
-## Listen On Demand
+{{< fold "Listen On Demand" >}}
 {{< include_content "/shows/1/listen-again" >}}
+{{< /fold >}}
 
----
-
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/1/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured band: The Big Now
+{{< fold "Featured band: The Big Now" >}}
 {{< include_content "/shows/1/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/1/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/1/track-info" >}}
+{{< /fold >}}

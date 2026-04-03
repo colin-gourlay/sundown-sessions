@@ -35,7 +35,7 @@ keywords:
  - 'Duran Duran'
  - 'Talk Talk'
  - 'The Vapors'
-toc: true
+toc: false
 featured_image: '5-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -43,25 +43,22 @@ date: 2024-07-17T22:00:00Z
 draft: false
 ---
 
-## Listen On Demand
+{{< fold "Listen On Demand" >}}
 {{< include_content "/shows/5/listen-again" >}}
+{{< /fold >}}
 
----
-
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/5/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured band: White China
+{{< fold "Featured band: White China" >}}
 {{< include_content "/shows/5/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/5/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/5/track-info" >}}
+{{< /fold >}}
