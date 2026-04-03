@@ -3,74 +3,125 @@
 
 <form id="contact-form" class="black-80 sans-serif" accept-charset="UTF-8" action="{{ .Get "action" }}" method="POST" role="form">
 
-    <label class="{{ $.Scratch.Get "labelClasses" }}"  for="name">Your Name</label>
-    <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="name"/>
+    <label class="{{ $.Scratch.Get "labelClasses" }}" for="name">Your Name</label>
+    <input type="text" id="name" name="name" class="{{ $.Scratch.Get "inputClasses" }}" required placeholder=" " aria-labelledby="name"/>
 
     <label class="{{ $.Scratch.Get "labelClasses" }}" for="email">Email Address</label>
-    <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}"  required placeholder=" "  aria-labelledby="email"/>
-    <div class="requirements f6 gray glow i ph3 overflow-hidden">
-        An email address is required.
-    </div>
+    <input type="email" id="email" name="email" class="{{ $.Scratch.Get "inputClasses" }}" required placeholder=" " aria-labelledby="email"/>
+    <div id="email-error" class="f6 red i ph3 overflow-hidden" style="display: none;"></div>
 
     <label class="{{ $.Scratch.Get "labelClasses" }}" for="message">Message</label>
-    <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4" aria-labelledby="message"></textarea>
+    <textarea id="message" name="message" class="{{ $.Scratch.Get "inputClasses" }} h4" required aria-labelledby="message"></textarea>
+    <div id="message-error" class="f6 red i ph3 overflow-hidden" style="display: none;">
+        A message is required.
+    </div>
 
     <input class="db w-100 mv2 white pa3 bn hover-shadow hover-bg-black bg-animate bg-black" type="submit" value="Send" />
 
 </form>
 
-<div id="toast" style="display: none;">Form submitted successfully!</div>
+<div id="toast" role="status" aria-live="polite" style="display: none; position: fixed; bottom: 1.5rem; right: 1.5rem; z-index: 9999;"></div>
+
+<style>
+    #toast {
+        min-width: 16rem;
+        padding: 1rem 1.5rem;
+        border-radius: 4px;
+        font-family: sans-serif;
+        font-size: 0.875rem;
+        color: #fff;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+        animation: toast-fadein 0.3s ease;
+    }
+    #toast.toast-success { background-color: #19a974; }
+    #toast.toast-error   { background-color: #e7040f; }
+    @keyframes toast-fadein {
+        from { opacity: 0; transform: translateY(0.5rem); }
+        to   { opacity: 1; transform: translateY(0); }
+    }
+</style>
 
 <script>
-    window.onerror = function(message, source, lineno, colno, error) {
-        // Check if the message indicates a CORS issue.
-        if (message.indexOf('Cross-Origin') !== -1) {
-            // Handle the CORS problem
-            console.error('A CORS error occurred: ', message);
+    (function () {
+        var form    = document.getElementById('contact-form');
+        var emailEl = document.getElementById('email');
+        var emailErr = document.getElementById('email-error');
+        var msgEl   = document.getElementById('message');
+        var msgErr  = document.getElementById('message-error');
+        var toast   = document.getElementById('toast');
+        var toastTimer;
 
-            // Display the toast
-            document.getElementById('toast').style.display = 'block';
-
-            // Clear form fields
-            document.getElementById('contact-form').reset();
+        function showToast(message, type) {
+            clearTimeout(toastTimer);
+            toast.textContent = message;
+            toast.className = 'toast-' + type;
+            toast.style.display = 'block';
+            toastTimer = setTimeout(function () {
+                toast.style.display = 'none';
+                toast.className = '';
+            }, 5000);
         }
-    };
-    
-    document.getElementById('contact-form').addEventListener('submit', function(event) {
-        event.preventDefault();
 
-        var formData = new FormData(this);
+        function validateEmail() {
+            if (emailEl.validity.valueMissing) {
+                emailErr.textContent = 'An email address is required.';
+                emailErr.style.display = 'block';
+                return false;
+            }
+            if (!emailEl.validity.valid) {
+                emailErr.textContent = 'Please enter a valid email address.';
+                emailErr.style.display = 'block';
+                return false;
+            }
+            emailErr.style.display = 'none';
+            return true;
+        }
 
-        
-        // fetch('https://sundown-sessions.azurewebsites.net/api/HttpTrigger1?code=twP3Kp_aSLnTeU_CvTVcgAPNWsT4jAERc07uwLFBsYIfAzFu5m7erw==', {
-        //     method: 'POST',
-        //     body: formData
-        // })
-        fetch('https://formspree.io/f/xzbnwyez', {
-            method: 'POST',
-            body: formData
-        })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
-                }
+        function validateMessage() {
+            if (msgEl.value.trim() === '') {
+                msgErr.style.display = 'block';
+                return false;
+            }
+            msgErr.style.display = 'none';
+            return true;
+        }
+
+        emailEl.addEventListener('blur', validateEmail);
+        emailEl.addEventListener('input', function () {
+            if (emailErr.style.display === 'block') validateEmail();
+        });
+
+        msgEl.addEventListener('blur', validateMessage);
+        msgEl.addEventListener('input', function () {
+            if (msgErr.style.display === 'block') validateMessage();
+        });
+
+        form.addEventListener('submit', function (event) {
+            event.preventDefault();
+
+            var emailOk = validateEmail();
+            var msgOk   = validateMessage();
+            if (!emailOk || !msgOk) return;
+
+            fetch(form.action, {
+                method: 'POST',
+                headers: { 'Accept': 'application/json' },
+                body: new FormData(this)
+            })
+            .then(function (response) {
+                if (!response.ok) throw new Error('Network response was not ok');
                 return response.json();
             })
-            .then(data => {
-                // Handle success response
-                console.log(data);
-                // Display toast
-                document.getElementById('toast').style.display = 'block';
-                // Clear form fields
-                document.getElementById('contact-form').reset();
+            .then(function () {
+                showToast('Thank you! Your message has been sent.', 'success');
+                form.reset();
+                emailErr.style.display = 'none';
+                msgErr.style.display = 'none';
             })
-            .catch(error => {
-                // Handle error
+            .catch(function (error) {
                 console.error('There was a problem with your fetch operation:', error);
-                // Display toast
-                document.getElementById('toast').style.display = 'block';
-                // Clear form fields
-                document.getElementById('contact-form').reset();
+                showToast('Sorry, there was a problem sending your message. Please try again.', 'error');
             });
-    });
+        });
+    })();
 </script>
