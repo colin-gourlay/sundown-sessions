@@ -6,7 +6,7 @@ artist_page: true
 ---
 ## About
 
-
+Becky Becky is a Scottish electropop musician. Their debut album, Good Morning, Midnight, was released in May 2014.
 
 ## Show(s) appeared on
 
