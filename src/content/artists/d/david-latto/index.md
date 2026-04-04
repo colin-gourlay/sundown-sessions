@@ -7,3 +7,9 @@ artist_page: true
 
 Scottish singer and songwriter
 
+## Show(s) appeared on
+
+- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
+- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
+- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
+
