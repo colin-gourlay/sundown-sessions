@@ -14,9 +14,7 @@
     {{ $artistFirstChar := index $artist 0 | printf "%c" | lower }}
     {{ $artistUri := printf "artists/%s/%s" $artistFirstChar ($artist | urlize) | absURL }}
     {{ $releaseUri := printf "%s-large.jpeg" $artist | urlize }}
-    {{ if $trackUri }}
-        {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div><a href='%s'>%s</a><br><a href='%s'>%s</a></div></div>" $releaseUri $trackUri $track $artistUri $artist | safeHTML }}
-    {{ else }}
-        {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $releaseUri $track $artistUri $artist | safeHTML }}
-    {{ end }}
+    {{ $trackTitle := $track }}
+    {{ if $trackUri }}{{ $trackTitle = printf "<a href='%s'>%s</a>" $trackUri $track }}{{ end }}
+    {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $releaseUri $trackTitle $artistUri $artist | safeHTML }}
 {{ end }}
