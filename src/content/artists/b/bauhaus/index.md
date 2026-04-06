@@ -14,7 +14,6 @@ After Bauhaus' breakup, Murphy formed Dalis Car with bassist Mick Karn before be
 
 ## Show(s) appeared on
 
-- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
 - [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
 
 ## External Links
