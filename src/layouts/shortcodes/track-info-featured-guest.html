@@ -4,7 +4,7 @@
     {{ $track := index $parts 0 }}
     {{ $artist := index $parts 1 }}
     {{ $trackUri := "" }}
-    {{ if ge (len $parts) 3 }}{{ $trackUri = index $parts 2 }}{{ end }}
+    {{ if ge (len $parts) 3 }}{{ $trackUri = index $parts 2 | strings.TrimSpace }}{{ end }}
     {{ $featuredGuestAnchor := printf "%sshows/featuring-%s/#featured-band-%s" $.Site.BaseURL ($artist | urlize) ($artist | urlize) | safeURL }}
     {{ $featuredGuestImageUri := printf "%s-large.jpeg" $artist | urlize }}
     {{ if $trackUri }}
