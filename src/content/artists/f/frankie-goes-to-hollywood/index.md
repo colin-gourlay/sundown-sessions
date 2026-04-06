@@ -15,7 +15,3 @@ It was the beginning of the end for Frankie Goes To Hollywood - six months later
 
 The original line-up reunited to play one song, "Welcome To The Pleasure Dome", during the National Lottery's Big Eurovision Welcome concert on 7th May 2023.
 
-### Current Lineup
-
-Paul Rutherford, Holly Johnson, Peter Gill, Mark O'Toole, Brian Nash
-
