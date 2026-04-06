@@ -4,10 +4,17 @@
 
 {{ $trackInfo := .Get 0 }}
 {{ with $trackInfo }}
-    {{ $track := index (split . "--") 0 }}
-    {{ $artist := index (split . "--") 1 }}
+    {{ $parts := split . "--" }}
+    {{ $track := index $parts 0 }}
+    {{ $artist := index $parts 1 }}
+    {{ $trackUri := "" }}
+    {{ if ge (len $parts) 3 }}{{ $trackUri = index $parts 2 }}{{ end }}
     {{ $artistFirstChar := index $artist 0 | printf "%c" | lower }}
     {{ $artistUri := printf "artists/%s/%s" $artistFirstChar ($artist | urlize) | absURL }}
     {{ $releaseUri := printf "%s-large.jpeg" $artist | urlize }}
-    {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $releaseUri $track $artistUri $artist | safeHTML }}
+    {{ if $trackUri }}
+        {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div><a href='%s'>%s</a><br><a href='%s'>%s</a></div></div>" $releaseUri $trackUri $track $artistUri $artist | safeHTML }}
+    {{ else }}
+        {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $releaseUri $track $artistUri $artist | safeHTML }}
+    {{ end }}
 {{ end }}
