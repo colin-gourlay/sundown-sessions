@@ -8,8 +8,6 @@
         {{ with index $parts 2 | strings.TrimSpace }}{{ $trackUri = . }}{{ end }}
     {{ end }}
     {{ $featuredGuestAnchor := printf "%sshows/featuring-%s/#featured-band-%s" $.Site.BaseURL ($artist | urlize) ($artist | urlize) | safeURL }}
-    {{ $featuredGuestImageUri := printf "%s-large.jpeg" $artist | urlize }}
-    {{ $trackTitle := $track }}
-    {{ if $trackUri }}{{ $trackTitle = printf "<a href='%s'>%s</a>" $trackUri $track }}{{ end }}
-    {{ printf "<div style='display: flex; align-items: center;'><img src='%s' alt='' style='width: 20%%; height: auto; margin-right: 10px;'><div>%s<br><a href='%s'>%s</a></div></div>" $featuredGuestImageUri $trackTitle $featuredGuestAnchor $artist | safeHTML }}
+    {{ $featuredGuestImageUri := printf "%s-large.jpeg" $artist | urlize -}}
+    <div style="display: flex; align-items: center;"><img src="{{ $featuredGuestImageUri }}" alt="" style="width: 20%; height: auto; margin-right: 10px;"><div>{{ if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}<br><a href="{{ $featuredGuestAnchor }}">{{ $artist }}</a></div></div>
 {{ end }}
