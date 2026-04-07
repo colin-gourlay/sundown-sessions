@@ -19,7 +19,7 @@ one = "One word"
 other = "{{ .Count }} words"
 
 [homeTitle]
-other = "Go to home page"
+other = "Go to the Sundown Sessions home page"
 
 [pageTitle]
-other = "Go to {{ .Name }}"
+other = "Go to the {{ .Name }} page"
