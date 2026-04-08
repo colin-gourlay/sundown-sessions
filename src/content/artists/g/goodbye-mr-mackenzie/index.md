@@ -9,7 +9,3 @@ Scottish group whose members were Martin Metcalfe on vocals, John Duncan on guit
 
 In 2019 the band reunited with Scobie (sans Manson) for a short tour in the UK.
 
-### Current Lineup
-
-Big John Duncan, Derek Kelly, Rona Scobie, Martin Metcalfe, Fin Wilson
-
