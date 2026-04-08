@@ -1,0 +1,21 @@
+{{ define "header" }}
+  {{ partial "page-header.html" . }}
+{{ end }}
+
+{{ define "main" }}
+  <article class="flex-l flex-wrap justify-between mw8 center ph3">
+    <header class="mt4 w-100">
+      <h1 class="f1 athelas mt3 mb1">
+        {{- .Title -}}
+      </h1>
+      {{ if not .Date.IsZero }}
+      <time class="f6 mv4 dib tracked" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+        {{- .Date | time.Format (default "January 2, 2006" .Site.Params.date_format) -}}
+      </time>
+      {{ end }}
+    </header>
+    <div class="nested-copy-line-height lh-copy {{ $.Param "post_content_classes" | default "serif" }} f4 nested-links {{ $.Param "text_color" | default "mid-gray" }} {{ cond (eq $.Site.Language.LanguageDirection "rtl") "pl4-l" "pr4-l" }} w-100">
+      {{- .Content -}}
+    </div>
+  </article>
+{{ end }}
