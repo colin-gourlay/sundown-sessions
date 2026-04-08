@@ -33,7 +33,7 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
                 sb.AppendLine(CultureInfo.InvariantCulture, $" - '{EscapeYamlSingleQuoted(keyword)}'");
             }
 
-            sb.AppendLine("toc: true");
+            sb.AppendLine("toc: false");
             sb.AppendLine(CultureInfo.InvariantCulture, $"featured_image: '{command.ShowNumber}-show-logo.jpeg'");
             sb.AppendLine("read_more_copy: Show notes...");
             sb.AppendLine("show_reading_time: true");
@@ -41,28 +41,25 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
             sb.AppendLine("draft: true");
             sb.AppendLine("---");
             sb.AppendLine();
-            sb.AppendLine("## Listen On Demand");
+            sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< fold \"Listen On Demand\" >}}}}");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/listen-again\" >}}}}");
+            sb.AppendLine("{{< /fold >}}");
             sb.AppendLine();
-            sb.AppendLine("---");
-            sb.AppendLine();
-            sb.AppendLine("## Playlist");
+            sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< fold \"Playlist\" >}}}}");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/playlist\" >}}}}");
+            sb.AppendLine("{{< /fold >}}");
             sb.AppendLine();
-            sb.AppendLine("---");
-            sb.AppendLine();
-            sb.AppendLine(CultureInfo.InvariantCulture, $"## Featured band: {command.FeaturedGuest}");
+            sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< fold \"Featured band: {command.FeaturedGuest}\" >}}}}");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/featured-guest\" >}}}}");
+            sb.AppendLine("{{< /fold >}}");
             sb.AppendLine();
-            sb.AppendLine("---");
-            sb.AppendLine();
-            sb.AppendLine("## Show discussion points");
+            sb.AppendLine("{{< fold \"Show discussion points\" >}}");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/discussion-points\" >}}}}");
+            sb.AppendLine("{{< /fold >}}");
             sb.AppendLine();
-            sb.AppendLine("---");
-            sb.AppendLine();
-            sb.AppendLine("## Track info");
+            sb.AppendLine("{{< fold \"Track info\" >}}");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/track-info\" >}}}}");
+            sb.AppendLine("{{< /fold >}}");
 
             return sb.ToString();
         }

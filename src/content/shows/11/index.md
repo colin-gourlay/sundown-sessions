@@ -39,7 +39,7 @@ keywords:
  - 'Talking Heads'
  - 'Electric Light Orchestra'
  - 'Nick Cave & The Bad Seeds'
-toc: true
+toc: false
 featured_image: '11-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -47,20 +47,18 @@ date: 2024-08-28T22:00:00Z
 draft: true
 ---
 
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/11/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: A celebration of Elektra Records
+{{< fold "Featured guest: A celebration of Elektra Records" >}}
 {{< include_content "/shows/11/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/11/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/11/track-info" >}}
+{{< /fold >}}

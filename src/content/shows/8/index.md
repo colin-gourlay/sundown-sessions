@@ -41,7 +41,7 @@ keywords:
  - 'Billy Preston'
  - 'Isobel Campbell'
  - 'Nick Cave & The Bad Seeds'
-toc: true
+toc: false
 featured_image: '8-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -49,20 +49,18 @@ date: 2024-08-07T22:00:00Z
 draft: true
 ---
 
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/8/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: Baby Bartok
+{{< fold "Featured guest: Baby Bartok" >}}
 {{< include_content "/shows/8/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/8/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/8/track-info" >}}
+{{< /fold >}}

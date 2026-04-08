@@ -43,7 +43,7 @@ keywords:
  - 'The Exploding Boy'
  - 'Soundmachine'
  - 'Runrig'
-toc: true
+toc: false
 featured_image: '18-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
@@ -51,20 +51,18 @@ date: 2024-11-05T22:00:00Z
 draft: true
 ---
 
-## Playlist
+{{< fold "Playlist" >}}
 {{< include_content "/shows/18/playlist" >}}
+{{< /fold >}}
 
----
-
-## Featured guest: TBD
+{{< fold "Featured guest: TBD" >}}
 {{< include_content "/shows/18/featured-guest" >}}
+{{< /fold >}}
 
----
-
-## Show discussion points
+{{< fold "Show discussion points" >}}
 {{< include_content "/shows/18/discussion-points" >}}
+{{< /fold >}}
 
----
-
-## Track info
+{{< fold "Track info" >}}
 {{< include_content "/shows/18/track-info" >}}
+{{< /fold >}}
