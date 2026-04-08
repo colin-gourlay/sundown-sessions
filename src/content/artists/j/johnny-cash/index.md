@@ -14,12 +14,4 @@ Cash is one of the best-selling music artists of all time, having sold more than
 
 - [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
 
-## External Links
-
-- {{< new-tab-link "Facebook: [https://www.facebook.com/johnnycash](https://www.facebook.com/johnnycash)" >}}
-
-- {{< new-tab-link "Instagram: [https://www.instagram.com/johnnycash/](https://www.instagram.com/johnnycash/)" >}}
-
-- {{< new-tab-link "Twitter: [https://twitter.com/JohnnyCash](https://twitter.com/JohnnyCash)" >}}
-
 
