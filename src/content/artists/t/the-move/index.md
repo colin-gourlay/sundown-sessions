@@ -14,7 +14,5 @@ Between 2007 and 2014, Burton and Bevan performed intermittently as "The Move fe
 
 ## Show(s) appeared on
 
-- [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
 - [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 

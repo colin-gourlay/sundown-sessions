@@ -11,10 +11,6 @@ Born in Seattle, Washington, Hendrix began playing guitar at age 15. In 1961, he
 Hendrix was inspired by American rock and roll and electric blues. He favored overdriven amplifiers with high volume and gain, and was instrumental in popularizing the previously undesirable sounds caused by guitar amplifier feedback. He was also one of the first guitarists to make extensive use of tone-altering effects units in mainstream rock, such as fuzz distortion, Octavia, wah-wah, and Uni-Vibe. He was the first musician to use stereophonic phasing effects in recordings. Holly George-Warren of Rolling Stone commented: "Hendrix pioneered the use of the instrument as an electronic sound source. Players before him had experimented with feedback and distortion, but Hendrix turned those effects and others into a controlled, fluid vocabulary every bit as personal as the blues with which he began."
 Hendrix was the recipient of several music awards during his lifetime and posthumously. In 1967, readers of Melody Maker voted him the Pop Musician of the Year and in 1968, Billboard named him the Artist of the Year and Rolling Stone declared him the Performer of the Year. Disc and Music Echo honored him with the World Top Musician of 1969 and in 1970, Guitar Player named him the Rock Guitarist of the Year. The Jimi Hendrix Experience was inducted into the Rock and Roll Hall of Fame in 1992 and the UK Music Hall of Fame in 2005. Rolling Stone ranked the band's three studio albums, Are You Experienced (1967), Axis: Bold as Love (1967), and Electric Ladyland (1968), among the "500 Greatest Albums of All Time", and they ranked Hendrix as the greatest guitarist and the sixth-greatest artist of all time.
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/38858586087](https://www.facebook.com/38858586087)" >}}

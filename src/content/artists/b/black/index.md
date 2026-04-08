@@ -11,10 +11,6 @@ William Ruhlmann of AllMusic described Vearncombe as a "smoky-voiced singer/song
 
 
 
-## Show(s) appeared on
-
-- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/blackakacolinvearncombe](https://www.facebook.com/blackakacolinvearncombe)" >}}

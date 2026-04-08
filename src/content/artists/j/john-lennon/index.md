@@ -13,7 +13,6 @@ As a performer, writer or co-writer, Lennon had 25 number-one singles in the Bil
 
 ## Show(s) appeared on
 
-- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
 - [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
 
 ## External Links

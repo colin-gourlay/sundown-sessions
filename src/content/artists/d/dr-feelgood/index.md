@@ -10,10 +10,6 @@ Dr. Feelgood are an English pub rock band formed in 1971. Hailing from Canvey Is
 
 
 
-## Show(s) appeared on
-
-- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/Dr.Feelgood.Official](https://www.facebook.com/Dr.Feelgood.Official)" >}}

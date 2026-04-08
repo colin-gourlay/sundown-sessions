@@ -12,11 +12,6 @@ The band's catalogue consists of ten studio albums: God's Own Medicine (1986), C
 
 
 
-## Show(s) appeared on
-
-- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
-- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/themissionuk](https://www.facebook.com/themissionuk)" >}}

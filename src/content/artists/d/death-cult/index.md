@@ -8,7 +8,3 @@ artist_page: true
 
 
 
-## Show(s) appeared on
-
-- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
-

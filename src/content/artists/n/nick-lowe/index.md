@@ -11,10 +11,6 @@ He is best known for the songs "Cruel to Be Kind" (a US top 40 single) and "I Lo
 
 
 
-## Show(s) appeared on
-
-- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/nickloweofficial](https://www.facebook.com/nickloweofficial)" >}}

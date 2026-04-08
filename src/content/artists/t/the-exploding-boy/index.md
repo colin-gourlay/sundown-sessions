@@ -8,7 +8,3 @@ artist_page: true
 
 Swedish post-punk band.
 
-## Show(s) appeared on
-
-- [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
-

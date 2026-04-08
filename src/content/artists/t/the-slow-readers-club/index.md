@@ -10,10 +10,6 @@ The Slow Readers Club are an English rock band from Manchester.  Their third stu
 
 
 
-## Show(s) appeared on
-
-- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/theslowreadersclub](https://www.facebook.com/theslowreadersclub)" >}}

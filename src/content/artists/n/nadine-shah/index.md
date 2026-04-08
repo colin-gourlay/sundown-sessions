@@ -8,10 +8,6 @@ artist_page: true
 
 Nadine Petra Katarina Shah (born 16 January 1986) is a British singer and songwriter.
 
-## Show(s) appeared on
-
-- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/Nadineshah](https://www.facebook.com/Nadineshah)" >}}

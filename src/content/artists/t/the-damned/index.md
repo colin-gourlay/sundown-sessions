@@ -15,7 +15,6 @@ As one of the first gothic rock bands, the Damned, featuring lead singer Vanian'
 
 ## Show(s) appeared on
 
-- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
 - [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
 
 ## External Links

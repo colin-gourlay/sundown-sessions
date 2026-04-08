@@ -10,8 +10,6 @@ Dutch musician
 
 ## Show(s) appeared on
 
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
-- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
 - [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links

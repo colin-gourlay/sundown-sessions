@@ -14,8 +14,6 @@ The band reunited for tours through the United States and United Kingdom in 2007
 
 ## Show(s) appeared on
 
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
-- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
 - [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links
