@@ -3,6 +3,7 @@ genres: []
 featured_image: artists/t/the-slow-readers-club/the-slow-readers-club.jpg
 title: The Slow Readers Club
 artist_page: true
+draft: true
 ---
 ## About
 
