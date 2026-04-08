@@ -14,7 +14,3 @@ Martin "Ace" Kent: guitar
 Mark Richardson: drums (1996-now)
 Robbie France: drums (on 1995's Paranoid & Sunburnt)
 
-### Current Lineup
-
-Richard 'Cass' Lewis, Mark Richardson, Martin "Ace" Kent, Deborah Anne Dyer
-
