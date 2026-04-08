@@ -1,3 +1,7 @@
 {{ $path := .Get 0 }}
-{{ $content := readFile (printf "content/%s.md" $path) }}
-{{ $content | markdownify }}
+{{ $fullPath := printf "content/%s.md" $path }}
+{{ if fileExists $fullPath }}
+  {{ $content := readFile $fullPath }}
+  {{ $body := $content | replaceRE "(?s)^---.*?---\n" "" }}
+  {{ $.Page.RenderString $body }}
+{{ end }}
