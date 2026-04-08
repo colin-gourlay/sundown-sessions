@@ -20,6 +20,7 @@ on:
 permissions:
   contents: write
   packages: write
+  security-events: write
 
 env:
   DOTNET_DIR: automation/dotnet
@@ -153,6 +154,20 @@ jobs:
           tags: |
             ${{ env.IMAGE_NAME }}:${{ needs.build-test-package.outputs.release_version }}
             ${{ env.IMAGE_NAME }}:latest
+
+      - name: Pull release image for vulnerability scan
+        run: docker pull ${{ env.IMAGE_NAME }}:${{ needs.build-test-package.outputs.release_version }}
+
+      - name: Scan release image for vulnerabilities
+        run: |
+          docker run --rm \
+            -v /var/run/docker.sock:/var/run/docker.sock \
+            aquasec/trivy:0.51.1 image \
+            --severity HIGH,CRITICAL \
+            --ignore-unfixed \
+            --exit-code 1 \
+            --no-progress \
+            ${{ env.IMAGE_NAME }}:${{ needs.build-test-package.outputs.release_version }}
 
   release:
     runs-on: ubuntu-latest

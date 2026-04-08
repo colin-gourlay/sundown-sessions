@@ -4,7 +4,13 @@ on:
   push:
     branches:
       - main
+    paths:
+      - src/**
+      - .github/workflows/deploy-github-pages.yml
   pull_request:
+    paths:
+      - src/**
+      - .github/workflows/deploy-github-pages.yml
 
 permissions:
   contents: read
@@ -12,8 +18,8 @@ permissions:
   id-token: write
 
 concurrency:
-  group: pages
-  cancel-in-progress: false
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
 
 defaults:
   run:
@@ -24,6 +30,7 @@ jobs:
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.146.5
+      HUGO_CACHEDIR: /tmp/hugo_cache
     steps:
       - name: Install Hugo CLI
         run: |
@@ -33,6 +40,15 @@ jobs:
         run: sudo snap install dart-sass
       - name: Checkout source using v4.1.1
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
+      - name: Cache Hugo build artefacts
+        uses: actions/cache@v4
+        with:
+          path: |
+            src/resources/_gen
+            /tmp/hugo_cache
+          key: hugo-${{ runner.os }}-${{ hashFiles('src/config/**', 'src/layouts/**', 'src/content/**', 'src/themes/**', 'src/assets/**') }}
+          restore-keys: |
+            hugo-${{ runner.os }}-
       - name: Setup pages using v4.0.0
         id: pages
         uses: actions/configure-pages@1f0c5cde4bc74cd7e1254d0cb4de8d49e9068c7d
@@ -53,6 +69,7 @@ jobs:
           path: ./src/public
 
   deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
