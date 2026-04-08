@@ -13,11 +13,6 @@ The Doors were the first American band to accumulate eight consecutive Gold LPs.
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/thedoors](https://www.facebook.com/thedoors)" >}}

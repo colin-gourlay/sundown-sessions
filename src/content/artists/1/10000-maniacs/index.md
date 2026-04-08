@@ -10,10 +10,6 @@ artist_page: true
 
 
 
-## Show(s) appeared on
-
-- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/10KManiacs](https://www.facebook.com/10KManiacs)" >}}

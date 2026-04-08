@@ -12,10 +12,6 @@ Outside of the band, Ferry and Eno have had influential solo careers, with Eno a
 
 
 
-## Show(s) appeared on
-
-- [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/roxymusic](https://www.facebook.com/roxymusic)" >}}

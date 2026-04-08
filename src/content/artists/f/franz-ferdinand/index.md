@@ -15,7 +15,6 @@ Four years after the release of Tonight, the band released their fourth studio a
 
 ## Show(s) appeared on
 
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
 - [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links

@@ -10,10 +10,6 @@ The The are an English post-punk band. They have been active in various forms si
 
 
 
-## Show(s) appeared on
-
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/officialthethe](https://www.facebook.com/officialthethe)" >}}

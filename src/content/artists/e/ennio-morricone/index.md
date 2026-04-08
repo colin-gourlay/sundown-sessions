@@ -15,7 +15,6 @@ Morricone composed for Hollywood directors such as Don Siegel, Mike Nichols, Bri
 
 ## Show(s) appeared on
 
-- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
 - [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
 
 ## External Links

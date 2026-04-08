@@ -11,10 +11,6 @@ Numan is regarded as a pioneer of electronic music. He developed a signature sou
 
 
 
-## Show(s) appeared on
-
-- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/GaryNumanOfficial](https://www.facebook.com/GaryNumanOfficial)" >}}

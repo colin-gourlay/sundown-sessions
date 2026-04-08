@@ -13,10 +13,6 @@ Since 2010, Ant has continued his music career, recording and releasing a new al
 
 
 
-## Show(s) appeared on
-
-- [Show #14](/shows/featuring-to-be-determined/) (8th October 2024) - Featuring: TO BE DETERMINED
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/69349615331](https://www.facebook.com/69349615331)" >}}

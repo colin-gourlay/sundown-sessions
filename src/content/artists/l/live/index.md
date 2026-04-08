@@ -13,10 +13,6 @@ In 2009, Kowalczyk left the band; he was replaced by singer Chris Shinn and the 
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/THEBANDLIVE](https://www.facebook.com/THEBANDLIVE)" >}}

@@ -10,7 +10,3 @@ Nazareth are a Scottish hard rock band formed in Dunfermline in 1968 that had ma
 
 
 
-## Show(s) appeared on
-
-- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
-

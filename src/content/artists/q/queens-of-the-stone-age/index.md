@@ -13,7 +13,6 @@ The band has been nominated for Grammy Awards nine times: four times for Best Ha
 
 ## Show(s) appeared on
 
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
 - [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links

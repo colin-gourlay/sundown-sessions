@@ -13,10 +13,6 @@ ZZ Top has released 15 studio albums and sold an estimated 50 million records. T
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/ZZTop](https://www.facebook.com/ZZTop)" >}}

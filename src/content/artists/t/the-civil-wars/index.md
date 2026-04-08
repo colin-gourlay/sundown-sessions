@@ -10,10 +10,6 @@ The Civil Wars were an American musical duo composed of Joy Williams and John Pa
 
 
 
-## Show(s) appeared on
-
-- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/thecivilwars](https://www.facebook.com/thecivilwars)" >}}

@@ -13,7 +13,6 @@ By 2013, Pink Floyd had sold more than 250 million records worldwide, making the
 
 ## Show(s) appeared on
 
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
 - [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
 ## External Links
