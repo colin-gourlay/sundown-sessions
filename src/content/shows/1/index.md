@@ -37,7 +37,7 @@ keywords:
  - 'The Teskey Brothers'
  - 'The Vintage Explosion'
  - 'Del Shannon'
- - 'Vermin Poets'
+ - 'The Vermin Poets'
  - 'Nick Cave & The Bad Seeds'
  - 'The Filthy Tongues'
 toc: true
