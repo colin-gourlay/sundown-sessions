@@ -1,6 +1,8 @@
 favicon = "favicon.ico"
 custom_css = ["css/tables.css", "css/live-player.css", "css/tiles.css"]
 mainSections = ["shows"]
+# X (formerly Twitter) handle of the radio station that broadcasts the shows.
+radio_station_x_handle = "@k107radio"
 # Stream URL for the live radio broadcast. Remove or leave empty to hide the player.
 listen_live_stream_url = "https://radio-stream.mp3"
 
