@@ -139,6 +139,14 @@ This roadmap is indicative direction rather than a delivery commitment. Complete
 - Use British English in documentation and user-facing text
 - Keep architecture boundaries clear between website and automation concerns
 
+## Branching Convention
+
+- This repository uses trunk-based development with `main` as the only long-lived branch
+- Create short-lived branches using `type/workstream/short-description`, for example `feat/src/add-artist-social-links`
+- Merge changes to `main` via pull requests with conventional commit titles
+
+The canonical branching and pull request policy is documented in [CONTRIBUTING.md](CONTRIBUTING.md).
+
 Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing.
 
 ## Releases and Versioning
