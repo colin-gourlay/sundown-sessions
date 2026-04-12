@@ -31,7 +31,7 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
             if (!string.IsNullOrWhiteSpace(command.SpotifyEpisodeId))
             {
                 var logoPath = Path.Combine(
-                    outputDirectory ?? string.Empty,
+                    outputDirectory!,
                     $"{command.ShowNumber}-show-logo.jpeg");
 
                 var logoResult = await this.showLogoService.DownloadLogoAsync(

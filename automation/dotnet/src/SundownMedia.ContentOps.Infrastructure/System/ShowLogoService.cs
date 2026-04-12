@@ -27,7 +27,7 @@ namespace SundownMedia.ContentOps.Infrastructure.System
             {
                 return Error.Failure(
                     "ShowLogo.SpotifyError",
-                    episodeResult.ErrorMessage ?? "Failed to retrieve episode from Spotify.");
+                    episodeResult.ErrorMessage ?? "Failed to retrieve episode from Spotify (no error details provided).");
             }
 
             if (string.IsNullOrWhiteSpace(episodeResult.Value.ImageUrl))
