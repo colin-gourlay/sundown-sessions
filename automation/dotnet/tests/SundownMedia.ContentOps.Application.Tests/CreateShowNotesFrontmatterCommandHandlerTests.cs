@@ -1,3 +1,4 @@
+using ErrorOr;
 using FluentAssertions;
 using NSubstitute;
 using SundownMedia.ContentOps.Application.Abstractions;
@@ -13,7 +14,8 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
     public async Task Handle_ReturnsError_WhenOutputDirectoryDoesNotExist()
     {
         var writer = Substitute.For<IShowNotesWriter>();
-        var handler = new CreateShowNotesFrontmatterCommandHandler(writer);
+        var logoService = Substitute.For<IShowLogoService>();
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
 
         var command = new CreateShowNotesFrontmatterCommand(
             1,
@@ -33,7 +35,8 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
     public async Task Handle_WritesFile_WhenOutputDirectoryExists()
     {
         var writer = Substitute.For<IShowNotesWriter>();
-        var handler = new CreateShowNotesFrontmatterCommandHandler(writer);
+        var logoService = Substitute.For<IShowLogoService>();
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
         var tempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
         var outputPath = Path.Combine(tempDir, "index.md");
 
@@ -58,6 +61,127 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
 
             await writer.Received(1).WriteAsync(
                 Arg.Is(outputPath),
+                Arg.Any<string>(),
+                Arg.Any<CancellationToken>());
+        }
+        finally
+        {
+            if (Directory.Exists(tempDir))
+            {
+                Directory.Delete(tempDir, recursive: true);
+            }
+        }
+    }
+
+    [Fact]
+    public async Task Handle_DownloadsLogo_WhenSpotifyEpisodeIdProvided()
+    {
+        var writer = Substitute.For<IShowNotesWriter>();
+        var logoService = Substitute.For<IShowLogoService>();
+        logoService
+            .DownloadLogoAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+            .Returns(Result.Success);
+
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
+        var tempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+        var outputPath = Path.Combine(tempDir, "index.md");
+
+        try
+        {
+            Directory.CreateDirectory(tempDir);
+
+            var command = new CreateShowNotesFrontmatterCommand(
+                1,
+                "The Big Now",
+                BroadcastDate,
+                ["The Big Now", "IST IST"],
+                outputPath,
+                Guid.NewGuid().ToString("D"),
+                SpotifyEpisodeId: "abc123");
+
+            var result = await handler.Handle(command, CancellationToken.None);
+
+            result.IsError.Should().BeFalse();
+
+            await logoService.Received(1).DownloadLogoAsync(
+                Arg.Is("abc123"),
+                Arg.Is(Path.Combine(tempDir, "1-show-logo.jpeg")),
+                Arg.Any<CancellationToken>());
+        }
+        finally
+        {
+            if (Directory.Exists(tempDir))
+            {
+                Directory.Delete(tempDir, recursive: true);
+            }
+        }
+    }
+
+    [Fact]
+    public async Task Handle_ReturnsError_WhenLogoDownloadFails()
+    {
+        var writer = Substitute.For<IShowNotesWriter>();
+        var logoService = Substitute.For<IShowLogoService>();
+        logoService
+            .DownloadLogoAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+            .Returns(Error.Failure("ShowLogo.SpotifyError", "Failed to retrieve episode from Spotify."));
+
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
+        var tempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+        var outputPath = Path.Combine(tempDir, "index.md");
+
+        try
+        {
+            Directory.CreateDirectory(tempDir);
+
+            var command = new CreateShowNotesFrontmatterCommand(
+                1,
+                "The Big Now",
+                BroadcastDate,
+                ["The Big Now", "IST IST"],
+                outputPath,
+                Guid.NewGuid().ToString("D"),
+                SpotifyEpisodeId: "bad-id");
+
+            var result = await handler.Handle(command, CancellationToken.None);
+
+            result.IsError.Should().BeTrue();
+            await writer.DidNotReceive().WriteAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
+        }
+        finally
+        {
+            if (Directory.Exists(tempDir))
+            {
+                Directory.Delete(tempDir, recursive: true);
+            }
+        }
+    }
+
+    [Fact]
+    public async Task Handle_DoesNotCallLogoService_WhenNoSpotifyEpisodeId()
+    {
+        var writer = Substitute.For<IShowNotesWriter>();
+        var logoService = Substitute.For<IShowLogoService>();
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
+        var tempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+        var outputPath = Path.Combine(tempDir, "index.md");
+
+        try
+        {
+            Directory.CreateDirectory(tempDir);
+
+            var command = new CreateShowNotesFrontmatterCommand(
+                1,
+                "The Big Now",
+                BroadcastDate,
+                ["The Big Now", "IST IST"],
+                outputPath,
+                Guid.NewGuid().ToString("D"));
+
+            await handler.Handle(command, CancellationToken.None);
+
+            await logoService.DidNotReceive().DownloadLogoAsync(
+                Arg.Any<string>(),
                 Arg.Any<string>(),
                 Arg.Any<CancellationToken>());
         }

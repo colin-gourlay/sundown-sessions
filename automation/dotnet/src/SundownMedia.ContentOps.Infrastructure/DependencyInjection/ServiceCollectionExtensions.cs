@@ -10,6 +10,7 @@ namespace SundownMedia.ContentOps.Infrastructure.DependencyInjection
     using SundownMedia.ContentOps.Infrastructure.Correlation;
     using SundownMedia.ContentOps.Infrastructure.Persistence;
     using SundownMedia.ContentOps.Infrastructure.System;
+    using SundownMedia.Integration.Spotify.Abstractions;
 
     public static class ServiceCollectionExtensions
     {
@@ -20,6 +21,8 @@ namespace SundownMedia.ContentOps.Infrastructure.DependencyInjection
             services.AddSingleton<IClock, SystemClock>();
             services.AddSingleton<IFileCopyService, FileCopyService>();
             services.AddSingleton<IShowNotesWriter, ShowNotesWriter>();
+            services.AddSingleton<ISpotifyClient, SpotifyClient>();
+            services.AddHttpClient<IShowLogoService, ShowLogoService>();
             return services;
         }
     }

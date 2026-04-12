@@ -1,0 +1,37 @@
+{{ $socials := where (partialCached "func/socials/Get" "socials/Get") "share" true }}
+{{ if $socials }}
+<div class="ananke-socials">
+  {{ $pageURL := .Permalink | absURL }}
+  {{ $tweetText := .Title }}
+  {{ if and (eq .Section "shows") (not .Date.IsZero) }}
+    {{ $stationHandle := .Site.Params.radio_station_x_handle | default "@k107radio" }}
+    {{ $day := .Date.Day }}
+    {{ $suffix := "th" }}
+    {{ if or (eq $day 1) (eq $day 21) (eq $day 31) }}{{ $suffix = "st" }}{{ end }}
+    {{ if or (eq $day 2) (eq $day 22) }}{{ $suffix = "nd" }}{{ end }}
+    {{ if or (eq $day 3) (eq $day 23) }}{{ $suffix = "rd" }}{{ end }}
+    {{ $formattedDate := printf "%d%s %s %d" $day $suffix (.Date.Format "January") .Date.Year }}
+    {{ $tweetText = printf "Unravel the full story behind the show broadcast %s on %s. Take a look!" $stationHandle $formattedDate }}
+  {{ end }}
+  {{ range $socials }}
+    {{ $shareURL := "" }}
+    {{ if eq .name "facebook" }}
+      {{ $shareURL = printf "https://www.facebook.com/sharer/sharer.php?u=%s" ($pageURL | urlquery) }}
+    {{ else if eq .name "twitter" }}
+      {{ $shareURL = printf "https://twitter.com/intent/tweet?url=%s&text=%s" ($pageURL | urlquery) ($tweetText | urlquery) }}
+    {{ else if eq .name "linkedin" }}
+      {{ $shareURL = printf "https://www.linkedin.com/sharing/share-offsite/?url=%s" ($pageURL | urlquery) }}
+    {{ end }}
+    {{ if $shareURL }}
+    <a href="{{ $shareURL }}" target="_blank" rel="noopener noreferrer" class="{{ .name }} ananke-social-link link-transition stackoverflow link dib z-999 pt3 pt0-l {{ cond (eq $.Site.Language.LanguageDirection "rtl") "ml1" "mr1" }}" title="Share on {{ .label }}" aria-label="Share on {{ .label }}——Opens in a new window">
+      {{ with .icon }}
+        <span class="icon">{{ . }}</span>
+      {{ else }}
+        {{ .label }}
+      {{ end }}
+      {{- partial "new-window-icon.html" . -}}
+    </a>
+    {{ end }}
+  {{ end }}
+</div>
+{{ end }}
