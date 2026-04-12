@@ -7,7 +7,7 @@ artist_page: true
 
 The Big Now were a band active around 1989. They recorded the demo cassette *Fast Cars, Soul Music*, which featured tracks including "You'll Be Sorry" and "Fast Cars, Soul Music".
 
-If you have any further information about The Big Now, please get in touch via the contact page.
+If you have any further information about The Big Now, please get in touch via the [contact page](/contact/).
 
 ## Show(s) appeared on
 
