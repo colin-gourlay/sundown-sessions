@@ -83,6 +83,7 @@ public static class ArgumentParser
         string? keywordsRaw = null;
         string? outputPath = null;
         string? correlationId = null;
+        string? spotifyEpisodeId = null;
 
         for (var i = 2; i < args.Length; i++)
         {
@@ -110,6 +111,10 @@ public static class ArgumentParser
             {
                 correlationId = args[++i];
             }
+            else if (string.Equals(args[i], "--spotify-episode-id", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                spotifyEpisodeId = args[++i];
+            }
         }
 
         if (string.IsNullOrWhiteSpace(showNumberRaw) ||
@@ -136,7 +141,7 @@ public static class ArgumentParser
             .ToList()
             .AsReadOnly();
 
-        options = new ShowNotesFrontmatterCliOptions(showNumber, featuredGuest, broadcastDate, keywords, outputPath, correlationId);
+        options = new ShowNotesFrontmatterCliOptions(showNumber, featuredGuest, broadcastDate, keywords, outputPath, correlationId, spotifyEpisodeId);
         return true;
     }
 }

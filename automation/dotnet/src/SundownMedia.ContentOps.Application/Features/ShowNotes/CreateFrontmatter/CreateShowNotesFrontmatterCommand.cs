@@ -13,5 +13,6 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
         DateTimeOffset BroadcastDate,
         IReadOnlyList<string> Keywords,
         string OutputPath,
-        string CorrelationId) : IRequest<ErrorOr<CreateShowNotesFrontmatterResult>>;
+        string CorrelationId,
+        string? SpotifyEpisodeId = null) : IRequest<ErrorOr<CreateShowNotesFrontmatterResult>>;
 }

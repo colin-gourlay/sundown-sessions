@@ -11,10 +11,12 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
     public sealed class CreateShowNotesFrontmatterCommandHandler : IRequestHandler<CreateShowNotesFrontmatterCommand, ErrorOr<CreateShowNotesFrontmatterResult>>
     {
         private readonly IShowNotesWriter showNotesWriter;
+        private readonly IShowLogoService showLogoService;
 
-        public CreateShowNotesFrontmatterCommandHandler(IShowNotesWriter showNotesWriter)
+        public CreateShowNotesFrontmatterCommandHandler(IShowNotesWriter showNotesWriter, IShowLogoService showLogoService)
         {
             this.showNotesWriter = showNotesWriter;
+            this.showLogoService = showLogoService;
         }
 
         public async ValueTask<ErrorOr<CreateShowNotesFrontmatterResult>> Handle(
@@ -24,6 +26,23 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
             if (!string.IsNullOrWhiteSpace(outputDirectory) && !Directory.Exists(outputDirectory))
             {
                 return Error.Validation("ShowNotes.OutputPath", "Output directory does not exist.");
+            }
+
+            if (!string.IsNullOrWhiteSpace(command.SpotifyEpisodeId))
+            {
+                var logoPath = Path.Combine(
+                    outputDirectory ?? string.Empty,
+                    $"{command.ShowNumber}-show-logo.jpeg");
+
+                var logoResult = await this.showLogoService.DownloadLogoAsync(
+                    command.SpotifyEpisodeId,
+                    logoPath,
+                    cancellationToken);
+
+                if (logoResult.IsError)
+                {
+                    return logoResult.Errors;
+                }
             }
 
             var content = ShowNotesFrontmatterBuilder.Build(command);

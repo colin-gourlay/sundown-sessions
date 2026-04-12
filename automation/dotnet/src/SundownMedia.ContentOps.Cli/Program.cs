@@ -53,7 +53,8 @@ else if (options is ShowNotesFrontmatterCliOptions showOptions)
         showOptions.BroadcastDate,
         showOptions.Keywords,
         showOptions.OutputPath,
-        correlationId);
+        correlationId,
+        showOptions.SpotifyEpisodeId);
 
     var result = await sender.Send(command, CancellationToken.None);
 
