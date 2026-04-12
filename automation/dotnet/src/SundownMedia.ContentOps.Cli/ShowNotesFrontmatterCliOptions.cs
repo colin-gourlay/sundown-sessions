@@ -10,5 +10,6 @@ public sealed record ShowNotesFrontmatterCliOptions(
     DateTimeOffset BroadcastDate,
     IReadOnlyList<string> Keywords,
     string OutputPath,
-    string? CorrelationId)
+    string? CorrelationId,
+    string? SpotifyEpisodeId = null)
     : CliOptions(CorrelationId);
