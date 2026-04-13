@@ -32,7 +32,7 @@ Dan Peters – drums (June 1990–August 1990, September 1990–September 24, 19
 Touring musicians:
 Robert Roth – guitar (August 1989) (*rehearsals only)
 Ben Shepherd – guitar (September 26, 1989-September 28, 1989) (*soundcheck only)
-[url=https://www.discogs.com/artist/517885-Big-John-Duncan]John Duncan[/url] – guitar (July 15, 1993–July 31, 1993)
+[John Duncan](https://www.discogs.com/artist/517885-Big-John-Duncan) – guitar (July 15, 1993–July 31, 1993)
 Lori Goldston – cello (July 15, 1993–January 8, 1994)
 Pat Smear – rhythm guitar, backing vocals (September 23, 1993–April 5, 1994 (end))
 Melora Creager – cello (February 5, 1994–April 5, 1994 (end))
