@@ -12,5 +12,5 @@ Following extensive touring after the release of Grinderman 2, Grinderman disban
 
 ## Show(s) appeared on
 
-- [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
+- [Show #6](/shows/featuring-the-thieves/) (24th July 2024) - Featuring: The Thieves
 

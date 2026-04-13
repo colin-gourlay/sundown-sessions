@@ -21,6 +21,7 @@ Nick Cave, Thomas Wydler, Warren Ellis, Jim Sclavunos, Martyn P. Casey, George V
 
 ## Show(s) appeared on
 
+- [Show #6](/shows/featuring-the-thieves/) (24th July 2024) - Featuring: The Thieves
 - [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
 - [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
 
