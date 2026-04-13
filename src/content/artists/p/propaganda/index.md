@@ -7,7 +7,7 @@ artist_page: true
 
 Synth pop group originating from Düsseldorf, Germany; formed in 1982 by former Die Krupps keyboard player Ralf Dörper and Andreas Thein. The first recordings were made in the summer of 1982 (at 'Zero Green Studio' in Essen, Germany, the reason being that it had a PPG Synthesizer.) Dörper and Thein recorded two songs, "Disziplin" (political) and "Sünde" (religious), with vocals provided by Susanne Freytag. The plan was to release them on the London label Operation Twilight which had released Ralf's solo records in the UK. However, Ralf also sent the two songs to Chris Bohn at the NME. This came to the attention of producer Trevor Horn, who signed the band to his label ZTT in 1983.
 
-A few months before ZTT signed them, the band (incl. drummer Weet) were invited to London to record tracks with [Nick Froome](http://www.discogs.com/artist/65173) at Basing Street Studios in February 1983 (soon to be renamed Sarm West). Trevor Horn, Jill Sinclair and Paul Morley wanted to explore what Propaganda was about and decide whether to sign them based on the material recorded in that session. Demos of "Doppelganger", "Radetzky Marsch" and "Mabuse" were recorded in this session.
+A few months before ZTT signed them, the band (incl. drummer Weet) were invited to London to record tracks with Nick Froome at Basing Street Studios in February 1983 (soon to be renamed Sarm West). Trevor Horn, Jill Sinclair and Paul Morley wanted to explore what Propaganda was about and decide whether to sign them based on the material recorded in that session. Demos of "Doppelganger", "Radetzky Marsch" and "Mabuse" were recorded in this session.
 
 Propaganda has been through several line-up changes in its recording career:
 
@@ -33,8 +33,3 @@ Michael Mertens, Susanne Freytag
 In 2011, Brücken performed a live concert in London and was joined onstage by Dörper and Freytag. Around 2014 Mertens, Brücken, Freytag and Dörper started working together on new material, but the planned reunion did not take place as the two parties had different views on live performances. In 2015 Propaganda (i.e. Dörper and Mertens) was credited for remixing Holly Johnson's "Dancing with Fear".
 
 Brücken and Freytag reappeared in 2018 on the live circuit, playing concerts on the continent consisting of Propaganda material, under the name Duel. In the UK they toured as X-Propaganda, with Heaven 17 in 2018. With the name stylized as xPropaganda, the duo released a live version of Propaganda's "Secret Wish" album ("A Secret Place") in 2018, and an album of all new material in 2022 – with Stephen Lipson as producer, who also produced Propaganda in 1985.
-
-### Current Lineup
-
-Claudia Brücken, Ralf Dörper, Michael Mertens, Susanne Freytag
-
