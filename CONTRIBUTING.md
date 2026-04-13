@@ -116,3 +116,13 @@ If your pull request changes files under `automation/dotnet/`, update [CHANGELOG
 - Keep edits scoped and avoid unrelated refactoring.
 
 For architecture and setup details, see [README.md](README.md) and [automation/dotnet/README.md](automation/dotnet/README.md).
+
+## Discussions
+
+Design proposals, ideas, Q&A, and RFC feedback are handled through GitHub Discussions. This is the right place for exploratory thinking before work is scoped into issues.
+
+See [docs/discussions.md](docs/discussions.md) for:
+
+- Category descriptions and when to use each one
+- How to use the structured discussion templates
+- Moderation guidance (marking answers, locking threads, converting to issues)

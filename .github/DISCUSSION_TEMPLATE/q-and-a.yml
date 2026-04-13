@@ -1,0 +1,32 @@
+title: "[Q&A] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to ask a question about the project. Questions can be about how something works, why a decision was made, how to contribute, or anything else related to Sundown Sessions. A maintainer or contributor will mark the best answer once one is provided.
+
+  - type: textarea
+    id: question
+    attributes:
+      label: Question
+      description: What would you like to know?
+      placeholder: e.g. How does the ContentOps intake flow handle albums that are not yet in the Lidarr database?
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context (optional)
+      description: Any background that might help someone answer your question more accurately.
+    validations:
+      required: false
+
+  - type: textarea
+    id: what-have-you-tried
+    attributes:
+      label: What Have You Tried?
+      description: If you have already explored the documentation or code, describe what you found and where you are stuck.
+    validations:
+      required: false

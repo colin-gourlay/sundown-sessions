@@ -1,0 +1,88 @@
+title: "[Design Proposal] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to capture a structured design proposal (ADR-style) for a significant decision. Fill in each section as fully as you can — it is fine to leave some fields as "TBD" if the discussion is still early.
+
+        Once a decision has been reached, a maintainer will update the **Decision** section and close or lock the thread.
+
+  - type: textarea
+    id: problem-statement
+    attributes:
+      label: Problem Statement
+      description: What is the problem we are trying to solve? Why does it matter?
+      placeholder: e.g. Show notes are authored in an inconsistent format, making automated enrichment unreliable.
+    validations:
+      required: true
+
+  - type: textarea
+    id: goals
+    attributes:
+      label: Goals
+      description: What does a successful outcome look like? What are we explicitly trying to achieve?
+      placeholder: |
+        - Consistent front matter structure for all show notes
+        - Automation tooling can reliably parse and enrich every show
+    validations:
+      required: true
+
+  - type: textarea
+    id: non-goals
+    attributes:
+      label: Non-Goals
+      description: What is explicitly out of scope for this proposal?
+      placeholder: e.g. We are not redesigning the public-facing website layout at this time.
+    validations:
+      required: false
+
+  - type: textarea
+    id: options-considered
+    attributes:
+      label: Options Considered
+      description: List the options you have explored. Include a short summary of each.
+      placeholder: |
+        **Option A — Markdown front matter with strict schema**
+        Pros: human-readable, diff-friendly. Cons: requires contributors to remember schema rules.
+
+        **Option B — YAML intake form + generated front matter**
+        Pros: machine-validated. Cons: adds tooling dependency.
+    validations:
+      required: true
+
+  - type: textarea
+    id: tradeoffs
+    attributes:
+      label: Tradeoffs
+      description: What are the key tradeoffs between the options? What risks or constraints influenced the thinking?
+    validations:
+      required: false
+
+  - type: textarea
+    id: decision
+    attributes:
+      label: Decision
+      description: Which option was chosen (or is proposed)? Leave as "TBD" if this is still open for discussion.
+      placeholder: TBD — open for discussion.
+    validations:
+      required: true
+
+  - type: textarea
+    id: consequences
+    attributes:
+      label: Consequences
+      description: What changes as a result of this decision? Include any follow-up actions, migration steps, or new constraints introduced.
+    validations:
+      required: false
+
+  - type: textarea
+    id: linked-issues
+    attributes:
+      label: Linked Issues / PRs
+      description: Link any related issues, pull requests, or prior discussions.
+      placeholder: |
+        - Closes #123
+        - Related to #456
+    validations:
+      required: false
