@@ -2,6 +2,7 @@
 genres: ["Aor","Classic Rock","Hard Rock","Rock","Soft Rock"]
 featured_image: artists/n/nazareth/nazareth.jpg
 title: Nazareth
+discogs_name: "Nazareth (2)"
 artist_page: true
 ---
 ## About

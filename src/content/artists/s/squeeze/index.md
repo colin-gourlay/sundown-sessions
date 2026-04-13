@@ -2,6 +2,7 @@
 genres: ["New Wave","Pop","Rock"]
 featured_image: artists/s/squeeze/squeeze.jpg
 title: Squeeze
+discogs_name: "Squeeze (2)"
 artist_page: true
 ---
 ## About
