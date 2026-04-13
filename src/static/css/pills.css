@@ -11,3 +11,18 @@
 .genre-pill:hover {
     background-color: #c0c0c0;
 }
+
+.for-sale-badge {
+    display: inline-block;
+    background-color: #2e7d32;
+    color: #fff;
+    font-size: 0.65rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 2px 8px;
+    border-radius: 3px;
+    margin-left: 6px;
+    vertical-align: middle;
+}
+

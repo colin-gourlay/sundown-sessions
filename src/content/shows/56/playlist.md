@@ -7,7 +7,7 @@
 
 ADVERTS - 00:29:01
 
-05. Scarlet Joy - Cut Diamond - 00:31:09
+05. Scarlet Joy - Cut Diamond - 00:31:09 {{< for-sale >}}
 06. The Creation - Creation - 00:37:52
 07. Air Traffic - Charlotte - 00:41:35
 08. Assembly Now - Graphs, Maps & Trees - 00:43:55
@@ -21,10 +21,10 @@ ADVERTS - 00:29:01
 ADVERTS - 01:19:12
 
 15. PJ Harvey - Oh My Lover - 01:20:57
-16. Scarlet Joy - Rescue - 01:25:46
+16. Scarlet Joy - Rescue - 01:25:46 {{< for-sale >}}
 17. Live - Where Do We Go From Here? - 01:30:42
 18. Fiona Apple - Window - 01:39:09
 19. Angelfish - Suffocate Me - 01:47:12
 20. Goodbye Mr Mackenzie - House On Fire - 01:55:27
-21. Scarlet Joy - Back For More - 02:01:19
+21. Scarlet Joy - Back For More - 02:01:19 {{< for-sale >}}
 22. Cigarettes After Sex - Hideaway - 02:08:21
