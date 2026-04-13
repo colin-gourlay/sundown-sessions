@@ -133,6 +133,12 @@ This roadmap is indicative direction rather than a delivery commitment. Complete
 - Extend website discovery and presentation capabilities for long-tail catalogue content
 - Formalise richer contributor documentation as the platform footprint grows
 
+## Discussions
+
+Design proposals, ideas, Q&A, and RFC feedback are handled through [GitHub Discussions](https://github.com/colin-gourlay/sundown-sessions/discussions). This is the place for exploratory thinking before work is scoped into issues.
+
+See [docs/discussions.md](docs/discussions.md) for category descriptions, discussion templates, and moderation guidance.
+
 ## Contribution Standards
 
 - Keep changes scoped to the requested area and avoid unrelated refactors
