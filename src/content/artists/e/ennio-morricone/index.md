@@ -15,14 +15,4 @@ Morricone composed for Hollywood directors such as Don Siegel, Mike Nichols, Bri
 
 ## Show(s) appeared on
 
-- [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
-
-## External Links
-
-- {{< new-tab-link "Facebook: [https://www.facebook.com/729202510442303](https://www.facebook.com/729202510442303)" >}}
-
-- {{< new-tab-link "Instagram: [https://www.instagram.com/maestro_ennio_morricone/](https://www.instagram.com/maestro_ennio_morricone/)" >}}
-
-- {{< new-tab-link "Twitter: [https://twitter.com/MEnnioMorricone](https://twitter.com/MEnnioMorricone)" >}}
-
-
+- [Show #6](/shows/featuring-the-thieves/) (24th July 2024) - Featuring: The Thieves
