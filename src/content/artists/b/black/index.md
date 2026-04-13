@@ -2,6 +2,7 @@
 genres: ["Pop","Sophisti-Pop"]
 featured_image: artists/b/black/black.jpg
 title: Black
+discogs_name: "Black (2)"
 artist_page: true
 ---
 ## About

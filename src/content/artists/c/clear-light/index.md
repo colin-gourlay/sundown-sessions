@@ -2,6 +2,7 @@
 genres: ["Psychedelic Rock"]
 featured_image: artists/c/clear-light/clear-light.jpg
 title: Clear Light
+discogs_name: "Clear Light (2)"
 artist_page: true
 ---
 ## About

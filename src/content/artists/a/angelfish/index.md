@@ -2,6 +2,7 @@
 genres: ["Alternative Rock"]
 featured_image: artists/a/angelfish/angelfish.jpg
 title: Angelfish
+discogs_name: "Angelfish (2)"
 artist_page: true
 ---
 ## About
