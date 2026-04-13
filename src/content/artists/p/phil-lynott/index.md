@@ -14,5 +14,5 @@ Born of an Irish mother (Philomena Lynott) and a British Guiana father (Cecil Pa
 A life-size bronze statue of Lynott was unveiled on Harry Street, off Grafton Street, Dublin, in August 2005.
 
 **Born:** 20th August 1949, West Bromwich, Staffordshire, England.
-**Died:** 4th January 1986, Salisbury Hospital, Salisbury, Wiltshire, England [heart failure, aged 36].
+**Died:** 4th January 1986, Salisbury Hospital, Salisbury, Wiltshire, England (heart failure, aged 36).
 

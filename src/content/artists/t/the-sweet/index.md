@@ -9,7 +9,7 @@ The nucleus of The Sweet came together in 1966, when drummer Michael Thomas Tuck
 
 The Sweet in 1974 recorded the album Sweet Fanny Adams without the assistance of Chinn and Chapman. The album charted at number 27, but disappeared again after just two weeks. As The Sweet became more of an albums band, the hit singles began to dry up. Following a move to Polydor, they cut four albums with each release making less impact than its predecessor.
 
-Since 1982, various incarnations of the band have appeared from time to time, with up to two of the original members in any one line-up. In 1992 two versions of the band - Andy Scott's Sweet & [A=Brian Connolly Sweet] - began regularly touring and gigging. In 1997, Brian Connolly died in hospital from a muscular disorder. Andy Scott continues to tour with his version of The Sweet.
+Since 1982, various incarnations of the band have appeared from time to time, with up to two of the original members in any one line-up. In 1992 two versions of the band - Andy Scott's Sweet & Brian Connolly's Sweet - began regularly touring and gigging. In 1997, Brian Connolly died in hospital from a muscular disorder. Andy Scott continues to tour with his version of The Sweet.
 
 Brian Connolly (5 October 1945 – 10 February 1997)
 Mick Tucker (17 July 1947 – 14 February 2002)
