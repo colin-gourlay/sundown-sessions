@@ -4,7 +4,7 @@
   {{ $pageURL := .Permalink | absURL }}
   {{ $tweetText := .Title }}
   {{ if and (eq .Section "shows") (not .Date.IsZero) }}
-    {{ $stationHandle := .Site.Params.radio_station_x_handle | default "@k107radio" }}
+    {{ $stationHandle := .Site.Params.radio_station_x_handle | default "@eastcoastfm" }}
     {{ $day := .Date.Day }}
     {{ $suffix := "th" }}
     {{ if or (eq $day 1) (eq $day 21) (eq $day 31) }}{{ $suffix = "st" }}{{ end }}
