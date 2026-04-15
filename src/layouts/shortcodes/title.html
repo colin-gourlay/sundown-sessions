@@ -18,10 +18,12 @@
     {{ end }}
     {{ $artistUri := printf "artists/%s/%s" $artistFirstChar $artistSlug | absURL }}
     {{ $releaseUri := printf "%s-large.jpeg" $artist | urlize }}
+    {{ $trackSlug := $track | urlize }}
+    {{ $trackPage := $.Site.GetPage (printf "tracks/%s/%s/%s" $artistFirstChar $artistSlug $trackSlug) }}
     <div style="display: flex; align-items: center;">
         <img src="{{ $releaseUri }}" alt="" style="width: 20%; height: auto; margin-right: 10px;">
         <div>
-            {{ if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}
+            {{ if $trackPage }}<a href="{{ $trackPage.Permalink }}">{{ $track }}</a>{{ else if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}
             <br>
             <a href="{{ $artistUri }}">{{ $artist }}</a>
         </div>

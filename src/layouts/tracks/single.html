@@ -1,0 +1,25 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <h1 class="f1">
+          {{ .Title }}
+        </h1>
+        {{ with .Params.artist }}
+        <p class="f3 mid-gray">
+          {{ $artistFirstChar := index . 0 | printf "%c" | lower }}
+          {{ $artistSlug := . | urlize }}
+          {{ with $.Params.artist_slug }}{{ $artistSlug = . }}{{ end }}
+          <a href="{{ printf "artists/%s/%s" $artistFirstChar $artistSlug | absURL }}">{{ $.Params.artist }}</a>
+        </p>
+        {{ end }}
+      </header>
+      {{ if .Content }}
+      <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+        {{ .Content }}
+      </div>
+      {{ end }}
+    </article>
+  </div>
+{{ end }}
