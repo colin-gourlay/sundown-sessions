@@ -3,6 +3,6 @@ baseURL = 'http://localhost:1313/'
 languageCode = 'en-GB'
 theme = 'sundown-sessions'
 copyright = 'Colin Gourlay'
-enableGitInfo = 'true'
+enableGitInfo = true
 timeZone = 'Europe/London'
 buildFuture = true
