@@ -1,6 +1,7 @@
 ---
 title: Franz Ferdinand
 artist: Franz Ferdinand
+label: Domino Records
 release_page: true
 ---
 ## About
