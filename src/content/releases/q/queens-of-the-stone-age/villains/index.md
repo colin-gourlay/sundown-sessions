@@ -1,6 +1,7 @@
 ---
 title: Villains
 artist: Queens Of The Stone Age
+label: Matador Records
 release_page: true
 ---
 ## About
