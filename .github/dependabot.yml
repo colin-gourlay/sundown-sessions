@@ -8,6 +8,10 @@ updates:
     labels:
       - dependencies
       - github-actions
+    groups:
+      github-actions:
+        patterns:
+          - "*"
 
   - package-ecosystem: nuget
     directory: /automation/dotnet
@@ -17,3 +21,20 @@ updates:
     labels:
       - dependencies
       - dotnet
+    groups:
+      dotnet-dependencies:
+        patterns:
+          - "*"
+
+  - package-ecosystem: npm
+    directory: /src/themes/sundown-sessions
+    schedule:
+      interval: weekly
+    open-pull-requests-limit: 10
+    labels:
+      - dependencies
+      - hugo
+    groups:
+      npm-dependencies:
+        patterns:
+          - "*"
