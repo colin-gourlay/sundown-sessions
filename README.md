@@ -163,6 +163,24 @@ Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing.
 
 ## Licence
 
+This repository uses two licences to reflect the different nature of its
+components.
+
+### Code and Structure
+
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
 
-This project is licensed under the terms of the [MIT licence](LICENSE).
+The code, templates, automation scripts, configuration files, and structural
+framework are licensed under the [MIT licence](LICENSE). You are free to
+reuse, modify, and redistribute them, provided the copyright notice is
+retained. Attribution to Colin Gourlay as the original author is required.
+
+### Site Content
+
+[![License: All Rights Reserved](https://img.shields.io/badge/Content-All%20Rights%20Reserved-red.svg)](LICENSE-CONTENT)
+
+The site content — including articles, show notes, artist profiles, episode
+metadata, editorial text, images, and other media — is copyright Colin Gourlay.
+All rights reserved. This content may not be copied, reproduced, redistributed,
+or reused without explicit prior written permission. See [LICENSE-CONTENT](LICENSE-CONTENT)
+for full terms.
