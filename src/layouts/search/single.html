@@ -1,0 +1,24 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+<div class="mw8 center ph3 pv5">
+  <div class="mw6 center">
+    <div class="mb4">
+      <label for="search-input" class="db f5 fw6 mid-gray mb2">Search artists, tracks, albums, and shows</label>
+      <input
+        id="search-input"
+        type="search"
+        class="input-reset ba b--black-20 pa2 mb2 db w-100 f4 br2"
+        placeholder="e.g. Queens of the Stone Age, Villains…"
+        aria-label="Search"
+        autocomplete="off"
+        data-index-url="{{ "/" | absURL }}index.json"
+      />
+    </div>
+    <div id="search-results" role="region" aria-live="polite" aria-label="Search results"></div>
+  </div>
+</div>
+
+<script src="{{ "js/fuse.min.js" | relURL }}"></script>
+<script src="{{ "js/search.js" | relURL }}"></script>
+{{ end }}
+

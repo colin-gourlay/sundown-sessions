@@ -1,0 +1,45 @@
+{{- $items := slice -}}
+
+{{- range where .Site.RegularPages "Params.artist_page" true -}}
+  {{- $item := dict
+    "title"   .Title
+    "section" "artists"
+    "tags"    (.Params.genres | default slice)
+    "url"     .RelPermalink
+  -}}
+  {{- $items = $items | append $item -}}
+{{- end -}}
+
+{{- range where .Site.RegularPages "Params.track_page" true -}}
+  {{- $item := dict
+    "title"   .Title
+    "section" "tracks"
+    "artist"  (.Params.artist | default "")
+    "album"   (.Params.release | default "")
+    "url"     .RelPermalink
+  -}}
+  {{- $items = $items | append $item -}}
+{{- end -}}
+
+{{- range where .Site.RegularPages "Params.release_page" true -}}
+  {{- $item := dict
+    "title"   .Title
+    "section" "releases"
+    "artist"  (.Params.artist | default "")
+    "url"     .RelPermalink
+  -}}
+  {{- $items = $items | append $item -}}
+{{- end -}}
+
+{{- range where .Site.RegularPages "Section" "shows" -}}
+  {{- $item := dict
+    "title"       .Title
+    "section"     "shows"
+    "description" (.Params.description | default "")
+    "keywords"    (.Params.keywords | default slice)
+    "url"         .RelPermalink
+  -}}
+  {{- $items = $items | append $item -}}
+{{- end -}}
+
+{{- $items | jsonify -}}
