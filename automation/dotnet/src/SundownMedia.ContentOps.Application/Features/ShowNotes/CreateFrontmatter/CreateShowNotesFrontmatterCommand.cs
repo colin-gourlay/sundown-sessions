@@ -14,5 +14,6 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
         IReadOnlyList<string> Keywords,
         string OutputPath,
         string CorrelationId,
-        string? SpotifyEpisodeId = null) : IRequest<ErrorOr<CreateShowNotesFrontmatterResult>>;
+        string? SpotifyEpisodeId = null,
+        string? Charity = null) : IRequest<ErrorOr<CreateShowNotesFrontmatterResult>>;
 }

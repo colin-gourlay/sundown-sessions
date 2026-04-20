@@ -54,7 +54,8 @@ else if (options is ShowNotesFrontmatterCliOptions showOptions)
         showOptions.Keywords,
         showOptions.OutputPath,
         correlationId,
-        showOptions.SpotifyEpisodeId);
+        showOptions.SpotifyEpisodeId,
+        showOptions.Charity);
 
     var result = await sender.Send(command, CancellationToken.None);
 
