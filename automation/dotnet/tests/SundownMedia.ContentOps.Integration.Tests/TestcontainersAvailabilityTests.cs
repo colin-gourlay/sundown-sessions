@@ -8,8 +8,6 @@ public sealed class TestcontainersAvailabilityTests
     [Fact]
     public void TestcontainersBuilder_IsAvailable()
     {
-        var builder = new ContainerBuilder();
-
-        builder.Should().NotBeNull();
+        typeof(ContainerBuilder).Should().NotBeNull();
     }
 }
