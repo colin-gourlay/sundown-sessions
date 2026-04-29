@@ -16,10 +16,10 @@
  "dependencies": {},
  "description": "Theme Ananke",
  "devDependencies": {
-  "auto-changelog": "^1.16.1",
-  "cssnano": "^3.10.0",
-  "postcss-cli": "^7.1.0",
-  "postcss-cssnext": "^2.10.0",
+  "auto-changelog": "^2.5.0",
+  "cssnano": "^7.1.7",
+  "postcss-cli": "^11.0.1",
+  "postcss-cssnext": "^3.1.1",
   "tachyons": "^4.9.1"
  },
  "homepage": "https://github.com/theNewDynamic/gohugo-theme-ananke#readme",
