@@ -1,4 +1,5 @@
 ---
+genres: ["Alternative Rock","Gothic Rock","Jangle Pop","New Wave","Post-Punk"]
 title: The Chameleons
 featured_image: artists/t/the-chameleons/the-chameleons.jpg
 artist_page: true
@@ -15,4 +16,14 @@ John Lever passed away in 2017 and Dave left the band afterwards leaving Mark an
 ### Current Lineup
 
 Mark Burgess, Reg Smithies
+
+## External Links
+
+- {{< new-tab-link "Facebook: [https://www.facebook.com/thechameleonsofficial](https://www.facebook.com/thechameleonsofficial)" >}}
+
+- {{< new-tab-link "Instagram: [https://www.instagram.com/thechameleonsvox/](https://www.instagram.com/thechameleonsvox/)" >}}
+
+- {{< new-tab-link "Twitter: [https://twitter.com/ChameleonsVox](https://twitter.com/ChameleonsVox)" >}}
+
+- {{< new-tab-link "Website: [https://www.thechameleons.org.uk/](https://www.thechameleons.org.uk/)" >}}
 
