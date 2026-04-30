@@ -1,5 +1,5 @@
 ---
-genres: ["Darkwave","Gothic Rock","Post-Punk"]
+genres: ["Darkwave", "Gothic Rock", "Post-Punk"]
 featured_image: artists/a/a-projection/a-projection.jpg
 title: A Projection
 artist_page: true
