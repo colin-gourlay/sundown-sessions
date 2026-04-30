@@ -1,0 +1,5 @@
+{{ $path := .Get 0 }}
+{{ $content := readFile (printf "content/%s.md" $path) }}
+<div class="track-info-table">
+{{ $.Page.RenderString $content }}
+</div>

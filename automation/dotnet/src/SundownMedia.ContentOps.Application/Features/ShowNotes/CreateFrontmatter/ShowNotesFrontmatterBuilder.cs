@@ -62,7 +62,7 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
             sb.AppendLine("---");
             sb.AppendLine();
             sb.AppendLine("## Track info");
-            sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/track-info\" >}}}}");
+            sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< track-info \"/shows/{command.ShowNumber}/track-info\" >}}}}");
 
             return sb.ToString();
         }

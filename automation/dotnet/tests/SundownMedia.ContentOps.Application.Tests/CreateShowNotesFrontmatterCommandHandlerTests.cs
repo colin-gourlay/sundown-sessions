@@ -220,7 +220,7 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
         content.Should().Contain("{{< include_content \"/shows/1/playlist\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/featured-guest\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/discussion-points\" >}}");
-        content.Should().Contain("{{< include_content \"/shows/1/track-info\" >}}");
+        content.Should().Contain("{{< track-info \"/shows/1/track-info\" >}}");
     }
 
     [Theory]

@@ -16,7 +16,7 @@ table td {
 }
 
 table th {
-    text-align: left; /* Left-align table headings */
+    text-align: left;
     font-size: 1rem;
     background-color: #343a40;
     color: #fff;
@@ -27,10 +27,6 @@ table td.last-column {
     white-space: normal;
     overflow: visible;
     text-overflow: clip;
-}
-
-table td:nth-child(4) {
-    white-space: normal;
 }
 
 .not-found-img {
@@ -44,4 +40,36 @@ table tr:nth-child(odd) {
 
 table tr:nth-child(even) {
     background-color: #e9ecef;
+}
+
+/* Responsive wrapper for track-info tables */
+.track-info-table {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    margin-bottom: 1rem;
+}
+
+/* Allow most columns to wrap naturally */
+.track-info-table table td {
+    white-space: normal;
+    overflow: visible;
+    text-overflow: clip;
+}
+
+/* Keep # and Duration columns compact and non-wrapping */
+.track-info-table table td:nth-child(1),
+.track-info-table table td:nth-child(4) {
+    white-space: nowrap;
+    text-align: center;
+}
+
+/* Ensure Title and Album columns have a reasonable minimum width */
+.track-info-table table td:nth-child(2),
+.track-info-table table td:nth-child(3) {
+    min-width: 10rem;
+}
+
+/* Give the Notes column room to breathe */
+.track-info-table table td:nth-child(5) {
+    min-width: 12rem;
 }
