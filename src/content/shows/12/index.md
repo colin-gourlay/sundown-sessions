@@ -64,4 +64,4 @@ draft: false
 ---
 
 ## Track info
-{{< include_content "/shows/12/track-info" >}}
+{{< track-info "/shows/12/track-info" >}}
