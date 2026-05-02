@@ -5,6 +5,6 @@ cascade:
     featured_image: '/images/sundown-sessions-banner.jpg'
 ---
 
-A radio show broadcast on East Coast FM on Tuesday evenings from 8pm - 10pm (UK time)
+A weekly radio show broadcast on East Coast FM every Tuesday evening from 8–10pm (UK time)
 
-This site is a supplement to that show
+This site is a companion to the show
