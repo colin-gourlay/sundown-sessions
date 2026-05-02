@@ -5,7 +5,7 @@ menu:
   main:
     weight: 3
 ---
-{{< figure src="about-sundown-sessions.jpeg" title="Colin Gourlay in Studio 2 (Dec 2023)" >}}
+{{< figure src="about-sundown-sessions.png" title="Colin Gourlay in Studio 2" >}}
 
 The _Sundown Sessions_ is a show broadcast from the East Coast FM radio station in Haddington, Scotland. The show can be heard on 107 FM and is also streamed online.
 
