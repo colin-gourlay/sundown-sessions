@@ -39,7 +39,7 @@ jobs:
       - name: Install Dart Sass (no snap)
         env:
           SASS_VERSION: 1.77.8
-         run: |
+        run: |
           set -euo pipefail
           curl -fsSL -o "${{ runner.temp }}/dart-sass.tar.gz" \
             "https://github.com/sass/dart-sass/releases/download/${SASS_VERSION}/dart-sass-${SASS_VERSION}-linux-x64.tar.gz"
