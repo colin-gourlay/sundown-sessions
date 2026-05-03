@@ -12,6 +12,18 @@
         {{ .Content }}
       </div>
       {{ end }}
+      {{ $artistName := .Title }}
+      {{ $releases := where (where $.Site.Pages "Type" "releases") ".Params.artist" $artistName }}
+      {{ if $releases }}
+      <section class="mt4">
+        <h2 class="f3">Releases</h2>
+        <ul class="list pl0">
+          {{ range $releases.ByTitle }}
+          <li class="mb2"><a href="{{ .Permalink }}" class="link dim dark-blue">{{ .Title }}</a>{{ with .Params.release_date }} <span class="f5 mid-gray">({{ . }})</span>{{ end }}</li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
     </article>
   </div>
 {{ end }}

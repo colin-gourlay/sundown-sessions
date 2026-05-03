@@ -2,7 +2,7 @@
 ---
 | #  | Title                                                               | Album                                 | Duration | Notes                                                                          |
 |:--:|:--------------------------------------------------------------------|---------------------------------------|:--------:|--------------------------------------------------------------------------------|
-| 1  | {{<title "7 & 7 Is--Love">}}                                        | Da Capo (1966)                        |   2:19   |                                                                                |
+| 1  | {{<title "7 & 7 Is--Love">}}                                        | {{<release "Da Capo (1966)--Love--da-capo">}} |   2:19   |                                                                                |
 | 2  | {{<title "Rock 'n' Roll Radio--Ramones">}}                          | End of the Century (1980)             |   3:49   |                                                                                |
 | 3  | {{<title "New York City--John Lennon">}}                            | Sometime In New York City (1972)      |   4:34   | Produced by Phil Spector                                                       |
 | 4  | {{<title "Crawling From The Wreckage--Dave Edmunds">}}              | Repeat When Necessary (1979)          |   2:56   | Released on 09 June 1979                                                       |
