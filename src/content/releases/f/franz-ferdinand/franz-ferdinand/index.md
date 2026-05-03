@@ -2,7 +2,7 @@
 title: Franz Ferdinand
 artist: Franz Ferdinand
 label: Domino Records
-release_date: "9 February 2004"
+release_date: "2004"
 uk_chart_position: 3
 release_page: true
 shows:

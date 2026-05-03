@@ -1,7 +1,7 @@
 ---
 title: Architecture
 artist: IST IST
-label: 가야 Records / Self-released
+label: Self-released
 release_date: "2020"
 release_page: true
 shows:
