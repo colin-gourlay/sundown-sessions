@@ -24,6 +24,6 @@
 | 20 | {{<title "Why Can't This Be Love--Van Halen">}} | 5150 (1986) | 3:47 | Released on [RECORD LABEL] on the 24 March 1986 |
 | 21 | {{<title "Day at the Beach (New Rays from an Ancient Sun)--Joe Satriani">}} | Flying In A Blue Dream (1989) | 2:03 | Released on [RECORD LABEL] on the 30 October 1989 |
 | 22 | {{<title "Tell Me--Stevie Ray Vaughan">}} | Texas Flood (Legacy Edition) (1983) | 2:47 | Released on [RECORD LABEL] released in 1983 |
-| 23 | {{<title "Let's Dance - 2002 Remaster--David Bowie">}} | Let's Dance (1983) | 4:07 | Released on [RECORD LABEL] released in 1983 |
+| 23 | {{<title "Let's Dance - 2002 Remaster--David Bowie">}} | {{<release "Let's Dance (1983)--David Bowie--lets-dance">}} | 4:07 | Released on [RECORD LABEL] released in 1983 |
 | 24 | {{<title "Bad Love--Eric Clapton">}} | Journeyman (1989) | 5:08 | Released on [RECORD LABEL] on the 07 November 1989 |
 | 25 | {{<title "Growing on Me--The Darkness">}} | Permission to Land (2003) | 3:31 | Released on [RECORD LABEL] on the 07 July 2003 |

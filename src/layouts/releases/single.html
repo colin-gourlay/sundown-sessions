@@ -14,11 +14,63 @@
           <a href="{{ printf "artists/%s/%s" $artistFirstChar $artistSlug | absURL }}">{{ $.Params.artist }}</a>
         </p>
         {{ end }}
+        <dl class="f5 mid-gray mt3 mb0">
+          {{ with .Params.release_date }}
+          <dt class="dib b mr2">Released:</dt>
+          <dd class="dib ml0 mr3">{{ . }}</dd>
+          {{ end }}
+          {{ with .Params.label }}
+          <dt class="dib b mr2">Label:</dt>
+          <dd class="dib ml0 mr3">{{ . }}</dd>
+          {{ end }}
+          {{ with .Params.catalogue_number }}
+          <dt class="dib b mr2">Cat. no.:</dt>
+          <dd class="dib ml0 mr3">{{ . }}</dd>
+          {{ end }}
+          {{ with .Params.uk_chart_position }}
+          <dt class="dib b mr2">UK Chart (Albums):</dt>
+          <dd class="dib ml0 mr3">#{{ . }}</dd>
+          {{ end }}
+        </dl>
       </header>
       {{ if .Content }}
       <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
         {{ .Content }}
       </div>
+      {{ end }}
+      {{ with .Params.re_release_notes }}
+      <section class="mt4">
+        <h2 class="f3">Re-releases &amp; Reissues</h2>
+        <div class="nested-copy-line-height lh-copy f4 nested-links mid-gray">
+          {{ . | markdownify }}
+        </div>
+      </section>
+      {{ end }}
+      {{ with .Params.related_artists }}
+      <section class="mt4">
+        <h2 class="f3">Related Artists</h2>
+        <ul class="list pl0">
+          {{ range . }}
+          {{ $name := . }}
+          {{ $firstChar := index $name 0 | printf "%c" | lower }}
+          {{ $slug := $name | urlize }}
+          {{ $artistPage := $.Site.GetPage (printf "artists/%s/%s" $firstChar $slug) }}
+          <li class="dib mr3 mb2">{{ if $artistPage }}<a href="{{ $artistPage.Permalink }}">{{ $name }}</a>{{ else }}{{ $name }}{{ end }}</li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+      {{ with .Params.shows }}
+      <section class="mt4">
+        <h2 class="f3">Featured On</h2>
+        <ul class="list pl0">
+          {{ range . }}
+          {{ $showNum := . }}
+          {{ $showPage := $.Site.GetPage (printf "shows/%s" $showNum) }}
+          <li class="mb1">{{ if $showPage }}<a href="{{ $showPage.Permalink }}">{{ $showPage.Title }}</a>{{ else }}Show #{{ $showNum }}{{ end }}</li>
+          {{ end }}
+        </ul>
+      </section>
       {{ end }}
     </article>
   </div>
