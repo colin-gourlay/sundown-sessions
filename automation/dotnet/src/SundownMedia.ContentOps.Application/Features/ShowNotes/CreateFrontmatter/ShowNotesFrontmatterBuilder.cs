@@ -33,6 +33,17 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
                 sb.AppendLine(CultureInfo.InvariantCulture, $" - '{EscapeYamlSingleQuoted(keyword)}'");
             }
 
+            sb.AppendLine("tags:");
+            foreach (var keyword in command.Keywords)
+            {
+                sb.AppendLine(CultureInfo.InvariantCulture, $" - '{EscapeYamlSingleQuoted(keyword)}'");
+            }
+
+            if (!string.IsNullOrWhiteSpace(command.Charity))
+            {
+                sb.AppendLine(CultureInfo.InvariantCulture, $" - '{EscapeYamlSingleQuoted(command.Charity)}'");
+            }
+
             sb.AppendLine("toc: true");
             sb.AppendLine(CultureInfo.InvariantCulture, $"featured_image: '{command.ShowNumber}-show-logo.jpeg'");
             sb.AppendLine("read_more_copy: Show notes...");

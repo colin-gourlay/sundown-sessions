@@ -84,6 +84,7 @@ public static class ArgumentParser
         string? outputPath = null;
         string? correlationId = null;
         string? spotifyEpisodeId = null;
+        string? charity = null;
 
         for (var i = 2; i < args.Length; i++)
         {
@@ -115,6 +116,10 @@ public static class ArgumentParser
             {
                 spotifyEpisodeId = args[++i];
             }
+            else if (string.Equals(args[i], "--charity", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                charity = args[++i];
+            }
         }
 
         if (string.IsNullOrWhiteSpace(showNumberRaw) ||
@@ -141,7 +146,7 @@ public static class ArgumentParser
             .ToList()
             .AsReadOnly();
 
-        options = new ShowNotesFrontmatterCliOptions(showNumber, featuredGuest, broadcastDate, keywords, outputPath, correlationId, spotifyEpisodeId);
+        options = new ShowNotesFrontmatterCliOptions(showNumber, featuredGuest, broadcastDate, keywords, outputPath, correlationId, spotifyEpisodeId, charity);
         return true;
     }
 }

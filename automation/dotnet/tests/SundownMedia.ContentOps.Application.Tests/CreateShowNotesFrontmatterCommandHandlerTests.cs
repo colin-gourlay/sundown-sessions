@@ -216,11 +216,51 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
         content.Should().Contain("- 'The Big Now'");
         content.Should().Contain("- 'IST IST'");
         content.Should().Contain("- 'Nick Cave & The Bad Seeds'");
+        content.Should().Contain("tags:");
         content.Should().Contain("{{< include_content \"/shows/1/listen-again\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/playlist\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/featured-guest\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/discussion-points\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/track-info\" >}}");
+    }
+
+    [Fact]
+    public void Build_ContainsTags_WithArtistsAndCharity()
+    {
+        var command = new CreateShowNotesFrontmatterCommand(
+            4,
+            "Kenny Armour from ANDYSMANCLUB",
+            BroadcastDate,
+            ["Kenny Armour from ANDYSMANCLUB", "Angelfish", "Skids"],
+            "/tmp/index.md",
+            Guid.NewGuid().ToString("D"),
+            Charity: "ANDYSMANCLUB");
+
+        var content = ShowNotesFrontmatterBuilder.Build(command);
+
+        content.Should().Contain("tags:");
+        content.Should().Contain("- 'Kenny Armour from ANDYSMANCLUB'");
+        content.Should().Contain("- 'Angelfish'");
+        content.Should().Contain("- 'Skids'");
+        content.Should().Contain("- 'ANDYSMANCLUB'");
+    }
+
+    [Fact]
+    public void Build_ContainsTags_WithoutCharity()
+    {
+        var command = new CreateShowNotesFrontmatterCommand(
+            1,
+            "The Big Now",
+            BroadcastDate,
+            ["The Big Now", "IST IST"],
+            "/tmp/index.md",
+            Guid.NewGuid().ToString("D"));
+
+        var content = ShowNotesFrontmatterBuilder.Build(command);
+
+        content.Should().Contain("tags:");
+        content.Should().Contain("- 'The Big Now'");
+        content.Should().Contain("- 'IST IST'");
     }
 
     [Theory]
