@@ -6,13 +6,13 @@
   {{/* Show upcoming shows if any exist */}}
   {{ $upcoming := where .Site.RegularPages "Section" "upcoming" }}
   {{ if gt (len $upcoming) 0 }}
-  <div class="pa3 pa4-ns w-100 w-70-ns center">
+  <div class="home-upcoming-section pa3 pa4-ns w-100 w-80-ns center">
     {{ with .Site.GetPage "section" "upcoming" }}
-    <h1 class="flex-none">{{ .Title }}</h1>
+    <h1 class="home-upcoming-section__title flex-none tc">{{ .Title }}</h1>
     {{ end }}
-    <section class="flex-ns flex-wrap justify-around mt3">
+    <section class="home-upcoming-grid mt3">
       {{ range $upcoming }}
-      <div class="relative w-100 w-30-l mb4 bg-white">
+      <div class="home-upcoming-item relative w-100 mb4">
         {{ .Render "tile" }}
       </div>
       {{ end }}

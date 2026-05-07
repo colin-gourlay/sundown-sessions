@@ -1,5 +1,27 @@
 /* Show tile card styling */
 
+.home-upcoming-section {
+    background: #f2f3f6;
+    border-radius: 0.5rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.home-upcoming-section__title {
+    margin-bottom: 0.5rem;
+}
+
+.home-upcoming-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+.home-upcoming-item {
+    max-width: 24rem;
+}
+
 .show-tile {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.25s ease, box-shadow 0.25s ease;
