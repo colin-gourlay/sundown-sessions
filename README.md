@@ -1,5 +1,7 @@
 # Sundown Sessions
 
+[![Made with Love](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red.svg)](https://www.linkedin.com/in/colingourlay)
+
 Sundown Sessions curates and publishes eclectic music sessions for listeners who want to discover beyond algorithmic playlists.
 
 ![Sundown Sessions logo](src/static/images/sundown-sessions-logo.jpg)
