@@ -8,7 +8,7 @@
   {{ if gt (len $upcoming) 0 }}
   <div class="home-upcoming pa3 pa4-ns w-100 w-80-ns center">
     {{ with .Site.GetPage "section" "upcoming" }}
-    <h1 class="home-upcoming__title flex-none tc">{{ .Title }}</h1>
+    <h1 class="home-upcoming__title tc">{{ .Title }}</h1>
     {{ end }}
     <section class="home-upcoming__grid mt3">
       {{ range $upcoming }}

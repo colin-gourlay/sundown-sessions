@@ -1,7 +1,7 @@
 /* Show tile card styling */
 
 .home-upcoming {
-    background: var(--surface-subtle, #f2f3f6);
+    background: #f2f3f6;
     border-radius: 0.5rem;
     margin-top: 2rem;
     margin-bottom: 2rem;
