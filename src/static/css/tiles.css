@@ -1,13 +1,23 @@
+.home-intro {
+    padding-bottom: 1rem;
+}
+
+.home-intro p:last-child {
+    margin-bottom: 0;
+}
+
 /* Show tile card styling */
 
 .home-upcoming {
     background: #f2f3f6;
     border-radius: 0.5rem;
-    margin-top: 2rem;
+    margin-top: 0;
     margin-bottom: 2rem;
+    padding-top: 1.5rem;
 }
 
 .home-upcoming__title {
+    margin-top: 0;
     margin-bottom: 0.5rem;
 }
 
