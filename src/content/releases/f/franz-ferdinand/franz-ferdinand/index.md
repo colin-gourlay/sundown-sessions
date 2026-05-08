@@ -4,6 +4,7 @@ artist: Franz Ferdinand
 label: Domino Records
 release_date: "2004"
 uk_chart_position: 3
+for_sale: true
 release_page: true
 shows:
   - "1"

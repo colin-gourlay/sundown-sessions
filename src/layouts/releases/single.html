@@ -5,6 +5,7 @@
       <header>
         <h1 class="f1">
           {{ .Title }}
+          {{ if .Params.for_sale }}<span class="for-sale-badge">Available to buy</span>{{ end }}
         </h1>
         {{ with .Params.artist }}
         <p class="f3 mid-gray">
