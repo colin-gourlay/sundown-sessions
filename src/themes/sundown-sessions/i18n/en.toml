@@ -1,0 +1,25 @@
+[more]
+other = "More Shows"
+
+[recentTitle]
+other = "Recent {{.Title }}"
+
+[by]
+other = "By"
+
+[related]
+other = "Related"
+
+[readingTime]
+one = "One minute read"
+other = "{{ .Count }} minutes read"
+
+[wordCount]
+one = "One word"
+other = "{{ .Count }} words"
+
+[homeTitle]
+other = "Go to the Sundown Sessions home page"
+
+[pageTitle]
+other = "Go to the {{ .Name }} page"

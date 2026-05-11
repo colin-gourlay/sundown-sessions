@@ -1,0 +1,29 @@
+{{ define "header" }}{{ partial "page-header.html" . }}{{ end }}
+{{ define "main" }}
+  <div class="flex-l mt2 mw8 center">
+    <article class="center cf pv5 ph3 ph4-ns mw7">
+      <header>
+        <h1 class="f1">
+          {{ .Title }}
+        </h1>
+      </header>
+      {{ if .Content }}
+      <div class="nested-copy-line-height lh-copy f4 nested-links {{ $.Param "text_color" | default "mid-gray" }}">
+        {{ .Content }}
+      </div>
+      {{ end }}
+      {{ $artistName := .Title }}
+      {{ $releases := where (where $.Site.Pages "Type" "releases") ".Params.artist" $artistName }}
+      {{ if $releases }}
+      <section class="mt4">
+        <h2 class="f3">Releases</h2>
+        <ul class="list pl0">
+          {{ range $releases.ByTitle }}
+          <li class="mb2"><a href="{{ .Permalink }}" class="link dim dark-blue">{{ .Title }}</a>{{ with .Params.release_date }} <span class="f5 mid-gray">({{ . }})</span>{{ end }}</li>
+          {{ end }}
+        </ul>
+      </section>
+      {{ end }}
+    </article>
+  </div>
+{{ end }}
