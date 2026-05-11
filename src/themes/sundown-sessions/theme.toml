@@ -1,15 +1,12 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
-
-name = "Ananke Gohugo Theme"
-license = "MIT"
-licenselink = "https://github.com/theNewDynamic/gohugo-theme-ananke/blob/master/LICENSE.md"
-description = "A Base theme for building full featured Hugo sites"
-homepage = "https://github.com/theNewDynamic/gohugo-theme-ananke"
-tags = ["website", "starter", "responsive", "Disqus", "blog", "Tachyons", "Multilingual", "Stackbit"]
-features = ["posts", "shortcodes", "related content", "comments"]
-min_version = "0.84.0"
+name        = "Sundown Sessions"
+license     = "MIT"
+licenselink = "https://github.com/colin-gourlay/sundown-sessions/blob/main/LICENSE"
+description = "Custom modern Hugo theme for the Sundown Sessions radio show"
+homepage    = "https://github.com/colin-gourlay/sundown-sessions"
+tags        = ["website", "responsive", "accessible", "custom", "music", "radio"]
+features    = ["shows", "tracks", "artists", "releases", "search"]
+min_version = "0.110.0"
 
 [author]
-  name = "theNewDynamic"
-  homepage = "https://www.thenewdynamic.com/"
+  name     = "Colin Gourlay"
+  homepage = "https://github.com/colin-gourlay"

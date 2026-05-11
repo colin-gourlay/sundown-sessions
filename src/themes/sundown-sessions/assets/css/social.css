@@ -1,0 +1,12 @@
+/* Social icon baseline – extended in theme.css via .site-socials */
+.site-socials a {
+  display: inline-flex;
+  vertical-align: middle;
+  color: inherit;
+  fill: currentColor;
+}
+
+.site-socials a svg {
+  width: 20px;
+  height: 20px;
+}

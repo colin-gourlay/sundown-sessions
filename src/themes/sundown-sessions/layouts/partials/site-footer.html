@@ -1,10 +1,11 @@
-<footer class="{{ .Site.Params.background_color_class | default "bg-black" }} bottom-0 w-100 pa3" role="contentinfo">
-  <div class="flex justify-between">
-  <a class="f4 fw4 hover-white no-underline white-70 dn dib-ns pv2 ph3" href="{{ .Site.Home.Permalink }}" >
-    {{ $start := 2024 }}
-    {{ $current := now.Year }}
-    &copy; {{ $start }}{{ if gt $current $start }}–{{ $current }}{{ end }} {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }} {{ end }}
-  </a>
+<footer class="site-footer" role="contentinfo">
+  <div class="site-footer__inner">
+    <a class="site-footer__copyright" href="{{ .Site.Home.Permalink }}">
+      {{ $start := 2024 }}
+      {{ $current := now.Year }}
+      &copy; {{ $start }}{{ if gt $current $start }}&ndash;{{ $current }}{{ end }}
+      {{ with .Site.Copyright | default .Site.Title }} {{ . | safeHTML }}{{ end }}
+    </a>
     <div>{{ partial "social-follow.html" . }}</div>
   </div>
 </footer>
