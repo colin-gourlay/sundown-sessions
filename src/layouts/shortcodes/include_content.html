@@ -1,3 +1,0 @@
-{{ $path := .Get 0 }}
-{{ $content := readFile (printf "content/%s.md" $path) }}
-{{ $.Page.RenderString $content }}

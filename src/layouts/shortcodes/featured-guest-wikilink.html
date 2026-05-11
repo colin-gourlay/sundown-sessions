@@ -1,3 +1,0 @@
-{{ $link := .Get 0 }}
-{{ $slug := .Get 0 | urlize }}
-<a href="{{ printf "%sshows/featuring-%s/#featured-band-%s" .Site.BaseURL $slug $slug | safeURL}}">{{ $link }}</a>

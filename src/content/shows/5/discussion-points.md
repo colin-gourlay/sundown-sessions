@@ -1,9 +1,0 @@
----
-purpose: discussion-points
----
-- _Siobhan Wilson_
-  - {{< new-tab-link "[It Must Have Been The Moon](https://www.youtube.com/watch?v=AyC-VbcO0Z0)" >}}
-- _Electric Six_
-  - {{< new-tab-link "[Ticketing Info: Queens Hall, Edinburgh (30th November 2024)](https://www.thequeenshall.net/whats-on/electric-six)" >}}
-- _British Electric Foundation_
-  - {{< new-tab-link "[Wikipedia](https://en.wikipedia.org/wiki/British_Electric_Foundation)" >}}

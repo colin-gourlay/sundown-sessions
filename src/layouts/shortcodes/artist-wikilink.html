@@ -1,6 +1,0 @@
-{{ $link := .Get 0 }}
-{{ $slugOverride := .Get 1 }}
-{{ $firstChar := index $link 0 | printf "%c" | lower }}
-{{ $slug := $link | urlize }}
-{{ with $slugOverride }}{{ $slug = . | urlize }}{{ end }}
-<a href="{{ printf "artists/%s/%s" $firstChar $slug | absURL }}">{{ $link }}</a>
