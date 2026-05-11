@@ -1,0 +1,8 @@
+noJSConfigInAssets = true
+useResourceCacheWhen = 'fallback'
+
+[buildStats]
+disableClasses = false
+disableIDs = false
+disableTags = false
+enable = true

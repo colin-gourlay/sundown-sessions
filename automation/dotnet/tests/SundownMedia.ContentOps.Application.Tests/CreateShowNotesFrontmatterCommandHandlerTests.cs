@@ -1,0 +1,311 @@
+using ErrorOr;
+using FluentAssertions;
+using NSubstitute;
+using SundownMedia.ContentOps.Application.Abstractions;
+using SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatter;
+
+namespace SundownMedia.ContentOps.Application.Tests;
+
+public sealed class CreateShowNotesFrontmatterCommandHandlerTests
+{
+    private static readonly DateTimeOffset BroadcastDate = new DateTimeOffset(2024, 6, 5, 22, 0, 0, TimeSpan.Zero);
+
+    [Fact]
+    public async Task Handle_ReturnsError_WhenOutputDirectoryDoesNotExist()
+    {
+        var writer = Substitute.For<IShowNotesWriter>();
+        var logoService = Substitute.For<IShowLogoService>();
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
+
+        var command = new CreateShowNotesFrontmatterCommand(
+            1,
+            "The Big Now",
+            BroadcastDate,
+            ["The Big Now", "IST IST"],
+            "/does/not/exist/index.md",
+            Guid.NewGuid().ToString("D"));
+
+        var result = await handler.Handle(command, CancellationToken.None);
+
+        result.IsError.Should().BeTrue();
+        await writer.DidNotReceive().WriteAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
+    }
+
+    [Fact]
+    public async Task Handle_WritesFile_WhenOutputDirectoryExists()
+    {
+        var writer = Substitute.For<IShowNotesWriter>();
+        var logoService = Substitute.For<IShowLogoService>();
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
+        var tempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+        var outputPath = Path.Combine(tempDir, "index.md");
+
+        try
+        {
+            Directory.CreateDirectory(tempDir);
+
+            var correlationId = Guid.NewGuid().ToString("D");
+            var command = new CreateShowNotesFrontmatterCommand(
+                1,
+                "The Big Now",
+                BroadcastDate,
+                ["The Big Now", "IST IST"],
+                outputPath,
+                correlationId);
+
+            var result = await handler.Handle(command, CancellationToken.None);
+
+            result.IsError.Should().BeFalse();
+            result.Value.OutputPath.Should().Be(outputPath);
+            result.Value.CorrelationId.Should().Be(correlationId);
+
+            await writer.Received(1).WriteAsync(
+                Arg.Is(outputPath),
+                Arg.Any<string>(),
+                Arg.Any<CancellationToken>());
+        }
+        finally
+        {
+            if (Directory.Exists(tempDir))
+            {
+                Directory.Delete(tempDir, recursive: true);
+            }
+        }
+    }
+
+    [Fact]
+    public async Task Handle_DownloadsLogo_WhenSpotifyEpisodeIdProvided()
+    {
+        var writer = Substitute.For<IShowNotesWriter>();
+        var logoService = Substitute.For<IShowLogoService>();
+        logoService
+            .DownloadLogoAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+            .Returns(Result.Success);
+
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
+        var tempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+        var outputPath = Path.Combine(tempDir, "index.md");
+
+        try
+        {
+            Directory.CreateDirectory(tempDir);
+
+            var command = new CreateShowNotesFrontmatterCommand(
+                1,
+                "The Big Now",
+                BroadcastDate,
+                ["The Big Now", "IST IST"],
+                outputPath,
+                Guid.NewGuid().ToString("D"),
+                SpotifyEpisodeId: "abc123");
+
+            var result = await handler.Handle(command, CancellationToken.None);
+
+            result.IsError.Should().BeFalse();
+
+            await logoService.Received(1).DownloadLogoAsync(
+                Arg.Is("abc123"),
+                Arg.Is(Path.Combine(tempDir, "1-show-logo.jpeg")),
+                Arg.Any<CancellationToken>());
+        }
+        finally
+        {
+            if (Directory.Exists(tempDir))
+            {
+                Directory.Delete(tempDir, recursive: true);
+            }
+        }
+    }
+
+    [Fact]
+    public async Task Handle_ReturnsError_WhenLogoDownloadFails()
+    {
+        var writer = Substitute.For<IShowNotesWriter>();
+        var logoService = Substitute.For<IShowLogoService>();
+        logoService
+            .DownloadLogoAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>())
+            .Returns(Error.Failure("ShowLogo.SpotifyError", "Failed to retrieve episode from Spotify."));
+
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
+        var tempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+        var outputPath = Path.Combine(tempDir, "index.md");
+
+        try
+        {
+            Directory.CreateDirectory(tempDir);
+
+            var command = new CreateShowNotesFrontmatterCommand(
+                1,
+                "The Big Now",
+                BroadcastDate,
+                ["The Big Now", "IST IST"],
+                outputPath,
+                Guid.NewGuid().ToString("D"),
+                SpotifyEpisodeId: "bad-id");
+
+            var result = await handler.Handle(command, CancellationToken.None);
+
+            result.IsError.Should().BeTrue();
+            await writer.DidNotReceive().WriteAsync(Arg.Any<string>(), Arg.Any<string>(), Arg.Any<CancellationToken>());
+        }
+        finally
+        {
+            if (Directory.Exists(tempDir))
+            {
+                Directory.Delete(tempDir, recursive: true);
+            }
+        }
+    }
+
+    [Fact]
+    public async Task Handle_DoesNotCallLogoService_WhenNoSpotifyEpisodeId()
+    {
+        var writer = Substitute.For<IShowNotesWriter>();
+        var logoService = Substitute.For<IShowLogoService>();
+        var handler = new CreateShowNotesFrontmatterCommandHandler(writer, logoService);
+        var tempDir = Path.Combine(Path.GetTempPath(), Path.GetRandomFileName());
+        var outputPath = Path.Combine(tempDir, "index.md");
+
+        try
+        {
+            Directory.CreateDirectory(tempDir);
+
+            var command = new CreateShowNotesFrontmatterCommand(
+                1,
+                "The Big Now",
+                BroadcastDate,
+                ["The Big Now", "IST IST"],
+                outputPath,
+                Guid.NewGuid().ToString("D"));
+
+            await handler.Handle(command, CancellationToken.None);
+
+            await logoService.DidNotReceive().DownloadLogoAsync(
+                Arg.Any<string>(),
+                Arg.Any<string>(),
+                Arg.Any<CancellationToken>());
+        }
+        finally
+        {
+            if (Directory.Exists(tempDir))
+            {
+                Directory.Delete(tempDir, recursive: true);
+            }
+        }
+    }
+
+    [Fact]
+    public void Build_ContainsFrontmatterFields()
+    {
+        var command = new CreateShowNotesFrontmatterCommand(
+            1,
+            "The Big Now",
+            BroadcastDate,
+            ["The Big Now", "IST IST", "Nick Cave & The Bad Seeds"],
+            "/tmp/index.md",
+            Guid.NewGuid().ToString("D"));
+
+        var content = ShowNotesFrontmatterBuilder.Build(command);
+
+        content.Should().Contain("title: 'Show #1: Broadcast 5th June 2024'");
+        content.Should().Contain("slug: 'featuring-the-big-now'");
+        content.Should().Contain("description: 'featuring The Big Now'");
+        content.Should().Contain("featured_image: '1-show-logo.jpeg'");
+        content.Should().Contain("date: 2024-06-05T22:00:00+00:00");
+        content.Should().Contain("draft: true");
+        content.Should().Contain("- 'The Big Now'");
+        content.Should().Contain("- 'IST IST'");
+        content.Should().Contain("- 'Nick Cave & The Bad Seeds'");
+        content.Should().Contain("tags:");
+        content.Should().Contain("{{< include_content \"/shows/1/listen-again\" >}}");
+        content.Should().Contain("{{< include_content \"/shows/1/playlist\" >}}");
+        content.Should().Contain("{{< include_content \"/shows/1/featured-guest\" >}}");
+        content.Should().Contain("{{< include_content \"/shows/1/discussion-points\" >}}");
+        content.Should().Contain("{{< include_content \"/shows/1/track-info\" >}}");
+    }
+
+    [Fact]
+    public void Build_ContainsTags_WithArtistsAndCharity()
+    {
+        var command = new CreateShowNotesFrontmatterCommand(
+            4,
+            "Kenny Armour from ANDYSMANCLUB",
+            BroadcastDate,
+            ["Kenny Armour from ANDYSMANCLUB", "Angelfish", "Skids"],
+            "/tmp/index.md",
+            Guid.NewGuid().ToString("D"),
+            Charity: "ANDYSMANCLUB");
+
+        var content = ShowNotesFrontmatterBuilder.Build(command);
+
+        content.Should().Contain("tags:");
+        content.Should().Contain("- 'Kenny Armour from ANDYSMANCLUB'");
+        content.Should().Contain("- 'Angelfish'");
+        content.Should().Contain("- 'Skids'");
+        content.Should().Contain("- 'ANDYSMANCLUB'");
+    }
+
+    [Fact]
+    public void Build_ContainsTags_WithoutCharity()
+    {
+        var command = new CreateShowNotesFrontmatterCommand(
+            1,
+            "The Big Now",
+            BroadcastDate,
+            ["The Big Now", "IST IST"],
+            "/tmp/index.md",
+            Guid.NewGuid().ToString("D"));
+
+        var content = ShowNotesFrontmatterBuilder.Build(command);
+
+        content.Should().Contain("tags:");
+        content.Should().Contain("- 'The Big Now'");
+        content.Should().Contain("- 'IST IST'");
+    }
+
+    [Theory]
+    [InlineData(1, 6, "1st")]
+    [InlineData(2, 6, "2nd")]
+    [InlineData(3, 6, "3rd")]
+    [InlineData(4, 6, "4th")]
+    [InlineData(5, 6, "5th")]
+    [InlineData(11, 6, "11th")]
+    [InlineData(12, 6, "12th")]
+    [InlineData(13, 6, "13th")]
+    [InlineData(21, 6, "21st")]
+    [InlineData(22, 6, "22nd")]
+    [InlineData(23, 6, "23rd")]
+    [InlineData(31, 1, "31st")]
+    public void FormatBroadcastDate_ProducesCorrectOrdinal(int day, int month, string expectedOrdinal)
+    {
+        var date = new DateTimeOffset(2024, month, day, 22, 0, 0, TimeSpan.Zero);
+
+        var formatted = ShowNotesFrontmatterBuilder.FormatBroadcastDate(date);
+
+        formatted.Should().StartWith(expectedOrdinal);
+    }
+
+    [Fact]
+    public void ToSlug_ConvertsToLowercaseWithHyphens()
+    {
+        var slug = ShowNotesFrontmatterBuilder.ToSlug("The Big Now");
+
+        slug.Should().Be("the-big-now");
+    }
+
+    [Fact]
+    public void ToSlug_RemovesSpecialCharacters()
+    {
+        var slug = ShowNotesFrontmatterBuilder.ToSlug("Nick Cave & The Bad Seeds");
+
+        slug.Should().Be("nick-cave-the-bad-seeds");
+    }
+
+    [Fact]
+    public void EscapeYamlSingleQuoted_EscapesApostrophes()
+    {
+        var escaped = ShowNotesFrontmatterBuilder.EscapeYamlSingleQuoted("O'Hara");
+
+        escaped.Should().Be("O''Hara");
+    }
+}

@@ -1,0 +1,52 @@
+name: CodeQL ContentOps
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - automation/dotnet/**
+      - .github/workflows/codeql-contentops.yml
+  pull_request:
+    paths:
+      - automation/dotnet/**
+      - .github/workflows/codeql-contentops.yml
+  schedule:
+    - cron: '23 3 * * 1'
+
+permissions:
+  actions: read
+  contents: read
+  security-events: write
+
+env:
+  DOTNET_DIR: automation/dotnet
+
+jobs:
+  analyse:
+    name: Analyse (csharp)
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source using v4.3.1
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Initialise CodeQL using v3
+        uses: github/codeql-action/init@v3
+        with:
+          languages: csharp
+
+      - name: Setup .NET using v4.3.1
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9
+        with:
+          global-json-file: ${{ env.DOTNET_DIR }}/global.json
+
+      - name: Restore
+        run: dotnet restore SundownMedia.ContentOps.sln
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Build
+        run: dotnet build SundownMedia.ContentOps.sln --configuration Release --no-restore
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Perform CodeQL analysis using v3
+        uses: github/codeql-action/analyze@v3

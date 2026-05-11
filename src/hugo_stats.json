@@ -1,0 +1,12 @@
+{
+  "htmlElements": {
+    "tags": [
+      "a",
+      "h1",
+      "li",
+      "ul"
+    ],
+    "classes": null,
+    "ids": null
+  }
+}

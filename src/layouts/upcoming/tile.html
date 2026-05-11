@@ -1,0 +1,25 @@
+{{ $featured_image := partial "func/GetFeaturedImage.html" . }}
+<article class="show-tile br2 overflow-hidden bg-white">
+    <a href="{{.RelPermalink}}" class="db no-underline" aria-label="{{ .Title }}">
+        <div class="show-tile__image bg-dark-gray"{{ if $featured_image }} style="{{ (printf "background-image: url('%s');" $featured_image) | safeCSS }}"{{ end }}>
+            <div class="show-tile__gradient">
+                <h2 class="show-tile__title white athelas">
+                    {{ .Title }}
+                </h2>
+            </div>
+            <span class="show-tile__badge">Coming Soon</span>
+        </div>
+    </a>
+    <div class="pa3">
+        {{ if not .Date.IsZero }}
+        <time class="f7 ttu tracked silver db mb2" {{ printf `datetime="%s"` (.Date.Format "2006-01-02T15:04:05Z07:00") | safeHTMLAttr }}>
+            {{- .Date | time.Format "2 January 2006" -}}
+        </time>
+        {{ end }}
+        <div class="f6 lh-copy nested-copy-line-height nested-links show-tile__summary">
+            {{ .Summary }}
+        </div>
+        <a href="{{.RelPermalink}}"
+           class="db mt3 f7 link dim white bg-near-black br2 pv2 ph3 tc ttu tracked">{{ $.Param "read_more_copy" }}</a>
+    </div>
+</article>
