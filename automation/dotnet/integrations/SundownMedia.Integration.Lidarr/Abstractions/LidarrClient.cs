@@ -1,0 +1,17 @@
+// <copyright file="LidarrClient.cs" company="SundownMedia">
+// Copyright (c) SundownMedia. All rights reserved.
+// </copyright>
+
+namespace SundownMedia.Integration.Lidarr.Abstractions
+{
+    using SundownMedia.Integration.Lidarr.Models;
+
+    public sealed class LidarrClient : ILidarrClient
+    {
+        public Task<LidarrResult<bool>> RefreshLibraryAsync(LidarrRelease release, CancellationToken cancellationToken)
+        {
+            var result = new LidarrResult<bool>(false, false, "NotImplemented", "Lidarr client is a reusable integration contract stub.");
+            return Task.FromResult(result);
+        }
+    }
+}

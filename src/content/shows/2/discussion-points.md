@@ -1,0 +1,16 @@
+---
+purpose: discussion-points
+---
+- _Royal Blood_ 
+  - {{< new-tab-link "[Touring](https://twitter.com/royalblooduk/status/1777244995059118447/photo/2)" >}} to mark the 10th anniversary of **_Royal Blood_**
+- _White Lies_
+  - Gigs lined up in {{< new-tab-link "[July](https://www.seetickets.com/tour/white-lies)" >}}
+- _The Doors_
+  - {{< new-tab-link "[The Doors: Dance On Fire (VHS)](https://www.amazon.co.uk/Doors-Dance-Fire-VHS/dp/B00004R67N)" >}}
+- _IST IST_
+  - Their 4th album **_Light A Bigger Fire_** will be released on 20th September - available to {{< new-tab-link "[pre-order here](https://www.ististmusic.com/)" >}}
+- _Nick Cave & The Bad Seeds_
+  - The new album **_Wild God_** will be released on 30 August - available to {{< new-tab-link "[pre-order here](https://linktr.ee/nickcave)" >}}
+  - {{< new-tab-link "[The Wild God Tour - UK & Europe 2024](https://www.nickcave.com/tour-dates/)" >}}
+- _The Cult_
+  - {{< new-tab-link "[8424 Tour (UK Leg)](https://x.com/officialcult/status/1783137338777886916/photo/1)" >}}
