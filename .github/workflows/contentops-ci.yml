@@ -1,0 +1,71 @@
+name: ContentOps CI
+
+on:
+  pull_request:
+    paths:
+      - automation/dotnet/**
+      - .github/workflows/contentops-ci.yml
+  push:
+    branches:
+      - main
+    paths:
+      - automation/dotnet/**
+      - .github/workflows/contentops-ci.yml
+
+permissions:
+  contents: read
+
+env:
+  DOTNET_DIR: automation/dotnet
+
+jobs:
+  build-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source using v4.3.1
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+
+      - name: Setup .NET using v4.3.1
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9
+        with:
+          global-json-file: ${{ env.DOTNET_DIR }}/global.json
+
+      - name: Restore
+        run: dotnet restore SundownMedia.ContentOps.sln
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Build
+        run: dotnet build SundownMedia.ContentOps.sln --configuration Release --no-restore
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Test
+        run: dotnet test SundownMedia.ContentOps.sln --configuration Release --no-build --logger "trx;LogFileName=test-results.trx" /p:CollectCoverage=true /p:CoverletOutputFormat=cobertura /p:CoverletOutput=TestResults/coverage/
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Install ReportGenerator
+        if: always()
+        run: |
+          dotnet tool install --global dotnet-reportgenerator-globaltool --version 5.*
+          echo "$HOME/.dotnet/tools" >> "$GITHUB_PATH"
+
+      - name: Publish coverage summary
+        if: always()
+        run: |
+          reportgenerator \
+            "-reports:${{ env.DOTNET_DIR }}/**/TestResults/**/coverage.cobertura.xml" \
+            "-targetdir:${{ env.DOTNET_DIR }}/TestResults/CoverageReport" \
+            "-reporttypes:MarkdownSummaryGithub;Cobertura"
+          if [ -f "${{ env.DOTNET_DIR }}/TestResults/CoverageReport/SummaryGithub.md" ]; then
+            cat "${{ env.DOTNET_DIR }}/TestResults/CoverageReport/SummaryGithub.md" >> "$GITHUB_STEP_SUMMARY"
+          fi
+
+      - name: Upload test results using v4.6.2
+        if: always()
+        uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
+        with:
+          name: contentops-test-results
+          path: |
+            automation/dotnet/**/TestResults/*.trx
+            automation/dotnet/**/TestResults/*/coverage.cobertura.xml
+            automation/dotnet/TestResults/CoverageReport/**
+          if-no-files-found: warn

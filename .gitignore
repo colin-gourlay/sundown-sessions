@@ -1,0 +1,9 @@
+/resources/
+/src/public/
+/src/resources/
+/.idea/
+
+# ContentOps .NET artifacts
+automation/dotnet/**/bin/
+automation/dotnet/**/obj/
+automation/dotnet/**/TestResults/
