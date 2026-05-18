@@ -12,24 +12,36 @@
     background: #f2f3f6;
     border-radius: 0.5rem;
     margin-top: 0;
-    margin-bottom: 2rem;
+    margin-bottom: 3rem;
     padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
 }
 
 .home-upcoming__title {
     margin-top: 0;
-    margin-bottom: 0.5rem;
+    margin-bottom: 0;
 }
 
 .home-upcoming__grid {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
     gap: 1.5rem;
 }
 
 .home-upcoming__item {
-    max-width: 24rem;
+    width: 100%;
+}
+
+.home-upcoming__empty {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 32rem;
+}
+
+@media (min-width: 60em) {
+    .home-upcoming__grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
 }
 
 .show-tile {
