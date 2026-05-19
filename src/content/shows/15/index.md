@@ -94,4 +94,4 @@ draft: false
 ---
 
 ## Track info
-{{< include_content "/shows/15/track-info" >}}
+{{< track-info "/shows/15/track-info" >}}
