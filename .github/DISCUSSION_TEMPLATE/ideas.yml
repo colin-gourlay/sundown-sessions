@@ -1,0 +1,48 @@
+title: "[Idea] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to share an early-stage idea or brainstorm. There is no need for a fully-formed solution — rough thoughts and half-formed concepts are welcome here. If the idea develops into something concrete, it can be converted into an issue or a Design Proposal discussion.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: The Idea
+      description: What is the idea? Describe it in a sentence or two.
+      placeholder: e.g. Generate per-show artist biography pages automatically from Lidarr metadata.
+    validations:
+      required: true
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: Why is this worth exploring? What problem or opportunity does it address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: rough-shape
+    attributes:
+      label: Rough Shape (optional)
+      description: If you have any early thoughts on how this might work, sketch them out here. Diagrams, pseudocode, or bullet points are all fine.
+    validations:
+      required: false
+
+  - type: textarea
+    id: open-questions
+    attributes:
+      label: Open Questions
+      description: What do you not yet know? What would need to be resolved before this becomes actionable?
+    validations:
+      required: false
+
+  - type: textarea
+    id: linked-refs
+    attributes:
+      label: Related Discussions / Issues
+      description: Link any related discussions, issues, or prior art.
+    validations:
+      required: false
