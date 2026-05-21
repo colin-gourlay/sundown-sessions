@@ -12,9 +12,13 @@
     background: #f2f3f6;
     border-radius: 0.5rem;
     margin-top: 0;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     padding-top: 1.5rem;
     padding-bottom: 1.5rem;
+}
+
+.home-recent__title {
+    margin-top: 0;
 }
 
 .home-upcoming__title {
