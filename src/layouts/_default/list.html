@@ -5,15 +5,21 @@
   <!-- render content from: content/shows/_index.md  -->
   {{- .Content -}}
   </section>
+  {{ $pages := .Paginator.Pages }}
+  {{ if eq .Section "shows" }}
+    {{ $pages = where .Pages "File.Path" "shows/1/index.md" }}
+  {{ end }}
   <section class="flex-ns flex-wrap justify-around mt5">
     <!-- render the summary of each show -->
-    {{ range .Paginator.Pages }}
+    {{ range $pages }}
       <div class="relative w-100 w-30-l mb4 bg-white">
           {{ .Render "tile" }}
       </div>
     {{ end }}
   </section>
+    {{ if ne .Section "shows" }}
     <!-- render pagination controls -->
     {{- template "_internal/pagination.html" . -}}
+    {{ end }}
   </article>
 {{ end }}

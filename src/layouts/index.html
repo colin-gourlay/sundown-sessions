@@ -5,11 +5,11 @@
   </article>
   {{/* Show upcoming shows */}}
   {{ $upcoming := where .Site.RegularPages "Section" "upcoming" }}
+  {{ if gt (len $upcoming) 0 }}
   <div class="home-upcoming pa3 pa4-ns w-100 w-70-ns center">
     {{ with .Site.GetPage "section" "upcoming" }}
     <h1 class="home-upcoming__title tc">{{ .Title }}</h1>
     {{ end }}
-    {{ if gt (len $upcoming) 0 }}
     <section class="home-upcoming__grid mt3">
       {{ range $upcoming }}
       <div class="home-upcoming__item relative">
@@ -17,14 +17,12 @@
       </div>
       {{ end }}
     </section>
-    {{ else }}
-    <p class="home-upcoming__empty tc mt3 mb0">More upcoming sessions will be announced soon.</p>
-    {{ end }}
   </div>
+  {{ end }}
   {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
   {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
   {{/* Create a variable with that section to use in multiple places. */}}
-  {{ $section := where .Site.RegularPages "Section" "in" $mainSections }}
+  {{ $section := where (where .Site.RegularPages "Section" "in" $mainSections) "File.Path" "shows/1/index.md" }}
   {{/* Check to see if the section is defined for ranging through it */}}
   {{ $section_count := len $section }}
   {{ if ge $section_count 1 }}
