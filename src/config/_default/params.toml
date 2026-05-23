@@ -1,7 +1,7 @@
 favicon = "favicon.ico"
 custom_css = ["css/tables.css", "css/live-player.css", "css/tiles.css", "css/pills.css"]
 mainSections = ["shows"]
-# Stream URL for a live broadcast. Leave empty to hide the player until a stream is available.
+# Stream URL for a live broadcast. Leave blank to hide the player until a stream is available.
 listen_live_stream_url = ""
 
 [[ananke_socials]]
