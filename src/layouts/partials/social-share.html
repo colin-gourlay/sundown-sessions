@@ -4,14 +4,13 @@
   {{ $pageURL := .Permalink | absURL }}
   {{ $tweetText := .Title }}
   {{ if and (eq .Section "shows") (not .Date.IsZero) }}
-    {{ $stationHandle := .Site.Params.radio_station_x_handle | default "@eastcoastfm" }}
     {{ $day := .Date.Day }}
     {{ $suffix := "th" }}
     {{ if or (eq $day 1) (eq $day 21) (eq $day 31) }}{{ $suffix = "st" }}{{ end }}
     {{ if or (eq $day 2) (eq $day 22) }}{{ $suffix = "nd" }}{{ end }}
     {{ if or (eq $day 3) (eq $day 23) }}{{ $suffix = "rd" }}{{ end }}
     {{ $formattedDate := printf "%d%s %s %d" $day $suffix (.Date.Format "January") .Date.Year }}
-    {{ $tweetText = printf "Unravel the full story behind the show broadcast %s on %s. Take a look!" $stationHandle $formattedDate }}
+    {{ $tweetText = printf "Unravel the full story behind the Sundown Sessions broadcast from %s. Take a look!" $formattedDate }}
   {{ end }}
   {{ range $socials }}
     {{ $shareURL := "" }}

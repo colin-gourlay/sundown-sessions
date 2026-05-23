@@ -1,6 +1,7 @@
 /resources/
 /src/public/
 /src/resources/
+/src/hugo_stats.json
 /.idea/
 
 # ContentOps .NET artifacts
