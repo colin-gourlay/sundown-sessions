@@ -22,7 +22,7 @@
   {{/* Define a section to pull recent posts from. For Hugo 0.20 this will default to the section with the most number of pages. */}}
   {{ $mainSections := .Site.Params.mainSections | default (slice "post") }}
   {{/* Create a variable with that section to use in multiple places. */}}
-  {{ $section := where (where .Site.RegularPages "Section" "in" $mainSections) "File.Path" "shows/1/index.md" }}
+  {{ $section := first 1 (sort (where .Site.RegularPages "Section" "shows") "Date" "asc") }}
   {{/* Check to see if the section is defined for ranging through it */}}
   {{ $section_count := len $section }}
   {{ if ge $section_count 1 }}

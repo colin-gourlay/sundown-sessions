@@ -5,9 +5,11 @@
   <!-- render content from: content/shows/_index.md  -->
   {{- .Content -}}
   </section>
-  {{ $pages := .Paginator.Pages }}
+  {{ $pages := slice }}
   {{ if eq .Section "shows" }}
-    {{ $pages = where .Pages "File.Path" "shows/1/index.md" }}
+    {{ $pages = first 1 (sort .Pages "Date" "asc") }}
+  {{ else }}
+    {{ $pages = .Paginator.Pages }}
   {{ end }}
   <section class="flex-ns flex-wrap justify-around mt5">
     <!-- render the summary of each show -->
