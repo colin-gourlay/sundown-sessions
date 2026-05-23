@@ -1,13 +1,13 @@
 ---
 title: 'About'
-description: 'A community radio show broadcasting from Haddington, Scotland'
+description: 'A curated music show and archive from Haddington, Scotland'
 menu:
   main:
     weight: 3
 ---
 {{< figure src="about-sundown-sessions.png" title="Colin Gourlay in Studio 2" >}}
 
-The _Sundown Sessions_ is a show broadcast from the East Coast FM radio station in Haddington, Scotland. The show can be heard on 107 FM and is also streamed online.
+The _Sundown Sessions_ is a curated music show and archive from Haddington, Scotland — part late-evening mixtape, part conversation, and part home for the songs, artists, and stories that deserve a little longer in the light.
 
 The purpose and aims of the show include:
 
