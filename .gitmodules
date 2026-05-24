@@ -1,0 +1,6 @@
+# The Blowfish theme is pinned to a specific release tag below.
+# To bump it, fetch the new tag inside src/themes/blowfish and commit the
+# updated submodule pointer; do not add a `branch = ...` entry here.
+[submodule "src/themes/blowfish"]
+	path = src/themes/blowfish
+	url = https://github.com/nunocoracao/blowfish.git
