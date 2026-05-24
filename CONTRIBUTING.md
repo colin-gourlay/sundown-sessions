@@ -7,6 +7,18 @@ This guide defines the repository branching convention and pull request workflow
 - `src/` (Hugo website)
 - `automation/dotnet/` (ContentOps automation)
 
+> **Note — Blowfish migration in progress.** The Hugo site is being moved onto
+> the [Blowfish](https://github.com/nunocoracao/blowfish) theme in small,
+> independently mergeable slices. Until the cutover PR lands, the live theme
+> remains `sundown-sessions`. When working in `src/`:
+>
+> - Run `git submodule update --init --recursive` after cloning so the
+>   Blowfish theme under `src/themes/blowfish` is materialised.
+> - Do not edit files inside `src/themes/blowfish/`. Customisations belong in
+>   project-level overrides under `src/layouts/` and `src/assets/`.
+> - Avoid touching `src/themes/sundown-sessions/` unless the change is
+>   specifically scoped to the legacy theme.
+
 ## Branching Model
 
 This repository uses trunk-based development.

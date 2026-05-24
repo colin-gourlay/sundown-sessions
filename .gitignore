@@ -4,6 +4,9 @@
 /src/hugo_stats.json
 /.idea/
 
+# Blowfish theme build artefacts (generated during Hugo builds)
+/src/assets/css/compiled/
+
 # ContentOps .NET artifacts
 automation/dotnet/**/bin/
 automation/dotnet/**/obj/
