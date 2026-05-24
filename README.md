@@ -61,6 +61,8 @@ Prerequisites:
 
 > **Blowfish migration in progress.** The site is being staged onto the
 > [Blowfish](https://github.com/nunocoracao/blowfish) theme across several PRs.
+> The investigation and recommendation behind this decision are recorded in
+> [docs/theme-investigation.md](docs/theme-investigation.md).
 > The live build continues to use the existing `sundown-sessions` theme until
 > the cutover slice lands. Blowfish is vendored as a git submodule under
 > `src/themes/blowfish`; remember to run `git submodule update --init --recursive`
