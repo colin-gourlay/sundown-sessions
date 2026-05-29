@@ -59,17 +59,11 @@ Prerequisites:
 
 - Hugo Extended (current stable release)
 
-> **Blowfish migration in progress.** The site is being staged onto the
-> [Blowfish](https://github.com/nunocoracao/blowfish) theme across several PRs.
-> The live build continues to use the existing `sundown-sessions` theme until
-> the cutover slice lands. Blowfish is vendored as a git submodule under
-> `src/themes/blowfish`; remember to run `git submodule update --init --recursive`
-> after cloning. To preview the in-progress Blowfish build locally:
->
-> ```powershell
-> Set-Location src
-> hugo server --config config/_default/hugo.toml,config/blowfish/hugo.toml
-> ```
+The site uses the [Blowfish](https://github.com/nunocoracao/blowfish) theme,
+vendored as a git submodule under `src/themes/blowfish`. After cloning, run
+`git submodule update --init --recursive` to fetch it. The investigation and
+decision behind adopting Blowfish are recorded in
+[docs/theme-investigation.md](docs/theme-investigation.md).
 
 Run locally from the repository root:
 

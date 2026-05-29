@@ -1,8 +1,14 @@
 title = 'Sundown Sessions'
 baseURL = 'http://localhost:1313/'
 languageCode = 'en-GB'
-theme = 'sundown-sessions'
+theme = 'blowfish'
 copyright = 'Colin Gourlay'
 enableGitInfo = true
 timeZone = 'Europe/London'
 buildFuture = true
+enableRobotsTXT = true
+summaryLength = 0
+enableEmoji = true
+
+[pagination]
+  pagerSize = 100
