@@ -11,6 +11,7 @@ on:
     paths:
       - src/**
       - .github/workflows/deploy-github-pages.yml
+  workflow_dispatch:
 
 permissions:
   contents: read
@@ -81,7 +82,7 @@ jobs:
           path: ./src/public
 
   deploy:
-    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
