@@ -1,33 +1,98 @@
-favicon = "favicon.ico"
-custom_css = ["css/tables.css", "css/live-player.css", "css/tiles.css", "css/pills.css"]
-mainSections = ["shows"]
-# Stream URL for a live broadcast. Leave blank to hide the player until a stream is available.
+# -- Blowfish theme parameters --
+# Reference: https://blowfish.page/docs/configuration/#theme-parameters
+
+colorScheme = "blowfish"
+defaultAppearance = "auto"
+autoSwitchAppearance = true
+
+enableSearch = true
+enableCodeCopy = false
+
+# Sections that contribute to listings such as the homepage recent list.
+mainSections = ["shows", "releases", "artists"]
+
+# Stream URL for a live broadcast. Reintroduced as a Blowfish-shaped feature in
+# a follow-up slice; kept here so editorial config remains in a single file.
 listen_live_stream_url = ""
 
-[[ananke_socials]]
-name = "facebook"
-url = "https://www.facebook.com/sundownsessionsuk"
+[header]
+  layout = "basic"
 
-[[ananke_socials]]
-name = "instagram"
-url = "https://www.instagram.com/sundownsessionsshow"
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = true
+  showAppearanceSwitcher = true
+  showScrollToTop = true
 
-[[ananke_socials]]
-name = "tiktok"
-url = "https://www.tiktok.com/@sundownsessionsshow"
+[homepage]
+  layout = "page"
+  showRecent = true
+  showRecentItems = 5
+  showMoreLink = false
 
-[[ananke_socials]]
-name = "pinterest"
-url = "https://www.pinterest.co.uk/sundownsessionsshow/"
+[article]
+  showDate = true
+  showDateUpdated = false
+  showAuthor = false
+  showHero = true
+  heroStyle = "basic"
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = false
+  showRelatedContent = false
+  showTaxonomies = true
+  showWordCount = false
+  sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "email"]
+  showZenMode = false
 
-[[ananke_socials]]
-name = "twitter"
-url = "https://x.com/sundown_session"
+[list]
+  showHero = false
+  showBreadcrumbs = true
+  showSummary = true
+  showTableOfContents = false
+  showCards = true
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = true
+  constrainItemsWidth = false
 
-[[ananke_socials]]
-name = "mastodon"
-url = "https://mastodon.scot/@sundown_sessions"
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
 
-[[ananke_socials]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/colingourlay"
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  showBreadcrumbs = true
+  showSummary = false
+
+[term]
+  showHero = false
+  showBreadcrumbs = true
+  showSummary = false
+  showWordCount = false
+  showPagination = true
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = false
+
+# -- Author --
+# `[params.author].links` is the Blowfish equivalent of the prior project's
+# `[[socials]]` / `[[ananke_socials]]` entries. Each link is `{ service = "url" }`.
+[author]
+  name = "Sundown Sessions"
+  headline = "Eclectic music sessions for listeners who want to discover beyond algorithmic playlists."
+  links = [
+    { facebook = "https://www.facebook.com/sundownsessionsuk" },
+    { instagram = "https://www.instagram.com/sundownsessionsshow" },
+    { tiktok = "https://www.tiktok.com/@sundownsessionsshow" },
+    { pinterest = "https://www.pinterest.co.uk/sundownsessionsshow/" },
+    { twitter = "https://x.com/sundown_session" },
+    { mastodon = "https://mastodon.scot/@sundown_sessions" },
+    { linkedin = "https://www.linkedin.com/in/colingourlay" },
+  ]

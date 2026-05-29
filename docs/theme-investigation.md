@@ -1,17 +1,15 @@
 # Hugo Theme Investigation and Recommendation
 
-Status: **Investigation complete — Blowfish recommended**
+Status: **Blowfish adopted as the active site theme**
 Scope: Visual/UX modernisation of the Sundown Sessions Hugo website.
 Constraint: Existing content must not be changed or lost.
 
 This document records the investigation requested by the "Investigate Modern
-Hugo Theme Alternatives Without Changing Existing Content" issue. It audits the
-current site, compares candidate themes, summarises the prototype already
-staged in this repository, and records the recommended direction so that any
-follow-up migration work can proceed against an agreed baseline.
-
-No site content, layouts, or production configuration are modified by this
-document.
+Hugo Theme Alternatives Without Changing Existing Content" issue, the
+candidate comparison and recommendation it produced, and the subsequent
+adoption of Blowfish as the active site theme. Section 1 reflects the site
+audit at the time of the investigation; Section 3 reflects the post-adoption
+state.
 
 ## 1. Current Site Audit
 
@@ -158,88 +156,90 @@ and content-model compatibility, and is the only candidate with a
 content-type vocabulary that maps directly onto shows/artists/releases
 without restructuring existing pages.
 
-## 3. Prototype: Blowfish Parallel Build
+## 3. Adoption: Blowfish as the Active Theme
 
-A prototype has already been staged in this repository so that reviewers can
-preview Blowfish without disturbing the live build:
+Blowfish is now the site's active theme:
 
 - Theme vendored as a Git submodule under
   [`src/themes/blowfish/`](../src/themes/blowfish/), pinned via
   [`.gitmodules`](../.gitmodules) (no tracking branch — bumps happen via an
   explicit submodule pointer commit).
-- Parallel Hugo configuration under
-  [`src/config/blowfish/hugo.toml`](../src/config/blowfish/hugo.toml) and
-  [`src/config/blowfish/params.toml`](../src/config/blowfish/params.toml).
-  Blowfish defaults are kept where they don't conflict; the few overrides
-  needed for the existing build (`buildFuture`, `summaryLength`,
-  `enableEmoji`, `pagination.pagerSize`, `outputs.home`) are pinned
-  explicitly.
-- The default build remains on the `sundown-sessions` theme via
-  [`src/config/_default/hugo.toml`](../src/config/_default/hugo.toml), so
-  production output is unaffected by the prototype.
+- [`src/config/_default/hugo.toml`](../src/config/_default/hugo.toml) sets
+  `theme = 'blowfish'` and includes the Blowfish-required defaults
+  (`enableRobotsTXT`, `summaryLength`, `enableEmoji`, `[pagination]`,
+  `[outputs]`).
+- [`src/config/_default/params.toml`](../src/config/_default/params.toml)
+  carries the Blowfish theme parameters, including a `[params.author].links`
+  mapping derived from the prior `[[socials]]` / `[[ananke_socials]]` entries.
 
-To preview the Blowfish prototype locally:
+To preview locally:
 
 ```powershell
 Set-Location src
-hugo server --config config/_default/hugo.toml,config/blowfish/hugo.toml
+hugo server
 ```
 
-Because the prototype layers a second config file on top of `_default`, all
-existing content under `src/content/` continues to be served verbatim. No
-front matter, no Markdown body, and no image has been altered to support the
-prototype — satisfying the issue's central constraint.
+Existing content under `src/content/` is unchanged — no front matter,
+Markdown body, or image has been altered as part of the adoption. The
+project-level shortcodes under
+[`src/layouts/shortcodes/`](../src/layouts/shortcodes/) (which are referenced
+from content) are preserved unchanged.
 
 ### Content preservation evidence
 
-- The prototype uses the same `src/content/` tree as the live theme; no
-  files are duplicated or rewritten.
-- Section index files (`_index.md`) retain their `menu.main` entries, so
-  navigation continues to be sourced from content rather than theme config.
-- `featured_image` fields, including absolute URLs, are resolved by the
-  existing project-level `GetFeaturedImage` partial, which Blowfish does not
-  override.
-- Custom CSS files in `src/static/css/` remain in place. Where Blowfish
-  supplies equivalent styling (tile grids, pill badges, table layout), the
-  custom CSS becomes redundant during cutover, but no file needs to be
-  deleted as part of this investigation.
+- The site uses the same `src/content/` tree as before; no files are
+  duplicated or rewritten.
+- Section index files (`_index.md`) retain their `menu.main` entries, which
+  Hugo's standard menu mechanism continues to honour under Blowfish.
+- All project shortcodes (`title`, `release`, `release-label`, `for-sale`,
+  `featured-guest-wikilink`, `artist-wikilink`,
+  `track-info-featured-guest`, `include_content`, `include_playlist`,
+  `new-tab-link`) continue to render content as before.
 
-## 4. Risks and Required Changes for a Future Migration
+## 4. Adoption Notes and Deferred Follow-Ups
 
-These items are recorded for the eventual migration PR(s). They are **not**
-addressed by this investigation.
+The cutover removed the in-repo `sundown-sessions` Ananke fork and the
+Ananke-shaped project layouts that depended on it
+(`src/layouts/_default/`, `src/layouts/index.html`,
+`src/layouts/{404,page,posts,artists,releases,tracks,upcoming,search}/*`,
+and the Ananke-shaped partials under `src/layouts/partials/`), along with the
+custom CSS files that were loaded via the Ananke `custom_css` param
+(`src/static/css/{tables,live-player,tiles,pills}.css`) and the
+Ananke-specific social SVGs under `src/assets/ananke/`. Blowfish now renders
+those pages using its own templates.
+
+The following items from the original investigation are tracked as deferred
+follow-up slices and are **not** addressed by the adoption itself:
 
 - **URL stability.** The current site has no explicit `permalinks` block, so
   URLs are determined by section/file layout plus per-page `slug`s. A
-  migration must either preserve the existing URL shapes or ship redirects
-  (e.g. via a `static/_redirects`-style file or HTML meta refresh aliases)
-  before cutover, to protect external links and search ranking.
-- **Shortcodes.** The project shortcodes listed in Section 1.4 must be
-  carried across as project-level overrides. Several rely on `RenderString`
-  contexts where `strings.*` is unavailable; that convention must be
-  preserved.
-- **Custom partials.** `GetFeaturedImage`, `GetMainCSS`, `GetRegisteredServices`,
-  `live-player`, `social-share`, and `social-follow` need either to remain as
-  project-level partials or to be re-implemented against Blowfish equivalents.
-- **Social configuration.** Blowfish uses a `socialIcons` mapping; the
-  existing site uses `[[socials]]` entries (with `[[ananke_socials]]` as a
-  legacy fallback). A migration must map the existing entries into the
-  Blowfish vocabulary without losing the bespoke Twitter/X icon override.
-- **CSS pipeline.** Blowfish ships its own asset pipeline (Tailwind). The
-  custom CSS layered via `params.toml.custom_css` should be audited
-  per-rule: keep what Blowfish doesn't already provide, retire the rest.
-- **Search.** The site has its own `layouts/index.json` and `search/single.html`.
-  Blowfish has built-in Fuse-based search; the migration should choose one
-  and remove the other to avoid duplicate indices.
-- **Homepage upcoming-shows block.** The current homepage renders an
-  "Upcoming Shows" grid only when at least one upcoming page exists. This
-  behaviour is implemented in `src/layouts/index.html` and must be ported as
-  a project-level override of the Blowfish home layout.
-- **Featured-image semantics.** The override that lets `featured_image`
-  accept absolute http(s) URLs unchanged must be preserved.
-- **`_build.list: never` usage.** Some show subpages opt out of homepage
-  listings via `_build.list`. Any replacement homepage layout must continue
-  to honour the same flag.
+  follow-up should compare the rendered URL set against the previous build
+  and ship redirects (e.g. via a `static/_redirects`-style file or HTML meta
+  refresh aliases) if any URLs have shifted under Blowfish's defaults.
+- **Custom partials.** The previous site's `GetFeaturedImage` partial passed
+  absolute http(s) `featured_image` URLs through unchanged. If any content
+  relies on that semantic, it should be reintroduced as a Blowfish-shaped
+  partial override.
+- **Social configuration.** The existing `[[socials]]` /
+  `[[ananke_socials]]` entries are now mapped into Blowfish's
+  `[params.author].links`. The bespoke Twitter/X icon override that
+  previously lived at `src/assets/ananke/socials/twitter.svg` has been
+  removed; if a custom glyph is wanted, it should be re-added as a
+  Blowfish-shaped asset override.
+- **Search.** Blowfish ships built-in Fuse-based search, replacing the
+  bespoke `layouts/index.json` and `search/single.html` that have been
+  removed. Existing `/search/` URLs may need a redirect.
+- **Homepage upcoming-shows block.** The previous homepage rendered an
+  "Upcoming Shows" grid only when at least one upcoming page existed. This
+  bespoke block was removed with the project `index.html`; if it remains an
+  editorial requirement, it should be reintroduced as a project-level
+  override of Blowfish's home layout.
+- **`_build.list: never` usage.** Some show subpages opt out of listings via
+  `_build.list`. Hugo honours this regardless of theme, so it continues to
+  work; any new homepage override must also respect the flag.
+- **Live player.** The bespoke live-player partial was removed with the
+  Ananke-shaped layouts. The `listen_live_stream_url` param is preserved so
+  a Blowfish-shaped reimplementation can pick it up.
 
 ## 5. Recommendation and Decision
 
@@ -274,16 +274,17 @@ Cons:
   and partials.
 - A one-time URL/redirect review is required before cutover.
 
-Migration effort: moderate. The work breaks down naturally into staged PRs —
-parity scaffolding, params/socials mapping, content-template port, homepage
-slice, and cutover — which is the approach already implied by the prototype
-vendored under `src/config/blowfish/` and the migration note in the
-project [`README.md`](../README.md).
+Migration effort: moderate, and now substantially complete. The adoption
+slice swapped the active theme, mapped social configuration into Blowfish's
+vocabulary, and removed the Ananke-shaped scaffolding; the remaining
+bespoke-feature ports listed in Section 4 are tracked as follow-ups rather
+than as adoption blockers.
 
 ### Decision record
 
-- **Decision:** adopt Blowfish, migrate in staged PRs.
-- **Status:** investigation complete; implementation tracked separately.
-- **Constraint carried forward:** existing content must remain byte-for-byte
-  unchanged through the migration; any content-shaped change required by
+- **Decision:** Blowfish adopted as the site's active theme.
+- **Status:** adopted; remaining bespoke-feature ports tracked as
+  deferred follow-ups (see Section 4).
+- **Constraint carried forward:** existing content remains byte-for-byte
+  unchanged through the adoption; any content-shaped change required by
   Blowfish must be raised as its own decision before being applied.
