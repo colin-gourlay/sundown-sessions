@@ -51,6 +51,7 @@ jobs:
         uses: actions/checkout@b4ffde65f46336ab88eb53be808477a3936bae11
         with:
           fetch-depth: 0
+          submodules: recursive
       - name: Cache Hugo build artefacts
         uses: actions/cache@v4
         with:
