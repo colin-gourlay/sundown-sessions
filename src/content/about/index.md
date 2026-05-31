@@ -3,6 +3,7 @@ title: 'About'
 description: 'A curated music show and archive from Haddington, Scotland'
 menu:
   main:
+    title: 'Go to the About page'
     weight: 3
 ---
 {{< figure src="about-sundown-sessions.png" title="Colin Gourlay in Studio 2" >}}

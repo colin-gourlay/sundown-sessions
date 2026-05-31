@@ -3,6 +3,7 @@ title: 'Contact'
 description: 'If you want to get in touch - this is the place!'
 menu:
   main:
+    title: 'Go to the Contact page'
     weight: 4
 ---
 - Would you like to dedicate a song request to someone special?
