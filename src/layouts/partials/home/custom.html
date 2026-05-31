@@ -13,7 +13,10 @@
 
 <article class="space-y-10">
   {{ if $heroImageURL }}
-    <section class="relative overflow-hidden rounded-2xl shadow-2xl" aria-labelledby="homepage-hero-heading">
+    <section
+      class="relative overflow-hidden rounded-2xl shadow-2xl"
+      role="region"
+      aria-labelledby="homepage-hero-heading">
       <img
         src="{{ $heroImageURL }}"
         alt=""
@@ -23,21 +26,21 @@
         fetchpriority="high"
         class="h-72 w-full object-cover sm:h-80 lg:h-96">
       <div
-        class="absolute inset-0 bg-gradient-to-r from-neutral-950/85 via-neutral-900/70 to-primary-950/60 dark:from-neutral-950/85 dark:via-neutral-900/70 dark:to-primary-950/70"></div>
+        class="absolute inset-0 bg-gradient-to-r from-neutral-950/90 via-neutral-900/85 to-primary-950/80"></div>
       <div class="absolute inset-0 flex items-center">
         <div class="w-full max-w-3xl px-6 py-8 sm:px-10 sm:py-12">
-          <h1 id="homepage-hero-heading" class="mb-4 mt-0 text-4xl font-extrabold text-neutral">
+          <h1 id="homepage-hero-heading" class="mb-4 mt-0 text-4xl font-extrabold text-neutral-100 drop-shadow-md">
             {{ .Params.headline | default .Title }}
           </h1>
           {{ with .Content }}
-            <div class="prose prose-invert max-w-none text-neutral-100">{{ . }}</div>
+            <div class="prose prose-invert max-w-none text-neutral-100 drop-shadow-sm">{{ . }}</div>
           {{ end }}
         </div>
       </div>
     </section>
   {{ else }}
     <section class="max-w-full prose dark:prose-invert">
-      <h1 class="mb-4 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+      <h1 class="mb-4 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral-100">
         {{ .Params.headline | default .Title }}
       </h1>
       <div class="w-full">{{ .Content }}</div>
