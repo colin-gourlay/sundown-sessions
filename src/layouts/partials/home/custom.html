@@ -28,17 +28,20 @@
       <div
         aria-hidden="true"
         class="absolute inset-0 bg-gradient-to-r from-neutral-950/95 via-neutral-950/95 to-neutral-950/90"></div>
-      <div class="absolute inset-0 flex items-center">
-        <div class="w-full max-w-3xl px-6 py-8 sm:px-10 sm:py-12">
-          <h1 id="homepage-hero-heading" class="mb-4 mt-0 text-4xl font-extrabold text-neutral-100 drop-shadow-md">
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="mx-auto w-full max-w-4xl px-6 py-8 text-center sm:px-10 sm:py-12">
+          <h1 id="homepage-hero-heading" class="mt-0 text-4xl font-extrabold text-neutral-100 drop-shadow-md">
             {{ .Params.headline | default .Title }}
           </h1>
-          {{ with .Content }}
-            <div class="prose prose-invert max-w-none text-neutral-100 drop-shadow-sm">{{ . }}</div>
-          {{ end }}
         </div>
       </div>
     </section>
+    {{ with .Content }}
+      <section class="prose max-w-none pt-6 dark:prose-invert sm:pt-8" role="region" aria-labelledby="homepage-content-heading">
+        <h2 id="homepage-content-heading" class="sr-only">Homepage introduction</h2>
+        {{ . }}
+      </section>
+    {{ end }}
   {{ else }}
     <section class="prose dark:prose-invert" role="region" aria-labelledby="homepage-heading">
       <h1 id="homepage-heading" class="mb-4 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral-100">
