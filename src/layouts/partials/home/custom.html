@@ -1,0 +1,57 @@
+{{ $heroImageURL := "" }}
+{{ with .Site.Params.homepage.homepageImage | default .Site.Params.defaultBackgroundImage }}
+  {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
+    {{ $heroImageURL = . }}
+  {{ else }}
+    {{ with resources.Get . }}
+      {{ $heroImageURL = .RelPermalink }}
+    {{ else }}
+      {{ $heroImageURL = . | relURL }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<article class="space-y-10">
+  {{ if $heroImageURL }}
+    <section
+      class="relative overflow-hidden rounded-2xl shadow-2xl"
+      role="region"
+      aria-labelledby="homepage-hero-heading">
+      <img
+        src="{{ $heroImageURL }}"
+        alt=""
+        role="presentation"
+        loading="eager"
+        decoding="async"
+        fetchpriority="high"
+        class="h-72 w-full object-cover sm:h-80 lg:h-96">
+      <div
+        aria-hidden="true"
+        class="absolute inset-0 bg-gradient-to-r from-neutral-950/95 via-neutral-950/95 to-neutral-950/90"></div>
+      <div class="absolute inset-0 flex items-center justify-center">
+        <div class="mx-auto w-full max-w-4xl px-6 py-8 text-center sm:px-10 sm:py-12">
+          <h1 id="homepage-hero-heading" class="mt-0 text-4xl font-extrabold text-white drop-shadow-md sm:text-5xl">
+            {{ .Params.headline | default .Title }}
+          </h1>
+          {{ with .Description }}
+          <p class="mx-auto mt-4 max-w-2xl text-base font-medium text-neutral-200 drop-shadow-sm sm:text-lg">{{ . }}</p>
+          {{ end }}
+        </div>
+      </div>
+    </section>
+    {{ with .Content }}
+      <section class="prose max-w-none pt-6 dark:prose-invert sm:pt-8" role="region" aria-labelledby="homepage-content-heading">
+        <h2 id="homepage-content-heading" class="sr-only">Homepage introduction</h2>
+        {{ . }}
+      </section>
+    {{ end }}
+  {{ else }}
+    <section class="prose dark:prose-invert" role="region" aria-labelledby="homepage-heading">
+      <h1 id="homepage-heading" class="mb-4 mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral-100">
+        {{ .Params.headline | default .Title }}
+      </h1>
+      <div class="w-full">{{ .Content }}</div>
+    </section>
+  {{ end }}
+
+</article>

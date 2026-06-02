@@ -21,12 +21,13 @@ listen_live_stream_url = ""
 [footer]
   showMenu = true
   showCopyright = true
-  showThemeAttribution = true
+  showThemeAttribution = false
   showAppearanceSwitcher = true
   showScrollToTop = true
 
 [homepage]
-  layout = "page"
+  layout = "custom"
+  homepageImage = "/images/sundown-sessions-banner.jpg"
   showRecent = true
   showRecentItems = 5
   showMoreLink = false

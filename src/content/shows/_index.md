@@ -4,6 +4,7 @@ description: 'Complete Catalogue of Radio Shows'
 menu:
   main:
     name: 'Shows'
+    title: 'Go to the Shows page'
     weight: 1
 ---
 
