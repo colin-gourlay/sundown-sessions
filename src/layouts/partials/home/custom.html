@@ -29,12 +29,12 @@
         aria-hidden="true"
         class="absolute inset-0 bg-gradient-to-r from-neutral-950/95 via-neutral-950/95 to-neutral-950/90"></div>
       <div class="absolute inset-0 flex items-center justify-center">
-        <div class="mx-auto w-full max-w-4xl px-6 py-8 text-center sm:px-10 sm:py-12">
-          <h1 id="homepage-hero-heading" class="mt-0 text-4xl font-extrabold text-white drop-shadow-md sm:text-5xl">
+        <div class="mx-auto w-full max-w-4xl rounded-xl bg-white/80 px-6 py-8 text-center shadow-lg backdrop-blur-sm dark:bg-neutral-900/70 sm:px-10 sm:py-12">
+          <h1 id="homepage-hero-heading" class="mt-0 text-4xl font-extrabold text-neutral-950 drop-shadow-md dark:text-neutral-50 sm:text-5xl">
             {{ .Params.headline | default .Title }}
           </h1>
           {{ with .Description }}
-          <p class="mx-auto mt-4 max-w-2xl text-base font-medium text-neutral-200 drop-shadow-sm sm:text-lg">{{ . }}</p>
+          <p class="mx-auto mt-4 max-w-2xl text-base font-medium text-neutral-800 drop-shadow-sm dark:text-neutral-100 sm:text-lg">{{ . }}</p>
           {{ end }}
         </div>
       </div>
