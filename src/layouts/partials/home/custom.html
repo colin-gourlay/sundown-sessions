@@ -13,34 +13,36 @@
 
 <article class="space-y-10">
   {{ if $heroImageURL }}
-    <section
-      class="relative overflow-hidden rounded-2xl shadow-2xl"
-      role="region"
-      aria-labelledby="homepage-hero-heading">
-      <img
-        src="{{ $heroImageURL }}"
-        alt=""
-        role="presentation"
-        loading="eager"
-        decoding="async"
-        fetchpriority="high"
-        class="h-72 w-full object-cover sm:h-80 lg:h-96">
-      <div
-        aria-hidden="true"
-        class="absolute inset-0 bg-gradient-to-r from-neutral-950/95 via-neutral-950/95 to-neutral-950/90"></div>
-      <div class="absolute inset-0 flex items-center justify-center px-4">
-        <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-          <div class="w-full rounded-xl bg-white/80 px-6 py-8 shadow-lg backdrop-blur-sm dark:bg-neutral-900/70 sm:px-10 sm:py-12">
-            <h1 id="homepage-hero-heading" class="mt-0 text-4xl font-extrabold text-neutral-950 drop-shadow-md dark:text-neutral-50 sm:text-5xl">
-              {{ .Params.headline | default .Title }}
-            </h1>
+    <div class="space-y-6">
+      <section
+        class="relative overflow-hidden rounded-2xl shadow-2xl"
+        role="region"
+        aria-labelledby="homepage-hero-heading">
+        <img
+          src="{{ $heroImageURL }}"
+          alt=""
+          role="presentation"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="h-72 w-full object-cover sm:h-80 lg:h-96">
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 bg-gradient-to-r from-neutral-950/95 via-neutral-950/95 to-neutral-950/90"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-4">
+          <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+            <div class="w-full rounded-xl bg-white/80 px-6 py-8 shadow-lg backdrop-blur-sm dark:bg-neutral-900/70 sm:px-10 sm:py-12">
+              <h1 id="homepage-hero-heading" class="mt-0 text-4xl font-extrabold text-neutral-950 drop-shadow-md dark:text-neutral-50 sm:text-5xl">
+                {{ .Params.headline | default .Title }}
+              </h1>
+            </div>
           </div>
-          {{ with .Description }}
-          <p class="mx-auto mt-4 max-w-2xl text-base font-medium text-neutral-100 drop-shadow-md sm:text-lg">{{ . }}</p>
-          {{ end }}
         </div>
-      </div>
-    </section>
+      </section>
+      {{ with .Description }}
+        <p class="mx-auto max-w-2xl px-4 text-center text-base font-medium text-neutral-700 dark:text-neutral-300 sm:text-lg">{{ . }}</p>
+      {{ end }}
+    </div>
     {{ with .Content }}
       <section class="prose max-w-none pt-6 dark:prose-invert sm:pt-8" role="region" aria-labelledby="homepage-content-heading">
         <h2 id="homepage-content-heading" class="sr-only">Homepage introduction</h2>
