@@ -17,6 +17,7 @@
     <PackageReference Include="Microsoft.Data.Sqlite" />
     <PackageReference Include="Microsoft.Extensions.DependencyInjection" />
     <PackageReference Include="Microsoft.Extensions.Http" />
+    <PackageReference Include="Refit.HttpClientFactory" />
     <PackageReference Include="Serilog" />
     <PackageReference Include="TagLibSharp" />
   </ItemGroup>
