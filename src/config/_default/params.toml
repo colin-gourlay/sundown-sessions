@@ -28,6 +28,7 @@ listen_live_stream_url = ""
 [homepage]
   layout = "custom"
   homepageImage = "/images/sundown-sessions-banner.jpg"
+  homepageImagePosition = "50% 62%"
   showRecent = true
   showRecentItems = 5
   showMoreLink = false
