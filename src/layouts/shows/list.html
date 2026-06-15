@@ -1,0 +1,168 @@
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "list" }}
+
+  {{/* Hero Banner */}}
+  {{ $heroImageURL := "" }}
+  {{ $featureImage := .Params.featured_image | default .Params.featureimage }}
+  {{ with $featureImage }}
+    {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
+      {{ $heroImageURL = . }}
+    {{ else }}
+      {{ with resources.Get . }}
+        {{ $heroImageURL = .RelPermalink }}
+      {{ else }}
+        {{ $heroImageURL = . | relURL }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if not $heroImageURL }}
+    {{ with .Site.Params.homepage.homepageImage | default .Site.Params.defaultBackgroundImage }}
+      {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
+        {{ $heroImageURL = . }}
+      {{ else }}
+        {{ with resources.Get . }}
+          {{ $heroImageURL = .RelPermalink }}
+        {{ else }}
+          {{ $heroImageURL = . | relURL }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $heroImageURL }}
+    <div class="space-y-6 mb-10">
+      <section
+        class="relative overflow-hidden rounded-2xl shadow-2xl"
+        role="region"
+        aria-labelledby="shows-hero-heading">
+        <img
+          src="{{ $heroImageURL }}"
+          alt=""
+          role="presentation"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="h-72 w-full object-cover sm:h-80 lg:h-96"
+          {{ with .Site.Params.homepage.homepageImagePosition }}style="object-position: {{ . | safeCSS }};"{{ end }}>
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/45 to-neutral-950/20"></div>
+        <div class="absolute inset-0 flex items-center justify-center px-4">
+          <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+            <h1 id="shows-hero-heading" class="mt-0 text-4xl font-extrabold tracking-tight text-neutral-50 drop-shadow-2xl sm:text-5xl">
+              {{ .Title }}
+            </h1>
+          </div>
+        </div>
+      </section>
+      {{ with .Description }}
+        <p class="mx-auto max-w-2xl px-4 text-center text-base font-medium text-neutral-700 dark:text-neutral-300 sm:text-lg">{{ . }}</p>
+      {{ end }}
+    </div>
+  {{ else }}
+    <header class="mb-10">
+      {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
+        {{ partial "breadcrumbs.html" . }}
+      {{ end }}
+      <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
+      {{ with .Description }}
+        <p class="mt-2 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
+      {{ end }}
+    </header>
+  {{ end }}
+
+  {{/* Article Grid */}}
+  {{ if .Pages }}
+    {{ $cardView := .Params.cardView | default (site.Params.list.cardView | default false) }}
+    {{ $cardViewScreenWidth := .Params.cardViewScreenWidth | default (site.Params.list.cardViewScreenWidth | default false) }}
+    {{ $groupByYear := .Params.groupByYear | default (site.Params.list.groupByYear | default false) }}
+    {{ $orderByWeight := .Params.orderByWeight | default (site.Params.list.orderByWeight | default false) }}
+    {{ $groupByYear = and (not $orderByWeight) $groupByYear }}
+
+    {{ if not $cardView }}
+      <section class="space-y-10 w-full">
+        {{ if not $orderByWeight }}
+          {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+            {{ if $groupByYear }}
+              <h2 class="mt-12 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+                {{ .Key }}
+              </h2>
+            {{ end }}
+            {{ range .Pages }}
+              {{ partial "article-link/simple.html" . }}
+            {{ end }}
+          {{ end }}
+        {{ else }}
+          {{ range (.Paginate (.Pages.ByWeight)).Pages }}
+            {{ partial "article-link/simple.html" . }}
+          {{ end }}
+        {{ end }}
+      </section>
+    {{ else }}
+      {{ if $groupByYear }}
+        {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+          {{ if $cardViewScreenWidth }}
+            <div class="relative w-screen max-w-[1600px] px-[30px] start-[calc(max(-50vw,-800px)+50%)]">
+              <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+                {{ .Key }}
+              </h2>
+              <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+                {{ range .Pages }}
+                  {{ partial "article-link/card.html" . }}
+                {{ end }}
+              </section>
+            </div>
+          {{ else }}
+            <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
+              {{ .Key }}
+            </h2>
+            <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+              {{ range .Pages }}
+                {{ partial "article-link/card.html" . }}
+              {{ end }}
+            </section>
+          {{ end }}
+        {{ end }}
+      {{ else }}
+        {{ if $cardViewScreenWidth }}
+          <div class="relative w-screen max-w-[1600px] px-[30px] start-[calc(max(-50vw,-800px)+50%)]">
+            <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+              {{ if not $orderByWeight }}
+                {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+                  {{ range .Pages }}
+                    {{ partial "article-link/card.html" . }}
+                  {{ end }}
+                {{ end }}
+              {{ else }}
+                {{ range (.Paginate (.Pages.ByWeight)).Pages }}
+                  {{ partial "article-link/card.html" . }}
+                {{ end }}
+              {{ end }}
+            </section>
+          </div>
+        {{ else }}
+          <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+            {{ if not $orderByWeight }}
+              {{ range (.Paginate (.Pages.GroupByDate "2006")).PageGroups }}
+                {{ range .Pages }}
+                  {{ partial "article-link/card.html" . }}
+                {{ end }}
+              {{ end }}
+            {{ else }}
+              {{ range (.Paginate (.Pages.ByWeight)).Pages }}
+                {{ partial "article-link/card.html" . }}
+              {{ end }}
+            {{ end }}
+          </section>
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ else }}
+    <section class="mt-10 prose dark:prose-invert">
+      <p class="py-8 border-t">
+        <em>{{ i18n "list.no_articles" | emojify }}</em>
+      </p>
+    </section>
+  {{ end }}
+  {{ partial "pagination.html" . }}
+{{ end }}
