@@ -47,6 +47,7 @@
       </label>
       <nav class="mx-auto max-w-md space-y-6">
         {{ template "mobile-main-menu" . }}
+        {{ template "mobile-listen-live" . }}
         {{ template "mobile-subnavigation" . }}
         {{ template "mobile-footer-components" . }}
       </nav>
@@ -133,6 +134,25 @@
       {{ end }}
     </div>
   {{ end }}
+{{ end }}
+
+{{ define "mobile-listen-live" }}
+  {{ $listenURL := .Site.Params.listen_live_stream_url | default "#" }}
+  <div class="px-2">
+    <a
+      href="{{ $listenURL }}"
+      {{ if and (ne $listenURL "#") (or (strings.HasPrefix $listenURL "http:") (strings.HasPrefix $listenURL "https:")) }}
+        target="_blank"
+        rel="noopener noreferrer"
+      {{ end }}
+      aria-label="Listen Live"
+      class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary-600 text-neutral-50 hover:bg-primary-500 transition-colors font-medium">
+      <span class="flex items-center justify-center h-5 w-5">
+        {{ partial "icon.html" "play" }}
+      </span>
+      <span class="text-xl font-bold tracking-tight">Listen Live</span>
+    </a>
+  </div>
 {{ end }}
 
 {{ define "mobile-footer-components" }}
