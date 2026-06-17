@@ -1,0 +1,171 @@
+{{/* Horizontal show card used by the shows listing page */}}
+{{ $page := .Page }}
+{{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
+
+{{/* Image resolution — mirrors the logic in card.html */}}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+{{ if not .Params.hideFeatureImage }}
+  {{ with $page }}
+    {{ $featureImage := .Params.featureimage | default .Params.featured_image }}
+    {{ with $featureImage }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ if site.Params.hotlinkFeatureImage }}
+          {{ $featuredURL = . }}
+        {{ else }}
+          {{ $featured = resources.GetRemote . }}
+        {{ end }}
+      {{ else }}
+        {{ $featured = $page.Resources.GetMatch . }}
+        {{ if not $featured }}{{ $featured = $page.Resources.GetMatch (path.Base .) }}{{ end }}
+        {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not (or $featured $featuredURL) }}
+      {{ $images := .Resources.ByType "image" }}
+      {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+        {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not (or $featured $featuredURL) }}
+      {{ $default := site.Store.Get "defaultFeaturedImage" }}
+      {{ if $default.url }}
+        {{ $featuredURL = $default.url }}
+      {{ else if $default.obj }}
+        {{ $featured = $default.obj }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not $featuredURL }}
+      {{ with $featured }}
+        {{ $featuredURL = .RelPermalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Split "Show #N: Broadcast Title" into label and title */}}
+{{ $showLabel := "" }}
+{{ $showTitle := .Title | emojify }}
+{{ $titleParts := split .Title ": " }}
+{{ if gt (len $titleParts) 1 }}
+  {{ $showLabel = index $titleParts 0 }}
+  {{ $showTitle = strings.TrimPrefix (printf "%s: " $showLabel) .Title | emojify }}
+{{ end }}
+
+{{/* Derived values */}}
+{{ $trackCount := len .Params.tags }}
+{{ $durationStr := printf "%02d:00" .ReadingTime }}
+{{ $tags := .Params.tags }}
+{{ $maxVisibleTags := 4 }}
+{{ $visibleTags := first $maxVisibleTags $tags }}
+{{ $overflowCount := sub (len $tags) $maxVisibleTags }}
+
+<article
+  class="article-link--show-card group relative flex flex-col sm:flex-row overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
+
+  {{/* Album art — square on desktop, full-width banner on mobile */}}
+  <a
+    href="{{ $page.RelPermalink }}"
+    class="not-prose flex-none block overflow-hidden bg-neutral-100 dark:bg-neutral-800 sm:w-44 sm:min-h-full"
+    tabindex="-1"
+    aria-hidden="true">
+    {{ with $featuredURL }}
+      <img
+        src="{{ . }}"
+        alt=""
+        role="presentation"
+        loading="lazy"
+        decoding="async"
+        class="not-prose h-44 w-full object-cover sm:h-full transition duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none">
+    {{ else }}
+      <div class="h-44 w-full sm:h-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900"></div>
+    {{ end }}
+  </a>
+
+  {{/* Main content */}}
+  <div class="flex flex-1 flex-col gap-1.5 p-4 sm:p-5 min-w-0">
+
+    {{/* Show label with play icon */}}
+    {{ if $showLabel }}
+      <div class="flex items-center gap-1.5 text-sm font-semibold text-primary-600 dark:text-primary-400">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+          class="h-4 w-4 flex-none" aria-hidden="true">
+          <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.84Z"/>
+        </svg>
+        {{ $showLabel }}
+      </div>
+    {{ end }}
+
+    {{/* Broadcast title */}}
+    <header>
+      <a
+        href="{{ $page.RelPermalink }}"
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-neutral-800 hover:underline hover:underline-offset-2">
+        <h2 class="mt-0 mb-0 text-xl font-bold leading-snug">{{ $showTitle }}</h2>
+      </a>
+    </header>
+
+    {{/* Metadata row: date · reading time · track count */}}
+    <div class="flex flex-row flex-wrap items-center text-sm text-neutral-500 dark:text-neutral-400">
+      {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
+        <span class="flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="h-3.5 w-3.5 flex-none opacity-70" aria-hidden="true">
+            <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd"/>
+          </svg>
+          {{ partial "meta/date.html" .Date }}
+        </span>
+      {{ end }}
+      {{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
+        <span class="px-2 text-primary-500">&middot;</span>
+        <span class="flex items-center gap-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+            class="h-3.5 w-3.5 flex-none opacity-70" aria-hidden="true">
+            <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd"/>
+          </svg>
+          {{ partial "meta/reading-time.html" . }}
+        </span>
+      {{ end }}
+      {{ if gt $trackCount 0 }}
+        <span class="px-2 text-primary-500">&middot;</span>
+        <span>{{ $trackCount }} {{ if eq $trackCount 1 }}track{{ else }}tracks{{ end }}</span>
+      {{ end }}
+    </div>
+
+    {{/* Summary text */}}
+    {{ with .Summary }}
+      <p class="line-clamp-2 text-sm text-neutral-600 dark:text-neutral-300">{{ . | plainify }}</p>
+    {{ end }}
+
+    {{/* Artist tags: first four visible, remainder shown as +N */}}
+    {{ if $tags }}
+      <div class="flex flex-wrap items-center gap-1.5 mt-0.5">
+        {{ range $visibleTags }}
+          <span class="rounded-full border border-primary-400 px-2.5 py-0.5 text-xs text-primary-700 dark:border-primary-600 dark:text-primary-400">{{ . }}</span>
+        {{ end }}
+        {{ if gt $overflowCount 0 }}
+          <span class="text-xs font-medium text-neutral-500 dark:text-neutral-400">+{{ $overflowCount }}</span>
+        {{ end }}
+      </div>
+    {{ end }}
+
+  </div>
+
+  {{/* Right panel: play button + duration */}}
+  <div class="hidden sm:flex flex-none flex-col items-center justify-center gap-2 px-5 border-l border-neutral-200 dark:border-neutral-700">
+    <a
+      href="{{ $page.RelPermalink }}"
+      aria-label="Go to {{ $showLabel | default .Title }}"
+      class="not-prose flex h-11 w-11 items-center justify-center rounded-full border-2 border-primary-500 text-primary-500 transition hover:bg-primary-50 dark:hover:bg-primary-900/20">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+        class="h-5 w-5 translate-x-0.5" aria-hidden="true">
+        <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.84Z"/>
+      </svg>
+    </a>
+    <span class="text-xs font-mono text-neutral-500 dark:text-neutral-400">{{ $durationStr }}</span>
+  </div>
+
+</article>
