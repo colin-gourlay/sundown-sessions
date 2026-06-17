@@ -57,4 +57,30 @@
     </section>
   {{ end }}
 
+  {{/* Recent Shows */}}
+  {{ $showsSection := site.GetPage "shows" }}
+  {{ if $showsSection }}
+    {{ $showPages := where $showsSection.Pages ".Date.IsZero" false }}
+    {{ $recentShows := first 4 ($showPages.ByDate.Reverse) }}
+    {{ if $recentShows }}
+      <section role="region" aria-labelledby="recent-shows-heading">
+        <div class="mb-4 flex items-center justify-between">
+          <h2 id="recent-shows-heading" class="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+            Recent Shows
+          </h2>
+          <a
+            href="{{ $showsSection.RelPermalink }}"
+            class="text-sm font-medium text-primary-600 hover:underline hover:underline-offset-2 dark:text-primary-400">
+            View all shows →
+          </a>
+        </div>
+        <div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {{ range $recentShows }}
+            {{ partial "article-link/card.html" . }}
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+
 </article>
