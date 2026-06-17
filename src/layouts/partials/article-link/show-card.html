@@ -66,10 +66,10 @@
 <article
   class="article-link--show-card group relative flex flex-row items-start overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
 
-  {{/* Album art — fixed 160×160 (25% of 640×640 original), aspect ratio preserved */}}
+  {{/* Album art — fixed 256×256 (40% of 640×640 original), aspect ratio preserved */}}
   <a
     href="{{ $page.RelPermalink }}"
-    class="not-prose block flex-none shrink-0 overflow-hidden bg-neutral-100 dark:bg-neutral-800 w-40 h-40"
+    class="not-prose block flex-none shrink-0 overflow-hidden bg-neutral-100 dark:bg-neutral-800 w-64 h-64"
     tabindex="-1"
     aria-hidden="true">
     {{ with $featuredURL }}
