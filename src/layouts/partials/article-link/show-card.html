@@ -64,12 +64,12 @@
 {{ $overflowCount := sub (len $tags) $maxVisibleTags }}
 
 <article
-  class="article-link--show-card group relative flex flex-row overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
+  class="article-link--show-card group relative flex flex-row items-start overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
 
-  {{/* Album art — always left-aligned, compact width that scales with breakpoint */}}
+  {{/* Album art — fixed 160×160 (25 % of 640×640 original), aspect ratio preserved */}}
   <a
     href="{{ $page.RelPermalink }}"
-    class="not-prose flex-none block overflow-hidden bg-neutral-100 dark:bg-neutral-800 w-28 sm:w-44"
+    class="not-prose block flex-none shrink-0 overflow-hidden bg-neutral-100 dark:bg-neutral-800 w-40 h-40"
     tabindex="-1"
     aria-hidden="true">
     {{ with $featuredURL }}
