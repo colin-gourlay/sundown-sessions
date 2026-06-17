@@ -6,6 +6,7 @@
 {{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
 
 {{ $page := .Page }}
+{{ $isShowCard := eq $page.Type "shows" }}
 {{ $featured := "" }}
 {{ $featuredURL := "" }}
 {{ if not .Params.hideFeatureImage }}
@@ -55,23 +56,26 @@
 
 
 <article
-  class="article-link--card relative min-h-full min-w-full overflow-hidden rounded-lg border border-neutral-300 dark:border-neutral-600">
+  class="article-link--card group relative min-h-full min-w-full overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
   {{ with $featuredURL }}
-    <div class="flex-none relative overflow-hidden thumbnail_card">
+    <div class="flex-none relative aspect-[4/3] w-full overflow-hidden bg-neutral-100 dark:bg-neutral-800">
       <img
         src="{{ . }}"
         alt="{{ $page.Title }}"
         loading="lazy"
         decoding="async"
-        class="not-prose absolute inset-0 w-full h-full object-cover">
+        class="not-prose absolute inset-0 h-full w-full object-cover transition duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none">
     </div>
+  {{ end }}
+  {{ if and $isShowCard (not $featuredURL) }}
+    <div aria-hidden="true" role="presentation" class="flex-none relative aspect-[4/3] w-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900"></div>
   {{ end }}
   {{ if and .Draft .Site.Params.article.showDraftLabel }}
     <span class="absolute top-0 right-0 m-2">
       {{ partial "badge.html" (i18n "article.draft" | emojify) }}
     </span>
   {{ end }}
-  <div class="p-4">
+  <div class="flex flex-col p-4 sm:p-5">
     <header>
       <a
         {{ with $page.Params.externalUrl }}
@@ -94,11 +98,17 @@
     <div class="text-sm text-neutral-500 dark:text-neutral-400">
       {{ partial "article-meta/basic.html" . }}
     </div>
+    {{ if and $isShowCard (not (.Params.showSummary | default (.Site.Params.list.showSummary | default false))) }}
+      {{ with .Description }}
+        <p class="mt-3 line-clamp-3 text-sm text-neutral-600 dark:text-neutral-300">
+          {{ . }}
+        </p>
+      {{ end }}
+    {{ end }}
     {{ if .Params.showSummary | default (.Site.Params.list.showSummary | default false) }}
       <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
         {{ .Summary | plainify }}
       </div>
     {{ end }}
   </div>
-  <div class="px-6 pt-4 pb-2"></div>
 </article>
