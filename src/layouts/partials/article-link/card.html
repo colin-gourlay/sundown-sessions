@@ -68,7 +68,7 @@
     </div>
   {{ end }}
   {{ if and $isShowCard (not $featuredURL) }}
-    <div class="flex-none relative aspect-[4/3] w-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900"></div>
+    <div aria-hidden="true" class="flex-none relative aspect-[4/3] w-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900"></div>
   {{ end }}
   {{ if and .Draft .Site.Params.article.showDraftLabel }}
     <span class="absolute top-0 right-0 m-2">

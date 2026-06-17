@@ -72,7 +72,7 @@
   {{ end }}
 
   {{/* Article Grid */}}
-  {{ $showPages := where .Pages ".Date.IsZero" false }}
+  {{ $showPages := where .Pages ".Date.IsZero" "ne" true }}
   {{ if $showPages }}
     {{ $cardView := .Params.cardView | default (site.Params.list.cardView | default false) }}
     {{ $cardViewScreenWidth := .Params.cardViewScreenWidth | default (site.Params.list.cardViewScreenWidth | default false) }}
