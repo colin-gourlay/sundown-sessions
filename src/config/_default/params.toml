@@ -31,7 +31,7 @@ headerAvatar = "/images/sundown-sessions-logo.jpg"
 
 [homepage]
   layout = "custom"
-  homepageImage = "/images/sundown-sessions-banner.jpg"
+  homepageImage = "/images/sundown-sessions-banner.png"
   homepageImagePosition = "50% 62%"
   showRecent = true
   showRecentItems = 5
