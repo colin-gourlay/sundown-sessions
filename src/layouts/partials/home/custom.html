@@ -35,6 +35,9 @@
             <h1 id="homepage-hero-heading" class="mt-0 text-4xl font-sans font-extrabold tracking-tight text-neutral-50 drop-shadow-2xl sm:text-5xl">
               {{ .Params.headline | default .Title }}
             </h1>
+            {{ with .Params.strapline }}
+              <p class="mt-2 text-base font-semibold tracking-widest text-neutral-200 drop-shadow-lg uppercase sm:text-lg">{{ . }}</p>
+            {{ end }}
           </div>
         </div>
       </section>
