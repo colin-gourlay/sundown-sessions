@@ -17,7 +17,7 @@ listen_live_stream_url = ""
 
 # Path to the circular avatar image displayed in the header alongside the site title.
 # Resolved as a static file path (e.g. /images/my-logo.jpg).
-headerAvatar = "/images/sundown-sessions-logo.jpg"
+headerAvatar = "/images/sundown-sessions-logo.png"
 
 [header]
   layout = "basic"
