@@ -1,5 +1,5 @@
 {{ $heroImageURL := "" }}
-{{ $heroOverlayBottomOffset := "15%" }}
+{{ $heroOverlayBottomOffset := "7%" }}
 {{ with .Site.Params.homepage.homepageImage | default .Site.Params.defaultBackgroundImage }}
   {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
     {{ $heroImageURL = . }}
