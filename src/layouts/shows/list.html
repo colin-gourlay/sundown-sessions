@@ -46,10 +46,10 @@
           {{ with .Site.Params.homepage.homepageImagePosition }}style="object-position: {{ . | safeCSS }};"{{ end }}>
         <div
           aria-hidden="true"
-          class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/45 to-neutral-950/20"></div>
+          class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/60 to-neutral-950/25"></div>
         <div class="absolute inset-0 flex items-center justify-center px-4">
           <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-            <h1 id="shows-hero-heading" class="mt-0 text-4xl font-extrabold tracking-tight text-neutral-50 drop-shadow-2xl sm:text-5xl">
+            <h1 id="shows-hero-heading" class="mt-0 text-4xl font-extrabold tracking-tight text-neutral-50 drop-shadow-2xl text-shadow-hero sm:text-5xl">
               {{ .Title }}
             </h1>
           </div>
