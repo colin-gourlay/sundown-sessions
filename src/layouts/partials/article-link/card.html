@@ -88,7 +88,10 @@
       {{ $tags := .Params.tags }}
       {{ $maxFeaturedArtists := 3 }}
       {{ $featuredArtists := first $maxFeaturedArtists $tags }}
-      {{ $overflowCount := sub (len $tags) $maxFeaturedArtists }}
+      {{ $overflowCount := 0 }}
+      {{ if gt (len $tags) $maxFeaturedArtists }}
+        {{ $overflowCount = sub (len $tags) $maxFeaturedArtists }}
+      {{ end }}
       {{ if $showLabel }}
         <p class="mb-1 text-xs font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400">{{ $showLabel }}</p>
       {{ end }}
