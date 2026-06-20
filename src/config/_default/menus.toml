@@ -1,0 +1,20 @@
+[[footer]]
+  identifier = "facebook"
+  pre = "facebook"
+  title = "Sundown Sessions on Facebook"
+  url = "https://www.facebook.com/sundownsessionsuk"
+  weight = 10
+
+[[footer]]
+  identifier = "instagram"
+  pre = "instagram"
+  title = "Sundown Sessions on Instagram"
+  url = "https://www.instagram.com/sundownsessionsshow"
+  weight = 20
+
+[[footer]]
+  identifier = "mixcloud"
+  pre = "mixcloud"
+  title = "Sundown Sessions on Mixcloud"
+  url = "https://www.mixcloud.com/sundownsessions/"
+  weight = 30
