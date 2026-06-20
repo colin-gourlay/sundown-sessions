@@ -31,7 +31,15 @@
     (() => {
       const form = document.getElementById('{{ $formID }}');
       const status = document.getElementById('{{ $statusID }}');
+      const successClasses = ["bg-emerald-100", "text-emerald-900", "dark:bg-emerald-950", "dark:text-emerald-200"];
+      const errorClasses = ["bg-rose-100", "text-rose-900", "dark:bg-rose-950", "dark:text-rose-200"];
       if (!form || !status) return;
+
+      const showStatus = (message, classes) => {
+        status.textContent = message;
+        status.classList.remove("hidden", ...successClasses, ...errorClasses);
+        status.classList.add(...classes);
+      };
 
       form.addEventListener("submit", async event => {
         event.preventDefault();
@@ -54,11 +62,9 @@
           }
 
           form.reset();
-          status.textContent = "Thanks — your message has been sent.";
-          status.className = "rounded-lg bg-emerald-100 px-4 py-3 text-sm text-emerald-900 dark:bg-emerald-950 dark:text-emerald-200";
+          showStatus("Thanks — your message has been sent.", successClasses);
         } catch (error) {
-          status.textContent = "Sorry — there was a problem sending your message. Please try again.";
-          status.className = "rounded-lg bg-rose-100 px-4 py-3 text-sm text-rose-900 dark:bg-rose-950 dark:text-rose-200";
+          showStatus("Sorry — there was a problem sending your message. Please try again.", errorClasses);
         } finally {
           if (submitButton) {
             submitButton.disabled = false;
