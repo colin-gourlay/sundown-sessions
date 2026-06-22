@@ -8,6 +8,8 @@ autoSwitchAppearance = true
 enableSearch = true
 enableCodeCopy = false
 
+dateFormat = "2 January 2006"
+
 # Sections that contribute to listings such as the homepage recent list.
 mainSections = ["shows", "releases", "artists"]
 

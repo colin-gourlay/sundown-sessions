@@ -55,6 +55,13 @@
 {{ end }}
 
 
+{{/* For show cards, derive a shorter branded title: "Sundown Sessions #N" */}}
+{{ $cardTitle := .Title | emojify }}
+{{ if $isShowCard }}
+  {{ $titleBase := index (split .Title ": ") 0 }}
+  {{ $cardTitle = replace $titleBase "Show #" "Sundown Sessions #" }}
+{{ end }}
+
 <article
   class="article-link--card group relative min-h-full min-w-full overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
   {{ with $featuredURL }}
@@ -64,7 +71,7 @@
         alt="{{ $page.Title }}"
         loading="lazy"
         decoding="async"
-        class="not-prose absolute inset-0 h-full w-full {{ if $isShowCard }}object-contain{{ else }}object-cover{{ end }} transition duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none">
+        class="not-prose absolute inset-0 h-full w-full {{ if $isShowCard }}object-contain{{ else }}object-cover transition duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none{{ end }}">
     </div>
   {{ end }}
   {{ if and $isShowCard (not $featuredURL) }}
@@ -85,7 +92,7 @@
         <a
           href="{{ $page.RelPermalink }}"
           class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral font-bold text-neutral-800 hover:underline hover:underline-offset-2 text-base leading-tight">
-          <h2>{{ .Title | emojify }}</h2>
+          <h2>{{ $cardTitle }}</h2>
         </a>
       </header>
       {{ if $featuredArtist }}
