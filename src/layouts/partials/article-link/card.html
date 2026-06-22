@@ -55,11 +55,17 @@
 {{ end }}
 
 
-{{/* For show cards, derive a shorter branded title: "Sundown Sessions #N" */}}
+{{/* For show cards, derive a shorter branded title: "Sundown Sessions #N"
+     Show titles follow the pattern "Show #N: Broadcast [date]". The split
+     on ": " always produces at least one element so index 0 is safe; if the
+     pattern does not match, $cardTitle falls back to the original page title. */}}
 {{ $cardTitle := .Title | emojify }}
 {{ if $isShowCard }}
-  {{ $titleBase := index (split .Title ": ") 0 }}
-  {{ $cardTitle = replace $titleBase "Show #" "Sundown Sessions #" }}
+  {{ $titleParts := split .Title ": " }}
+  {{ $titleBase := index $titleParts 0 }}
+  {{ if strings.HasPrefix $titleBase "Show #" }}
+    {{ $cardTitle = replace $titleBase "Show #" "Sundown Sessions #" }}
+  {{ end }}
 {{ end }}
 
 <article
