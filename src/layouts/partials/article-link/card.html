@@ -76,50 +76,73 @@
     </span>
   {{ end }}
   <div class="flex flex-col p-4 sm:p-5">
-    <header>
-      <a
-        {{ with $page.Params.externalUrl }}
-          href="{{ . }}" target="_blank" rel="external"
-        {{ else }}
-          href="{{ $page.RelPermalink }}"
-        {{ end }}
-        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral font-bold text-neutral-800 hover:underline hover:underline-offset-2 {{ if $isShowCard }}text-lg leading-tight{{ else }}text-xl{{ end }}">
-        <h2>
-          {{ .Title | emojify }}
-          {{ if .Params.externalUrl }}
-            <span class="cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500">
-              <span class="rtl:hidden">&#8599;</span>
-              <span class="ltr:hidden">&#8598;</span>
-            </span>
-          {{ end }}
-        </h2>
-      </a>
-    </header>
     {{ if $isShowCard }}
-      <div class="mt-2 text-sm text-neutral-500 dark:text-neutral-400">
-        <div class="flex flex-row flex-wrap items-center">
-          {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-            {{ partial "meta/date.html" .Date }}
-          {{ end }}
-          {{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
-            <span class="px-2 text-primary-500">&middot;</span>{{ partial "meta/reading-time.html" . }}
-          {{ end }}
+      {{/* Split "Show #N: Broadcast Title" into label and broadcast title */}}
+      {{ $showLabel := "" }}
+      {{ $showTitle := .Title | emojify }}
+      {{ $titleParts := split .Title ": " }}
+      {{ if gt (len $titleParts) 1 }}
+        {{ $showLabel = index $titleParts 0 }}
+        {{ $showTitle = strings.TrimPrefix (printf "%s: " $showLabel) .Title | emojify }}
+      {{ end }}
+      {{ $tags := .Params.tags }}
+      {{ $maxFeaturedArtists := 3 }}
+      {{ $featuredArtists := first $maxFeaturedArtists $tags }}
+      {{ $overflowCount := 0 }}
+      {{ if gt (len $tags) $maxFeaturedArtists }}
+        {{ $overflowCount = sub (len $tags) $maxFeaturedArtists }}
+      {{ end }}
+      {{ if $showLabel }}
+        <p class="mb-1 text-xs font-semibold uppercase tracking-wider text-primary-600 dark:text-primary-400">{{ $showLabel }}</p>
+      {{ end }}
+      <header>
+        <a
+          href="{{ $page.RelPermalink }}"
+          class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral font-bold text-neutral-800 hover:underline hover:underline-offset-2 text-base leading-tight">
+          <h2>{{ $showTitle }}</h2>
+        </a>
+      </header>
+      {{ if $featuredArtists }}
+        <div class="mt-3">
+          <p class="mb-1.5 text-xs font-medium uppercase tracking-wider text-neutral-400 dark:text-neutral-500">Featuring</p>
+          <ul class="space-y-0.5">
+            {{ range $featuredArtists }}
+              <li class="text-sm font-medium text-neutral-700 dark:text-neutral-300">{{ . }}</li>
+            {{ end }}
+            {{ if gt $overflowCount 0 }}
+              <li class="text-xs text-neutral-400 dark:text-neutral-500">and {{ $overflowCount }} more</li>
+            {{ end }}
+          </ul>
         </div>
-      </div>
-      {{ with .Description }}
-        <p class="mt-3 line-clamp-2 text-sm text-neutral-600 dark:text-neutral-300">
-          {{ . }}
-        </p>
       {{ end }}
     {{ else }}
+      <header>
+        <a
+          {{ with $page.Params.externalUrl }}
+            href="{{ . }}" target="_blank" rel="external"
+          {{ else }}
+            href="{{ $page.RelPermalink }}"
+          {{ end }}
+          class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral font-bold text-neutral-800 hover:underline hover:underline-offset-2 text-xl">
+          <h2>
+            {{ .Title | emojify }}
+            {{ if .Params.externalUrl }}
+              <span class="cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500">
+                <span class="rtl:hidden">&#8599;</span>
+                <span class="ltr:hidden">&#8598;</span>
+              </span>
+            {{ end }}
+          </h2>
+        </a>
+      </header>
       <div class="text-sm text-neutral-500 dark:text-neutral-400">
         {{ partial "article-meta/basic.html" . }}
       </div>
-    {{ end }}
-    {{ if and (not $isShowCard) (.Params.showSummary | default (.Site.Params.list.showSummary | default false)) }}
-      <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
-        {{ .Summary | plainify }}
-      </div>
+      {{ if (.Params.showSummary | default (.Site.Params.list.showSummary | default false)) }}
+        <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
+          {{ .Summary | plainify }}
+        </div>
+      {{ end }}
     {{ end }}
   </div>
 </article>
