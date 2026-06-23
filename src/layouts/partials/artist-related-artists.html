@@ -1,0 +1,82 @@
+{{/* Artist Related Artists — automatically generates a "Related Artists" section
+     based on shared show appearances and shared genre tags.
+
+     Scoring:
+       - Co-appearance in the same show: 3 points per shared broadcast
+       - Shared genre tag: 1 point per matching genre
+
+     Displays the top 6 scoring artists. Artists with no shared context are
+     excluded. Only rendered when at least one related artist is found. */}}
+
+{{ $currentArtistLower := lower (trim .Title " ") }}
+{{ $currentGenres := .Params.genres | default (slice) }}
+
+{{/* Step 1: Walk all shows and record co-appearing artist tags for shows that
+     feature the current artist. Keys are lower-cased artist names; values are
+     the number of shared broadcasts. */}}
+{{ $coAppearances := dict }}
+{{ $showsSection := site.GetPage "shows" }}
+{{ if $showsSection }}
+  {{ range where $showsSection.Pages ".Date.IsZero" false }}
+    {{ $showTags := .Params.tags | default (slice) }}
+    {{ $featuresCurrentArtist := false }}
+    {{ range $showTags }}
+      {{ if eq (lower .) $currentArtistLower }}
+        {{ $featuresCurrentArtist = true }}
+      {{ end }}
+    {{ end }}
+    {{ if $featuresCurrentArtist }}
+      {{ range $showTags }}
+        {{ $tagLower := lower . }}
+        {{ if ne $tagLower $currentArtistLower }}
+          {{ $existing := index $coAppearances $tagLower | default 0 }}
+          {{ $coAppearances = merge $coAppearances (dict $tagLower (add $existing 1)) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Step 2: Score all other artist pages. Build a slice of dicts so that the
+     result can be sorted by score using Hugo's sort function. */}}
+{{ $scoredArtists := slice }}
+{{ range where site.RegularPages ".Params.artist_page" true }}
+  {{ if ne (lower .Title) $currentArtistLower }}
+    {{ $otherArtistLower := lower .Title }}
+    {{ $coScore := mul (index $coAppearances $otherArtistLower | default 0) 3 }}
+    {{ $genreScore := 0 }}
+    {{ range .Params.genres | default (slice) }}
+      {{ if in $currentGenres . }}
+        {{ $genreScore = add $genreScore 1 }}
+      {{ end }}
+    {{ end }}
+    {{ $totalScore := add $coScore $genreScore }}
+    {{ if gt $totalScore 0 }}
+      {{ $scoredArtists = $scoredArtists | append (dict "page" . "score" $totalScore) }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Step 3: Sort by score descending and cap at 6 artists. */}}
+{{ $relatedArtists := first 6 (sort $scoredArtists "score" "desc") }}
+
+{{ if $relatedArtists }}
+  <section
+    class="mb-10 not-prose"
+    role="region"
+    aria-labelledby="artist-related-artists-heading">
+
+    <h2
+      id="artist-related-artists-heading"
+      class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      Related Artists
+    </h2>
+
+    <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" role="list">
+      {{ range $relatedArtists }}
+        {{ partial "article-link/artist-card.html" .page }}
+      {{ end }}
+    </div>
+
+  </section>
+{{ end }}

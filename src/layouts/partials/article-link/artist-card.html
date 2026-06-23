@@ -1,0 +1,60 @@
+{{/* Artist Card — a compact card for displaying an artist in the Related Artists
+     section. Renders the artist image (4:3 aspect ratio), name, and short
+     summary. Follows the same visual conventions as article-link/card.html. */}}
+
+{{ $featuredURL := "" }}
+{{ $featureImage := .Params.featureimage | default .Params.featured_image }}
+{{ with $featureImage }}
+  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+    {{ $featuredURL = . }}
+  {{ else }}
+    {{ $featured := $.Resources.GetMatch . }}
+    {{ if not $featured }}{{ $featured = $.Resources.GetMatch (path.Base .) }}{{ end }}
+    {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+    {{ with $featured }}
+      {{ $featuredURL = .RelPermalink }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not $featuredURL }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+    {{ if not $featuredURL }}
+      {{ with $images.GetMatch . }}
+        {{ $featuredURL = .RelPermalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $artistSummary := .Params.summary | default .Description }}
+
+<article
+  role="listitem"
+  class="article-link--card group relative min-h-full min-w-full overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
+  {{ if $featuredURL }}
+    <div class="flex-none relative w-full overflow-hidden bg-neutral-100 dark:bg-neutral-800 aspect-[4/3]">
+      <img
+        src="{{ $featuredURL }}"
+        alt="{{ .Title }}"
+        loading="lazy"
+        decoding="async"
+        class="not-prose absolute inset-0 h-full w-full object-cover transition duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none">
+    </div>
+  {{ else }}
+    <div aria-hidden="true" class="flex-none relative aspect-[4/3] w-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900"></div>
+  {{ end }}
+  <div class="flex flex-col p-4 sm:p-5">
+    <header>
+      <a
+        href="{{ .RelPermalink }}"
+        class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral font-bold text-neutral-800 hover:underline hover:underline-offset-2 text-xl">
+        <h3>{{ .Title | emojify }}</h3>
+      </a>
+    </header>
+    {{ with $artistSummary }}
+      <p class="mt-2 text-sm text-neutral-500 dark:text-neutral-400 line-clamp-3">{{ . | plainify }}</p>
+    {{ end }}
+  </div>
+</article>
