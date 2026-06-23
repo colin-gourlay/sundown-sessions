@@ -2,7 +2,7 @@
 genres: ["Alternative Rock","Art Rock","Desert Rock","Hard Rock","Rock","Stoner Rock","Garage Rock Revival"]
 featured_image: artists/q/queens-of-the-stone-age/queens-of-the-stone-age.jpg
 title: Queens of the Stone Age
-description: "American rock band from Seattle, formed in 1996 and known for their riff-driven hard rock sound, distinctive falsetto vocals, and influential alternative rock recordings."
+description: "American rock band from Palm Desert, California, formed in 1996 and known for their riff-driven hard rock sound, distinctive falsetto vocals, and influential alternative rock recordings."
 artist_page: true
 ---
 ## About
