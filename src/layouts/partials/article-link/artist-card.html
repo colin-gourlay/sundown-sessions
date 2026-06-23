@@ -31,6 +31,7 @@
 {{ $artistSummary := .Params.summary | default .Description }}
 
 <article
+  role="listitem"
   class="article-link--card group relative min-h-full min-w-full overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
   {{ if $featuredURL }}
     <div class="flex-none relative w-full overflow-hidden bg-neutral-100 dark:bg-neutral-800 aspect-[4/3]">
@@ -42,7 +43,7 @@
         class="not-prose absolute inset-0 h-full w-full object-cover transition duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none">
     </div>
   {{ else }}
-    <div aria-hidden="true" role="presentation" class="flex-none relative aspect-[4/3] w-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900"></div>
+    <div aria-hidden="true" class="flex-none relative aspect-[4/3] w-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900"></div>
   {{ end }}
   <div class="flex flex-col p-4 sm:p-5">
     <header>
