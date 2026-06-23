@@ -11,10 +11,6 @@ Spoon released their debut studio album, Telephono, in 1996 through Matador Reco
 
 
 
-## Show(s) appeared on
-
-- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/spoontheband](https://www.facebook.com/spoontheband)" >}}

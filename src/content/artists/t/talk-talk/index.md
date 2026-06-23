@@ -11,10 +11,6 @@ Friction with the band's label, EMI, resulted in legal action and countersuing. 
 
 
 
-## Show(s) appeared on
-
-- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/talktalkfans](https://www.facebook.com/talktalkfans)" >}}

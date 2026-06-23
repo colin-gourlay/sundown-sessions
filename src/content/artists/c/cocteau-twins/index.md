@@ -12,10 +12,6 @@ After nearly 20 years together, the group disbanded in 1997 in part due to issue
 
 
 
-## Show(s) appeared on
-
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/ctwins](https://www.facebook.com/ctwins)" >}}

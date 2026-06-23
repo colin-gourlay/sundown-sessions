@@ -5,6 +5,9 @@
     {{/* Artist Header — replaces the standard hero banner and title header */}}
     {{ partial "artist-header.html" . }}
 
+    {{/* Featured on Sundown Sessions — show cards, above biography */}}
+    {{ partial "artist-featured-shows.html" . }}
+
     {{/* Body */}}
     <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       {{ $enableToc := site.Params.article.showTableOfContents | default false }}

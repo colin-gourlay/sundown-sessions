@@ -12,10 +12,6 @@ The band's "classic" lineup between 1982 and 2000, consisted of Stuart Adamson (
 
 
 
-## Show(s) appeared on
-
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/inabigcountry](https://www.facebook.com/inabigcountry)" >}}

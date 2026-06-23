@@ -13,10 +13,6 @@ Four years after the release of Tonight, the band released their fourth studio a
 
 
 
-## Show(s) appeared on
-
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/officialfranzferdinand](https://www.facebook.com/officialfranzferdinand)" >}}

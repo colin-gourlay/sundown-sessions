@@ -10,10 +10,6 @@ Air is a French music duo from Versailles, consisting of Nicolas Godin and Jean-
 
 
 
-## Show(s) appeared on
-
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/7530846195](https://www.facebook.com/7530846195)" >}}

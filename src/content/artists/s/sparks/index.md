@@ -12,11 +12,6 @@ The 2002 release of Lil' Beethoven, the duo's self-proclaimed "genre-defining op
 
 
 
-## Show(s) appeared on
-
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/sparksofficial](https://www.facebook.com/sparksofficial)" >}}

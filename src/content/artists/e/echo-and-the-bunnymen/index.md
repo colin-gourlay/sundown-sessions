@@ -14,10 +14,6 @@ After they released a self-titled album in 1987, McCulloch left the band and was
 
 Will Sergeant, Ian McCulloch, Simon Finley, Stephen Brennan
 
-## Show(s) appeared on
-
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/thebunnymen](https://www.facebook.com/thebunnymen)" >}}

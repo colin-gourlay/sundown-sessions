@@ -11,8 +11,3 @@ The Move evolved from several mid-1960s Birmingham-based groups, including Carl 
 Between 2007 and 2014, Burton and Bevan performed intermittently as "The Move featuring Bev Bevan and Trevor Burton".
 
 
-
-## Show(s) appeared on
-
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-

@@ -10,8 +10,3 @@ Visage were a British synth-pop band formed in London in 1978. The band became c
 The band saw various line-up changes over the years, all fronted by vocalist Steve Strange, who resurrected the band name in the 2000s. In 2013, the final line-up of the band released Hearts and Knives, the first new Visage album in 29 years. The band's fifth and final album, Demons to Diamonds, was released in 2015, nine months after Strange had died following a heart attack.
 
 
-
-## Show(s) appeared on
-
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-

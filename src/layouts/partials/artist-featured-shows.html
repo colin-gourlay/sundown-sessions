@@ -1,0 +1,43 @@
+{{/* Artist Featured Shows — automatically renders show cards for all broadcasts
+     featuring this artist, ordered in reverse chronological order.
+     Uses the same card style as the homepage. */}}
+
+{{/* Find shows featuring this artist via case-insensitive tag matching */}}
+{{ $artistTitleLower := lower .Title }}
+{{ $featuredShows := slice }}
+{{ $showsSection := site.GetPage "shows" }}
+{{ if $showsSection }}
+  {{ range where $showsSection.Pages ".Date.IsZero" false }}
+    {{ $showPage := . }}
+    {{ $matched := false }}
+    {{ range .Params.tags }}
+      {{ if and (not $matched) (eq (lower .) $artistTitleLower) }}
+        {{ $featuredShows = $featuredShows | append $showPage }}
+        {{ $matched = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if $featuredShows }}
+  {{ $sortedShows := $featuredShows.ByDate.Reverse }}
+
+  <section
+    class="mb-10 not-prose"
+    role="region"
+    aria-labelledby="artist-featured-shows-heading">
+
+    <h2
+      id="artist-featured-shows-heading"
+      class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      Featured on Sundown Sessions
+    </h2>
+
+    <div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {{ range $sortedShows }}
+        {{ partial "article-link/card.html" . }}
+      {{ end }}
+    </div>
+
+  </section>
+{{ end }}

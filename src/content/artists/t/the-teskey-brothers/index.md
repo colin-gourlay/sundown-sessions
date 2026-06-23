@@ -10,10 +10,6 @@ The Teskey Brothers are an Australian blues rock band from Melbourne, named afte
 
 
 
-## Show(s) appeared on
-
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/theteskeybrothers](https://www.facebook.com/theteskeybrothers)" >}}

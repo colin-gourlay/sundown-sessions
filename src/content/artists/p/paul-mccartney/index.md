@@ -11,10 +11,6 @@ Born in Liverpool, McCartney taught himself piano, guitar, and songwriting as a 
 After the Beatles disbanded, he debuted as a solo artist with the 1970 album McCartney and went on to form the band Wings with his first wife, Linda, and Denny Laine. Under McCartney's leadership, Wings became one of the most successful bands of the 1970s. He wrote or co-wrote their US or UK number-one hits, such as "My Love", "Band on the Run", "Listen to What the Man Said", "Silly Love Songs", and "Mull of Kintyre". He resumed his solo career in 1980 and has been touring as a solo artist since 1989. Apart from Wings, his UK or US number-one hits include "Uncle Albert/Admiral Halsey" (with Linda), "Coming Up", "Pipes of Peace", "Ebony and Ivory" (with Stevie Wonder), and "Say Say Say" (with Michael Jackson). Beyond music, he has been involved in projects to promote international charities related to animal rights, seal hunting, land mines, vegetarianism, poverty, and music education.
 McCartney has written or co-written a record 32 songs that have topped the Billboard Hot 100 and, as of 2009, he had sales of 25.5 million RIAA-certified units in the US. His honours include two inductions into the Rock and Roll Hall of Fame (as a member of the Beatles in 1988 and as a solo artist in 1999), an Academy Award, a Primetime Emmy Award, 18 Grammy Awards, an appointment as a Member of the Order of the British Empire in 1965, and was appointed Knight Bachelor in 1997 for services to music. As of 2024, he is one of the wealthiest musicians in the world, with an estimated fortune of £1 billion.
 
-## Show(s) appeared on
-
-- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/PaulMcCartney](https://www.facebook.com/PaulMcCartney)" >}}

@@ -12,8 +12,3 @@ They reunited in 2009 for a UK tour with Noko on guitar. Magazine released an al
 Magazine have been cited as an influence by bands and musicians such as Simple Minds, the Smiths, Radiohead, Pulp and John Frusciante.
 
 
-
-## Show(s) appeared on
-
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-

@@ -12,10 +12,6 @@ Interpol's debut album Turn On the Bright Lights (2002) was critically acclaimed
 
 
 
-## Show(s) appeared on
-
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/interpol](https://www.facebook.com/interpol)" >}}

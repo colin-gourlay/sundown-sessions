@@ -8,12 +8,6 @@ artist_page: true
 
 The Filthy Tongues are an alternative rock group from Edinburgh, Scotland, made up of Martin Metcalfe, Fin Wilson and Derek Kelly, who were previously members of Goodbye Mr Mackenzie and Angelfish alongside Shirley Manson. As Isa & the Filthy Tongues with singer Stacey Chavis, the band released two albums.
 
-## Show(s) appeared on
-
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/144934250476](https://www.facebook.com/144934250476)" >}}

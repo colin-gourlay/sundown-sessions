@@ -12,11 +12,6 @@ During ELO's original 13-year period of active recording and touring, they sold 
 
 
 
-## Show(s) appeared on
-
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/ElectricLightOrchestra](https://www.facebook.com/ElectricLightOrchestra)" >}}
