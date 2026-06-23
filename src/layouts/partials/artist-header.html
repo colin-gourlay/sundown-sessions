@@ -104,10 +104,12 @@
 {{ $latestShowLinkText := "" }}
 {{ with $latestShow }}
   {{ $latestShowPermalink = .RelPermalink }}
-  {{ $titleParts := split .Title ": " }}
-  {{ $titleBase := index $titleParts 0 }}
-  {{ if strings.HasPrefix $titleBase "Show #" }}
-    {{ $latestShowLinkText = replace $titleBase "Show #" "Sundown Sessions #" }}
+  {{/* Match the existing show-card shorthand for titled broadcasts like
+       "Show #1: Broadcast …" while falling back to the page title for any
+       future formats. */}}
+  {{ if strings.HasPrefix .Title "Show #" }}
+    {{ $titleParts := split .Title ": " }}
+    {{ $latestShowLinkText = replace (index $titleParts 0) "Show #" "Sundown Sessions #" }}
   {{ else }}
     {{ $latestShowLinkText = .Title | emojify }}
   {{ end }}
