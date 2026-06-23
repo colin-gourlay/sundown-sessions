@@ -1,10 +1,4 @@
-{{/* Genre metadata — rendered here after being moved out of the artist header */}}
 {{ $genres := .Params.genres }}
-{{ with $genres }}
-  <p class="mb-6 text-sm font-medium text-neutral-500 dark:text-neutral-400">
-    {{ delimit . " · " }}
-  </p>
-{{ end }}
 
 {{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
 {{ $biographyCollapseParagraphThreshold := 2 }}
@@ -41,7 +35,7 @@
 {{ $biographyTextLength := len ($biographyContent | plainify | strings.TrimSpace) }}
 {{ $collapseBiography := or (gt (len $biographyParagraphs) $biographyCollapseParagraphThreshold) (gt $biographyTextLength $biographyCollapseTextThreshold) }}
 
-{{ if $biographyContent }}
+{{ if or $biographyContent $genres }}
   <section
     class="mb-10 max-w-prose not-prose"
     role="region"
@@ -52,19 +46,29 @@
       About {{ .Title | emojify }}
     </h2>
 
-    {{ if $collapseBiography }}
-      <details class="overflow-hidden {{ $biographySurfaceClasses }}">
-        <summary class="cursor-pointer px-6 py-4 text-sm font-semibold text-neutral-700 marker:hidden dark:text-neutral-200">
-          Read full biography
-        </summary>
-        <div class="{{ $biographyBodyClasses }} border-t border-neutral-200 dark:border-neutral-700">
+    {{/* Genre metadata — displayed at the top of the biography section */}}
+    {{ with $genres }}
+      <div class="mb-4">
+        <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400">Genres</p>
+        <p class="text-sm font-medium text-neutral-500 dark:text-neutral-400">{{ delimit . " · " }}</p>
+      </div>
+    {{ end }}
+
+    {{ if $biographyContent }}
+      {{ if $collapseBiography }}
+        <details class="overflow-hidden {{ $biographySurfaceClasses }}">
+          <summary class="cursor-pointer px-6 py-4 text-sm font-semibold text-neutral-700 marker:hidden dark:text-neutral-200">
+            Read full biography
+          </summary>
+          <div class="{{ $biographyBodyClasses }} border-t border-neutral-200 dark:border-neutral-700">
+            {{ $biographyContent | safeHTML }}
+          </div>
+        </details>
+      {{ else }}
+        <div class="{{ $biographySurfaceClasses }} {{ $biographyBodyClasses }}">
           {{ $biographyContent | safeHTML }}
         </div>
-      </details>
-    {{ else }}
-      <div class="{{ $biographySurfaceClasses }} {{ $biographyBodyClasses }}">
-        {{ $biographyContent | safeHTML }}
-      </div>
+      {{ end }}
     {{ end }}
   </section>
 {{ end }}
