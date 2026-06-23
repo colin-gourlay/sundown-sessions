@@ -57,6 +57,18 @@
 
 {{/* Genres for the descriptor line */}}
 {{ $genres := .Params.genres }}
+{{ $artistSummary := .Description }}
+{{ if not $artistSummary }}
+  {{ $artistSummary = (.Summary | plainify | htmlUnescape | strings.TrimSpace) }}
+{{ end }}
+{{ if not $artistSummary }}
+  {{ $artistSummary = (.Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | replaceRE `^About\s*#?\s*` "") }}
+{{ end }}
+{{/* Keep summaries to ~2 lines in the desktop card by capping at 220 characters. */}}
+{{ $artistSummaryMaxLength := 220 }}
+{{ if $artistSummary }}
+  {{ $artistSummary = $artistSummary | truncate $artistSummaryMaxLength }}
+{{ end }}
 
 <section
   class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
@@ -94,7 +106,7 @@
       </h1>
 
       {{/* Artist summary */}}
-      {{ with .Description }}
+      {{ with $artistSummary }}
         <p class="text-base text-neutral-600 dark:text-neutral-300">
           {{ . }}
         </p>
