@@ -93,7 +93,8 @@
 {{ $tracksSection := site.GetPage "tracks" }}
 {{ if $tracksSection }}
   {{ range $tracksSection.RegularPagesRecursive }}
-    {{ if eq (lower .Params.artist) $artistTitleLower }}
+    {{ $trackArtistLower := lower (.Params.artist | default "") }}
+    {{ if eq $trackArtistLower $artistTitleLower }}
       {{ $trackCount = add $trackCount 1 }}
     {{ end }}
   {{ end }}
