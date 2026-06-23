@@ -30,9 +30,9 @@
   {{ end }}
 {{ end }}
 
-{{/* Artist summary */}}
+{{/* Artist summary — prefer editorial summary when present, fall back to factual summary */}}
 {{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
-{{ $artistSummary := .Params.summary | default .Description }}
+{{ $artistSummary := .Params.editorialSummary | default (.Params.summary | default .Description) }}
 {{ if not $artistSummary }}
   {{ $artistSummary = (.Summary | plainify | htmlUnescape | strings.TrimSpace) }}
 {{ end }}
@@ -108,9 +108,9 @@
 
   <div class="flex flex-col sm:flex-row">
 
-    {{/* Artist image — narrowed to give greater emphasis to editorial content */}}
+    {{/* Artist image — reduced width to favour editorial content at larger breakpoints */}}
     {{ if $featuredURL }}
-      <div class="shrink-0 bg-neutral-100 dark:bg-neutral-800 sm:w-44 lg:w-64">
+      <div class="shrink-0 bg-neutral-100 dark:bg-neutral-800 sm:w-44 lg:w-56">
         <img
           src="{{ $featuredURL }}"
           alt="{{ .Title }}"
@@ -154,7 +154,10 @@
           {{ with $latestShow }}
             <div>
               <dt>Last featured</dt>
-              <dd>{{ .Date | time.Format $dateFormat }}</dd>
+              <dd>
+                <a href="{{ .RelPermalink }}" class="artist-header-stats-show-link">{{ .Title }}</a>
+                {{ .Date | time.Format $dateFormat }}
+              </dd>
             </div>
           {{ end }}
           <div>

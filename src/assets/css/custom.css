@@ -22,7 +22,7 @@
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-64    { width: 16rem; }
+  .lg\:w-56    { width: 14rem; }
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -70,6 +70,33 @@
 }
 
 .dark .artist-header-stats dd {
+  color: #d4d4d4; /* neutral-300 */
+}
+
+/* Show title link inside the Last featured stat. */
+
+.artist-header-stats-show-link {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: #737373; /* neutral-500 */
+  margin-bottom: 0.125rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.dark .artist-header-stats-show-link {
+  color: #a3a3a3; /* neutral-400 */
+}
+
+.artist-header-stats-show-link:hover {
+  text-decoration: underline;
+  color: #171717; /* neutral-900 */
+}
+
+.dark .artist-header-stats-show-link:hover {
   color: #d4d4d4; /* neutral-300 */
 }
 
