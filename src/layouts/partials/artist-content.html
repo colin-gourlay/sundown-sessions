@@ -1,0 +1,63 @@
+{{ $contentSections := split .Content `<h2 class="relative group">` }}
+{{ $biographyContent := "" }}
+{{ $supplementaryContent := "" }}
+
+{{ if ge (len $contentSections) 2 }}
+  {{ $firstSection := index $contentSections 1 | strings.TrimSpace }}
+  {{ if hasPrefix $firstSection "About" }}
+    {{ $firstSectionParts := split $firstSection `</h2>` }}
+    {{ if ge (len $firstSectionParts) 2 }}
+      {{ $biographyContent = printf `%s%s` (index $contentSections 0) (delimit (after 1 $firstSectionParts) `</h2>`) | strings.TrimSpace }}
+    {{ else }}
+      {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
+    {{ end }}
+    {{ range after 2 $contentSections }}
+      {{ $supplementaryContent = printf `%s<h2 class="relative group">%s` $supplementaryContent . }}
+    {{ end }}
+  {{ else }}
+    {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
+    {{ range after 1 $contentSections }}
+      {{ $supplementaryContent = printf `%s<h2 class="relative group">%s` $supplementaryContent . }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  {{ $biographyContent = .Content | strings.TrimSpace }}
+{{ end }}
+
+{{ $biographyParagraphs := findRE `(?s)<p>.*?</p>` $biographyContent }}
+{{ $biographyTextLength := len ($biographyContent | plainify | strings.TrimSpace) }}
+{{ $collapseBiography := or (gt (len $biographyParagraphs) 2) (gt $biographyTextLength 500) }}
+
+{{ if $biographyContent }}
+  <section
+    class="mb-10 max-w-prose not-prose"
+    role="region"
+    aria-labelledby="artist-biography-heading">
+    <h2
+      id="artist-biography-heading"
+      class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      About {{ .Title | emojify }}
+    </h2>
+
+    {{ if $collapseBiography }}
+      <details class="overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+        <summary class="cursor-pointer px-6 py-4 text-sm font-semibold text-neutral-700 marker:hidden dark:text-neutral-200">
+          Read full biography
+        </summary>
+        <div class="border-t border-neutral-200 px-6 py-6 prose max-w-none dark:border-neutral-700 dark:prose-invert">
+          {{ $biographyContent | safeHTML }}
+        </div>
+      </details>
+    {{ else }}
+      <div class="rounded-2xl border border-neutral-200 bg-white/70 px-6 py-6 prose max-w-none shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70 dark:prose-invert">
+        {{ $biographyContent | safeHTML }}
+      </div>
+    {{ end }}
+  </section>
+{{ end }}
+
+{{ if $supplementaryContent }}
+  <div class="article-content max-w-prose mb-20">
+    {{ $supplementaryContent | safeHTML }}
+  </div>
+{{ end }}

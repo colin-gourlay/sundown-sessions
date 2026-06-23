@@ -2,6 +2,7 @@
 genres: ["Alternative Rock","Art Rock","Desert Rock","Hard Rock","Rock","Stoner Rock","Garage Rock Revival"]
 featured_image: artists/q/queens-of-the-stone-age/queens-of-the-stone-age.jpg
 title: Queens of the Stone Age
+summary: "American rock band from Palm Desert, California, known for riff-driven hard rock, distinctive falsetto vocals, and influential alternative rock recordings."
 description: "American rock band from Palm Desert, California, formed in 1996 and known for their riff-driven hard rock sound, distinctive falsetto vocals, and influential alternative rock recordings."
 artist_page: true
 ---
@@ -21,4 +22,3 @@ The band has been nominated for Grammy Awards nine times: four times for Best Ha
 - {{< new-tab-link "Twitter: [https://twitter.com/qotsa](https://twitter.com/qotsa)" >}}
 
 - {{< new-tab-link "Vimeo: [https://vimeo.com/qotsa](https://vimeo.com/qotsa)" >}}
-

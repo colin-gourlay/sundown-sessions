@@ -57,6 +57,25 @@
 
 {{/* Genres for the descriptor line */}}
 {{ $genres := .Params.genres }}
+{{ $artistSummary := .Params.summary | default .Description }}
+{{ if not $artistSummary }}
+  {{ $contentSections := split .Content `<h2 class="relative group">` }}
+  {{ $summarySource := .Content }}
+  {{ if ge (len $contentSections) 2 }}
+    {{ $firstSection := index $contentSections 1 | strings.TrimSpace }}
+    {{ if hasPrefix $firstSection "About" }}
+      {{ $firstSectionParts := split $firstSection `</h2>` }}
+      {{ if ge (len $firstSectionParts) 2 }}
+        {{ $summarySource = delimit (after 1 $firstSectionParts) `</h2>` | strings.TrimSpace }}
+      {{ end }}
+    {{ else }}
+      {{ $summarySource = index $contentSections 0 | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+  {{ with findRE `(?s)<p>.*?</p>` $summarySource 1 }}
+    {{ $artistSummary = index . 0 | plainify | strings.TrimSpace | truncate 220 }}
+  {{ end }}
+{{ end }}
 
 <section
   class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
@@ -94,7 +113,7 @@
       </h1>
 
       {{/* Artist summary */}}
-      {{ with .Description }}
+      {{ with $artistSummary }}
         <p class="text-base text-neutral-600 dark:text-neutral-300">
           {{ . }}
         </p>
