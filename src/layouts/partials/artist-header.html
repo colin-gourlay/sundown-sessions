@@ -1,6 +1,6 @@
 {{/* Artist Header — replaces the standard hero banner on artist pages.
      Displays the artist image alongside key information: name, genres,
-     Sundown Sessions appearance statistics, and a primary CTA link. */}}
+     and a short summary. Statistics are rendered separately by artist-stats.html. */}}
 
 {{/* Image resolution: mirrors the logic used in hero/basic.html and card.html */}}
 {{ $featured := "" }}
@@ -27,32 +27,6 @@
   {{ with $featured }}
     {{ $featuredURL = .RelPermalink }}
   {{ end }}
-{{ end }}
-
-{{/* Find shows featuring this artist via case-insensitive tag matching */}}
-{{ $artistTitleLower := lower .Title }}
-{{ $featuredShows := slice }}
-{{ $showsSection := site.GetPage "shows" }}
-{{ if $showsSection }}
-  {{ range where $showsSection.Pages ".Date.IsZero" false }}
-    {{ $showPage := . }}
-    {{ $matched := false }}
-    {{ range .Params.tags }}
-      {{ if and (not $matched) (eq (lower .) $artistTitleLower) }}
-        {{ $featuredShows = $featuredShows | append $showPage }}
-        {{ $matched = true }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
-
-{{ $showCount := len $featuredShows }}
-{{ $firstShow := "" }}
-{{ $latestShow := "" }}
-{{ if gt $showCount 0 }}
-  {{ $sorted := $featuredShows.ByDate }}
-  {{ $firstShow = index $sorted 0 }}
-  {{ $latestShow = index $sorted (sub $showCount 1) }}
 {{ end }}
 
 {{/* Genres for the descriptor line */}}
@@ -136,47 +110,6 @@
         <p class="text-sm font-medium text-neutral-500 dark:text-neutral-400">
           {{ delimit $genres " · " }}
         </p>
-      {{ end }}
-
-      {{/* Sundown Sessions statistics */}}
-      {{ if gt $showCount 0 }}
-        <dl class="flex flex-col gap-1 text-sm">
-          <div class="flex gap-2">
-            <dt class="font-semibold text-neutral-700 dark:text-neutral-300">Featured on</dt>
-            <dd class="text-neutral-600 dark:text-neutral-400">
-              {{ $showCount }} {{ if eq $showCount 1 }}show{{ else }}shows{{ end }}
-            </dd>
-          </div>
-          {{ with $firstShow }}
-            <div class="flex gap-2">
-              <dt class="font-semibold text-neutral-700 dark:text-neutral-300">First featured</dt>
-              <dd class="text-neutral-600 dark:text-neutral-400">
-                {{ .Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}
-              </dd>
-            </div>
-          {{ end }}
-          {{ if and $latestShow (gt $showCount 1) }}
-            <div class="flex gap-2">
-              <dt class="font-semibold text-neutral-700 dark:text-neutral-300">Most recently</dt>
-              <dd class="text-neutral-600 dark:text-neutral-400">
-                {{ $latestShow.Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}
-              </dd>
-            </div>
-          {{ end }}
-        </dl>
-
-        {{/* Primary CTA — links to the most recent featured show */}}
-        {{ with $latestShow }}
-          <div class="mt-2">
-            <a
-              href="{{ .RelPermalink }}"
-              class="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-500 dark:hover:bg-primary-400">
-              {{ if gt $showCount 1 }}View Latest Show{{ else }}View Featured Show{{ end }}
-              <span aria-hidden="true">→</span>
-            </a>
-          </div>
-        {{ end }}
-
       {{ end }}
 
     </div>
