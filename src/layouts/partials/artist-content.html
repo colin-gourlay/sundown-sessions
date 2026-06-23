@@ -1,4 +1,9 @@
-{{ $contentSections := split .Content `<h2 class="relative group">` }}
+{{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
+{{ $biographyCollapseParagraphThreshold := 2 }}
+{{ $biographyCollapseTextThreshold := 500 }}
+{{ $biographySurfaceClasses := `rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70` }}
+{{ $biographyBodyClasses := `px-6 py-6 prose max-w-none dark:prose-invert` }}
+{{ $contentSections := split .Content $renderedSectionHeadingMarker }}
 {{ $biographyContent := "" }}
 {{ $supplementaryContent := "" }}
 
@@ -12,12 +17,12 @@
       {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
     {{ end }}
     {{ range after 2 $contentSections }}
-      {{ $supplementaryContent = printf `%s<h2 class="relative group">%s` $supplementaryContent . }}
+      {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
     {{ end }}
   {{ else }}
     {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
     {{ range after 1 $contentSections }}
-      {{ $supplementaryContent = printf `%s<h2 class="relative group">%s` $supplementaryContent . }}
+      {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
     {{ end }}
   {{ end }}
 {{ else }}
@@ -26,7 +31,7 @@
 
 {{ $biographyParagraphs := findRE `(?s)<p>.*?</p>` $biographyContent }}
 {{ $biographyTextLength := len ($biographyContent | plainify | strings.TrimSpace) }}
-{{ $collapseBiography := or (gt (len $biographyParagraphs) 2) (gt $biographyTextLength 500) }}
+{{ $collapseBiography := or (gt (len $biographyParagraphs) $biographyCollapseParagraphThreshold) (gt $biographyTextLength $biographyCollapseTextThreshold) }}
 
 {{ if $biographyContent }}
   <section
@@ -40,16 +45,16 @@
     </h2>
 
     {{ if $collapseBiography }}
-      <details class="overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+      <details class="overflow-hidden {{ $biographySurfaceClasses }}">
         <summary class="cursor-pointer px-6 py-4 text-sm font-semibold text-neutral-700 marker:hidden dark:text-neutral-200">
           Read full biography
         </summary>
-        <div class="border-t border-neutral-200 px-6 py-6 prose max-w-none dark:border-neutral-700 dark:prose-invert">
+        <div class="{{ $biographyBodyClasses }} border-t border-neutral-200 dark:border-neutral-700">
           {{ $biographyContent | safeHTML }}
         </div>
       </details>
     {{ else }}
-      <div class="rounded-2xl border border-neutral-200 bg-white/70 px-6 py-6 prose max-w-none shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70 dark:prose-invert">
+      <div class="{{ $biographySurfaceClasses }} {{ $biographyBodyClasses }}">
         {{ $biographyContent | safeHTML }}
       </div>
     {{ end }}
