@@ -1,0 +1,146 @@
+{{/* Artist Header — replaces the standard hero banner on artist pages.
+     Displays the artist image alongside key information: name, genres,
+     Sundown Sessions appearance statistics, and a primary CTA link. */}}
+
+{{/* Image resolution: mirrors the logic used in hero/basic.html and card.html */}}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+{{ $featureImage := .Params.featureimage | default .Params.featured_image }}
+{{ with $featureImage }}
+  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+    {{ $featuredURL = . }}
+  {{ else }}
+    {{ $featured = $.Resources.GetMatch . }}
+    {{ if not $featured }}{{ $featured = $.Resources.GetMatch (path.Base .) }}{{ end }}
+    {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not (or $featured $featuredURL) }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+    {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not $featuredURL }}
+  {{ with $featured }}
+    {{ $featuredURL = .RelPermalink }}
+  {{ end }}
+{{ end }}
+
+{{/* Find shows featuring this artist via case-insensitive tag matching */}}
+{{ $artistTitleLower := lower .Title }}
+{{ $featuredShows := slice }}
+{{ $showsSection := site.GetPage "shows" }}
+{{ if $showsSection }}
+  {{ range where $showsSection.Pages ".Date.IsZero" false }}
+    {{ $showPage := . }}
+    {{ $matched := false }}
+    {{ range .Params.tags }}
+      {{ if and (not $matched) (eq (lower .) $artistTitleLower) }}
+        {{ $featuredShows = $featuredShows | append $showPage }}
+        {{ $matched = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $showCount := len $featuredShows }}
+{{ $firstShow := "" }}
+{{ $latestShow := "" }}
+{{ if gt $showCount 0 }}
+  {{ $sorted := $featuredShows.ByDate }}
+  {{ $firstShow = index $sorted 0 }}
+  {{ $latestShow = index $sorted (sub $showCount 1) }}
+{{ end }}
+
+{{/* Genres for the descriptor line */}}
+{{ $genres := .Params.genres }}
+
+<section
+  class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
+  role="region"
+  aria-labelledby="artist-header-heading">
+
+  <div class="flex flex-col sm:flex-row">
+
+    {{/* Artist image — contained to preserve portrait photography */}}
+    {{ if $featuredURL }}
+      <div class="flex shrink-0 items-center justify-center bg-neutral-100 dark:bg-neutral-800 sm:w-56 lg:w-72">
+        <img
+          src="{{ $featuredURL }}"
+          alt="{{ .Title }}"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="nozoom h-auto w-full object-contain sm:max-h-80 lg:max-h-96">
+      </div>
+    {{ end }}
+
+    {{/* Artist information */}}
+    <div class="flex flex-1 flex-col justify-center gap-4 p-6 sm:p-8">
+
+      {{/* Breadcrumbs */}}
+      {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
+        {{ partial "breadcrumbs.html" . }}
+      {{ end }}
+
+      {{/* Artist name */}}
+      <h1
+        id="artist-header-heading"
+        class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
+        {{ .Title | emojify }}
+      </h1>
+
+      {{/* Genre descriptor */}}
+      {{ if $genres }}
+        <p class="text-sm font-medium text-neutral-500 dark:text-neutral-400">
+          {{ delimit $genres " · " }}
+        </p>
+      {{ end }}
+
+      {{/* Sundown Sessions statistics */}}
+      {{ if gt $showCount 0 }}
+        <dl class="flex flex-col gap-1 text-sm">
+          <div class="flex gap-2">
+            <dt class="font-semibold text-neutral-700 dark:text-neutral-300">Featured on</dt>
+            <dd class="text-neutral-600 dark:text-neutral-400">
+              {{ $showCount }} {{ if eq $showCount 1 }}show{{ else }}shows{{ end }}
+            </dd>
+          </div>
+          {{ with $firstShow }}
+            <div class="flex gap-2">
+              <dt class="font-semibold text-neutral-700 dark:text-neutral-300">First featured</dt>
+              <dd class="text-neutral-600 dark:text-neutral-400">
+                {{ .Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}
+              </dd>
+            </div>
+          {{ end }}
+          {{ if and $latestShow (gt $showCount 1) }}
+            <div class="flex gap-2">
+              <dt class="font-semibold text-neutral-700 dark:text-neutral-300">Most recently</dt>
+              <dd class="text-neutral-600 dark:text-neutral-400">
+                {{ $latestShow.Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}
+              </dd>
+            </div>
+          {{ end }}
+        </dl>
+
+        {{/* Primary CTA — links to the most recent featured show */}}
+        {{ with $latestShow }}
+          <div class="mt-2">
+            <a
+              href="{{ .RelPermalink }}"
+              class="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-5 py-2.5 text-sm font-semibold text-white shadow-sm transition hover:bg-primary-700 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:bg-primary-500 dark:hover:bg-primary-400">
+              {{ if gt $showCount 1 }}View Latest Show{{ else }}View Featured Show{{ end }}
+              <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        {{ end }}
+
+      {{ end }}
+
+    </div>
+  </div>
+</section>

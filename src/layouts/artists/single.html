@@ -1,0 +1,51 @@
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "single" }}
+  <article>
+
+    {{/* Artist Header — replaces the standard hero banner and title header */}}
+    {{ partial "artist-header.html" . }}
+
+    {{/* Body */}}
+    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+      {{ $enableToc := site.Params.article.showTableOfContents | default false }}
+      {{ $enableToc = .Params.showTableOfContents | default $enableToc }}
+      {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
+      {{ $topClass := cond (hasPrefix site.Params.header.layout "fixed") "lg:top-[140px]" "lg:top-10" }}
+      {{ if $showToc }}
+        <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+          <div class="toc ps-5 print:hidden lg:sticky {{ $topClass }}">
+            {{ partial "toc.html" . }}
+          </div>
+        </div>
+      {{ end }}
+
+      <div class="min-w-0 min-h-0 max-w-fit">
+        {{ partial "series/series.html" . }}
+        <div class="article-content max-w-prose mb-20">
+          {{ .Content }}
+        </div>
+        {{ partial "series/series-closed.html" . }}
+        {{ partial "sharing-links.html" . }}
+        {{ partial "related.html" . }}
+      </div>
+    </section>
+
+    {{/* Footer */}}
+    <footer class="pt-8 max-w-prose print:hidden">
+      {{ partial "article-pagination.html" . }}
+      {{ if .Params.showComments | default (site.Params.article.showComments | default false) }}
+        {{ if templates.Exists "partials/comments.html" }}
+          <div class="pt-3">
+            <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
+            <div class="pt-3">
+              {{ partial "comments.html" . }}
+            </div>
+          </div>
+        {{ else }}
+          {{ warnf "[BLOWFISH] Comments are enabled for %s but no comments partial exists." .File.Path }}
+        {{ end }}
+      {{ end }}
+    </footer>
+
+  </article>
+{{ end }}
