@@ -62,12 +62,12 @@
   {{ $artistSummary = (.Summary | plainify | htmlUnescape | strings.TrimSpace) }}
 {{ end }}
 {{ if not $artistSummary }}
-  {{ with (findRE `(?s)<p>.*?</p>` .Content 1) }}
-    {{ $artistSummary = (index . 0 | plainify | htmlUnescape | strings.TrimSpace) }}
-  {{ end }}
+  {{ $artistSummary = (.Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | replaceRE `^About\s*#?\s*` "") }}
 {{ end }}
+{{/* Keep summary concise so desktop card text remains readable across artist pages. */}}
+{{ $artistSummaryMaxLength := 220 }}
 {{ if $artistSummary }}
-  {{ $artistSummary = $artistSummary | truncate 220 }}
+  {{ $artistSummary = $artistSummary | truncate $artistSummaryMaxLength }}
 {{ end }}
 
 <section
