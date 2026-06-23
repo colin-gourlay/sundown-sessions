@@ -10,8 +10,3 @@ Attic Lights are a Scottish indie rock band from Glasgow, Scotland, formed in 20
 A series of independent releases and live performances, including a well-received appearance at the 2007 T in the Park festival, led to a bidding war between major labels. The band signed with Island Records, and released their debut album, Friday Night Lights, in October 2008.
 
 
-
-## Show(s) appeared on
-
-- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
-

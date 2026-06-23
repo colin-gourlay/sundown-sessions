@@ -11,10 +11,6 @@ Doves went on hiatus in 2010. During this time, Goodwin released his first solo 
 
 
 
-## Show(s) appeared on
-
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/Doves](https://www.facebook.com/Doves)" >}}

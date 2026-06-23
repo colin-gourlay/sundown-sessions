@@ -12,8 +12,3 @@ Morrison developed an alcohol dependency, which at times affected his performanc
 Although the Doors recorded two more albums after Jim Morrison died, his death greatly affected the band's fortunes, and they split up two years later. In 1993, Morrison was inducted into the Rock and Roll Hall of Fame along with the other Doors members. Rolling Stone, NME, and Classic Rock have ranked him among the greatest rock singers of all time.
 
 
-
-## Show(s) appeared on
-
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-

@@ -14,10 +14,6 @@ Their music is influenced by The Cure (early period), Joy Division, Bauhaus, New
 
 Eric Miranda, Peter Dosanjh, James Levis, Andres Lopez
 
-## Show(s) appeared on
-
-- [Show #19](/shows/featuring-tbd/) (12th November 2024) - Featuring: TBD
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/inletterform](https://www.facebook.com/inletterform)" >}}

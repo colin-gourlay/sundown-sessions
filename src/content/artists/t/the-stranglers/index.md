@@ -14,10 +14,6 @@ Keyboard player Dave Greenfield died on 3 May 2020 after contracting COVID-19 wh
 
 
 
-## Show(s) appeared on
-
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/thestranglers](https://www.facebook.com/thestranglers)" >}}

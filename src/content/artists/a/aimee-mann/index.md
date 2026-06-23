@@ -13,11 +13,6 @@ In 2014, Mann released an album with Ted Leo as the Both. Mann also paints and m
 
 
 
-## Show(s) appeared on
-
-- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/AimeeMann](https://www.facebook.com/AimeeMann)" >}}

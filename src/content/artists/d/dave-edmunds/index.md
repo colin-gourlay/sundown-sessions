@@ -10,10 +10,6 @@ David William Edmunds (born 15 April 1944) is a Welsh singer-songwriter, guitari
 
 
 
-## Show(s) appeared on
-
-- [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/DaveEdmundsOfficial](https://www.facebook.com/DaveEdmundsOfficial)" >}}

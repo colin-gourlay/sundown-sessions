@@ -17,9 +17,3 @@ The music video for "Suffocate Me" was famously aired once by MTV during 120 Min
 ### Current Lineup
 
 Shirley Manson, Derek Kelly, Martin Metcalfe, Fin Wilson
-
-## Show(s) appeared on
-
-- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
-

@@ -11,10 +11,6 @@ Born in Liverpool, Lennon became involved in the skiffle craze as a teenager. In
 Lennon and Ono collaborated on many works, including a trilogy of avant-garde albums and several more films. After the Beatles disbanded, Lennon released his solo debut John Lennon/Plastic Ono Band and the international top-10 singles "Give Peace a Chance", "Instant Karma!", "Imagine", and "Happy Xmas (War Is Over)". Moving to New York City in 1971, his criticism of the Vietnam War resulted in a three-year deportation attempt by the Nixon administration. Lennon and Ono separated from 1973 to 1975, during which time he produced Harry Nilsson's album Pussy Cats. He also had chart-topping collaborations with Elton John ("Whatever Gets You thru the Night") and David Bowie ("Fame"). Following a five-year hiatus, Lennon returned to music in 1980 with the Ono collaboration Double Fantasy. He was murdered by Mark David Chapman, three weeks after the album's release.
 As a performer, writer or co-writer, Lennon had 25 number-one singles in the Billboard Hot 100 chart. Double Fantasy, his second-best-selling non-Beatles album, won the 1981 Grammy Award for Album of the Year. That year, he won the Brit Award for Outstanding Contribution to Music. In 2002, Lennon was voted eighth in a BBC history poll of the 100 Greatest Britons. Rolling Stone ranked him the fifth-greatest singer and 38th greatest artist of all time. He was inducted into the Songwriters Hall of Fame (in 1997) and the Rock and Roll Hall of Fame (twice, as a member of the Beatles in 1988 and as a solo artist in 1994).
 
-## Show(s) appeared on
-
-- [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/johnlennon](https://www.facebook.com/johnlennon)" >}}

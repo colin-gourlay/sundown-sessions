@@ -8,11 +8,6 @@ artist_page: true
 
 
 
-## Show(s) appeared on
-
-- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-
 ## External Links
 
 

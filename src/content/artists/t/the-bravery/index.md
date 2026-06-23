@@ -11,10 +11,6 @@ The band was inactive from the early 2010s onward, with Endicott confirming the 
 
 
 
-## Show(s) appeared on
-
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/6115148906](https://www.facebook.com/6115148906)" >}}

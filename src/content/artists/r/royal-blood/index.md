@@ -12,11 +12,6 @@ Royal Blood are an English rock duo formed in Littlehampton in 2011. The current
 
 Mike Kerr, Ben Thatcher
 
-## Show(s) appeared on
-
-- [Show #6](/shows/featuring-the-thieves/) (24th July 2024) - Featuring: The Thieves
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/RoyalBloodUK](https://www.facebook.com/RoyalBloodUK)" >}}

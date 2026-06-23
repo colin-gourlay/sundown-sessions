@@ -7,8 +7,3 @@ artist_page: true
 ## About
 
 The Vintage Explosion is a vintage rock and roll band from Edinburgh, Scotland.
-
-## Show(s) appeared on
-
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-

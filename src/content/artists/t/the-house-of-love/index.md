@@ -18,10 +18,6 @@ In 2021 Chadwick disbanded the 2005 line-up and recruited three new members to t
 
 Guy Chadwick, Keith Michael Osborne, Hugo Degenhardt, Harry Osborne
 
-## Show(s) appeared on
-
-- [Show #19](/shows/featuring-tbd/) (12th November 2024) - Featuring: TBD
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/TheHouseofLoveBand](https://www.facebook.com/TheHouseofLoveBand)" >}}

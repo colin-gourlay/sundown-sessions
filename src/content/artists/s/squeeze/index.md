@@ -13,10 +13,6 @@ The band reunited for tours through the United States and United Kingdom in 2007
 
 
 
-## Show(s) appeared on
-
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/squeezeofficial](https://www.facebook.com/squeezeofficial)" >}}

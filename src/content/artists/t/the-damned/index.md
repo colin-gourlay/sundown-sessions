@@ -13,10 +13,6 @@ As one of the first gothic rock bands, the Damned, featuring lead singer Vanian'
 
 
 
-## Show(s) appeared on
-
-- [Show #3](/shows/featuring-blue-on-shock/) (19th June 2024) - Featuring: Blue On Shock
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/pages/The-Damned/10644147851](https://www.facebook.com/pages/The-Damned/10644147851)" >}}
