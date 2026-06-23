@@ -168,7 +168,11 @@
               <dt>Last featured</dt>
               <dd>
                 {{ with $latestShowLinkText }}
-                  <a href="{{ $latestShowPermalink }}" class="artist-header-stats-show-link">
+                  <a
+                    href="{{ $latestShowPermalink }}"
+                    class="artist-header-stats-show-link"
+                    aria-label="View {{ . }} broadcast page"
+                    title="View {{ . }} broadcast page">
                     {{ . }}
                   </a>
                 {{ end }}
