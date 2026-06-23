@@ -64,7 +64,7 @@
 {{ if not $artistSummary }}
   {{ $artistSummary = (.Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | replaceRE `^About\s*#?\s*` "") }}
 {{ end }}
-{{/* Keep summary concise so desktop card text remains readable across artist pages. */}}
+{{/* Keep summaries to ~2 lines in the desktop card by capping at 220 characters. */}}
 {{ $artistSummaryMaxLength := 220 }}
 {{ if $artistSummary }}
   {{ $artistSummary = $artistSummary | truncate $artistSummaryMaxLength }}
