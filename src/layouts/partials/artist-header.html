@@ -58,8 +58,10 @@
 {{/* Genres for the descriptor line */}}
 {{ $genres := .Params.genres }}
 {{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
-{{ $derivedSummaryLength := 220 }}
 {{ $artistSummary := .Params.summary | default .Description }}
+{{ if not $artistSummary }}
+  {{ $artistSummary = (.Summary | plainify | htmlUnescape | strings.TrimSpace) }}
+{{ end }}
 {{ if not $artistSummary }}
   {{ $contentSections := split .Content $renderedSectionHeadingMarker }}
   {{ $summarySource := .Content }}
@@ -75,8 +77,16 @@
     {{ end }}
   {{ end }}
   {{ with findRE `(?s)<p>.*?</p>` $summarySource 1 }}
-    {{ $artistSummary = index . 0 | plainify | strings.TrimSpace | truncate $derivedSummaryLength }}
+    {{ $artistSummary = index . 0 | plainify | htmlUnescape | strings.TrimSpace }}
   {{ end }}
+{{ end }}
+{{ if not $artistSummary }}
+  {{ $artistSummary = (.Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | replaceRE `^About\s*#?\s*` "") }}
+{{ end }}
+{{/* Keep summaries to ~2 lines in the desktop card by capping at 220 characters. */}}
+{{ $artistSummaryMaxLength := 220 }}
+{{ if $artistSummary }}
+  {{ $artistSummary = $artistSummary | truncate $artistSummaryMaxLength }}
 {{ end }}
 
 <section
