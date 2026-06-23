@@ -100,6 +100,18 @@
   {{ end }}
 {{ end }}
 {{ $dateFormat := site.Params.dateFormat | default "2 January 2006" }}
+{{ $latestShowPermalink := "" }}
+{{ $latestShowLinkText := "" }}
+{{ with $latestShow }}
+  {{ $latestShowPermalink = .RelPermalink }}
+  {{ $titleParts := split .Title ": " }}
+  {{ $titleBase := index $titleParts 0 }}
+  {{ if strings.HasPrefix $titleBase "Show #" }}
+    {{ $latestShowLinkText = replace $titleBase "Show #" "Sundown Sessions #" }}
+  {{ else }}
+    {{ $latestShowLinkText = .Title | emojify }}
+  {{ end }}
+{{ end }}
 
 <section
   class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
@@ -155,6 +167,11 @@
             <div>
               <dt>Last featured</dt>
               <dd>
+                {{ with $latestShowLinkText }}
+                  <a href="{{ $latestShowPermalink }}" class="artist-header-stats-show-link">
+                    {{ . }}
+                  </a>
+                {{ end }}
                 {{ .Date | time.Format $dateFormat }}
               </dd>
             </div>
