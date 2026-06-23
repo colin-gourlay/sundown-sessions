@@ -100,6 +100,19 @@
   {{ end }}
 {{ end }}
 {{ $dateFormat := site.Params.dateFormat | default "2 January 2006" }}
+{{ $latestShowPermalink := "" }}
+{{ $latestShowLinkText := "" }}
+{{ with $latestShow }}
+  {{ $latestShowPermalink = .RelPermalink }}
+  {{/* Match the existing show-card shorthand for titled broadcasts like
+       "Show #1: Broadcast …" while falling back to the page title for any
+       future formats. */}}
+  {{ if strings.HasPrefix .Title "Show #" }}
+    {{ $latestShowLinkText = .Title | replaceRE "^Show #" (printf "%s #" site.Title) | replaceRE ":.*$" "" | emojify }}
+  {{ else }}
+    {{ $latestShowLinkText = .Title | emojify }}
+  {{ end }}
+{{ end }}
 
 <section
   class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
@@ -155,6 +168,14 @@
             <div>
               <dt>Last featured</dt>
               <dd>
+                {{ with $latestShowLinkText }}
+                  <a
+                    href="{{ $latestShowPermalink }}"
+                    class="artist-header-stats-show-link"
+                    aria-label="View {{ . }} broadcast page">
+                    {{ . }}
+                  </a>
+                {{ end }}
                 {{ .Date | time.Format $dateFormat }}
               </dd>
             </div>

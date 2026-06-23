@@ -8,11 +8,6 @@ editorialSummary: >
   Queens of the Stone Age combine desert-rock swagger, huge riffs and irresistible grooves,
   making them one of the defining alternative rock bands of the modern era.
 artist_page: true
-whyWePlayThem: >
-  Queens of the Stone Age combine huge riffs, desert-rock swagger and an instinctive
-  sense of groove. Their influence stretches across multiple generations of alternative
-  rock, making them a natural fit alongside many of the artists regularly featured on
-  Sundown Sessions.
 ---
 ## About
 
