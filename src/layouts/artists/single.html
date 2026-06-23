@@ -34,6 +34,9 @@
       </div>
     </section>
 
+    {{/* Related Artists — automatically generated from shared shows and genres */}}
+    {{ partial "artist-related-artists.html" . }}
+
     {{/* Footer */}}
     <footer class="pt-8 max-w-prose print:hidden">
       {{ partial "article-pagination.html" . }}
