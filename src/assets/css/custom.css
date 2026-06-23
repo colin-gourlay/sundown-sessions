@@ -22,7 +22,7 @@
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-56    { width: 14rem; }
+  .lg\:w-64    { width: 16rem; }
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
