@@ -108,8 +108,7 @@
        "Show #1: Broadcast …" while falling back to the page title for any
        future formats. */}}
   {{ if strings.HasPrefix .Title "Show #" }}
-    {{ $titleParts := split .Title ": " }}
-    {{ $latestShowLinkText = replace (index $titleParts 0) "Show #" "Sundown Sessions #" }}
+    {{ $latestShowLinkText = .Title | replaceRE "^Show #" (printf "%s #" site.Title) | replaceRE ":.*$" "" }}
   {{ else }}
     {{ $latestShowLinkText = .Title | emojify }}
   {{ end }}
