@@ -5,6 +5,11 @@ title: Queens of the Stone Age
 summary: "American rock band from Palm Desert, California, known for riff-driven hard rock, distinctive falsetto vocals, and influential alternative rock recordings."
 description: "American rock band from Palm Desert, California, formed in 1996 and known for their riff-driven hard rock sound, distinctive falsetto vocals, and influential alternative rock recordings."
 artist_page: true
+whyWePlayThem: >
+  Queens of the Stone Age combine huge riffs, desert-rock swagger and an instinctive
+  sense of groove. Their influence stretches across multiple generations of alternative
+  rock, making them a natural fit alongside many of the artists regularly featured on
+  Sundown Sessions.
 ---
 ## About
 
