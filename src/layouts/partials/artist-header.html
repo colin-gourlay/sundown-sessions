@@ -74,7 +74,7 @@
           loading="eager"
           decoding="async"
           fetchpriority="high"
-          class="nozoom h-auto w-full object-contain sm:max-h-80 lg:max-h-96">
+          class="nozoom h-auto w-full object-contain max-h-64 sm:max-h-80 lg:max-h-96">
       </div>
     {{ end }}
 
@@ -92,6 +92,13 @@
         class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
         {{ .Title | emojify }}
       </h1>
+
+      {{/* Artist summary */}}
+      {{ with .Description }}
+        <p class="text-base text-neutral-600 dark:text-neutral-300">
+          {{ . }}
+        </p>
+      {{ end }}
 
       {{/* Genre descriptor */}}
       {{ if $genres }}
