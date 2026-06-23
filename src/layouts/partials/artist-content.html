@@ -1,3 +1,11 @@
+{{/* Genre metadata — rendered here after being moved out of the artist header */}}
+{{ $genres := .Params.genres }}
+{{ with $genres }}
+  <p class="mb-6 text-sm font-medium text-neutral-500 dark:text-neutral-400">
+    {{ delimit . " · " }}
+  </p>
+{{ end }}
+
 {{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
 {{ $biographyCollapseParagraphThreshold := 2 }}
 {{ $biographyCollapseTextThreshold := 500 }}

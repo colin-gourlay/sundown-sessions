@@ -1,6 +1,7 @@
 {{/* Artist Header — replaces the standard hero banner on artist pages.
-     Displays the artist image alongside key information: name, genres,
-     and a short summary. Statistics are rendered separately by artist-stats.html. */}}
+     Displays the artist image alongside key information: name, a short summary,
+     Sundown Sessions statistics, and a primary call to action. Genres are
+     rendered separately near the biography by artist-content.html. */}}
 
 {{/* Image resolution: mirrors the logic used in hero/basic.html and card.html */}}
 {{ $featured := "" }}
@@ -29,8 +30,7 @@
   {{ end }}
 {{ end }}
 
-{{/* Genres for the descriptor line */}}
-{{ $genres := .Params.genres }}
+{{/* Artist summary */}}
 {{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
 {{ $artistSummary := .Params.summary | default .Description }}
 {{ if not $artistSummary }}
@@ -63,6 +63,34 @@
   {{ $artistSummary = $artistSummary | truncate $artistSummaryMaxLength }}
 {{ end }}
 
+{{/* Sundown Sessions statistics — find all featured shows for this artist */}}
+{{ $artistTitleLower := lower .Title }}
+{{ $featuredShows := slice }}
+{{ $showsSection := site.GetPage "shows" }}
+{{ if $showsSection }}
+  {{ range where $showsSection.Pages ".Date.IsZero" false }}
+    {{ $showPage := . }}
+    {{ $matched := false }}
+    {{ range .Params.tags }}
+      {{ if and (not $matched) (eq (lower .) $artistTitleLower) }}
+        {{ $featuredShows = $featuredShows | append $showPage }}
+        {{ $matched = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $showCount := len $featuredShows }}
+{{ $firstShow := "" }}
+{{ $latestShow := "" }}
+{{ if gt $showCount 0 }}
+  {{/* ByDate sorts ascending (oldest first); index 0 = earliest, last index = most recent */}}
+  {{ $sorted := $featuredShows.ByDate }}
+  {{ $firstShow = index $sorted 0 }}
+  {{ $latestShow = index $sorted (sub $showCount 1) }}
+{{ end }}
+{{ $dateFormat := site.Params.dateFormat | default "2 January 2006" }}
+
 <section
   class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
   role="region"
@@ -70,16 +98,16 @@
 
   <div class="flex flex-col sm:flex-row">
 
-    {{/* Artist image — contained to preserve portrait photography */}}
+    {{/* Artist image — narrowed to give greater emphasis to editorial content */}}
     {{ if $featuredURL }}
-      <div class="flex shrink-0 items-center justify-center bg-neutral-100 dark:bg-neutral-800 sm:w-56 lg:w-72">
+      <div class="flex shrink-0 items-center justify-center bg-neutral-100 dark:bg-neutral-800 sm:w-44 lg:w-64">
         <img
           src="{{ $featuredURL }}"
           alt="{{ .Title }}"
           loading="eager"
           decoding="async"
           fetchpriority="high"
-          class="nozoom h-auto w-full object-contain max-h-64 sm:max-h-80 lg:max-h-96">
+          class="nozoom h-auto w-full object-contain max-h-64 sm:max-h-72 lg:max-h-96">
       </div>
     {{ end }}
 
@@ -105,11 +133,37 @@
         </p>
       {{ end }}
 
-      {{/* Genre descriptor */}}
-      {{ if $genres }}
-        <p class="text-sm font-medium text-neutral-500 dark:text-neutral-400">
-          {{ delimit $genres " · " }}
-        </p>
+      {{/* Sundown Sessions statistics — show count and first featured date */}}
+      {{ if gt $showCount 0 }}
+        <dl class="artist-header-stats">
+          <div>
+            <dt>Featured on Sundown Sessions</dt>
+            <dd>{{ $showCount }} {{ if eq $showCount 1 }}broadcast{{ else }}broadcasts{{ end }}</dd>
+          </div>
+          {{ with $firstShow }}
+            <div>
+              <dt>First featured</dt>
+              <dd>{{ .Date | time.Format $dateFormat }}</dd>
+            </div>
+          {{ end }}
+        </dl>
+
+        {{/* Primary call to action */}}
+        {{ if eq $showCount 1 }}
+          {{ with $latestShow }}
+            <div>
+              <a href="{{ .RelPermalink }}" class="artist-header-cta">
+                View Featured Broadcast <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          {{ end }}
+        {{ else }}
+          <div>
+            <a href="#artist-featured-shows-heading" class="artist-header-cta">
+              Explore Featured Broadcasts <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        {{ end }}
       {{ end }}
 
     </div>
