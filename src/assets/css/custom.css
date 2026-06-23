@@ -32,3 +32,26 @@
     line-height: 1;
   }
 }
+
+/* Why We Play Them — editorial callout card. Uses a left-border accent to
+   distinguish it visually from the stats cards and biography prose. */
+
+.artist-why-card {
+  border-radius: 0.75rem;
+  border: 1px solid #e5e5e5;       /* neutral-200 */
+  border-left: 4px solid #737373;  /* neutral-500 — editorial accent */
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 1.5rem 1.75rem;
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  font-size: 1rem;
+  line-height: 1.75rem;
+  font-style: italic;
+  color: #404040;                  /* neutral-700 */
+}
+
+.dark .artist-why-card {
+  border-color: #404040;           /* neutral-700 */
+  border-left-color: #737373;      /* neutral-500 */
+  background-color: rgba(23, 23, 23, 0.7); /* neutral-900/70 */
+  color: #d4d4d4;                  /* neutral-300 */
+}

@@ -1,0 +1,23 @@
+{{/* Artist Why We Play Them — renders a short editorial section explaining why
+     this artist has been selected and championed by Sundown Sessions.
+     Sourced from the whyWePlayThem front matter field.
+     Only rendered when the field is present and non-empty. */}}
+
+{{ with .Params.whyWePlayThem }}
+  <section
+    class="mb-10 not-prose"
+    role="region"
+    aria-labelledby="artist-why-heading">
+
+    <h2
+      id="artist-why-heading"
+      class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      Why We Play Them
+    </h2>
+
+    <div class="artist-why-card">
+      {{ . | markdownify }}
+    </div>
+
+  </section>
+{{ end }}
