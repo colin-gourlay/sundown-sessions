@@ -12,11 +12,8 @@
    These mirror the Tailwind values used in artist-header.html and must be kept in
    sync if that template is updated. */
 
-.max-h-64 { max-height: 16rem; }
-
 @media (min-width: 640px) {
   .sm\:w-44    { width: 11rem; }
-  .sm\:max-h-72 { max-height: 18rem; }
   .sm\:p-8     { padding: 2rem; }
   .sm\:text-4xl {
     font-size: 2.25rem;
@@ -26,7 +23,6 @@
 
 @media (min-width: 1024px) {
   .lg\:w-64    { width: 16rem; }
-  .lg\:max-h-96 { max-height: 24rem; }
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -36,15 +32,21 @@
 /* Artist header stats — compact definition list of key Sundown Sessions metrics. */
 
 .artist-header-stats {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  display: grid;
+  gap: 1rem;
 }
 
 .artist-header-stats div {
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+}
+
+@media (min-width: 640px) {
+  .artist-header-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    column-gap: 1.5rem;
+  }
 }
 
 .artist-header-stats dt {

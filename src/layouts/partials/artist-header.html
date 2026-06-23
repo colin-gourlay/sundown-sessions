@@ -89,6 +89,16 @@
   {{ $firstShow = index $sorted 0 }}
   {{ $latestShow = index $sorted (sub $showCount 1) }}
 {{ end }}
+{{ $trackCount := 0 }}
+{{ $tracksSection := site.GetPage "tracks" }}
+{{ if $tracksSection }}
+  {{ range $tracksSection.RegularPagesRecursive }}
+    {{ $trackArtistLower := lower (.Params.artist | default "") }}
+    {{ if eq $trackArtistLower $artistTitleLower }}
+      {{ $trackCount = add $trackCount 1 }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ $dateFormat := site.Params.dateFormat | default "2 January 2006" }}
 
 <section
@@ -100,24 +110,19 @@
 
     {{/* Artist image — narrowed to give greater emphasis to editorial content */}}
     {{ if $featuredURL }}
-      <div class="flex shrink-0 items-center justify-center bg-neutral-100 dark:bg-neutral-800 sm:w-44 lg:w-64">
+      <div class="shrink-0 bg-neutral-100 dark:bg-neutral-800 sm:w-44 lg:w-64">
         <img
           src="{{ $featuredURL }}"
           alt="{{ .Title }}"
           loading="eager"
           decoding="async"
           fetchpriority="high"
-          class="nozoom h-auto w-full object-contain max-h-64 sm:max-h-72 lg:max-h-96">
+          class="nozoom h-full w-full object-cover">
       </div>
     {{ end }}
 
     {{/* Artist information */}}
     <div class="flex flex-1 flex-col justify-center gap-4 p-6 sm:p-8">
-
-      {{/* Breadcrumbs */}}
-      {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
-        {{ partial "breadcrumbs.html" . }}
-      {{ end }}
 
       {{/* Artist name */}}
       <h1
@@ -133,7 +138,7 @@
         </p>
       {{ end }}
 
-      {{/* Sundown Sessions statistics — show count and first featured date */}}
+      {{/* Sundown Sessions statistics */}}
       {{ if gt $showCount 0 }}
         <dl class="artist-header-stats">
           <div>
@@ -146,6 +151,16 @@
               <dd>{{ .Date | time.Format $dateFormat }}</dd>
             </div>
           {{ end }}
+          {{ with $latestShow }}
+            <div>
+              <dt>Last featured</dt>
+              <dd>{{ .Date | time.Format $dateFormat }}</dd>
+            </div>
+          {{ end }}
+          <div>
+            <dt>Tracks played</dt>
+            <dd>{{ $trackCount }}</dd>
+          </div>
         </dl>
 
         {{/* Primary call to action */}}
