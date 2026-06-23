@@ -59,9 +59,15 @@
 {{ $genres := .Params.genres }}
 {{ $artistSummary := .Description }}
 {{ if not $artistSummary }}
+  {{ $artistSummary = (.Summary | plainify | htmlUnescape | strings.TrimSpace) }}
+{{ end }}
+{{ if not $artistSummary }}
   {{ with (findRE `(?s)<p>.*?</p>` .Content 1) }}
-    {{ $artistSummary = (index . 0 | plainify | htmlUnescape | strings.TrimSpace | truncate 220) }}
+    {{ $artistSummary = (index . 0 | plainify | htmlUnescape | strings.TrimSpace) }}
   {{ end }}
+{{ end }}
+{{ if $artistSummary }}
+  {{ $artistSummary = $artistSummary | truncate 220 }}
 {{ end }}
 
 <section
