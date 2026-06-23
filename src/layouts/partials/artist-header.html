@@ -57,9 +57,28 @@
 
 {{/* Genres for the descriptor line */}}
 {{ $genres := .Params.genres }}
-{{ $artistSummary := .Description }}
+{{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
+{{ $artistSummary := .Params.summary | default .Description }}
 {{ if not $artistSummary }}
   {{ $artistSummary = (.Summary | plainify | htmlUnescape | strings.TrimSpace) }}
+{{ end }}
+{{ if not $artistSummary }}
+  {{ $contentSections := split .Content $renderedSectionHeadingMarker }}
+  {{ $summarySource := .Content }}
+  {{ if ge (len $contentSections) 2 }}
+    {{ $firstSection := index $contentSections 1 | strings.TrimSpace }}
+    {{ if hasPrefix $firstSection "About" }}
+      {{ $firstSectionParts := split $firstSection `</h2>` }}
+      {{ if ge (len $firstSectionParts) 2 }}
+        {{ $summarySource = delimit (after 1 $firstSectionParts) `</h2>` | strings.TrimSpace }}
+      {{ end }}
+    {{ else }}
+      {{ $summarySource = index $contentSections 0 | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+  {{ with findRE `(?s)<p>.*?</p>` $summarySource 1 }}
+    {{ $artistSummary = index . 0 | plainify | htmlUnescape | strings.TrimSpace }}
+  {{ end }}
 {{ end }}
 {{ if not $artistSummary }}
   {{ $artistSummary = (.Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | replaceRE `^About\s*#?\s*` "") }}
