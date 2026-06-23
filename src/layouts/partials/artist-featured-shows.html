@@ -1,6 +1,13 @@
-{{/* Artist Featured Shows — automatically renders show cards for all broadcasts
+{{/* Artist Featured Shows — conditionally renders show cards for broadcasts
      featuring this artist, ordered in reverse chronological order.
-     Uses the same card style as the homepage. */}}
+     Uses the same card style as the homepage.
+
+     Display rules:
+     - 1 appearance:  section hidden (the header CTA already links to the sole broadcast).
+     - 2–4 appearances: all shows are rendered.
+     - 5+ appearances: the 4 most recent shows are rendered with a "View All" link. */}}
+
+{{ $maxDisplayed := 4 }}
 
 {{/* Find shows featuring this artist via case-insensitive tag matching */}}
 {{ $artistTitleLower := lower .Title }}
@@ -19,8 +26,16 @@
   {{ end }}
 {{ end }}
 
-{{ if $featuredShows }}
+{{ $showCount := len $featuredShows }}
+
+{{ if gt $showCount 1 }}
   {{ $sortedShows := $featuredShows.ByDate.Reverse }}
+  {{ $displayedShows := $sortedShows }}
+  {{ $hasMore := false }}
+  {{ if gt $showCount $maxDisplayed }}
+    {{ $displayedShows = first $maxDisplayed $sortedShows }}
+    {{ $hasMore = true }}
+  {{ end }}
 
   <section
     class="mb-10 not-prose"
@@ -34,10 +49,21 @@
     </h2>
 
     <div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-      {{ range $sortedShows }}
+      {{ range $displayedShows }}
         {{ partial "article-link/card.html" . }}
       {{ end }}
     </div>
+
+    {{ if $hasMore }}
+      {{ $tagPage := site.GetPage (printf "/tags/%s" (.Title | urlize)) }}
+      {{ with $tagPage }}
+        <div class="mt-6">
+          <a href="{{ .RelPermalink }}" class="artist-header-cta">
+            View All {{ $showCount }} Appearances <span aria-hidden="true">→</span>
+          </a>
+        </div>
+      {{ end }}
+    {{ end }}
 
   </section>
 {{ end }}
