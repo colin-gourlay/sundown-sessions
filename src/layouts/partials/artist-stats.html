@@ -1,0 +1,77 @@
+{{/* Artist Statistics — displays a dedicated statistics section showing the artist's
+     history within Sundown Sessions. Shows are matched by case-insensitive tag comparison.
+     Only rendered when the artist has appeared in at least one broadcast. */}}
+
+{{ $artistTitleLower := lower .Title }}
+{{ $featuredShows := slice }}
+{{ $showsSection := site.GetPage "shows" }}
+{{ if $showsSection }}
+  {{ range where $showsSection.Pages ".Date.IsZero" false }}
+    {{ $showPage := . }}
+    {{ $matched := false }}
+    {{ range .Params.tags }}
+      {{ if and (not $matched) (eq (lower .) $artistTitleLower) }}
+        {{ $featuredShows = $featuredShows | append $showPage }}
+        {{ $matched = true }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $showCount := len $featuredShows }}
+
+{{ if gt $showCount 0 }}
+  {{ $sorted := $featuredShows.ByDate }}
+  {{ $firstShow := index $sorted 0 }}
+  {{ $latestShow := index $sorted (sub $showCount 1) }}
+  {{ $dateFormat := site.Params.dateFormat | default "2 January 2006" }}
+
+  <section
+    class="mb-10 not-prose"
+    role="region"
+    aria-labelledby="artist-stats-heading">
+
+    <h2
+      id="artist-stats-heading"
+      class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      Sundown Sessions Statistics
+    </h2>
+
+    <dl class="grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+
+      {{/* Featured on */}}
+      <div class="rounded-xl border border-neutral-200 bg-white/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+        <dt class="text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400">
+          Featured on
+        </dt>
+        <dd class="mt-2 text-3xl font-extrabold text-neutral-900 dark:text-neutral">
+          {{ $showCount }} {{ if eq $showCount 1 }}broadcast{{ else }}broadcasts{{ end }}
+        </dd>
+      </div>
+
+      {{/* First featured */}}
+      <div class="rounded-xl border border-neutral-200 bg-white/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+        <dt class="text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400">
+          First featured
+        </dt>
+        <dd class="mt-2 text-3xl font-extrabold text-neutral-900 dark:text-neutral">
+          {{ $firstShow.Date | time.Format $dateFormat }}
+        </dd>
+      </div>
+
+      {{/* Most recently featured — only shown when the artist has appeared more than once */}}
+      {{ if gt $showCount 1 }}
+        <div class="rounded-xl border border-neutral-200 bg-white/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+          <dt class="text-xs font-semibold uppercase text-neutral-500 dark:text-neutral-400">
+            Most recently featured
+          </dt>
+          <dd class="mt-2 text-3xl font-extrabold text-neutral-900 dark:text-neutral">
+            {{ $latestShow.Date | time.Format $dateFormat }}
+          </dd>
+        </div>
+      {{ end }}
+
+    </dl>
+
+  </section>
+{{ end }}
