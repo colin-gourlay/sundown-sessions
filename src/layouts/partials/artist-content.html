@@ -34,6 +34,10 @@
 {{ $biographyParagraphs := findRE `(?s)<p>.*?</p>` $biographyContent }}
 {{ $biographyTextLength := len ($biographyContent | plainify | strings.TrimSpace) }}
 {{ $collapseBiography := or (gt (len $biographyParagraphs) $biographyCollapseParagraphThreshold) (gt $biographyTextLength $biographyCollapseTextThreshold) }}
+{{ $biographyExcerpt := $biographyContent }}
+{{ if gt (len $biographyParagraphs) 0 }}
+  {{ $biographyExcerpt = index $biographyParagraphs 0 }}
+{{ end }}
 
 {{ if or $biographyContent $genres }}
   <section
@@ -46,22 +50,19 @@
       About {{ .Title | emojify }}
     </h2>
 
-    {{/* Genre metadata — displayed at the top of the biography section */}}
-    {{ with $genres }}
-      <div class="mb-4">
-        <p class="mb-1 text-xs font-semibold uppercase tracking-widest text-neutral-500 dark:text-neutral-400">Genres</p>
-        <p class="text-sm font-medium text-neutral-500 dark:text-neutral-400">{{ delimit . " · " }}</p>
-      </div>
-    {{ end }}
-
     {{ if $biographyContent }}
       {{ if $collapseBiography }}
-        <details class="overflow-hidden {{ $biographySurfaceClasses }}">
-          <summary class="cursor-pointer px-6 py-4 text-sm font-semibold text-neutral-700 marker:hidden dark:text-neutral-200">
-            Read full biography
+        <div class="{{ $biographySurfaceClasses }} {{ $biographyBodyClasses }} artist-biography-excerpt">
+          {{ $biographyExcerpt | safeHTML }}
+        </div>
+        <details class="mt-4">
+          <summary class="cursor-pointer text-sm font-semibold text-neutral-700 marker:hidden dark:text-neutral-200">
+            Read full biography <span aria-hidden="true">→</span>
           </summary>
-          <div class="{{ $biographyBodyClasses }} border-t border-neutral-200 dark:border-neutral-700">
-            {{ $biographyContent | safeHTML }}
+          <div class="mt-4 overflow-hidden {{ $biographySurfaceClasses }}">
+            <div class="{{ $biographyBodyClasses }}">
+              {{ $biographyContent | safeHTML }}
+            </div>
           </div>
         </details>
       {{ else }}
@@ -69,6 +70,15 @@
           {{ $biographyContent | safeHTML }}
         </div>
       {{ end }}
+    {{ end }}
+
+    {{ with $genres }}
+      <div class="mt-6">
+        <h3 class="mb-2 text-base font-semibold text-neutral-800 dark:text-neutral">
+          Genres
+        </h3>
+        <p class="text-sm font-medium text-neutral-500 dark:text-neutral-400">{{ delimit . " · " }}</p>
+      </div>
     {{ end }}
   </section>
 {{ end }}
