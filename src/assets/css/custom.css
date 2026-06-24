@@ -172,3 +172,9 @@
     -webkit-line-clamp: 4;
   }
 }
+
+/* Artist biography read-more disclosure — styled as a text link continuation. */
+
+.artist-biography-read-more:hover {
+  text-decoration: underline;
+}
