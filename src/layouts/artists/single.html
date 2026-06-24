@@ -54,5 +54,30 @@
       {{ end }}
     </footer>
 
+    <script>
+      (() => {
+        const aboutHeading = document.getElementById("artist-biography-heading");
+        const biographyDisclosure = document.querySelector("#artist-about details");
+
+        if (!aboutHeading || !biographyDisclosure) return;
+
+        let wasExpanded = biographyDisclosure.open;
+
+        biographyDisclosure.addEventListener("toggle", () => {
+          if (biographyDisclosure.open) {
+            wasExpanded = true;
+            return;
+          }
+
+          if (!wasExpanded) return;
+          wasExpanded = false;
+
+          requestAnimationFrame(() => {
+            aboutHeading.scrollIntoView({ behavior: "smooth", block: "start" });
+          });
+        });
+      })();
+    </script>
+
   </article>
 {{ end }}

@@ -1,5 +1,3 @@
-{{ $genres := .Params.genres }}
-
 {{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
 {{ $biographyCollapseParagraphThreshold := 2 }}
 {{ $biographyCollapseTextThreshold := 500 }}
@@ -40,8 +38,9 @@
   {{ $biographyRemainder = replaceRE `(?s)^.*?</p>\s*` "" $biographyContent | strings.TrimSpace }}
 {{ end }}
 
-{{ if or $biographyContent $genres }}
+{{ if $biographyContent }}
   <section
+    id="artist-about"
     class="mb-10 w-full max-w-none not-prose"
     role="region"
     aria-labelledby="artist-biography-heading">
@@ -74,19 +73,6 @@
       {{ end }}
     {{ end }}
 
-    {{ with $genres }}
-      <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">
-        <span class="font-semibold text-neutral-700 dark:text-neutral-300">Genres:</span>
-        {{- range $index, $genre := . -}}
-          {{- if eq $index 0 }} {{ else }} · {{ end -}}
-          {{- with site.GetPage (printf "/genres/%s" ($genre | urlize)) -}}
-            <a href="{{ .RelPermalink }}" class="hover:underline">{{ $genre }}</a>
-          {{- else -}}
-            {{ $genre }}
-          {{- end -}}
-        {{- end -}}
-      </p>
-    {{ end }}
   </section>
 {{ end }}
 
