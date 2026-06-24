@@ -16,12 +16,18 @@
       {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
     {{ end }}
     {{ range after 2 $contentSections }}
-      {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
+      {{ $section := . | strings.TrimSpace }}
+      {{ if not (hasPrefix $section "External Links</h2>") }}
+        {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
+      {{ end }}
     {{ end }}
   {{ else }}
     {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
     {{ range after 1 $contentSections }}
-      {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
+      {{ $section := . | strings.TrimSpace }}
+      {{ if not (hasPrefix $section "External Links</h2>") }}
+        {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
+      {{ end }}
     {{ end }}
   {{ end }}
 {{ else }}
