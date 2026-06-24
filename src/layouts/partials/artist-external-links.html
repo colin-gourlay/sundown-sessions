@@ -1,0 +1,65 @@
+{{/* Render the existing artist link shortcodes as accessible, touch-friendly
+     destination links without exposing raw URLs. Keeping the extraction here
+     avoids a migration of the artist content collection. */}}
+
+{{ $externalSection := "" }}
+{{ range split .RawContent "\n## " }}
+  {{ $section := . | strings.TrimSpace }}
+  {{ if or (hasPrefix $section "External Links") (hasPrefix $section "## External Links") }}
+    {{ $externalSection = $section }}
+  {{ end }}
+{{ end }}
+
+{{ $linkPattern := `(?m)^\s*-\s+\{\{<\s*new-tab-link\s+"([^":]+):\s+\[[^\]]+\]\((https?://[^)]+)\)"\s*>\}\}\s*$` }}
+{{ $externalLinks := findRESubmatch $linkPattern $externalSection }}
+
+{{ if $externalLinks }}
+  <section
+    class="mb-10 w-full max-w-none not-prose"
+    role="region"
+    aria-labelledby="artist-external-links-heading">
+    <h2
+      id="artist-external-links-heading"
+      class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      External Links
+    </h2>
+
+    <ul class="m-0 flex list-none flex-col items-start gap-1 p-0">
+      {{ range $externalLinks }}
+        {{ $platform := index . 1 | strings.TrimSpace }}
+        {{ $url := index . 2 | strings.TrimSpace }}
+        {{ $platformKey := lower $platform }}
+        {{ $label := $platform }}
+        {{ $icon := "link" }}
+
+        {{ if eq $platformKey "facebook" }}
+          {{ $icon = "facebook" }}
+        {{ else if eq $platformKey "instagram" }}
+          {{ $icon = "instagram" }}
+        {{ else if eq $platformKey "twitter" }}
+          {{ $icon = "twitter" }}
+        {{ else if or (eq $platformKey "bandcamp") (eq $platformKey "discogs") }}
+          {{ $icon = "music" }}
+        {{ else if eq $platformKey "website" }}
+          {{ $icon = "globe" }}
+          {{ $label = "Official Website" }}
+        {{ end }}
+
+        <li class="m-0 p-0">
+          <a
+            class="group -mx-3 inline-flex min-h-11 items-center gap-3 rounded-lg px-3 text-neutral-700 no-underline transition-colors hover:bg-neutral-100 hover:text-primary-600 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-primary-600 dark:text-neutral-200 dark:hover:bg-neutral-800 dark:hover:text-primary-400"
+            href="{{ $url | safeURL }}"
+            target="_blank"
+            rel="noopener noreferrer external"
+            aria-label="{{ $label }} (opens in a new tab)">
+            <span class="flex h-5 w-5 shrink-0 items-center justify-center" aria-hidden="true">
+              {{ partial "icon.html" $icon }}
+            </span>
+            <span class="font-medium">{{ $label }}</span>
+            <span class="text-sm text-neutral-500 transition-transform group-hover:-translate-y-0.5 group-hover:translate-x-0.5 dark:text-neutral-400" aria-hidden="true">↗</span>
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}
