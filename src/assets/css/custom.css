@@ -155,3 +155,20 @@
   background-color: rgba(23, 23, 23, 0.7); /* neutral-900/70 */
   color: #d4d4d4;                  /* neutral-300 */
 }
+
+/* Artist biography excerpt — keep the first paragraph concise before the full
+   biography disclosure while preserving natural prose styling. */
+
+.artist-biography-excerpt p {
+  display: -webkit-box;
+  margin-bottom: 0;
+  overflow: hidden;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
+}
+
+@media (min-width: 1024px) {
+  .artist-biography-excerpt p {
+    -webkit-line-clamp: 4;
+  }
+}
