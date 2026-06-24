@@ -3,8 +3,7 @@
 {{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
 {{ $biographyCollapseParagraphThreshold := 2 }}
 {{ $biographyCollapseTextThreshold := 500 }}
-{{ $biographySurfaceClasses := `rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70` }}
-{{ $biographyBodyClasses := `prose max-w-none dark:prose-invert` }}
+{{ $biographyBodyClasses := `prose max-w-none leading-relaxed dark:prose-invert` }}
 {{ $contentSections := split .Content $renderedSectionHeadingMarker }}
 {{ $biographyContent := "" }}
 {{ $supplementaryContent := "" }}
@@ -41,12 +40,12 @@
 
 {{ if or $biographyContent $genres }}
   <section
-    class="mb-10 max-w-prose not-prose"
+    class="mb-10 w-full max-w-none not-prose"
     role="region"
     aria-labelledby="artist-biography-heading">
     <h2
       id="artist-biography-heading"
-      class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      class="mb-6 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
       About {{ .Title | emojify }}
     </h2>
 
@@ -59,10 +58,8 @@
           <summary class="artist-biography-read-more cursor-pointer text-sm font-semibold text-neutral-600 marker:hidden dark:text-neutral-300">
             Read full biography <span aria-hidden="true">→</span>
           </summary>
-          <div class="mt-4 overflow-hidden {{ $biographySurfaceClasses }}">
-            <div class="px-6 py-6 {{ $biographyBodyClasses }}">
-              {{ $biographyContent | safeHTML }}
-            </div>
+          <div class="mt-4 {{ $biographyBodyClasses }}">
+            {{ $biographyContent | safeHTML }}
           </div>
         </details>
       {{ else }}
@@ -74,7 +71,15 @@
 
     {{ with $genres }}
       <p class="mt-4 text-sm text-neutral-500 dark:text-neutral-400">
-        <span class="font-semibold text-neutral-700 dark:text-neutral-300">Genres:</span> {{ delimit . " · " }}
+        <span class="font-semibold text-neutral-700 dark:text-neutral-300">Genres:</span>
+        {{- range $index, $genre := . -}}
+          {{- if eq $index 0 }} {{ else }} · {{ end -}}
+          {{- with site.GetPage (printf "/genres/%s" ($genre | urlize)) -}}
+            <a href="{{ .RelPermalink }}" class="hover:underline">{{ $genre }}</a>
+          {{- else -}}
+            {{ $genre }}
+          {{- end -}}
+        {{- end -}}
       </p>
     {{ end }}
   </section>
