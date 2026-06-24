@@ -178,3 +178,25 @@
 .artist-biography-read-more:hover {
   text-decoration: underline;
 }
+
+/* Reveal the complete introductory paragraph alongside the remaining biography
+   when the native disclosure is open. The remainder itself excludes this
+   paragraph, preventing duplicated content. */
+
+.artist-biography-excerpt:has(+ details[open]) p {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+}
+
+.artist-biography-show-less {
+  display: none;
+}
+
+details[open] > .artist-biography-read-more .artist-biography-read-full {
+  display: none;
+}
+
+details[open] > .artist-biography-read-more .artist-biography-show-less {
+  display: inline;
+}

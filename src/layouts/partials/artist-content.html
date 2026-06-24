@@ -34,8 +34,10 @@
 {{ $biographyTextLength := len ($biographyContent | plainify | strings.TrimSpace) }}
 {{ $collapseBiography := or (gt (len $biographyParagraphs) $biographyCollapseParagraphThreshold) (gt $biographyTextLength $biographyCollapseTextThreshold) }}
 {{ $biographyExcerpt := $biographyContent }}
+{{ $biographyRemainder := "" }}
 {{ if gt (len $biographyParagraphs) 0 }}
   {{ $biographyExcerpt = index $biographyParagraphs 0 }}
+  {{ $biographyRemainder = replaceRE `(?s)^.*?</p>\s*` "" $biographyContent | strings.TrimSpace }}
 {{ end }}
 
 {{ if or $biographyContent $genres }}
@@ -56,11 +58,14 @@
         </div>
         <details class="mt-3">
           <summary class="artist-biography-read-more cursor-pointer text-sm font-semibold text-neutral-600 marker:hidden dark:text-neutral-300">
-            Read full biography <span aria-hidden="true">→</span>
+            <span class="artist-biography-read-full">Read full biography <span aria-hidden="true">→</span></span>
+            <span class="artist-biography-show-less">Show less</span>
           </summary>
-          <div class="mt-4 {{ $biographyBodyClasses }}">
-            {{ $biographyContent | safeHTML }}
-          </div>
+          {{ with $biographyRemainder }}
+            <div class="mt-4 {{ $biographyBodyClasses }}">
+              {{ . | safeHTML }}
+            </div>
+          {{ end }}
         </details>
       {{ else }}
         <div class="{{ $biographyBodyClasses }}">
