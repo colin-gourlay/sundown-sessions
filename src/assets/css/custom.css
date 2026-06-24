@@ -159,6 +159,16 @@
 /* Artist biography excerpt — keep the first paragraph concise before the full
    biography disclosure while preserving natural prose styling. */
 
+#artist-biography-heading {
+  scroll-margin-top: 6rem;
+}
+
+@media (min-width: 1024px) {
+  #artist-biography-heading {
+    scroll-margin-top: 8rem;
+  }
+}
+
 .artist-biography-excerpt p {
   display: -webkit-box;
   margin-bottom: 0;
@@ -177,6 +187,23 @@
 
 .artist-biography-read-more:hover {
   text-decoration: underline;
+}
+
+/* Keep the native disclosure semantics while placing the close control after
+   the expanded biography, where the reader finishes. */
+
+#artist-about details[open] {
+  display: flex;
+  flex-direction: column;
+}
+
+#artist-about details[open] > .artist-biography-read-more {
+  order: 2;
+  margin-top: 0.75rem;
+}
+
+#artist-about details[open] > div {
+  order: 1;
 }
 
 /* Reveal the complete introductory paragraph alongside the remaining biography
