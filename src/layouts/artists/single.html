@@ -39,10 +39,9 @@
     {{/* Artist destinations follow internal discovery content. */}}
     {{ partial "artist-external-links.html" . }}
 
-    {{/* Footer */}}
-    <footer class="pt-8 max-w-prose print:hidden">
-      {{ partial "article-pagination.html" . }}
-      {{ if .Params.showComments | default (site.Params.article.showComments | default false) }}
+    {{/* Comments */}}
+    {{ if .Params.showComments | default (site.Params.article.showComments | default false) }}
+      <footer class="pt-8 max-w-prose print:hidden">
         {{ if templates.Exists "partials/comments.html" }}
           <div class="pt-3">
             <hr class="border-dotted border-neutral-300 dark:border-neutral-600" />
@@ -53,8 +52,8 @@
         {{ else }}
           {{ warnf "[BLOWFISH] Comments are enabled for %s but no comments partial exists." .File.Path }}
         {{ end }}
-      {{ end }}
-    </footer>
+      </footer>
+    {{ end }}
 
     <script>
       (() => {
