@@ -1,34 +1,31 @@
-{{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
 {{ $biographyCollapseParagraphThreshold := 2 }}
 {{ $biographyCollapseTextThreshold := 500 }}
 {{ $biographyBodyClasses := `prose max-w-none leading-relaxed dark:prose-invert` }}
-{{ $contentSections := split .Content $renderedSectionHeadingMarker }}
+{{ $contentSections := split .Content `<h2` }}
 {{ $biographyContent := "" }}
 {{ $supplementaryContent := "" }}
 
 {{ if ge (len $contentSections) 2 }}
-  {{ $firstSection := index $contentSections 1 | strings.TrimSpace }}
-  {{ if hasPrefix $firstSection "About" }}
-    {{ $firstSectionParts := split $firstSection `</h2>` }}
-    {{ if ge (len $firstSectionParts) 2 }}
-      {{ $biographyContent = printf `%s%s` (index $contentSections 0) (delimit (after 1 $firstSectionParts) `</h2>`) | strings.TrimSpace }}
-    {{ else }}
-      {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
-    {{ end }}
+  {{ $introContent := index $contentSections 0 | strings.TrimSpace }}
+  {{ $firstSection := printf `<h2%s` (index $contentSections 1) }}
+  {{ $firstHeading := index (split $firstSection `</h2>`) 0 | plainify | strings.TrimSpace | replaceRE `\s*#\s*$` "" }}
+  {{ if eq $firstHeading "About" }}
+    {{ $firstSectionBody := delimit (after 1 (split $firstSection `</h2>`)) `</h2>` | strings.TrimSpace }}
+    {{ $biographyContent = printf `%s%s` $introContent $firstSectionBody | strings.TrimSpace }}
     {{ range after 2 $contentSections }}
-      {{ $section := . | strings.TrimSpace }}
-      {{ $sectionHeading := index (split $section `</h2>`) 0 | plainify | strings.TrimSpace }}
+      {{ $section := printf `<h2%s` . }}
+      {{ $sectionHeading := index (split $section `</h2>`) 0 | plainify | strings.TrimSpace | replaceRE `\s*#\s*$` "" }}
       {{ if ne $sectionHeading "External Links" }}
-        {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
+        {{ $supplementaryContent = printf `%s%s` $supplementaryContent $section }}
       {{ end }}
     {{ end }}
   {{ else }}
-    {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
+    {{ $biographyContent = $introContent }}
     {{ range after 1 $contentSections }}
-      {{ $section := . | strings.TrimSpace }}
-      {{ $sectionHeading := index (split $section `</h2>`) 0 | plainify | strings.TrimSpace }}
+      {{ $section := printf `<h2%s` . }}
+      {{ $sectionHeading := index (split $section `</h2>`) 0 | plainify | strings.TrimSpace | replaceRE `\s*#\s*$` "" }}
       {{ if ne $sectionHeading "External Links" }}
-        {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
+        {{ $supplementaryContent = printf `%s%s` $supplementaryContent $section }}
       {{ end }}
     {{ end }}
   {{ end }}
