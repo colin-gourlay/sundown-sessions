@@ -31,7 +31,7 @@
           {{ $releaseAboutHeading := partial "release/about-heading.html" . | strings.TrimSpace }}
           {{ $releaseAboutAnchor := anchorize $releaseAboutHeading }}
           {{ $releaseContent := .Content | strings.TrimSpace }}
-          {{ $releaseContent = replaceRE `(?is)<h2\b[^>]*>\s*(External Links|Explore Further)\s*.*?</h2>\s*.*?(<h2\b|$)` "$2" $releaseContent | strings.TrimSpace }}
+          {{ $releaseContent = replaceRE `(?is)<h2\b[^>]*>\s*(External Links|Explore Further)\s*.*?</h2>\s*.*?(<h2\b[^>]*>|$)` "$2" $releaseContent | strings.TrimSpace }}
           {{ $aboutHeadings := slice "About" "About the Release" "About the Album" "About the EP" "About the Single" }}
           {{ $startsWithAboutHeading := false }}
           {{ if hasPrefix $releaseContent "<h2" }}
@@ -43,7 +43,7 @@
           {{ end }}
           {{ $hasStructuredTracks := and .Params.tracks (reflect.IsSlice .Params.tracks) (gt (len .Params.tracks) 0) }}
           {{ if $hasStructuredTracks }}
-            {{ $releaseContent = replaceRE `(?is)<h2\b[^>]*>\s*Tracklist.*?</h2>\s*.*?(<h2\b|$)` "$1" $releaseContent | strings.TrimSpace }}
+            {{ $releaseContent = replaceRE `(?is)<h2\b[^>]*>\s*Tracklist.*?</h2>\s*.*?(<h2\b[^>]*>|$)` "$1" $releaseContent | strings.TrimSpace }}
           {{ end }}
           {{ $releaseAboutContent := $releaseContent }}
           {{ $releaseAfterAboutContent := "" }}
