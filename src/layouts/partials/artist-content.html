@@ -17,7 +17,8 @@
     {{ end }}
     {{ range after 2 $contentSections }}
       {{ $section := . | strings.TrimSpace }}
-      {{ if not (hasPrefix $section "External Links</h2>") }}
+      {{ $sectionHeading := index (split $section `</h2>`) 0 | plainify | strings.TrimSpace }}
+      {{ if ne $sectionHeading "External Links" }}
         {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
       {{ end }}
     {{ end }}
@@ -25,7 +26,8 @@
     {{ $biographyContent = index $contentSections 0 | strings.TrimSpace }}
     {{ range after 1 $contentSections }}
       {{ $section := . | strings.TrimSpace }}
-      {{ if not (hasPrefix $section "External Links</h2>") }}
+      {{ $sectionHeading := index (split $section `</h2>`) 0 | plainify | strings.TrimSpace }}
+      {{ if ne $sectionHeading "External Links" }}
         {{ $supplementaryContent = printf `%s%s%s` $supplementaryContent $renderedSectionHeadingMarker . }}
       {{ end }}
     {{ end }}
