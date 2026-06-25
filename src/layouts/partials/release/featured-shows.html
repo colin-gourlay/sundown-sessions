@@ -154,7 +154,7 @@
     {{- $showPage := . -}}
     {{- $showText := .RawContent -}}
     {{- with .File -}}
-      {{- $trackInfoPath := printf "content/%s/track-info.md" (strings.TrimSuffix "/index.md" (replace .Path "\\" "/")) -}}
+      {{- $trackInfoPath := printf "content/%s/track-info.md" (path.Dir (replace .Path "\\" "/")) -}}
       {{- if fileExists $trackInfoPath -}}
         {{- $showText = printf "%s\n%s" $showText (readFile $trackInfoPath) -}}
       {{- end -}}
