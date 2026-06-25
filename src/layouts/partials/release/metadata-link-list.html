@@ -1,0 +1,44 @@
+{{- $taxonomyPath := .taxonomyPath | default "" -}}
+{{- $rawValues := .values -}}
+{{- $values := slice -}}
+
+{{- with $rawValues -}}
+  {{- if reflect.IsSlice . -}}
+    {{- range . -}}
+      {{- $values = $values | append . -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $values = $values | append . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $cleanValues := slice -}}
+{{- range $values -}}
+  {{- $value := "" -}}
+  {{- if reflect.IsMap . -}}
+    {{- $value = index . "title" | default (index . "name") | default (index . "label") | default (index . "value") | default "" -}}
+  {{- else -}}
+    {{- $value = printf "%v" . -}}
+  {{- end -}}
+  {{- $value = $value | strings.TrimSpace -}}
+  {{- if $value -}}
+    {{- $cleanValues = $cleanValues | append $value -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range $index, $value := $cleanValues -}}
+  {{- if gt $index 0 -}}
+    <span class="mx-1 text-neutral-400" aria-hidden="true">&middot;</span>
+  {{- end -}}
+  {{- $termPage := false -}}
+  {{- with $taxonomyPath -}}
+    {{- $termPage = site.GetPage (printf "/%s/%s" . ($value | urlize)) -}}
+  {{- end -}}
+  {{- with $termPage -}}
+    <a
+      class="decoration-primary-500 hover:underline hover:underline-offset-2"
+      href="{{ .RelPermalink }}">{{ $value }}</a>
+  {{- else -}}
+    <span>{{ $value }}</span>
+  {{- end -}}
+{{- end -}}

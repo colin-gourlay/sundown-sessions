@@ -71,73 +71,69 @@
   {{- end -}}
 {{- end -}}
 
-{{- $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type -}}
-{{- with $releaseType -}}
-  {{- $releaseTypeText := . -}}
-  {{- if reflect.IsSlice . -}}
-    {{- $releaseTypeText = delimit . ", " -}}
+{{- $releaseYear := "" -}}
+{{- with $releaseDate -}}
+  {{- if reflect.IsMap . -}}
+  {{- else if reflect.IsSlice . -}}
+  {{- else -}}
+    {{- $dateText := printf "%v" . -}}
+    {{- if or (in $dateText "UTC") (in $dateText "+0000") -}}
+      {{- $releaseYear = time.Format "2006" . -}}
+    {{- else -}}
+      {{- $yearMatches := findRE `\b(1[89][0-9]{2}|20[0-9]{2})\b` $dateText 1 -}}
+      {{- if gt (len $yearMatches) 0 -}}
+        {{- $releaseYear = index $yearMatches 0 -}}
+      {{- end -}}
+    {{- end -}}
   {{- end -}}
-  {{- $fields = $fields | append (dict "term" "Type" "value" $releaseTypeText) -}}
+{{- end -}}
+{{- with $releaseYear -}}
+  {{- $fields = $fields | append (dict "term" "Year" "values" (slice .) "taxonomyPath" "years") -}}
 {{- end -}}
 
-{{- $label := "" -}}
+{{- $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type -}}
+{{- with $releaseType -}}
+  {{- $fields = $fields | append (dict "term" "Release Type" "values" . "taxonomyPath" "release-types") -}}
+{{- end -}}
+
+{{- $label := false -}}
 {{- with .Params.label -}}
-  {{- if reflect.IsSlice . -}}
-    {{- $label = delimit . ", " -}}
-  {{- else -}}
-    {{- $label = . -}}
-  {{- end -}}
+  {{- $label = . -}}
 {{- else -}}
   {{- with .Params.labels -}}
-    {{- if reflect.IsSlice . -}}
-      {{- $label = delimit . ", " -}}
-    {{- else -}}
-      {{- $label = . -}}
-    {{- end -}}
+    {{- $label = . -}}
   {{- end -}}
 {{- end -}}
 {{- with $label -}}
-  {{- $fields = $fields | append (dict "term" "Label" "value" .) -}}
+  {{- $fields = $fields | append (dict "term" "Label" "values" . "taxonomyPath" "labels") -}}
 {{- end -}}
 
-{{- $producer := "" -}}
+{{- $producer := false -}}
 {{- with .Params.producer -}}
-  {{- if reflect.IsSlice . -}}
-    {{- $producer = delimit . ", " -}}
-  {{- else -}}
-    {{- $producer = . -}}
-  {{- end -}}
+  {{- $producer = . -}}
 {{- else -}}
   {{- with .Params.producers -}}
-    {{- if reflect.IsSlice . -}}
-      {{- $producer = delimit . ", " -}}
-    {{- else -}}
-      {{- $producer = . -}}
-    {{- end -}}
+    {{- $producer = . -}}
   {{- end -}}
 {{- end -}}
 {{- with $producer -}}
-  {{- $fields = $fields | append (dict "term" "Producer" "value" .) -}}
+  {{- $fields = $fields | append (dict "term" "Producer" "values" . "taxonomyPath" "producers") -}}
 {{- end -}}
 
-{{- $genre := "" -}}
+{{- $genre := false -}}
 {{- with .Params.genre -}}
-  {{- if reflect.IsSlice . -}}
-    {{- $genre = delimit . ", " -}}
-  {{- else -}}
-    {{- $genre = . -}}
-  {{- end -}}
+  {{- $genre = . -}}
 {{- else -}}
   {{- with .Params.genres -}}
-    {{- if reflect.IsSlice . -}}
-      {{- $genre = delimit . ", " -}}
-    {{- else -}}
-      {{- $genre = . -}}
-    {{- end -}}
+    {{- $genre = . -}}
   {{- end -}}
 {{- end -}}
 {{- with $genre -}}
-  {{- $fields = $fields | append (dict "term" "Genre" "value" .) -}}
+  {{- $fields = $fields | append (dict "term" "Genre" "values" . "taxonomyPath" "genres") -}}
+{{- end -}}
+
+{{- with .Params.tags -}}
+  {{- $fields = $fields | append (dict "term" "Tags" "values" . "taxonomyPath" "tags") -}}
 {{- end -}}
 
 {{- $trackCount := .Params.trackCount | default .Params.track_count -}}
@@ -178,7 +174,11 @@
             {{ .term }}
           </dt>
           <dd class="mt-1 break-words text-base font-medium text-neutral-900 dark:text-neutral-100">
-            {{ .value }}
+            {{- if isset . "values" -}}
+              {{ partial "release/metadata-link-list.html" (dict "values" .values "taxonomyPath" .taxonomyPath) }}
+            {{- else -}}
+              {{ .value }}
+            {{- end -}}
           </dd>
         </div>
       {{- end }}
