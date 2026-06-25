@@ -30,23 +30,18 @@
 {{ end }}
 
 {{/* Artist summary — prefer editorial summary when present, fall back to factual summary */}}
-{{ $renderedSectionHeadingMarker := `<h2 class="relative group">` }}
 {{ $artistSummary := .Params.editorialSummary | default (.Params.summary | default .Description) }}
 {{ if not $artistSummary }}
-  {{ $artistSummary = (.Summary | plainify | htmlUnescape | strings.TrimSpace) }}
-{{ end }}
-{{ if not $artistSummary }}
-  {{ $contentSections := split .Content $renderedSectionHeadingMarker }}
+  {{ $contentSections := split .Content `<h2` }}
   {{ $summarySource := .Content }}
   {{ if ge (len $contentSections) 2 }}
-    {{ $firstSection := index $contentSections 1 | strings.TrimSpace }}
-    {{ if hasPrefix $firstSection "About" }}
-      {{ $firstSectionParts := split $firstSection `</h2>` }}
-      {{ if ge (len $firstSectionParts) 2 }}
-        {{ $summarySource = delimit (after 1 $firstSectionParts) `</h2>` | strings.TrimSpace }}
-      {{ end }}
+    {{ $introContent := index $contentSections 0 | strings.TrimSpace }}
+    {{ $firstSection := printf `<h2%s` (index $contentSections 1) }}
+    {{ $firstHeading := index (split $firstSection `</h2>`) 0 | plainify | strings.TrimSpace | replaceRE `\s*#\s*$` "" }}
+    {{ if eq $firstHeading "About" }}
+      {{ $summarySource = delimit (after 1 (split $firstSection `</h2>`)) `</h2>` | strings.TrimSpace }}
     {{ else }}
-      {{ $summarySource = index $contentSections 0 | strings.TrimSpace }}
+      {{ $summarySource = $introContent }}
     {{ end }}
   {{ end }}
   {{ with findRE `(?s)<p>.*?</p>` $summarySource 1 }}
@@ -54,7 +49,7 @@
   {{ end }}
 {{ end }}
 {{ if not $artistSummary }}
-  {{ $artistSummary = (.Plain | htmlUnescape | replaceRE `\s+` " " | strings.TrimSpace | replaceRE `^About\s*#?\s*` "") }}
+  {{ $artistSummary = "" }}
 {{ end }}
 {{/* Keep summaries to ~2 lines in the desktop card by capping at 220 characters. */}}
 {{ $artistSummaryMaxLength := 220 }}
