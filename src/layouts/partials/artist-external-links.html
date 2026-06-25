@@ -5,7 +5,7 @@
 {{ $externalSection := "" }}
 {{ range split .RawContent "\n## " }}
   {{ $section := . | strings.TrimSpace }}
-  {{ if or (hasPrefix $section "External Links") (hasPrefix $section "## External Links") }}
+  {{ if or (hasPrefix $section "External Links") (hasPrefix $section "## External Links") (hasPrefix $section "Artist Links") (hasPrefix $section "## Artist Links") }}
     {{ $externalSection = $section }}
   {{ end }}
 {{ end }}
@@ -21,7 +21,7 @@
     <h2
       id="artist-external-links-heading"
       class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
-      External Links
+      Artist Links
     </h2>
 
     <ul class="m-0 flex list-none flex-col items-start gap-1 p-0">

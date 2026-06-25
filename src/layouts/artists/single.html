@@ -29,7 +29,6 @@
         {{ partial "series/series.html" . }}
         {{ partial "artist-content.html" . }}
         {{ partial "series/series-closed.html" . }}
-        {{ partial "sharing-links.html" . }}
         {{ partial "related.html" . }}
       </div>
     </section>
@@ -37,7 +36,7 @@
     {{/* Related Artists — automatically generated from shared shows and genres */}}
     {{ partial "artist-related-artists.html" . }}
 
-    {{/* External destinations follow internal discovery content. */}}
+    {{/* Artist destinations follow internal discovery content. */}}
     {{ partial "artist-external-links.html" . }}
 
     {{/* Footer */}}
