@@ -2,7 +2,23 @@
 title: Villains
 artist: Queens Of The Stone Age
 label: Matador Records
+labels:
+  - Matador Records
 release_date: "25 August 2017"
+releaseDate: 2017-08-25
+releaseType: Album
+release-types:
+  - Album
+genres:
+  - Alternative Rock
+  - Stoner Rock
+producers:
+  - Mark Ronson
+years:
+  - "2017"
+tags:
+  - alternative rock
+  - queens of the stone age
 uk_chart_position: 2
 catalogue_number: "MAT 0983"
 for_sale: true

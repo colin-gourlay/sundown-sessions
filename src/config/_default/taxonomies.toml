@@ -1,2 +1,7 @@
 genre = "genres"
 tag = "tags"
+category = "categories"
+label = "labels"
+producer = "producers"
+releaseType = "release-types"
+year = "years"
