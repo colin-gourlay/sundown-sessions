@@ -1,0 +1,155 @@
+{{- $fields := slice -}}
+
+{{- $artist := "" -}}
+{{- with .Params.artist -}}
+  {{- if reflect.IsSlice . -}}
+    {{- $artist = delimit . ", " -}}
+  {{- else -}}
+    {{- $artist = . -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .Params.artists -}}
+    {{- if reflect.IsSlice . -}}
+      {{- $artist = delimit . ", " -}}
+    {{- else -}}
+      {{- $artist = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $artist -}}
+  {{- $fields = $fields | append (dict "term" "Artist" "value" .) -}}
+{{- end -}}
+
+{{- $releaseDate := .Params.releaseDate | default .Params.release_date | default .Params.date -}}
+{{- if and (not $releaseDate) (not .Date.IsZero) -}}
+  {{- $releaseDate = .Date -}}
+{{- end -}}
+{{- with $releaseDate -}}
+  {{- $dateText := . -}}
+  {{- if reflect.IsMap . -}}
+    {{- $dateText = "" -}}
+  {{- else if not (reflect.IsSlice .) -}}
+    {{- $dateText = printf "%v" . -}}
+    {{- if or (in $dateText "UTC") (in $dateText "+0000") -}}
+      {{- $dateText = time.Format (site.Params.dateFormat | default "2 January 2006") . -}}
+    {{- end -}}
+  {{- end -}}
+  {{- with $dateText -}}
+    {{- $fields = $fields | append (dict "term" "Released" "value" .) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type -}}
+{{- with $releaseType -}}
+  {{- $releaseTypeText := . -}}
+  {{- if reflect.IsSlice . -}}
+    {{- $releaseTypeText = delimit . ", " -}}
+  {{- end -}}
+  {{- $fields = $fields | append (dict "term" "Type" "value" $releaseTypeText) -}}
+{{- end -}}
+
+{{- $label := "" -}}
+{{- with .Params.label -}}
+  {{- if reflect.IsSlice . -}}
+    {{- $label = delimit . ", " -}}
+  {{- else -}}
+    {{- $label = . -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .Params.labels -}}
+    {{- if reflect.IsSlice . -}}
+      {{- $label = delimit . ", " -}}
+    {{- else -}}
+      {{- $label = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $label -}}
+  {{- $fields = $fields | append (dict "term" "Label" "value" .) -}}
+{{- end -}}
+
+{{- $producer := "" -}}
+{{- with .Params.producer -}}
+  {{- if reflect.IsSlice . -}}
+    {{- $producer = delimit . ", " -}}
+  {{- else -}}
+    {{- $producer = . -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .Params.producers -}}
+    {{- if reflect.IsSlice . -}}
+      {{- $producer = delimit . ", " -}}
+    {{- else -}}
+      {{- $producer = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $producer -}}
+  {{- $fields = $fields | append (dict "term" "Producer" "value" .) -}}
+{{- end -}}
+
+{{- $genre := "" -}}
+{{- with .Params.genre -}}
+  {{- if reflect.IsSlice . -}}
+    {{- $genre = delimit . ", " -}}
+  {{- else -}}
+    {{- $genre = . -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .Params.genres -}}
+    {{- if reflect.IsSlice . -}}
+      {{- $genre = delimit . ", " -}}
+    {{- else -}}
+      {{- $genre = . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+{{- with $genre -}}
+  {{- $fields = $fields | append (dict "term" "Genre" "value" .) -}}
+{{- end -}}
+
+{{- $trackCount := .Params.trackCount | default .Params.track_count -}}
+{{- if and (not $trackCount) .Params.tracks (reflect.IsSlice .Params.tracks) -}}
+  {{- $trackCount = len .Params.tracks -}}
+{{- end -}}
+{{- with $trackCount -}}
+  {{- $trackCountText := printf "%v track" . -}}
+  {{- if ne (printf "%v" .) "1" -}}
+    {{- $trackCountText = printf "%v tracks" . -}}
+  {{- end -}}
+  {{- $fields = $fields | append (dict "term" "Tracks" "value" $trackCountText) -}}
+{{- end -}}
+
+{{- $duration := .Params.duration | default .Params.length -}}
+{{- with $duration -}}
+  {{- $durationText := . -}}
+  {{- if reflect.IsSlice . -}}
+    {{- $durationText = delimit . ", " -}}
+  {{- end -}}
+  {{- $fields = $fields | append (dict "term" "Duration" "value" $durationText) -}}
+{{- end -}}
+
+{{- if gt (len $fields) 0 -}}
+  <section
+    class="mb-10 max-w-prose rounded-lg border border-neutral-200 bg-neutral-50/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/60"
+    role="region"
+    aria-labelledby="release-details-heading">
+    <h2
+      id="release-details-heading"
+      class="mt-0 mb-4 text-xl font-bold text-neutral-800 dark:text-neutral-100">
+      Release Details
+    </h2>
+    <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+      {{- range $fields }}
+        <div class="min-w-0 border-t border-neutral-200 pt-3 first:border-t-0 first:pt-0 sm:first:border-t sm:first:pt-3 dark:border-neutral-700">
+          <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+            {{ .term }}
+          </dt>
+          <dd class="mt-1 break-words text-base font-medium text-neutral-900 dark:text-neutral-100">
+            {{ .value }}
+          </dd>
+        </div>
+      {{- end }}
+    </dl>
+  </section>
+{{- end -}}
