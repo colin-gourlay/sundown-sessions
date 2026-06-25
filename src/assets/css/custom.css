@@ -627,6 +627,130 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   margin: -0.35rem 1.25rem 0.9rem;
 }
 
+/* Release discovery: responsive onward recommendations for non-sequential
+   release pages. Artwork is contained so sleeve art is never cropped. */
+
+.release-discover-more {
+  margin: 2rem 0 2.5rem;
+  max-width: 72rem;
+}
+
+.release-discover-more__heading {
+  margin: 0 0 1rem;
+  color: #262626; /* neutral-800 */
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1.4;
+}
+
+.dark .release-discover-more__heading {
+  color: #f5f5f5; /* neutral-100 */
+}
+
+.release-discover-more__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.release-discover-card {
+  min-width: 0;
+  overflow: hidden;
+  border: 1px solid #d4d4d4; /* neutral-300 */
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  transition: box-shadow 0.15s ease, transform 0.15s ease;
+}
+
+.dark .release-discover-card {
+  border-color: #404040; /* neutral-700 */
+  background-color: rgba(23, 23, 23, 0.8); /* neutral-900/80 */
+}
+
+.release-discover-card:hover,
+.release-discover-card:focus-within {
+  box-shadow: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  transform: translateY(-0.125rem);
+}
+
+.release-discover-card__link {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  color: inherit;
+  text-decoration: none;
+}
+
+.release-discover-card__link:focus-visible {
+  outline: 2px solid rgba(var(--color-primary-600), 1);
+  outline-offset: -2px;
+}
+
+.release-discover-card__media {
+  display: flex;
+  aspect-ratio: 1 / 1;
+  align-items: center;
+  justify-content: center;
+  background-color: #f5f5f5; /* neutral-100 */
+  padding: 0.75rem;
+}
+
+.dark .release-discover-card__media {
+  background-color: #262626; /* neutral-800 */
+}
+
+.release-discover-card__media img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.release-discover-card__body {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding: 1rem;
+}
+
+.release-discover-card__title {
+  color: #171717; /* neutral-900 */
+  font-size: 1rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.release-discover-card__link:hover .release-discover-card__title,
+.release-discover-card__link:focus-visible .release-discover-card__title {
+  color: rgba(var(--color-primary-600), 1);
+  text-decoration: underline;
+  text-underline-offset: 0.125rem;
+}
+
+.dark .release-discover-card__title {
+  color: #e5e5e5; /* neutral-200 */
+}
+
+.dark .release-discover-card__link:hover .release-discover-card__title,
+.dark .release-discover-card__link:focus-visible .release-discover-card__title {
+  color: rgba(var(--color-primary-400), 1);
+}
+
+.release-discover-card__artist,
+.release-discover-card__meta {
+  color: #737373; /* neutral-500 */
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.dark .release-discover-card__artist,
+.dark .release-discover-card__meta {
+  color: #a3a3a3; /* neutral-400 */
+}
+
 @media (min-width: 640px) {
   .release-tracklist__row {
     grid-template-columns: 2.5rem minmax(0, 1fr) auto;
@@ -646,5 +770,15 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
   .release-featured-shows__date {
     flex: none;
+  }
+
+  .release-discover-more__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (min-width: 1024px) {
+  .release-discover-more__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
