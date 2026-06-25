@@ -12,5 +12,6 @@ public static class HelpPrinter
         Console.WriteLine("Usage:");
         Console.WriteLine("  contentops intake start --source <path> --working-root <path> --master-root <path> [--correlation-id <guid>]");
         Console.WriteLine("  contentops show create-frontmatter --show-number <n> --featured-guest <name> --broadcast-date <ISO 8601> --keywords <artist1,artist2,...> --output-path <path> [--charity <name>] [--spotify-episode-id <id>] [--correlation-id <guid>]");
+        Console.WriteLine("  contentops content enrich --site-root <path> --report-path <path> [--changed-paths <path1,path2,...>] [--changed-path <path>] [--correlation-id <guid>]");
     }
 }

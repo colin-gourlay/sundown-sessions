@@ -7,6 +7,7 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using SundownMedia.ContentOps.Application.DependencyInjection;
 using SundownMedia.ContentOps.Application.Features.AlbumReview.Intake;
+using SundownMedia.ContentOps.Application.Features.ContentEnrichment;
 using SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatter;
 using SundownMedia.ContentOps.Cli;
 using SundownMedia.ContentOps.Contracts.Correlation;
@@ -67,5 +68,30 @@ else if (options is ShowNotesFrontmatterCliOptions showOptions)
     }
 
     Console.WriteLine($"Show notes frontmatter written to: {result.Value.OutputPath}");
+    Console.WriteLine($"CorrelationId: {result.Value.CorrelationId}");
+}
+else if (options is ContentEnrichmentCliOptions enrichOptions)
+{
+    var command = new EnrichContentCommand(
+        enrichOptions.SiteRoot,
+        enrichOptions.ChangedPaths,
+        enrichOptions.ReportPath,
+        correlationId);
+
+    var result = await sender.Send(command, CancellationToken.None);
+
+    if (result.IsError)
+    {
+        Console.Error.WriteLine(result.FirstError.Description);
+        Environment.ExitCode = 1;
+        return;
+    }
+
+    Console.WriteLine($"Content enrichment report written to: {result.Value.ReportPath}");
+    Console.WriteLine($"Pages created: {result.Value.PagesCreated}");
+    Console.WriteLine($"Artists created: {result.Value.ArtistPagesCreated}");
+    Console.WriteLine($"Releases created: {result.Value.ReleasePagesCreated}");
+    Console.WriteLine($"Tracks created: {result.Value.TrackPagesCreated}");
+    Console.WriteLine($"Ambiguous items: {result.Value.AmbiguousItems}");
     Console.WriteLine($"CorrelationId: {result.Value.CorrelationId}");
 }
