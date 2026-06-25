@@ -16,6 +16,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\src\SundownMedia.ContentOps.Application\SundownMedia.ContentOps.Application.csproj" />
+    <ProjectReference Include="..\..\src\SundownMedia.ContentOps.Cli\SundownMedia.ContentOps.Cli.csproj" />
     <ProjectReference Include="..\..\src\SundownMedia.ContentOps.Contracts\SundownMedia.ContentOps.Contracts.csproj" />
   </ItemGroup>
 

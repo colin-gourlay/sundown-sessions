@@ -1,0 +1,113 @@
+name: Content Enrichment
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - src/content/shows/**/playlist.md
+      - src/content/shows/**/track-info.md
+  workflow_dispatch:
+    inputs:
+      changed_paths:
+        description: Optional comma-separated show playlist or track-info paths to enrich. Leave blank to scan all shows.
+        required: false
+        type: string
+
+permissions:
+  contents: write
+  pull-requests: write
+
+env:
+  DOTNET_DIR: automation/dotnet
+  HUGO_VERSION: 0.146.5
+  REPORT_PATH: reports/content-enrichment-report.md
+
+jobs:
+  enrich:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source using v4.3.1
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Setup .NET using v4.3.1
+        uses: actions/setup-dotnet@67a3573c9a986a3f9c594539f4ab511d57bb3ce9 # v4.3.1
+        with:
+          global-json-file: ${{ env.DOTNET_DIR }}/global.json
+
+      - name: Detect changed show files
+        id: changes
+        shell: bash
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo "changed_paths=${{ inputs.changed_paths }}" >> "$GITHUB_OUTPUT"
+            exit 0
+          fi
+
+          before="${{ github.event.before }}"
+          if [ -z "$before" ] || [ "$before" = "0000000000000000000000000000000000000000" ]; then
+            before="$(git rev-list --max-parents=0 HEAD)"
+          fi
+
+          changed_paths="$(git diff --name-only "$before" "${{ github.sha }}" -- \
+            'src/content/shows/**/playlist.md' \
+            'src/content/shows/**/track-info.md' | paste -sd, -)"
+          echo "changed_paths=$changed_paths" >> "$GITHUB_OUTPUT"
+
+      - name: Restore ContentOps
+        run: dotnet restore SundownMedia.ContentOps.sln
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Run content enrichment
+        run: >
+          dotnet run --project src/SundownMedia.ContentOps.Cli/SundownMedia.ContentOps.Cli.csproj --
+          content enrich
+          --site-root ../../src
+          --report-path ../../${{ env.REPORT_PATH }}
+          --changed-paths "${{ steps.changes.outputs.changed_paths }}"
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Test ContentOps
+        run: dotnet test SundownMedia.ContentOps.sln --configuration Release --no-restore
+        working-directory: ${{ env.DOTNET_DIR }}
+
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb
+          sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Validate Hugo content
+        run: |
+          hugo \
+            --source src \
+            --printPathWarnings \
+            --panicOnWarning \
+            --environment production \
+            --baseURL https://example.invalid/
+
+      - name: Check generated changes
+        id: generated
+        shell: bash
+        run: |
+          if git diff --quiet -- src/content; then
+            echo "has_changes=false" >> "$GITHUB_OUTPUT"
+          else
+            echo "has_changes=true" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Create or update editorial review PR using v6.1.0
+        if: steps.generated.outputs.has_changes == 'true'
+        uses: peter-evans/create-pull-request@c5a7806660adbe173f04e3e038b0ccdcd758773c # v6.1.0
+        with:
+          branch: automation/content-enrichment
+          delete-branch: true
+          title: "feat(content): enrich playlist-derived pages"
+          commit-message: "feat(content): enrich playlist-derived pages"
+          body-path: ${{ env.REPORT_PATH }}
+          labels: automated,content-enrichment
+          add-paths: |
+            src/content
+            reports/content-enrichment-report.md

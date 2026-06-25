@@ -6,6 +6,8 @@ namespace SundownMedia.ContentOps.Cli;
 
 public static class ArgumentParser
 {
+    private static readonly char[] ChangedPathSeparators = [',', ';', '\n', '\r'];
+
     public static bool TryParse(string[] args, out CliOptions? options)
     {
         options = null;
@@ -25,6 +27,12 @@ public static class ArgumentParser
             string.Equals(args[1], "create-frontmatter", StringComparison.OrdinalIgnoreCase))
         {
             return TryParseShowCreateFrontmatter(args, out options);
+        }
+
+        if (string.Equals(args[0], "content", StringComparison.OrdinalIgnoreCase) &&
+            string.Equals(args[1], "enrich", StringComparison.OrdinalIgnoreCase))
+        {
+            return TryParseContentEnrich(args, out options);
         }
 
         return false;
@@ -147,6 +155,54 @@ public static class ArgumentParser
             .AsReadOnly();
 
         options = new ShowNotesFrontmatterCliOptions(showNumber, featuredGuest, broadcastDate, keywords, outputPath, correlationId, spotifyEpisodeId, charity);
+        return true;
+    }
+
+    private static bool TryParseContentEnrich(string[] args, out CliOptions? options)
+    {
+        options = null;
+
+        string? siteRoot = null;
+        string? changedPathsRaw = null;
+        string? reportPath = null;
+        string? correlationId = null;
+        var changedPaths = new List<string>();
+
+        for (var i = 2; i < args.Length; i++)
+        {
+            if (string.Equals(args[i], "--site-root", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                siteRoot = args[++i];
+            }
+            else if (string.Equals(args[i], "--changed-paths", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                changedPathsRaw = args[++i];
+            }
+            else if (string.Equals(args[i], "--changed-path", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                changedPaths.Add(args[++i]);
+            }
+            else if (string.Equals(args[i], "--report-path", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                reportPath = args[++i];
+            }
+            else if (string.Equals(args[i], "--correlation-id", StringComparison.OrdinalIgnoreCase) && i + 1 < args.Length)
+            {
+                correlationId = args[++i];
+            }
+        }
+
+        if (!string.IsNullOrWhiteSpace(changedPathsRaw))
+        {
+            changedPaths.AddRange(changedPathsRaw.Split(ChangedPathSeparators, StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries));
+        }
+
+        if (string.IsNullOrWhiteSpace(siteRoot) || string.IsNullOrWhiteSpace(reportPath))
+        {
+            return false;
+        }
+
+        options = new ContentEnrichmentCliOptions(siteRoot, changedPaths.AsReadOnly(), reportPath, correlationId);
         return true;
     }
 }
