@@ -26,7 +26,32 @@
       <div class="min-w-0 min-h-0 max-w-fit">
         {{ partial "series/series.html" . }}
         <div class="article-content max-w-prose mb-20">
-          {{ .Content }}
+          {{ $releaseAboutHeading := partial "release/about-heading.html" . | strings.TrimSpace }}
+          {{ $releaseAboutAnchor := anchorize $releaseAboutHeading }}
+          {{ $releaseContent := .Content | strings.TrimSpace }}
+          {{ $aboutHeadings := slice "About" "About the Release" "About the Album" "About the EP" "About the Single" }}
+          {{ $startsWithAboutHeading := false }}
+          {{ if hasPrefix $releaseContent "<h2" }}
+            {{ $firstContentHeading := index (split $releaseContent `</h2>`) 0 | plainify | strings.TrimSpace | replaceRE `\s*#\s*$` "" }}
+            {{ $startsWithAboutHeading = in $aboutHeadings $firstContentHeading }}
+          {{ end }}
+          {{ if $startsWithAboutHeading }}
+            {{ $releaseContent = delimit (after 1 (split $releaseContent `</h2>`)) `</h2>` | strings.TrimSpace }}
+          {{ end }}
+
+          <h2 class="relative group">{{ $releaseAboutHeading | emojify }}
+            <div id="{{ $releaseAboutAnchor }}" class="anchor"></div>
+            {{ if .Params.showHeadingAnchors | default (.Site.Params.article.showHeadingAnchors | default true) }}
+              <span
+                class="absolute top-0 w-6 transition-opacity opacity-0 -start-6 not-prose group-hover:opacity-100 select-none">
+                <a
+                  class="text-primary-300 dark:text-neutral-700 !no-underline"
+                  href="#{{ $releaseAboutAnchor }}"
+                  aria-label="{{ i18n "article.anchor_label" }}">#</a>
+              </span>
+            {{ end }}
+          </h2>
+          {{ $releaseContent | safeHTML }}
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
           {{ if $replyByEmail }}

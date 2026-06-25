@@ -1,0 +1,15 @@
+{{- $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type | default "" -}}
+{{- $normalisedType := printf "%v" $releaseType | lower | strings.TrimSpace -}}
+{{- $normalisedType = replaceRE `[-_]` " " $normalisedType -}}
+{{- $normalisedType = replaceRE `\s+` " " $normalisedType -}}
+{{- $normalisedType = replaceRE `\breleases?\b` "" $normalisedType | strings.TrimSpace -}}
+
+{{- if in (slice "album" "albums" "lp" "lps" "studio album" "studio albums") $normalisedType -}}
+  About the Album
+{{- else if in (slice "ep" "eps" "e.p." "e.p.s") $normalisedType -}}
+  About the EP
+{{- else if in (slice "single" "singles") $normalisedType -}}
+  About the Single
+{{- else -}}
+  About the Release
+{{- end -}}
