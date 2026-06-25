@@ -39,6 +39,17 @@
           {{ if $startsWithAboutHeading }}
             {{ $releaseContent = delimit (after 1 (split $releaseContent `</h2>`)) `</h2>` | strings.TrimSpace }}
           {{ end }}
+          {{ $hasStructuredTracks := and .Params.tracks (reflect.IsSlice .Params.tracks) (gt (len .Params.tracks) 0) }}
+          {{ if $hasStructuredTracks }}
+            {{ $releaseContent = replaceRE `(?is)<h2\b[^>]*>\s*Tracklist.*?</h2>\s*.*?(?=<h2\b|$)` "" $releaseContent | strings.TrimSpace }}
+          {{ end }}
+          {{ $releaseAboutContent := $releaseContent }}
+          {{ $releaseAfterAboutContent := "" }}
+          {{ if and $hasStructuredTracks (in $releaseContent "<h2") }}
+            {{ $releaseContentParts := split $releaseContent "<h2" }}
+            {{ $releaseAboutContent = index $releaseContentParts 0 | strings.TrimSpace }}
+            {{ $releaseAfterAboutContent = printf "<h2%s" (delimit (after 1 $releaseContentParts) "<h2") | strings.TrimSpace }}
+          {{ end }}
 
           <h2 class="relative group">{{ $releaseAboutHeading | emojify }}
             <div id="{{ $releaseAboutAnchor }}" class="anchor"></div>
@@ -52,7 +63,13 @@
               </span>
             {{ end }}
           </h2>
-          {{ $releaseContent | safeHTML }}
+          {{ $releaseAboutContent | safeHTML }}
+          {{ if $hasStructuredTracks }}
+            {{ partial "release/tracklist.html" . }}
+          {{ end }}
+          {{ with $releaseAfterAboutContent }}
+            {{ . | safeHTML }}
+          {{ end }}
           {{ $defaultReplyByEmail := site.Params.replyByEmail }}
           {{ $replyByEmail := default $defaultReplyByEmail .Params.replyByEmail }}
           {{ if $replyByEmail }}
