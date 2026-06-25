@@ -1,0 +1,123 @@
+{{/* Release hero card for individual release pages. */}}
+
+{{ $artworkParam := "" }}
+{{ with .Params.artwork }}
+  {{ $artworkParam = . }}
+{{ else }}
+  {{ with .Params.cover }}
+    {{ $artworkParam = . }}
+  {{ else }}
+    {{ with .Params.image }}
+      {{ $artworkParam = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $artwork := "" }}
+{{ $artworkURL := "" }}
+{{ with $artworkParam }}
+  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+    {{ $artworkURL = . }}
+  {{ else }}
+    {{ $artwork = $.Resources.GetMatch . }}
+    {{ if not $artwork }}{{ $artwork = $.Resources.GetMatch (path.Base .) }}{{ end }}
+    {{ if not $artwork }}{{ $artwork = resources.Get . }}{{ end }}
+    {{ if not $artwork }}{{ $artworkURL = . | relURL }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not (or $artwork $artworkURL) }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ range slice "*artwork*" "*cover*" "*image*" "*feature*" "*thumbnail*" }}
+    {{ if not $artwork }}{{ $artwork = $images.GetMatch . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not $artworkURL }}
+  {{ with $artwork }}
+    {{ $artworkURL = .RelPermalink }}
+  {{ end }}
+{{ end }}
+
+{{ $artist := "" }}
+{{ with .Params.artist }}
+  {{ $artist = . }}
+{{ else }}
+  {{ with .Params.artists }}
+    {{ if reflect.IsSlice . }}
+      {{ $artist = delimit . ", " }}
+    {{ else }}
+      {{ $artist = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $releaseDate := .Params.releaseDate | default .Params.release_date }}
+{{ $releaseType := .Params.releaseType | default .Params.release_type }}
+{{ $trackCount := 0 }}
+{{ with .Params.trackCount }}
+  {{ $trackCount = . }}
+{{ else }}
+  {{ with .Params.tracks }}
+    {{ $trackCount = len . }}
+  {{ end }}
+{{ end }}
+
+<section
+  class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
+  role="region"
+  aria-labelledby="release-hero-heading">
+  <div class="flex flex-col sm:flex-row">
+    {{ with $artworkURL }}
+      <div class="flex items-center justify-center bg-neutral-100 p-4 dark:bg-neutral-800 sm:w-64 sm:shrink-0">
+        <img
+          src="{{ . }}"
+          alt="{{ $.Title }} artwork"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="nozoom h-auto max-h-96 w-full object-contain">
+      </div>
+    {{ end }}
+
+    <div class="flex flex-1 flex-col justify-center gap-5 p-6 sm:p-8">
+      <div>
+        <h1
+          id="release-hero-heading"
+          class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
+          {{ .Title | emojify }}
+        </h1>
+        {{ with $artist }}
+          <p class="mt-2 text-lg font-medium text-neutral-700 dark:text-neutral-300">
+            {{ . }}
+          </p>
+        {{ end }}
+      </div>
+
+      {{ if or $releaseDate $releaseType (gt $trackCount 0) }}
+        <dl class="grid gap-4 sm:grid-cols-2">
+          {{ with $releaseDate }}
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Release date</dt>
+              <dd class="mt-1 text-base font-semibold text-neutral-900 dark:text-neutral-200">{{ . }}</dd>
+            </div>
+          {{ end }}
+          {{ with $releaseType }}
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Type</dt>
+              <dd class="mt-1 text-base font-semibold text-neutral-900 dark:text-neutral-200">{{ . }}</dd>
+            </div>
+          {{ end }}
+          {{ if gt $trackCount 0 }}
+            <div>
+              <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Tracks</dt>
+              <dd class="mt-1 text-base font-semibold text-neutral-900 dark:text-neutral-200">
+                {{ $trackCount }} {{ if eq $trackCount 1 }}track{{ else }}tracks{{ end }}
+              </dd>
+            </div>
+          {{ end }}
+        </dl>
+      {{ end }}
+    </div>
+  </div>
+</section>
