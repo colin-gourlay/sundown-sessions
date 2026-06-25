@@ -254,6 +254,35 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   color: rgba(var(--color-primary-400), 1);
 }
 
+/* Shared Explore Further list-group interactions for external links. */
+
+.explore-further__row:hover,
+.explore-further__row:focus-visible {
+  background-color: rgba(var(--color-neutral-100), 1);
+  color: rgba(var(--color-primary-600), 1);
+}
+
+.explore-further__row:hover .explore-further__icon,
+.explore-further__row:focus-visible .explore-further__icon {
+  color: rgba(var(--color-primary-600), 1);
+}
+
+.explore-further__row:focus-visible {
+  outline: 2px solid rgba(var(--color-primary-600), 1);
+  outline-offset: -2px;
+}
+
+.dark .explore-further__row:hover,
+.dark .explore-further__row:focus-visible {
+  background-color: rgba(var(--color-neutral-800), 1);
+  color: rgba(var(--color-primary-400), 1);
+}
+
+.dark .explore-further__row:hover .explore-further__icon,
+.dark .explore-further__row:focus-visible .explore-further__icon {
+  color: rgba(var(--color-primary-400), 1);
+}
+
 /* Release hero: optional artwork-derived accent for individual release pages.
    The CSS variable is only emitted when front matter provides a colour. */
 

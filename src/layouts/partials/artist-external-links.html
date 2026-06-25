@@ -56,36 +56,11 @@
   {{ end }}
 {{ end }}
 
-{{ if $orderedLinks }}
-  <section
-    class="mb-10 w-full max-w-none not-prose"
-    role="region"
-    aria-labelledby="artist-external-links-heading">
-    <h2
-      id="artist-external-links-heading"
-      class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
-      Explore Further
-    </h2>
-
-    <ul class="m-0 overflow-hidden rounded-xl border border-neutral-300 bg-white p-0 shadow-sm dark:border-neutral-700 dark:bg-neutral-900">
-      {{ range $index, $link := $orderedLinks }}
-        <li class="m-0 p-0{{ if gt $index 0 }} border-t border-neutral-200 dark:border-neutral-700{{ end }}">
-          <a
-            class="artist-external-link-row flex w-full items-center justify-between gap-4 px-4 py-3 text-neutral-700 no-underline transition dark:text-neutral-200"
-            href="{{ $link.url | safeURL }}"
-            target="_blank"
-            rel="noopener noreferrer external"
-            aria-label="{{ $link.label }} (opens in a new tab)">
-            <span class="flex min-w-0 items-center gap-3">
-              <span class="artist-external-link-icon flex h-5 w-5 shrink-0 items-center justify-center text-neutral-500 transition dark:text-neutral-400" aria-hidden="true">
-                {{ partial "icon.html" $link.icon }}
-              </span>
-              <span class="truncate font-semibold">{{ $link.label }}</span>
-            </span>
-            <span class="shrink-0 text-sm text-neutral-500 dark:text-neutral-400" aria-hidden="true">&#8599;</span>
-          </a>
-        </li>
-      {{ end }}
-    </ul>
-  </section>
-{{ end }}
+{{ partial "components/explore-further.html" (dict
+  "links" $orderedLinks
+  "heading" "Explore Further"
+  "headingId" "artist-external-links-heading"
+  "sectionClass" "mb-10 w-full max-w-none not-prose"
+  "rowClass" "artist-external-link-row"
+  "iconClass" "artist-external-link-icon"
+) }}

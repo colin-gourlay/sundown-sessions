@@ -31,6 +31,7 @@
           {{ $releaseAboutHeading := partial "release/about-heading.html" . | strings.TrimSpace }}
           {{ $releaseAboutAnchor := anchorize $releaseAboutHeading }}
           {{ $releaseContent := .Content | strings.TrimSpace }}
+          {{ $releaseContent = replaceRE `(?is)<h2\b[^>]*>\s*(External Links|Explore Further)\s*.*?</h2>\s*.*?(?=<h2\b|$)` "" $releaseContent | strings.TrimSpace }}
           {{ $aboutHeadings := slice "About" "About the Release" "About the Album" "About the EP" "About the Single" }}
           {{ $startsWithAboutHeading := false }}
           {{ if hasPrefix $releaseContent "<h2" }}
@@ -69,6 +70,7 @@
             {{ partial "release/tracklist.html" . }}
           {{ end }}
           {{ partial "release/featured-shows.html" . }}
+          {{ partial "release/explore-further.html" . }}
           {{ with $releaseAfterAboutContent }}
             {{ . | safeHTML }}
           {{ end }}
