@@ -1,0 +1,46 @@
+{{- $tracks := .Params.tracks -}}
+{{- if and $tracks (reflect.IsSlice $tracks) (gt (len $tracks) 0) -}}
+  <section class="release-tracklist not-prose" role="region" aria-labelledby="tracklist">
+    <h2 id="tracklist" class="release-tracklist__heading">Tracklist</h2>
+    <ol class="release-tracklist__list">
+      {{- range $index, $track := $tracks -}}
+        {{- $title := "" -}}
+        {{- $duration := "" -}}
+        {{- $number := add $index 1 -}}
+        {{- $link := "" -}}
+
+        {{- if reflect.IsMap $track -}}
+          {{- $title = index $track "title" | default (index $track "name") | default "" -}}
+          {{- $duration = index $track "duration" | default (index $track "length") | default "" -}}
+          {{- $number = index $track "trackNumber" | default (index $track "tracknumber") | default (index $track "track_number") | default (index $track "number") | default $number -}}
+          {{- $link = index $track "url" | default (index $track "page") | default (index $track "slug") | default "" -}}
+        {{- else -}}
+          {{- $title = $track -}}
+        {{- end -}}
+
+        {{- $title = printf "%v" $title | strings.TrimSpace -}}
+        {{- $duration = printf "%v" $duration | strings.TrimSpace -}}
+        {{- $link = printf "%v" $link | strings.TrimSpace -}}
+        {{- if and $link (not (or (strings.HasPrefix $link "http://") (strings.HasPrefix $link "https://") (strings.HasPrefix $link "/"))) -}}
+          {{- $link = printf "/%s" $link -}}
+        {{- end -}}
+
+        {{- if $title -}}
+          <li class="release-tracklist__row">
+            <span class="release-tracklist__number">{{ printf "%02d" (int $number) }}</span>
+            <span class="release-tracklist__title">
+              {{- if $link -}}
+                <a href="{{ $link | relURL }}">{{ $title }}</a>
+              {{- else -}}
+                {{ $title }}
+              {{- end -}}
+            </span>
+            {{- with $duration -}}
+              <span class="release-tracklist__duration">{{ . }}</span>
+            {{- end -}}
+          </li>
+        {{- end -}}
+      {{- end -}}
+    </ol>
+  </section>
+{{- end -}}
