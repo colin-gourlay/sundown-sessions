@@ -1,4 +1,4 @@
-﻿---
+---
 title: "As I Try Not To Fall Apart"
 artist: "White Lies"
 releaseDate: "2022-02-18"
@@ -8,7 +8,7 @@ genres:
   - "offizielle charts"
   - "laut.de"
   - "ph_temp_checken"
-  - "1â4 wochen"
+  - "1-4 wochen"
 labels:
   - "[PIAS] Recordings"
 duration: "0:47:30"
@@ -26,7 +26,7 @@ tracks:
   - title: "Breathe"
     trackNumber: 3
     duration: "04:46"
-  - title: "I Don’t Want to Go to Mars"
+  - title: "I Don't Want to Go to Mars"
     trackNumber: 4
     duration: "04:38"
   - title: "Step Outside"
@@ -55,5 +55,3 @@ lastmod: "2026-06-25"
 ## About
 
 As I Try Not To Fall Apart is a release by White Lies released in 2022-02-18. It has been featured on 1 Sundown Sessions show. Featured tracks include I Don't Want To Go To Mars.
-
-

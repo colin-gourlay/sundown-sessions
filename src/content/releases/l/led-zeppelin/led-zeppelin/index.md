@@ -4,7 +4,7 @@ artist: "Led Zeppelin"
 releaseDate: "2001"
 releaseType: "Album"
 labels:
-  - "Warner/Chappell Music, Inc."
+  - "Warner Chappell Music Inc"
 duration: "3:37:34"
 featuredInShows:
   - "12"
