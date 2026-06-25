@@ -1,20 +1,52 @@
 {{- $fields := slice -}}
 
 {{- $artist := "" -}}
+{{- $artistNames := slice -}}
 {{- with .Params.artist -}}
   {{- if reflect.IsSlice . -}}
-    {{- $artist = delimit . ", " -}}
+    {{- range . -}}
+      {{- if reflect.IsMap . -}}
+        {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "page") | default (index . "url") | default (index . "slug")) -}}
+          {{- $artistNames = $artistNames | append . -}}
+        {{- end -}}
+      {{- else -}}
+        {{- $artistNames = $artistNames | append . -}}
+      {{- end -}}
+    {{- end -}}
   {{- else -}}
-    {{- $artist = . -}}
+    {{- if reflect.IsMap . -}}
+      {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "page") | default (index . "url") | default (index . "slug")) -}}
+        {{- $artistNames = $artistNames | append . -}}
+      {{- end -}}
+    {{- else -}}
+      {{- $artistNames = $artistNames | append . -}}
+    {{- end -}}
   {{- end -}}
 {{- else -}}
   {{- with .Params.artists -}}
     {{- if reflect.IsSlice . -}}
-      {{- $artist = delimit . ", " -}}
+      {{- range . -}}
+        {{- if reflect.IsMap . -}}
+          {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "page") | default (index . "url") | default (index . "slug")) -}}
+            {{- $artistNames = $artistNames | append . -}}
+          {{- end -}}
+        {{- else -}}
+          {{- $artistNames = $artistNames | append . -}}
+        {{- end -}}
+      {{- end -}}
     {{- else -}}
-      {{- $artist = . -}}
+      {{- if reflect.IsMap . -}}
+        {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "page") | default (index . "url") | default (index . "slug")) -}}
+          {{- $artistNames = $artistNames | append . -}}
+        {{- end -}}
+      {{- else -}}
+        {{- $artistNames = $artistNames | append . -}}
+      {{- end -}}
     {{- end -}}
   {{- end -}}
+{{- end -}}
+{{- with $artistNames -}}
+  {{- $artist = delimit . ", " -}}
 {{- end -}}
 {{- with $artist -}}
   {{- $fields = $fields | append (dict "term" "Artist" "value" .) -}}
