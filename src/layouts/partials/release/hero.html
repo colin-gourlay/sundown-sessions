@@ -54,6 +54,22 @@
 
 {{ $releaseDate := .Params.releaseDate | default .Params.release_date }}
 {{ $releaseType := .Params.releaseType | default .Params.release_type }}
+{{ $accentColor := "" }}
+{{ with .Params.artworkAccent }}
+  {{ $accentColor = . }}
+{{ else }}
+  {{ with .Params.artwork_accent }}
+    {{ $accentColor = . }}
+  {{ else }}
+    {{ with .Params.accentColor }}
+      {{ $accentColor = . }}
+    {{ else }}
+      {{ with .Params.accent_color }}
+        {{ $accentColor = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ $trackCount := 0 }}
 {{ with .Params.trackCount }}
   {{ $trackCount = . }}
@@ -64,7 +80,8 @@
 {{ end }}
 
 <section
-  class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
+  class="release-hero{{ with $accentColor }} release-hero--accent{{ end }} mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
+  {{ with $accentColor }}style="--release-accent: {{ . | safeCSS }};"{{ end }}
   role="region"
   aria-labelledby="release-hero-heading">
   <div class="flex flex-col sm:flex-row">

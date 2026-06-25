@@ -254,6 +254,33 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   color: rgba(var(--color-primary-400), 1);
 }
 
+/* Release hero: optional artwork-derived accent for individual release pages.
+   The CSS variable is only emitted when front matter provides a colour. */
+
+.release-hero {
+  position: relative;
+}
+
+.release-hero--accent {
+  border-top-color: var(--release-accent);
+  border-top-width: 3px;
+  background-image:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--release-accent) 8%, transparent),
+      transparent 34%
+    );
+}
+
+.dark .release-hero--accent {
+  background-image:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--release-accent) 6%, transparent),
+      transparent 36%
+    );
+}
+
 /* Release tracklist: scoped card/list-group treatment for structured release
    front matter without changing show playlists or artist pages. */
 
