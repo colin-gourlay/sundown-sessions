@@ -121,6 +121,14 @@ If your pull request changes files under `automation/dotnet/`, update [CHANGELOG
 - Releases can be created manually via workflow dispatch.
 - Tag-based releases use the `contentops/v*` naming pattern.
 
+### GitHub Actions Updates
+
+- Dependabot opens pull requests for GitHub Actions updates.
+- Review the upstream action release notes and repository before merging.
+- Confirm each pinned SHA matches the expected release tag.
+- Let the affected workflows pass before merging.
+- Keep non-action Docker image digests under separate review when they are introduced.
+
 ## Additional Repository Standards
 
 - Use British English in documentation and user-facing text.
