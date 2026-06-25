@@ -1,0 +1,46 @@
+{{ $showRefs := slice }}
+{{ with .File }}
+  {{ $showRefs = $showRefs | append (path.Base (strings.TrimSuffix "/" .Dir)) }}
+{{ end }}
+{{ $showRefs = $showRefs | append .Slug | append (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink)) }}
+{{ $releasePages := slice }}
+
+{{ range where site.RegularPages "Section" "releases" }}
+  {{ $release := . }}
+  {{ $matched := false }}
+  {{ with ($release.Params.featuredInShows | default $release.Params.featured_in_shows | default $release.Params.shows) }}
+    {{ $entries := . }}
+    {{ if not (reflect.IsSlice $entries) }}{{ $entries = slice $entries }}{{ end }}
+    {{ range $entry := $entries }}
+      {{ $ref := "" }}
+      {{ if reflect.IsMap $entry }}
+        {{ $ref = index $entry "show" | default (index $entry "page") | default (index $entry "path") | default (index $entry "slug") | default (index $entry "url") | default "" }}
+      {{ else }}
+        {{ $ref = $entry }}
+      {{ end }}
+      {{ $ref = lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" (printf "%v" $ref))) }}
+      {{ range $showRefs }}
+        {{ if eq $ref (lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" (printf "%v" .)))) }}{{ $matched = true }}{{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ if $matched }}{{ $releasePages = $releasePages | append $release }}{{ end }}
+{{ end }}
+
+{{ if gt (len $releasePages) 0 }}
+  <section class="mb-10 not-prose" role="region" aria-labelledby="show-featured-releases-heading">
+    <h2 id="show-featured-releases-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">Featured Releases</h2>
+    <div class="release-discover-more__grid">
+      {{ range first 6 $releasePages }}
+        <article class="release-discover-card">
+          <a class="release-discover-card__link" href="{{ .RelPermalink }}">
+            <span class="release-discover-card__body">
+              <span class="release-discover-card__title">{{ .Title | emojify }}</span>
+              {{ with .Params.artist }}<span class="release-discover-card__artist">{{ . }}</span>{{ end }}
+            </span>
+          </a>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

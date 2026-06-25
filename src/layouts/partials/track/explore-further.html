@@ -1,0 +1,23 @@
+{{ $rawLinks := slice }}
+{{ $externalSection := "" }}
+{{ range split .RawContent "\n## " }}
+  {{ $section := . | strings.TrimSpace }}
+  {{ if or (hasPrefix $section "External Links") (hasPrefix $section "Explore Further") }}
+    {{ $externalSection = $section }}
+  {{ end }}
+{{ end }}
+{{ $linkPattern := `(?m)^\s*-\s+\{\{<\s*new-tab-link\s+"(?:([^":\[]+):\s+)?\[([^\]]+)\]\((https?://[^)]+)\)"\s*>\}\}\s*$` }}
+{{ range findRESubmatch $linkPattern $externalSection }}
+  {{ $label := printf "%v" (index . 1 | default (index . 2)) | strings.TrimSpace }}
+  {{ $url := printf "%v" (index . 3 | default "") | strings.TrimSpace }}
+  {{ if $url }}{{ $rawLinks = $rawLinks | append (dict "url" $url "label" ($label | default "External Link") "icon" "link") }}{{ end }}
+{{ end }}
+
+{{ partial "components/explore-further.html" (dict
+  "links" $rawLinks
+  "heading" "Explore Further"
+  "headingId" "track-explore-further-heading"
+  "sectionClass" "mb-10 max-w-prose not-prose"
+  "rowClass" "explore-further__row"
+  "iconClass" "explore-further__icon"
+) }}

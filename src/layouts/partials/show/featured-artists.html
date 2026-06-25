@@ -1,0 +1,22 @@
+{{ $artistPages := slice }}
+{{ $artistLookup := dict }}
+{{ range where site.RegularPages ".Params.artist_page" true }}
+  {{ $artistLookup = merge $artistLookup (dict (lower .Title) .) }}
+{{ end }}
+
+{{ range .Params.tags | default (slice) }}
+  {{ with index $artistLookup (lower .) }}
+    {{ $artistPages = $artistPages | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $artistPages) 0 }}
+  <section class="mb-10 not-prose" role="region" aria-labelledby="show-featured-artists-heading">
+    <h2 id="show-featured-artists-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">Featured Artists</h2>
+    <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4" role="list">
+      {{ range first 12 $artistPages }}
+        {{ partial "article-link/artist-card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+{{ end }}
