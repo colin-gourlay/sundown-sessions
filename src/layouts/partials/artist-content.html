@@ -15,7 +15,7 @@
     {{ range after 2 $contentSections }}
       {{ $section := printf `<h2%s` . }}
       {{ $sectionHeading := index (split $section `</h2>`) 0 | plainify | strings.TrimSpace | replaceRE `\s*#\s*$` "" }}
-      {{ if ne $sectionHeading "External Links" }}
+      {{ if and (ne $sectionHeading "External Links") (ne $sectionHeading "Artist Links") }}
         {{ $supplementaryContent = printf `%s%s` $supplementaryContent $section }}
       {{ end }}
     {{ end }}
@@ -24,7 +24,7 @@
     {{ range after 1 $contentSections }}
       {{ $section := printf `<h2%s` . }}
       {{ $sectionHeading := index (split $section `</h2>`) 0 | plainify | strings.TrimSpace | replaceRE `\s*#\s*$` "" }}
-      {{ if ne $sectionHeading "External Links" }}
+      {{ if and (ne $sectionHeading "External Links") (ne $sectionHeading "Artist Links") }}
         {{ $supplementaryContent = printf `%s%s` $supplementaryContent $section }}
       {{ end }}
     {{ end }}
