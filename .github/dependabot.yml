@@ -8,6 +8,7 @@ updates:
     labels:
       - dependencies
       - github-actions
+      - security
     groups:
       github-actions:
         patterns:
