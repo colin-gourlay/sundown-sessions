@@ -1,20 +1,34 @@
 [[footer]]
-  identifier = "facebook"
-  pre = "facebook"
-  title = "Sundown Sessions on Facebook"
-  url = "https://www.facebook.com/sundownsessionsuk"
+  identifier = "listen-again"
+  name = "Listen Again"
+  title = "Browse Sundown Sessions shows"
+  url = "/shows/"
   weight = 10
 
 [[footer]]
-  identifier = "instagram"
-  pre = "instagram"
-  title = "Sundown Sessions on Instagram"
-  url = "https://www.instagram.com/sundownsessionsshow"
+  identifier = "mixcloud"
+  name = "Mixcloud"
+  title = "Sundown Sessions on Mixcloud"
+  url = "https://www.mixcloud.com/sundownsessions/"
   weight = 20
 
 [[footer]]
-  identifier = "mixcloud"
-  pre = "mixcloud"
-  title = "Sundown Sessions on Mixcloud"
-  url = "https://www.mixcloud.com/sundownsessions/"
+  identifier = "instagram"
+  name = "Instagram"
+  title = "Sundown Sessions on Instagram"
+  url = "https://www.instagram.com/sundownsessionsshow"
   weight = 30
+
+[[footer]]
+  identifier = "facebook"
+  name = "Facebook"
+  title = "Sundown Sessions on Facebook"
+  url = "https://www.facebook.com/sundownsessionsuk"
+  weight = 40
+
+[[footer]]
+  identifier = "contact"
+  name = "Contact"
+  title = "Contact Sundown Sessions"
+  url = "/contact/"
+  weight = 50

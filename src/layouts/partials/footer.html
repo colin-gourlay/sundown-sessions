@@ -1,0 +1,82 @@
+<footer id="site-footer" class="py-10 print:hidden">
+  {{/* Footer menu */}}
+  {{ if .Site.Params.footer.showMenu | default true }}
+    {{ $listenURL := .Site.Params.listen_live_stream_url | default "" }}
+    {{ $hasListenURL := and (ne $listenURL "") (ne $listenURL "#") }}
+    {{ if or $hasListenURL .Site.Menus.footer }}
+      <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400" aria-label="Footer">
+        <ul class="flex list-none flex-wrap justify-center gap-x-5 gap-y-2 p-0 sm:justify-start">
+          {{ if $hasListenURL }}
+            <li class="flex">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="{{ $listenURL }}"
+                {{ if or (strings.HasPrefix $listenURL "http:") (strings.HasPrefix $listenURL "https:") }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                {{ end }}
+                title="Listen to Sundown Sessions live">
+                Listen Live
+              </a>
+            </li>
+          {{ end }}
+          {{ range .Site.Menus.footer }}
+            {{ $isExternal := or (strings.HasPrefix .URL "http:") (strings.HasPrefix .URL "https:") }}
+            <li class="flex">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="{{ .URL }}"
+                {{ if $isExternal }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                {{ end }}
+                title="{{ .Title }}">
+                {{ .Name | markdownify }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    {{ end }}
+  {{ end }}
+  <div class="flex flex-col items-center justify-between gap-2 text-center sm:flex-row sm:text-left">
+    {{/* Copyright */}}
+    {{ if .Site.Params.footer.showCopyright | default true }}
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+        {{- with replace .Site.Params.copyright "{ year }" now.Year }}
+          {{ . | markdownify }}
+        {{- else }}
+          &copy;
+          {{ now.Format "2006" }}
+          {{ .Site.Params.Author.name | markdownify }}
+        {{- end }}
+      </p>
+    {{ end }}
+
+    {{/* Theme attribution */}}
+    {{ if .Site.Params.footer.showThemeAttribution | default true }}
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
+        }}
+        {{ $blowfish := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>`
+        }}
+        {{ i18n "footer.powered_by" (dict "Hugo" $hugo "Theme" $blowfish) | safeHTML }}
+      </p>
+    {{ end }}
+  </div>
+  {{ if not .Site.Params.disableImageZoom | default true }}
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  {{ end }}
+  {{/* Extend footer - eg. for extra scripts, etc. */}}
+  {{ if templates.Exists "partials/extend-footer.html" }}
+    {{ partialCached "extend-footer.html" . }}
+  {{ end }}
+</footer>
