@@ -67,6 +67,7 @@
           {{ if $hasStructuredTracks }}
             {{ partial "release/tracklist.html" . }}
           {{ end }}
+          {{ partial "release/featured-shows.html" . }}
           {{ with $releaseAfterAboutContent }}
             {{ . | safeHTML }}
           {{ end }}

@@ -1,0 +1,211 @@
+{{/* Featured in Shows for release pages.
+     Prefers explicit release front matter, then falls back to scanning show
+     markdown and included track-info files for release shortcode references. */}}
+
+{{- $configuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows -}}
+{{- $featuredShows := slice -}}
+{{- $seenShows := dict -}}
+{{- $showsSection := site.GetPage "shows" -}}
+{{- $showPages := where site.RegularPages "Section" "shows" -}}
+
+{{- with $configuredShows -}}
+  {{- $entries := . -}}
+  {{- if not (reflect.IsSlice $entries) -}}
+    {{- $entries = slice $entries -}}
+  {{- end -}}
+
+  {{- range $entry := $entries -}}
+    {{- $showRef := "" -}}
+    {{- $customTitle := "" -}}
+    {{- $customDate := "" -}}
+    {{- $note := "" -}}
+
+    {{- if reflect.IsMap $entry -}}
+      {{- $showRef = index $entry "show" | default (index $entry "page") | default (index $entry "path") | default (index $entry "slug") | default (index $entry "url") | default "" -}}
+      {{- $customTitle = index $entry "title" | default "" -}}
+      {{- $customDate = index $entry "date" | default "" -}}
+      {{- $note = index $entry "note" | default "" -}}
+    {{- else -}}
+      {{- $showRef = $entry -}}
+    {{- end -}}
+
+    {{- $showRef = printf "%v" $showRef | strings.TrimSpace -}}
+    {{- $showPage := "" -}}
+    {{- $fileLink := "" -}}
+    {{- $fileTitle := "" -}}
+    {{- $fileDate := "" -}}
+    {{- if $showRef -}}
+      {{- $trimmedRef := strings.TrimSuffix "/" (strings.TrimPrefix "/" $showRef) -}}
+      {{- $candidatePaths := slice $trimmedRef (printf "shows/%s" $trimmedRef) (printf "shows/%s/index.md" $trimmedRef) (printf "/shows/%s" $trimmedRef) (printf "/shows/%s/index.md" $trimmedRef) -}}
+      {{- if strings.HasPrefix $trimmedRef "shows/" -}}
+        {{- $candidatePaths = slice $trimmedRef -}}
+      {{- end -}}
+
+      {{- range $candidatePath := $candidatePaths -}}
+        {{- if not $showPage -}}
+          {{- $showPage = site.GetPage $candidatePath -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{- if and (not $showPage) $showPages -}}
+        {{- $normalizedRef := lower $trimmedRef -}}
+        {{- range $showPages -}}
+          {{- $contentPath := "" -}}
+          {{- with .File -}}{{- $contentPath = strings.TrimSuffix "/" (replace .Path "\\" "/") -}}{{- end -}}
+          {{- $contentBundlePath := strings.TrimSuffix "/index.md" $contentPath -}}
+          {{- $contentBaseName := "" -}}
+          {{- with .File -}}{{- $contentBaseName = .ContentBaseName -}}{{- end -}}
+          {{- $contentDirName := "" -}}
+          {{- with .File -}}{{- $contentDirName = path.Base (strings.TrimSuffix "/" .Dir) -}}{{- end -}}
+          {{- if or
+            (eq (lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink))) $normalizedRef)
+            (eq (lower .Slug) $normalizedRef)
+            (eq (lower .Title) $normalizedRef)
+            (eq (lower $contentPath) $normalizedRef)
+            (eq (lower $contentBundlePath) $normalizedRef)
+            (eq (lower (path.Base $contentBundlePath)) $normalizedRef)
+            (eq (lower (printf "shows/%s" $contentBaseName)) $normalizedRef)
+            (eq (lower $contentDirName) $normalizedRef)
+            (eq (lower (printf "shows/%s" $contentDirName)) $normalizedRef)
+          -}}
+            {{- $showPage = . -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+
+      {{- if not $showPage -}}
+        {{- $bundleRef := strings.TrimPrefix "shows/" $trimmedRef -}}
+        {{- $bundleRef = strings.TrimSuffix "/index.md" $bundleRef -}}
+        {{- $showIndexPath := printf "content/shows/%s/index.md" $bundleRef -}}
+        {{- if fileExists $showIndexPath -}}
+          {{- $showMarkdown := readFile $showIndexPath -}}
+          {{- $frontMatterTitle := replaceRE `(?s).*?title:\s*['"]?([^'"\r\n]+).*` "$1" $showMarkdown -}}
+          {{- $frontMatterSlug := replaceRE `(?s).*?slug:\s*['"]?([^'"\r\n]+).*` "$1" $showMarkdown -}}
+          {{- $frontMatterDate := replaceRE `(?s).*?date:\s*['"]?([^'"\r\n]+).*` "$1" $showMarkdown -}}
+          {{- if ne $frontMatterTitle $showMarkdown -}}
+            {{- $fileTitle = $frontMatterTitle -}}
+          {{- end -}}
+          {{- if ne $frontMatterSlug $showMarkdown -}}
+            {{- $fileLink = printf "/shows/%s/" $frontMatterSlug -}}
+          {{- else -}}
+            {{- $fileLink = printf "/shows/%s/" $bundleRef -}}
+          {{- end -}}
+          {{- if ne $frontMatterDate $showMarkdown -}}
+            {{- $fileDate = $frontMatterDate -}}
+          {{- end -}}
+          {{- if strings.HasPrefix $fileTitle "Show #" -}}
+            {{- $fileTitle = replace $fileTitle "Show #" "Sundown Sessions #" -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+
+    {{- $link := "" -}}
+    {{- $title := printf "%v" $customTitle | strings.TrimSpace -}}
+    {{- $date := $customDate -}}
+    {{- $sortDate := printf "%v" $customDate -}}
+    {{- if $showPage -}}
+      {{- $link = $showPage.RelPermalink -}}
+      {{- if not $title -}}{{- $title = partial "release/show-card-title.html" $showPage -}}{{- end -}}
+      {{- if not $date -}}{{- $date = $showPage.Date -}}{{- end -}}
+      {{- $sortDate = time.Format "2006-01-02T15:04:05Z07:00" $showPage.Date -}}
+    {{- else if $fileLink -}}
+      {{- $link = $fileLink -}}
+      {{- if not $title -}}{{- $title = $fileTitle -}}{{- end -}}
+      {{- if not $date -}}{{- $date = $fileDate -}}{{- end -}}
+      {{- $sortDate = $fileDate -}}
+    {{- else if $showRef -}}
+      {{- $link = $showRef -}}
+      {{- if not (or (strings.HasPrefix $link "http://") (strings.HasPrefix $link "https://") (strings.HasPrefix $link "/")) -}}
+        {{- $link = printf "/%s" $link -}}
+      {{- end -}}
+      {{- if not $title -}}{{- $title = $showRef -}}{{- end -}}
+    {{- end -}}
+
+    {{- if and $link $title -}}
+      {{- $dedupeKey := $link -}}
+      {{- if not (index $seenShows $dedupeKey) -}}
+        {{- $featuredShows = $featuredShows | append (dict "page" $showPage "link" $link "title" $title "date" $date "sortDate" $sortDate "note" $note) -}}
+        {{- $seenShows = merge $seenShows (dict $dedupeKey true) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if and (eq (len $featuredShows) 0) $showPages -}}
+  {{- $releaseSlug := .Params.release_slug | default .Slug | default "" -}}
+  {{- if and (not $releaseSlug) .File -}}
+    {{- $releaseSlug = path.Base (strings.TrimSuffix "/" .File.Dir) -}}
+  {{- end -}}
+  {{- $artist := .Params.artist | default "" -}}
+  {{- if reflect.IsSlice $artist -}}{{- $artist = delimit $artist " " -}}{{- end -}}
+  {{- $artistSlug := .Params.artist_slug | default ($artist | urlize) -}}
+  {{- $releasePath := "" -}}
+  {{- with .File -}}{{- $releasePath = strings.TrimSuffix "/" (replace .Path "\\" "/") -}}{{- end -}}
+  {{- $needles := slice
+    (printf "--%s" $releaseSlug)
+    (printf "--%s--%s" $artist $releaseSlug)
+    (printf "--%s--%s" $artistSlug $releaseSlug)
+    $releasePath
+    .RelPermalink
+  -}}
+
+  {{- range $showPages -}}
+    {{- $showPage := . -}}
+    {{- $showText := .RawContent -}}
+    {{- with .File -}}
+      {{- $trackInfoPath := printf "content/%s/track-info.md" (strings.TrimSuffix "/index.md" (replace .Path "\\" "/")) -}}
+      {{- if fileExists $trackInfoPath -}}
+        {{- $showText = printf "%s\n%s" $showText (readFile $trackInfoPath) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $showText = lower $showText -}}
+    {{- $matched := false -}}
+    {{- range $needle := $needles -}}
+      {{- $needle = printf "%v" $needle | lower | strings.TrimSpace -}}
+      {{- if and (not $matched) $needle (in $showText $needle) -}}
+        {{- $matched = true -}}
+      {{- end -}}
+    {{- end -}}
+    {{- if $matched -}}
+      {{- $dedupeKey := $showPage.RelPermalink -}}
+      {{- if not (index $seenShows $dedupeKey) -}}
+        {{- $featuredShows = $featuredShows | append (dict "page" $showPage "link" $showPage.RelPermalink "title" (partial "release/show-card-title.html" $showPage) "date" $showPage.Date "sortDate" (time.Format "2006-01-02T15:04:05Z07:00" $showPage.Date) "note" "") -}}
+        {{- $seenShows = merge $seenShows (dict $dedupeKey true) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $featuredShows) 0 -}}
+  {{- $featuredShows = sort $featuredShows "sortDate" "desc" -}}
+  <section class="release-featured-shows not-prose" role="region" aria-labelledby="featured-in-shows">
+    <h2 id="featured-in-shows" class="release-featured-shows__heading">Featured in Shows</h2>
+    <ul class="release-featured-shows__list">
+      {{- range $show := $featuredShows -}}
+        {{- $href := $show.link -}}
+        {{- if not (or (strings.HasPrefix $href "http://") (strings.HasPrefix $href "https://")) -}}
+          {{- $href = $href | relURL -}}
+        {{- end -}}
+        <li class="release-featured-shows__row">
+          <a class="release-featured-shows__link" href="{{ $href }}">
+            <span class="release-featured-shows__title">{{ $show.title }}</span>
+            {{- with $show.date -}}
+              <span class="release-featured-shows__date">
+                {{- $dateText := printf "%v" . -}}
+                {{- if or (in $dateText "UTC") (in $dateText "+0000") (and (in $dateText "T") (in $dateText "Z")) -}}
+                  {{- time.Format (site.Params.dateFormat | default "2 January 2006") . -}}
+                {{- else -}}
+                  {{- $dateText -}}
+                {{- end -}}
+              </span>
+            {{- end -}}
+          </a>
+          {{- with $show.note -}}
+            <p class="release-featured-shows__note">{{ . }}</p>
+          {{- end -}}
+        </li>
+      {{- end -}}
+    </ul>
+  </section>
+{{- end -}}
