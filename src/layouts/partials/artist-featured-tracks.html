@@ -1,0 +1,36 @@
+{{/* Tracks connected to an artist through track front matter. */}}
+
+{{ $artistKey := lower (urlize .Title) }}
+{{ $tracks := slice }}
+
+{{ range where site.RegularPages "Section" "tracks" }}
+  {{ $track := . }}
+  {{ $trackArtist := .Params.artist | default .Params.artists | default "" }}
+  {{ $matched := false }}
+  {{ if reflect.IsSlice $trackArtist }}
+    {{ range $trackArtist }}
+      {{ if eq (lower (urlize (printf "%v" .))) $artistKey }}{{ $matched = true }}{{ end }}
+    {{ end }}
+  {{ else }}
+    {{ if eq (lower (urlize (printf "%v" $trackArtist))) $artistKey }}{{ $matched = true }}{{ end }}
+  {{ end }}
+  {{ if $matched }}{{ $tracks = $tracks | append $track }}{{ end }}
+{{ end }}
+
+{{ if gt (len $tracks) 0 }}
+  <section class="release-featured-shows not-prose" role="region" aria-labelledby="artist-featured-tracks-heading">
+    <h2 id="artist-featured-tracks-heading" class="release-featured-shows__heading">Tracks Featured on Sundown Sessions</h2>
+    <ul class="release-featured-shows__list">
+      {{ range first 12 ($tracks.ByTitle) }}
+        <li class="release-featured-shows__row">
+          <a class="release-featured-shows__link" href="{{ .RelPermalink }}">
+            <span class="release-featured-shows__title">{{ .Title | emojify }}</span>
+            {{ with .Params.release }}
+              <span class="release-featured-shows__date">{{ . }}</span>
+            {{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

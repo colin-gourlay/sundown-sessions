@@ -1,0 +1,91 @@
+{{/* Releases connected to an artist through release front matter or bundle path. */}}
+
+{{ $artistName := .Title }}
+{{ $artistKey := lower (urlize $artistName) }}
+{{ $releases := slice }}
+
+{{ range where site.RegularPages "Section" "releases" }}
+  {{ $release := . }}
+  {{ $artistMatches := false }}
+
+  {{ range $field := slice .Params.artist .Params.artists }}
+    {{ with $field }}
+      {{ if reflect.IsSlice . }}
+        {{ range . }}
+          {{ $name := "" }}
+          {{ if reflect.IsMap . }}
+            {{ $name = index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug") | default "" }}
+          {{ else }}
+            {{ $name = . }}
+          {{ end }}
+          {{ if eq (lower (urlize (printf "%v" $name))) $artistKey }}{{ $artistMatches = true }}{{ end }}
+        {{ end }}
+      {{ else if reflect.IsMap . }}
+        {{ $name := index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug") | default "" }}
+        {{ if eq (lower (urlize (printf "%v" $name))) $artistKey }}{{ $artistMatches = true }}{{ end }}
+      {{ else }}
+        {{ if eq (lower (urlize (printf "%v" .))) $artistKey }}{{ $artistMatches = true }}{{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if and (not $artistMatches) .File }}
+    {{ $releaseDir := strings.TrimSuffix "/" (replace .File.Dir "\\" "/") }}
+    {{ if eq (lower (urlize (path.Base (path.Dir $releaseDir)))) $artistKey }}
+      {{ $artistMatches = true }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $artistMatches }}
+    {{ $releases = $releases | append $release }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $releases) 0 }}
+  <section class="mb-10 not-prose" role="region" aria-labelledby="artist-featured-releases-heading">
+    <h2 id="artist-featured-releases-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      Releases Featured on Sundown Sessions
+    </h2>
+    <div class="release-discover-more__grid">
+      {{ range first 6 ($releases.ByTitle) }}
+        {{ $release := . }}
+        {{ $artworkParam := $release.Params.artwork | default $release.Params.cover | default $release.Params.image | default $release.Params.featureimage | default $release.Params.featured_image }}
+        {{ $artwork := "" }}
+        {{ $artworkURL := "" }}
+        {{ with $artworkParam }}
+          {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+            {{ $artworkURL = . }}
+          {{ else }}
+            {{ $artwork = $release.Resources.GetMatch . }}
+            {{ if not $artwork }}{{ $artwork = $release.Resources.GetMatch (path.Base .) }}{{ end }}
+            {{ if not $artwork }}{{ $artwork = resources.Get . }}{{ end }}
+            {{ if not $artwork }}{{ $artworkURL = . | relURL }}{{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if not (or $artwork $artworkURL) }}
+          {{ $images := $release.Resources.ByType "image" }}
+          {{ range slice "*artwork*" "*cover*" "*image*" "*feature*" "*thumbnail*" }}
+            {{ if not $artwork }}{{ $artwork = $images.GetMatch . }}{{ end }}
+          {{ end }}
+        {{ end }}
+        {{ if not $artworkURL }}{{ with $artwork }}{{ $artworkURL = .RelPermalink }}{{ end }}{{ end }}
+
+        <article class="release-discover-card">
+          <a class="release-discover-card__link" href="{{ $release.RelPermalink }}">
+            {{ with $artworkURL }}
+              <span class="release-discover-card__media">
+                <img src="{{ . }}" alt="{{ $release.Title }} artwork" loading="lazy" decoding="async">
+              </span>
+            {{ end }}
+            <span class="release-discover-card__body">
+              <span class="release-discover-card__title">{{ $release.Title | emojify }}</span>
+              {{ with ($release.Params.releaseDate | default $release.Params.release_date | default $release.Params.releaseType | default $release.Params.release_type) }}
+                <span class="release-discover-card__meta">{{ . }}</span>
+              {{ end }}
+            </span>
+          </a>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

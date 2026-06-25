@@ -1,0 +1,19 @@
+{{ $shows := where site.RegularPages "Section" "shows" }}
+{{ $current := . }}
+{{ $moreShows := slice }}
+{{ range $shows.ByDate.Reverse }}
+  {{ if and (ne .RelPermalink $current.RelPermalink) (lt (len $moreShows) 4) }}
+    {{ $moreShows = $moreShows | append . }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $moreShows) 0 }}
+  <section class="mb-10 not-prose" role="region" aria-labelledby="more-shows-heading">
+    <h2 id="more-shows-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">More Shows</h2>
+    <div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+      {{ range $moreShows }}
+        {{ partial "article-link/card.html" . }}
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

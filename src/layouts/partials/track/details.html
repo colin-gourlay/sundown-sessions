@@ -1,0 +1,21 @@
+{{ $fields := slice }}
+{{ with .Params.artist }}{{ $fields = $fields | append (dict "term" "Artist" "value" .) }}{{ end }}
+{{ with .Params.release }}{{ $fields = $fields | append (dict "term" "Release" "value" .) }}{{ end }}
+{{ with .Params.release_date }}{{ $fields = $fields | append (dict "term" "Released" "value" .) }}{{ end }}
+{{ with .Params.duration }}{{ $fields = $fields | append (dict "term" "Duration" "value" .) }}{{ end }}
+{{ with .Params.label }}{{ $fields = $fields | append (dict "term" "Label" "value" .) }}{{ end }}
+{{ with .Params.genre }}{{ $fields = $fields | append (dict "term" "Genre" "value" .) }}{{ end }}
+
+{{ if gt (len $fields) 0 }}
+  <section class="mb-10 max-w-prose rounded-lg border border-neutral-200 bg-neutral-50/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/60" role="region" aria-labelledby="track-details-heading">
+    <h2 id="track-details-heading" class="mt-0 mb-4 text-xl font-bold text-neutral-800 dark:text-neutral-100">Track Details</h2>
+    <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
+      {{ range $fields }}
+        <div class="min-w-0 border-t border-neutral-200 pt-3 first:border-t-0 first:pt-0 sm:first:border-t sm:first:pt-3 dark:border-neutral-700">
+          <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">{{ .term }}</dt>
+          <dd class="mt-1 break-words text-base font-medium text-neutral-900 dark:text-neutral-100">{{ .value }}</dd>
+        </div>
+      {{ end }}
+    </dl>
+  </section>
+{{ end }}

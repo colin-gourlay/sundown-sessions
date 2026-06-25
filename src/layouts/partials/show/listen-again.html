@@ -1,0 +1,39 @@
+{{ $links := slice }}
+{{ range $field := slice .Params.listenAgain .Params.listen_again .Params.listen .Params.links }}
+  {{ with $field }}
+    {{ if reflect.IsMap . }}
+      {{ range $key, $value := . }}
+        {{ $url := "" }}
+        {{ $label := $key }}
+        {{ if reflect.IsMap $value }}
+          {{ $url = index $value "url" | default (index $value "href") | default (index $value "link") | default "" }}
+          {{ $label = index $value "label" | default (index $value "title") | default $key }}
+        {{ else }}
+          {{ $url = $value }}
+        {{ end }}
+        {{ with $url }}{{ $links = $links | append (dict "url" . "label" $label "icon" "play") }}{{ end }}
+      {{ end }}
+    {{ else if reflect.IsSlice . }}
+      {{ range . }}
+        {{ if reflect.IsMap . }}
+          {{ $url := index . "url" | default (index . "href") | default (index . "link") | default "" }}
+          {{ $label := index . "label" | default (index . "title") | default "Listen Again" }}
+          {{ with $url }}{{ $links = $links | append (dict "url" . "label" $label "icon" "play") }}{{ end }}
+        {{ else }}
+          {{ $links = $links | append (dict "url" . "label" "Listen Again" "icon" "play") }}
+        {{ end }}
+      {{ end }}
+    {{ else }}
+      {{ $links = $links | append (dict "url" . "label" "Listen Again" "icon" "play") }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ partial "components/explore-further.html" (dict
+  "links" $links
+  "heading" "Listen Again"
+  "headingId" "show-listen-again-heading"
+  "sectionClass" "mb-10 max-w-prose not-prose"
+  "rowClass" "explore-further__row"
+  "iconClass" "explore-further__icon"
+) }}

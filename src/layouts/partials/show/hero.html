@@ -1,0 +1,50 @@
+{{ $featureImage := .Params.featureimage | default .Params.featured_image }}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+{{ with $featureImage }}
+  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+    {{ $featuredURL = . }}
+  {{ else }}
+    {{ $featured = $.Resources.GetMatch . }}
+    {{ if not $featured }}{{ $featured = $.Resources.GetMatch (path.Base .) }}{{ end }}
+    {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+    {{ if not $featured }}{{ $featuredURL = . | relURL }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not (or $featured $featuredURL) }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ range slice "*show-logo*" "*feature*" "*cover*" "*thumbnail*" }}
+    {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $featuredURL }}{{ with $featured }}{{ $featuredURL = .RelPermalink }}{{ end }}{{ end }}
+
+<section class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70" role="region" aria-labelledby="show-hero-heading">
+  <div class="flex flex-col sm:flex-row">
+    {{ with $featuredURL }}
+      <div class="flex items-center justify-center bg-neutral-100 p-4 dark:bg-neutral-800 sm:w-64 sm:shrink-0">
+        <img src="{{ . }}" alt="{{ $.Title }} artwork" loading="eager" decoding="async" fetchpriority="high" class="nozoom h-auto max-h-96 w-full object-contain">
+      </div>
+    {{ end }}
+    <div class="flex flex-1 flex-col justify-center gap-4 p-6 sm:p-8">
+      {{ if $.Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
+        <div class="mb-1 text-sm">{{ partial "breadcrumbs.html" $ }}</div>
+      {{ end }}
+      <p class="mb-0 text-sm font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Broadcast</p>
+      <h1 id="show-hero-heading" class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
+        {{ $.Title | emojify }}
+      </h1>
+      {{ with $.Description }}
+        <p class="text-base text-neutral-600 dark:text-neutral-300">{{ . }}</p>
+      {{ end }}
+      {{ if not $.Date.IsZero }}
+        <dl class="artist-header-stats">
+          <div>
+            <dt>Broadcast Date</dt>
+            <dd>{{ $.Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</dd>
+          </div>
+        </dl>
+      {{ end }}
+    </div>
+  </div>
+</section>
