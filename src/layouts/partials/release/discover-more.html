@@ -1,0 +1,241 @@
+{{/* Release recommendations for individual release pages.
+     Signals are intentionally additive so future fields can be folded in by
+     adding another score component without changing the rendered cards. */}}
+
+{{- $current := . -}}
+{{- $currentArtists := slice -}}
+{{- with $current.Params.artist -}}
+  {{- if reflect.IsSlice . -}}
+    {{- range . -}}
+      {{- if reflect.IsMap . -}}
+        {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) -}}
+          {{- $currentArtists = $currentArtists | append (urlize (printf "%v" .)) -}}
+        {{- end -}}
+      {{- else -}}
+        {{- $currentArtists = $currentArtists | append (urlize (printf "%v" .)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else if reflect.IsMap . -}}
+    {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) -}}
+      {{- $currentArtists = $currentArtists | append (urlize (printf "%v" .)) -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $currentArtists = $currentArtists | append (urlize (printf "%v" .)) -}}
+  {{- end -}}
+{{- else with $current.Params.artists -}}
+  {{- if reflect.IsSlice . -}}
+    {{- range . -}}
+      {{- if reflect.IsMap . -}}
+        {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) -}}
+          {{- $currentArtists = $currentArtists | append (urlize (printf "%v" .)) -}}
+        {{- end -}}
+      {{- else -}}
+        {{- $currentArtists = $currentArtists | append (urlize (printf "%v" .)) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $currentArtists = $currentArtists | append (urlize (printf "%v" .)) -}}
+  {{- end -}}
+{{- end -}}
+{{- with $current.File -}}
+  {{- $releaseDir := strings.TrimSuffix "/" (replace .Dir "\\" "/") -}}
+  {{- $artistDir := path.Base (path.Dir $releaseDir) -}}
+  {{- with $artistDir -}}{{- $currentArtists = $currentArtists | append (urlize .) -}}{{- end -}}
+{{- end -}}
+{{- $currentArtistBag := printf "|%s|" (delimit (uniq $currentArtists) "|") -}}
+
+{{- $currentGenres := slice -}}
+{{- range $field := slice $current.Params.genre $current.Params.genres -}}
+  {{- with $field -}}
+    {{- if reflect.IsSlice . -}}
+      {{- range . -}}{{- $currentGenres = $currentGenres | append (urlize (printf "%v" .)) -}}{{- end -}}
+    {{- else -}}
+      {{- $currentGenres = $currentGenres | append (urlize (printf "%v" .)) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $currentShows := slice -}}
+{{- with ($current.Params.featuredInShows | default $current.Params.featured_in_shows | default $current.Params.shows) -}}
+  {{- $entries := . -}}
+  {{- if not (reflect.IsSlice $entries) -}}{{- $entries = slice $entries -}}{{- end -}}
+  {{- range $entry := $entries -}}
+    {{- $showRef := "" -}}
+    {{- if reflect.IsMap $entry -}}
+      {{- $showRef = index $entry "show" | default (index $entry "page") | default (index $entry "path") | default (index $entry "slug") | default (index $entry "url") | default "" -}}
+    {{- else -}}
+      {{- $showRef = $entry -}}
+    {{- end -}}
+    {{- with $showRef -}}{{- $currentShows = $currentShows | append (urlize (printf "%v" .)) -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $currentType := urlize (printf "%v" ($current.Params.releaseType | default $current.Params.release_type | default "")) -}}
+{{- $currentYear := 0 -}}
+{{- $currentDate := $current.Params.releaseDate | default $current.Params.release_date | default $current.Params.date -}}
+{{- with $currentDate -}}
+  {{- with (findRE `[12][0-9]{3}` (printf "%v" .) 1) -}}{{- $currentYear = int (index . 0) -}}{{- end -}}
+{{- end -}}
+{{- if and (eq $currentYear 0) (not $current.Date.IsZero) -}}{{- $currentYear = int (time.Format "2006" $current.Date) -}}{{- end -}}
+{{- $currentDecade := 0 -}}
+{{- if gt $currentYear 0 -}}{{- $currentDecade = div $currentYear 10 -}}{{- end -}}
+
+{{- $recommendations := slice -}}
+{{- range $candidate := where site.RegularPages "Section" "releases" -}}
+  {{- if ne $candidate.RelPermalink $current.RelPermalink -}}
+    {{- $candidateArtists := slice -}}
+    {{- with $candidate.Params.artist -}}
+      {{- if reflect.IsSlice . -}}
+        {{- range . -}}
+          {{- if reflect.IsMap . -}}
+            {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) -}}{{- $candidateArtists = $candidateArtists | append (urlize (printf "%v" .)) -}}{{- end -}}
+          {{- else -}}
+            {{- $candidateArtists = $candidateArtists | append (urlize (printf "%v" .)) -}}
+          {{- end -}}
+        {{- end -}}
+      {{- else if reflect.IsMap . -}}
+        {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) -}}{{- $candidateArtists = $candidateArtists | append (urlize (printf "%v" .)) -}}{{- end -}}
+      {{- else -}}
+        {{- $candidateArtists = $candidateArtists | append (urlize (printf "%v" .)) -}}
+      {{- end -}}
+    {{- else with $candidate.Params.artists -}}
+      {{- if reflect.IsSlice . -}}
+        {{- range . -}}{{- $candidateArtists = $candidateArtists | append (urlize (printf "%v" .)) -}}{{- end -}}
+      {{- else -}}
+        {{- $candidateArtists = $candidateArtists | append (urlize (printf "%v" .)) -}}
+      {{- end -}}
+    {{- end -}}
+    {{- with $candidate.File -}}
+      {{- $releaseDir := strings.TrimSuffix "/" (replace .Dir "\\" "/") -}}
+      {{- $artistDir := path.Base (path.Dir $releaseDir) -}}
+      {{- with $artistDir -}}{{- $candidateArtists = $candidateArtists | append (urlize .) -}}{{- end -}}
+    {{- end -}}
+
+    {{- $sameArtist := false -}}
+    {{- range uniq $candidateArtists -}}
+      {{- if and (not $sameArtist) (in $currentArtistBag (printf "|%s|" .)) -}}{{- $sameArtist = true -}}{{- end -}}
+    {{- end -}}
+
+    {{- $sameGenre := false -}}
+    {{- $candidateGenres := slice -}}
+    {{- range $field := slice $candidate.Params.genre $candidate.Params.genres -}}
+      {{- with $field -}}
+        {{- if reflect.IsSlice . -}}
+          {{- range . -}}{{- $candidateGenres = $candidateGenres | append (urlize (printf "%v" .)) -}}{{- end -}}
+        {{- else -}}
+          {{- $candidateGenres = $candidateGenres | append (urlize (printf "%v" .)) -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $currentGenreBag := printf "|%s|" (delimit (uniq $currentGenres) "|") -}}
+    {{- range uniq $candidateGenres -}}
+      {{- if and (not $sameGenre) (in $currentGenreBag (printf "|%s|" .)) -}}{{- $sameGenre = true -}}{{- end -}}
+    {{- end -}}
+
+    {{- $sameShow := false -}}
+    {{- $candidateShows := slice -}}
+    {{- with ($candidate.Params.featuredInShows | default $candidate.Params.featured_in_shows | default $candidate.Params.shows) -}}
+      {{- $entries := . -}}
+      {{- if not (reflect.IsSlice $entries) -}}{{- $entries = slice $entries -}}{{- end -}}
+      {{- range $entry := $entries -}}
+        {{- $showRef := "" -}}
+        {{- if reflect.IsMap $entry -}}
+          {{- $showRef = index $entry "show" | default (index $entry "page") | default (index $entry "path") | default (index $entry "slug") | default (index $entry "url") | default "" -}}
+        {{- else -}}
+          {{- $showRef = $entry -}}
+        {{- end -}}
+        {{- with $showRef -}}{{- $candidateShows = $candidateShows | append (urlize (printf "%v" .)) -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+    {{- $currentShowBag := printf "|%s|" (delimit (uniq $currentShows) "|") -}}
+    {{- range uniq $candidateShows -}}
+      {{- if and (not $sameShow) (in $currentShowBag (printf "|%s|" .)) -}}{{- $sameShow = true -}}{{- end -}}
+    {{- end -}}
+
+    {{- $candidateType := urlize (printf "%v" ($candidate.Params.releaseType | default $candidate.Params.release_type | default "")) -}}
+    {{- $sameType := and $currentType $candidateType (eq $currentType $candidateType) -}}
+
+    {{- $candidateYear := 0 -}}
+    {{- $candidateDate := $candidate.Params.releaseDate | default $candidate.Params.release_date | default $candidate.Params.date -}}
+    {{- with $candidateDate -}}
+      {{- with (findRE `[12][0-9]{3}` (printf "%v" .) 1) -}}{{- $candidateYear = int (index . 0) -}}{{- end -}}
+    {{- end -}}
+    {{- if and (eq $candidateYear 0) (not $candidate.Date.IsZero) -}}{{- $candidateYear = int (time.Format "2006" $candidate.Date) -}}{{- end -}}
+    {{- $candidateDecade := 0 -}}
+    {{- if gt $candidateYear 0 -}}{{- $candidateDecade = div $candidateYear 10 -}}{{- end -}}
+    {{- $sameEra := and (gt $currentDecade 0) (eq $currentDecade $candidateDecade) -}}
+
+    {{- $score := 0 -}}
+    {{- if $sameArtist -}}{{- $score = add $score 10000 -}}{{- end -}}
+    {{- if $sameGenre -}}{{- $score = add $score 1000 -}}{{- end -}}
+    {{- if $sameShow -}}{{- $score = add $score 100 -}}{{- end -}}
+    {{- if $sameType -}}{{- $score = add $score 10 -}}{{- end -}}
+    {{- if $sameEra -}}{{- $score = add $score 1 -}}{{- end -}}
+
+    {{- if gt $score 0 -}}
+      {{- $sortKey := printf "%05d-%04d-%s" (sub 99999 $score) (sub 9999 $candidateYear) (urlize $candidate.Title) -}}
+      {{- $recommendations = $recommendations | append (dict "page" $candidate "score" $score "sortKey" $sortKey "year" $candidateYear) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $recommendations = first 6 (sort $recommendations "sortKey") -}}
+{{- if gt (len $recommendations) 0 -}}
+  <section class="release-discover-more not-prose" role="region" aria-labelledby="release-discover-more-heading">
+    <h2 id="release-discover-more-heading" class="release-discover-more__heading">Discover More Releases</h2>
+    <div class="release-discover-more__grid">
+      {{- range $item := $recommendations -}}
+        {{- $release := $item.page -}}
+        {{- $artworkParam := $release.Params.artwork | default $release.Params.cover | default $release.Params.image | default $release.Params.featureimage | default $release.Params.featured_image -}}
+        {{- $artwork := "" -}}
+        {{- $artworkURL := "" -}}
+        {{- with $artworkParam -}}
+          {{- if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") -}}
+            {{- $artworkURL = . -}}
+          {{- else -}}
+            {{- $artwork = $release.Resources.GetMatch . -}}
+            {{- if not $artwork -}}{{- $artwork = $release.Resources.GetMatch (path.Base .) -}}{{- end -}}
+            {{- if not $artwork -}}{{- $artwork = resources.Get . -}}{{- end -}}
+            {{- if not $artwork -}}{{- $artworkURL = . | relURL -}}{{- end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if not (or $artwork $artworkURL) -}}
+          {{- $images := $release.Resources.ByType "image" -}}
+          {{- range slice "*artwork*" "*cover*" "*image*" "*feature*" "*thumbnail*" -}}
+            {{- if not $artwork -}}{{- $artwork = $images.GetMatch . -}}{{- end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- if not $artworkURL -}}{{- with $artwork -}}{{- $artworkURL = .RelPermalink -}}{{- end -}}{{- end -}}
+
+        {{- $artist := "" -}}
+        {{- with $release.Params.artist -}}
+          {{- if reflect.IsSlice . -}}{{- $artist = delimit . ", " -}}{{- else -}}{{- $artist = printf "%v" . -}}{{- end -}}
+        {{- else with $release.Params.artists -}}
+          {{- if reflect.IsSlice . -}}{{- $artist = delimit . ", " -}}{{- else -}}{{- $artist = printf "%v" . -}}{{- end -}}
+        {{- end -}}
+        {{- $releaseType := $release.Params.releaseType | default $release.Params.release_type | default "" -}}
+
+        <article class="release-discover-card">
+          <a class="release-discover-card__link" href="{{ $release.RelPermalink }}">
+            {{- with $artworkURL -}}
+              <span class="release-discover-card__media">
+                <img src="{{ . }}" alt="{{ $release.Title }} artwork" loading="lazy" decoding="async">
+              </span>
+            {{- end -}}
+            <span class="release-discover-card__body">
+              <span class="release-discover-card__title">{{ $release.Title | emojify }}</span>
+              {{- with $artist -}}<span class="release-discover-card__artist">{{ . }}</span>{{- end -}}
+              {{- if or (gt $item.year 0) $releaseType -}}
+                <span class="release-discover-card__meta">
+                  {{- if gt $item.year 0 -}}{{ $item.year }}{{- end -}}
+                  {{- if and (gt $item.year 0) $releaseType }} &bull; {{ end -}}
+                  {{- with $releaseType -}}{{ . }}{{- end -}}
+                </span>
+              {{- end -}}
+            </span>
+          </a>
+        </article>
+      {{- end -}}
+    </div>
+  </section>
+{{- end -}}
