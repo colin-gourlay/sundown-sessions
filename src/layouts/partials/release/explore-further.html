@@ -1,0 +1,173 @@
+{{- $rawLinks := slice -}}
+
+{{- $labelAliases := dict
+  "official" "Official Website"
+  "official-website" "Official Website"
+  "website" "Official Website"
+  "site" "Official Website"
+  "bandcamp" "Bandcamp"
+  "musicbrainz" "MusicBrainz"
+  "discogs" "Discogs"
+  "spotify" "Spotify"
+  "apple" "Apple Music"
+  "apple-music" "Apple Music"
+  "youtube" "YouTube Music"
+  "youtube-music" "YouTube Music"
+  "soundcloud" "SoundCloud"
+  "lastfm" "Last.fm"
+  "last-fm" "Last.fm"
+  "wikipedia" "Wikipedia"
+-}}
+
+{{- $domainAliases := dict
+  "bandcamp.com" "Bandcamp"
+  "discogs.com" "Discogs"
+  "musicbrainz.org" "MusicBrainz"
+  "open.spotify.com" "Spotify"
+  "spotify.com" "Spotify"
+  "music.apple.com" "Apple Music"
+  "apple.com" "Apple Music"
+  "music.youtube.com" "YouTube Music"
+  "youtube.com" "YouTube Music"
+  "youtu.be" "YouTube Music"
+  "soundcloud.com" "SoundCloud"
+  "last.fm" "Last.fm"
+  "wikipedia.org" "Wikipedia"
+-}}
+
+{{- $icons := dict
+  "Official Website" "globe"
+  "Bandcamp" "music"
+  "MusicBrainz" "music"
+  "Discogs" "music"
+  "Spotify" "spotify"
+  "Apple Music" "apple"
+  "YouTube Music" "youtube"
+  "SoundCloud" "music"
+  "Last.fm" "music"
+  "Wikipedia" "globe"
+-}}
+
+{{- $orders := dict
+  "Official Website" 1
+  "Bandcamp" 2
+  "MusicBrainz" 3
+  "Discogs" 4
+  "Spotify" 5
+  "Apple Music" 6
+  "YouTube Music" 7
+  "SoundCloud" 8
+  "Last.fm" 9
+  "Wikipedia" 10
+-}}
+
+{{- $normaliseKey := "" -}}
+{{- $appendLink := false -}}
+
+{{- with .Params.links -}}
+  {{- if reflect.IsMap . -}}
+    {{- range $key, $value := . -}}
+      {{- $url := "" -}}
+      {{- $label := $key -}}
+      {{- $description := "" -}}
+      {{- if reflect.IsMap $value -}}
+        {{- $url = index $value "url" | default (index $value "href") | default (index $value "link") | default "" -}}
+        {{- $label = index $value "label" | default (index $value "title") | default (index $value "name") | default $key -}}
+        {{- $description = index $value "description" | default (index $value "summary") | default (index $value "text") | default "" -}}
+      {{- else -}}
+        {{- $url = $value -}}
+      {{- end -}}
+      {{- with $url -}}
+        {{- $rawLinks = $rawLinks | append (dict "url" . "label" $label "description" $description) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else if reflect.IsSlice . -}}
+    {{- range . -}}
+      {{- if reflect.IsMap . -}}
+        {{- $url := index . "url" | default (index . "href") | default (index . "link") | default "" -}}
+        {{- $label := index . "label" | default (index . "title") | default (index . "name") | default "" -}}
+        {{- $description := index . "description" | default (index . "summary") | default (index . "text") | default "" -}}
+        {{- with $url -}}{{- $rawLinks = $rawLinks | append (dict "url" . "label" $label "description" $description) -}}{{- end -}}
+      {{- else -}}
+        {{- $rawLinks = $rawLinks | append (dict "url" . "label" "" "description" "") -}}
+      {{- end -}}
+    {{- end -}}
+  {{- else -}}
+    {{- $rawLinks = $rawLinks | append (dict "url" . "label" "" "description" "") -}}
+  {{- end -}}
+{{- end -}}
+
+{{- range $field := slice .Params.externalLinks .Params.external_links -}}
+  {{- with $field -}}
+    {{- $entries := . -}}
+    {{- if not (reflect.IsSlice $entries) -}}{{- $entries = slice $entries -}}{{- end -}}
+    {{- range $entries -}}
+      {{- if reflect.IsMap . -}}
+        {{- $url := index . "url" | default (index . "href") | default (index . "link") | default "" -}}
+        {{- $label := index . "label" | default (index . "title") | default (index . "name") | default "" -}}
+        {{- $description := index . "description" | default (index . "summary") | default (index . "text") | default "" -}}
+        {{- with $url -}}{{- $rawLinks = $rawLinks | append (dict "url" . "label" $label "description" $description) -}}{{- end -}}
+      {{- else -}}
+        {{- $rawLinks = $rawLinks | append (dict "url" . "label" "" "description" "") -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $externalSection := "" -}}
+{{- range split .RawContent "\n## " -}}
+  {{- $section := . | strings.TrimSpace -}}
+  {{- if or (hasPrefix $section "External Links") (hasPrefix $section "## External Links") (hasPrefix $section "Explore Further") (hasPrefix $section "## Explore Further") -}}
+    {{- $externalSection = $section -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $linkPattern := `(?m)^\s*-\s+\{\{<\s*new-tab-link\s+"(?:([^":\[]+):\s+)?\[([^\]]+)\]\((https?://[^)]+)\)"\s*>\}\}\s*$` -}}
+{{- range findRESubmatch $linkPattern $externalSection -}}
+  {{- $prefixLabel := printf "%v" (index . 1 | default "") | strings.TrimSpace -}}
+  {{- $linkLabel := printf "%v" (index . 2 | default "") | strings.TrimSpace -}}
+  {{- $url := printf "%v" (index . 3 | default "") | strings.TrimSpace -}}
+  {{- $label := $prefixLabel | default $linkLabel -}}
+  {{- if $url -}}{{- $rawLinks = $rawLinks | append (dict "url" $url "label" $label "description" "") -}}{{- end -}}
+{{- end -}}
+
+{{- $seen := dict -}}
+{{- $links := slice -}}
+{{- range $rawLinks -}}
+  {{- $url := printf "%v" .url | strings.TrimSpace -}}
+  {{- if and $url (or (strings.HasPrefix $url "http://") (strings.HasPrefix $url "https://")) -}}
+    {{- $dedupeKey := lower (strings.TrimSuffix "/" $url) -}}
+    {{- if not (index $seen $dedupeKey) -}}
+      {{- $label := printf "%v" (.label | default "") | strings.TrimSpace -}}
+      {{- $description := printf "%v" (.description | default "") | strings.TrimSpace -}}
+      {{- $labelKey := lower $label | replaceRE `[^a-z0-9]+` "-" | strings.TrimSuffix "-" | strings.TrimPrefix "-" -}}
+      {{- with index $labelAliases $labelKey -}}{{- $label = . -}}{{- end -}}
+
+      {{- $host := lower (replaceRE `^https?://([^/:?#]+).*$` "$1" $url) -}}
+      {{- $detectedLabel := "" -}}
+      {{- range $domain, $domainLabel := $domainAliases -}}
+        {{- if and (not $detectedLabel) (or (eq $host $domain) (strings.HasSuffix $host (printf ".%s" $domain))) -}}
+          {{- $detectedLabel = $domainLabel -}}
+        {{- end -}}
+      {{- end -}}
+      {{- if or (not $label) (eq $label $url) -}}
+        {{- $label = $detectedLabel | default (replaceRE `^www\.` "" $host) | default "External Link" -}}
+      {{- end -}}
+
+      {{- $order := index $orders $label | default 100 -}}
+      {{- $icon := index $icons $label | default "link" -}}
+      {{- $links = $links | append (dict "url" $url "label" $label "description" $description "icon" $icon "sortKey" (printf "%03d-%s" $order (lower $label))) -}}
+      {{- $seen = merge $seen (dict $dedupeKey true) -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $links = sort $links "sortKey" -}}
+{{- partial "components/explore-further.html" (dict
+  "links" $links
+  "heading" "Explore Further"
+  "headingId" "release-explore-further-heading"
+  "sectionClass" "release-explore-further mb-10 max-w-prose not-prose"
+  "rowClass" "explore-further__row"
+  "iconClass" "explore-further__icon"
+) -}}
