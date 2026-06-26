@@ -290,6 +290,73 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   position: relative;
 }
 
+.release-hero__layout {
+  align-items: stretch;
+}
+
+.release-hero__artwork {
+  padding: 1.5rem 1.5rem 0;
+}
+
+.release-hero__artwork img {
+  display: block;
+  width: min(10rem, 72vw);
+  max-height: 10rem;
+  object-fit: contain;
+}
+
+.release-hero__content {
+  gap: 1.5rem;
+  padding: 1.75rem;
+  text-align: center;
+}
+
+.release-hero__heading-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.release-hero__artist {
+  margin: 0;
+}
+
+.release-hero__metadata {
+  display: grid;
+  gap: 0.9rem;
+  margin: 0;
+}
+
+.release-hero__metadata div {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.release-hero__metadata dt {
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #737373; /* neutral-500 */
+}
+
+.dark .release-hero__metadata dt {
+  color: #a3a3a3; /* neutral-400 */
+}
+
+.release-hero__metadata dd {
+  margin: 0;
+  color: #171717; /* neutral-900 */
+  font-size: 1.15rem;
+  font-weight: 750;
+  line-height: 1.35;
+}
+
+.dark .release-hero__metadata dd {
+  color: #e5e5e5; /* neutral-200 */
+}
+
 .release-hero--accent {
   border-top-color: var(--release-accent);
   border-top-width: 3px;
@@ -299,6 +366,30 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
       color-mix(in srgb, var(--release-accent) 8%, transparent),
       transparent 34%
     );
+}
+
+@media (min-width: 640px) {
+  .release-hero__artwork {
+    width: 12rem;
+    padding: 2rem 1.25rem 2rem 2rem;
+  }
+
+  .release-hero__artwork img {
+    width: 10rem;
+    max-height: 10rem;
+  }
+
+  .release-hero__content {
+    gap: 1.75rem;
+    padding: 2.25rem 2.5rem;
+    text-align: left;
+  }
+
+  .release-hero__metadata {
+    grid-template-columns: repeat(2, minmax(0, max-content));
+    column-gap: 2rem;
+    row-gap: 1rem;
+  }
 }
 
 .dark .release-hero--accent {

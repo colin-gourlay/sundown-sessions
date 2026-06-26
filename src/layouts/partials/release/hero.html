@@ -1,28 +1,40 @@
 {{/* Release hero card for individual release pages. */}}
 
-{{ $artworkParam := "" }}
-{{ with .Params.artwork }}
-  {{ $artworkParam = . }}
-{{ else }}
-  {{ with .Params.cover }}
-    {{ $artworkParam = . }}
-  {{ else }}
-    {{ with .Params.image }}
-      {{ $artworkParam = . }}
+{{ $artwork := "" }}
+{{ $artworkURL := "" }}
+
+{{ $artworkParams := slice }}
+{{ range slice .Params.artwork .Params.cover .Params.image .Params.images }}
+  {{ with . }}
+    {{ if reflect.IsSlice . }}
+      {{ range . }}
+        {{ $artworkParams = $artworkParams | append . }}
+      {{ end }}
+    {{ else }}
+      {{ $artworkParams = $artworkParams | append . }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{ $artwork := "" }}
-{{ $artworkURL := "" }}
-{{ with $artworkParam }}
-  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
-    {{ $artworkURL = . }}
-  {{ else }}
-    {{ $artwork = $.Resources.GetMatch . }}
-    {{ if not $artwork }}{{ $artwork = $.Resources.GetMatch (path.Base .) }}{{ end }}
-    {{ if not $artwork }}{{ $artwork = resources.Get . }}{{ end }}
-    {{ if not $artwork }}{{ $artworkURL = . | relURL }}{{ end }}
+{{ range $artworkParam := $artworkParams }}
+  {{ if not (or $artwork $artworkURL) }}
+    {{ $artworkPath := printf "%v" $artworkParam | strings.TrimSpace }}
+    {{ with $artworkPath }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ $artworkURL = . }}
+      {{ else }}
+        {{ $normalizedPath := strings.TrimPrefix "/" . }}
+        {{ $artwork = $.Resources.GetMatch . }}
+        {{ if not $artwork }}{{ $artwork = $.Resources.GetMatch (path.Base .) }}{{ end }}
+        {{ if not $artwork }}{{ $artwork = resources.Get $normalizedPath }}{{ end }}
+        {{ if not $artwork }}
+          {{ $staticPath := printf "static/%s" $normalizedPath }}
+          {{ if fileExists $staticPath }}
+            {{ $artworkURL = $normalizedPath | relURL }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
@@ -33,6 +45,120 @@
   {{ end }}
 {{ end }}
 
+{{ $artistNames := slice }}
+{{ with .Params.artist }}
+  {{ if reflect.IsSlice . }}
+    {{ range . }}
+      {{ if reflect.IsMap . }}
+        {{ with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) }}
+          {{ $artistNames = $artistNames | append . }}
+        {{ end }}
+      {{ else }}
+        {{ $artistNames = $artistNames | append . }}
+      {{ end }}
+    {{ end }}
+  {{ else if reflect.IsMap . }}
+    {{ with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) }}
+      {{ $artistNames = $artistNames | append . }}
+    {{ end }}
+  {{ else }}
+    {{ $artistNames = $artistNames | append . }}
+  {{ end }}
+{{ else }}
+  {{ with .Params.artists }}
+    {{ if reflect.IsSlice . }}
+      {{ range . }}
+        {{ if reflect.IsMap . }}
+          {{ with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) }}
+            {{ $artistNames = $artistNames | append . }}
+          {{ end }}
+        {{ else }}
+          {{ $artistNames = $artistNames | append . }}
+        {{ end }}
+      {{ end }}
+    {{ else if reflect.IsMap . }}
+      {{ with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) }}
+        {{ $artistNames = $artistNames | append . }}
+      {{ end }}
+    {{ else }}
+      {{ $artistNames = $artistNames | append . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $artistSlugs := slice }}
+{{ with .Params.artist_slug }}
+  {{ $artistSlugs = $artistSlugs | append (. | urlize) }}
+{{ end }}
+{{ range $artistNames }}
+  {{ $artistSlugs = $artistSlugs | append (urlize (printf "%v" .)) }}
+{{ end }}
+{{ $artistSlugs = uniq $artistSlugs }}
+
+{{ if not (or $artwork $artworkURL) }}
+  {{ $configuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows }}
+  {{ with $configuredShows }}
+    {{ $entries := . }}
+    {{ if not (reflect.IsSlice $entries) }}
+      {{ $entries = slice $entries }}
+    {{ end }}
+
+    {{ range $entry := $entries }}
+      {{ if not (or $artwork $artworkURL) }}
+        {{ $showRef := "" }}
+        {{ if reflect.IsMap $entry }}
+          {{ $showRef = index $entry "show" | default (index $entry "page") | default (index $entry "path") | default (index $entry "slug") | default (index $entry "url") | default "" }}
+        {{ else }}
+          {{ $showRef = $entry }}
+        {{ end }}
+
+        {{ $showRef = printf "%v" $showRef | strings.TrimSpace }}
+        {{ with $showRef }}
+          {{ $trimmedRef := strings.TrimSuffix "/" (strings.TrimPrefix "/" .) }}
+          {{ $trimmedRef = strings.TrimSuffix "/index.md" $trimmedRef }}
+          {{ $showFolder := $trimmedRef }}
+          {{ if strings.HasPrefix $showFolder "shows/" }}
+            {{ $showFolder = strings.TrimPrefix "shows/" $showFolder }}
+          {{ end }}
+          {{ $showFolder = path.Base (strings.TrimSuffix "/" $showFolder) }}
+
+          {{ $showPage := "" }}
+          {{ range slice $trimmedRef (printf "shows/%s" $showFolder) (printf "/shows/%s" $showFolder) }}
+            {{ if not $showPage }}
+              {{ $showPage = site.GetPage . }}
+            {{ end }}
+          {{ end }}
+
+          {{ range $artistSlug := $artistSlugs }}
+            {{ if not (or $artwork $artworkURL) }}
+              {{ $candidatePath := printf "shows/%s/%s-large.jpeg" $showFolder $artistSlug }}
+              {{ $candidateFile := path.Base $candidatePath }}
+              {{ with $showPage }}
+                {{ $artwork = .Resources.GetMatch $candidateFile }}
+              {{ end }}
+              {{ if not $artwork }}
+                {{ $artwork = resources.Get $candidatePath }}
+              {{ end }}
+              {{ if not $artwork }}
+                {{ $contentPath := printf "content/%s" $candidatePath }}
+                {{ if fileExists $contentPath }}
+                  {{ $artworkURL = printf "/%s" $candidatePath | relURL }}
+                {{ end }}
+              {{ end }}
+              {{ if not (or $artwork $artworkURL) }}
+                {{ $staticPath := printf "static/%s" $candidatePath }}
+                {{ if fileExists $staticPath }}
+                  {{ $artworkURL = $candidatePath | relURL }}
+                {{ end }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
 {{ if not $artworkURL }}
   {{ with $artwork }}
     {{ $artworkURL = .RelPermalink }}
@@ -40,20 +166,26 @@
 {{ end }}
 
 {{ $artist := "" }}
-{{ with .Params.artist }}
-  {{ $artist = . }}
-{{ else }}
-  {{ with .Params.artists }}
-    {{ if reflect.IsSlice . }}
-      {{ $artist = delimit . ", " }}
-    {{ else }}
-      {{ $artist = . }}
+{{ with $artistNames }}
+  {{ $artist = delimit . ", " }}
+{{ end }}
+
+{{ $releaseDate := .Params.releaseDate | default .Params.release_date | default .Params.date }}
+{{ if and (not $releaseDate) (not .Date.IsZero) }}
+  {{ $releaseDate = .Date }}
+{{ end }}
+{{ $releaseDateText := "" }}
+{{ with $releaseDate }}
+  {{ if reflect.IsMap . }}
+  {{ else if reflect.IsSlice . }}
+  {{ else }}
+    {{ $releaseDateText = printf "%v" . }}
+    {{ if or (in $releaseDateText "UTC") (in $releaseDateText "+0000") }}
+      {{ $releaseDateText = time.Format (site.Params.dateFormat | default "2 January 2006") . }}
     {{ end }}
   {{ end }}
 {{ end }}
-
-{{ $releaseDate := .Params.releaseDate | default .Params.release_date }}
-{{ $releaseType := .Params.releaseType | default .Params.release_type }}
+{{ $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type }}
 {{ $accentColor := "" }}
 {{ with .Params.artworkAccent }}
   {{ $accentColor = . }}
@@ -70,67 +202,51 @@
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $trackCount := 0 }}
-{{ with .Params.trackCount }}
-  {{ $trackCount = . }}
-{{ else }}
-  {{ with .Params.tracks }}
-    {{ $trackCount = len . }}
-  {{ end }}
-{{ end }}
 
 <section
   class="release-hero{{ with $accentColor }} release-hero--accent{{ end }} mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
   {{ with $accentColor }}style="--release-accent: {{ . | safeCSS }};"{{ end }}
   role="region"
   aria-labelledby="release-hero-heading">
-  <div class="flex flex-col sm:flex-row">
+  <div class="release-hero__layout flex flex-col sm:flex-row">
     {{ with $artworkURL }}
-      <div class="flex items-center justify-center bg-neutral-100 p-4 dark:bg-neutral-800 sm:w-64 sm:shrink-0">
+      <div class="release-hero__artwork flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 sm:shrink-0">
         <img
           src="{{ . }}"
           alt="{{ $.Title }} artwork"
           loading="eager"
           decoding="async"
           fetchpriority="high"
-          class="nozoom h-auto max-h-96 w-full object-contain">
+          class="nozoom object-contain">
       </div>
     {{ end }}
 
-    <div class="flex flex-1 flex-col justify-center gap-5 p-6 sm:p-8">
-      <div>
+    <div class="release-hero__content flex flex-1 flex-col justify-center">
+      <div class="release-hero__heading-group">
         <h1
           id="release-hero-heading"
           class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
           {{ .Title | emojify }}
         </h1>
         {{ with $artist }}
-          <p class="mt-2 text-lg font-medium text-neutral-700 dark:text-neutral-300">
+          <p class="release-hero__artist text-lg font-medium text-neutral-700 dark:text-neutral-300">
             {{ . }}
           </p>
         {{ end }}
       </div>
 
-      {{ if or $releaseDate $releaseType (gt $trackCount 0) }}
-        <dl class="grid gap-4 sm:grid-cols-2">
-          {{ with $releaseDate }}
+      {{ if or $releaseDateText $releaseType }}
+        <dl class="release-hero__metadata">
+          {{ with $releaseDateText }}
             <div>
-              <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Release date</dt>
-              <dd class="mt-1 text-base font-semibold text-neutral-900 dark:text-neutral-200">{{ . }}</dd>
+              <dt>Released</dt>
+              <dd>{{ . }}</dd>
             </div>
           {{ end }}
           {{ with $releaseType }}
             <div>
-              <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Type</dt>
-              <dd class="mt-1 text-base font-semibold text-neutral-900 dark:text-neutral-200">{{ . }}</dd>
-            </div>
-          {{ end }}
-          {{ if gt $trackCount 0 }}
-            <div>
-              <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Tracks</dt>
-              <dd class="mt-1 text-base font-semibold text-neutral-900 dark:text-neutral-200">
-                {{ $trackCount }} {{ if eq $trackCount 1 }}track{{ else }}tracks{{ end }}
-              </dd>
+              <dt>Type</dt>
+              <dd>{{ . }}</dd>
             </div>
           {{ end }}
         </dl>
