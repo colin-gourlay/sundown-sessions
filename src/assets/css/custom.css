@@ -310,6 +310,29 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
     );
 }
 
+.for-sale-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  margin-left: 0.4rem;
+  border: 1px solid #f59e0b; /* amber-500 */
+  border-radius: 999px;
+  background-color: #fffbeb; /* amber-50 */
+  padding: 0.12rem 0.5rem;
+  vertical-align: baseline;
+  color: #92400e; /* amber-800 */
+  font-size: 0.72rem;
+  font-weight: 700;
+  line-height: 1.35;
+  white-space: nowrap;
+}
+
+.dark .for-sale-badge {
+  border-color: #fbbf24; /* amber-400 */
+  background-color: rgba(120, 53, 15, 0.35); /* amber-900/35 */
+  color: #fde68a; /* amber-200 */
+}
+
 /* Release artists: compact creator profile links between release metadata and
    the About section. */
 
