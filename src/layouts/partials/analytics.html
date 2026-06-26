@@ -1,0 +1,23 @@
+{{- partial "analytics-events.html" . -}}
+
+{{- $googleId := "" -}}
+{{- with .Site.Params.analytics.google.measurementId -}}
+  {{- $googleId = strings.TrimSpace . -}}
+{{- end -}}
+{{- if and $googleId (ne $googleId "todo-measurement_id") -}}
+  {{- partial "analytics-google.html" . -}}
+{{- end -}}
+
+{{- $clarityId := "" -}}
+{{- with .Site.Params.analytics.clarity.projectId -}}
+  {{- $clarityId = strings.TrimSpace . -}}
+{{- end -}}
+{{- if and $clarityId (ne $clarityId "todo-project_id") -}}
+  {{- partial "analytics-clarity.html" . -}}
+{{- end -}}
+
+{{/*
+Future provider placeholders:
+- Plausible: .Site.Params.analytics.plausible.domain
+- Umami: .Site.Params.analytics.umami.websiteId and .Site.Params.analytics.umami.scriptUrl
+*/}}

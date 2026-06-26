@@ -17,6 +17,20 @@ mainSections = ["shows", "releases", "artists"]
 # a follow-up slice; kept here so editorial config remains in a single file.
 listen_live_stream_url = ""
 
+[analytics]
+  [analytics.google]
+    measurementId = "todo-measurement_id"
+
+  [analytics.clarity]
+    projectId = "todo-project_id"
+
+  [analytics.plausible]
+    domain = "todo-domain"
+
+  [analytics.umami]
+    websiteId = "todo-website_id"
+    scriptUrl = "todo-script_url"
+
 # Path to the circular avatar image displayed in the header alongside the site title.
 # Resolved as a static file path (e.g. /images/my-logo.jpg).
 headerAvatar = "/images/sundown-sessions-logo.jpg"

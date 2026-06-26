@@ -34,6 +34,8 @@
   {{ $listenURL := .Site.Params.listen_live_stream_url | default "#" }}
   <a
     href="{{ $listenURL }}"
+    data-analytics-event="listen_live_click"
+    data-analytics-provider="live-stream"
     {{ if and (ne $listenURL "#") (or (strings.HasPrefix $listenURL "http:") (strings.HasPrefix $listenURL "https:")) }}
       target="_blank"
       rel="noopener noreferrer"
