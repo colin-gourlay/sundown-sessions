@@ -1,12 +1,6 @@
 {{ define "main" }}
   {{ .Scratch.Set "scope" "single" }}
   <article>
-    {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
-      <div class="mb-5 max-w-prose">
-        {{ partial "breadcrumbs.html" . }}
-      </div>
-    {{ end }}
-
     {{ partial "release/hero.html" . }}
     {{ partial "release/metadata-card.html" . }}
     {{ partial "release/artists.html" . }}
