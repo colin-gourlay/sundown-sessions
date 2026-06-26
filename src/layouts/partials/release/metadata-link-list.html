@@ -37,7 +37,9 @@
   {{- with $termPage -}}
     <a
       class="decoration-primary-500 hover:underline hover:underline-offset-2"
-      href="{{ .RelPermalink }}">{{ $value }}</a>
+      href="{{ .RelPermalink }}"
+      data-analytics-event="taxonomy_navigation"
+      data-analytics-taxonomy="{{ $taxonomyPath }}">{{ $value }}</a>
   {{- else -}}
     <span>{{ $value }}</span>
   {{- end -}}

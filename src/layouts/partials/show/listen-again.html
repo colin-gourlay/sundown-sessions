@@ -11,20 +11,20 @@
         {{ else }}
           {{ $url = $value }}
         {{ end }}
-        {{ with $url }}{{ $links = $links | append (dict "url" . "label" $label "icon" "play") }}{{ end }}
+        {{ with $url }}{{ $links = $links | append (dict "url" . "label" $label "icon" "play" "analyticsEvent" "listen_again_click" "provider" $label) }}{{ end }}
       {{ end }}
     {{ else if reflect.IsSlice . }}
       {{ range . }}
         {{ if reflect.IsMap . }}
           {{ $url := index . "url" | default (index . "href") | default (index . "link") | default "" }}
           {{ $label := index . "label" | default (index . "title") | default "Listen Again" }}
-          {{ with $url }}{{ $links = $links | append (dict "url" . "label" $label "icon" "play") }}{{ end }}
+          {{ with $url }}{{ $links = $links | append (dict "url" . "label" $label "icon" "play" "analyticsEvent" "listen_again_click" "provider" $label) }}{{ end }}
         {{ else }}
-          {{ $links = $links | append (dict "url" . "label" "Listen Again" "icon" "play") }}
+          {{ $links = $links | append (dict "url" . "label" "Listen Again" "icon" "play" "analyticsEvent" "listen_again_click" "provider" "Listen Again") }}
         {{ end }}
       {{ end }}
     {{ else }}
-      {{ $links = $links | append (dict "url" . "label" "Listen Again" "icon" "play") }}
+      {{ $links = $links | append (dict "url" . "label" "Listen Again" "icon" "play" "analyticsEvent" "listen_again_click" "provider" "Listen Again") }}
     {{ end }}
   {{ end }}
 {{ end }}

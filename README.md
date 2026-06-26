@@ -81,6 +81,18 @@ hugo --environment production
 
 The local site is available at [http://localhost:1313](http://localhost:1313) by default.
 
+### Website Analytics
+
+Analytics is configured under `params.analytics` in
+[`src/config/_default/params.toml`](src/config/_default/params.toml).
+Placeholder values disable providers, so no live provider scripts are loaded
+until real IDs are supplied.
+
+- GA4 requires replacing `todo-measurement_id` with a real measurement ID.
+- Microsoft Clarity requires replacing `todo-project_id` with a real project ID.
+- Plausible and self-hosted Umami are reserved in configuration for future use.
+- Custom events are sent through `window.sundownAnalytics.track(...)`.
+
 ### ContentOps .NET Local Setup
 
 Prerequisites:

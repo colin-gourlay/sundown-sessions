@@ -3,7 +3,7 @@
 {{ $statusID := printf "contact-form-status-%d" .Ordinal }}
 {{ if $action }}
   <div class="not-prose mt-10 rounded-2xl border border-neutral-300 bg-neutral-50 px-6 py-6 shadow-sm dark:border-neutral-700 dark:bg-neutral-900">
-    <form id="{{ $formID }}" action="{{ $action }}" method="POST" accept-charset="UTF-8" class="space-y-6">
+    <form id="{{ $formID }}" action="{{ $action }}" method="POST" accept-charset="UTF-8" class="space-y-6" data-analytics-event="contact_submit" data-analytics-provider="formspree">
       <input type="hidden" name="_subject" value="Sundown Sessions website enquiry" />
       <div class="hidden">
         <label for="{{ $formID }}-company">Company</label>

@@ -24,6 +24,12 @@
           <a
             class="{{ $rowClass }} flex w-full items-center justify-between gap-4 px-4 py-3 text-neutral-700 no-underline transition dark:text-neutral-200"
             href="{{ $link.url | safeURL }}"
+            {{ with $link.analyticsEvent }}
+              data-analytics-event="{{ . }}"
+            {{ end }}
+            {{ with $link.provider }}
+              data-analytics-provider="{{ . }}"
+            {{ end }}
             target="_blank"
             rel="noopener noreferrer external"
             aria-label="{{ $label }} (opens in a new tab)">
