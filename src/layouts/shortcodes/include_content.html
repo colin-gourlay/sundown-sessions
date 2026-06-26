@@ -1,3 +1,84 @@
-{{ $path := .Get 0 }}
-{{ $content := readFile (printf "content/%s.md" $path) }}
-{{ $.Page.RenderString $content }}
+{{ $path := strings.TrimPrefix "/" (.Get 0) }}
+{{ $includedPage := site.GetPage $path }}
+{{ $contentPath := "" }}
+{{ with $includedPage }}
+  {{ with .File }}
+    {{ $contentPath = printf "content/%s" (replace .Path "\\" "/") }}
+  {{ end }}
+{{ end }}
+{{ if not $contentPath }}
+  {{ range slice (printf "content/%s.md" $path) (printf "content/%s" $path) }}
+    {{ if and (not $contentPath) (fileExists .) }}
+      {{ $contentPath = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $contentPath }}
+  {{ $rawContent := readFile . }}
+  {{ $normalisedContent := replace $rawContent "\r\n" "\n" }}
+  {{ $content := $normalisedContent }}
+  {{ $frontMatter := "" }}
+
+  {{ if hasPrefix $normalisedContent "---\n" }}
+    {{ $parts := split $normalisedContent "\n---\n" }}
+    {{ if ge (len $parts) 2 }}
+      {{ $frontMatter = strings.TrimPrefix "---\n" (index $parts 0) }}
+      {{ $content = delimit (after 1 $parts) "\n---\n" }}
+    {{ end }}
+  {{ end }}
+
+  {{ $forSaleTracks := slice }}
+  {{ with $includedPage }}
+    {{ with (.Params.forSaleTracks | default .Params.for_sale_tracks) }}
+      {{ if reflect.IsSlice . }}
+        {{ range . }}
+          {{ $forSaleTracks = $forSaleTracks | append . }}
+        {{ end }}
+      {{ else }}
+        {{ $forSaleTracks = $forSaleTracks | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $collectForSaleTracks := false }}
+  {{ if eq (len $forSaleTracks) 0 }}
+    {{ range split $frontMatter "\n" }}
+      {{ $line := strings.TrimSpace . }}
+      {{ if or (eq $line "forSaleTracks:") (eq $line "for_sale_tracks:") }}
+        {{ $collectForSaleTracks = true }}
+      {{ else if $collectForSaleTracks }}
+        {{ if hasPrefix $line "-" }}
+          {{ $track := strings.TrimSpace (strings.TrimPrefix "-" $line) }}
+          {{ $track = strings.Trim $track "\"'" }}
+          {{ with $track }}
+            {{ $forSaleTracks = $forSaleTracks | append . }}
+          {{ end }}
+        {{ else if ne $line "" }}
+          {{ $collectForSaleTracks = false }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if gt (len $forSaleTracks) 0 }}
+    {{ $lines := slice }}
+    {{ range split $content "\n" }}
+      {{ $line := . }}
+      {{ $isForSaleTrack := false }}
+      {{ $lowerLine := lower $line }}
+      {{ range $forSaleTracks }}
+        {{ if and (not $isForSaleTrack) (in $lowerLine (lower (printf "%v" .))) }}
+          {{ $isForSaleTrack = true }}
+        {{ end }}
+      {{ end }}
+      {{ if and $isForSaleTrack (not (in $line "{{< for-sale >}}")) }}
+        {{ $line = printf "%s {{< for-sale >}}" $line }}
+      {{ end }}
+      {{ $lines = $lines | append $line }}
+    {{ end }}
+    {{ $content = delimit $lines "\n" }}
+  {{ end }}
+
+  {{ $.Page.RenderString $content }}
+{{ end }}
