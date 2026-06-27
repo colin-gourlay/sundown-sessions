@@ -1,6 +1,6 @@
 {{ $action := .Get "action" }}
 {{ $formID := printf "contact-form-%d" .Ordinal }}
-{{ $statusID := printf "contact-form-status-%d" .Ordinal }}
+{{ $toastRegionID := printf "contact-form-toast-region-%d" .Ordinal }}
 {{ if $action }}
   <div class="not-prose mt-10 rounded-2xl border border-neutral-300 bg-neutral-50 px-6 py-6 shadow-sm dark:border-neutral-700 dark:bg-neutral-900">
     <form id="{{ $formID }}" action="{{ $action }}" method="POST" accept-charset="UTF-8" class="space-y-6" data-analytics-event="contact_submit" data-analytics-provider="formspree">
@@ -22,32 +22,81 @@
         <textarea id="{{ $formID }}-message" name="message" rows="6" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900"></textarea>
       </div>
       <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <button type="submit" class="inline-flex items-center justify-center rounded-lg bg-primary-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300 dark:bg-primary-500 dark:hover:bg-primary-400 dark:focus:ring-primary-900">Send message</button>
-        <p id="{{ $statusID }}" class="hidden rounded-lg px-4 py-3 text-sm" role="status" aria-live="polite"></p>
+        <button type="submit" class="contact-form__submit inline-flex items-center justify-center rounded-lg bg-primary-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300 disabled:cursor-not-allowed disabled:opacity-70 dark:bg-primary-500 dark:hover:bg-primary-400 dark:focus:ring-primary-900">
+          <span class="contact-form__button-label">Send message</span>
+          <span class="contact-form__spinner" aria-hidden="true"></span>
+        </button>
       </div>
     </form>
   </div>
+  <div id="{{ $toastRegionID }}" class="contact-toast-region" aria-live="polite" aria-atomic="true"></div>
   <script>
     (() => {
       const form = document.getElementById('{{ $formID }}');
-      const status = document.getElementById('{{ $statusID }}');
-      const successClasses = ["bg-emerald-100", "text-emerald-900", "dark:bg-emerald-950", "dark:text-emerald-200"];
-      const errorClasses = ["bg-rose-100", "text-rose-900", "dark:bg-rose-950", "dark:text-rose-200"];
-      if (!form || !status) return;
+      const toastRegion = document.getElementById('{{ $toastRegionID }}');
+      if (!form || !toastRegion) return;
 
-      const showStatus = (message, classes) => {
-        status.textContent = message;
-        status.classList.remove("hidden", ...successClasses, ...errorClasses);
-        status.classList.add(...classes);
+      let activeToast;
+      let dismissTimer;
+
+      const icons = {
+        success: '<svg class="contact-toast__icon" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm3.86-10.86a.75.75 0 0 0-1.06-1.06L8.75 10.13 7.2 8.58a.75.75 0 1 0-1.06 1.06l2.08 2.08c.3.3.77.3 1.06 0l4.58-4.58Z"/></svg>',
+        error: '<svg class="contact-toast__icon" viewBox="0 0 20 20" aria-hidden="true"><path fill="currentColor" d="M10 18a8 8 0 1 1 0-16 8 8 0 0 1 0 16Zm0-4.25a.875.875 0 1 0 0-1.75.875.875 0 0 0 0 1.75Zm.75-7.5a.75.75 0 0 0-1.5 0v4a.75.75 0 0 0 1.5 0v-4Z"/></svg>'
+      };
+
+      const dismissToast = () => {
+        window.clearTimeout(dismissTimer);
+        if (!activeToast) return;
+
+        const toast = activeToast;
+        activeToast = null;
+        toast.classList.remove("contact-toast--visible");
+        toast.addEventListener("transitionend", () => toast.remove(), { once: true });
+        window.setTimeout(() => toast.remove(), 300);
+      };
+
+      const showToast = (type, message) => {
+        dismissToast();
+
+        const toast = document.createElement("div");
+        toast.className = `contact-toast contact-toast--${type}`;
+        toast.setAttribute("role", type === "error" ? "alert" : "status");
+        toast.innerHTML = `
+          ${icons[type]}
+          <p class="contact-toast__message"></p>
+          <button class="contact-toast__dismiss" type="button" aria-label="Dismiss notification">&times;</button>
+        `;
+
+        toast.querySelector(".contact-toast__message").textContent = message;
+        toast.querySelector(".contact-toast__dismiss").addEventListener("click", dismissToast);
+        toastRegion.appendChild(toast);
+        activeToast = toast;
+
+        window.requestAnimationFrame(() => toast.classList.add("contact-toast--visible"));
+        dismissTimer = window.setTimeout(dismissToast, type === "error" ? 6000 : 4500);
       };
 
       form.addEventListener("submit", async event => {
         event.preventDefault();
+
+        if (form.dataset.submitting === "true") {
+          return;
+        }
+
         const submitButton = form.querySelector('button[type="submit"]');
+        const buttonLabel = submitButton?.querySelector(".contact-form__button-label");
+        const originalButtonText = buttonLabel?.textContent || "Send message";
+
+        form.dataset.submitting = "true";
 
         if (submitButton) {
           submitButton.disabled = true;
-          submitButton.classList.add("cursor-not-allowed", "opacity-70");
+          submitButton.setAttribute("aria-busy", "true");
+          submitButton.classList.add("contact-form__submit--loading");
+        }
+
+        if (buttonLabel) {
+          buttonLabel.textContent = "Sending...";
         }
 
         try {
@@ -62,13 +111,20 @@
           }
 
           form.reset();
-          showStatus("Thanks — your message has been sent.", successClasses);
+          showToast("success", "Thank you! Your message has been sent successfully. I'll get back to you as soon as I can.");
         } catch (error) {
-          showStatus("Sorry — there was a problem sending your message. Please try again.", errorClasses);
+          showToast("error", "Sorry, your message could not be sent. Please try again in a few moments.");
         } finally {
+          form.dataset.submitting = "false";
+
           if (submitButton) {
             submitButton.disabled = false;
-            submitButton.classList.remove("cursor-not-allowed", "opacity-70");
+            submitButton.removeAttribute("aria-busy");
+            submitButton.classList.remove("contact-form__submit--loading");
+          }
+
+          if (buttonLabel) {
+            buttonLabel.textContent = originalButtonText;
           }
         }
       });
