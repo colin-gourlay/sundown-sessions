@@ -1,0 +1,181 @@
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "single" }}
+  {{ $image := .Resources.GetMatch "about-sundown-sessions.png" }}
+  {{ if not $image }}{{ $image = .Resources.GetMatch "about-sundown-sessions.jpeg" }}{{ end }}
+
+  {{ $sameAs := slice }}
+  {{ range site.Params.Author.links }}
+    {{ range $service, $url := . }}
+      {{ with $url }}{{ $sameAs = $sameAs | append . }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $jsonLD := dict
+    "@context" "https://schema.org"
+    "@type" "Organization"
+    "name" site.Title
+    "url" site.BaseURL
+    "description" .Description
+    "location" (dict "@type" "Place" "name" "Haddington, East Lothian, Scotland")
+    "sameAs" $sameAs
+  }}
+  <script type="application/ld+json">{{ $jsonLD | jsonify | safeJS }}</script>
+
+  <article class="about-page">
+    <header class="about-hero" aria-labelledby="about-heading">
+      <div class="about-hero__copy">
+        {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
+          {{ partial "breadcrumbs.html" . }}
+        {{ end }}
+        <p class="about-kicker">Broadcasting from Scotland</p>
+        <h1 id="about-heading">More than just another music archive.</h1>
+        <p class="about-hero__lede">
+          Sundown Sessions is an adventurous music show and living archive from Haddington, East Lothian, built for curious listeners who still believe discovery is the best part of radio.
+        </p>
+        <div class="about-actions" aria-label="Primary About page actions">
+          <a class="about-button about-button--primary" href="{{ "/listen-live/" | relURL }}">Listen Live</a>
+          <a class="about-button about-button--secondary" href="{{ "/shows/" | relURL }}">Browse Shows</a>
+        </div>
+      </div>
+      {{ with $image }}
+        <figure class="about-hero__media">
+          <img
+            src="{{ .RelPermalink }}"
+            alt="Colin Gourlay in the Sundown Sessions studio"
+            loading="eager"
+            decoding="async"
+            fetchpriority="high">
+        </figure>
+      {{ end }}
+    </header>
+
+    <section class="about-section about-section--intro" aria-labelledby="about-identity-heading">
+      <div class="about-section__header">
+        <p class="about-kicker">The station spirit</p>
+        <h2 id="about-identity-heading">A home for songs, stories, and late-night curiosity.</h2>
+      </div>
+      <div class="about-prose">
+        <p>
+          Part mixtape, part conversation, and part record shelf with the interesting corners left intact, Sundown Sessions champions music that deserves a little longer in the light.
+        </p>
+        <p>
+          The show grew from a love of eclectic radio: alternative cuts, indie discoveries, post-punk edges, overlooked classics, local voices, guest moments, and the joy of hearing something you were not expecting.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-hear-heading">
+      <div class="about-section__header">
+        <p class="about-kicker">What you'll hear</p>
+        <h2 id="about-hear-heading">Programming for listeners who like to follow a thread.</h2>
+      </div>
+      <div class="about-feature-grid">
+        <section class="about-feature" aria-labelledby="about-music-heading">
+          <h3 id="about-music-heading">Music Programming</h3>
+          <p>Alternative, indie, post-punk, new discoveries, forgotten classics, specialist selections, and carefully sequenced detours.</p>
+        </section>
+        <section class="about-feature" aria-labelledby="about-talk-heading">
+          <h3 id="about-talk-heading">Talk Programming</h3>
+          <p>Guest conversations, interviews, technical discussions, behind-the-scenes notes, and podcast-style formats as the station grows.</p>
+        </section>
+        <section class="about-feature" aria-labelledby="about-specials-heading">
+          <h3 id="about-specials-heading">Special Programming</h3>
+          <p>Guest sessions, first plays, charity broadcasts, festival coverage, anniversary specials, and milestone shows.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="about-split about-section" aria-labelledby="about-roots-heading">
+      <div class="about-section__header">
+        <p class="about-kicker">Our roots</p>
+        <h2 id="about-roots-heading">Based in Haddington, East Lothian.</h2>
+      </div>
+      <div class="about-prose">
+        <p>
+          Sundown Sessions comes from Scotland's east coast, shaped by community radio values and the simple belief that good music deserves careful attention.
+        </p>
+        <p>
+          What began as a broadcast has become an archive of shows, playlists, featured artists, releases, notes, and musical paths worth revisiting.
+        </p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-people-heading">
+      <div class="about-section__header">
+        <p class="about-kicker">Behind the microphone</p>
+        <h2 id="about-people-heading">Presented with genuine musical obsession.</h2>
+      </div>
+      <div class="about-presenter">
+        {{ with $image }}
+          <img
+            src="{{ .RelPermalink }}"
+            alt="Colin Gourlay presenting Sundown Sessions"
+            loading="lazy"
+            decoding="async">
+        {{ end }}
+        <div>
+          <h3>Colin Gourlay</h3>
+          <p class="about-presenter__role">Presenter and curator, Sundown Sessions</p>
+          <p>
+            Colin brings together adventurous playlists, guest features, local connections, and the kind of music conversation that rewards close listening.
+          </p>
+          <div class="about-actions">
+            <a class="about-button about-button--secondary" href="{{ "/shows/" | relURL }}">Meet the shows</a>
+            <a class="about-button about-button--text" href="{{ "/contact/" | relURL }}">Contact Sundown Sessions</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-purpose-heading">
+      <div class="about-section__header">
+        <p class="about-kicker">Purpose</p>
+        <h2 id="about-purpose-heading">Why Sundown Sessions exists.</h2>
+      </div>
+      <div class="about-statement-grid">
+        <section class="about-statement" aria-labelledby="about-mission-heading">
+          <h3 id="about-mission-heading">Our Mission</h3>
+          <p>To champion great music, celebrate passionate voices, and create a welcoming home for listeners who believe discovery is one of life's great pleasures.</p>
+        </section>
+        <section class="about-statement" aria-labelledby="about-vision-heading">
+          <h3 id="about-vision-heading">Our Vision</h3>
+          <p>To become a trusted destination for adventurous listeners, connecting communities through exceptional programming, authentic personality, and a shared love of music.</p>
+        </section>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-values-heading">
+      <div class="about-section__header">
+        <p class="about-kicker">Values</p>
+        <h2 id="about-values-heading">The notes we keep returning to.</h2>
+      </div>
+      <ul class="about-values" aria-label="Sundown Sessions values">
+        <li><strong>Discovery</strong><span>Finding music worth sharing.</span></li>
+        <li><strong>Authenticity</strong><span>Real people with genuine passion.</span></li>
+        <li><strong>Community</strong><span>Building meaningful connections.</span></li>
+        <li><strong>Curiosity</strong><span>Following the unexpected path.</span></li>
+        <li><strong>Inclusivity</strong><span>Welcoming anyone who wants to listen.</span></li>
+      </ul>
+    </section>
+
+    <section class="about-cta" aria-labelledby="about-involved-heading">
+      <p class="about-kicker">Get involved</p>
+      <h2 id="about-involved-heading">Become part of the story.</h2>
+      <p>Listen live, explore the archive, send a note, or follow Sundown Sessions wherever you like to keep up with new music.</p>
+      <div class="about-actions about-actions--center">
+        <a class="about-button about-button--primary" href="{{ "/listen-live/" | relURL }}">Listen Live</a>
+        <a class="about-button about-button--secondary" href="{{ "/shows/" | relURL }}">Browse Shows</a>
+        <a class="about-button about-button--secondary" href="{{ "/contact/" | relURL }}">Contact Us</a>
+      </div>
+      {{ if $sameAs }}
+        <nav class="about-socials" aria-label="Sundown Sessions social links">
+          {{ range site.Params.Author.links }}
+            {{ range $service, $url := . }}
+              <a href="{{ $url }}" rel="me noopener" target="_blank">{{ title $service }}</a>
+            {{ end }}
+          {{ end }}
+        </nav>
+      {{ end }}
+    </section>
+  </article>
+{{ end }}
