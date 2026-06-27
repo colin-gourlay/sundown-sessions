@@ -12,6 +12,10 @@
 
 /* Hero section: subtle contrast enhancements for improved text readability */
 
+:root {
+  --hero-artwork-height: 16rem;
+}
+
 .hero-overlay {
   background: rgba(0, 0, 0, 0.15);
 }
@@ -34,7 +38,7 @@
 }
 
 @media (min-width: 1024px) {
-  .lg\:w-64    { width: 16rem; }
+  .lg\:w-64    { width: var(--hero-artwork-height); }
   .lg\:text-5xl {
     font-size: 3rem;
     line-height: 1;
@@ -397,7 +401,7 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   }
 
   .release-hero__artwork img {
-    height: 100%;
+    height: var(--hero-artwork-height);
     max-width: none;
     width: auto;
   }
