@@ -1,3 +1,15 @@
+/* Listen Live page: native player sizing inside article prose. */
+
+.listen-live-player {
+  margin: 2rem 0 1.25rem;
+}
+
+.listen-live-player audio {
+  display: block;
+  width: 100%;
+  max-width: 42rem;
+}
+
 /* Hero section: subtle contrast enhancements for improved text readability */
 
 .hero-overlay {
