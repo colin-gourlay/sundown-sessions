@@ -448,6 +448,23 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   color: rgba(var(--color-primary-400), 1);
 }
 
+/* Release details: subtle row breathing room for individual release pages. */
+
+.release-details__row {
+  padding-top: 1rem;
+  padding-bottom: 0.25rem;
+}
+
+.release-details__row:first-child {
+  padding-top: 0;
+}
+
+@media (min-width: 640px) {
+  .release-details__row:first-child {
+    padding-top: 1rem;
+  }
+}
+
 /* Release hero: optional artwork-derived accent for individual release pages.
    The CSS variable is only emitted when front matter provides a colour. */
 
