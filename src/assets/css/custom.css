@@ -295,13 +295,15 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 }
 
 .release-hero__artwork {
-  padding: 1.5rem 1.5rem 0;
+  flex: 0 0 auto;
+  padding: 1rem 1rem 0;
 }
 
 .release-hero__artwork img {
   display: block;
-  width: min(10rem, 72vw);
-  max-height: 10rem;
+  width: auto;
+  height: clamp(140px, 42vw, 190px);
+  max-width: 100%;
   object-fit: contain;
 }
 
@@ -370,13 +372,12 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 @media (min-width: 640px) {
   .release-hero__artwork {
-    width: 12rem;
-    padding: 2rem 1.25rem 2rem 2rem;
+    width: auto;
+    padding: 1.5rem 0 1.5rem 1.5rem;
   }
 
   .release-hero__artwork img {
-    width: 10rem;
-    max-height: 10rem;
+    height: clamp(160px, 18vw, 220px);
   }
 
   .release-hero__content {
