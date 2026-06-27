@@ -307,18 +307,28 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 }
 
 .release-hero__artwork {
-  padding: 1.5rem 1.5rem 0;
+  align-items: center;
+  display: flex;
+  flex: 0 0 auto;
+  justify-content: center;
+  padding: 1rem 1rem 0;
 }
 
 .release-hero__artwork img {
   display: block;
-  width: min(10rem, 72vw);
-  max-height: 10rem;
+  height: auto;
+  max-width: min(18rem, 100%);
+  width: auto;
   object-fit: contain;
 }
 
 .release-hero__content {
+  display: flex;
+  flex: 1 1 auto;
+  flex-direction: column;
   gap: 1.5rem;
+  justify-content: center;
+  min-width: 0;
   padding: 1.75rem;
   text-align: center;
 }
@@ -382,13 +392,14 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 @media (min-width: 640px) {
   .release-hero__artwork {
-    width: 12rem;
-    padding: 2rem 1.25rem 2rem 2rem;
+    align-self: stretch;
+    padding: 0;
   }
 
   .release-hero__artwork img {
-    width: 10rem;
-    max-height: 10rem;
+    height: 100%;
+    max-width: none;
+    width: auto;
   }
 
   .release-hero__content {
