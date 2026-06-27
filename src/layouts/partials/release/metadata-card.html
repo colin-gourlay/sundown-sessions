@@ -159,7 +159,7 @@
 
 {{- if gt (len $fields) 0 -}}
   <section
-    class="mb-10 max-w-prose rounded-lg border border-neutral-200 bg-neutral-50/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/60"
+    class="release-details mb-10 max-w-prose rounded-lg border border-neutral-200 bg-neutral-50/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/60"
     role="region"
     aria-labelledby="release-details-heading">
     <h2
@@ -169,7 +169,7 @@
     </h2>
     <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
       {{- range $fields }}
-        <div class="min-w-0 border-t border-neutral-200 pt-3 first:border-t-0 first:pt-0 sm:first:border-t sm:first:pt-3 dark:border-neutral-700">
+        <div class="release-details__row min-w-0 border-t border-neutral-200 pt-3 first:border-t-0 first:pt-0 sm:first:border-t sm:first:pt-3 dark:border-neutral-700">
           <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
             {{ .term }}
           </dt>
