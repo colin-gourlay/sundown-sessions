@@ -137,16 +137,12 @@
 {{ end }}
 
 {{ define "mobile-listen-live" }}
-  {{ $listenURL := .Site.Params.listen_live_stream_url | default "#" }}
+  {{ $listenURL := "/listen-live/" | relURL }}
   <div class="px-2">
     <a
       href="{{ $listenURL }}"
       data-analytics-event="listen_live_click"
-      data-analytics-provider="live-stream"
-      {{ if and (ne $listenURL "#") (or (strings.HasPrefix $listenURL "http:") (strings.HasPrefix $listenURL "https:")) }}
-        target="_blank"
-        rel="noopener noreferrer"
-      {{ end }}
+      data-analytics-provider="listen-live-page"
       aria-label="Listen Live"
       class="inline-flex items-center gap-3 px-6 py-3 rounded-full bg-primary-600 text-neutral-50 hover:bg-primary-500 transition-colors font-medium">
       <span class="flex items-center justify-center h-5 w-5">
