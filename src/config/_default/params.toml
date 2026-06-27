@@ -35,6 +35,17 @@ listen_live_stream_url = ""
 # Resolved as a static file path (e.g. /images/my-logo.jpg).
 headerAvatar = "/images/sundown-sessions-logo.jpg"
 
+[favicon]
+  # Static favicon asset paths. Tenant-specific builds can override these values
+  # without changing the Blowfish partial.
+  ico = "favicon.ico"
+  icon16 = "favicon-16x16.png"
+  icon32 = "favicon-32x32.png"
+  icon48 = "favicon-48x48.png"
+  appleTouchIcon = "apple-touch-icon.png"
+  manifest = "site.webmanifest"
+  themeColor = "#081a3a"
+
 [header]
   layout = "basic"
 

@@ -1,2 +1,14 @@
-<link rel="icon" type="image/x-icon" href="{{ "favicon.ico" | relURL }}">
-<link rel="apple-touch-icon" href="{{ "favicon.ico" | relURL }}">
+{{ $config := .Params.favicon | default dict }}
+{{ $ico := $config.ico | default "favicon.ico" }}
+{{ $icon16 := $config.icon16 | default "favicon-16x16.png" }}
+{{ $icon32 := $config.icon32 | default "favicon-32x32.png" }}
+{{ $icon48 := $config.icon48 | default "favicon-48x48.png" }}
+{{ $appleTouchIcon := $config.appleTouchIcon | default "apple-touch-icon.png" }}
+{{ $manifest := $config.manifest | default "site.webmanifest" }}
+
+<link rel="icon" type="image/x-icon" href="{{ $ico | relURL }}">
+<link rel="icon" type="image/png" sizes="16x16" href="{{ $icon16 | relURL }}">
+<link rel="icon" type="image/png" sizes="32x32" href="{{ $icon32 | relURL }}">
+<link rel="icon" type="image/png" sizes="48x48" href="{{ $icon48 | relURL }}">
+<link rel="apple-touch-icon" sizes="180x180" href="{{ $appleTouchIcon | relURL }}">
+<link rel="manifest" href="{{ $manifest | relURL }}">
