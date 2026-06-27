@@ -1,45 +1,131 @@
-{{- $tracks := .Params.tracks -}}
-{{- if and $tracks (reflect.IsSlice $tracks) (gt (len $tracks) 0) -}}
+{{- $page := . -}}
+{{- $tracks := slice -}}
+{{- $frontMatterTracks := .Params.tracks -}}
+{{- $hasFrontMatterTracks := and $frontMatterTracks (reflect.IsSlice $frontMatterTracks) (gt (len $frontMatterTracks) 0) -}}
+
+{{- if $hasFrontMatterTracks -}}
+  {{- range $index, $track := $frontMatterTracks -}}
+    {{- $title := "" -}}
+    {{- $duration := "" -}}
+    {{- $number := add $index 1 -}}
+    {{- $candidate := "" -}}
+
+    {{- if reflect.IsMap $track -}}
+      {{- $title = index $track "title" | default (index $track "name") | default "" -}}
+      {{- $duration = index $track "duration" | default (index $track "length") | default "" -}}
+      {{- $number = index $track "trackNumber" | default (index $track "tracknumber") | default (index $track "track_number") | default (index $track "number") | default $number -}}
+      {{- $candidate = index $track "url" | default (index $track "page") | default (index $track "slug") | default "" -}}
+    {{- else -}}
+      {{- $title = $track -}}
+    {{- end -}}
+
+    {{- $title = printf "%v" $title | strings.TrimSpace -}}
+    {{- if $title -}}
+      {{- $tracks = $tracks | append (dict
+        "title" $title
+        "duration" (printf "%v" $duration | strings.TrimSpace)
+        "number" (printf "%v" $number | strings.TrimSpace)
+        "candidate" (printf "%v" $candidate | strings.TrimSpace)
+      ) -}}
+    {{- end -}}
+  {{- end -}}
+{{- else -}}
+  {{- $rawTracklist := "" -}}
+  {{- if in .RawContent "## Tracklist" -}}
+    {{- $rawTracklist = replaceRE `(?ims)^.*?^##\s*Tracklist\s*$\s*(.*?)(?:^##\s+.*|\z)` "$1" .RawContent | strings.TrimSpace -}}
+  {{- end -}}
+  {{- range split $rawTracklist "\n" -}}
+    {{- $line := . | strings.TrimSpace -}}
+    {{- if findRE `^\d+[\.)]\s+` $line -}}
+      {{- $number := replaceRE `^(\d+)[\.)]\s+.*$` "$1" $line -}}
+      {{- $rest := replaceRE `^\d+[\.)]\s+` "" $line | strings.TrimSpace -}}
+      {{- $duration := "" -}}
+      {{- $durationMatch := findRE `\([0-9]{1,2}:[0-9]{2}(?::[0-9]{2})?\)\s*$` $rest -}}
+      {{- with $durationMatch -}}
+        {{- $duration = index . 0 | strings.TrimPrefix "(" | strings.TrimSuffix ")" | strings.TrimSpace -}}
+        {{- $rest = replaceRE `\s*\([0-9]{1,2}:[0-9]{2}(?::[0-9]{2})?\)\s*$` "" $rest | strings.TrimSpace -}}
+      {{- end -}}
+      {{- $title := $rest -}}
+      {{- $candidate := "" -}}
+      {{- if findRE `^\[[^\]]+\]\([^)]+\)` $rest -}}
+        {{- $title = replaceRE `^\[([^\]]+)\]\([^)]+\).*$` "$1" $rest | strings.TrimSpace -}}
+        {{- $candidate = replaceRE `^\[[^\]]+\]\(([^)]+)\).*$` "$1" $rest | strings.TrimSpace -}}
+      {{- end -}}
+      {{- if $title -}}
+        {{- $tracks = $tracks | append (dict
+          "title" $title
+          "duration" $duration
+          "number" $number
+          "candidate" $candidate
+        ) -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $tracks) 0 -}}
   <section class="release-tracklist not-prose" role="region" aria-labelledby="tracklist">
     <h2 id="tracklist" class="release-tracklist__heading">Tracklist</h2>
     <ol class="release-tracklist__list">
       {{- range $index, $track := $tracks -}}
-        {{- $title := "" -}}
-        {{- $duration := "" -}}
-        {{- $number := add $index 1 -}}
-        {{- $link := "" -}}
+        {{- $title := $track.title -}}
+        {{- $duration := $track.duration -}}
+        {{- $number := $track.number | default (add $index 1) -}}
+        {{- $candidate := $track.candidate -}}
+        {{- $href := "" -}}
+        {{- $trackPage := false -}}
+        {{- $titleKey := lower (urlize $title) -}}
+        {{- $artistKey := lower (urlize (printf "%v" ($page.Params.artist | default ""))) -}}
+        {{- $releaseKey := lower (urlize $page.Title) -}}
 
-        {{- if reflect.IsMap $track -}}
-          {{- $title = index $track "title" | default (index $track "name") | default "" -}}
-          {{- $duration = index $track "duration" | default (index $track "length") | default "" -}}
-          {{- $number = index $track "trackNumber" | default (index $track "tracknumber") | default (index $track "track_number") | default (index $track "number") | default $number -}}
-          {{- $link = index $track "url" | default (index $track "page") | default (index $track "slug") | default "" -}}
-        {{- else -}}
-          {{- $title = $track -}}
-        {{- end -}}
-
-        {{- $title = printf "%v" $title | strings.TrimSpace -}}
-        {{- $duration = printf "%v" $duration | strings.TrimSpace -}}
-        {{- $link = printf "%v" $link | strings.TrimSpace -}}
-        {{- if and $link (not (or (strings.HasPrefix $link "http://") (strings.HasPrefix $link "https://") (strings.HasPrefix $link "/"))) -}}
-          {{- $link = printf "/%s" $link -}}
-        {{- end -}}
-
-        {{- if $title -}}
-          <li class="release-tracklist__row">
-            <span class="release-tracklist__number">{{ printf "%02d" (int $number) }}</span>
-            <span class="release-tracklist__title">
-              {{- if $link -}}
-                <a href="{{ $link | relURL }}">{{ $title }}</a>
-              {{- else -}}
-                {{ $title }}
+        {{- if $candidate -}}
+          {{- if or (strings.HasPrefix $candidate "http://") (strings.HasPrefix $candidate "https://") -}}
+            {{- $href = $candidate -}}
+          {{- else -}}
+            {{- $candidatePath := $candidate | strings.TrimPrefix "/" | strings.TrimSuffix "/" -}}
+            {{- $candidateKey := lower (urlize (path.Base $candidatePath)) -}}
+            {{- with site.GetPage $candidatePath -}}
+              {{- $trackPage = . -}}
+            {{- else -}}
+              {{- range where site.RegularPages "Section" "tracks" -}}
+                {{- $pagePath := .RelPermalink | strings.TrimPrefix "/" | strings.TrimSuffix "/" -}}
+                {{- $pageKey := lower (urlize .Title) -}}
+                {{- if or (eq $pagePath $candidatePath) (eq $pageKey $candidateKey) -}}
+                  {{- $trackPage = . -}}
+                {{- end -}}
               {{- end -}}
-            </span>
-            {{- with $duration -}}
-              <span class="release-tracklist__duration">{{ . }}</span>
             {{- end -}}
-          </li>
+          {{- end -}}
         {{- end -}}
+
+        {{- if and (not $href) (not $trackPage) -}}
+          {{- range where site.RegularPages "Section" "tracks" -}}
+            {{- $sameTitle := eq (lower (urlize .Title)) $titleKey -}}
+            {{- $sameArtist := or (not $artistKey) (eq (lower (urlize (printf "%v" (.Params.artist | default "")))) $artistKey) -}}
+            {{- $sameRelease := or (not .Params.release) (eq (lower (urlize (printf "%v" (.Params.release | default "")))) $releaseKey) -}}
+            {{- if and $sameTitle $sameArtist $sameRelease -}}
+              {{- $trackPage = . -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+
+        {{- with $trackPage -}}
+          {{- $href = .RelPermalink -}}
+        {{- end -}}
+
+        <li class="release-tracklist__row">
+          <span class="release-tracklist__number">{{ printf "%02d" (int $number) }}</span>
+          <span class="release-tracklist__title">
+            {{- if $href -}}
+              <a href="{{ $href }}">{{ $title }}</a>
+            {{- else -}}
+              {{ $title }}
+            {{- end -}}
+          </span>
+          {{- with $duration -}}
+            <span class="release-tracklist__duration">{{ . }}</span>
+          {{- end -}}
+        </li>
       {{- end -}}
     </ol>
   </section>

@@ -768,10 +768,10 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 .release-tracklist__row {
   display: grid;
   grid-template-columns: 2.5rem minmax(0, 1fr);
-  gap: 0.75rem;
+  gap: 0.5rem 1rem;
   align-items: baseline;
   border-top: 1px solid #e5e5e5; /* neutral-200 */
-  padding: 0.85rem 1.25rem;
+  padding: 0.7rem 1.25rem;
 }
 
 .dark .release-tracklist__row {
@@ -782,7 +782,7 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   color: #737373; /* neutral-500 */
   font-size: 0.8rem;
   font-weight: 700;
-  letter-spacing: 0.05em;
+  font-variant-numeric: tabular-nums;
   line-height: 1.5;
 }
 
@@ -804,15 +804,24 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 .release-tracklist__title a {
   color: inherit;
-  text-decoration: none;
-}
-
-.release-tracklist__title a:hover {
-  color: rgba(var(--color-primary-600), 1);
   text-decoration: underline;
+  text-decoration-color: rgba(var(--color-primary-500), 0.45);
+  text-underline-offset: 0.16rem;
 }
 
-.dark .release-tracklist__title a:hover {
+.release-tracklist__title a:hover,
+.release-tracklist__title a:focus-visible {
+  color: rgba(var(--color-primary-600), 1);
+  text-decoration-color: currentColor;
+}
+
+.release-tracklist__title a:focus-visible {
+  outline: 2px solid rgba(var(--color-primary-500), 0.75);
+  outline-offset: 0.15rem;
+}
+
+.dark .release-tracklist__title a:hover,
+.dark .release-tracklist__title a:focus-visible {
   color: rgba(var(--color-primary-400), 1);
 }
 
@@ -821,6 +830,7 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   color: #737373; /* neutral-500 */
   font-size: 0.875rem;
   font-weight: 600;
+  font-variant-numeric: tabular-nums;
   line-height: 1.4;
 }
 
@@ -1060,7 +1070,8 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 @media (min-width: 640px) {
   .release-tracklist__row {
-    grid-template-columns: 2.5rem minmax(0, 1fr) auto;
+    grid-template-columns: 3rem minmax(0, 1fr) auto;
+    padding-block: 0.6rem;
   }
 
   .release-tracklist__duration {
