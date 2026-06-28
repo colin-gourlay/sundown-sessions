@@ -1,5 +1,6 @@
 ---
 title: 'Contact'
+strapline: 'Get in touch with the show.'
 description: 'If you want to get in touch - this is the place!'
 menu:
   main:

@@ -1,6 +1,6 @@
 ---
 title: 'Shows'
-description: 'Featuring: playlists, track details, show notes and more from each broadcast'
+description: 'Every broadcast, playlist and musical discovery.'
 menu:
   main:
     name: 'Shows'

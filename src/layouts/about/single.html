@@ -22,32 +22,7 @@
   <script type="application/ld+json">{{ $jsonLD | jsonify | safeJS }}</script>
 
   <article class="about-page">
-    <header class="about-hero" aria-labelledby="about-heading">
-      <div class="about-hero__copy">
-        {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
-          {{ partial "breadcrumbs.html" . }}
-        {{ end }}
-        <p class="about-kicker">Broadcasting from Scotland</p>
-        <h1 id="about-heading">More than just another music archive.</h1>
-        <p class="about-hero__lede">
-          Sundown Sessions is an adventurous music show and living archive from Haddington, East Lothian, built for curious listeners who still believe discovery is the best part of radio.
-        </p>
-        <div class="about-actions" aria-label="Primary About page actions">
-          <a class="about-button about-button--primary" href="{{ "/listen-live/" | relURL }}">Listen Live</a>
-          <a class="about-button about-button--secondary" href="{{ "/shows/" | relURL }}">Browse Shows</a>
-        </div>
-      </div>
-      {{ with $image }}
-        <figure class="about-hero__media">
-          <img
-            src="{{ .RelPermalink }}"
-            alt="Colin Gourlay in the Sundown Sessions studio"
-            loading="eager"
-            decoding="async"
-            fetchpriority="high">
-        </figure>
-      {{ end }}
-    </header>
+    {{ partial "section-hero.html" . }}
 
     <section class="about-section about-section--intro" aria-labelledby="about-identity-heading">
       <div class="about-section__header">
