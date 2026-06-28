@@ -1,0 +1,120 @@
+{{ define "main" }}
+  {{- $config := site.Params.notFound | default dict -}}
+  {{- $title := $config.title | default "Signal Lost" -}}
+  {{- $eyebrow := $config.eyebrow | default "404 Not Found" -}}
+  {{- $message := $config.message | default "The page you're looking for seems to have drifted off air." -}}
+  {{- $recovery := $config.recovery | default "There is still plenty worth listening to. Try one of these routes back into Sundown Sessions." -}}
+  {{- $image := $config.image | default "/images/404.png" -}}
+  {{- $imageAlt := $config.imageAlt | default "Illustration of headphones around a radio tower with a 404 not found message." -}}
+  {{- $primary := $config.primary | default (dict "label" "Listen Live" "url" "/listen-live/" "event" "listen_live_click" "provider" "404-primary") -}}
+  {{- $secondary := $config.secondary | default (dict "label" "Back Home" "url" "/" "event" "not_found_recovery_click" "provider" "home") -}}
+  {{- $links := $config.links | default (slice
+    (dict "label" "Browse Shows" "url" "/shows/" "description" "Find recent playlists and broadcasts." "event" "not_found_recovery_click" "provider" "shows")
+    (dict "label" "Search the Site" "url" "/search/" "description" "Look for artists, releases, tracks and shows." "event" "not_found_recovery_click" "provider" "search")
+    (dict "label" "Meet the Presenter" "url" "/about/" "description" "Learn more about the show and its story." "event" "not_found_recovery_click" "provider" "about")
+    (dict "label" "Contact Us" "url" "/contact/" "description" "Tell us about a broken link or send a request." "event" "not_found_recovery_click" "provider" "contact")
+  ) -}}
+  {{- $shows := where site.RegularPages "Section" "shows" -}}
+  {{- $datedShows := where $shows ".Date.IsZero" "ne" true -}}
+  {{- $latestShows := first 3 (sort $datedShows "Date" "desc") -}}
+
+  <article class="not-found-page" aria-labelledby="not-found-heading">
+    <section class="not-found-hero">
+      <div class="not-found-hero__copy">
+        <p class="not-found-kicker">{{ $eyebrow }}</p>
+        <h1 id="not-found-heading">{{ $title }}</h1>
+        <p class="not-found-hero__message">{{ $message }}</p>
+        <p class="not-found-hero__recovery">{{ $recovery }}</p>
+
+        <div class="not-found-actions" aria-label="404 recovery actions">
+          <a
+            class="not-found-button not-found-button--primary"
+            href="{{ default "/listen-live/" $primary.url | relURL }}"
+            data-analytics-event="{{ $primary.event | default "listen_live_click" }}"
+            data-analytics-provider="{{ $primary.provider | default "404-primary" }}">
+            {{ $primary.label | default "Listen Live" }}
+          </a>
+          <a
+            class="not-found-button not-found-button--secondary"
+            href="{{ default "/" $secondary.url | relURL }}"
+            data-analytics-event="{{ $secondary.event | default "not_found_recovery_click" }}"
+            data-analytics-provider="{{ $secondary.provider | default "home" }}">
+            {{ $secondary.label | default "Back Home" }}
+          </a>
+        </div>
+      </div>
+
+      <figure class="not-found-hero__media">
+        <img src="{{ $image | relURL }}" alt="{{ $imageAlt }}">
+      </figure>
+    </section>
+
+    <section class="not-found-section" aria-labelledby="not-found-routes-heading">
+      <div class="not-found-section__header">
+        <h2 id="not-found-routes-heading">Tune Back In</h2>
+        <p>Useful routes if the link was old, mistyped or moved during a reshuffle.</p>
+      </div>
+
+      <div class="not-found-link-grid">
+        {{- range $links }}
+          <a
+            class="not-found-route"
+            href="{{ .url | relURL }}"
+            data-analytics-event="{{ .event | default "not_found_recovery_click" }}"
+            data-analytics-provider="{{ .provider | default .label }}">
+            <span class="not-found-route__label">{{ .label }}</span>
+            {{- with .description }}
+              <span class="not-found-route__description">{{ . }}</span>
+            {{- end }}
+          </a>
+        {{- end }}
+      </div>
+    </section>
+
+    {{- if gt (len $latestShows) 0 }}
+      <section class="not-found-section" aria-labelledby="not-found-latest-heading">
+        <div class="not-found-section__header">
+          <h2 id="not-found-latest-heading">Latest Listen Again</h2>
+          <p>Recent Sundown Sessions broadcasts ready when you are.</p>
+        </div>
+
+        <div class="not-found-latest">
+          {{- range $latestShows }}
+            {{- $showLabel := "" -}}
+            {{- $showTitle := .Title | plainify -}}
+            {{- $titleParts := split .Title ": " -}}
+            {{- if gt (len $titleParts) 1 -}}
+              {{- $showLabel = index $titleParts 0 -}}
+              {{- $showTitle = strings.TrimPrefix (printf "%s: " $showLabel) .Title | plainify -}}
+            {{- end -}}
+            <a
+              class="not-found-show"
+              href="{{ .RelPermalink }}"
+              data-analytics-event="not_found_latest_show_click"
+              data-analytics-provider="latest-listen-again">
+              <span class="not-found-show__meta">
+                {{- with $showLabel }}{{ . }} &middot; {{ end -}}{{ .Date.Format "2 Jan 2006" }}
+              </span>
+              <span class="not-found-show__title">{{ $showTitle }}</span>
+              {{- with .Summary }}
+                <span class="not-found-show__summary">{{ . | plainify }}</span>
+              {{- end }}
+            </a>
+          {{- end }}
+        </div>
+      </section>
+    {{- end }}
+  </article>
+
+  <script>
+    window.addEventListener("DOMContentLoaded", function() {
+      if (!window.sundownAnalytics || typeof window.sundownAnalytics.track !== "function") return;
+      window.sundownAnalytics.track("not_found_view", {
+        requested_path: window.location.pathname,
+        requested_url: window.location.href,
+        referrer: document.referrer,
+        page_type: "404"
+      });
+    }, { once: true });
+  </script>
+{{ end }}
