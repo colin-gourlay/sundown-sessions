@@ -103,6 +103,42 @@
   outline-offset: 0.18rem;
 }
 
+.listen-live-follow {
+  max-width: 42rem;
+  margin: 2rem 0 0;
+}
+
+.listen-live-follow h2 {
+  margin: 0;
+  color: #171717; /* neutral-900 */
+  font-size: 1.15rem;
+  font-weight: 800;
+  line-height: 1.35;
+}
+
+.dark .listen-live-follow h2 {
+  color: #f5f5f5; /* neutral-100 */
+}
+
+.listen-live-follow p {
+  margin: 0.45rem 0 0;
+  color: #525252; /* neutral-600 */
+  line-height: 1.65;
+}
+
+.dark .listen-live-follow p {
+  color: #d4d4d4; /* neutral-300 */
+}
+
+.listen-live-follow > div {
+  margin-top: 0.75rem;
+}
+
+.listen-live-follow a:focus-visible {
+  outline: 2px solid rgba(var(--color-primary-500), 0.75);
+  outline-offset: 0.18rem;
+}
+
 /* 404 page: branded recovery route for missing pages. */
 
 .not-found-page {

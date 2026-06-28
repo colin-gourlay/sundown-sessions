@@ -1,0 +1,7 @@
+{{- with .Site.Params.Author.links -}}
+  <section class="listen-live-follow" aria-labelledby="listen-live-follow-heading">
+    <h2 id="listen-live-follow-heading">Follow Sundown Sessions</h2>
+    <p>Keep up with future broadcasts, featured artists, new discoveries and listen-again links.</p>
+    {{ partial "author-links.html" $ }}
+  </section>
+{{- end -}}
