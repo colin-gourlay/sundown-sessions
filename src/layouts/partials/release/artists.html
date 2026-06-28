@@ -1,145 +1,26 @@
-{{- $artistItems := slice -}}
-
-{{- with .Params.artists -}}
-  {{- if reflect.IsSlice . -}}
-    {{- $artistItems = . -}}
-  {{- else -}}
-    {{- $artistItems = slice . -}}
+{{- $artists := partial "release/resolve-artists.html" . -}}
+{{- $artistCards := slice -}}
+{{- range $artists -}}
+  {{- $artist := . -}}
+  {{- $summary := "" -}}
+  {{- with .page -}}
+    {{- $summary = .Summary | plainify | strings.TrimSpace -}}
   {{- end -}}
-{{- else -}}
-  {{- with .Params.artist -}}
-    {{- if reflect.IsSlice . -}}
-      {{- $artistItems = . -}}
-    {{- else -}}
-      {{- $artistItems = slice . -}}
-    {{- end -}}
+  {{- with $summary -}}
+    {{- $artistCards = $artistCards | append (merge $artist (dict "summary" $summary)) -}}
   {{- end -}}
 {{- end -}}
 
-{{- $artists := slice -}}
-{{- $artistSection := site.GetPage "artists" -}}
-{{- $artistPages := slice -}}
-{{- with $artistSection -}}
-  {{- $artistPages = .RegularPagesRecursive -}}
-{{- else -}}
-  {{- $artistPages = where site.RegularPages "Section" "artists" -}}
-{{- end -}}
-
-{{- range $artistItems -}}
-  {{- $name := "" -}}
-  {{- $pageRef := "" -}}
-  {{- $slug := "" -}}
-  {{- $artistPage := false -}}
-
-  {{- if reflect.IsMap . -}}
-    {{- $name = index . "title" | default (index . "name") | default (index . "artist") -}}
-    {{- $pageRef = index . "page" | default (index . "url") -}}
-    {{- $slug = index . "slug" | default (index . "artist_slug") -}}
-  {{- else -}}
-    {{- $name = printf "%v" . -}}
-    {{- $slug = $.Params.artist_slug -}}
-  {{- end -}}
-
-  {{- if $name -}}
-    {{- $name = printf "%v" $name | strings.TrimSpace -}}
-  {{- else -}}
-    {{- $name = "" -}}
-  {{- end -}}
-  {{- if $pageRef -}}
-    {{- $pageRef = printf "%v" $pageRef | strings.TrimSpace -}}
-  {{- else -}}
-    {{- $pageRef = "" -}}
-  {{- end -}}
-  {{- if $slug -}}
-    {{- $slug = printf "%v" $slug | strings.TrimSpace -}}
-  {{- else -}}
-    {{- $slug = "" -}}
-  {{- end -}}
-
-  {{- if and (not $slug) $name -}}
-    {{- $slug = urlize $name -}}
-  {{- end -}}
-
-  {{- with $pageRef -}}
-    {{- $cleanRef := strings.TrimSuffix "/" (strings.TrimPrefix "/" .) -}}
-    {{- $lookupRefs := slice . $cleanRef (printf "/%s/" $cleanRef) -}}
-    {{- range $lookupRefs -}}
-      {{- if not $artistPage -}}
-        {{- with site.GetPage . -}}
-          {{- if eq .Section "artists" -}}
-            {{- $artistPage = . -}}
-          {{- end -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-
-  {{- if and (not $artistPage) $slug -}}
-    {{- $slugPath := strings.TrimSuffix "/" (strings.TrimPrefix "/" $slug) -}}
-    {{- $slugBase := path.Base $slugPath -}}
-    {{- if $slugBase -}}
-      {{- $firstChar := substr $slugBase 0 1 | lower -}}
-      {{- $lookupRefs := slice
-        (printf "artists/%s" $slugPath)
-        (printf "artists/%s/%s" $firstChar $slugBase)
-        (printf "/artists/%s/" $slugPath)
-        (printf "/artists/%s/%s/" $firstChar $slugBase)
-      -}}
-      {{- range $lookupRefs -}}
-        {{- if not $artistPage -}}
-          {{- with site.GetPage . -}}
-            {{- if eq .Section "artists" -}}
-              {{- $artistPage = . -}}
-            {{- end -}}
-          {{- end -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-
-  {{- if and (not $artistPage) (or $slug $name) -}}
-    {{- $slugCandidate := $slug | default (urlize $name) -}}
-    {{- $nameCandidate := urlize $name -}}
-    {{- range $artistPages -}}
-      {{- if not $artistPage -}}
-        {{- $pageSlug := .Slug | default (path.Base .RelPermalink) | urlize -}}
-        {{- $fileSlug := "" -}}
-        {{- with .File -}}
-          {{- $fileSlug = path.Base (strings.TrimSuffix "/" .Dir) | urlize -}}
-        {{- end -}}
-        {{- $titleSlug := .Title | urlize -}}
-        {{- if or
-          (and $slugCandidate (or (eq $slugCandidate $pageSlug) (eq $slugCandidate $fileSlug) (eq $slugCandidate $titleSlug)))
-          (and $nameCandidate (eq $nameCandidate $titleSlug))
-        -}}
-          {{- $artistPage = . -}}
-        {{- end -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-
-  {{- if or $name $artistPage -}}
-    {{- if and (not $name) $artistPage -}}
-      {{- $name = $artistPage.Title -}}
-    {{- end -}}
-    {{- $artists = $artists | append (dict "name" $name "page" $artistPage) -}}
-  {{- end -}}
-{{- end -}}
-
-{{- if gt (len $artists) 0 -}}
-  {{- $heading := cond (eq (len $artists) 1) "Artist" "Artists" -}}
+{{- if gt (len $artistCards) 0 -}}
+  {{- $heading := cond (eq (len $artistCards) 1) "Artist" "Artists" -}}
   <section
     class="release-artists"
     role="region"
     aria-labelledby="release-artists-heading">
     <h2 id="release-artists-heading" class="release-artists__heading">{{ $heading }}</h2>
     <div class="release-artists__list" role="list">
-      {{- range $artists }}
+      {{- range $artistCards }}
         {{- $artistPage := .page -}}
-        {{- $summary := "" -}}
-        {{- with $artistPage -}}
-          {{- $summary = .Summary | plainify | strings.TrimSpace -}}
-        {{- end -}}
         <article class="release-artists__item" role="listitem">
           <div class="release-artists__body">
             <h3 class="release-artists__name">
@@ -149,11 +30,8 @@
                 {{ .name | emojify }}
               {{- end -}}
             </h3>
-            {{- with $summary }}
+            {{- with .summary }}
               <p class="release-artists__summary">{{ . }}</p>
-            {{- end }}
-            {{- with $artistPage }}
-              <a class="release-artists__profile-link" href="{{ .RelPermalink }}">View Artist Profile &rarr;</a>
             {{- end }}
           </div>
         </article>

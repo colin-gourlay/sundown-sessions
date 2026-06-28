@@ -513,6 +513,36 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   margin: 0;
 }
 
+.release-hero__artist-link {
+  color: rgba(var(--color-primary-600), 1);
+  cursor: pointer;
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--color-primary-500), 0.45);
+  text-underline-offset: 0.16rem;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.release-hero__artist-link:hover,
+.release-hero__artist-link:focus-visible {
+  color: rgba(var(--color-primary-700), 1);
+  text-decoration-color: currentColor;
+}
+
+.release-hero__artist-link:focus-visible {
+  outline: 2px solid rgba(var(--color-primary-500), 0.75);
+  outline-offset: 0.2rem;
+}
+
+.dark .release-hero__artist-link {
+  color: rgba(var(--color-primary-400), 1);
+  text-decoration-color: rgba(var(--color-primary-400), 0.5);
+}
+
+.dark .release-hero__artist-link:hover,
+.dark .release-hero__artist-link:focus-visible {
+  color: rgba(var(--color-primary-300), 1);
+}
+
 .release-hero__metadata {
   display: grid;
   gap: 0.9rem;
@@ -707,26 +737,6 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 .dark .release-artists__summary {
   color: #a3a3a3; /* neutral-400 */
-}
-
-.release-artists__profile-link {
-  display: inline-flex;
-  margin-top: 0.65rem;
-  color: rgba(var(--color-primary-600), 1);
-  font-size: 0.88rem;
-  font-weight: 700;
-  line-height: 1.4;
-  text-decoration: none;
-}
-
-.release-artists__profile-link:hover,
-.release-artists__profile-link:focus-visible {
-  text-decoration: underline;
-  text-underline-offset: 0.125rem;
-}
-
-.dark .release-artists__profile-link {
-  color: rgba(var(--color-primary-400), 1);
 }
 
 /* Release tracklist: scoped card/list-group treatment for structured release
