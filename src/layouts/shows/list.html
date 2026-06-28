@@ -2,74 +2,7 @@
   {{ .Scratch.Set "scope" "list" }}
 
   {{/* Hero Banner */}}
-  {{ $heroImageURL := "" }}
-  {{ $featureImage := .Params.featured_image | default .Params.featureimage }}
-  {{ with $featureImage }}
-    {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
-      {{ $heroImageURL = . }}
-    {{ else }}
-      {{ with resources.Get . }}
-        {{ $heroImageURL = .RelPermalink }}
-      {{ else }}
-        {{ $heroImageURL = . | relURL }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-  {{ if not $heroImageURL }}
-    {{ with .Site.Params.homepage.homepageImage | default .Site.Params.defaultBackgroundImage }}
-      {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
-        {{ $heroImageURL = . }}
-      {{ else }}
-        {{ with resources.Get . }}
-          {{ $heroImageURL = .RelPermalink }}
-        {{ else }}
-          {{ $heroImageURL = . | relURL }}
-        {{ end }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-
-  {{ if $heroImageURL }}
-    <div class="space-y-6 mb-10">
-      <section
-        class="relative overflow-hidden rounded-2xl shadow-2xl"
-        role="region"
-        aria-labelledby="shows-hero-heading">
-        <img
-          src="{{ $heroImageURL }}"
-          alt=""
-          role="presentation"
-          loading="eager"
-          decoding="async"
-          fetchpriority="high"
-          class="h-72 w-full object-cover sm:h-80 lg:h-96"
-          {{ with .Site.Params.homepage.homepageImagePosition }}style="object-position: {{ . | safeCSS }};"{{ end }}>
-        <div
-          aria-hidden="true"
-          class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/45 to-neutral-950/20"></div>
-        <div class="absolute inset-0 flex items-center justify-center px-4">
-          <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
-            <h1 id="shows-hero-heading" class="mt-0 text-4xl font-extrabold tracking-tight text-neutral-50 drop-shadow-2xl sm:text-5xl">
-              {{ .Title }}
-            </h1>
-          </div>
-        </div>
-      </section>
-      {{ with .Description }}
-        <p class="mx-auto max-w-2xl px-4 text-center text-base font-medium text-neutral-700 dark:text-neutral-300 sm:text-lg">{{ . }}</p>
-      {{ end }}
-    </div>
-  {{ else }}
-    <header class="mb-10">
-      {{ if .Params.showBreadcrumbs | default (site.Params.list.showBreadcrumbs | default false) }}
-        {{ partial "breadcrumbs.html" . }}
-      {{ end }}
-      <h1 class="mt-5 text-4xl font-extrabold text-neutral-900 dark:text-neutral">{{ .Title }}</h1>
-      {{ with .Description }}
-        <p class="mt-2 text-base text-neutral-500 dark:text-neutral-400">{{ . }}</p>
-      {{ end }}
-    </header>
-  {{ end }}
+  {{ partial "section-hero.html" . }}
 
   {{/* Shows listing — horizontal show cards in a vertical stack */}}
   {{ $datedPages := where .Pages ".Date.IsZero" "ne" true }}
