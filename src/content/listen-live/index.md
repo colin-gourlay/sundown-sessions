@@ -28,10 +28,13 @@ If the player doesn't load, you can [listen directly using the NuCast player](ht
   </div>
 </section>
 
+## Broadcast Schedule
+
+Sundown Sessions broadcasts live when a show is scheduled. Outside live broadcasts, explore the [show archive](/shows/) and [listen again](https://www.mixcloud.com/sundownsessions/) whenever the mood takes you.
+
+> **Live broadcasts**  
+> Schedule to be confirmed
+
 ## What You'll Hear
 
 Expect alternative music after dark, new discoveries, independent artists, exclusive first plays, interviews, deep cuts and carefully chosen tracks from across the musical landscape.
-
-## When to Listen
-
-Sundown Sessions broadcasts live when a show is scheduled. Outside live broadcasts, you can explore [past shows](/shows/) and [listen again](https://www.mixcloud.com/sundownsessions/) through the archive.
