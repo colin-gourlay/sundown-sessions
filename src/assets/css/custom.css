@@ -128,6 +128,64 @@
   width: 100%;
 }
 
+.listen-live-player-shell {
+  display: grid;
+  gap: 1rem;
+  align-items: start;
+}
+
+.listen-live-player-shell__main {
+  display: grid;
+  gap: 1rem;
+  min-width: 0;
+}
+
+.listen-live-now-playing__artwork {
+  display: grid;
+  width: min(100%, 9rem);
+  aspect-ratio: 1 / 1;
+  align-items: center;
+  justify-items: center;
+  overflow: hidden;
+  border: 1px solid rgba(var(--color-primary-500), 0.24);
+  border-radius: 0.5rem;
+  background:
+    linear-gradient(135deg, rgba(var(--color-primary-500), 0.14), transparent 46%),
+    #f5f5f5; /* neutral-100 */
+  color: rgba(var(--color-primary-700), 1);
+}
+
+.dark .listen-live-now-playing__artwork {
+  border-color: rgba(var(--color-primary-400), 0.3);
+  background:
+    linear-gradient(135deg, rgba(var(--color-primary-400), 0.18), transparent 46%),
+    #262626; /* neutral-800 */
+  color: rgba(var(--color-primary-300), 1);
+}
+
+.listen-live-now-playing__artwork img,
+.listen-live-now-playing__artwork span {
+  grid-area: 1 / 1;
+}
+
+.listen-live-now-playing__artwork img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.listen-live-now-playing__artwork span {
+  font-size: 1.4rem;
+  font-weight: 850;
+  line-height: 1;
+}
+
+.listen-live-now-playing [hidden],
+.listen-live-now-playing__artwork [hidden] {
+  display: none !important;
+}
+
 .listen-live-status {
   display: inline-flex;
   align-items: center;
@@ -165,6 +223,43 @@
 .listen-live-now-playing__body {
   display: grid;
   gap: 0.65rem;
+}
+
+.listen-live-now-playing__details {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.listen-live-now-playing__details div {
+  display: grid;
+  gap: 0.15rem;
+  min-width: 0;
+}
+
+.listen-live-now-playing__details dt {
+  color: #737373; /* neutral-500 */
+  font-size: 0.72rem;
+  font-weight: 800;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+
+.dark .listen-live-now-playing__details dt {
+  color: #a3a3a3; /* neutral-400 */
+}
+
+.listen-live-now-playing__details dd {
+  min-width: 0;
+  overflow-wrap: anywhere;
+  color: #262626; /* neutral-800 */
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+.dark .listen-live-now-playing__details dd {
+  color: #f5f5f5; /* neutral-100 */
 }
 
 .listen-live-now-playing a,
@@ -258,6 +353,10 @@
 }
 
 @media (min-width: 700px) {
+  .listen-live-player-shell {
+    grid-template-columns: 9rem minmax(0, 1fr);
+  }
+
   .listen-live-detail-grid,
   .listen-live-more__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
