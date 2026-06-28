@@ -18,7 +18,7 @@ Press play, settle in, and discover what is drifting through the Sundown Session
 
 {{< listen-live-player >}}
 
-If the player doesn't load, you can [listen directly using the NuCast player](https://betelgeuse.nucast.co.uk/public/8062).
+Having trouble with the player? You can also [listen directly using the NuCast player](https://betelgeuse.nucast.co.uk/public/8062).
 
 <section class="listen-live-now-playing" aria-labelledby="now-playing-heading">
   <h2 id="now-playing-heading">Now Playing</h2>
