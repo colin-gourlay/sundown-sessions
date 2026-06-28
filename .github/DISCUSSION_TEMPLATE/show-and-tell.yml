@@ -1,0 +1,56 @@
+title: "[Show and Tell] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to share something you have built, discovered, or improved — even if it is a work in progress. Show and Tell posts are a great way to get early feedback, inspire ideas, and celebrate progress.
+
+  - type: textarea
+    id: what-are-you-sharing
+    attributes:
+      label: What Are You Sharing?
+      description: Give a short title or summary of what you want to show.
+      placeholder: e.g. Early prototype of automated show-note generation from Lidarr release data.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Why did you build or discover this? What problem or opportunity inspired it?
+    validations:
+      required: true
+
+  - type: textarea
+    id: demo
+    attributes:
+      label: Demo / Screenshots / Examples
+      description: Share screenshots, code snippets, links, or a short walkthrough. Drag-and-drop images are supported.
+    validations:
+      required: false
+
+  - type: textarea
+    id: status
+    attributes:
+      label: Status
+      description: Is this finished, a work in progress, or an early proof of concept?
+      placeholder: e.g. Work in progress — proof of concept only, not production-ready.
+    validations:
+      required: false
+
+  - type: textarea
+    id: feedback-requested
+    attributes:
+      label: Feedback Requested (optional)
+      description: Is there anything specific you would like feedback on?
+    validations:
+      required: false
+
+  - type: textarea
+    id: linked-refs
+    attributes:
+      label: Related Issues / PRs / Discussions
+    validations:
+      required: false

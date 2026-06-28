@@ -1,0 +1,69 @@
+title: "[RFC] "
+labels: []
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Use this template to request structured feedback on a proposal. An RFC (Request for Comments) is appropriate when you have a concrete direction in mind and want community input before committing to it.
+
+        Summarise the proposal clearly, then list the specific questions you want answered. A poll may be added by the author after posting if a clear binary or ranked choice is needed.
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: Proposal Summary
+      description: A concise description of what you are proposing and why.
+    validations:
+      required: true
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and Motivation
+      description: What led to this proposal? What problem does it solve or what opportunity does it address?
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal-detail
+    attributes:
+      label: Detailed Proposal
+      description: Describe the proposed change or direction in as much detail as you have. Include any relevant diagrams, examples, or pseudocode.
+    validations:
+      required: true
+
+  - type: textarea
+    id: feedback-questions
+    attributes:
+      label: Specific Feedback Requested
+      description: What questions do you most want answered? Being specific helps respondents focus their feedback.
+      placeholder: |
+        1. Does this approach fit the existing ContentOps architecture?
+        2. Are there edge cases in the intake workflow we have not accounted for?
+        3. Is the proposed naming consistent with existing conventions?
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives Considered
+      description: What other approaches were considered and why were they not chosen?
+    validations:
+      required: false
+
+  - type: input
+    id: feedback-deadline
+    attributes:
+      label: Feedback Deadline (optional)
+      description: If there is a date by which feedback is needed, state it here.
+      placeholder: e.g. 2025-06-01
+    validations:
+      required: false
+
+  - type: textarea
+    id: linked-refs
+    attributes:
+      label: Linked Issues / PRs / Discussions
+    validations:
+      required: false
