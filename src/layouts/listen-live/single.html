@@ -41,17 +41,41 @@
                 <span id="listen-live-player-heading">Live Stream</span>
               </p>
 
-              {{ partial "listen-live/player.html" (dict "src" "" "type" "") }}
+              <div
+                class="listen-live-player-shell"
+                data-now-playing>
+                <div class="listen-live-now-playing__artwork" data-now-playing-artwork-wrap aria-hidden="true">
+                  <img data-now-playing-artwork alt="" hidden>
+                  <span data-now-playing-artwork-placeholder aria-hidden="true">SS</span>
+                </div>
+
+                <div class="listen-live-player-shell__main">
+                  {{ partial "listen-live/player.html" (dict "src" "" "type" "") }}
+
+                  <section class="listen-live-now-playing" aria-labelledby="now-playing-heading">
+                    <h2 id="now-playing-heading">Now Playing</h2>
+                    <div class="listen-live-now-playing__body" data-now-playing-state="fallback">
+                      <p class="listen-live-now-playing__fallback" data-now-playing-fallback>Live track information is not available just yet. Press play to hear what's currently drifting through Sundown Sessions.</p>
+                      <dl class="listen-live-now-playing__details" data-now-playing-details hidden>
+                        <div data-now-playing-artist-row hidden>
+                          <dt>Artist</dt>
+                          <dd data-now-playing-artist></dd>
+                        </div>
+                        <div data-now-playing-track-row hidden>
+                          <dt>Track</dt>
+                          <dd data-now-playing-track></dd>
+                        </div>
+                        <div data-now-playing-album-row hidden>
+                          <dt>Album</dt>
+                          <dd data-now-playing-album></dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </section>
+                </div>
+              </div>
 
               <p class="listen-live-card__note">Having trouble with the player? You can also <a href="https://betelgeuse.nucast.co.uk/public/8062">listen directly using the NuCast player</a>.</p>
-            </section>
-
-            <section class="listen-live-card listen-live-now-playing" aria-labelledby="now-playing-heading">
-              <h2 id="now-playing-heading">Now Playing</h2>
-              <div class="listen-live-now-playing__body" data-now-playing-state="fallback">
-                <p data-now-playing-fallback>Live track information is not available just yet. Press play to hear what's currently drifting through Sundown Sessions.</p>
-                <a href="{{ "/shows/" | relURL }}" data-now-playing-archive>Explore past shows</a>
-              </div>
             </section>
 
             <section class="listen-live-card" aria-labelledby="broadcast-schedule-heading">
@@ -110,4 +134,12 @@
       </div>
     </section>
   </article>
+
+  {{ with resources.Get "js/listen-live-now-playing.js" }}
+    {{ $nowPlayingJS := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+    <script
+      defer
+      src="{{ $nowPlayingJS.RelPermalink }}"
+      integrity="{{ $nowPlayingJS.Data.Integrity }}"></script>
+  {{ end }}
 {{ end }}
