@@ -35,6 +35,54 @@ listen_live_stream_url = ""
 # Resolved as a static file path (e.g. /images/my-logo.jpg).
 headerAvatar = "/images/sundown-sessions-logo.jpg"
 
+[notFound]
+  eyebrow = "404 Not Found"
+  title = "Signal Lost"
+  message = "The page you're looking for seems to have drifted off air."
+  recovery = "There is still plenty worth listening to. Try one of these routes back into Sundown Sessions."
+  image = "/images/404.png"
+  imageAlt = "Illustration of headphones around a radio tower with a 404 not found message."
+
+  [notFound.primary]
+    label = "Listen Live"
+    url = "/listen-live/"
+    event = "listen_live_click"
+    provider = "404-primary"
+
+  [notFound.secondary]
+    label = "Back Home"
+    url = "/"
+    event = "not_found_recovery_click"
+    provider = "home"
+
+  [[notFound.links]]
+    label = "Browse Shows"
+    url = "/shows/"
+    description = "Find recent playlists and broadcasts."
+    event = "not_found_recovery_click"
+    provider = "shows"
+
+  [[notFound.links]]
+    label = "Search the Site"
+    url = "/search/"
+    description = "Look for artists, releases, tracks and shows."
+    event = "not_found_recovery_click"
+    provider = "search"
+
+  [[notFound.links]]
+    label = "Meet the Presenter"
+    url = "/about/"
+    description = "Learn more about the show and its story."
+    event = "not_found_recovery_click"
+    provider = "about"
+
+  [[notFound.links]]
+    label = "Contact Us"
+    url = "/contact/"
+    description = "Tell us about a broken link or send a request."
+    event = "not_found_recovery_click"
+    provider = "contact"
+
 [favicon]
   # Static favicon asset paths. Tenant-specific builds can override these values
   # without changing the Blowfish partial.
