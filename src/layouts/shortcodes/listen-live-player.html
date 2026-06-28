@@ -1,9 +1,1 @@
-{{ $streamURL := .Get "src" | default "https://betelgeuse.nucast.co.uk:8062/stream" }}
-{{ $streamType := .Get "type" | default "audio/mpeg" }}
-
-<div class="listen-live-player">
-  <audio controls preload="none" aria-label="Sundown Sessions live stream">
-    <source src="{{ $streamURL }}" type="{{ $streamType }}">
-    Your browser does not support the audio element.
-  </audio>
-</div>
+{{ partial "listen-live/player.html" (dict "src" (.Get "src") "type" (.Get "type")) }}

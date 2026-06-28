@@ -1,0 +1,9 @@
+{{ $streamURL := .src | default "https://betelgeuse.nucast.co.uk:8062/stream" }}
+{{ $streamType := .type | default "audio/mpeg" }}
+
+<div class="listen-live-player">
+  <audio controls preload="none" aria-label="Sundown Sessions live stream">
+    <source src="{{ $streamURL }}" type="{{ $streamType }}">
+    Your browser does not support the audio element.
+  </audio>
+</div>
