@@ -20,6 +20,14 @@ Press play, settle in, and discover what is drifting through the Sundown Session
 
 If the player doesn't load, you can [listen directly using the NuCast player](https://betelgeuse.nucast.co.uk/public/8062).
 
+<section class="listen-live-now-playing" aria-labelledby="now-playing-heading">
+  <h2 id="now-playing-heading">Now Playing</h2>
+  <div class="listen-live-now-playing__body" data-now-playing-state="fallback">
+    <p data-now-playing-fallback>Live track information is not available just yet. Press play to hear what's currently drifting through Sundown Sessions.</p>
+    <a href="/shows/" data-now-playing-archive>Explore past shows</a>
+  </div>
+</section>
+
 ## What You'll Hear
 
 Expect alternative music after dark, new discoveries, independent artists, exclusive first plays, interviews, deep cuts and carefully chosen tracks from across the musical landscape.
