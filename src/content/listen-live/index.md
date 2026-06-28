@@ -5,6 +5,7 @@ showDate: false
 showReadingTime: false
 showAuthor: false
 showTableOfContents: false
+sharingLinks: false
 ---
 
 Join Sundown Sessions live for alternative music after dark, exclusive first plays, artist interviews and carefully curated selections from across the independent music landscape.
@@ -38,3 +39,5 @@ Sundown Sessions broadcasts live when a show is scheduled. Outside live broadcas
 ## What You'll Hear
 
 Expect alternative music after dark, new discoveries, independent artists, exclusive first plays, interviews, deep cuts and carefully chosen tracks from across the musical landscape.
+
+{{< social-follow >}}
