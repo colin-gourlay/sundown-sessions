@@ -1,0 +1,133 @@
+{{- $artistItems := slice -}}
+
+{{- with .Params.artists -}}
+  {{- if reflect.IsSlice . -}}
+    {{- $artistItems = . -}}
+  {{- else -}}
+    {{- $artistItems = slice . -}}
+  {{- end -}}
+{{- else -}}
+  {{- with .Params.artist -}}
+    {{- if reflect.IsSlice . -}}
+      {{- $artistItems = . -}}
+    {{- else -}}
+      {{- $artistItems = slice . -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $artists := slice -}}
+{{- $artistSection := site.GetPage "artists" -}}
+{{- $artistPages := slice -}}
+{{- with $artistSection -}}
+  {{- $artistPages = .RegularPagesRecursive -}}
+{{- else -}}
+  {{- $artistPages = where site.RegularPages "Section" "artists" -}}
+{{- end -}}
+
+{{- range $artistItems -}}
+  {{- $name := "" -}}
+  {{- $pageRef := "" -}}
+  {{- $slug := "" -}}
+  {{- $artistPage := false -}}
+
+  {{- if reflect.IsMap . -}}
+    {{- $name = index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug") -}}
+    {{- $pageRef = index . "page" | default (index . "url") -}}
+    {{- $slug = index . "slug" | default (index . "artist_slug") -}}
+  {{- else -}}
+    {{- $name = printf "%v" . -}}
+    {{- $slug = $.Params.artist_slug -}}
+  {{- end -}}
+
+  {{- if $name -}}
+    {{- $name = printf "%v" $name | strings.TrimSpace -}}
+  {{- else -}}
+    {{- $name = "" -}}
+  {{- end -}}
+  {{- if $pageRef -}}
+    {{- $pageRef = printf "%v" $pageRef | strings.TrimSpace -}}
+  {{- else -}}
+    {{- $pageRef = "" -}}
+  {{- end -}}
+  {{- if $slug -}}
+    {{- $slug = printf "%v" $slug | strings.TrimSpace -}}
+  {{- else -}}
+    {{- $slug = "" -}}
+  {{- end -}}
+
+  {{- if and (not $slug) $name -}}
+    {{- $slug = urlize $name -}}
+  {{- end -}}
+
+  {{- with $pageRef -}}
+    {{- if not (or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://")) -}}
+      {{- $cleanRef := strings.TrimSuffix "/" (strings.TrimPrefix "/" .) -}}
+      {{- $cleanRef = strings.TrimSuffix "/index.md" $cleanRef -}}
+      {{- $cleanRef = strings.TrimSuffix "/_index.md" $cleanRef -}}
+      {{- $lookupRefs := slice . $cleanRef (printf "/%s/" $cleanRef) -}}
+      {{- range $lookupRefs -}}
+        {{- if not $artistPage -}}
+          {{- with site.GetPage . -}}
+            {{- if eq .Section "artists" -}}
+              {{- $artistPage = . -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if and (not $artistPage) $slug -}}
+    {{- $slugPath := strings.TrimSuffix "/" (strings.TrimPrefix "/" $slug) -}}
+    {{- $slugBase := path.Base $slugPath -}}
+    {{- if $slugBase -}}
+      {{- $firstChar := substr $slugBase 0 1 | lower -}}
+      {{- $lookupRefs := slice
+        (printf "artists/%s" $slugPath)
+        (printf "artists/%s/%s" $firstChar $slugBase)
+        (printf "/artists/%s/" $slugPath)
+        (printf "/artists/%s/%s/" $firstChar $slugBase)
+      -}}
+      {{- range $lookupRefs -}}
+        {{- if not $artistPage -}}
+          {{- with site.GetPage . -}}
+            {{- if eq .Section "artists" -}}
+              {{- $artistPage = . -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if and (not $artistPage) (or $slug $name) -}}
+    {{- $slugCandidate := $slug | default (urlize $name) -}}
+    {{- $nameCandidate := urlize $name -}}
+    {{- range $artistPages -}}
+      {{- if not $artistPage -}}
+        {{- $pageSlug := .Slug | default (path.Base .RelPermalink) | urlize -}}
+        {{- $fileSlug := "" -}}
+        {{- with .File -}}
+          {{- $fileSlug = path.Base (strings.TrimSuffix "/" .Dir) | urlize -}}
+        {{- end -}}
+        {{- $titleSlug := .Title | urlize -}}
+        {{- if or
+          (and $slugCandidate (or (eq $slugCandidate $pageSlug) (eq $slugCandidate $fileSlug) (eq $slugCandidate $titleSlug)))
+          (and $nameCandidate (eq $nameCandidate $titleSlug))
+        -}}
+          {{- $artistPage = . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+
+  {{- if or $name $artistPage -}}
+    {{- if and (not $name) $artistPage -}}
+      {{- $name = $artistPage.Title -}}
+    {{- end -}}
+    {{- $artists = $artists | append (dict "name" $name "page" $artistPage) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- return $artists -}}

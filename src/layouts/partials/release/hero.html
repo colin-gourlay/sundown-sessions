@@ -165,26 +165,7 @@
   {{ end }}
 {{ end }}
 
-{{ $artist := "" }}
-{{ with $artistNames }}
-  {{ $artist = delimit . ", " }}
-{{ end }}
-
-{{ $releaseDate := .Params.releaseDate | default .Params.release_date | default .Params.date }}
-{{ if and (not $releaseDate) (not .Date.IsZero) }}
-  {{ $releaseDate = .Date }}
-{{ end }}
-{{ $releaseDateText := "" }}
-{{ with $releaseDate }}
-  {{ if reflect.IsMap . }}
-  {{ else if reflect.IsSlice . }}
-  {{ else }}
-    {{ $releaseDateText = printf "%v" . }}
-    {{ if or (in $releaseDateText "UTC") (in $releaseDateText "+0000") }}
-      {{ $releaseDateText = time.Format (site.Params.dateFormat | default "2 January 2006") . }}
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{ $artists := partial "release/resolve-artists.html" . }}
 {{ $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type }}
 {{ $accentColor := "" }}
 {{ with .Params.artworkAccent }}
@@ -228,27 +209,26 @@
           class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
           {{ .Title | emojify }}
         </h1>
-        {{ with $artist }}
+        {{ with $artists }}
           <p class="release-hero__artist text-lg font-medium text-neutral-700 dark:text-neutral-300">
-            {{ . }}
+            {{- range $index, $artist := . -}}
+              {{- if gt $index 0 }}, {{ end -}}
+              {{- with $artist.page -}}
+                <a class="release-hero__artist-link" href="{{ .RelPermalink }}">{{ $artist.name | emojify }}</a>
+              {{- else -}}
+                <span>{{ $artist.name | emojify }}</span>
+              {{- end -}}
+            {{- end -}}
           </p>
         {{ end }}
       </div>
 
-      {{ if or $releaseDateText $releaseType }}
+      {{ with $releaseType }}
         <dl class="release-hero__metadata">
-          {{ with $releaseDateText }}
-            <div>
-              <dt>Released</dt>
-              <dd>{{ . }}</dd>
-            </div>
-          {{ end }}
-          {{ with $releaseType }}
-            <div>
-              <dt>Type</dt>
-              <dd>{{ . }}</dd>
-            </div>
-          {{ end }}
+          <div>
+            <dt>Type</dt>
+            <dd>{{ . }}</dd>
+          </div>
         </dl>
       {{ end }}
     </div>
