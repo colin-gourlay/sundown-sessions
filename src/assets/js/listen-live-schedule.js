@@ -78,7 +78,7 @@
       status.innerHTML = "<span class=\"listen-live-broadcast-cue__dot\" aria-hidden=\"true\"></span>On Air Now &mdash; Broadcasting live until 10pm.";
       standfirst.textContent = "No two broadcasts are ever quite the same. Press play, settle in and discover what's drifting through Sundown Sessions tonight.";
     } else {
-      status.textContent = "Next live broadcast: Tuesday \u2022 8pm\u201310pm (UK)";
+      status.innerHTML = "<span class=\"listen-live-broadcast-cue__label\">Next live broadcast:</span> <span class=\"listen-live-broadcast-cue__time\">Tuesday \u2022 8pm\u201310pm (UK)</span>";
       standfirst.textContent = "Every broadcast is carefully curated, blending new discoveries, exclusive first plays, artist interviews and music chosen for after-dark listening.";
     }
 
