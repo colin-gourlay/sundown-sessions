@@ -14,4 +14,4 @@ Every broadcast is carefully curated, blending new discoveries, exclusive first 
 
 - Live broadcasts: Tuesday &bull; 8pm&ndash;10pm
 - Time zone: UK time
-- Listen again: Available anytime
+- Shows Archive: Available anytime
