@@ -160,7 +160,7 @@
       elements.placeholder.hidden = false;
     }
     if (elements.artworkWrap) {
-      elements.artworkWrap.setAttribute("aria-hidden", "true");
+      elements.artworkWrap.removeAttribute("aria-hidden");
     }
   }
 
@@ -205,7 +205,7 @@
         elements.placeholder.hidden = false;
       }
       if (elements.artworkWrap) {
-        elements.artworkWrap.setAttribute("aria-hidden", "true");
+        elements.artworkWrap.removeAttribute("aria-hidden");
       }
     }
   }
