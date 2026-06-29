@@ -47,11 +47,13 @@
                 data-now-playing-public-json="https://betelgeuse.nucast.co.uk/public-json/150"
                 data-now-playing-shoutcast="https://betelgeuse.nucast.co.uk:8062/7.html"
                 data-now-playing-stream="https://betelgeuse.nucast.co.uk:8062/stream">
-                <div class="listen-live-now-playing__artwork" data-now-playing-artwork-wrap aria-hidden="true">
+                <div class="listen-live-now-playing__artwork" data-now-playing-artwork-wrap>
                   <img data-now-playing-artwork alt="" hidden>
-                  <span class="listen-live-artwork-placeholder" data-now-playing-artwork-placeholder aria-hidden="true">
-                    <img src="{{ "/images/sundown-sessions-logo.jpg" | relURL }}" alt="" loading="lazy" decoding="async">
-                    <span>On air</span>
+                  <span class="listen-live-artwork-placeholder" data-now-playing-artwork-placeholder>
+                    <span class="listen-live-artwork-avatar">
+                      <img src="{{ "/images/sundown-sessions-logo.jpg" | relURL }}" alt="Sundown Sessions logo" loading="lazy" decoding="async">
+                    </span>
+                    <span class="listen-live-artwork-badge">On air</span>
                   </span>
                 </div>
 
