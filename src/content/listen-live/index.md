@@ -8,12 +8,12 @@ showTableOfContents: false
 sharingLinks: false
 ---
 
-No two broadcasts are ever quite the same. Join Sundown Sessions live for carefully curated alternative music, exclusive first plays, artist interviews and unexpected discoveries. Press play, settle in and discover what&rsquo;s drifting through Sundown Sessions tonight.
+Sundown Sessions broadcasts live every Tuesday from 8pm to 10pm (UK time). Join us for carefully curated alternative music, exclusive first plays, artist interviews and unexpected discoveries. Between broadcasts, explore the [archive](/shows/) or enjoy the station stream.
 
 ## Broadcast Schedule
 
-Live broadcasts are scheduled around the show. Outside live programmes, the [archive](/shows/) is always open.
+Sundown Sessions broadcasts live every Tuesday from 8pm to 10pm (UK time). Outside live programmes, the [archive](/shows/) is always open.
 
-- Live broadcasts: Schedule to be confirmed
+- Live broadcasts: Tuesday, 8pm&ndash;10pm
 - Time zone: UK time
 - Listen again: Available anytime
