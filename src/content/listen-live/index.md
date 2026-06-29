@@ -12,7 +12,7 @@ No two broadcasts are ever quite the same. Join Sundown Sessions live for carefu
 
 ## Broadcast Schedule
 
-Sundown Sessions broadcasts live when a show is scheduled. Outside live broadcasts, explore the [show archive](/shows/) and [listen again](https://www.mixcloud.com/sundownsessions/) whenever the mood takes you.
+Live broadcasts are scheduled around the show. Outside live programmes, the [archive](/shows/) is always open.
 
 - Live broadcasts: Schedule to be confirmed
 - Time zone: UK time

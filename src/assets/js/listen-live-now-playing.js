@@ -3,7 +3,7 @@
 
   var POLL_INTERVAL_MS = 45000;
   var STREAM_TIMEOUT_MS = 10000;
-  var FALLBACK_COPY = "Live track information is not available just yet. Press play to hear what's currently drifting through Sundown Sessions.";
+  var FALLBACK_COPY = "Waiting for track information...";
 
   var root = document.querySelector("[data-now-playing]");
   if (!root || !window.fetch) {
@@ -26,6 +26,7 @@
   };
 
   var lastRendered = "";
+  var transitionTimeoutId = null;
 
   function getEndpoint(name) {
     return root.getAttribute(name) || "";
@@ -33,6 +34,27 @@
 
   function clean(value) {
     return typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
+  }
+
+  function firstClean(values) {
+    for (var i = 0; i < values.length; i += 1) {
+      var value = clean(values[i]);
+      if (value) {
+        return value;
+      }
+    }
+
+    return "";
+  }
+
+  function firstObject(values) {
+    for (var i = 0; i < values.length; i += 1) {
+      if (values[i] && typeof values[i] === "object" && !Array.isArray(values[i])) {
+        return values[i];
+      }
+    }
+
+    return null;
   }
 
   function isUsefulUrl(value) {
@@ -77,12 +99,52 @@
       return null;
     }
 
-    var combinedTitle = clean(source.title || source.nowplaying || source.songtitle || source.currentSong || source.text);
+    var richNested = firstObject([
+      source.now_playing,
+      source.nowPlaying,
+      source.current,
+      source.currentTrack,
+      source.data
+    ]);
+
+    if (richNested) {
+      var nestedMetadata = normalizeMetadata(richNested);
+      if (nestedMetadata) {
+        return nestedMetadata;
+      }
+    }
+
+    var trackObject = firstObject([source.track, source.song]);
+    var combinedTitle = firstClean([
+      source.nowplaying,
+      source.now_playing,
+      source.title,
+      source.songtitle,
+      source.currentSong,
+      source.text
+    ]);
     var metadata = {
-      artist: clean(source.artist || source.artistName),
-      track: clean(source.track || source.title || source.song || source.name),
-      album: clean(source.album || source.albumTitle),
-      artwork: clean(source.artwork || source.artworkUrl || source.cover || source.coverUrl || source.image)
+      artist: firstClean([source.artist, source.artistName, source.artist_name, trackObject && trackObject.artist, trackObject && trackObject.artistName]),
+      track: firstClean([source.track, source.trackTitle, source.track_title, source.title, source.song, source.name, trackObject && trackObject.track, trackObject && trackObject.title, trackObject && trackObject.name]),
+      album: firstClean([source.album, source.albumTitle, source.album_title, trackObject && trackObject.album, trackObject && trackObject.albumTitle]),
+      artwork: firstClean([
+        source.artwork,
+        source.artworkUrl,
+        source.artwork_url,
+        source.albumArt,
+        source.album_art,
+        source.cover,
+        source.coverUrl,
+        source.cover_url,
+        source.image,
+        source.imageUrl,
+        source.image_url,
+        trackObject && trackObject.artwork,
+        trackObject && trackObject.artworkUrl,
+        trackObject && trackObject.albumArt,
+        trackObject && trackObject.cover,
+        trackObject && trackObject.image
+      ])
     };
 
     if ((!metadata.artist || !metadata.track) && combinedTitle) {
@@ -140,7 +202,35 @@
     setText(node, value);
   }
 
+  function markTransition() {
+    if (transitionTimeoutId) {
+      window.clearTimeout(transitionTimeoutId);
+    }
+
+    if (elements.body) {
+      elements.body.setAttribute("data-now-playing-transition", "");
+    }
+    if (elements.artworkWrap) {
+      elements.artworkWrap.setAttribute("data-now-playing-transition", "");
+    }
+
+    transitionTimeoutId = window.setTimeout(function () {
+      if (elements.body) {
+        elements.body.removeAttribute("data-now-playing-transition");
+      }
+      if (elements.artworkWrap) {
+        elements.artworkWrap.removeAttribute("data-now-playing-transition");
+      }
+    }, 320);
+  }
+
   function renderFallback() {
+    if (lastRendered === "fallback") {
+      return;
+    }
+    lastRendered = "fallback";
+    markTransition();
+
     if (elements.body) {
       elements.body.setAttribute("data-now-playing-state", "fallback");
     }
@@ -170,6 +260,7 @@
       return;
     }
     lastRendered = nextKey;
+    markTransition();
 
     if (elements.body) {
       elements.body.setAttribute("data-now-playing-state", "ready");
