@@ -27,18 +27,18 @@
 
     <section class="flex flex-col max-w-full mt-0 lg:flex-row">
       <div class="min-w-0 min-h-0 max-w-fit">
-        <div class="article-content max-w-prose mb-20">
+        <div class="article-content max-w-none mb-20">
           <div class="listen-live-page">
             <header class="listen-live-intro">
               <p class="listen-live-strapline">Alternative Music After Dark</p>
               <p>Join Sundown Sessions live for alternative music after dark, exclusive first plays, artist interviews and carefully curated selections from across the independent music landscape.</p>
-              <p>Press play, settle in, and discover what is drifting through the Sundown Sessions tonight.</p>
+              <p>No two broadcasts are ever quite the same. Press play, settle in, and discover what is drifting through Sundown Sessions tonight.</p>
             </header>
 
-            <section class="listen-live-card listen-live-card--player" aria-labelledby="listen-live-player-heading">
+            <section class="listen-live-live" aria-labelledby="listen-live-player-heading">
               <p class="listen-live-status" aria-label="Live stream status">
                 <span class="listen-live-status__dot" aria-hidden="true"></span>
-                <span id="listen-live-player-heading">Live Stream</span>
+                <span id="listen-live-player-heading">Live Now</span>
               </p>
 
               <div
@@ -49,12 +49,13 @@
                 data-now-playing-stream="https://betelgeuse.nucast.co.uk:8062/stream">
                 <div class="listen-live-now-playing__artwork" data-now-playing-artwork-wrap aria-hidden="true">
                   <img data-now-playing-artwork alt="" hidden>
-                  <span data-now-playing-artwork-placeholder aria-hidden="true">SS</span>
+                  <span class="listen-live-artwork-placeholder" data-now-playing-artwork-placeholder aria-hidden="true">
+                    <img src="{{ "/images/sundown-sessions-logo.jpg" | relURL }}" alt="" loading="lazy" decoding="async">
+                    <span>On air</span>
+                  </span>
                 </div>
 
                 <div class="listen-live-player-shell__main">
-                  {{ partial "listen-live/player.html" (dict "src" "" "type" "") }}
-
                   <section class="listen-live-now-playing" aria-labelledby="now-playing-heading">
                     <h2 id="now-playing-heading">Now Playing</h2>
                     <div class="listen-live-now-playing__body" data-now-playing-state="fallback">
@@ -75,15 +76,17 @@
                       </dl>
                     </div>
                   </section>
+
+                  {{ partial "listen-live/player.html" (dict "src" "" "type" "") }}
+
+                  <p class="listen-live-player__note">Having trouble with the player? You can also <a href="https://betelgeuse.nucast.co.uk/public/8062">listen directly using the NuCast player</a>.</p>
                 </div>
               </div>
-
-              <p class="listen-live-card__note">Having trouble with the player? You can also <a href="https://betelgeuse.nucast.co.uk/public/8062">listen directly using the NuCast player</a>.</p>
             </section>
 
-            <section class="listen-live-card" aria-labelledby="broadcast-schedule-heading">
+            <section class="listen-live-section listen-live-schedule" aria-labelledby="broadcast-schedule-heading">
               <h2 id="broadcast-schedule-heading">Broadcast Schedule</h2>
-              <p>Sundown Sessions broadcasts live when a show is scheduled. Outside live broadcasts, explore the <a href="{{ "/shows/" | relURL }}">show archive</a> and <a href="{{ "/shows/" | relURL }}">listen again</a> whenever the mood takes you.</p>
+              <p>Sundown Sessions broadcasts live when a show is scheduled. Outside live broadcasts, explore the <a href="{{ "/shows/" | relURL }}">show archive</a> and listen again whenever the mood takes you.</p>
 
               <dl class="listen-live-detail-grid" aria-label="Broadcast details">
                 <div>
@@ -101,22 +104,8 @@
               </dl>
             </section>
 
-            <section class="listen-live-card" aria-labelledby="why-listen-live-heading">
-              <h2 id="why-listen-live-heading">Why Listen Live?</h2>
-              <p>No two broadcasts are ever quite the same. Each show blends new discoveries, independent artists, exclusive first plays, interviews, deep cuts and music chosen for after-dark listening.</p>
-            </section>
-
-            <section class="listen-live-card" aria-labelledby="stay-connected-heading">
-              <h2 id="stay-connected-heading">Stay Connected</h2>
-              <p>Follow along for broadcast updates, featured tracks and music worth staying up for.</p>
-              <div class="listen-live-actions" aria-label="Sundown Sessions contact links">
-                <a href="https://www.instagram.com/sundownsessionsshow">Follow on Instagram</a>
-                <a href="{{ "/contact/" | relURL }}">Contact Sundown Sessions</a>
-              </div>
-            </section>
-
-            <section class="listen-live-more" aria-labelledby="explore-more-heading">
-              <h2 id="explore-more-heading">Explore More</h2>
+            <section class="listen-live-section listen-live-more" aria-labelledby="continue-exploring-heading">
+              <h2 id="continue-exploring-heading">Continue Exploring</h2>
               <div class="listen-live-more__grid">
                 <a class="listen-live-more__card" href="{{ "/shows/" | relURL }}">
                   <span>Browse Shows</span>
