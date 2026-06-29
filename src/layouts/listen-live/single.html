@@ -20,9 +20,6 @@
       <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
         {{ .Title | emojify }}
       </h1>
-      <div class="mt-1 mb-6 text-base text-neutral-500 dark:text-neutral-400 print:hidden">
-        {{ partial "article-meta/basic.html" (dict "context" . "scope" "single") }}
-      </div>
     </header>
 
     <section class="flex flex-col max-w-full mt-0 lg:flex-row">
@@ -31,8 +28,7 @@
           <div class="listen-live-page">
             <header class="listen-live-intro">
               <p class="listen-live-strapline">Alternative Music After Dark</p>
-              <p>Join Sundown Sessions live for alternative music after dark, exclusive first plays, artist interviews and carefully curated selections from across the independent music landscape.</p>
-              <p>No two broadcasts are ever quite the same. Press play, settle in, and discover what is drifting through Sundown Sessions tonight.</p>
+              <p class="listen-live-standfirst">No two broadcasts are ever quite the same. Join Sundown Sessions live for carefully curated alternative music, exclusive first plays, artist interviews and unexpected discoveries. Press play, settle in and discover what&rsquo;s drifting through Sundown Sessions tonight.</p>
             </header>
 
             <section class="listen-live-live" aria-labelledby="listen-live-player-heading">
