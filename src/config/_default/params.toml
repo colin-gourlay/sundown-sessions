@@ -92,7 +92,7 @@ headerAvatar = "/images/sundown-sessions-logo.jpg"
   icon48 = "favicon-48x48.png"
   appleTouchIcon = "apple-touch-icon.png"
   manifest = "site.webmanifest"
-  themeColor = "#081a3a"
+  themeColor = "#1E2438"
 
 [header]
   layout = "basic"
