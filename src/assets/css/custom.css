@@ -107,16 +107,18 @@
 
 .listen-live-page {
   --listen-live-editorial-accent: color-mix(in srgb, var(--ss-color-sunset) 72%, var(--ss-color-midnight));
+  --listen-live-soft-border: color-mix(in srgb, var(--ss-color-sunset) 18%, transparent);
 
   display: flex;
   flex-direction: column;
-  gap: clamp(1.75rem, 4vw, 3rem);
-  max-width: 60rem;
+  gap: clamp(1.6rem, 3.6vw, 2.75rem);
+  max-width: 64rem;
   margin: 0 0 5rem;
 }
 
 .dark .listen-live-page {
   --listen-live-editorial-accent: color-mix(in srgb, var(--ss-color-golden-hour) 78%, var(--ss-color-sunset));
+  --listen-live-soft-border: color-mix(in srgb, var(--ss-color-golden-hour) 18%, transparent);
 }
 
 .listen-live-intro {
@@ -149,25 +151,29 @@
 
 .listen-live-live {
   display: grid;
-  gap: clamp(1.25rem, 3vw, 2rem);
+  gap: clamp(1.15rem, 2.5vw, 1.8rem);
   overflow: hidden;
-  border: 1px solid var(--ss-color-border);
+  border: 1px solid var(--listen-live-soft-border);
   border-radius: 0.5rem;
   background:
     radial-gradient(circle at 12% 6%, rgb(244 124 60 / 0.14), transparent 34%),
     radial-gradient(circle at 94% 8%, rgb(106 63 181 / 0.1), transparent 28%),
     var(--ss-color-surface-warm);
-  box-shadow: 0 20px 48px var(--ss-color-shadow);
-  padding: clamp(1.25rem, 4vw, 2rem);
+  box-shadow:
+    0 22px 54px var(--ss-color-shadow),
+    0 1px 0 rgb(255 255 255 / 0.5) inset;
+  padding: clamp(1.45rem, 4.2vw, 2.35rem);
 }
 
 .dark .listen-live-live {
-  border-color: var(--ss-color-border);
+  border-color: var(--listen-live-soft-border);
   background:
     radial-gradient(circle at 12% 6%, rgb(255 138 76 / 0.16), transparent 34%),
     radial-gradient(circle at 94% 8%, rgb(169 140 255 / 0.14), transparent 28%),
     var(--ss-color-surface-warm);
-  box-shadow: 0 22px 56px var(--ss-color-shadow);
+  box-shadow:
+    0 24px 60px var(--ss-color-shadow),
+    0 1px 0 rgb(255 255 255 / 0.08) inset;
 }
 
 .listen-live-section {
@@ -242,19 +248,19 @@
 
 .listen-live-player-shell {
   display: grid;
-  gap: clamp(1rem, 3vw, 1.75rem);
+  gap: clamp(1.15rem, 3vw, 2.15rem);
   align-items: start;
 }
 
 .listen-live-player-shell__main {
   display: grid;
-  gap: 1.1rem;
+  gap: 1.2rem;
   min-width: 0;
 }
 
 .listen-live-now-playing__artwork {
   display: grid;
-  width: min(100%, 16rem);
+  width: min(100%, 17.5rem);
   aspect-ratio: 1 / 1;
   align-items: center;
   justify-items: center;
@@ -346,33 +352,48 @@
 }
 
 .listen-live-status {
-  display: inline-flex;
+  display: flex;
+  flex-wrap: wrap;
   align-items: center;
   gap: 0.5rem;
   width: fit-content;
   margin: 0;
-  border: 1px solid color-mix(in srgb, var(--ss-color-live) 38%, transparent);
+  border: 1px solid color-mix(in srgb, var(--ss-color-live) 46%, transparent);
   border-radius: 999px;
-  background: color-mix(in srgb, var(--ss-color-live) 10%, var(--ss-color-surface));
-  padding: 0.35rem 0.75rem;
+  background: color-mix(in srgb, var(--ss-color-live) 14%, var(--ss-color-surface));
+  padding: 0.38rem 0.82rem;
   color: var(--ss-color-midnight);
-  font-size: 0.9rem;
-  font-weight: 750;
+  font-size: 0.84rem;
+  font-weight: 850;
+  letter-spacing: 0.04em;
   line-height: 1.3;
+  text-transform: uppercase;
 }
 
 .dark .listen-live-status {
-  border-color: color-mix(in srgb, var(--ss-color-live) 42%, transparent);
-  background: color-mix(in srgb, var(--ss-color-live) 14%, var(--ss-color-surface));
+  border-color: color-mix(in srgb, var(--ss-color-live) 50%, transparent);
+  background: color-mix(in srgb, var(--ss-color-live) 18%, var(--ss-color-surface));
   color: #f6f1ea;
 }
 
 .listen-live-status__dot {
   width: 0.55rem;
   height: 0.55rem;
+  flex: 0 0 auto;
   border-radius: 999px;
   background: var(--ss-color-live);
   box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--ss-color-live) 24%, transparent);
+  animation: listen-live-pulse 2.6s ease-out infinite;
+}
+
+.listen-live-status__microcopy {
+  border-left: 1px solid color-mix(in srgb, currentColor 24%, transparent);
+  padding-left: 0.5rem;
+  color: var(--ss-color-muted);
+  font-size: 0.72rem;
+  font-weight: 750;
+  letter-spacing: 0;
+  text-transform: none;
 }
 
 .listen-live-player__note {
@@ -387,15 +408,16 @@
 .listen-live-now-playing__body {
   display: grid;
   gap: 0.65rem;
+  transition: opacity 0.22s ease;
 }
 
 .listen-live-now-playing__details {
   display: grid;
-  gap: 0.75rem;
+  gap: 0.45rem;
   margin: 0;
 }
 
-.listen-live-now-playing__details div {
+.listen-live-now-playing__detail {
   display: grid;
   gap: 0.15rem;
   min-width: 0;
@@ -417,13 +439,49 @@
   min-width: 0;
   overflow-wrap: anywhere;
   color: #262626; /* neutral-800 */
-  font-size: 1.05rem;
+  font-size: 1.08rem;
   font-weight: 700;
   line-height: 1.35;
 }
 
+.listen-live-now-playing__detail--artist dd {
+  color: var(--ss-color-midnight);
+  font-size: clamp(1.5rem, 3.6vw, 2.35rem);
+  font-weight: 850;
+  line-height: 1.05;
+}
+
+.listen-live-now-playing__detail--track dd {
+  font-size: clamp(1.08rem, 2vw, 1.32rem);
+}
+
+.listen-live-now-playing__detail--album dd {
+  color: var(--ss-color-muted);
+  font-size: 0.98rem;
+  font-weight: 650;
+}
+
 .dark .listen-live-now-playing__details dd {
   color: #f5f5f5; /* neutral-100 */
+}
+
+.dark .listen-live-now-playing__detail--artist dd {
+  color: #f5f5f5; /* neutral-100 */
+}
+
+.dark .listen-live-now-playing__detail--album dd {
+  color: var(--ss-color-muted);
+}
+
+.listen-live-now-playing__fallback {
+  max-width: 34ch;
+  font-size: clamp(1.1rem, 2vw, 1.3rem);
+  font-weight: 700;
+}
+
+.listen-live-now-playing__body[data-now-playing-transition],
+.listen-live-now-playing__artwork[data-now-playing-transition] {
+  animation: listen-live-fade 0.28s ease;
 }
 
 .listen-live-now-playing a {
@@ -479,33 +537,36 @@
 
 .listen-live-more__grid {
   display: grid;
-  gap: 0;
-  border-top: 1px solid #e5e5e5; /* neutral-200 */
-}
-
-.dark .listen-live-more__grid {
-  border-top-color: #404040; /* neutral-700 */
+  gap: 0.75rem;
 }
 
 .listen-live-more__card {
   display: grid;
   gap: 0.35rem;
-  border-bottom: 1px solid #e5e5e5; /* neutral-200 */
-  padding: 0.95rem 0;
+  min-height: 100%;
+  border: 1px solid color-mix(in srgb, var(--ss-color-border) 74%, transparent);
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--ss-color-surface) 82%, transparent);
+  padding: 1rem;
   color: inherit;
   text-decoration: none;
-  transition: color 0.15s ease, padding-left 0.15s ease;
+  box-shadow: 0 10px 24px rgb(30 36 56 / 0.06);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease, transform 0.15s ease;
 }
 
 .dark .listen-live-more__card {
-  border-bottom-color: #404040; /* neutral-700 */
+  border-color: color-mix(in srgb, var(--ss-color-border) 72%, transparent);
+  background: color-mix(in srgb, var(--ss-color-surface) 70%, transparent);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 0.18);
 }
 
 .listen-live-more__card:hover,
 .listen-live-more__card:focus-visible {
+  border-color: color-mix(in srgb, var(--ss-color-sunset) 42%, var(--ss-color-border));
   color: inherit;
   text-decoration: none;
-  padding-left: 0.35rem;
+  box-shadow: 0 14px 30px rgb(30 36 56 / 0.1);
+  transform: translateY(-0.08rem);
 }
 
 .listen-live-more__card span {
@@ -519,7 +580,7 @@
 
 @media (min-width: 700px) {
   .listen-live-player-shell {
-    grid-template-columns: minmax(12rem, 0.42fr) minmax(0, 1fr);
+    grid-template-columns: minmax(14rem, 0.44fr) minmax(0, 1fr);
     align-items: center;
   }
 
@@ -539,27 +600,47 @@
   .listen-live-more__grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 1.25rem;
-    border-top: 0;
-  }
-
-  .listen-live-more__card {
-    border-top: 1px solid #e5e5e5; /* neutral-200 */
-    border-bottom: 0;
-  }
-
-  .dark .listen-live-more__card {
-    border-top-color: #404040; /* neutral-700 */
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+  .listen-live-status__dot,
+  .listen-live-now-playing__body[data-now-playing-transition],
+  .listen-live-now-playing__artwork[data-now-playing-transition] {
+    animation: none;
+  }
+
   .listen-live-more__card {
     transition: none;
   }
 
   .listen-live-more__card:hover,
   .listen-live-more__card:focus-visible {
-    padding-left: 0;
+    transform: none;
+  }
+}
+
+@keyframes listen-live-pulse {
+  0% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--ss-color-live) 40%, transparent);
+  }
+
+  72% {
+    box-shadow: 0 0 0 0.36rem color-mix(in srgb, var(--ss-color-live) 0%, transparent);
+  }
+
+  100% {
+    box-shadow: 0 0 0 0 color-mix(in srgb, var(--ss-color-live) 0%, transparent);
+  }
+}
+
+@keyframes listen-live-fade {
+  from {
+    opacity: 0.72;
+  }
+
+  to {
+    opacity: 1;
   }
 }
 
