@@ -28,14 +28,15 @@
           <div class="listen-live-page">
             <header class="listen-live-intro">
               <p class="listen-live-strapline">Alternative Music After Dark</p>
-              <p class="listen-live-standfirst">No two broadcasts are ever quite the same. Join Sundown Sessions live for carefully curated alternative music, exclusive first plays, artist interviews and unexpected discoveries. Press play, settle in and discover what&rsquo;s drifting through Sundown Sessions tonight.</p>
+              <p class="listen-live-broadcast-cue" data-live-status>Next live broadcast: Tuesday, 8pm&ndash;10pm (UK time).</p>
+              <p class="listen-live-standfirst" data-live-standfirst data-archive-url="{{ "/shows/" | relURL }}">Sundown Sessions broadcasts live every Tuesday from 8pm to 10pm (UK time). Join us for carefully curated alternative music, exclusive first plays, artist interviews and unexpected discoveries. Between broadcasts, explore the <a href="{{ "/shows/" | relURL }}">archive</a> or enjoy the station stream.</p>
             </header>
 
             <section class="listen-live-live" aria-labelledby="listen-live-player-heading">
-              <p class="listen-live-status" aria-label="Live stream status">
+              <p class="listen-live-status" data-live-player-badge data-broadcast-state="off-air" aria-label="Live stream status">
                 <span class="listen-live-status__dot" aria-hidden="true"></span>
-                <span id="listen-live-player-heading">Live Now</span>
-                <span class="listen-live-status__microcopy">Alternative Music After Dark</span>
+                <span id="listen-live-player-heading" data-live-player-badge-label>Station Stream</span>
+                <span class="listen-live-status__microcopy" data-live-player-badge-note>Live Tuesdays, 8pm&ndash;10pm UK time</span>
               </p>
 
               <div
@@ -85,12 +86,12 @@
 
             <section class="listen-live-section listen-live-schedule" aria-labelledby="broadcast-schedule-heading">
               <h2 id="broadcast-schedule-heading">Broadcast Schedule</h2>
-              <p>Live broadcasts are scheduled around the show. Outside live programmes, the <a href="{{ "/shows/" | relURL }}">archive</a> is always open.</p>
+              <p>Sundown Sessions broadcasts live every Tuesday from 8pm to 10pm (UK time). Outside live programmes, the <a href="{{ "/shows/" | relURL }}">archive</a> is always open.</p>
 
               <dl class="listen-live-detail-grid" aria-label="Broadcast details">
                 <div>
                   <dt>Live broadcasts</dt>
-                  <dd>Schedule to be confirmed</dd>
+                  <dd>Tuesday, 8pm&ndash;10pm</dd>
                 </div>
                 <div>
                   <dt>Time zone</dt>
@@ -132,5 +133,12 @@
       defer
       src="{{ $nowPlayingJS.RelPermalink }}"
       integrity="{{ $nowPlayingJS.Data.Integrity }}"></script>
+  {{ end }}
+  {{ with resources.Get "js/listen-live-schedule.js" }}
+    {{ $scheduleJS := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+    <script
+      defer
+      src="{{ $scheduleJS.RelPermalink }}"
+      integrity="{{ $scheduleJS.Data.Integrity }}"></script>
   {{ end }}
 {{ end }}

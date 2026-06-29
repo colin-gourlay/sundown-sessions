@@ -140,6 +140,32 @@
   color: rgba(var(--color-neutral-200), 1);
 }
 
+.listen-live-broadcast-cue {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  max-width: 100%;
+  margin: 0.2rem 0 0;
+  color: var(--ss-color-muted);
+  font-size: 0.92rem;
+  font-weight: 780;
+  line-height: 1.45;
+}
+
+.listen-live-broadcast-cue[data-broadcast-state="live"] {
+  color: var(--listen-live-editorial-accent);
+}
+
+.listen-live-broadcast-cue__dot {
+  width: 0.52rem;
+  height: 0.52rem;
+  flex: 0 0 auto;
+  margin-right: 0.48rem;
+  border-radius: 999px;
+  background: var(--ss-color-live);
+  box-shadow: 0 0 0 0.16rem color-mix(in srgb, var(--ss-color-live) 18%, transparent);
+}
+
 .listen-live-intro .listen-live-strapline {
   margin: 0;
   color: var(--listen-live-editorial-accent);
@@ -384,6 +410,17 @@
   background: var(--ss-color-live);
   box-shadow: 0 0 0 0.18rem color-mix(in srgb, var(--ss-color-live) 24%, transparent);
   animation: listen-live-pulse 2.6s ease-out infinite;
+}
+
+.listen-live-status[data-broadcast-state="off-air"] {
+  border-color: color-mix(in srgb, var(--ss-color-border) 74%, transparent);
+  background: color-mix(in srgb, var(--ss-color-surface) 76%, transparent);
+}
+
+.listen-live-status[data-broadcast-state="off-air"] .listen-live-status__dot {
+  background: var(--ss-color-muted);
+  box-shadow: none;
+  animation: none;
 }
 
 .listen-live-status__microcopy {
