@@ -8,9 +8,7 @@ showTableOfContents: false
 sharingLinks: false
 ---
 
-Join Sundown Sessions live for alternative music after dark, exclusive first plays, artist interviews and carefully curated selections from across the independent music landscape.
-
-No two broadcasts are ever quite the same. Press play, settle in, and discover what is drifting through Sundown Sessions tonight.
+No two broadcasts are ever quite the same. Join Sundown Sessions live for carefully curated alternative music, exclusive first plays, artist interviews and unexpected discoveries. Press play, settle in and discover what&rsquo;s drifting through Sundown Sessions tonight.
 
 ## Broadcast Schedule
 
