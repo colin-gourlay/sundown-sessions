@@ -11,7 +11,6 @@
   var standfirst = document.querySelector("[data-live-standfirst]");
   var playerBadge = document.querySelector("[data-live-player-badge]");
   var playerBadgeLabel = document.querySelector("[data-live-player-badge-label]");
-  var playerBadgeNote = document.querySelector("[data-live-player-badge-note]");
 
   if (!status || !standfirst || !window.Intl || !window.Intl.DateTimeFormat) {
     return;
@@ -61,28 +60,26 @@
   }
 
   function setPlayerBadge(live) {
-    if (!playerBadge || !playerBadgeLabel || !playerBadgeNote) {
+    if (!playerBadge || !playerBadgeLabel) {
       return;
     }
 
     playerBadge.setAttribute("data-broadcast-state", live ? "live" : "off-air");
     playerBadge.setAttribute("aria-label", live ? "Live stream status: live now" : "Live stream status: station stream available");
-    playerBadgeLabel.textContent = live ? "LIVE NOW" : "Station Stream";
-    playerBadgeNote.textContent = live ? "Broadcasting live until 10pm" : "Live Tuesdays, 8pm\u201310pm UK time";
+    playerBadgeLabel.textContent = live ? "Live Now" : "Station Stream";
   }
 
   function render() {
     var live = isLiveNow();
-    var archiveUrl = standfirst.getAttribute("data-archive-url") || "/shows/";
 
     status.setAttribute("data-broadcast-state", live ? "live" : "off-air");
 
     if (live) {
       status.innerHTML = "<span class=\"listen-live-broadcast-cue__dot\" aria-hidden=\"true\"></span>On Air Now &mdash; Broadcasting live until 10pm.";
-      standfirst.textContent = "No two broadcasts are ever quite the same. Join Sundown Sessions live for carefully curated alternative music, exclusive first plays, artist interviews and unexpected discoveries. Press play, settle in and discover what's drifting through Sundown Sessions tonight.";
+      standfirst.textContent = "No two broadcasts are ever quite the same. Press play, settle in and discover what's drifting through Sundown Sessions tonight.";
     } else {
-      status.textContent = "Next live broadcast: Tuesday, 8pm\u201310pm (UK time).";
-      standfirst.innerHTML = "Sundown Sessions broadcasts live every Tuesday from 8pm to 10pm (UK time). Join us for carefully curated alternative music, exclusive first plays, artist interviews and unexpected discoveries. Between broadcasts, explore the <a href=\"" + archiveUrl + "\">archive</a> or enjoy the station stream.";
+      status.textContent = "Next live broadcast: Tuesday \u2022 8pm\u201310pm (UK)";
+      standfirst.textContent = "Every broadcast is carefully curated, blending new discoveries, exclusive first plays, artist interviews and music chosen for after-dark listening.";
     }
 
     setPlayerBadge(live);
