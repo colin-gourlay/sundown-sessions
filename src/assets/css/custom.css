@@ -273,8 +273,8 @@
   color: var(--ss-color-twilight);
 }
 
-.listen-live-now-playing__artwork img,
-.listen-live-now-playing__artwork span {
+.listen-live-now-playing__artwork > img,
+.listen-live-now-playing__artwork > span {
   grid-area: 1 / 1;
 }
 
@@ -289,53 +289,37 @@
   display: grid;
   width: 100%;
   height: 100%;
-  align-items: center;
+  align-content: center;
   justify-items: center;
-  padding: 14%;
+  gap: 0.85rem;
+  padding: 10%;
 }
 
-.listen-live-artwork-placeholder::before,
-.listen-live-artwork-placeholder::after {
-  content: "";
-  grid-area: 1 / 1;
-  border-radius: 999px;
+.listen-live-artwork-avatar {
+  display: block;
+  width: min(100%, 11.5rem);
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
+  border: 1px solid rgba(var(--color-primary-500), 0.34);
+  border-radius: 50%;
+  background: #f5f5f5; /* neutral-100 */
+  box-shadow: 0 12px 28px rgb(0 0 0 / 0.14);
 }
 
-.listen-live-artwork-placeholder::before {
-  width: 78%;
-  height: 78%;
-  border: 1px solid color-mix(in srgb, var(--ss-color-twilight) 34%, transparent);
+.dark .listen-live-artwork-avatar {
+  border-color: rgba(var(--color-primary-300), 0.34);
+  background: #171717; /* neutral-900 */
+  box-shadow: 0 14px 32px rgb(0 0 0 / 0.34);
 }
 
-.listen-live-artwork-placeholder::after {
-  width: 42%;
-  height: 42%;
-  border: 0.7rem solid color-mix(in srgb, var(--ss-color-sunset) 18%, transparent);
-  background: rgb(255 255 255 / 0.48);
+.listen-live-artwork-avatar img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
-.dark .listen-live-artwork-placeholder::before {
-  border-color: color-mix(in srgb, var(--ss-color-twilight) 34%, transparent);
-}
-
-.dark .listen-live-artwork-placeholder::after {
-  border-color: color-mix(in srgb, var(--ss-color-sunset) 18%, transparent);
-  background: rgb(0 0 0 / 0.18);
-}
-
-.listen-live-artwork-placeholder img {
-  grid-area: 1 / 1;
-  z-index: 1;
-  width: 52%;
-  height: auto;
-  max-height: 52%;
-  object-fit: contain;
-}
-
-.listen-live-artwork-placeholder span {
-  grid-area: 1 / 1;
-  align-self: end;
-  z-index: 1;
+.listen-live-artwork-badge {
   border-radius: 999px;
   background: rgb(255 255 255 / 0.78);
   padding: 0.22rem 0.6rem;
@@ -346,7 +330,7 @@
   text-transform: uppercase;
 }
 
-.dark .listen-live-artwork-placeholder span {
+.dark .listen-live-artwork-badge {
   background: rgb(23 23 23 / 0.72);
   color: #e5e5e5; /* neutral-200 */
 }
