@@ -140,11 +140,6 @@
     </header>
 
     <div class="show-card__meta">
-      {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
-        <span class="show-card__meta-item">
-          {{ partial "meta/date.html" .Date }}
-        </span>
-      {{ end }}
       {{ if gt $trackCount 0 }}
         <span class="show-card__meta-item">
           {{ $trackCount }} {{ if eq $trackCount 1 }}track{{ else }}tracks{{ end }}
