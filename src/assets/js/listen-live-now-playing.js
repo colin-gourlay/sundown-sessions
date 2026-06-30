@@ -2,7 +2,6 @@
   "use strict";
 
   var POLL_INTERVAL_MS = 45000;
-  var STREAM_TIMEOUT_MS = 10000;
   var FALLBACK_COPY = "Waiting for track information...";
 
   var root = document.querySelector("[data-now-playing]");
@@ -27,10 +26,6 @@
 
   var lastRendered = "";
   var transitionTimeoutId = null;
-
-  function getEndpoint(name) {
-    return root.getAttribute(name) || "";
-  }
 
   function clean(value) {
     return typeof value === "string" ? value.replace(/\s+/g, " ").trim() : "";
@@ -57,6 +52,17 @@
     return null;
   }
 
+  function firstUrl(values) {
+    for (var i = 0; i < values.length; i += 1) {
+      var value = clean(values[i]);
+      if (isUsefulUrl(value)) {
+        return value;
+      }
+    }
+
+    return "";
+  }
+
   function isUsefulUrl(value) {
     if (!value) {
       return false;
@@ -72,43 +78,41 @@
 
   function splitCombinedTitle(value) {
     var title = clean(value);
+    var separator = title.indexOf(" - ");
+
     if (!title) {
       return null;
     }
 
-    var separator = title.indexOf(" - ");
     if (separator === -1) {
       return {
         artist: "",
-        track: title,
-        album: "",
-        artwork: ""
+        track: title
       };
     }
 
     return {
       artist: clean(title.slice(0, separator)),
-      track: clean(title.slice(separator + 3)),
-      album: "",
-      artwork: ""
+      track: clean(title.slice(separator + 3))
     };
   }
 
   function normalizeMetadata(source) {
-    if (!source) {
+    if (!source || typeof source !== "object") {
       return null;
     }
 
-    var richNested = firstObject([
+    var nested = firstObject([
       source.now_playing,
       source.nowPlaying,
       source.current,
       source.currentTrack,
+      source.current_track,
       source.data
     ]);
 
-    if (richNested) {
-      var nestedMetadata = normalizeMetadata(richNested);
+    if (nested) {
+      var nestedMetadata = normalizeMetadata(nested);
       if (nestedMetadata) {
         return nestedMetadata;
       }
@@ -117,20 +121,54 @@
     var trackObject = firstObject([source.track, source.song]);
     var combinedTitle = firstClean([
       source.nowplaying,
+      source.nowPlaying,
+      source.currently_playing,
+      source.currentlyPlaying,
       source.now_playing,
       source.title,
+      source.track,
+      source.song,
       source.songtitle,
       source.currentSong,
       source.text
     ]);
+
     var metadata = {
-      artist: firstClean([source.artist, source.artistName, source.artist_name, trackObject && trackObject.artist, trackObject && trackObject.artistName]),
-      track: firstClean([source.track, source.trackTitle, source.track_title, source.title, source.song, source.name, trackObject && trackObject.track, trackObject && trackObject.title, trackObject && trackObject.name]),
-      album: firstClean([source.album, source.albumTitle, source.album_title, trackObject && trackObject.album, trackObject && trackObject.albumTitle]),
-      artwork: firstClean([
+      artist: firstClean([
+        source.artist,
+        source.artistName,
+        source.artist_name,
+        trackObject && trackObject.artist,
+        trackObject && trackObject.artistName,
+        trackObject && trackObject.artist_name
+      ]),
+      track: firstClean([
+        source.trackTitle,
+        source.track_title,
+        source.title,
+        source.name,
+        trackObject && trackObject.track,
+        trackObject && trackObject.trackTitle,
+        trackObject && trackObject.track_title,
+        trackObject && trackObject.title,
+        trackObject && trackObject.name
+      ]),
+      album: firstClean([
+        source.album,
+        source.albumTitle,
+        source.album_title,
+        trackObject && trackObject.album,
+        trackObject && trackObject.albumTitle,
+        trackObject && trackObject.album_title
+      ]),
+      artwork: firstUrl([
+        source.coverart,
+        source.coverArt,
+        source.cover_art,
         source.artwork,
         source.artworkUrl,
         source.artwork_url,
+        source.art,
         source.albumArt,
         source.album_art,
         source.cover,
@@ -139,6 +177,7 @@
         source.image,
         source.imageUrl,
         source.image_url,
+        trackObject && trackObject.coverart,
         trackObject && trackObject.artwork,
         trackObject && trackObject.artworkUrl,
         trackObject && trackObject.albumArt,
@@ -155,36 +194,11 @@
       }
     }
 
-    if (!metadata.track && combinedTitle) {
-      metadata.track = combinedTitle;
-    }
-
     if (!metadata.artist && !metadata.track && !metadata.album && !metadata.artwork) {
       return null;
     }
 
-    if (!isUsefulUrl(metadata.artwork)) {
-      metadata.artwork = "";
-    }
-
     return metadata;
-  }
-
-  function parseShoutcastSevenHtml(html) {
-    var text = clean(html.replace(/<[^>]+>/g, " "));
-    var fields = text.split(",");
-    if (fields.length < 7) {
-      return null;
-    }
-
-    return normalizeMetadata({
-      title: fields.slice(6).join(",")
-    });
-  }
-
-  function parseIcyStreamTitle(value) {
-    var match = value.match(/StreamTitle='([^']*)'/i);
-    return match ? normalizeMetadata({ title: match[1] }) : null;
   }
 
   function setText(node, value) {
@@ -228,6 +242,7 @@
     if (lastRendered === "fallback") {
       return;
     }
+
     lastRendered = "fallback";
     markTransition();
 
@@ -249,9 +264,6 @@
     if (elements.placeholder) {
       elements.placeholder.hidden = false;
     }
-    if (elements.artworkWrap) {
-      elements.artworkWrap.removeAttribute("aria-hidden");
-    }
   }
 
   function renderMetadata(metadata) {
@@ -259,6 +271,7 @@
     if (nextKey === lastRendered) {
       return;
     }
+
     lastRendered = nextKey;
     markTransition();
 
@@ -283,9 +296,6 @@
       if (elements.placeholder) {
         elements.placeholder.hidden = true;
       }
-      if (elements.artworkWrap) {
-        elements.artworkWrap.removeAttribute("aria-hidden");
-      }
     } else {
       if (elements.artwork) {
         elements.artwork.hidden = true;
@@ -294,9 +304,6 @@
       }
       if (elements.placeholder) {
         elements.placeholder.hidden = false;
-      }
-      if (elements.artworkWrap) {
-        elements.artworkWrap.removeAttribute("aria-hidden");
       }
     }
   }
@@ -307,140 +314,36 @@
     }
   }
 
-  function fetchJsonEndpoint(url) {
-    if (!url) {
-      return Promise.resolve(null);
+  function refresh() {
+    var endpoint = root.getAttribute("data-now-playing-json");
+    if (!endpoint) {
+      renderFallback();
+      return;
     }
 
-    // NuCast currently exposes useful JSON here, but does not send CORS headers.
-    // Static hosting cannot proxy it, so production browsers may reject this request.
-    return fetch(url, { cache: "no-store", mode: "cors" })
+    // The NuCast endpoint returns the required fields as JSON. If a deployed
+    // browser is denied by CORS, static hosting cannot safely work around it;
+    // keep the existing fallback and use a future station API/proxy if needed.
+    fetch(endpoint, { cache: "no-store", mode: "cors" })
       .then(function (response) {
         if (!response.ok) {
           throw new Error("Metadata JSON returned " + response.status);
         }
+
         return response.json();
       })
-      .then(normalizeMetadata);
-  }
-
-  function fetchShoutcastEndpoint(url) {
-    if (!url) {
-      return Promise.resolve(null);
-    }
-
-    // Shoutcast /7.html returns a comma-delimited title, but it may also be
-    // blocked by CORS when requested from GitHub Pages.
-    return fetch(url, { cache: "no-store", mode: "cors" })
-      .then(function (response) {
-        if (!response.ok) {
-          throw new Error("Shoutcast metadata returned " + response.status);
+      .then(normalizeMetadata)
+      .then(function (metadata) {
+        if (metadata && (metadata.artist || metadata.track || metadata.album)) {
+          renderMetadata(metadata);
+        } else {
+          renderFallback();
         }
-        return response.text();
       })
-      .then(parseShoutcastSevenHtml);
-  }
-
-  function fetchIcyStreamMetadata(url) {
-    if (!url || !window.ReadableStream || !window.TextDecoder) {
-      return Promise.resolve(null);
-    }
-
-    var controller = new AbortController();
-    var timeoutId = window.setTimeout(function () {
-      controller.abort();
-    }, STREAM_TIMEOUT_MS);
-
-    // This stream does send CORS headers, but reading ICY metadata needs the
-    // Icy-MetaData request header. Some browsers or servers will reject the
-    // resulting preflight, so this remains a best-effort fallback.
-    return fetch(url, {
-      cache: "no-store",
-      headers: {
-        "Icy-MetaData": "1"
-      },
-      mode: "cors",
-      signal: controller.signal
-    })
-      .then(function (response) {
-        var metaint = parseInt(response.headers.get("icy-metaint"), 10);
-        if (!response.ok || !response.body || !metaint) {
-          throw new Error("ICY stream metadata is not readable");
-        }
-
-        var reader = response.body.getReader();
-        var decoder = new TextDecoder("utf-8");
-        var bytesSeen = 0;
-        var metadataLength = null;
-        var metadataBytes = [];
-
-        function readChunk() {
-          return reader.read().then(function (result) {
-            if (result.done) {
-              return null;
-            }
-
-            for (var i = 0; i < result.value.length; i += 1) {
-              var byte = result.value[i];
-              if (bytesSeen < metaint) {
-                bytesSeen += 1;
-                continue;
-              }
-
-              if (metadataLength === null) {
-                metadataLength = byte * 16;
-                if (metadataLength === 0) {
-                  controller.abort();
-                  return null;
-                }
-                continue;
-              }
-
-              metadataBytes.push(byte);
-              if (metadataBytes.length >= metadataLength) {
-                controller.abort();
-                return parseIcyStreamTitle(decoder.decode(new Uint8Array(metadataBytes)));
-              }
-            }
-
-            return readChunk();
-          });
-        }
-
-        return readChunk();
-      })
-      .finally(function () {
-        window.clearTimeout(timeoutId);
-      });
-  }
-
-  function firstSuccessful(tasks) {
-    return tasks.reduce(function (promise, task) {
-      return promise.then(function (metadata) {
-        if (metadata) {
-          return metadata;
-        }
-
-        return task().catch(function (error) {
-          logQuietly(error);
-          return null;
-        });
-      });
-    }, Promise.resolve(null));
-  }
-
-  function refresh() {
-    return firstSuccessful([
-      function () { return fetchJsonEndpoint(getEndpoint("data-now-playing-public-json")); },
-      function () { return fetchShoutcastEndpoint(getEndpoint("data-now-playing-shoutcast")); },
-      function () { return fetchIcyStreamMetadata(getEndpoint("data-now-playing-stream")); }
-    ]).then(function (metadata) {
-      if (metadata) {
-        renderMetadata(metadata);
-      } else {
+      .catch(function (error) {
+        logQuietly(error);
         renderFallback();
-      }
-    });
+      });
   }
 
   renderFallback();
