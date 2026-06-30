@@ -51,12 +51,13 @@
 {{ $showTitle := .Title | emojify }}
 {{ $titleParts := split .Title ": " }}
 {{ if gt (len $titleParts) 1 }}
-  {{ $showLabel = index $titleParts 0 }}
-  {{ $showTitle = strings.TrimPrefix (printf "%s: " $showLabel) .Title | emojify }}
+  {{ $rawShowLabel := index $titleParts 0 }}
+  {{ $showLabel = $rawShowLabel }}
+  {{ $showLabel = replaceRE `(?i)^show\s*#` "Broadcast #" $showLabel }}
+  {{ $showTitle = strings.TrimPrefix (printf "%s: " $rawShowLabel) .Title | emojify }}
 {{ end }}
 
 {{ $featuredArtistCount := len .Params.tags }}
-{{ $durationStr := printf "%02d:00" .ReadingTime }}
 {{ $trackCount := 0 }}
 {{ with $page.File }}
   {{ $showDir := path.Dir (replace .Path "\\" "/") }}
@@ -68,6 +69,37 @@
   {{ else if fileExists $playlistPath }}
     {{ $playlistRows := findRE `(?m)^\d+\.\s+` (readFile $playlistPath) }}
     {{ $trackCount = len $playlistRows }}
+  {{ end }}
+{{ end }}
+
+{{ $summaryArtists := slice }}
+{{ with .Params.summary }}
+  {{ range findRE `(?m)^\s*-\s+(.+?)\s*$` . }}
+    {{ $artist := replaceRE `^\s*-\s+` "" . | strings.TrimSpace }}
+    {{ if and $artist (not (in (lower $artist) "and much")) }}
+      {{ $summaryArtists = $summaryArtists | append $artist }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $artistSource := $summaryArtists }}
+{{ if eq (len $artistSource) 0 }}
+  {{ $artistSource = .Params.tags }}
+{{ end }}
+{{ $displayArtists := first 5 $artistSource }}
+{{ $hasMoreArtists := gt $featuredArtistCount (len $displayArtists) }}
+{{ if and (eq $featuredArtistCount 0) (gt (len $artistSource) (len $displayArtists)) }}
+  {{ $hasMoreArtists = true }}
+{{ end }}
+{{ $discoverySummary := "" }}
+{{ if gt (len $displayArtists) 0 }}
+  {{ $artistList := delimit $displayArtists ", " }}
+  {{ if $hasMoreArtists }}
+    {{ $artistList = printf "%s, and more" $artistList }}
+  {{ end }}
+  {{ $discoverySummary = printf "Featuring %s." $artistList }}
+{{ else }}
+  {{ with .Summary }}
+    {{ $discoverySummary = . | plainify | truncate 150 }}
   {{ end }}
 {{ end }}
 
@@ -110,44 +142,25 @@
     <div class="show-card__meta">
       {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
         <span class="show-card__meta-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-            class="show-card__meta-icon" aria-hidden="true">
-            <path fill-rule="evenodd" d="M5.75 2a.75.75 0 0 1 .75.75V4h7V2.75a.75.75 0 0 1 1.5 0V4h.25A2.75 2.75 0 0 1 18 6.75v8.5A2.75 2.75 0 0 1 15.25 18H4.75A2.75 2.75 0 0 1 2 15.25v-8.5A2.75 2.75 0 0 1 4.75 4H5V2.75A.75.75 0 0 1 5.75 2Zm-1 5.5c-.69 0-1.25.56-1.25 1.25v6.5c0 .69.56 1.25 1.25 1.25h10.5c.69 0 1.25-.56 1.25-1.25v-6.5c0-.69-.56-1.25-1.25-1.25H4.75Z" clip-rule="evenodd"/>
-          </svg>
           {{ partial "meta/date.html" .Date }}
-        </span>
-      {{ end }}
-      {{ if and (.Params.showReadingTime | default (.Site.Params.article.showReadingTime | default true)) (ne .ReadingTime 0) }}
-        <span class="show-card__meta-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-            class="show-card__meta-icon" aria-hidden="true">
-            <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd"/>
-          </svg>
-          {{ $durationStr }}
         </span>
       {{ end }}
       {{ if gt $trackCount 0 }}
         <span class="show-card__meta-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-            class="show-card__meta-icon" aria-hidden="true">
-            <path fill-rule="evenodd" d="M4.5 3A1.5 1.5 0 0 0 3 4.5v11A1.5 1.5 0 0 0 4.5 17h11a1.5 1.5 0 0 0 1.5-1.5v-11A1.5 1.5 0 0 0 15.5 3h-11Zm2.25 3.5a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h6.5a.75.75 0 0 0 0-1.5h-6.5Zm0 3a.75.75 0 0 0 0 1.5h4.5a.75.75 0 0 0 0-1.5h-4.5Z" clip-rule="evenodd"/>
-          </svg>
           {{ $trackCount }} {{ if eq $trackCount 1 }}track{{ else }}tracks{{ end }}
         </span>
       {{ end }}
       {{ if gt $featuredArtistCount 0 }}
         <span class="show-card__meta-item">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
-            class="show-card__meta-icon" aria-hidden="true">
-            <path d="M10 8a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM3.465 14.493a1.23 1.23 0 0 0 .41 1.412A9.96 9.96 0 0 0 10 18c2.31 0 4.438-.784 6.131-2.1.43-.333.604-.903.408-1.41A7.002 7.002 0 0 0 3.465 14.493Z"/>
-          </svg>
           {{ $featuredArtistCount }} featured {{ if eq $featuredArtistCount 1 }}artist{{ else }}artists{{ end }}
         </span>
       {{ end }}
     </div>
 
-    {{ with .Summary }}
-      <p class="show-card__summary">{{ . | plainify }}</p>
+    {{ with $discoverySummary }}
+      <p class="show-card__summary">{{ . }}</p>
     {{ end }}
+
+    <a href="{{ $page.RelPermalink }}" class="show-card__cta">View broadcast &rarr;</a>
   </div>
 </article>
