@@ -2577,6 +2577,10 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   height: clamp(20rem, 46vw, 28rem);
 }
 
+.about-page > .space-y-6 {
+  margin-bottom: 1.25rem;
+}
+
 .about-kicker {
   margin: 0 0 0.7rem;
   color: rgba(var(--color-primary-600), 1);
@@ -2596,7 +2600,8 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 .about-section--opening {
   max-width: 54rem;
-  padding-top: clamp(0.25rem, 1vw, 0.75rem);
+  margin-top: clamp(-2rem, -5vw, -1rem);
+  padding-top: 0;
 }
 
 .about-section--closing {
