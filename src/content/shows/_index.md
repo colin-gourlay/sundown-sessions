@@ -10,6 +10,4 @@ menu:
     weight: 1
 ---
 
-Every Sundown Sessions broadcast is a trail through the record shelves: new discoveries, overlooked favourites, guest moments, local voices, and songs that deserve another listen after the show has finished.
-
-Use the archive to revisit previous broadcasts, follow the artists that shaped each playlist, and find your way into related tracks and releases across the site.
+Every Sundown Sessions broadcast is a trail through the world of alternative music. Browse complete playlists, discover the artists and releases behind every track, and follow the connections wherever they lead.
