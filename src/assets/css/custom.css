@@ -2999,4 +2999,8 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   .about-feature-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+
+  .about-statement-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
 }

@@ -1,7 +1,7 @@
 ---
 title: 'About Sundown Sessions'
-strapline: 'An independent home for alternative music after dark.'
-description: 'Sundown Sessions is an independent home for alternative music after dark, featuring curated broadcasts, track listings, artist discovery, releases and Listen Again links.'
+strapline: 'Curated alternative music broadcasts, playlists and artist discovery after dark.'
+description: 'Sundown Sessions is an independent alternative music discovery project, sharing curated broadcasts, playlists, featured artists, releases and Listen Again links.'
 featured_image: 'about-sundown-sessions.png'
 menu:
   main:
