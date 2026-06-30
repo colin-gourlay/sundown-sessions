@@ -273,8 +273,8 @@
 }
 
 .listen-live-now-playing h2 {
-  font-size: clamp(1.6rem, 4vw, 2.25rem);
-  line-height: 1.08;
+  font-size: clamp(1.08rem, 1.8vw, 1.28rem);
+  line-height: 1.2;
 }
 
 .dark .listen-live-now-playing h2,
@@ -318,7 +318,7 @@
 }
 
 .listen-live-player {
-  margin: 0.25rem 0 0;
+  margin: 0.1rem 0 0;
 }
 
 .listen-live-player audio {
@@ -328,13 +328,13 @@
 
 .listen-live-player-shell {
   display: grid;
-  gap: clamp(1.15rem, 3vw, 2.15rem);
+  gap: clamp(1.25rem, 3.5vw, 2.5rem);
   align-items: start;
 }
 
 .listen-live-player-shell__main {
   display: grid;
-  gap: 1.2rem;
+  gap: 0.9rem;
   min-width: 0;
 }
 
@@ -343,6 +343,7 @@
   width: min(100%, 17.5rem);
   aspect-ratio: 1 / 1;
   align-items: center;
+  justify-self: center;
   justify-items: center;
   overflow: hidden;
   border: 1px solid var(--ss-color-border);
@@ -470,46 +471,45 @@
 }
 
 .listen-live-player__note {
-  font-size: 0.95rem;
+  font-size: 0.92rem;
 }
 
 .listen-live-now-playing {
   display: grid;
-  gap: 0.6rem;
+  gap: 0.75rem;
 }
 
 .listen-live-now-playing__body {
   display: grid;
-  gap: 0.65rem;
+  gap: 0.7rem;
   transition: opacity 0.22s ease;
 }
 
 .listen-live-now-playing__details {
   display: grid;
-  gap: 0.45rem;
+  gap: 0.35rem;
   margin: 0;
 }
 
 .listen-live-now-playing__detail {
   display: grid;
-  gap: 0.15rem;
+  gap: 0;
   min-width: 0;
 }
 
 .listen-live-now-playing__details dt {
-  color: #737373; /* neutral-500 */
-  font-size: 0.72rem;
-  font-weight: 800;
-  line-height: 1.35;
-  text-transform: uppercase;
-}
-
-.dark .listen-live-now-playing__details dt {
-  color: #a3a3a3; /* neutral-400 */
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
 }
 
 .listen-live-now-playing__details dd {
   min-width: 0;
+  margin: 0;
   overflow-wrap: anywhere;
   color: #262626; /* neutral-800 */
   font-size: 1.08rem;
@@ -519,19 +519,21 @@
 
 .listen-live-now-playing__detail--artist dd {
   color: var(--ss-color-midnight);
-  font-size: clamp(1.5rem, 3.6vw, 2.35rem);
+  font-size: clamp(1.65rem, 3.8vw, 2.45rem);
   font-weight: 850;
-  line-height: 1.05;
+  line-height: 1.04;
 }
 
 .listen-live-now-playing__detail--track dd {
-  font-size: clamp(1.08rem, 2vw, 1.32rem);
+  font-size: clamp(1.12rem, 2.2vw, 1.42rem);
+  line-height: 1.25;
 }
 
 .listen-live-now-playing__detail--album dd {
   color: var(--ss-color-muted);
-  font-size: 0.98rem;
+  font-size: clamp(0.96rem, 1.4vw, 1.05rem);
   font-weight: 650;
+  line-height: 1.38;
 }
 
 .dark .listen-live-now-playing__details dd {
@@ -675,7 +677,7 @@
 
 @media (min-width: 700px) {
   .listen-live-player-shell {
-    grid-template-columns: minmax(14rem, 0.44fr) minmax(0, 1fr);
+    grid-template-columns: minmax(16.5rem, 17.5rem) minmax(0, 1fr);
     align-items: center;
   }
 

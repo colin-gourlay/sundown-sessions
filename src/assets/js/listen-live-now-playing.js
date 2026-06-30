@@ -213,7 +213,7 @@
     }
 
     row.hidden = !value;
-    setText(node, value);
+    setText(node, value || "");
   }
 
   function markTransition() {
@@ -256,6 +256,9 @@
     if (elements.details) {
       elements.details.hidden = true;
     }
+    setRow(elements.artistRow, elements.artist, "");
+    setRow(elements.trackRow, elements.track, "");
+    setRow(elements.albumRow, elements.album, "");
     if (elements.artwork) {
       elements.artwork.hidden = true;
       elements.artwork.removeAttribute("src");
