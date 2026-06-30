@@ -2573,6 +2573,10 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   margin-bottom: 5rem;
 }
 
+.about-page > .space-y-6 img {
+  height: clamp(20rem, 46vw, 28rem);
+}
+
 .about-kicker {
   margin: 0 0 0.7rem;
   color: rgba(var(--color-primary-600), 1);
@@ -2621,7 +2625,7 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 .about-prose {
   max-width: 48rem;
   color: #404040; /* neutral-700 */
-  font-size: 1.05rem;
+  font-size: 1.1rem;
   line-height: 1.8;
 }
 
@@ -2732,19 +2736,14 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 .about-presenter {
   display: grid;
-  gap: 1.25rem;
+  gap: clamp(1.5rem, 4vw, 2.75rem);
   max-width: 54rem;
   align-items: center;
-  border: 1px solid #e5e5e5; /* neutral-200 */
-  border-radius: 0.5rem;
-  background: rgb(255 255 255 / 0.74);
-  padding: 1rem;
-  box-shadow: 0 1px 2px rgb(0 0 0 / 0.05);
+  padding-top: 0.35rem;
 }
 
-.dark .about-presenter {
-  border-color: #404040; /* neutral-700 */
-  background: rgb(23 23 23 / 0.72);
+.about-presenter div {
+  max-width: 39rem;
 }
 
 .about-presenter img {
@@ -2753,11 +2752,13 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   aspect-ratio: 4 / 3;
   border-radius: 0.4rem;
   object-fit: cover;
+  box-shadow: 0 1rem 2rem rgb(0 0 0 / 0.08);
 }
 
 .about-presenter p {
   color: #525252; /* neutral-600 */
-  line-height: 1.7;
+  font-size: 1.1rem;
+  line-height: 1.75;
 }
 
 .dark .about-presenter p {
@@ -2770,7 +2771,6 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   }
 
   .about-presenter {
-    grid-template-columns: minmax(12rem, 0.75fr) minmax(0, 1.25fr);
-    padding: 1.25rem;
+    grid-template-columns: minmax(13rem, 0.65fr) minmax(0, 1.35fr);
   }
 }
