@@ -1,18 +1,61 @@
 {{ define "main" }}
   {{ .Scratch.Set "scope" "list" }}
 
-  {{/* Hero Banner */}}
   {{ partial "section-hero.html" . }}
 
-  {{/* Shows listing — horizontal show cards in a vertical stack */}}
   {{ $datedPages := where .Pages ".Date.IsZero" "ne" true }}
+  {{ $sortedPages := sort $datedPages "Date" "desc" }}
+  {{ $showCount := len $datedPages }}
+  {{ $latestShow := index $sortedPages 0 }}
+
+  {{ with .Content }}
+    <section class="shows-archive-intro" aria-labelledby="shows-archive-intro-heading">
+      <div class="shows-archive-intro__copy">
+        <p class="shows-archive-kicker">The archive</p>
+        <h2 id="shows-archive-intro-heading">Start with a broadcast, then follow the music wherever it leads.</h2>
+        <div class="shows-archive-prose">
+          {{ . }}
+        </div>
+      </div>
+      <aside class="shows-archive-panel" aria-label="Shows archive highlights">
+        <dl class="shows-archive-stats">
+          <div>
+            <dt>Published broadcasts</dt>
+            <dd>{{ $showCount }}</dd>
+          </div>
+          <div>
+            <dt>Latest show</dt>
+            <dd>
+              {{ with $latestShow }}
+                <a href="{{ .RelPermalink }}">{{ partial "release/show-card-title.html" . }}</a>
+              {{ else }}
+                Coming soon
+              {{ end }}
+            </dd>
+          </div>
+        </dl>
+        <div class="shows-archive-actions">
+          {{ with $latestShow }}
+            <a class="shows-archive-button shows-archive-button--primary" href="{{ .RelPermalink }}">Latest Broadcast</a>
+          {{ end }}
+          <a class="shows-archive-button shows-archive-button--secondary" href="{{ "/listen-live/" | relURL }}">Listen Live</a>
+        </div>
+      </aside>
+    </section>
+  {{ end }}
+
   {{ if $datedPages }}
+    <div class="shows-archive-list-heading">
+      <p class="shows-archive-kicker">Browse previous shows</p>
+      <h2>All Broadcasts</h2>
+    </div>
+
     {{ $orderByWeight := .Params.orderByWeight | default (site.Params.list.orderByWeight | default false) }}
     {{ $groupByYear := .Params.groupByYear | default (site.Params.list.groupByYear | default false) }}
     {{ $groupByYear = and (not $orderByWeight) $groupByYear }}
 
     {{ if $groupByYear }}
-      {{ range (.Paginate ($datedPages.GroupByDate "2006")).PageGroups }}
+      {{ range (.Paginate ($sortedPages.GroupByDate "2006")).PageGroups }}
         <h2 class="mt-12 mb-3 text-2xl font-bold text-neutral-700 first:mt-8 dark:text-neutral-300">
           {{ .Key }}
         </h2>
@@ -25,7 +68,7 @@
     {{ else }}
       <section class="flex flex-col gap-4 w-full">
         {{ if not $orderByWeight }}
-          {{ range (.Paginate ($datedPages.GroupByDate "2006")).PageGroups }}
+          {{ range (.Paginate ($sortedPages.GroupByDate "2006")).PageGroups }}
             {{ range .Pages }}
               {{ partial "article-link/show-card.html" . }}
             {{ end }}

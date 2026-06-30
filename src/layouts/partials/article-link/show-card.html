@@ -2,7 +2,7 @@
 {{ $page := .Page }}
 {{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
 
-{{/* Image resolution — mirrors the logic in card.html */}}
+{{/* Image resolution mirrors the logic in card.html */}}
 {{ $featured := "" }}
 {{ $featuredURL := "" }}
 {{ if not .Params.hideFeatureImage }}
@@ -55,8 +55,7 @@
   {{ $showTitle = strings.TrimPrefix (printf "%s: " $showLabel) .Title | emojify }}
 {{ end }}
 
-{{/* Derived values */}}
-{{ $trackCount := len .Params.tags }}
+{{ $featuredArtistCount := len .Params.tags }}
 {{ $durationStr := printf "%02d:00" .ReadingTime }}
 {{ $tags := .Params.tags }}
 {{ $maxVisibleTags := 4 }}
@@ -64,12 +63,11 @@
 {{ $overflowCount := sub (len $tags) $maxVisibleTags }}
 
 <article
-  class="article-link--show-card group relative flex flex-row items-start overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
+  class="article-link--show-card group relative flex flex-col items-stretch overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80 sm:flex-row sm:items-start">
 
-  {{/* Album art — fixed 192×192 (30% of 640×640 original), aspect ratio preserved */}}
   <a
     href="{{ $page.RelPermalink }}"
-    class="not-prose block flex-none shrink-0 overflow-hidden bg-neutral-100 dark:bg-neutral-800 w-80 h-80"
+    class="not-prose block h-48 w-full flex-none shrink-0 overflow-hidden bg-neutral-100 dark:bg-neutral-800 sm:h-80 sm:w-80"
     tabindex="-1"
     aria-hidden="true">
     {{ with $featuredURL }}
@@ -85,10 +83,7 @@
     {{ end }}
   </a>
 
-  {{/* Main content */}}
-  <div class="flex flex-1 flex-col gap-1.5 p-4 sm:p-5 min-w-0">
-
-    {{/* Show label with play icon */}}
+  <div class="flex min-w-0 flex-1 flex-col gap-1.5 p-4 sm:p-5">
     {{ if $showLabel }}
       <div class="flex items-center gap-1.5 text-sm font-semibold text-primary-600 dark:text-primary-400">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
@@ -99,7 +94,6 @@
       </div>
     {{ end }}
 
-    {{/* Broadcast title */}}
     <header>
       <a
         href="{{ $page.RelPermalink }}"
@@ -108,7 +102,6 @@
       </a>
     </header>
 
-    {{/* Metadata row: date · reading time · track count */}}
     <div class="flex flex-row flex-wrap items-center text-sm text-neutral-500 dark:text-neutral-400">
       {{ if .Params.showDate | default (.Site.Params.article.showDate | default true) }}
         <span class="flex items-center gap-1">
@@ -126,23 +119,21 @@
             class="h-3.5 w-3.5 flex-none opacity-70" aria-hidden="true">
             <path fill-rule="evenodd" d="M10 18a8 8 0 1 0 0-16 8 8 0 0 0 0 16Zm.75-13a.75.75 0 0 0-1.5 0v5c0 .414.336.75.75.75h4a.75.75 0 0 0 0-1.5h-3.25V5Z" clip-rule="evenodd"/>
           </svg>
-          {{ partial "meta/reading-time.html" . }}
+          Show notes
         </span>
       {{ end }}
-      {{ if gt $trackCount 0 }}
+      {{ if gt $featuredArtistCount 0 }}
         <span class="px-2 text-primary-500">&middot;</span>
-        <span>{{ $trackCount }} {{ if eq $trackCount 1 }}track{{ else }}tracks{{ end }}</span>
+        <span>{{ $featuredArtistCount }} featured {{ if eq $featuredArtistCount 1 }}artist{{ else }}artists{{ end }}</span>
       {{ end }}
     </div>
 
-    {{/* Summary text */}}
     {{ with .Summary }}
       <p class="line-clamp-2 text-sm text-neutral-600 dark:text-neutral-300">{{ . | plainify }}</p>
     {{ end }}
 
-    {{/* Artist tags: first four visible, remainder shown as +N */}}
     {{ if $tags }}
-      <div class="flex flex-wrap items-center gap-1.5 mt-0.5">
+      <div class="mt-0.5 flex flex-wrap items-center gap-1.5">
         {{ range $visibleTags }}
           <span class="rounded-full border border-primary-400 px-2.5 py-0.5 text-xs text-primary-700 dark:border-primary-600 dark:text-primary-400">{{ . }}</span>
         {{ end }}
@@ -151,11 +142,9 @@
         {{ end }}
       </div>
     {{ end }}
-
   </div>
 
-  {{/* Right panel: play button + duration */}}
-  <div class="hidden sm:flex flex-none flex-col items-center justify-center gap-2 px-5 border-l border-neutral-200 dark:border-neutral-700">
+  <div class="hidden flex-none flex-col items-center justify-center gap-2 border-l border-neutral-200 px-5 dark:border-neutral-700 sm:flex">
     <a
       href="{{ $page.RelPermalink }}"
       aria-label="Go to {{ $showLabel | default .Title }}"
@@ -165,7 +154,6 @@
         <path d="M6.3 2.84A1.5 1.5 0 0 0 4 4.11v11.78a1.5 1.5 0 0 0 2.3 1.27l9.344-5.891a1.5 1.5 0 0 0 0-2.538L6.3 2.84Z"/>
       </svg>
     </a>
-    <span class="text-xs font-mono text-neutral-500 dark:text-neutral-400">{{ $durationStr }}</span>
+    <span class="font-mono text-xs text-neutral-500 dark:text-neutral-400">{{ $durationStr }}</span>
   </div>
-
 </article>
