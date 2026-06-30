@@ -1,7 +1,7 @@
 ---
-title: 'About'
-strapline: 'The story behind Sundown Sessions.'
-description: 'Sundown Sessions is an adventurous music show and archive from Haddington, East Lothian, Scotland, built around discovery, passionate presenters, and songs worth sharing.'
+title: 'About Sundown Sessions'
+strapline: 'An independent home for alternative music after dark.'
+description: 'Sundown Sessions is an independent home for alternative music after dark, featuring curated broadcasts, track listings, artist discovery, releases and Listen Again links.'
 featured_image: 'about-sundown-sessions.png'
 menu:
   main:
