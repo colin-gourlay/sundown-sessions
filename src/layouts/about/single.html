@@ -27,15 +27,20 @@
     <section class="about-section about-section--intro" aria-labelledby="about-identity-heading">
       <div class="about-section__header">
         <p class="about-kicker">After dark</p>
-        <h2 id="about-identity-heading">An independent home for alternative music after dark.</h2>
+        <h2 id="about-identity-heading">A human route through alternative music.</h2>
       </div>
       <div class="about-prose">
         <p>
-          Sundown Sessions is built around discovery: new releases, overlooked artists, forgotten favourites, deep cuts, and records that deserve a little more attention.
+          Sundown Sessions is an independent music discovery project built around curated broadcasts, playlists, artist stories, and records worth spending time with.
         </p>
         <p>
-          If you have ever stayed up far too late chasing one more song, one more recommendation, or one more unexpected musical rabbit hole, you will probably feel at home here.
+          The focus is alternative music in the broadest, most curious sense: emerging artists, established names, overlooked records, deep cuts, and the songs that make you follow a thread further than you meant to.
         </p>
+        <div class="about-actions">
+          <a class="about-button about-button--primary" href="{{ "/shows/" | relURL }}">Browse Shows</a>
+          <a class="about-button about-button--secondary" href="{{ "/listen-live/" | relURL }}">Listen Live</a>
+          <a class="about-button about-button--text" href="{{ "/artists/" | relURL }}">Discover Artists</a>
+        </div>
       </div>
     </section>
 
@@ -46,10 +51,10 @@
       </div>
       <div class="about-prose">
         <p>
-          Sundown has always felt like the moment when music has a bit more room to breathe. The day slows down, distractions fade, and a song can draw you further in.
+          Sundown has always felt like the moment when music gets more room to breathe. The day slows down, the noise drops away, and a song can pull you somewhere unexpected.
         </p>
         <p>
-          That is the mood behind Sundown Sessions: broadcasts and playlists shaped for curious listeners, late-night discoveries, and songs that linger long after they finish.
+          That is the mood behind the broadcasts: music chosen for curious listeners, late-night discoveries, and the kind of tracks that stay with you after they finish.
         </p>
       </div>
     </section>
@@ -62,7 +67,7 @@
       <div class="about-feature-grid">
         <section class="about-feature" aria-labelledby="about-broadcasts-heading">
           <h3 id="about-broadcasts-heading">Curated Broadcasts</h3>
-          <p>Shows built around discovery rather than habit, with new music, older favourites, and the occasional beautiful surprise.</p>
+          <p>Shows built around discovery rather than habit, with new music, older favourites, interviews, exclusive tracks, and the occasional beautiful surprise.</p>
         </section>
         <section class="about-feature" aria-labelledby="about-archive-heading">
           <h3 id="about-archive-heading">Track Listings</h3>
@@ -70,7 +75,7 @@
         </section>
         <section class="about-feature" aria-labelledby="about-explore-heading">
           <h3 id="about-explore-heading">Deeper Exploration</h3>
-          <p>Artist and release pages for independent acts, emerging names, overlooked records, forgotten classics, and deep cuts.</p>
+          <p>Artist and release pages that connect broadcasts to independent acts, emerging names, overlooked records, forgotten classics, and deep cuts.</p>
         </section>
       </div>
     </section>
@@ -82,13 +87,13 @@
       </div>
       <div class="about-prose">
         <p>
-          Music comes from everywhere: labels, promoters, artists, listeners, Bandcamp, record shops, live shows, old favourites, new obsessions, and the occasional happy accident.
+          Music comes from everywhere: artists, labels, promoters, listeners, Bandcamp, record shops, live shows, old favourites, new obsessions, and the occasional happy accident.
         </p>
         <p>
           Some songs arrive with a press release. Some are found by following a thread from one artist to another. Some simply refuse to leave the room.
         </p>
         <p>
-          That is the heart of Sundown Sessions: human curation, proper listening, and the belief that discovery should still feel exciting.
+          That is where Sundown Sessions differs from an algorithmic feed or a generic playlist. It is one person listening closely, joining the dots, and sharing the music that feels worth passing on.
         </p>
       </div>
     </section>
@@ -110,10 +115,10 @@
           <h3>Colin Gourlay</h3>
           <p class="about-presenter__role">Presenter and curator, Sundown Sessions</p>
           <p>
-            What started as a radio show has grown into a wider music discovery project: a place for memorable broadcasts, full track listings, artist features, release pages, and carefully chosen recommendations.
+            What started as a radio show has grown into a wider archive for memorable broadcasts, full track listings, artist features, release pages, and carefully chosen recommendations.
           </p>
           <p>
-            The aim is simple: to share music with the care, curiosity, and enthusiasm it deserves.
+            The aim is simple: to share music with care, curiosity, and the enthusiasm of someone who still believes the next great discovery might be one song away.
           </p>
           <div class="about-actions">
             <a class="about-button about-button--secondary" href="{{ "/shows/" | relURL }}">Browse Shows</a>
@@ -131,16 +136,21 @@
       <div class="about-statement-grid">
         <section class="about-statement" aria-labelledby="about-live-heading">
           <h3 id="about-live-heading">Listen Live</h3>
-          <p>Sundown Sessions now has a home on Sundown Radio, with live broadcasts made for careful, curious listening.</p>
+          <p>Tune in on Sundown Radio for live broadcasts made for careful, curious listening.</p>
+        </section>
+        <section class="about-statement" aria-labelledby="about-listen-again-heading">
+          <h3 id="about-listen-again-heading">Listen Again</h3>
+          <p>Catch previous shows through the archive and Mixcloud when you want the full broadcast experience.</p>
         </section>
         <section class="about-statement" aria-labelledby="about-archive-route-heading">
-          <h3 id="about-archive-route-heading">Explore More</h3>
-          <p>Use the site as a growing archive of shows, artists, releases, track listings, and routes into the music.</p>
+          <h3 id="about-archive-route-heading">Explore the Archive</h3>
+          <p>Use the site as a growing map of shows, artists, releases, track listings, and routes into the music.</p>
         </section>
       </div>
       <div class="about-actions">
         <a class="about-button about-button--primary" href="{{ "/listen-live/" | relURL }}">Listen Live</a>
         <a class="about-button about-button--secondary" href="{{ "/shows/" | relURL }}">Browse Shows</a>
+        <a class="about-button about-button--secondary" href="https://www.mixcloud.com/sundownsessions/" rel="noopener" target="_blank">Mixcloud</a>
         <a class="about-button about-button--text" href="{{ "/contact/" | relURL }}">Send Music</a>
       </div>
     </section>
@@ -154,14 +164,14 @@
         <li><strong>Shows</strong><span><a href="{{ "/shows/" | relURL }}">Browse previous broadcasts</a>.</span></li>
         <li><strong>Artists</strong><span><a href="{{ "/artists/" | relURL }}">Discover featured artists</a>.</span></li>
         <li><strong>Releases</strong><span><a href="{{ "/releases/" | relURL }}">Explore albums, EPs and singles</a>.</span></li>
-        <li><strong>Listen</strong><span><a href="{{ "/listen-live/" | relURL }}">Tune in to Sundown Radio</a>.</span></li>
+        <li><strong>Tracks</strong><span><a href="{{ "/tracks/" | relURL }}">Find songs from the playlists</a>.</span></li>
       </ul>
     </section>
 
     <section class="about-cta" aria-labelledby="about-involved-heading">
       <p class="about-kicker">Get in touch</p>
       <h2 id="about-involved-heading">Have a recommendation?</h2>
-      <p>Released something that feels right for the show? Want to point me towards an artist I should hear? I would love to hear from you.</p>
+      <p>Released something that feels right for the show? Found an artist I should hear? Want to ask about a broadcast, playlist, or feature? I would love to hear from you.</p>
       <div class="about-actions about-actions--center">
         <a class="about-button about-button--primary" href="{{ "/listen-live/" | relURL }}">Listen Live</a>
         <a class="about-button about-button--secondary" href="{{ "/shows/" | relURL }}">Browse Shows</a>
