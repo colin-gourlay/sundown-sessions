@@ -755,6 +755,7 @@
   display: block;
   width: 100%;
   max-height: 18rem;
+  border-radius: 0;
   object-fit: contain;
 }
 
@@ -891,7 +892,7 @@
   }
 
   .show-hero__artwork {
-    flex: 0 0 min(34%, 18rem);
+    flex: 0 0 min(38%, 20.25rem);
   }
 
   .show-hero__artwork img {

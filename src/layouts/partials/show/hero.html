@@ -54,7 +54,7 @@
     {{ $trackCount = len $playlistRows }}
   {{ end }}
 {{ end }}
-{{ $duration := .Params.duration | default .Params.showDuration | default .Params.show_duration | default .Params.length }}
+{{ $duration := .Params.duration | default .Params.showDuration | default .Params.show_duration | default .Params.length | default "2 hr 00 min" }}
 {{ $showRuntime := "" }}
 {{ if and (gt $trackCount 0) $duration }}
   {{ $trackLabel := cond (eq $trackCount 1) "Track" "Tracks" }}
