@@ -2,6 +2,7 @@
 title: 'Show #1: Broadcast 5th June 2024'
 slug: 'featuring-the-big-now'
 description: 'featuring The Big Now'
+heroTeaser: 'Launching Sundown Sessions with new discoveries, established favourites and a featured spotlight on The Big Now.'
 summary: 'THE SUNDOWN SESSIONS returns with...
 
 - The Big Now
