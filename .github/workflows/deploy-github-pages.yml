@@ -85,7 +85,7 @@ jobs:
     if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && github.ref == 'refs/heads/main'
     environment:
       name: github-pages
-      url: ${{ steps.deployment_retry.outputs.page_url || steps.deployment.outputs.page_url }}
+      url: ${{ steps.deployment_retry_2.outputs.page_url || steps.deployment_retry_1.outputs.page_url || steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -94,13 +94,23 @@ jobs:
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
         continue-on-error: true
         with:
-          timeout: 1800000
-      - name: Wait before retrying GitHub Pages deployment
+          timeout: 600000
+      - name: Wait before first retry of GitHub Pages deployment
         if: steps.deployment.outcome == 'failure'
-        run: sleep 30
-      - name: Retry GitHub Pages deployment using v5.0.0
+        run: sleep 60
+      - name: Retry GitHub Pages deployment (attempt 2 of 3) using v5.0.0
         if: steps.deployment.outcome == 'failure'
-        id: deployment_retry
+        id: deployment_retry_1
+        uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
+        continue-on-error: true
+        with:
+          timeout: 600000
+      - name: Wait before second retry of GitHub Pages deployment
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry_1.outcome == 'failure'
+        run: sleep 120
+      - name: Retry GitHub Pages deployment (attempt 3 of 3) using v5.0.0
+        if: steps.deployment.outcome == 'failure' && steps.deployment_retry_1.outcome == 'failure'
+        id: deployment_retry_2
         uses: actions/deploy-pages@cd2ce8fcbc39b97be8ca5fce6e763baed58fa128 # v5.0.0
         with:
-          timeout: 1800000
+          timeout: 600000
