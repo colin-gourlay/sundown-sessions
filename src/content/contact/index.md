@@ -27,7 +27,7 @@ Sundown Sessions exists to discover great music and share it with people who lov
 
 ## Music submissions
 
-If you are sending music, include the artist name, track or release title, release date, relevant links, and a short note about the story behind it. Streaming links, Bandcamp pages, press pages and social links are all useful.
+If you are sending music, include the artist name, track or release title, release date, relevant links, and a short note about the story behind it. Please send a streaming, download or press link rather than attaching files. Bandcamp, SoundCloud, Spotify, YouTube, Dropbox, Google Drive and official website links are all welcome.
 
 Every submission is listened to personally, but not every track can be played or featured. Sundown Sessions is curated by hand, so the final selection depends on the shape of each broadcast, the wider archive and what feels right for after-dark listening.
 
