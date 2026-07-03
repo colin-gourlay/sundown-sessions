@@ -19,31 +19,74 @@
 {{ end }}
 {{ if not $featuredURL }}{{ with $featured }}{{ $featuredURL = .RelPermalink }}{{ end }}{{ end }}
 
-<section class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70" role="region" aria-labelledby="show-hero-heading">
-  <div class="flex flex-col sm:flex-row">
+{{ $showNumber := .Title | replaceRE `(?i)^show\s*#?([0-9]+).*$` "$1" }}
+{{ if eq $showNumber .Title }}{{ $showNumber = "" }}{{ end }}
+{{ $showLabel := cond (ne $showNumber "") (printf "Show #%s" $showNumber) (.Title | replaceRE `(?i):\s*broadcast.*$` "") }}
+
+{{ $featuredArtist := "" }}
+{{ with .Description }}
+  {{ $featuredArtist = . | replaceRE `(?i)^\s*featuring\s+` "" | strings.TrimSpace }}
+{{ end }}
+{{ if not $featuredArtist }}
+  {{ with .Params.summary }}
+    {{ $summaryArtists := findRE `(?m)^\s*-\s+(.+?)\s*$` . }}
+    {{ with $summaryArtists }}
+      {{ $featuredArtist = index . 0 | replaceRE `^\s*-\s+` "" | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $featuredArtist }}
+  {{ with .Params.tags }}
+    {{ $featuredArtist = index . 0 }}
+  {{ end }}
+{{ end }}
+
+{{ $trackCount := 0 }}
+{{ with .File }}
+  {{ $showDir := path.Dir (replace .Path "\\" "/") }}
+  {{ $trackInfoPath := printf "content/%s/track-info.md" $showDir }}
+  {{ $playlistPath := printf "content/%s/playlist.md" $showDir }}
+  {{ if fileExists $trackInfoPath }}
+    {{ $trackRows := findRE `(?m)^\|\s*\d+\s*\|` (readFile $trackInfoPath) }}
+    {{ $trackCount = len $trackRows }}
+  {{ else if fileExists $playlistPath }}
+    {{ $playlistRows := findRE `(?m)^\d+\.\s+` (readFile $playlistPath) }}
+    {{ $trackCount = len $playlistRows }}
+  {{ end }}
+{{ end }}
+{{ $duration := .Params.duration | default .Params.showDuration | default .Params.show_duration | default .Params.length }}
+{{ $showRuntime := "" }}
+{{ if and (gt $trackCount 0) $duration }}
+  {{ $trackLabel := cond (eq $trackCount 1) "Track" "Tracks" }}
+  {{ $showRuntime = printf "%d %s &bull; %v" $trackCount $trackLabel $duration }}
+{{ end }}
+{{ $hasListenOnDemand := in .RawContent "## Listen On Demand" }}
+
+<section class="show-hero mb-8 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70" role="region" aria-labelledby="show-hero-heading">
+  <div class="show-hero__layout">
     {{ with $featuredURL }}
-      <div class="flex items-center justify-center bg-neutral-100 p-4 dark:bg-neutral-800 sm:w-64 sm:shrink-0">
-        <img src="{{ . }}" alt="{{ $.Title }} artwork" loading="eager" decoding="async" fetchpriority="high" class="nozoom h-auto max-h-96 w-full object-contain">
+      <div class="show-hero__artwork bg-neutral-100 dark:bg-neutral-800">
+        <img src="{{ . }}" alt="{{ $.Title }} artwork" loading="eager" decoding="async" fetchpriority="high" class="nozoom">
       </div>
     {{ end }}
-    <div class="flex flex-1 flex-col justify-center gap-4 p-6 sm:p-8">
-      {{ if $.Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
-        <div class="mb-1 text-sm">{{ partial "breadcrumbs.html" $ }}</div>
-      {{ end }}
-      <p class="mb-0 text-sm font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Broadcast</p>
-      <h1 id="show-hero-heading" class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
-        {{ $.Title | emojify }}
-      </h1>
-      {{ with $.Description }}
-        <p class="text-base text-neutral-600 dark:text-neutral-300">{{ . }}</p>
+    <div class="show-hero__content">
+      <p class="show-hero__eyebrow">{{ $showLabel }}</p>
+      {{ with $featuredArtist }}
+        <div class="show-hero__feature">
+          <p class="show-hero__feature-label">Featuring</p>
+          <h1 id="show-hero-heading" class="show-hero__artist">{{ . }}</h1>
+        </div>
+      {{ else }}
+        <h1 id="show-hero-heading" class="show-hero__artist">{{ $.Title | emojify }}</h1>
       {{ end }}
       {{ if not $.Date.IsZero }}
-        <dl class="artist-header-stats">
-          <div>
-            <dt>Broadcast Date</dt>
-            <dd>{{ $.Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</dd>
-          </div>
-        </dl>
+        <p class="show-hero__date">{{ $.Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</p>
+      {{ end }}
+      {{ with $showRuntime }}
+        <p class="show-hero__runtime">{{ . | safeHTML }}</p>
+      {{ end }}
+      {{ if $hasListenOnDemand }}
+        <a class="show-hero__shortcut" href="#listen-on-demand">Listen on Demand</a>
       {{ end }}
     </div>
   </div>
