@@ -1466,7 +1466,7 @@
    site forms keep their existing behaviour. */
 
 .contact-form__submit {
-  min-width: 9.25rem;
+  min-width: 10.75rem;
   gap: 0.5rem;
 }
 
