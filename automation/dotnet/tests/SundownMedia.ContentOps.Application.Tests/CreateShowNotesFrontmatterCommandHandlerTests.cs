@@ -217,6 +217,11 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
         content.Should().Contain("- 'IST IST'");
         content.Should().Contain("- 'Nick Cave & The Bad Seeds'");
         content.Should().Contain("tags:");
+        content.Should().Contain("## Listen Back");
+        content.Should().Contain("## Playlist");
+        content.Should().Contain("## Featured Artist");
+        content.Should().Contain("## Discussion");
+        content.Should().Contain("## Tracks");
         content.Should().Contain("{{< include_content \"/shows/1/listen-again\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/playlist\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/featured-guest\" >}}");

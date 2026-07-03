@@ -62,7 +62,7 @@ date: 2024-07-17T22:00:00Z
 draft: true
 ---
 
-## Listen On Demand
+## Listen Back
 {{< include_content "/shows/5/listen-again" >}}
 
 ---
@@ -72,15 +72,15 @@ draft: true
 
 ---
 
-## Featured band: White China
+## Featured Artist
 {{< include_content "/shows/5/featured-guest" >}}
 
 ---
 
-## Show discussion points
+## Discussion
 {{< include_content "/shows/5/discussion-points" >}}
 
 ---
 
-## Track info
+## Tracks
 {{< include_content "/shows/5/track-info" >}}

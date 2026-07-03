@@ -68,7 +68,7 @@ date: 2024-06-19T22:00:00Z
 draft: true
 ---
 
-## Listen On Demand
+## Listen Back
 {{< include_content "/shows/3/listen-again" >}}
 
 ---
@@ -78,15 +78,15 @@ draft: true
 
 ---
 
-## Featured band: Blue On Shock
+## Featured Artist
 {{< include_content "/shows/3/featured-guest" >}}
 
 ---
 
-## Show discussion points
+## Discussion
 {{< include_content "/shows/3/discussion-points" >}}
 
 ---
 
-## Track info
+## Tracks
 {{< include_content "/shows/3/track-info" >}}
