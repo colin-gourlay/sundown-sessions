@@ -21,7 +21,7 @@ Sundown Sessions exists to discover great music and share it with people who lov
 
 {{< form-contact action="https://formspree.io/f/xzbnwyez" >}}
 
-## What to get in touch about
+## Get in touch about...
 
 {{< contact-reasons >}}
 
