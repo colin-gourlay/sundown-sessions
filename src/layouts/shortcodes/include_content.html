@@ -28,6 +28,29 @@
     {{ end }}
   {{ end }}
 
+  {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/listen-again") }}
+    {{ $mixcloudURL := "" }}
+    {{ $copy := "" }}
+    {{ with $includedPage }}
+      {{ $mixcloudURL = .Params.mixcloudUrl | default .Params.mixcloud_url | default .Params.url | default .Params.href | default "" }}
+      {{ $copy = .Params.listenOnDemandCopy | default .Params.listen_on_demand_copy | default .Params.copy | default "" }}
+    {{ end }}
+    {{ if not $mixcloudURL }}
+      {{ $mixcloudURL = $.Page.Params.mixcloudUrl | default $.Page.Params.mixcloud_url | default $.Page.Params.listenAgainUrl | default $.Page.Params.listen_again_url | default "" }}
+    {{ end }}
+    {{ if not $copy }}
+      {{ $copy = $.Page.Params.listenOnDemandCopy | default $.Page.Params.listen_on_demand_copy | default "" }}
+    {{ end }}
+    {{ if not $mixcloudURL }}
+      {{ range findRE `https?://[A-Za-z0-9./?&_%=#:+~-]+` $content }}
+        {{ if and (not $mixcloudURL) (in (lower .) "mixcloud.com") }}
+          {{ $mixcloudURL = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ partial "show/listen-on-demand-card.html" (dict "url" $mixcloudURL "copy" $copy) }}
+  {{ else }}
+
   {{ $forSaleTracks := slice }}
   {{ with $includedPage }}
     {{ with (.Params.forSaleTracks | default .Params.for_sale_tracks) }}
@@ -81,4 +104,5 @@
   {{ end }}
 
   {{ $.Page.RenderString $content }}
+  {{ end }}
 {{ end }}

@@ -29,11 +29,16 @@
   {{ end }}
 {{ end }}
 
-{{ partial "components/explore-further.html" (dict
-  "links" $links
-  "heading" "Listen Again"
-  "headingId" "show-listen-again-heading"
-  "sectionClass" "mb-10 max-w-prose not-prose"
-  "rowClass" "explore-further__row"
-  "iconClass" "explore-further__icon"
-) }}
+{{ $mixcloudURL := "" }}
+{{ range $links }}
+  {{ if and (not $mixcloudURL) (in (lower .url) "mixcloud.com") }}
+    {{ $mixcloudURL = .url }}
+  {{ end }}
+{{ end }}
+
+{{ with $mixcloudURL }}
+  {{ partial "show/listen-on-demand-card.html" (dict
+    "url" .
+    "copy" ($.Params.listenOnDemandCopy | default $.Params.listen_on_demand_copy)
+  ) }}
+{{ end }}

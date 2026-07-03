@@ -737,6 +737,7 @@
 
 .show-hero {
   max-width: 70rem;
+  margin-bottom: 1rem;
 }
 
 .show-hero__layout {
@@ -904,6 +905,171 @@
 
   .show-hero__content {
     padding: clamp(1.75rem, 3vw, 2.6rem);
+  }
+}
+
+/* Individual show page: refined listen-on-demand card and right-side section nav. */
+
+.show-listen-card {
+  max-width: 42rem;
+  margin: 0 0 2.5rem;
+  scroll-margin-top: 6rem;
+}
+
+.show-page-main .article-content > h2#listen-on-demand {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  white-space: nowrap;
+}
+
+.show-listen-card__body {
+  display: grid;
+  gap: 0.9rem;
+  overflow: hidden;
+  border: 1px solid var(--ss-color-border);
+  border-radius: 0.75rem;
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ss-color-sunset) 6%, transparent),
+      transparent 44%
+    ),
+    color-mix(in srgb, var(--ss-color-surface) 92%, white);
+  box-shadow: 0 1px 2px rgb(30 36 56 / 0.05);
+  padding: clamp(1.15rem, 3vw, 1.6rem);
+}
+
+.dark .show-listen-card__body {
+  background:
+    linear-gradient(
+      135deg,
+      color-mix(in srgb, var(--ss-color-golden-hour) 7%, transparent),
+      transparent 44%
+    ),
+    color-mix(in srgb, var(--ss-color-surface) 90%, #171717);
+  box-shadow: 0 12px 28px rgb(0 0 0 / 0.16);
+}
+
+.show-listen-card__heading {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  margin: 0;
+  color: #171717; /* neutral-900 */
+  font-size: clamp(1.22rem, 2vw, 1.45rem);
+  font-weight: 820;
+  letter-spacing: 0;
+  line-height: 1.25;
+}
+
+.dark .show-listen-card__heading {
+  color: #f5f5f5; /* neutral-100 */
+}
+
+.show-listen-card__icon {
+  display: inline-flex;
+  width: 1.05rem;
+  height: 1.05rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  color: rgba(var(--color-primary-600), 1);
+}
+
+.dark .show-listen-card__icon {
+  color: rgba(var(--color-primary-400), 1);
+}
+
+.show-listen-card__copy {
+  max-width: 34rem;
+  margin: 0;
+  color: #525252; /* neutral-600 */
+  font-size: 1rem;
+  font-weight: 650;
+  line-height: 1.6;
+}
+
+.dark .show-listen-card__copy {
+  color: #d4d4d4; /* neutral-300 */
+}
+
+.show-listen-card__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  max-width: 100%;
+  min-height: 2.55rem;
+  border: 1px solid color-mix(in srgb, var(--ss-color-primary-action) 34%, var(--ss-color-border));
+  border-radius: 0.5rem;
+  background: color-mix(in srgb, var(--ss-color-primary-action) 9%, var(--ss-color-surface));
+  padding: 0.62rem 0.95rem;
+  color: rgba(var(--color-primary-700), 1);
+  font-size: 0.95rem;
+  font-weight: 780;
+  line-height: 1.2;
+  text-decoration: none;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+}
+
+.show-listen-card__button:hover,
+.show-listen-card__button:focus-visible {
+  border-color: color-mix(in srgb, var(--ss-color-primary-action) 58%, var(--ss-color-border));
+  background: color-mix(in srgb, var(--ss-color-primary-action) 14%, var(--ss-color-surface));
+  color: rgba(var(--color-primary-800), 1);
+  text-decoration: none;
+}
+
+.show-listen-card__button:focus-visible {
+  outline: 2px solid var(--ss-color-focus);
+  outline-offset: 0.18rem;
+}
+
+.dark .show-listen-card__button {
+  background: color-mix(in srgb, var(--ss-color-primary-action) 12%, var(--ss-color-surface));
+  color: rgba(var(--color-primary-400), 1);
+}
+
+.dark .show-listen-card__button:hover,
+.dark .show-listen-card__button:focus-visible {
+  color: rgba(var(--color-primary-300), 1);
+}
+
+.show-page-toc #TOCView > div,
+.show-page-toc .toc-inside > div {
+  border-inline-start-color: var(--ss-color-border);
+  border-inline-start-style: solid;
+}
+
+.show-page-toc #TableOfContents ul {
+  margin-top: 0.25rem;
+  margin-bottom: 0;
+}
+
+.show-page-toc #TableOfContents li {
+  margin-top: 0.18rem;
+  margin-bottom: 0.18rem;
+  line-height: 1.35;
+}
+
+.show-page-toc #TableOfContents a {
+  display: inline-block;
+  padding-block: 0.08rem;
+}
+
+@media (min-width: 1024px) {
+  .show-page-toc-column {
+    flex: 0 0 15.25rem;
+    max-width: 15.25rem;
+  }
+
+  .show-page-toc #TOCView > div {
+    min-width: 15.25rem;
   }
 }
 
