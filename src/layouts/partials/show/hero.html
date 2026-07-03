@@ -41,24 +41,24 @@
   {{ end }}
 {{ end }}
 
-{{ $trackCount := 0 }}
-{{ with .File }}
-  {{ $showDir := path.Dir (replace .Path "\\" "/") }}
-  {{ $trackInfoPath := printf "content/%s/track-info.md" $showDir }}
-  {{ $playlistPath := printf "content/%s/playlist.md" $showDir }}
-  {{ if fileExists $trackInfoPath }}
-    {{ $trackRows := findRE `(?m)^\|\s*\d+\s*\|` (readFile $trackInfoPath) }}
-    {{ $trackCount = len $trackRows }}
-  {{ else if fileExists $playlistPath }}
-    {{ $playlistRows := findRE `(?m)^\d+\.\s+` (readFile $playlistPath) }}
-    {{ $trackCount = len $playlistRows }}
+{{ $showTeaser := .Params.heroTeaser | default .Params.hero_teaser | default .Params.teaser | default .Params.standfirst | default "" }}
+{{ if not $showTeaser }}
+  {{ $summaryArtists := slice }}
+  {{ with .Params.summary }}
+    {{ range findRE `(?m)^\s*-\s+(.+?)\s*$` . }}
+      {{ $artist := . | replaceRE `^\s*-\s+` "" | strings.TrimSpace }}
+      {{ if and $artist (not (findRE `(?i)much,?\s+much\s+more` $artist)) }}
+        {{ $summaryArtists = $summaryArtists | append $artist }}
+      {{ end }}
+    {{ end }}
   {{ end }}
-{{ end }}
-{{ $duration := .Params.duration | default .Params.showDuration | default .Params.show_duration | default .Params.length | default "2 hr 00 min" }}
-{{ $showRuntime := "" }}
-{{ if and (gt $trackCount 0) $duration }}
-  {{ $trackLabel := cond (eq $trackCount 1) "Track" "Tracks" }}
-  {{ $showRuntime = printf "%d %s &bull; %v" $trackCount $trackLabel $duration }}
+  {{ with first 4 $summaryArtists }}
+    {{ $showTeaser = printf "A Sundown Sessions broadcast with %s and more." (delimit . ", " " and ") }}
+  {{ else }}
+    {{ with .Params.summary }}
+      {{ $showTeaser = . | plainify | replaceRE `(?i)^\s*live on east coast fm,\s*` "" | replaceRE `\s+` " " | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 {{ $hasListenOnDemand := in .RawContent "## Listen On Demand" }}
 
@@ -82,8 +82,8 @@
       {{ if not $.Date.IsZero }}
         <p class="show-hero__date">{{ $.Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</p>
       {{ end }}
-      {{ with $showRuntime }}
-        <p class="show-hero__runtime">{{ . | safeHTML }}</p>
+      {{ with $showTeaser }}
+        <p class="show-hero__teaser">{{ . }}</p>
       {{ end }}
       {{ if $hasListenOnDemand }}
         <a class="show-hero__shortcut" href="#listen-on-demand">Listen on Demand</a>

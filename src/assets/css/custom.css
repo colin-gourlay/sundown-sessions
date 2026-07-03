@@ -772,7 +772,7 @@
 .show-hero__eyebrow,
 .show-hero__feature-label,
 .show-hero__date,
-.show-hero__runtime {
+.show-hero__teaser {
   margin: 0;
 }
 
@@ -820,7 +820,7 @@
 }
 
 .show-hero__date,
-.show-hero__runtime {
+.show-hero__teaser {
   color: #525252; /* neutral-600 */
   font-size: 1rem;
   font-weight: 650;
@@ -828,15 +828,17 @@
 }
 
 .dark .show-hero__date,
-.dark .show-hero__runtime {
+.dark .show-hero__teaser {
   color: #d4d4d4; /* neutral-300 */
 }
 
-.show-hero__runtime {
+.show-hero__teaser {
+  max-width: 44rem;
   color: #737373; /* neutral-500 */
+  font-style: italic;
 }
 
-.dark .show-hero__runtime {
+.dark .show-hero__teaser {
   color: #a3a3a3; /* neutral-400 */
 }
 
