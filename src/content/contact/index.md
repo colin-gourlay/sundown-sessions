@@ -1,5 +1,5 @@
 ---
-title: 'Contact Sundown Sessions'
+title: 'Contact'
 strapline: 'Send music, gig news, listener messages and ideas for the show.'
 description: 'Contact Sundown Sessions with music submissions, gig news, interview ideas, listener messages, label updates, promoter enquiries and festival or venue opportunities.'
 menu:
@@ -17,11 +17,15 @@ sharingLinks: []
 ---
 Sundown Sessions is built around music worth sharing, so the door is open.
 
-Use the form below if you have a track, release, gig, artist story, interview idea or general message that feels like it belongs in the Sundown Sessions orbit.
+Send a note if you have a track, release, gig, artist story, interview idea or listener message that feels like it belongs in the Sundown Sessions orbit.
+
+Messages from listeners, artists, bands, labels, promoters, venues, festival organisers and people working around independent or alternative music are all welcome.
+
+## Send a message
+
+{{< form-contact action="https://formspree.io/f/xzbnwyez" >}}
 
 ## What to get in touch about
-
-Messages are welcome from listeners, artists, bands, labels, promoters, venues, festival organisers and anyone working around independent or alternative music.
 
 You can get in touch about:
 
@@ -47,14 +51,10 @@ There may not always be time to reply to every submission individually, but thou
 
 ## Keep exploring
 
-If you are new here, you might also want to:
+If you are new here, start with the music:
 
 - [Listen Live](/listen-live/) when Sundown Sessions is on air
 - Browse the [Shows Archive](/shows/) for previous broadcasts and playlists
 - Read more [About Sundown Sessions](/about/)
 - Explore [Featured Artists](/artists/) and [Releases](/releases/)
 - Follow Sundown Sessions on [Instagram](https://www.instagram.com/sundownsessionsshow), [Facebook](https://www.facebook.com/sundownsessionsuk), [Mixcloud](https://www.mixcloud.com/sundownsessions/) or [Mastodon](https://mastodon.scot/@sundown_sessions)
-
-## Send a message
-
-{{< form-contact action="https://formspree.io/f/xzbnwyez" >}}
