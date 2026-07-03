@@ -908,23 +908,12 @@
   }
 }
 
-/* Individual show page: refined listen-on-demand card and right-side section nav. */
+/* Individual show page: refined listen-back card and right-side section nav. */
 
 .show-listen-card {
   max-width: 42rem;
   margin: 0 0 2.5rem;
   scroll-margin-top: 6rem;
-}
-
-.show-page-main .article-content > h2#listen-on-demand {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  margin: 0;
-  overflow: hidden;
-  clip: rect(0 0 0 0);
-  clip-path: inset(50%);
-  white-space: nowrap;
 }
 
 .show-listen-card__body {
@@ -953,36 +942,6 @@
     ),
     color-mix(in srgb, var(--ss-color-surface) 90%, #171717);
   box-shadow: 0 12px 28px rgb(0 0 0 / 0.16);
-}
-
-.show-listen-card__heading {
-  display: flex;
-  align-items: center;
-  gap: 0.55rem;
-  margin: 0;
-  color: #171717; /* neutral-900 */
-  font-size: clamp(1.22rem, 2vw, 1.45rem);
-  font-weight: 820;
-  letter-spacing: 0;
-  line-height: 1.25;
-}
-
-.dark .show-listen-card__heading {
-  color: #f5f5f5; /* neutral-100 */
-}
-
-.show-listen-card__icon {
-  display: inline-flex;
-  width: 1.05rem;
-  height: 1.05rem;
-  flex: 0 0 auto;
-  align-items: center;
-  justify-content: center;
-  color: rgba(var(--color-primary-600), 1);
-}
-
-.dark .show-listen-card__icon {
-  color: rgba(var(--color-primary-400), 1);
 }
 
 .show-listen-card__copy {
@@ -1017,6 +976,16 @@
   transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
+.show-listen-card__button-icon {
+  display: inline-flex;
+  width: 1rem;
+  height: 1rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  margin-inline-end: 0.45rem;
+}
+
 .show-listen-card__button:hover,
 .show-listen-card__button:focus-visible {
   border-color: color-mix(in srgb, var(--ss-color-primary-action) 58%, var(--ss-color-border));
@@ -1040,10 +1009,34 @@
   color: rgba(var(--color-primary-300), 1);
 }
 
+.show-page-toc__heading {
+  margin: 0 0 0.4rem;
+  color: #737373; /* neutral-500 */
+  font-size: 0.78rem;
+  font-weight: 750;
+  letter-spacing: 0;
+  line-height: 1.3;
+}
+
+.dark .show-page-toc__heading {
+  color: #a3a3a3; /* neutral-400 */
+}
+
+.show-page-toc #TOCView {
+  overflow-y: visible;
+}
+
 .show-page-toc #TOCView > div,
 .show-page-toc .toc-inside > div {
   border-inline-start-color: var(--ss-color-border);
   border-inline-start-style: solid;
+}
+
+.show-page-toc #TOCView > div {
+  width: fit-content;
+  max-width: 100%;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
 }
 
 .show-page-toc #TableOfContents ul {

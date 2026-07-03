@@ -72,10 +72,10 @@ draft: true
 
 ---
 
-## Show discussion points
+## Discussion
 {{< include_content "/shows/6/discussion-points" >}}
 
 ---
 
-## Track info
+## Tracks
 {{< include_content "/shows/6/track-info" >}}

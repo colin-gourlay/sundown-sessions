@@ -67,7 +67,7 @@ date: 2024-06-26T22:00:00Z
 draft: true
 ---
 
-## Listen On Demand
+## Listen Back
 {{< include_content "/shows/4/listen-again" >}}
 
 ---
@@ -82,10 +82,10 @@ draft: true
 
 ---
 
-## Show discussion points
+## Discussion
 {{< include_content "/shows/4/discussion-points" >}}
 
 ---
 
-## Track info
+## Tracks
 {{< include_content "/shows/4/track-info" >}}

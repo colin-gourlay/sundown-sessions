@@ -68,7 +68,7 @@ date: 2024-06-12T22:00:00Z
 draft: false
 ---
 
-## Listen On Demand
+## Listen Back
 {{< include_content "/shows/2/listen-again" >}}
 
 ---
@@ -78,15 +78,15 @@ draft: false
 
 ---
 
-## Featured band: The Receiving End
+## Featured Artist
 {{< include_content "/shows/2/featured-guest" >}}
 
 ---
 
-## Show discussion points
+## Discussion
 {{< include_content "/shows/2/discussion-points" >}}
 
 ---
 
-## Track info
+## Tracks
 {{< include_content "/shows/2/track-info" >}}

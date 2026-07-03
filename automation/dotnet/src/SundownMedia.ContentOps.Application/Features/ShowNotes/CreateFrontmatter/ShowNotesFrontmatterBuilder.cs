@@ -52,7 +52,7 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
             sb.AppendLine("draft: true");
             sb.AppendLine("---");
             sb.AppendLine();
-            sb.AppendLine("## Listen On Demand");
+            sb.AppendLine("## Listen Back");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/listen-again\" >}}}}");
             sb.AppendLine();
             sb.AppendLine("---");
@@ -62,17 +62,17 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
             sb.AppendLine();
             sb.AppendLine("---");
             sb.AppendLine();
-            sb.AppendLine(CultureInfo.InvariantCulture, $"## Featured band: {command.FeaturedGuest}");
+            sb.AppendLine("## Featured Artist");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/featured-guest\" >}}}}");
             sb.AppendLine();
             sb.AppendLine("---");
             sb.AppendLine();
-            sb.AppendLine("## Show discussion points");
+            sb.AppendLine("## Discussion");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/discussion-points\" >}}}}");
             sb.AppendLine();
             sb.AppendLine("---");
             sb.AppendLine();
-            sb.AppendLine("## Track info");
+            sb.AppendLine("## Tracks");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/track-info\" >}}}}");
 
             return sb.ToString();

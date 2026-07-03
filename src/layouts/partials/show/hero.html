@@ -60,7 +60,7 @@
     {{ end }}
   {{ end }}
 {{ end }}
-{{ $hasListenOnDemand := or (in .RawContent "## Listen On Demand") (in .RawContent "/listen-again") }}
+{{ $hasListenOnDemand := or (or (in .RawContent "## Listen Back") (in .RawContent "## Listen On Demand")) (in .RawContent "/listen-again") }}
 
 <section class="show-hero mb-8 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70" role="region" aria-labelledby="show-hero-heading">
   <div class="show-hero__layout">
@@ -86,7 +86,7 @@
         <p class="show-hero__teaser">{{ . }}</p>
       {{ end }}
       {{ if $hasListenOnDemand }}
-        <a class="show-hero__shortcut" href="#listen-on-demand">Listen on Demand</a>
+        <a class="show-hero__shortcut" href="#listen-back">Listen on Demand</a>
       {{ end }}
     </div>
   </div>
