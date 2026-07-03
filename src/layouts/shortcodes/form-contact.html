@@ -2,27 +2,27 @@
 {{ $formID := printf "contact-form-%d" .Ordinal }}
 {{ $toastRegionID := printf "contact-form-toast-region-%d" .Ordinal }}
 {{ if $action }}
-  <div class="not-prose mt-10 rounded-2xl border border-neutral-300 bg-neutral-50 px-6 py-6 shadow-sm dark:border-neutral-700 dark:bg-neutral-900">
-    <form id="{{ $formID }}" action="{{ $action }}" method="POST" accept-charset="UTF-8" class="space-y-6" data-analytics-event="contact_submit" data-analytics-provider="formspree">
+  <div class="not-prose mt-8 max-w-2xl rounded-xl border border-neutral-300 bg-neutral-50 px-5 py-6 shadow-sm dark:border-neutral-700 dark:bg-neutral-900 sm:px-7 sm:py-7">
+    <form id="{{ $formID }}" action="{{ $action }}" method="POST" accept-charset="UTF-8" class="space-y-5" data-analytics-event="contact_submit" data-analytics-provider="formspree">
       <input type="hidden" name="_subject" value="Sundown Sessions website enquiry" />
       <div class="hidden">
         <label for="{{ $formID }}-company">Company</label>
         <input id="{{ $formID }}-company" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
       </div>
       <div>
-        <label class="mb-2 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-name">Your name</label>
-        <input id="{{ $formID }}-name" name="name" type="text" autocomplete="name" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
+        <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-name">Your name</label>
+        <input id="{{ $formID }}-name" name="name" type="text" autocomplete="name" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
       </div>
       <div>
-        <label class="mb-2 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-email">Email address</label>
-        <input id="{{ $formID }}-email" name="email" type="email" autocomplete="email" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
+        <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-email">Email address</label>
+        <input id="{{ $formID }}-email" name="email" type="email" autocomplete="email" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
       </div>
       <div>
-        <label class="mb-2 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-message">Message</label>
-        <textarea id="{{ $formID }}-message" name="message" rows="6" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900"></textarea>
+        <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-message">Message</label>
+        <textarea id="{{ $formID }}-message" name="message" rows="6" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900"></textarea>
       </div>
-      <div class="flex flex-col gap-4 sm:flex-row sm:items-center">
-        <button type="submit" class="contact-form__submit inline-flex items-center justify-center rounded-lg bg-primary-600 px-5 py-3 text-sm font-semibold text-white transition hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300 disabled:cursor-not-allowed disabled:opacity-70 dark:bg-primary-500 dark:hover:bg-primary-400 dark:focus:ring-primary-900">
+      <div class="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center">
+        <button type="submit" class="contact-form__submit inline-flex items-center justify-center rounded-lg bg-primary-600 px-6 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300 disabled:cursor-not-allowed disabled:opacity-70 dark:bg-primary-500 dark:hover:bg-primary-400 dark:focus:ring-primary-900">
           <span class="contact-form__button-label">Send message</span>
           <span class="contact-form__spinner" aria-hidden="true"></span>
         </button>

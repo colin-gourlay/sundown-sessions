@@ -1,10 +1,10 @@
 ---
 title: 'Contact'
-strapline: 'Send music, gig news, listener messages and ideas for the show.'
+strapline: "We'd love to hear from you."
 description: 'Contact Sundown Sessions with music submissions, gig news, interview ideas, listener messages, label updates, promoter enquiries and festival or venue opportunities.'
 menu:
   main:
-    title: 'Go to the Contact page'
+    title: 'Get in touch with the show.'
     weight: 4
 showDate: false
 showReadingTime: false
@@ -15,46 +15,26 @@ showBreadcrumbs: true
 showTaxonomies: false
 sharingLinks: []
 ---
-Sundown Sessions is built around music worth sharing, so the door is open.
+Sundown Sessions exists to discover great music and share it with people who love finding something new. If you've got music, gig news, ideas or simply want to get in touch, I'd love to hear from you.
 
-Send a note if you have a track, release, gig, artist story, interview idea or listener message that feels like it belongs in the Sundown Sessions orbit.
-
-Messages from listeners, artists, bands, labels, promoters, venues, festival organisers and people working around independent or alternative music are all welcome.
-
-## Send a message
+## Get in touch
 
 {{< form-contact action="https://formspree.io/f/xzbnwyez" >}}
 
 ## What to get in touch about
 
-You can get in touch about:
-
-- New music and artist submissions
-- Upcoming gigs, tours, festivals and local events
-- Interview ideas and guest opportunities
-- Exclusive tracks, first plays or broadcast opportunities
-- Featured artist updates or missing artist information
-- Listener messages, requests and feedback
-- Label, promoter, venue and industry enquiries
+{{< contact-reasons >}}
 
 ## Music submissions
 
 If you are sending music, include the artist name, track or release title, release date, relevant links, and a short note about the story behind it. Streaming links, Bandcamp pages, press pages and social links are all useful.
 
-Every submission is listened to with care, but not every track can be played or featured. Sundown Sessions is curated by hand, so the final selection depends on the shape of each broadcast, the wider archive and what feels right for after-dark listening.
+Every submission is listened to personally, but not every track can be played or featured. Sundown Sessions is curated by hand, so the final selection depends on the shape of each broadcast, the wider archive and what feels right for after-dark listening.
 
 ## What happens next
 
-Messages arrive through the contact form and will be reviewed as soon as possible. If something is a good fit for a broadcast, feature, show note or future conversation, you may hear back by email.
+Messages are read by the show and we'll respond where we can. There may sometimes be a delay, but thoughtful music, useful details and clear links make it much easier to listen properly.
 
-There may not always be time to reply to every submission individually, but thoughtful music, useful details and clear links make it much easier to follow up.
+## Continue exploring
 
-## Keep exploring
-
-If you are new here, start with the music:
-
-- [Listen Live](/listen-live/) when Sundown Sessions is on air
-- Browse the [Shows Archive](/shows/) for previous broadcasts and playlists
-- Read more [About Sundown Sessions](/about/)
-- Explore [Featured Artists](/artists/) and [Releases](/releases/)
-- Follow Sundown Sessions on [Instagram](https://www.instagram.com/sundownsessionsshow), [Facebook](https://www.facebook.com/sundownsessionsuk), [Mixcloud](https://www.mixcloud.com/sundownsessions/) or [Mastodon](https://mastodon.scot/@sundown_sessions)
+{{< contact-explore >}}

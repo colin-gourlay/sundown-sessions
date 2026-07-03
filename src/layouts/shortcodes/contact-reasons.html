@@ -1,0 +1,15 @@
+<div class="not-prose my-8 grid gap-4 sm:grid-cols-2">
+  {{ $reasons := slice
+    (dict "title" "Music submissions" "copy" "Send new music from independent, emerging or overlooked artists.")
+    (dict "title" "Gig news" "copy" "Tell us about upcoming gigs, festivals and new releases.")
+    (dict "title" "Interviews and features" "copy" "Recommend artists, projects or stories that deserve a wider audience.")
+    (dict "title" "Listener requests" "copy" "Dedicate a track, suggest a song or simply say hello.")
+    (dict "title" "Feedback and ideas" "copy" "Help shape future broadcasts and the website.")
+  }}
+  {{ range $index, $reason := $reasons }}
+    <article class="rounded-xl border border-neutral-200 bg-white p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900{{ if eq $index 4 }} sm:col-span-2{{ end }}">
+      <h3 class="m-0 text-base font-bold text-neutral-900 dark:text-neutral-100">{{ $reason.title }}</h3>
+      <p class="mt-2 mb-0 text-sm leading-6 text-neutral-600 dark:text-neutral-400">{{ $reason.copy }}</p>
+    </article>
+  {{ end }}
+</div>
