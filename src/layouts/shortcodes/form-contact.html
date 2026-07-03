@@ -18,8 +18,13 @@
         <input id="{{ $formID }}-email" name="email" type="email" autocomplete="email" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
       </div>
       <div>
+        <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-link">Link</label>
+        <input id="{{ $formID }}-link" name="link" type="text" inputmode="url" autocomplete="url" placeholder="Bandcamp, SoundCloud, Spotify, YouTube, Dropbox, Google Drive or website link" class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
+      </div>
+      <div>
         <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-message">Message</label>
         <textarea id="{{ $formID }}-message" name="message" rows="6" required class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900"></textarea>
+        <p class="mt-2 mb-0 text-sm leading-6 text-neutral-600 dark:text-neutral-400">Tell us who you are, what you're sending, and where we can listen.</p>
       </div>
       <div class="flex flex-col gap-4 pt-1 sm:flex-row sm:items-center">
         <button type="submit" class="contact-form__submit inline-flex items-center justify-center rounded-lg bg-primary-600 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300 disabled:cursor-not-allowed disabled:opacity-70 dark:bg-primary-500 dark:hover:bg-primary-400 dark:focus:ring-primary-900">
