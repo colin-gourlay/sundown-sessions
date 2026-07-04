@@ -73,7 +73,7 @@ draft: false
 
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/2/playlist" >}}
 
 ---

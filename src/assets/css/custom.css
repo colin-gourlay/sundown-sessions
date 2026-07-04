@@ -911,7 +911,7 @@
 /* Individual show page: refined listen-back card and right-side section nav. */
 
 .show-listen-card {
-  max-width: 42rem;
+  max-width: 48rem;
   margin: 0 0 2.5rem;
   scroll-margin-top: 6rem;
 }
@@ -954,9 +954,9 @@
 .show-listen-card__body--link:hover,
 .show-listen-card__body--link:focus-visible {
   border-color: color-mix(in srgb, var(--ss-color-primary-action) 32%, var(--ss-color-border));
-  box-shadow: 0 10px 24px rgb(30 36 56 / 0.11);
+  box-shadow: 0 13px 30px rgb(30 36 56 / 0.13);
   text-decoration: none;
-  transform: translateY(-0.08rem);
+  transform: translateY(-0.1rem);
 }
 
 .show-listen-card__body--link:focus-visible {
@@ -970,7 +970,7 @@
 }
 
 .show-listen-card__copy {
-  max-width: 34rem;
+  max-width: 38rem;
   margin: 0;
   color: #525252; /* neutral-600 */
   font-size: 1rem;
@@ -1022,7 +1022,7 @@
 
 .show-listen-card__body--link:hover .show-listen-card__button-icon,
 .show-listen-card__body--link:focus-visible .show-listen-card__button-icon {
-  transform: translateX(0.12rem);
+  transform: translateX(0.16rem);
 }
 
 .dark .show-listen-card__button {
@@ -1050,7 +1050,7 @@
 }
 
 .show-page-toc__heading {
-  margin: 0 0 0.4rem;
+  margin: 0 0 0.1rem;
   color: #737373; /* neutral-500 */
   font-size: 0.78rem;
   font-weight: 750;
@@ -1080,8 +1080,50 @@
 }
 
 .show-page-toc #TableOfContents ul {
-  margin-top: 0.25rem;
+  margin-top: 0.15rem;
   margin-bottom: 0;
+}
+
+.show-page-main .article-content ol > li,
+.show-page-main .article-content ul > li {
+  margin-top: 0.38rem;
+  margin-bottom: 0.38rem;
+}
+
+.show-playlist-separator {
+  display: flex;
+  max-width: 36rem;
+  align-items: center;
+  justify-content: center;
+  gap: 0.55rem;
+  margin: 1.05rem 0;
+  color: #737373; /* neutral-500 */
+  font-size: 0.78rem;
+  font-weight: 760;
+  letter-spacing: 0;
+  line-height: 1.4;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.show-playlist-separator::before,
+.show-playlist-separator::after {
+  width: min(5.5rem, 22%);
+  border-top: 1px solid color-mix(in srgb, var(--ss-color-border) 78%, transparent);
+  content: "";
+}
+
+.show-playlist-separator__detail {
+  color: #a3a3a3; /* neutral-400 */
+  font-weight: 650;
+}
+
+.dark .show-playlist-separator {
+  color: #a3a3a3; /* neutral-400 */
+}
+
+.dark .show-playlist-separator__detail {
+  color: #737373; /* neutral-500 */
 }
 
 .show-page-toc #TableOfContents li {

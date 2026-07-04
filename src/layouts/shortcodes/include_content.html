@@ -51,6 +51,39 @@
     {{ partial "show/listen-on-demand-card.html" (dict "url" $mixcloudURL "copy" $copy) }}
   {{ else }}
 
+  {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/playlist") }}
+    {{ $lines := slice }}
+    {{ range split $content "\n" }}
+      {{ $line := . }}
+      {{ $trimmed := strings.TrimSpace $line }}
+      {{ $separatorLabel := "" }}
+      {{ $separatorDetail := "" }}
+
+      {{ if findRE `(?i)^-\s*advertising break\s*$` $trimmed }}
+        {{ $separatorLabel = "Advertising Break" }}
+      {{ else if findRE `(?i)^-\s*news\s*$` $trimmed }}
+        {{ $separatorLabel = "News" }}
+      {{ else if findRE `(?i)^--\s*adverts?\s*--?\s*(\[[^]]+\])?\s*$` $trimmed }}
+        {{ $separatorLabel = "Advertising Break" }}
+        {{ $separatorDetail = strings.TrimSpace (replaceRE `(?i)^--\s*adverts?\s*--?\s*(\[[^]]+\])?\s*$` "$1" $trimmed) }}
+      {{ else if findRE `(?i)^--\s*news\s*--?\s*(\[[^]]+\])?\s*$` $trimmed }}
+        {{ $separatorLabel = "News" }}
+        {{ $separatorDetail = strings.TrimSpace (replaceRE `(?i)^--\s*news\s*--?\s*(\[[^]]+\])?\s*$` "$1" $trimmed) }}
+      {{ end }}
+
+      {{ if $separatorLabel }}
+        {{ if $separatorDetail }}
+          {{ $line = printf `{{< broadcast-separator "%s" "%s" >}}` $separatorLabel $separatorDetail }}
+        {{ else }}
+          {{ $line = printf `{{< broadcast-separator "%s" >}}` $separatorLabel }}
+        {{ end }}
+      {{ end }}
+
+      {{ $lines = $lines | append $line }}
+    {{ end }}
+    {{ $content = delimit $lines "\n" }}
+  {{ end }}
+
   {{ $forSaleTracks := slice }}
   {{ with $includedPage }}
     {{ with (.Params.forSaleTracks | default .Params.for_sale_tracks) }}

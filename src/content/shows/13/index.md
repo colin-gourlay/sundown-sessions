@@ -68,7 +68,7 @@ date: 2024-10-01T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/13/playlist" >}}
 
 ---
