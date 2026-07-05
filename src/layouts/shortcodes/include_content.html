@@ -50,6 +50,76 @@
     {{ end }}
     {{ partial "show/listen-on-demand-card.html" (dict "url" $mixcloudURL "copy" $copy) }}
   {{ else }}
+  {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/featured-guest") }}
+    {{ $skipSection := false }}
+    {{ $spotlightLines := slice }}
+    {{ $spotlightLinks := slice }}
+    {{ $linkPattern := `\[(.*?)\]\((https?://[^)]+)\)` }}
+
+    {{ range split $content "\n" }}
+      {{ $line := . }}
+      {{ $trimmed := strings.TrimSpace $line }}
+      {{ $plainHeading := $trimmed | replaceRE `^#+\s*` "" | replaceRE `\*\*` "" | strings.TrimSpace }}
+      {{ $plainHeadingLower := lower $plainHeading }}
+      {{ $isContactHeading := or (eq $plainHeadingLower "contact details") (eq $plainHeadingLower "contact detail") }}
+      {{ $isSocialHeading := or (eq $plainHeadingLower "social media") (eq $plainHeadingLower "social links") }}
+      {{ $isSkippedHeading := or $isContactHeading $isSocialHeading }}
+      {{ $isHeading := hasPrefix $trimmed "###" }}
+
+      {{ if $isSkippedHeading }}
+        {{ $skipSection = true }}
+      {{ else }}
+        {{ if and $skipSection $isHeading }}
+          {{ $skipSection = false }}
+        {{ end }}
+
+        {{ if $skipSection }}
+          {{ range findRESubmatch $linkPattern $line }}
+            {{ $label := index . 1 | strings.TrimSpace }}
+            {{ $url := index . 2 | strings.TrimSpace }}
+            {{ $prefix := $line | replaceRE `(?s)\[.*$` "" | replaceRE `^\s*-\s*` "" | replaceRE `\{\{<\s*new-tab-link\s+"?` "" | replaceRE `\*\*` "" | replaceRE `:` "" | strings.TrimSpace }}
+            {{ if or (eq $label "") (hasPrefix $label "http") }}
+              {{ $label = $prefix | default "Official Website" }}
+            {{ end }}
+            {{ $labelLower := lower $label }}
+            {{ if eq $labelLower "website" }}
+              {{ $label = "Official Website" }}
+              {{ $labelLower = "official website" }}
+            {{ end }}
+            {{ $icon := "link" }}
+            {{ if in $labelLower "website" }}{{ $icon = "globe" }}{{ end }}
+            {{ if in $labelLower "facebook" }}{{ $icon = "facebook" }}{{ end }}
+            {{ if in $labelLower "instagram" }}{{ $icon = "instagram" }}{{ end }}
+            {{ if or (in $labelLower "twitter") (eq $labelLower "x") }}{{ $icon = "x-twitter" }}{{ end }}
+            {{ if in $labelLower "youtube" }}{{ $icon = "youtube" }}{{ end }}
+            {{ if in $labelLower "linkedin" }}{{ $icon = "linkedin" }}{{ end }}
+            {{ if in $labelLower "bandcamp" }}{{ $icon = "music" }}{{ end }}
+            {{ if in $labelLower "spotify" }}{{ $icon = "spotify" }}{{ end }}
+            {{ $spotlightLinks = $spotlightLinks | append (dict "label" $label "url" $url "icon" $icon) }}
+          {{ end }}
+        {{ else if not (or (findRE `(?i)contact details|social media|social media links` $trimmed) (findRE `^-\s*~~` $trimmed)) }}
+          {{ $spotlightLines = $spotlightLines | append $line }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ $content = delimit $spotlightLines "\n" | strings.TrimSpace }}
+    <div class="show-artist-spotlight not-prose">
+      <div class="show-artist-spotlight__card">
+        <div class="show-artist-spotlight__body prose max-w-none leading-relaxed dark:prose-invert">
+          {{ $.Page.RenderString $content }}
+        </div>
+        {{ partial "components/explore-further.html" (dict
+          "links" $spotlightLinks
+          "heading" "Explore Further"
+          "headingId" "show-artist-spotlight-explore-heading"
+          "sectionClass" "show-artist-spotlight__links not-prose"
+          "rowClass" "explore-further__row"
+          "iconClass" "explore-further__icon"
+        ) }}
+      </div>
+    </div>
+  {{ else }}
 
   {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/playlist") }}
     {{ $lines := slice }}
@@ -137,5 +207,6 @@
   {{ end }}
 
   {{ $.Page.RenderString $content }}
+  {{ end }}
   {{ end }}
 {{ end }}

@@ -219,7 +219,7 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
         content.Should().Contain("tags:");
         content.Should().Contain("## Listen Back");
         content.Should().Contain("## Playlist");
-        content.Should().Contain("## Featured Artist");
+        content.Should().Contain("## Artist Spotlight");
         content.Should().Contain("## Discussion");
         content.Should().Contain("## Tracks");
         content.Should().Contain("{{< include_content \"/shows/1/listen-again\" >}}");

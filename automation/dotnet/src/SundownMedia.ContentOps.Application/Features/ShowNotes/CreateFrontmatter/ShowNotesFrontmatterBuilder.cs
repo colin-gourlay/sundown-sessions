@@ -62,7 +62,7 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
             sb.AppendLine();
             sb.AppendLine("---");
             sb.AppendLine();
-            sb.AppendLine("## Featured Artist");
+            sb.AppendLine("## Artist Spotlight");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/featured-guest\" >}}}}");
             sb.AppendLine();
             sb.AppendLine("---");

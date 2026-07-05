@@ -72,7 +72,7 @@ draft: true
 
 ---
 
-## Featured Artist
+## Artist Spotlight
 {{< include_content "/shows/5/featured-guest" >}}
 
 ---
