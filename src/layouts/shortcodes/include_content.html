@@ -53,8 +53,10 @@
   {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/featured-guest") }}
     {{ $skipSection := false }}
     {{ $spotlightLines := slice }}
-    {{ $spotlightLinks := slice }}
+    {{ $linksByPlatform := dict }}
     {{ $linkPattern := `\[(.*?)\]\((https?://[^)]+)\)` }}
+    {{ $content = replaceRE `(?is)\n\s*At the moment, I don.*?connect too\.\s*\n` "\n" $content }}
+    {{ $content = replaceRE `(?is)\n\s*I currently don.*?benefit of others\.\s*\n` "\n" $content }}
 
     {{ range split $content "\n" }}
       {{ $line := . }}
@@ -78,28 +80,48 @@
             {{ $label := index . 1 | strings.TrimSpace }}
             {{ $url := index . 2 | strings.TrimSpace }}
             {{ $prefix := $line | replaceRE `(?s)\[.*$` "" | replaceRE `^\s*-\s*` "" | replaceRE `\{\{<\s*new-tab-link\s+"?` "" | replaceRE `\*\*` "" | replaceRE `:` "" | strings.TrimSpace }}
+            {{ $platform := $prefix | default $label }}
             {{ if or (eq $label "") (hasPrefix $label "http") }}
               {{ $label = $prefix | default "Official Website" }}
             {{ end }}
-            {{ $labelLower := lower $label }}
-            {{ if eq $labelLower "website" }}
-              {{ $label = "Official Website" }}
-              {{ $labelLower = "official website" }}
+            {{ $platformKey := lower $platform }}
+            {{ $platformKey = replace $platformKey " " "-" }}
+            {{ $platformKey = replace $platformKey "_" "-" }}
+            {{ $platformKey = replace $platformKey "." "" }}
+            {{ $platformKey = replace $platformKey "official-website" "website" }}
+            {{ $platformKey = replace $platformKey "official-site" "website" }}
+            {{ $platformKey = replace $platformKey "apple-music" "apple" }}
+            {{ if or (eq $platformKey "x") (eq $platformKey "x-twitter") (eq $platformKey "twitter") }}
+              {{ $platformKey = "twitter" }}
             {{ end }}
-            {{ $icon := "link" }}
-            {{ if in $labelLower "website" }}{{ $icon = "globe" }}{{ end }}
-            {{ if in $labelLower "facebook" }}{{ $icon = "facebook" }}{{ end }}
-            {{ if in $labelLower "instagram" }}{{ $icon = "instagram" }}{{ end }}
-            {{ if or (in $labelLower "twitter") (eq $labelLower "x") }}{{ $icon = "x-twitter" }}{{ end }}
-            {{ if in $labelLower "youtube" }}{{ $icon = "youtube" }}{{ end }}
-            {{ if in $labelLower "linkedin" }}{{ $icon = "linkedin" }}{{ end }}
-            {{ if in $labelLower "bandcamp" }}{{ $icon = "music" }}{{ end }}
-            {{ if in $labelLower "spotify" }}{{ $icon = "spotify" }}{{ end }}
-            {{ $spotlightLinks = $spotlightLinks | append (dict "label" $label "url" $url "icon" $icon) }}
+            {{ if eq $platformKey "website" }}
+              {{ $label = "Official Website" }}
+            {{ end }}
+            {{ if and $url (not (index $linksByPlatform $platformKey)) }}
+              {{ $linksByPlatform = merge $linksByPlatform (dict $platformKey $url) }}
+            {{ end }}
           {{ end }}
         {{ else if not (or (findRE `(?i)contact details|social media|social media links` $trimmed) (findRE `^-\s*~~` $trimmed)) }}
           {{ $spotlightLines = $spotlightLines | append $line }}
         {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ $destinations := slice
+      (dict "key" "website" "label" "Official Website" "icon" "globe")
+      (dict "key" "bandcamp" "label" "Bandcamp" "icon" "music")
+      (dict "key" "spotify" "label" "Spotify" "icon" "spotify")
+      (dict "key" "apple" "label" "Apple Music" "icon" "apple")
+      (dict "key" "youtube" "label" "YouTube" "icon" "youtube")
+      (dict "key" "facebook" "label" "Facebook" "icon" "facebook")
+      (dict "key" "instagram" "label" "Instagram" "icon" "instagram")
+      (dict "key" "twitter" "label" "X" "icon" "x-twitter")
+    }}
+    {{ $spotlightLinks := slice }}
+    {{ range $destinations }}
+      {{ $destination := . }}
+      {{ with index $linksByPlatform .key }}
+        {{ $spotlightLinks = $spotlightLinks | append (merge $destination (dict "url" .)) }}
       {{ end }}
     {{ end }}
 
@@ -117,6 +139,10 @@
           "rowClass" "explore-further__row"
           "iconClass" "explore-further__icon"
         ) }}
+        <aside class="show-artist-spotlight__community" aria-label="Artist Spotlight community invitation">
+          <p class="show-artist-spotlight__community-heading">Know this artist?</p>
+          <p>If you spot missing or outdated links, or would like to recommend an artist for a future Artist Spotlight, we'd love to hear from you.</p>
+        </aside>
       </div>
     </div>
   {{ else }}
