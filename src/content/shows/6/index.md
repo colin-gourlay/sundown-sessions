@@ -72,7 +72,8 @@ draft: true
 
 ---
 
-## Discussion
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/6/discussion-points" >}}
 
 ---
