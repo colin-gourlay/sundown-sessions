@@ -67,7 +67,8 @@ namespace SundownMedia.ContentOps.Application.Features.ShowNotes.CreateFrontmatt
             sb.AppendLine();
             sb.AppendLine("---");
             sb.AppendLine();
-            sb.AppendLine("## Discussion");
+            sb.AppendLine("## Show Notes");
+            sb.AppendLine("Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.");
             sb.AppendLine(CultureInfo.InvariantCulture, $"{{{{< include_content \"/shows/{command.ShowNumber}/discussion-points\" >}}}}");
             sb.AppendLine();
             sb.AppendLine("---");

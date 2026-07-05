@@ -220,7 +220,8 @@ public sealed class CreateShowNotesFrontmatterCommandHandlerTests
         content.Should().Contain("## Listen Back");
         content.Should().Contain("## Playlist");
         content.Should().Contain("## Artist Spotlight");
-        content.Should().Contain("## Discussion");
+        content.Should().Contain("## Show Notes");
+        content.Should().Contain("Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.");
         content.Should().Contain("## Tracks");
         content.Should().Contain("{{< include_content \"/shows/1/listen-again\" >}}");
         content.Should().Contain("{{< include_content \"/shows/1/playlist\" >}}");
