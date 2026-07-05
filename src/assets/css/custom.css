@@ -901,6 +901,7 @@
   .show-hero__artwork img {
     height: 100%;
     max-height: none;
+    object-fit: cover;
   }
 
   .show-hero__content {
@@ -2384,6 +2385,37 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 .dark .explore-further__row:hover .explore-further__icon,
 .dark .explore-further__row:focus-visible .explore-further__icon {
   color: rgba(var(--color-primary-400), 1);
+}
+
+.show-artist-spotlight__community {
+  margin: 0;
+  border-top: 1px solid #e5e5e5; /* neutral-200 */
+  padding: 1.1rem clamp(1rem, 2.5vw, 1.45rem) clamp(1rem, 2.5vw, 1.35rem);
+  color: #525252; /* neutral-600 */
+  font-size: 0.95rem;
+  line-height: 1.65;
+}
+
+.dark .show-artist-spotlight__community {
+  border-top-color: #404040; /* neutral-700 */
+  color: #d4d4d4; /* neutral-300 */
+}
+
+.show-artist-spotlight__community p {
+  margin: 0;
+}
+
+.show-artist-spotlight__community p + p {
+  margin-top: 0.35rem;
+}
+
+.show-artist-spotlight__community-heading {
+  color: #171717; /* neutral-900 */
+  font-weight: 750;
+}
+
+.dark .show-artist-spotlight__community-heading {
+  color: #f5f5f5; /* neutral-100 */
 }
 
 /* Release details: subtle row breathing room for individual release pages. */
