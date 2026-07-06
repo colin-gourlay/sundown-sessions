@@ -2,12 +2,11 @@
 
 ## Repository Context
 
-This repository contains two primary workstreams:
+This repository contains the Sundown Sessions Hugo website:
 
 - `src/`: Hugo-based website content and templates for Sundown Sessions.
-- `automation/dotnet/`: ContentOps automation platform built with .NET using clean architecture boundaries.
 
-Keep changes scoped to the area requested. Do not blend website concerns and automation concerns unless the task explicitly requires both.
+Keep changes scoped to the area requested.
 
 ## Language and Writing Standard
 
@@ -27,7 +26,6 @@ Prefer British spelling and phrasing, for example: "organisation", "behaviour", 
 - Keep edits focused and minimal.
 - Do not refactor unrelated code.
 - Preserve existing architecture boundaries and naming conventions.
-- Add or update tests when changing behaviour in `automation/dotnet/`.
 - Avoid editing generated output unless explicitly requested.
 
 ## Hugo Guidance (`src/`)
@@ -36,13 +34,6 @@ Prefer British spelling and phrasing, for example: "organisation", "behaviour", 
 - Reuse current shortcodes and template patterns in `src/layouts/`.
 - Prefer content edits over structural template changes unless requested.
 - Treat `src/public/` and `src/resources/_gen/` as build artefacts; edit only when the task explicitly asks for it.
-
-## ContentOps Guidance (`automation/dotnet/`)
-
-- Keep domain rules in Domain, orchestration in Application, technical details in Infrastructure, and startup wiring in CLI.
-- Follow one-type-per-file conventions.
-- Prefer explicit result and validation flows over exception-driven control flow for expected failures.
-- Respect integration boundaries for Spotify and Lidarr libraries.
 
 ## Safety and Quality
 

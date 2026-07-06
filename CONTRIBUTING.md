@@ -2,10 +2,7 @@
 
 Thank you for contributing to Sundown Sessions.
 
-This guide defines the repository branching convention and pull request workflow for both workstreams:
-
-- `src/` (Hugo website)
-- `automation/dotnet/` (ContentOps automation)
+This guide defines the repository branching convention and pull request workflow.
 
 > **Note — Blowfish migration in progress.** The Hugo site is being moved onto
 > the [Blowfish](https://github.com/nunocoracao/blowfish) theme in small,
@@ -39,8 +36,6 @@ Examples:
 - `feat/src/add-artist-social-links`
 - `fix/src/correct-show-ordering`
 - `docs/repo/clarify-local-setup`
-- `feat/automation-dotnet/add-release-validation`
-- `refactor/automation-dotnet/simplify-command-handler`
 
 ### Allowed Type Values
 
@@ -60,8 +55,7 @@ The branch `type` should align with the conventional commit categories used in p
 Use a clear workstream segment that reflects the area being changed:
 
 - `src` for Hugo website work
-- `automation-dotnet` for ContentOps work
-- `repo` for repository-level changes that span both workstreams
+- `repo` for repository-level changes
 
 ### Short Description Rules
 
@@ -98,7 +92,6 @@ Accepted `type` values are:
 
 Examples:
 
-- `feat(contentops): add release validation command`
 - `fix(website): correct show ordering logic`
 - `docs: define repository branching convention`
 
@@ -106,20 +99,11 @@ Examples:
 
 Pull request descriptions should clearly explain intent, context, and impact.
 
-### Changelog Expectation for ContentOps
-
-If your pull request changes files under `automation/dotnet/`, update [CHANGELOG.md](CHANGELOG.md) when behaviour or release notes are affected.
-
 ## Release and Deployment Notes
 
 ### Website
 
 - Production deployment is triggered from `main`.
-
-### ContentOps
-
-- Releases can be created manually via workflow dispatch.
-- Tag-based releases use the `contentops/v*` naming pattern.
 
 ### GitHub Actions Updates
 
@@ -132,7 +116,6 @@ If your pull request changes files under `automation/dotnet/`, update [CHANGELOG
 ## Additional Repository Standards
 
 - Use British English in documentation and user-facing text.
-- Keep website and automation concerns separated unless a change explicitly requires both.
 - Keep edits scoped and avoid unrelated refactoring.
 
-For architecture and setup details, see [README.md](README.md) and [automation/dotnet/README.md](automation/dotnet/README.md).
+For architecture and setup details, see [README.md](README.md).
