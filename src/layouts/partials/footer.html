@@ -41,6 +41,43 @@
       </nav>
     {{ end }}
   {{ end }}
+  {{ with .Site.Params.Author.links }}
+    {{ $socialLabels := dict
+      "facebook" "Facebook"
+      "instagram" "Instagram"
+      "tiktok" "TikTok"
+      "mixcloud" "Mixcloud"
+      "pinterest" "Pinterest"
+      "x-twitter" "X"
+      "mastodon" "Mastodon"
+      "linkedin" "LinkedIn"
+    }}
+    <nav class="pb-5" aria-label="Sundown Sessions social links">
+      <ul class="flex list-none flex-wrap justify-center gap-4 p-0 sm:justify-start">
+        {{ range $links := . }}
+          {{ range $name, $url := $links }}
+            {{ $isEmail := eq $name "email" }}
+            {{ $label := index $socialLabels $name | default ($name | title) }}
+            <li class="flex">
+              <a
+                class="{{ cond $isEmail "email-link" "" }} text-neutral-500 transition hover:text-primary-700 dark:text-neutral-400 dark:hover:text-primary-400"
+                href="{{ cond $isEmail "#" ($url | safeURL) }}"
+                {{ if $isEmail }}
+                  data-email="{{ $url | base64Encode }}"
+                {{ else }}
+                  target="_blank"
+                {{ end }}
+                aria-label="Follow Sundown Sessions on {{ $label }}"
+                title="Follow Sundown Sessions on {{ $label }}"
+                rel="me noopener noreferrer">
+                <span class="inline-block align-text-bottom">{{ partial "icon.html" $name }}</span>
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }}
   <div class="flex flex-col items-center justify-between gap-2 text-center sm:flex-row sm:text-left">
     {{/* Copyright */}}
     {{ if .Site.Params.footer.showCopyright | default true }}

@@ -6,29 +6,8 @@
   weight = 10
 
 [[footer]]
-  identifier = "mixcloud"
-  name = "Mixcloud"
-  title = "Sundown Sessions on Mixcloud"
-  url = "https://www.mixcloud.com/sundownsessions/"
-  weight = 20
-
-[[footer]]
-  identifier = "instagram"
-  name = "Instagram"
-  title = "Sundown Sessions on Instagram"
-  url = "https://www.instagram.com/sundownsessionsshow"
-  weight = 30
-
-[[footer]]
-  identifier = "facebook"
-  name = "Facebook"
-  title = "Sundown Sessions on Facebook"
-  url = "https://www.facebook.com/sundownsessionsuk"
-  weight = 40
-
-[[footer]]
   identifier = "contact"
   name = "Contact"
   title = "Get in touch with the show."
   url = "/contact/"
-  weight = 50
+  weight = 20
