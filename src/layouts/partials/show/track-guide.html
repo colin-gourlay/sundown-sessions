@@ -35,31 +35,23 @@
         <li class="show-track-guide__item" value="{{ .number }}">
           <div class="show-track-guide__number" aria-hidden="true">{{ .number }}</div>
           <div class="show-track-guide__body">
-            <div class="show-track-guide__main">
-              <div class="show-track-guide__title" role="heading" aria-level="3">{{ $page.RenderString .title }}</div>
-              {{ if or .album .duration }}
+            <div class="show-track-guide__identity" role="heading" aria-level="3">{{ $page.RenderString .title }}</div>
+            <div class="show-track-guide__details">
+              {{ with .album }}
                 <dl class="show-track-guide__meta">
-                  {{ with .album }}
-                    <div>
-                      <dt>Release</dt>
-                      <dd>{{ $page.RenderString . }}</dd>
-                    </div>
-                  {{ end }}
-                  {{ with .duration }}
-                    <div>
-                      <dt>Duration</dt>
-                      <dd>{{ . }}</dd>
-                    </div>
-                  {{ end }}
+                  <div>
+                    <dt>Release</dt>
+                    <dd>{{ $page.RenderString . }}</dd>
+                  </div>
                 </dl>
               {{ end }}
+              {{ with .notes }}
+                <div class="show-track-guide__context">
+                  <p class="show-track-guide__context-label">Why It Mattered</p>
+                  <div class="show-track-guide__context-copy">{{ $page.RenderString . }}</div>
+                </div>
+              {{ end }}
             </div>
-            {{ with .notes }}
-              <div class="show-track-guide__context">
-                <p class="show-track-guide__context-label">Why it mattered</p>
-                <div class="show-track-guide__context-copy">{{ $page.RenderString . }}</div>
-              </div>
-            {{ end }}
           </div>
         </li>
       {{ end }}
