@@ -61,12 +61,9 @@
             {{ $page.Scratch.Delete "trackGuideReleaseHref" }}
             <div class="show-track-guide__details">
               {{ with .album }}
-                <dl class="show-track-guide__meta">
-                  <div>
-                    <dt>Release</dt>
-                    <dd>{{ $page.RenderString . }}</dd>
-                  </div>
-                </dl>
+                {{ $page.Scratch.Set "trackGuideReleaseMeta" true }}
+                <div class="show-track-guide__meta">{{ $page.RenderString . }}</div>
+                {{ $page.Scratch.Delete "trackGuideReleaseMeta" }}
               {{ end }}
               {{ with .notes }}
                 <div class="show-track-guide__context">
