@@ -14,19 +14,6 @@ updates:
         patterns:
           - "*"
 
-  - package-ecosystem: nuget
-    directory: /automation/dotnet
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 10
-    labels:
-      - dependencies
-      - dotnet
-    groups:
-      dotnet-dependencies:
-        patterns:
-          - "*"
-
   - package-ecosystem: npm
     directory: /src/themes/sundown-sessions
     schedule:
