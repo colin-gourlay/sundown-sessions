@@ -10,11 +10,11 @@
     {{ $featuredGuestAnchor := printf "%sshows/featuring-%s/#featured-artist" $.Site.BaseURL ($artist | urlize) | safeURL }}
     {{ $featuredGuestImageUri := printf "%s-large.jpeg" $artist | urlize }}
     <div style="display: flex; align-items: center;">
-        <img src="{{ $featuredGuestImageUri }}" alt="" style="width: 20%; height: auto; margin-right: 10px;">
+        <img src="{{ $featuredGuestImageUri }}" alt="" loading="lazy" style="width: 20%; height: auto; margin-right: 10px;">
         <div>
-            {{ if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}
+            <span class="track-title__name">{{ if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}</span>
             <br>
-            <a href="{{ $featuredGuestAnchor }}">{{ $artist }}</a>
+            <span class="track-title__artist"><a href="{{ $featuredGuestAnchor }}">{{ $artist }}</a></span>
         </div>
     </div>
 {{ end }}

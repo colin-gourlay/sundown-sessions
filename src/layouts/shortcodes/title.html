@@ -21,11 +21,11 @@
     {{ $trackSlug := $track | urlize }}
     {{ $trackPage := $.Site.GetPage (printf "tracks/%s/%s/%s" $artistFirstChar $artistSlug $trackSlug) }}
     <div style="display: flex; align-items: center;">
-        <img src="{{ $releaseUri }}" alt="" style="width: 20%; height: auto; margin-right: 10px;">
+        <img src="{{ $releaseUri }}" alt="" loading="lazy" style="width: 20%; height: auto; margin-right: 10px;">
         <div>
-            {{ if $trackPage }}<a href="{{ $trackPage.Permalink }}">{{ $track }}</a>{{ else if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}
+            <span class="track-title__name">{{ if $trackPage }}<a href="{{ $trackPage.Permalink }}">{{ $track }}</a>{{ else if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}</span>
             <br>
-            <a href="{{ $artistUri }}">{{ $artist }}</a>
+            <span class="track-title__artist"><a href="{{ $artistUri }}">{{ $artist }}</a></span>
         </div>
     </div>
 {{ end }}
