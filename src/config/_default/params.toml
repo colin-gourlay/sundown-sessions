@@ -172,8 +172,9 @@ headerAvatar = "/images/sundown-sessions-logo.jpg"
     { facebook = "https://www.facebook.com/sundownsessionsuk" },
     { instagram = "https://www.instagram.com/sundownsessionsshow" },
     { tiktok = "https://www.tiktok.com/@sundownsessionsshow" },
+    { mixcloud = "https://www.mixcloud.com/sundownsessions/" },
     { pinterest = "https://www.pinterest.co.uk/sundownsessionsshow/" },
-    { twitter = "https://x.com/sundown_session" },
+    { "x-twitter" = "https://x.com/sundown_session" },
     { mastodon = "https://mastodon.scot/@sundown_sessions" },
     { linkedin = "https://www.linkedin.com/in/colingourlay" },
   ]
