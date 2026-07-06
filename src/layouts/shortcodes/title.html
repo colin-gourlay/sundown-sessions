@@ -20,8 +20,9 @@
     {{ $releaseUri := printf "%s-large.jpeg" $artist | urlize }}
     {{ $trackSlug := $track | urlize }}
     {{ $trackPage := $.Site.GetPage (printf "tracks/%s/%s/%s" $artistFirstChar $artistSlug $trackSlug) }}
+    {{ $artworkHref := $.Page.Scratch.Get "trackGuideReleaseHref" }}
     <div style="display: flex; align-items: center;">
-        <img src="{{ $releaseUri }}" alt="" loading="lazy" style="width: 20%; height: auto; margin-right: 10px;">
+        {{ if $artworkHref }}<a class="track-title__artwork-link" href="{{ $artworkHref }}" aria-label="View release page">{{ end }}<img src="{{ $releaseUri }}" alt="" loading="lazy" style="width: 20%; height: auto; margin-right: 10px;">{{ if $artworkHref }}</a>{{ end }}
         <div>
             <span class="track-title__name">{{ if $trackPage }}<a href="{{ $trackPage.Permalink }}">{{ $track }}</a>{{ else if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}</span>
             <br>

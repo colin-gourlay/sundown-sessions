@@ -12,6 +12,26 @@
       {{ $album := strings.TrimSpace (index $cells 3) }}
       {{ $duration := strings.TrimSpace (index $cells 4) }}
       {{ $notes := strings.TrimSpace (index $cells 5) }}
+      {{ $releaseHref := "" }}
+      {{ $releaseParts := findRESubmatch `\{\{<\s*release\s+"([^"]+)"\s*>\}\}` $album }}
+      {{ if gt (len $releaseParts) 0 }}
+        {{ with index $releaseParts 0 }}
+          {{ $parts := split (index . 1) "--" }}
+          {{ if ge (len $parts) 2 }}
+            {{ $releaseName := index $parts 0 }}
+            {{ $artist := index $parts 1 }}
+            {{ $artistFirstChar := index $artist 0 | printf "%c" | lower }}
+            {{ $artistSlug := $artist | urlize }}
+            {{ $releaseSlug := $releaseName | urlize }}
+            {{ if ge (len $parts) 3 }}
+              {{ with index $parts 2 | strings.TrimSpace }}{{ $releaseSlug = . | urlize }}{{ end }}
+            {{ end }}
+            {{ with $page.Site.GetPage (printf "releases/%s/%s/%s" $artistFirstChar $artistSlug $releaseSlug) }}
+              {{ $releaseHref = .Permalink }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
       {{ if $title }}
         {{ $rows = $rows | append (dict
           "number" $number
@@ -19,6 +39,7 @@
           "album" $album
           "duration" $duration
           "notes" $notes
+          "releaseHref" $releaseHref
         ) }}
       {{ end }}
     {{ end }}
@@ -35,7 +56,9 @@
         <li class="show-track-guide__item" value="{{ .number }}">
           <div class="show-track-guide__number" aria-hidden="true">{{ .number }}</div>
           <div class="show-track-guide__body">
+            {{ $page.Scratch.Set "trackGuideReleaseHref" .releaseHref }}
             <div class="show-track-guide__identity" role="heading" aria-level="3">{{ $page.RenderString .title }}</div>
+            {{ $page.Scratch.Delete "trackGuideReleaseHref" }}
             <div class="show-track-guide__details">
               {{ with .album }}
                 <dl class="show-track-guide__meta">
