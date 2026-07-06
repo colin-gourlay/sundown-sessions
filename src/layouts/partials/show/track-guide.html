@@ -1,0 +1,70 @@
+{{ $page := .page }}
+{{ $content := .content }}
+{{ $rows := slice }}
+
+{{ range split $content "\n" }}
+  {{ $line := strings.TrimSpace . }}
+  {{ if and (hasPrefix $line "|") (not (findRE `^\|\s*:?-+` $line)) (not (findRE `^\|\s*#\s*\|` $line)) }}
+    {{ $cells := split $line "|" }}
+    {{ if ge (len $cells) 6 }}
+      {{ $number := strings.TrimSpace (index $cells 1) }}
+      {{ $title := strings.TrimSpace (index $cells 2) }}
+      {{ $album := strings.TrimSpace (index $cells 3) }}
+      {{ $duration := strings.TrimSpace (index $cells 4) }}
+      {{ $notes := strings.TrimSpace (index $cells 5) }}
+      {{ if $title }}
+        {{ $rows = $rows | append (dict
+          "number" $number
+          "title" $title
+          "album" $album
+          "duration" $duration
+          "notes" $notes
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $rows) 0 }}
+  <div class="show-track-guide not-prose">
+    <p class="show-track-guide__intro">
+      A guided companion to the broadcast sequence: what was played, where it came from, and the extra context that shaped its place in the show.
+    </p>
+    <ol class="show-track-guide__list">
+      {{ range $rows }}
+        <li class="show-track-guide__item" value="{{ .number }}">
+          <div class="show-track-guide__number" aria-hidden="true">{{ .number }}</div>
+          <div class="show-track-guide__body">
+            <div class="show-track-guide__main">
+              <div class="show-track-guide__title" role="heading" aria-level="3">{{ $page.RenderString .title }}</div>
+              {{ if or .album .duration }}
+                <dl class="show-track-guide__meta">
+                  {{ with .album }}
+                    <div>
+                      <dt>Release</dt>
+                      <dd>{{ $page.RenderString . }}</dd>
+                    </div>
+                  {{ end }}
+                  {{ with .duration }}
+                    <div>
+                      <dt>Duration</dt>
+                      <dd>{{ . }}</dd>
+                    </div>
+                  {{ end }}
+                </dl>
+              {{ end }}
+            </div>
+            {{ with .notes }}
+              <div class="show-track-guide__context">
+                <p class="show-track-guide__context-label">Why it mattered</p>
+                <div class="show-track-guide__context-copy">{{ $page.RenderString . }}</div>
+              </div>
+            {{ end }}
+          </div>
+        </li>
+      {{ end }}
+    </ol>
+  </div>
+{{ else }}
+  {{ $page.RenderString $content }}
+{{ end }}

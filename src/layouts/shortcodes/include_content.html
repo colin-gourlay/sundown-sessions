@@ -232,7 +232,11 @@
     {{ $content = delimit $lines "\n" }}
   {{ end }}
 
-  {{ $.Page.RenderString $content }}
+  {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/track-info") }}
+    {{ partial "show/track-guide.html" (dict "page" $.Page "content" $content) }}
+  {{ else }}
+    {{ $.Page.RenderString $content }}
+  {{ end }}
   {{ end }}
   {{ end }}
 {{ end }}
