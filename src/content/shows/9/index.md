@@ -83,6 +83,6 @@ Links, references, releases, gigs and further reading mentioned during the broad
 
 ---
 
-## Tracks
+## Track Guide
 {{< include_content "/shows/9/track-info" >}}
 
