@@ -6,7 +6,6 @@ featuredInShows:
   - "12"
 shows:
   - "12"
-lastmod: "2026-06-25"
 ---
 
 ## About
