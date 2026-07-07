@@ -3,9 +3,7 @@ genres: ["Power Pop","Pub Rock"]
 featured_image: artists/t/the-motors/the-motors.jpg
 title: The Motors
 editorialSummary: >
-  The Motors combined the energy of new wave with classic pop songwriting,
-  producing timeless singles that continue to demonstrate just how effortlessly
-  catchy intelligent guitar music can be.
+  The Motors fused new wave energy with classic pop songwriting to produce timeless, irresistibly catchy records.
 artist_page: true
 ---
 ## About

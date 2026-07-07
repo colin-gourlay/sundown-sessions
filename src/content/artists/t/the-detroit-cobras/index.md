@@ -3,9 +3,7 @@ genres: ["Garage Rock"]
 featured_image: artists/t/the-detroit-cobras/the-detroit-cobras.jpg
 title: The Detroit Cobras
 editorialSummary: >
-  The Detroit Cobras breathe new life into forgotten rhythm and blues classics,
-  delivering raw garage rock performances packed with swagger, soul and
-  irresistible energy.
+  The Detroit Cobras revive forgotten rhythm and blues classics with swagger, soul and infectious garage rock energy.
 artist_page: true
 ---
 ## About

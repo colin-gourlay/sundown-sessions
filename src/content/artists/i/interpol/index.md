@@ -3,9 +3,7 @@ genres: ["Alternative Rock","Indie Rock","Post-Punk","Post-Punk Revival"]
 featured_image: artists/i/interpol/interpol.jpg
 title: Interpol
 editorialSummary: >
-  Interpol revived the spirit of post-punk with brooding guitars, atmospheric
-  rhythms and understated intensity. Their elegant, cinematic sound has made
-  them one of the defining alternative bands of the twenty-first century.
+  Interpol revived post-punk with elegant guitars, cinematic atmosphere and understated intensity that continues to define modern alternative music.
 artist_page: true
 ---
 ## About
