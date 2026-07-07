@@ -463,7 +463,6 @@ function New-ReleasePageContent {
         }
     }
 
-    Add-YamlScalar $builder "lastmod" (Get-Date -Format "yyyy-MM-dd")
     [void]$builder.AppendLine("---")
     [void]$builder.AppendLine()
     [void]$builder.AppendLine("## About")

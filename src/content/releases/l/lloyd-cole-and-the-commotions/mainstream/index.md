@@ -49,7 +49,6 @@ tracks:
     duration: "02:27"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/6e3f99ab-fccf-379a-9631-ad8940967db3"
-lastmod: "2026-06-25"
 ---
 
 ## About

@@ -38,7 +38,6 @@ tracks:
     trackNumber: 2
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/be67ce51-1e0e-35da-9f55-9d13fdc262bc"
-lastmod: "2026-06-25"
 ---
 
 ## About
