@@ -3,9 +3,7 @@ genres: ["Alternative Pop","Alternative Rock","Gothic","Gothic Rock","Indie Pop"
 featured_image: artists/t/the-filthy-tongues/the-filthy-tongues.jpg
 title: The Filthy Tongues
 editorialSummary: >
-  The Filthy Tongues produce cinematic alternative rock filled with atmosphere,
-  intensity and emotional weight. Their expansive soundscapes have made them one
-  of Scotland's most compelling contemporary bands.
+  The Filthy Tongues craft cinematic alternative rock filled with atmosphere, intensity and emotional depth.
 artist_page: true
 ---
 ## About

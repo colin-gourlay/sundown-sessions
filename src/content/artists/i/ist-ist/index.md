@@ -3,9 +3,7 @@ genres: []
 featured_image: artists/i/ist-ist/ist-ist.jpg
 title: IST IST
 editorialSummary: >
-  IST IST create atmospheric post-punk built on hypnotic rhythms, brooding
-  guitars and commanding vocals. Their dark, immersive sound has established
-  them as one of the UK's standout modern alternative bands.
+  IST IST create brooding post-punk driven by hypnotic rhythms, atmospheric guitars and commanding vocals.
 artist_page: true
 ---
 ## About

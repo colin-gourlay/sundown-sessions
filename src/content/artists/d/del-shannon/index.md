@@ -3,9 +3,7 @@ genres: ["Country","Pop","Pop Rock","Psychedelic Pop","Rock","Rock And Roll","Te
 featured_image: artists/d/del-shannon/del-shannon.jpg
 title: Del Shannon
 editorialSummary: >
-  Del Shannon's instantly recognisable voice and pioneering songwriting helped
-  shape the sound of early rock and pop. His emotional performances and timeless
-  melodies continue to resonate across generations of music lovers.
+  Del Shannon's timeless melodies and unmistakable voice helped shape the sound of early rock and pop.
 artist_page: true
 ---
 ## About

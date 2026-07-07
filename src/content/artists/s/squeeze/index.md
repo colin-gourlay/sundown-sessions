@@ -4,9 +4,7 @@ featured_image: artists/s/squeeze/squeeze.jpg
 title: Squeeze
 discogs_name: "Squeeze (2)"
 editorialSummary: >
-  Squeeze combine razor-sharp songwriting with unforgettable melodies, blending
-  pop craftsmanship, wit and everyday storytelling into songs that remain as
-  fresh and relatable today as when they were first recorded.
+  Squeeze pair exceptional songwriting with timeless melodies, wit and everyday storytelling that still sounds effortlessly fresh.
 artist_page: true
 ---
 ## About

@@ -3,9 +3,7 @@ genres: ["Electropop"]
 featured_image: artists/b/becky-becky/becky-becky.jpg
 title: Becky Becky
 editorialSummary: >
-  Becky Becky crafts adventurous art-pop that balances infectious melodies with
-  playful experimentation. Her inventive songwriting and distinctive sound make
-  every release an unexpected musical journey.
+  Becky Becky creates inventive art-pop filled with infectious melodies, bold ideas and unexpected musical twists.
 artist_page: true
 ---
 ## About

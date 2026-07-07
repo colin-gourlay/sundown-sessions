@@ -5,8 +5,7 @@ title: Queens of the Stone Age
 summary: "American rock band from Palm Desert, California, known for riff-driven hard rock, distinctive falsetto vocals, and influential alternative rock recordings."
 description: "American rock band from Palm Desert, California, formed in 1996 and known for their riff-driven hard rock sound, distinctive falsetto vocals, and influential alternative rock recordings."
 editorialSummary: >
-  Queens of the Stone Age combine desert-rock swagger, huge riffs and irresistible grooves,
-  making them one of the defining alternative rock bands of the modern era.
+  Queens of the Stone Age combine desert-rock swagger, huge riffs and irresistible grooves, making them one of alternative rock's defining modern bands.
 artist_page: true
 ---
 ## About
