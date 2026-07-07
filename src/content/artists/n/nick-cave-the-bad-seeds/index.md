@@ -1,6 +1,10 @@
 ---
 title: Nick Cave & The Bad Seeds
 featured_image: artists/n/nick-cave-the-bad-seeds/nick-cave-the-bad-seeds.jpg
+editorialSummary: >
+  Nick Cave & The Bad Seeds create music of extraordinary emotional depth,
+  combining haunting storytelling with dramatic arrangements that have
+  continually pushed the boundaries of alternative rock for more than four decades.
 artist_page: true
 ---
 ## About

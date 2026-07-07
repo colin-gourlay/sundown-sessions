@@ -2,6 +2,11 @@
 genres: ["Alternative Rock","Folk","Folk Rock","Indie Rock"]
 featured_image: artists/j/john-grant/john-grant.jpg
 title: John Grant
+editorialSummary: >
+  John Grant combines brutally honest songwriting with rich, genre-defying
+  arrangements that move effortlessly between folk, electronic music and
+  orchestral pop. His deeply personal lyrics make every record both intimate
+  and unforgettable.
 artist_page: true
 ---
 ## About

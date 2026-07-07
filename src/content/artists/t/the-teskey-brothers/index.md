@@ -2,6 +2,10 @@
 genres: ["Blues Rock","Soul"]
 featured_image: artists/t/the-teskey-brothers/the-teskey-brothers.jpg
 title: The Teskey Brothers
+editorialSummary: >
+  The Teskey Brothers revive the timeless spirit of classic soul through
+  heartfelt songwriting, rich musicianship and deeply emotional performances
+  that feel both authentic and refreshingly contemporary.
 artist_page: true
 ---
 ## About

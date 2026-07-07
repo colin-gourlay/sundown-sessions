@@ -2,6 +2,10 @@
 genres: ["Alternative Dance","Alternative Rock","Art Rock","Dance-Punk","Indie Pop","Indie Rock","Indietronica","New Wave","Pop","Post-Punk","Post-Punk Revival"]
 featured_image: artists/f/franz-ferdinand/franz-ferdinand.jpg
 title: Franz Ferdinand
+editorialSummary: >
+  Franz Ferdinand helped redefine British indie rock with razor-sharp guitars,
+  irresistible hooks and dancefloor energy. Their fearless blend of post-punk
+  attitude and melodic invention makes them an enduring favourite on Sundown Sessions.
 artist_page: true
 ---
 ## About

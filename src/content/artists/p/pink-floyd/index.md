@@ -2,6 +2,11 @@
 genres: ["Art Rock","Classic Rock","Experimental Rock","Progressive","Progressive Rock","Psychedelic","Psychedelic Pop","Psychedelic Rock","Rock","Space Rock","Symphonic Rock","Rock Opera"]
 featured_image: artists/p/pink-floyd/pink-floyd.jpg
 title: Pink Floyd
+editorialSummary: >
+  Pink Floyd transformed progressive rock into immersive musical journeys,
+  combining atmosphere, experimentation and unforgettable songwriting. Their
+  influence reaches far beyond rock, making them one of the defining bands of
+  modern music.
 artist_page: true
 ---
 ## About

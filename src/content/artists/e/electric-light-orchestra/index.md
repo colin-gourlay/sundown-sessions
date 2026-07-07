@@ -2,6 +2,10 @@
 genres: ["Art Rock","Crossover Prog","Pop","Pop Rock","Progressive","Progressive Rock","Rock","Symphonic Prog","Symphonic Rock","Progressive Pop"]
 featured_image: artists/e/electric-light-orchestra/electric-light-orchestra.jpg
 title: Electric Light Orchestra
+editorialSummary: >
+  Electric Light Orchestra fused rock, classical ambition and timeless melodies
+  into one of popular music's most distinctive sounds. Their cinematic
+  songwriting and rich orchestration remain as captivating today as ever.
 artist_page: true
 ---
 ## About

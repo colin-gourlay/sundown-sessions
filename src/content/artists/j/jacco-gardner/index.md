@@ -2,6 +2,10 @@
 genres: ["Indie Pop","Psychedelic"]
 featured_image: artists/j/jacco-gardner/jacco-gardner.jpg
 title: Jacco Gardner
+editorialSummary: >
+  Jacco Gardner creates beautifully crafted psychedelic pop inspired by the rich
+  textures and melodies of the late sixties. His lush arrangements reward
+  listeners who enjoy immersive, carefully constructed music.
 artist_page: true
 ---
 ## About
