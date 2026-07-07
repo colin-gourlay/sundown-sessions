@@ -2,6 +2,10 @@
 genres: []
 featured_image: artists/r/roachford/roachford.jpg
 title: Roachford
+editorialSummary: >
+  Roachford effortlessly blends soul, rock and funk into songs full of warmth,
+  groove and heartfelt emotion. His distinctive voice has remained one of
+  British music's most recognisable for decades.
 artist_page: true
 ---
 ## About

@@ -2,6 +2,10 @@
 genres: ["Art Rock","Chamber Pop","Club","Dance","Disco","Glam Rock","New Wave","Pop","Synth-Pop","Art Pop","Zolo","Baroque Pop"]
 featured_image: artists/s/sparks/sparks.jpg
 title: Sparks
+editorialSummary: >
+  Sparks have spent decades reinventing pop music through wit, invention and
+  fearless experimentation. Their unmistakable blend of art-pop, glam and
+  theatrical songwriting continues to inspire generations of musicians and listeners alike.
 artist_page: true
 ---
 ## About

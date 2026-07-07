@@ -2,6 +2,10 @@
 genres: ["Hard Rock","Pop","Pop Rock","Progressive Rock","Psychedelic Pop","Psychedelic Rock","Freakbeat"]
 featured_image: artists/t/the-move/the-move.jpg
 title: The Move
+editorialSummary: >
+  The Move blended psychedelic pop, hard rock and fearless experimentation long
+  before genre boundaries became fashionable. Their adventurous songwriting laid
+  important foundations for generations of British rock musicians.
 artist_page: true
 ---
 ## About
