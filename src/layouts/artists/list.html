@@ -1,0 +1,56 @@
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "list" }}
+  {{ $artists := .Pages.ByTitle }}
+  {{ $letters := slice }}
+  {{ range $artists }}
+    {{ $firstLetter := upper (substr (.Title | plainify) 0 1) }}
+    {{ if findRE "^[A-Z]$" $firstLetter }}
+      {{ $letters = $letters | append $firstLetter }}
+    {{ end }}
+  {{ end }}
+  {{ $letters = uniq $letters }}
+
+  {{ partial "section-hero.html" . }}
+
+  {{ with .Content }}
+    <section class="artists-archive-intro prose flex max-w-full flex-col dark:prose-invert mb-10">
+      <div class="min-w-0 min-h-0 max-w-prose w-full">
+        {{ . }}
+      </div>
+    </section>
+  {{ end }}
+
+  {{ if gt (len $artists) 0 }}
+    <nav class="artists-az-nav" aria-label="Browse artists alphabetically">
+      <ol class="artists-az-nav__list">
+        {{ range split "ABCDEFGHIJKLMNOPQRSTUVWXYZ" "" }}
+          {{ $letter := . }}
+          {{ if in $letters $letter }}
+            <li><a href="#artists-letter-{{ lower $letter }}">{{ $letter }}</a></li>
+          {{ else }}
+            <li><span aria-disabled="true">{{ $letter }}</span></li>
+          {{ end }}
+        {{ end }}
+      </ol>
+    </nav>
+
+    {{ $seenLetters := dict }}
+    <section class="artists-archive-grid" role="list" aria-label="Artists">
+      {{ range $artists }}
+        {{ $firstLetter := upper (substr (.Title | plainify) 0 1) }}
+        {{ $anchorID := "" }}
+        {{ if and (findRE "^[A-Z]$" $firstLetter) (not (isset $seenLetters $firstLetter)) }}
+          {{ $anchorID = printf "artists-letter-%s" (lower $firstLetter) }}
+          {{ $seenLetters = merge $seenLetters (dict $firstLetter true) }}
+        {{ end }}
+        {{ partial "article-link/artist-list-card.html" (dict "page" . "anchorID" $anchorID) }}
+      {{ end }}
+    </section>
+  {{ else }}
+    <section class="mt-10 prose dark:prose-invert">
+      <p class="py-8 border-t">
+        <em>{{ i18n "list.no_articles" | emojify }}</em>
+      </p>
+    </section>
+  {{ end }}
+{{ end }}
