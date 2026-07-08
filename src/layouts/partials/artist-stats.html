@@ -1,23 +1,10 @@
 {{/* Artist Statistics — displays a dedicated statistics section showing the artist's
-     history within Sundown Sessions. Shows are matched by case-insensitive tag comparison.
-     Tracks are counted from the tracks section using the artist front matter field.
+     history within Sundown Sessions. Shows and tracks are derived from playlist entries.
      Only rendered when the artist has appeared in at least one broadcast. */}}
 
-{{ $artistTitleLower := lower .Title }}
-{{ $featuredShows := slice }}
-{{ $showsSection := site.GetPage "shows" }}
-{{ if $showsSection }}
-  {{ range where $showsSection.Pages ".Date.IsZero" false }}
-    {{ $showPage := . }}
-    {{ $matched := false }}
-    {{ range .Params.tags }}
-      {{ if and (not $matched) (eq (lower .) $artistTitleLower) }}
-        {{ $featuredShows = $featuredShows | append $showPage }}
-        {{ $matched = true }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{ $artistArchiveStats := partial "artist-archive-stats.html" . }}
+{{ $featuredShows := $artistArchiveStats.featuredShows }}
+{{ $trackCount := $artistArchiveStats.trackCount }}
 
 {{ $showCount := len $featuredShows }}
 
@@ -27,17 +14,6 @@
   {{ $firstShow := index $sorted 0 }}
   {{ $latestShow := index $sorted (sub $showCount 1) }}
   {{ $dateFormat := site.Params.dateFormat | default "2 January 2006" }}
-
-  {{/* Tracks played — count all track pages whose artist field matches this artist */}}
-  {{ $trackCount := 0 }}
-  {{ $tracksSection := site.GetPage "tracks" }}
-  {{ if $tracksSection }}
-    {{ range $tracksSection.RegularPagesRecursive }}
-      {{ if eq (lower .Params.artist) $artistTitleLower }}
-        {{ $trackCount = add $trackCount 1 }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
 
   <section
     class="mb-10 not-prose"

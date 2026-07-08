@@ -57,22 +57,10 @@
   {{ $artistSummary = $artistSummary | truncate $artistSummaryMaxLength }}
 {{ end }}
 
-{{/* Sundown Sessions statistics — find all featured shows for this artist */}}
-{{ $artistTitleLower := lower .Title }}
-{{ $featuredShows := slice }}
-{{ $showsSection := site.GetPage "shows" }}
-{{ if $showsSection }}
-  {{ range where $showsSection.Pages ".Date.IsZero" false }}
-    {{ $showPage := . }}
-    {{ $matched := false }}
-    {{ range .Params.tags }}
-      {{ if and (not $matched) (eq (lower .) $artistTitleLower) }}
-        {{ $featuredShows = $featuredShows | append $showPage }}
-        {{ $matched = true }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{/* Sundown Sessions statistics — derive featured shows and tracks from playlists */}}
+{{ $artistArchiveStats := partial "artist-archive-stats.html" . }}
+{{ $featuredShows := $artistArchiveStats.featuredShows }}
+{{ $trackCount := $artistArchiveStats.trackCount }}
 
 {{ $showCount := len $featuredShows }}
 {{ $firstShow := "" }}
@@ -82,16 +70,6 @@
   {{ $sorted := $featuredShows.ByDate }}
   {{ $firstShow = index $sorted 0 }}
   {{ $latestShow = index $sorted (sub $showCount 1) }}
-{{ end }}
-{{ $trackCount := 0 }}
-{{ $tracksSection := site.GetPage "tracks" }}
-{{ if $tracksSection }}
-  {{ range $tracksSection.RegularPagesRecursive }}
-    {{ $trackArtistLower := lower (.Params.artist | default "") }}
-    {{ if eq $trackArtistLower $artistTitleLower }}
-      {{ $trackCount = add $trackCount 1 }}
-    {{ end }}
-  {{ end }}
 {{ end }}
 {{ $dateFormat := site.Params.dateFormat | default "2 January 2006" }}
 {{ $latestShowPermalink := "" }}
