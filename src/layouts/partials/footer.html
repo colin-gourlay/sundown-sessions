@@ -1,27 +1,21 @@
 <footer id="site-footer" class="py-10 print:hidden">
   {{/* Footer menu */}}
   {{ if .Site.Params.footer.showMenu | default true }}
-    {{ $listenURL := .Site.Params.listen_live_stream_url | default "" }}
-    {{ $hasListenURL := and (ne $listenURL "") (ne $listenURL "#") }}
-    {{ if or $hasListenURL .Site.Menus.footer }}
+    {{ $listenURL := "/listen-live/" | relURL }}
+    {{ if or $listenURL .Site.Menus.footer }}
       <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400" aria-label="Footer">
         <ul class="flex list-none flex-wrap justify-center gap-x-5 gap-y-2 p-0 sm:justify-start">
-          {{ if $hasListenURL }}
-            <li class="flex">
-              <a
-                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="{{ $listenURL }}"
-                data-analytics-event="listen_live_click"
-                data-analytics-provider="live-stream"
-                {{ if or (strings.HasPrefix $listenURL "http:") (strings.HasPrefix $listenURL "https:") }}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                {{ end }}
-                title="Listen to Sundown Sessions live">
-                Listen Live
-              </a>
-            </li>
-          {{ end }}
+          <li class="flex">
+            <a
+              class="font-semibold text-primary-700 decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 dark:text-primary-400"
+              href="{{ $listenURL }}"
+              data-analytics-event="listen_live_click"
+              data-analytics-provider="footer-listen-live"
+              aria-label="Listen live to Sundown Sessions"
+              title="Listen to Sundown Sessions live">
+              ▶ Listen Live
+            </a>
+          </li>
           {{ range .Site.Menus.footer }}
             {{ $isExternal := or (strings.HasPrefix .URL "http:") (strings.HasPrefix .URL "https:") }}
             <li class="flex">
