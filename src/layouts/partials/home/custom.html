@@ -42,18 +42,7 @@
             {{ with .Params.strapline }}
               <p class="mt-2 text-base font-semibold tracking-widest text-neutral-200 drop-shadow-lg hero-text-shadow uppercase sm:text-lg">{{ . }}</p>
             {{ end }}
-            <a
-              class="homepage-listen-cta ss-primary-action mt-6 inline-flex items-center justify-center gap-3 rounded-full px-7 py-3.5 text-base font-extrabold tracking-wide transition sm:px-8 sm:py-4 sm:text-lg"
-              href="{{ "/listen-live/" | relURL }}"
-              data-analytics-event="listen_live_click"
-              data-analytics-provider="homepage-hero"
-              aria-label="Listen live to Sundown Sessions">
-              <span class="homepage-listen-cta__icon flex items-center justify-center" aria-hidden="true">
-                {{ partial "icon.html" "play" }}
-              </span>
-              <span>Listen Live</span>
-            </a>
-            <p class="homepage-live-note mt-3 text-sm font-bold tracking-wider text-neutral-100 drop-shadow-lg hero-text-shadow uppercase sm:text-base">Live stream and latest track info</p>
+            
           </div>
         </div>
       </section>
