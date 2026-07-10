@@ -1,0 +1,22 @@
+{
+  "defaults": {
+    "standard": "WCAG2AA",
+    "timeout": 30000,
+    "wait": 500,
+    "chromeLaunchConfig": {
+      "args": ["--no-sandbox", "--disable-dev-shm-usage"]
+    }
+  },
+  "urls": [
+    "http://127.0.0.1:1313/",
+    "http://127.0.0.1:1313/shows/",
+    "http://127.0.0.1:1313/shows/1/",
+    "http://127.0.0.1:1313/artists/",
+    "http://127.0.0.1:1313/releases/",
+    "http://127.0.0.1:1313/listen-live/",
+    "http://127.0.0.1:1313/contact/",
+    "http://127.0.0.1:1313/about/",
+    "http://127.0.0.1:1313/search/",
+    "http://127.0.0.1:1313/404.html"
+  ]
+}
