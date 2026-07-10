@@ -20,13 +20,19 @@
   {{/* Centre: desktop nav links */}}
   {{ if .Site.Menus.main }}
     <nav class="hidden md:flex flex-1 justify-center items-center gap-x-6 h-12">
+      {{ $currentPath := strings.TrimSuffix "/" $.RelPermalink }}
       {{ range .Site.Menus.main }}
+        {{ $menuPath := strings.TrimSuffix "/" (.URL | relLangURL) }}
+        {{ $isCurrent := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+        {{ $isCurrent = or $isCurrent (eq $currentPath $menuPath) }}
+        {{ $isCurrent = or $isCurrent (and (ne $menuPath "") (strings.HasPrefix $currentPath (printf "%s/" $menuPath))) }}
         <a
           href="{{ .URL }}"
           {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
             target="_blank"
           {{ end }}
-          class="flex items-center text-base font-medium bf-icon-color-hover{{ if or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }} active{{ end }}"
+          class="flex items-center text-base font-medium bf-icon-color-hover{{ if $isCurrent }} active underline decoration-2 underline-offset-4 decoration-primary-500 dark:decoration-primary-400{{ end }}"
+          {{ if $isCurrent }}aria-current="page"{{ end }}
           {{ with or .Name .Pre }}aria-label="{{ . }}"{{ end }}
           title="{{ .Title }}">
           {{ if .Pre }}
