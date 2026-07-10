@@ -2,6 +2,8 @@
 genres: []
 featured_image: artists/r/roachford/roachford.jpg
 title: Roachford
+summary: "British singer-songwriter and bandleader Andrew Roachford, known for soulful pop-rock and the enduring hit Cuddly Toy."
+description: "British singer-songwriter and bandleader Andrew Roachford, known for soulful pop-rock, expressive vocals and the enduring late-1980s hit Cuddly Toy."
 editorialSummary: >
   Roachford blends soul, rock and funk with warmth, groove and one of Britain's most distinctive voices.
 artist_page: true

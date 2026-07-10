@@ -2,6 +2,8 @@
 genres: ["Art Rock","Classic Rock","Experimental Rock","Progressive","Progressive Rock","Psychedelic","Psychedelic Pop","Psychedelic Rock","Rock","Space Rock","Symphonic Rock","Rock Opera"]
 featured_image: artists/p/pink-floyd/pink-floyd.jpg
 title: Pink Floyd
+summary: "English rock band whose psychedelic beginnings grew into expansive progressive rock and landmark concept albums."
+description: "English rock band whose psychedelic beginnings grew into expansive progressive rock, immersive live presentation and landmark concept albums."
 editorialSummary: >
   Pink Floyd transformed progressive rock through immersive soundscapes, fearless experimentation and timeless songwriting.
 artist_page: true

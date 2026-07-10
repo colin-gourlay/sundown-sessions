@@ -2,6 +2,8 @@
 genres: ["Alternative Dance","Alternative Rock","Art Rock","Dance-Punk","Indie Pop","Indie Rock","Indietronica","New Wave","Pop","Post-Punk","Post-Punk Revival"]
 featured_image: artists/f/franz-ferdinand/franz-ferdinand.jpg
 title: Franz Ferdinand
+summary: "Scottish indie rock band from Glasgow, known for angular guitars, dance-punk rhythm and sharp art-pop hooks."
+description: "Scottish indie rock band from Glasgow, formed in 2002 and known for angular guitars, dance-punk rhythms, sharp art-pop hooks and enduring alternative dancefloor anthems."
 editorialSummary: >
   Franz Ferdinand reinvented British indie rock with razor-sharp guitars, infectious hooks and irresistible dancefloor energy.
 artist_page: true

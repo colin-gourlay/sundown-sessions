@@ -2,6 +2,8 @@
 genres: ["Art Rock","Crossover Prog","Pop","Pop Rock","Progressive","Progressive Rock","Rock","Symphonic Prog","Symphonic Rock","Progressive Pop"]
 featured_image: artists/e/electric-light-orchestra/electric-light-orchestra.jpg
 title: Electric Light Orchestra
+summary: "Birmingham orchestral rock band led by Jeff Lynne, known for lush strings, pop craft and widescreen hooks."
+description: "Birmingham orchestral rock band led by Jeff Lynne, known for lush strings, immaculate pop craft, studio polish and widescreen hooks."
 editorialSummary: >
   Electric Light Orchestra fused rock, classical ambition and unforgettable melodies into one of popular music's most distinctive sounds.
 artist_page: true

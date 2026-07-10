@@ -2,6 +2,8 @@
 genres: ["Electropop"]
 featured_image: artists/b/becky-becky/becky-becky.jpg
 title: Becky Becky
+summary: "Brighton synth-pop duo whose dark electronic pop blends literary detail, theatrical tension and underground club energy."
+description: "Brighton synth-pop duo whose dark electronic pop blends literary detail, theatrical tension and underground club energy with a cult independent edge."
 editorialSummary: >
   Becky Becky creates inventive art-pop filled with infectious melodies, bold ideas and unexpected musical twists.
 artist_page: true

@@ -1,5 +1,8 @@
 ---
 title: Nick Cave & The Bad Seeds
+summary: "Australian-founded alternative rock band led by Nick Cave, known for gothic drama, literary songwriting and intensity."
+description: "Australian-founded alternative rock band led by Nick Cave, known for gothic drama, literary songwriting, restless reinvention and profound emotional intensity."
+genres: ["Alternative Rock","Art Rock","Gothic Rock","Post-Punk","Singer-Songwriter"]
 featured_image: artists/n/nick-cave-the-bad-seeds/nick-cave-the-bad-seeds.jpg
 editorialSummary: >
   Nick Cave & The Bad Seeds create haunting, emotionally powerful music that continues to redefine alternative rock.
