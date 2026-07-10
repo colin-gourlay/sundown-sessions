@@ -1,3 +1,4 @@
 {{ $link := .Get 0 }}
 {{ $slug := .Get 0 | urlize }}
-<a href="{{ printf "%sshows/featuring-%s/#featured-artist" .Site.BaseURL $slug | safeURL}}">{{ $link }}</a>
+{{ $artistSpotlightAnchorId := partial "show/artist-spotlight-anchor.html" . }}
+<a href="{{ printf "%sshows/featuring-%s/#%s" .Site.BaseURL $slug $artistSpotlightAnchorId | safeURL}}">{{ $link }}</a>
