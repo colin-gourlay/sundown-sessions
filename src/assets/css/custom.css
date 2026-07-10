@@ -3874,3 +3874,36 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
     grid-template-columns: minmax(13rem, 0.65fr) minmax(0, 1.35fr);
   }
 }
+
+/* Homepage primary listen-live call-to-action. */
+.homepage-listen-cta {
+  min-height: 3.25rem;
+  text-transform: uppercase;
+  letter-spacing: 0.045em;
+  box-shadow:
+    0 1rem 2.4rem rgb(0 0 0 / 0.32),
+    0 0 0 0.18rem rgb(255 255 255 / 0.28);
+}
+
+.homepage-listen-cta:hover,
+.homepage-listen-cta:focus-visible {
+  transform: translateY(-1px);
+  box-shadow:
+    0 1.15rem 2.7rem rgb(0 0 0 / 0.38),
+    0 0 0 0.2rem rgb(255 255 255 / 0.34);
+}
+
+.homepage-listen-cta__icon {
+  width: 1.15rem;
+  height: 1.15rem;
+}
+
+.homepage-live-note {
+  max-width: 22rem;
+}
+
+@media (max-width: 640px) {
+  .homepage-listen-cta {
+    width: min(100%, 18rem);
+  }
+}
