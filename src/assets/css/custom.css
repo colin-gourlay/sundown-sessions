@@ -103,6 +103,26 @@
   color: #10131f;
 }
 
+/* Baseline accessible focus treatment for custom interactive components. */
+a:focus-visible,
+button:focus-visible,
+[role="button"]:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible,
+label[for]:focus-visible {
+  outline: 3px solid var(--ss-color-focus);
+  outline-offset: 0.2rem;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+  }
+}
+
 /* Listen Live page: scoped editorial listening layout. */
 
 .listen-live-page {

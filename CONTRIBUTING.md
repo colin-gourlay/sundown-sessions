@@ -99,6 +99,14 @@ Examples:
 
 Pull request descriptions should clearly explain intent, context, and impact.
 
+## Accessibility Standard
+
+Sundown Sessions targets **WCAG 2.2 Level AA** as the minimum accessibility standard for public-facing website changes. Treat accessibility as part of normal design, development, content, review, and testing work.
+
+Before opening a pull request that changes `src/content/`, `src/layouts/`, `src/assets/`, or public-facing configuration, review the affected pages for keyboard access, visible focus, alternative text, colour contrast, semantic HTML, form labels, responsive reflow, and screen reader impact.
+
+The detailed accessibility baseline, review checklist, and automated/manual validation guidance are documented in [docs/accessibility.md](docs/accessibility.md).
+
 ## Release and Deployment Notes
 
 ### Website
