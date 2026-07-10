@@ -2,6 +2,8 @@
 genres: ["Alternative Pop","Alternative Rock","Gothic","Gothic Rock","Indie Pop","Indie Rock","Surf Rock"]
 featured_image: artists/t/the-filthy-tongues/the-filthy-tongues.jpg
 title: The Filthy Tongues
+summary: "Edinburgh rock band carrying dark Scottish storytelling, post-punk grit and cinematic guitar drama."
+description: "Edinburgh rock band carrying dark Scottish storytelling, post-punk grit and cinematic guitar drama from members of Goodbye Mr Mackenzie and Angelfish."
 editorialSummary: >
   The Filthy Tongues craft cinematic alternative rock filled with atmosphere, intensity and emotional depth.
 artist_page: true

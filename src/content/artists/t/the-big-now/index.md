@@ -1,5 +1,7 @@
 ---
 title: The Big Now
+summary: "Scottish band from the late 1980s, featured in the first Sundown Sessions broadcast with cassette-era alternative rock."
+description: "Scottish band active around 1989, featured in the first Sundown Sessions broadcast with cassette-era alternative rock including Fast Cars, Soul Music."
 featured_image: artists/t/the-big-now/the-big-now.jpg
 artist_page: true
 genres: []

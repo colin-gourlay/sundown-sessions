@@ -2,6 +2,8 @@
 genres: ["Alternative Rock","Indie Rock","Post-Punk","Post-Punk Revival"]
 featured_image: artists/i/interpol/interpol.jpg
 title: Interpol
+summary: "New York post-punk revival band known for shadowy guitars, taut rhythms and atmospheric indie rock."
+description: "New York post-punk revival band formed in the late 1990s, known for shadowy guitars, taut rhythms and atmospheric indie rock."
 editorialSummary: >
   Interpol revived post-punk with elegant guitars, cinematic atmosphere and understated intensity that continues to define modern alternative music.
 artist_page: true

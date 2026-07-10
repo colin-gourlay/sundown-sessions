@@ -2,6 +2,8 @@
 genres: ["Alternative Rock","Folk","Folk Rock","Indie Rock"]
 featured_image: artists/j/john-grant/john-grant.jpg
 title: John Grant
+summary: "American singer-songwriter whose rich baritone, electronic textures and dry humour shape deeply personal art-pop."
+description: "American singer-songwriter whose rich baritone, electronic textures, piano-led arrangements and dry humour shape deeply personal art-pop and alternative songwriting."
 editorialSummary: >
   John Grant combines fearless honesty with rich, genre-defying songwriting that is both deeply personal and unforgettable.
 artist_page: true

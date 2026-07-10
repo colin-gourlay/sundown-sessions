@@ -2,6 +2,8 @@
 genres: ["Blues Rock","Soul"]
 featured_image: artists/t/the-teskey-brothers/the-teskey-brothers.jpg
 title: The Teskey Brothers
+summary: "Australian soul-blues band known for warm vintage production, slow-burning grooves and Josh Teskey's vocal fire."
+description: "Australian soul-blues band from Warrandyte, known for warm vintage production, slow-burning grooves and Josh Teskey's powerful vocal fire."
 editorialSummary: >
   The Teskey Brothers breathe new life into classic soul through heartfelt songwriting and remarkable musicianship.
 artist_page: true
