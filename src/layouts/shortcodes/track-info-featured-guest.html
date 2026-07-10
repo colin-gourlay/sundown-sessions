@@ -7,7 +7,8 @@
     {{ if ge (len $parts) 3 }}
         {{ with index $parts 2 | strings.TrimSpace }}{{ $trackUri = . }}{{ end }}
     {{ end }}
-    {{ $featuredGuestAnchor := printf "%sshows/featuring-%s/#featured-artist" $.Site.BaseURL ($artist | urlize) | safeURL }}
+    {{ $artistSpotlightAnchorId := partial "show/artist-spotlight-anchor.html" . }}
+    {{ $featuredGuestAnchor := printf "%sshows/featuring-%s/#%s" $.Site.BaseURL ($artist | urlize) $artistSpotlightAnchorId | safeURL }}
     {{ $featuredGuestImageUri := printf "%s-large.jpeg" $artist | urlize }}
     <div style="display: flex; align-items: center;">
         <img src="{{ $featuredGuestImageUri }}" alt="" loading="lazy" style="width: 20%; height: auto; margin-right: 10px;">
