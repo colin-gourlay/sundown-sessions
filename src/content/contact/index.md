@@ -2,10 +2,6 @@
 title: 'Contact'
 strapline: "We'd love to hear from you."
 description: 'Contact Sundown Sessions with music submissions, gig news, interview ideas, listener messages, label updates, promoter enquiries and festival or venue opportunities.'
-menu:
-  main:
-    title: 'Get in touch with the show.'
-    weight: 4
 showDate: false
 showReadingTime: false
 showPagination: false
