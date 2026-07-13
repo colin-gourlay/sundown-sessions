@@ -8,7 +8,9 @@ discogs_name: "David Latto (2)"
 editorialSummary: >
   David Latto crafts thoughtful, melodic songwriting that reflects the heart of Scotland's vibrant independent music scene.
 artist_page: true
+lastReviewed: 2026-07-13
 ---
+
 ## About
 
-Scottish singer and songwriter
+David Latto is a Scottish singer-songwriter whose folk-leaning songs put storytelling, melody and regional character at the centre. "Geordie Munro", heard on the first Sundown Sessions broadcast, captures the direct narrative style and acoustic warmth that make his work fit naturally beside classic and contemporary Scottish songwriting.

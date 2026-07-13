@@ -7,10 +7,12 @@ description: "Edinburgh rock band carrying dark Scottish storytelling, post-punk
 editorialSummary: >
   The Filthy Tongues craft cinematic alternative rock filled with atmosphere, intensity and emotional depth.
 artist_page: true
+lastReviewed: 2026-07-13
 ---
+
 ## About
 
-The Filthy Tongues are an alternative rock group from Edinburgh, Scotland, made up of Martin Metcalfe, Fin Wilson and Derek Kelly, who were previously members of Goodbye Mr Mackenzie and Angelfish alongside Shirley Manson. As Isa & the Filthy Tongues with singer Stacey Chavis, the band released two albums.
+The Filthy Tongues are an alternative rock band from Edinburgh, Scotland, featuring Martin Metcalfe, Fin Wilson and Derek Kelly, all formerly of Goodbye Mr Mackenzie and Angelfish. Their music carries dark Scottish storytelling, post-punk grit and cinematic guitar drama, with records such as Jacob's Ladder and In These Dark Places expanding the atmosphere heard in "Nae Tongues".
 
 ## External Links
 
