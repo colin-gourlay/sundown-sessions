@@ -7,7 +7,9 @@ artist_page: true
 genres: []
 editorialSummary: >
   The Big Now deliver soaring alternative rock packed with infectious hooks, driving guitars and unmistakable energy.
+lastReviewed: 2026-07-13
 ---
+
 ## About
 
-The Big Now are a band from Scotland (c.1989). They recorded a demo cassette titled _Fast Cars, Soul Music_.
+The Big Now were a Scottish band active around 1989. Their demo cassette Fast Cars, Soul Music preserves melodic, guitar-led songs such as "Fast Cars, Soul Music" and "You'll Be Sorry", making them a fitting first Artist Spotlight for Sundown Sessions and a reminder of the overlooked local music histories the show aims to surface.

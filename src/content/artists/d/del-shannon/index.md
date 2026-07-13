@@ -7,9 +7,9 @@ description: "American rock and roll singer-songwriter remembered for dramatic p
 editorialSummary: >
   Del Shannon's timeless melodies and unmistakable voice helped shape the sound of early rock and pop.
 artist_page: true
+lastReviewed: 2026-07-13
 ---
+
 ## About
 
-Charles Weedon Westover (December 30, 1934 – February 8, 1990), better known by his stage name Del Shannon, was an American musician, singer and songwriter, best known for his 1961 number-one Billboard hit "Runaway". In 1999, he was posthumously inducted into the Rock and Roll Hall of Fame. In addition to his music career, he had minor acting roles.
-
-
+Del Shannon was an American singer, songwriter and musician best known for the 1961 hit "Runaway", with its dramatic vocal and distinctive Musitron keyboard break. His work blended early rock 'n' roll, pop melodrama and restless experimentation, leaving a catalogue that stretches well beyond his signature single.

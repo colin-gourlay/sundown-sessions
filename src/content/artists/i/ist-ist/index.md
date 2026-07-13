@@ -7,10 +7,12 @@ description: "Manchester post-punk band known for stark atmospheres, driving bas
 editorialSummary: >
   IST IST create brooding post-punk driven by hypnotic rhythms, atmospheric guitars and commanding vocals.
 artist_page: true
+lastReviewed: 2026-07-13
 ---
+
 ## About
 
-
+IST IST are a Manchester post-punk band known for brooding basslines, austere electronics and commanding live performances. Their records, including Architecture, The Art of Lying and Protagonists, carry the tension of classic northern post-punk while keeping the writing direct, modern and emotionally charged.
 
 ## External Links
 

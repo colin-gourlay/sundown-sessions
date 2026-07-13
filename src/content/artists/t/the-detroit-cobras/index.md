@@ -7,9 +7,9 @@ description: "Detroit garage rock band celebrated for raw, soul-soaked covers, d
 editorialSummary: >
   The Detroit Cobras revive forgotten rhythm and blues classics with swagger, soul and infectious garage rock energy.
 artist_page: true
+lastReviewed: 2026-07-13
 ---
+
 ## About
 
-The Detroit Cobras are an American garage rock band from Detroit, Michigan, which was formed in 1994 by guitarist Steve Shaw, guitarist Mary Ramirez, bassist Jeff Meier, drummer Vic Hill, and singer Rachel Nagy. The group was later known (with the exception of Rachel Nagy, and Mary Ramirez) for a constantly changing assortment of musicians. Rachel Nagy died on January 14, 2022.
-
-
+The Detroit Cobras were an American garage-rock band from Detroit, formed in 1994 and fronted by Rachel Nagy. Rather than simply covering old rhythm and blues, soul and rock 'n' roll songs, they reanimated them with grit, swagger and punk energy, turning deep-cut material into raw, joyous performances.
