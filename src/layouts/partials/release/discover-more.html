@@ -186,26 +186,7 @@
     <div class="release-discover-more__grid">
       {{- range $item := $recommendations -}}
         {{- $release := $item.page -}}
-        {{- $artworkParam := $release.Params.artwork | default $release.Params.cover | default $release.Params.image | default $release.Params.featureimage | default $release.Params.featured_image -}}
-        {{- $artwork := "" -}}
-        {{- $artworkURL := "" -}}
-        {{- with $artworkParam -}}
-          {{- if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") -}}
-            {{- $artworkURL = . -}}
-          {{- else -}}
-            {{- $artwork = $release.Resources.GetMatch . -}}
-            {{- if not $artwork -}}{{- $artwork = $release.Resources.GetMatch (path.Base .) -}}{{- end -}}
-            {{- if not $artwork -}}{{- $artwork = resources.Get . -}}{{- end -}}
-            {{- if not $artwork -}}{{- $artworkURL = . | relURL -}}{{- end -}}
-          {{- end -}}
-        {{- end -}}
-        {{- if not (or $artwork $artworkURL) -}}
-          {{- $images := $release.Resources.ByType "image" -}}
-          {{- range slice "*artwork*" "*cover*" "*image*" "*feature*" "*thumbnail*" -}}
-            {{- if not $artwork -}}{{- $artwork = $images.GetMatch . -}}{{- end -}}
-          {{- end -}}
-        {{- end -}}
-        {{- if not $artworkURL -}}{{- with $artwork -}}{{- $artworkURL = .RelPermalink -}}{{- end -}}{{- end -}}
+        {{- $artworkURL := partial "release/artwork-url.html" $release -}}
 
         {{- $artist := "" -}}
         {{- with $release.Params.artist -}}

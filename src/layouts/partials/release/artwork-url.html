@@ -1,0 +1,87 @@
+{{/* Canonical release artwork resolver. Keep release pages and release cards in sync. */}}
+{{- $release := . -}}
+{{- $artwork := false -}}
+{{- $artworkURL := "" -}}
+
+{{- /* `image`, `images`, and feature-image params are intentionally excluded here:
+      the site-wide cascade supplies the generic social banner through those keys. */ -}}
+{{- range $artworkParam := slice $release.Params.artwork $release.Params.cover -}}
+  {{- if and (not (or $artwork $artworkURL)) $artworkParam -}}
+    {{- $artworkPath := printf "%v" $artworkParam | strings.TrimSpace -}}
+    {{- if or (strings.HasPrefix $artworkPath "http:") (strings.HasPrefix $artworkPath "https:") -}}
+      {{- $artworkURL = $artworkPath -}}
+    {{- else -}}
+      {{- $normalizedPath := strings.TrimPrefix "/" $artworkPath -}}
+      {{- $artwork = $release.Resources.GetMatch $artworkPath -}}
+      {{- if not $artwork -}}{{- $artwork = $release.Resources.GetMatch (path.Base $artworkPath) -}}{{- end -}}
+      {{- if not $artwork -}}{{- $artwork = resources.Get $normalizedPath -}}{{- end -}}
+      {{- if and (not $artwork) (fileExists (printf "static/%s" $normalizedPath)) -}}
+        {{- $artworkURL = $normalizedPath | relURL -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if not (or $artwork $artworkURL) -}}
+  {{- $images := $release.Resources.ByType "image" -}}
+  {{- range slice "*artwork*" "*cover*" "*image*" "*feature*" "*thumbnail*" -}}
+    {{- if not $artwork -}}{{- $artwork = $images.GetMatch . -}}{{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- /* Older releases reuse the album cover stored with the show that featured it. */ -}}
+{{- if not (or $artwork $artworkURL) -}}
+  {{- $artistNames := slice -}}
+  {{- range $field := slice $release.Params.artist $release.Params.artists -}}
+    {{- with $field -}}
+      {{- $entries := . -}}
+      {{- if not (reflect.IsSlice $entries) -}}{{- $entries = slice $entries -}}{{- end -}}
+      {{- range $entries -}}
+        {{- if reflect.IsMap . -}}
+          {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug")) -}}
+            {{- $artistNames = $artistNames | append . -}}
+          {{- end -}}
+        {{- else -}}
+          {{- $artistNames = $artistNames | append . -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $artistSlugs := slice -}}
+  {{- with $release.Params.artist_slug -}}{{- $artistSlugs = $artistSlugs | append (urlize .) -}}{{- end -}}
+  {{- range $artistNames -}}{{- $artistSlugs = $artistSlugs | append (urlize (printf "%v" .)) -}}{{- end -}}
+
+  {{- $configuredShows := $release.Params.featuredInShows | default $release.Params.featured_in_shows | default $release.Params.shows -}}
+  {{- with $configuredShows -}}
+    {{- $shows := . -}}
+    {{- if not (reflect.IsSlice $shows) -}}{{- $shows = slice $shows -}}{{- end -}}
+    {{- range $entry := $shows -}}
+      {{- if not (or $artwork $artworkURL) -}}
+        {{- $showRef := $entry -}}
+        {{- if reflect.IsMap $entry -}}
+          {{- $showRef = index $entry "show" | default (index $entry "page") | default (index $entry "path") | default (index $entry "slug") | default (index $entry "url") | default "" -}}
+        {{- end -}}
+        {{- $trimmedRef := printf "%v" $showRef | strings.TrimSpace | strings.TrimPrefix "/" | strings.TrimSuffix "/" | strings.TrimSuffix "/index.md" -}}
+        {{- $showFolder := path.Base (strings.TrimPrefix "shows/" $trimmedRef) -}}
+        {{- $showPage := site.GetPage (printf "shows/%s" $showFolder) -}}
+        {{- range $artistSlug := uniq $artistSlugs -}}
+          {{- if not (or $artwork $artworkURL) -}}
+            {{- $candidatePath := printf "shows/%s/%s-large.jpeg" $showFolder $artistSlug -}}
+            {{- with $showPage -}}{{- $artwork = .Resources.GetMatch (path.Base $candidatePath) -}}{{- end -}}
+            {{- if not $artwork -}}{{- $artwork = resources.Get $candidatePath -}}{{- end -}}
+            {{- if and (not $artwork) (fileExists (printf "content/%s" $candidatePath)) -}}
+              {{- $artworkURL = printf "/%s" $candidatePath | relURL -}}
+            {{- end -}}
+            {{- if and (not (or $artwork $artworkURL)) (fileExists (printf "static/%s" $candidatePath)) -}}
+              {{- $artworkURL = $candidatePath | relURL -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if and (not $artworkURL) $artwork -}}{{- $artworkURL = $artwork.RelPermalink -}}{{- end -}}
+{{- if not $artworkURL -}}{{- $artworkURL = "/images/sundown-sessions-banner.png" | relURL -}}{{- end -}}
+{{- return $artworkURL -}}
