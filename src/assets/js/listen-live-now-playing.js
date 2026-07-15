@@ -4,6 +4,7 @@
   var POLL_INTERVAL_MS = 45000;
   var FALLBACK_COPY = "Waiting for track information...";
   var MIN_SHARP_ARTWORK_DENSITY = 1.5;
+  var MIN_USEFUL_ARTWORK_EDGE = 96;
 
   var root = document.querySelector("[data-now-playing]");
   if (!root || !window.fetch) {
@@ -53,15 +54,22 @@
     return null;
   }
 
-  function firstUrl(values) {
+  function firstArtwork(values) {
     for (var i = 0; i < values.length; i += 1) {
-      var value = improveArtworkUrl(clean(values[i]));
-      if (isUsefulUrl(value)) {
-        return value;
+      var original = clean(values[i]);
+      if (isUsefulUrl(original)) {
+        var improved = improveArtworkUrl(original);
+        return {
+          url: improved,
+          fallback: improved === original ? "" : original
+        };
       }
     }
 
-    return "";
+    return {
+      url: "",
+      fallback: ""
+    };
   }
 
   function improveArtworkUrl(value) {
@@ -157,6 +165,46 @@
       source.text
     ]);
 
+    var artwork = firstArtwork([
+      source.artworkLarge,
+      source.artwork_large,
+      source.coverartLarge,
+      source.coverart_large,
+      source.coverArtLarge,
+      source.cover_art_large,
+      source.imageLarge,
+      source.image_large,
+      source.imageUrlLarge,
+      source.image_url_large,
+      source.coverart,
+      source.coverArt,
+      source.cover_art,
+      source.artwork,
+      source.artworkUrl,
+      source.artwork_url,
+      source.art,
+      source.albumArt,
+      source.album_art,
+      source.cover,
+      source.coverUrl,
+      source.cover_url,
+      source.image,
+      source.imageUrl,
+      source.image_url,
+      trackObject && trackObject.artworkLarge,
+      trackObject && trackObject.artwork_large,
+      trackObject && trackObject.coverartLarge,
+      trackObject && trackObject.cover_art_large,
+      trackObject && trackObject.imageLarge,
+      trackObject && trackObject.image_url_large,
+      trackObject && trackObject.coverart,
+      trackObject && trackObject.artwork,
+      trackObject && trackObject.artworkUrl,
+      trackObject && trackObject.albumArt,
+      trackObject && trackObject.cover,
+      trackObject && trackObject.image
+    ]);
+
     var metadata = {
       artist: firstClean([
         source.artist,
@@ -185,45 +233,8 @@
         trackObject && trackObject.albumTitle,
         trackObject && trackObject.album_title
       ]),
-      artwork: firstUrl([
-        source.artworkLarge,
-        source.artwork_large,
-        source.coverartLarge,
-        source.coverart_large,
-        source.coverArtLarge,
-        source.cover_art_large,
-        source.imageLarge,
-        source.image_large,
-        source.imageUrlLarge,
-        source.image_url_large,
-        source.coverart,
-        source.coverArt,
-        source.cover_art,
-        source.artwork,
-        source.artworkUrl,
-        source.artwork_url,
-        source.art,
-        source.albumArt,
-        source.album_art,
-        source.cover,
-        source.coverUrl,
-        source.cover_url,
-        source.image,
-        source.imageUrl,
-        source.image_url,
-        trackObject && trackObject.artworkLarge,
-        trackObject && trackObject.artwork_large,
-        trackObject && trackObject.coverartLarge,
-        trackObject && trackObject.cover_art_large,
-        trackObject && trackObject.imageLarge,
-        trackObject && trackObject.image_url_large,
-        trackObject && trackObject.coverart,
-        trackObject && trackObject.artwork,
-        trackObject && trackObject.artworkUrl,
-        trackObject && trackObject.albumArt,
-        trackObject && trackObject.cover,
-        trackObject && trackObject.image
-      ])
+      artwork: artwork.url,
+      artworkFallback: artwork.fallback
     };
 
     if ((!metadata.artist || !metadata.track) && combinedTitle) {
@@ -254,6 +265,40 @@
 
     row.hidden = !value;
     setText(node, value || "");
+  }
+
+  function resetArtworkPresentation() {
+    if (!elements.artworkWrap) {
+      return;
+    }
+
+    elements.artworkWrap.removeAttribute("data-now-playing-low-resolution");
+    elements.artworkWrap.removeAttribute("data-now-playing-contain");
+    elements.artworkWrap.style.removeProperty("--now-playing-artwork-width");
+    elements.artworkWrap.style.removeProperty("--now-playing-artwork-height");
+  }
+
+  function showArtworkPlaceholder() {
+    if (elements.artwork) {
+      elements.artwork.hidden = true;
+    }
+    if (elements.placeholder) {
+      elements.placeholder.hidden = false;
+    }
+  }
+
+  function clearArtwork() {
+    if (elements.artwork) {
+      elements.artwork.hidden = true;
+      elements.artwork.onload = null;
+      elements.artwork.onerror = null;
+      elements.artwork.removeAttribute("src");
+      elements.artwork.removeAttribute("srcset");
+      elements.artwork.alt = "";
+    }
+
+    resetArtworkPresentation();
+    showArtworkPlaceholder();
   }
 
   function markTransition() {
@@ -299,33 +344,92 @@
     setRow(elements.artistRow, elements.artist, "");
     setRow(elements.trackRow, elements.track, "");
     setRow(elements.albumRow, elements.album, "");
-    if (elements.artwork) {
-      elements.artwork.hidden = true;
-      elements.artwork.removeAttribute("src");
-      elements.artwork.removeAttribute("srcset");
-      elements.artwork.alt = "";
-      elements.artwork.onload = null;
-      if (elements.artworkWrap) {
-        elements.artworkWrap.removeAttribute("data-now-playing-low-resolution");
-      }
-    }
-    if (elements.placeholder) {
-      elements.placeholder.hidden = false;
-    }
+    clearArtwork();
   }
 
   function updateArtworkQualityState() {
     if (!elements.artwork || !elements.artworkWrap || !elements.artwork.naturalWidth || !elements.artwork.naturalHeight) {
-      return;
+      return false;
+    }
+
+    var naturalWidth = elements.artwork.naturalWidth;
+    var naturalHeight = elements.artwork.naturalHeight;
+    if (Math.min(naturalWidth, naturalHeight) < MIN_USEFUL_ARTWORK_EDGE) {
+      resetArtworkPresentation();
+      showArtworkPlaceholder();
+      return false;
     }
 
     var renderedWidth = elements.artworkWrap.clientWidth || elements.artwork.clientWidth;
     var renderedHeight = elements.artworkWrap.clientHeight || elements.artwork.clientHeight;
-    var targetWidth = renderedWidth * MIN_SHARP_ARTWORK_DENSITY;
-    var targetHeight = renderedHeight * MIN_SHARP_ARTWORK_DENSITY;
-    var isLowResolution = elements.artwork.naturalWidth < targetWidth || elements.artwork.naturalHeight < targetHeight;
+    if (!renderedWidth || !renderedHeight) {
+      return false;
+    }
 
-    elements.artworkWrap.toggleAttribute("data-now-playing-low-resolution", isLowResolution);
+    var fitScale = Math.min(renderedWidth / naturalWidth, renderedHeight / naturalHeight);
+    var displayedWidth = naturalWidth * fitScale;
+    var displayedHeight = naturalHeight * fitScale;
+    var availableDensity = Math.min(naturalWidth / displayedWidth, naturalHeight / displayedHeight);
+    var isLowResolution = availableDensity < MIN_SHARP_ARTWORK_DENSITY;
+    var isNonSquare = Math.abs((naturalWidth / naturalHeight) - 1) > 0.05;
+
+    resetArtworkPresentation();
+    elements.artworkWrap.toggleAttribute("data-now-playing-contain", isNonSquare);
+
+    if (isLowResolution) {
+      // Keep small upstream covers below the point where browser interpolation
+      // makes them visibly soft. The surrounding branded frame makes the
+      // intentionally inset presentation feel deliberate rather than broken.
+      var sharpScale = Math.min(
+        renderedWidth / naturalWidth,
+        renderedHeight / naturalHeight,
+        1 / MIN_SHARP_ARTWORK_DENSITY
+      );
+      var sharpWidth = Math.max(1, Math.floor(naturalWidth * sharpScale));
+      var sharpHeight = Math.max(1, Math.floor(naturalHeight * sharpScale));
+
+      elements.artworkWrap.style.setProperty("--now-playing-artwork-width", sharpWidth + "px");
+      elements.artworkWrap.style.setProperty("--now-playing-artwork-height", sharpHeight + "px");
+      elements.artworkWrap.setAttribute("data-now-playing-low-resolution", "");
+    }
+
+    elements.artwork.hidden = false;
+    if (elements.placeholder) {
+      elements.placeholder.hidden = true;
+    }
+
+    return true;
+  }
+
+  function loadArtwork(metadata) {
+    if (!metadata.artwork || !elements.artwork) {
+      clearArtwork();
+      return;
+    }
+
+    resetArtworkPresentation();
+    showArtworkPlaceholder();
+
+    var fallbackAttempted = false;
+    elements.artwork.alt = "Album artwork for " + (metadata.track || "the current track") + (metadata.artist ? " by " + metadata.artist : "");
+    elements.artwork.onload = function () {
+      updateArtworkQualityState();
+    };
+    elements.artwork.onerror = function () {
+      if (!fallbackAttempted && metadata.artworkFallback) {
+        fallbackAttempted = true;
+        resetArtworkPresentation();
+        showArtworkPlaceholder();
+        elements.artwork.src = metadata.artworkFallback;
+        return;
+      }
+
+      clearArtwork();
+      // Permit the next metadata poll to retry after a transient image or
+      // network failure even when the artist and track have not changed.
+      lastRendered = "";
+    };
+    elements.artwork.src = metadata.artwork;
   }
 
   function renderMetadata(metadata) {
@@ -351,30 +455,7 @@
     setRow(elements.trackRow, elements.track, metadata.track);
     setRow(elements.albumRow, elements.album, metadata.album);
 
-    if (metadata.artwork && elements.artwork) {
-      elements.artwork.onload = updateArtworkQualityState;
-      elements.artwork.src = metadata.artwork;
-      elements.artwork.alt = "Album artwork for " + (metadata.track || "the current track") + (metadata.artist ? " by " + metadata.artist : "");
-      elements.artwork.hidden = false;
-      updateArtworkQualityState();
-      if (elements.placeholder) {
-        elements.placeholder.hidden = true;
-      }
-    } else {
-      if (elements.artwork) {
-        elements.artwork.hidden = true;
-        elements.artwork.removeAttribute("src");
-        elements.artwork.removeAttribute("srcset");
-        elements.artwork.alt = "";
-        elements.artwork.onload = null;
-        if (elements.artworkWrap) {
-          elements.artworkWrap.removeAttribute("data-now-playing-low-resolution");
-        }
-      }
-      if (elements.placeholder) {
-        elements.placeholder.hidden = false;
-      }
-    }
+    loadArtwork(metadata);
   }
 
   function logQuietly(error) {
@@ -418,4 +499,9 @@
   renderFallback();
   refresh();
   window.setInterval(refresh, POLL_INTERVAL_MS);
+  window.addEventListener("resize", function () {
+    if (elements.artwork && !elements.artwork.hidden) {
+      updateArtworkQualityState();
+    }
+  });
 }());

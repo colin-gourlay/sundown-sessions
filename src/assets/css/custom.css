@@ -402,9 +402,15 @@ label[for]:focus-visible {
   padding: clamp(0.75rem, 4vw, 1.25rem);
 }
 
-.listen-live-now-playing__artwork[data-now-playing-low-resolution] img {
+.listen-live-now-playing__artwork[data-now-playing-low-resolution] > img {
+  width: min(100%, var(--now-playing-artwork-width, 100%));
+  height: min(100%, var(--now-playing-artwork-height, 100%));
   border-radius: 0.35rem;
   box-shadow: 0 10px 24px rgb(0 0 0 / 0.16);
+  object-fit: contain;
+}
+
+.listen-live-now-playing__artwork[data-now-playing-contain] > img {
   object-fit: contain;
 }
 
