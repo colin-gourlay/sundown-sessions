@@ -3,6 +3,13 @@ title: To Lose My Life...
 artist: White Lies
 label: Fiction Records
 release_date: "2009"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: Farewell to the Fairground
+    duration: "4:16"
+links:
+  MusicBrainz: "https://musicbrainz.org/search?query=release%3A%22To+Lose+My+Life%22+AND+artist%3A%22White+Lies%22&type=release_group&method=indexed"
 uk_chart_position: 1
 release_page: true
 shows:

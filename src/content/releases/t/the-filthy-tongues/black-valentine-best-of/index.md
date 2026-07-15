@@ -3,6 +3,11 @@ title: Black Valentine (Best of)
 artist: The Filthy Tongues
 label: Creeping Bent
 release_date: "2023"
+releaseType: Compilation
+release-types: [Compilation]
+tracks:
+  - title: Nae Tongues
+    duration: "3:13"
 release_page: true
 shows:
   - "1"

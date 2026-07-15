@@ -3,6 +3,13 @@ title: Royal Blood
 artist: Royal Blood
 label: Warner Bros. Records
 release_date: "2014"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: Figure It Out
+    duration: "3:03"
+links:
+  MusicBrainz: "https://musicbrainz.org/search?query=release%3A%22Royal+Blood%22+AND+artist%3A%22Royal+Blood%22&type=release_group&method=indexed"
 uk_chart_position: 1
 release_page: true
 shows:

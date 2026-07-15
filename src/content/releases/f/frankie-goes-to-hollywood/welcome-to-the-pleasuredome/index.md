@@ -3,6 +3,13 @@ title: Welcome to the Pleasuredome
 artist: Frankie Goes To Hollywood
 label: ZTT Records
 release_date: "1984"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: Born to Run
+    duration: "3:59"
+links:
+  MusicBrainz: "https://musicbrainz.org/search?query=release%3A%22Welcome+to+the+Pleasuredome%22+AND+artist%3A%22Frankie+Goes+to+Hollywood%22&type=release_group&method=indexed"
 uk_chart_position: 1
 release_page: true
 shows:

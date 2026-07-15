@@ -4,6 +4,15 @@ artist: Nick Cave & The Bad Seeds
 artist_slug: nick-cave-the-bad-seeds
 label: Bad Seed Ltd
 release_date: "2013"
+releaseDate: "2013-02-15"
+artwork: "https://coverartarchive.org/release-group/ae8faaeb-9134-400d-819b-773e20a7d4e4/front-500"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: Jubilee Street
+    duration: "6:35"
+links:
+  MusicBrainz: "https://musicbrainz.org/release-group/ae8faaeb-9134-400d-819b-773e20a7d4e4"
 uk_chart_position: 2
 release_page: true
 shows:

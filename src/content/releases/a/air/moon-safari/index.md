@@ -3,6 +3,15 @@ title: Moon Safari
 artist: Air
 label: Virgin Records
 release_date: "1998"
+releaseDate: "1998-01-16"
+artwork: "https://coverartarchive.org/release-group/b0bf2b77-b8cf-32f6-8893-9741d757b400/front-500"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: Sexy Boy
+    duration: "4:58"
+links:
+  MusicBrainz: "https://musicbrainz.org/release-group/b0bf2b77-b8cf-32f6-8893-9741d757b400"
 uk_chart_position: 6
 release_page: true
 shows:
