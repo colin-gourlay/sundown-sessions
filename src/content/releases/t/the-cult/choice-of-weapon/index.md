@@ -3,6 +3,15 @@ title: Choice of Weapon
 artist: The Cult
 label: Cooking Vinyl
 release_date: "2012"
+releaseDate: "2012-10-16"
+artwork: "https://coverartarchive.org/release-group/64873062-3ddf-4802-a444-b8d2a5ad4386/front-500"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: Life > Death
+    duration: "5:32"
+links:
+  MusicBrainz: "https://musicbrainz.org/release-group/64873062-3ddf-4802-a444-b8d2a5ad4386"
 uk_chart_position: 20
 release_page: true
 shows:

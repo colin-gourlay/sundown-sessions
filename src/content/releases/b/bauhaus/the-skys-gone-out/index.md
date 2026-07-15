@@ -3,6 +3,15 @@ title: The Sky's Gone Out
 artist: Bauhaus
 label: Beggars Banquet
 release_date: "1982"
+releaseDate: "1982-10-01"
+artwork: "https://coverartarchive.org/release-group/705c2c4b-cb73-39a0-9f15-7e83aedafe72/front-500"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: Ziggy Stardust
+    duration: "3:13"
+links:
+  MusicBrainz: "https://musicbrainz.org/release-group/705c2c4b-cb73-39a0-9f15-7e83aedafe72"
 uk_chart_position: 4
 release_page: true
 shows:

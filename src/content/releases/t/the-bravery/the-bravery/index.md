@@ -3,6 +3,13 @@ title: The Bravery
 artist: The Bravery
 label: Island Records
 release_date: "2005"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: An Honest Mistake
+    duration: "3:39"
+links:
+  MusicBrainz: "https://musicbrainz.org/search?query=release%3A%22The+Bravery%22+AND+artist%3A%22The+Bravery%22&type=release_group&method=indexed"
 uk_chart_position: 4
 release_page: true
 shows:

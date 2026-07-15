@@ -3,6 +3,13 @@ title: Time
 artist: Electric Light Orchestra
 label: Jet Records
 release_date: "1981"
+releaseType: Album
+release-types: [Album]
+tracks:
+  - title: Here Is the News
+    duration: "3:45"
+links:
+  MusicBrainz: "https://musicbrainz.org/search?query=release%3A%22Time%22+AND+artist%3A%22Electric+Light+Orchestra%22&type=release_group&method=indexed"
 uk_chart_position: 1
 release_page: true
 shows:

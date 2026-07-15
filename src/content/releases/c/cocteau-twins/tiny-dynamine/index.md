@@ -3,6 +3,15 @@ title: Tiny Dynamine
 artist: Cocteau Twins
 label: 4AD
 release_date: "1985"
+releaseDate: "1985-10-01"
+artwork: "https://coverartarchive.org/release-group/87b135ad-694b-3fb5-9ce9-d7cf893bb3e1/front-500"
+releaseType: EP
+release-types: [EP]
+tracks:
+  - title: Pink Orange Red
+    duration: "4:42"
+links:
+  MusicBrainz: "https://musicbrainz.org/release-group/87b135ad-694b-3fb5-9ce9-d7cf893bb3e1"
 release_page: true
 shows:
   - "2"

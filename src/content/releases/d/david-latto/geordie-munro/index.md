@@ -2,6 +2,11 @@
 title: "Geordie Munro"
 artist: "David Latto"
 releaseDate: "2022"
+releaseType: Single
+release-types: [Single]
+tracks:
+  - title: Geordie Munro
+    duration: "3:05"
 featuredInShows:
   - "1"
   - "2"
@@ -19,5 +24,4 @@ Geordie Munro is a release by David Latto released in 2022. It has been featured
 ## Tracks Featured on Sundown Sessions
 
 - Geordie Munro
-
 
