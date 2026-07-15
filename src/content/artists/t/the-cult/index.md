@@ -2,7 +2,12 @@
 genres: ["Alternative Rock","Gothic Rock","Hard Rock","New Wave","Post-Punk","Rock"]
 featured_image: artists/t/the-cult/the-cult.jpg
 title: The Cult
+summary: "English rock band led by Ian Astbury and Billy Duffy, moving from post-punk atmosphere to widescreen hard rock."
+description: "English rock band formed in 1983, centred on vocalist Ian Astbury and guitarist Billy Duffy."
+editorialSummary: >
+  The Cult join gothic atmosphere, ringing guitar and hard-rock force in songs built for drama and movement.
 artist_page: true
+lastReviewed: 2026-07-15
 ---
 ## About
 
@@ -18,5 +23,4 @@ By the time of their fifth studio album Ceremony (1991), tensions and creative d
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/officialcult](https://twitter.com/officialcult)" >}}
-
 
