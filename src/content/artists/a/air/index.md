@@ -2,11 +2,16 @@
 genres: ["Alternative Rock","Ambient","Chillout","Downtempo","Electronic","Electronica","Experimental","Indie Rock","Trip Hop","Space Age Pop","Ambient Pop"]
 featured_image: artists/a/air/air.jpg
 title: Air
+summary: "Versailles duo creating elegant electronic pop from analogue synthesisers, soft-focus melody and cinematic space."
+description: "French electronic duo Nicolas Godin and Jean-Benoît Dunckel, known for Moon Safari and its single Sexy Boy."
+editorialSummary: >
+  Air make electronic music feel weightless and intimate, balancing retro-futurist textures with quietly memorable melodies.
 artist_page: true
+lastReviewed: 2026-07-15
 ---
 ## About
 
-Air is a French music duo from Versailles, consisting of Nicolas Godin and Jean-Benoît Dunckel. Their critically acclaimed debut album, Moon Safari, including the track "Sexy Boy", was an international success in 1998. Its follow-up, The Virgin Suicides, was the score to Sofia Coppola's first film The Virgin Suicides. The band has since released the albums 10 000 Hz Legend, Talkie Walkie, Pocket Symphony, Love 2, Le voyage dans la lune and Music for Museum. The band is influenced by a wide variety of musical styles and artists.
+Air are Nicolas Godin and Jean-Benoît Dunckel, an electronic duo from Versailles. Their 1998 debut *Moon Safari* made analogue warmth, whispered vocals and unhurried melody feel both futuristic and familiar, with “Sexy Boy” providing its sharpest pulse. The pair followed it with the score to Sofia Coppola's *The Virgin Suicides* and a catalogue that moves between pop songwriting, ambient texture and cinema.
 
 
 
@@ -17,5 +22,4 @@ Air is a French music duo from Versailles, consisting of Nicolas Godin and Jean-
 - {{< new-tab-link "Instagram: [https://www.instagram.com/airfrenchband/](https://www.instagram.com/airfrenchband/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/airofficial](https://twitter.com/airofficial)" >}}
-
 

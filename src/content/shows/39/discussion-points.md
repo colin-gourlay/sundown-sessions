@@ -1,6 +1,6 @@
 ---
 purpose: discussion-points
-_build:
+build:
   list: never
 ---
 - _IST IST_
