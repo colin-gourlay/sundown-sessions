@@ -2,6 +2,7 @@
 title: 'Show #2: Broadcast 12th June 2024'
 slug: 'featuring-the-receiving-end'
 description: 'featuring The Receiving End'
+heroTeaser: 'Bold reinterpretations lead into guitar-driven discoveries and after-dark atmospheres, with The Receiving End, Chikinki, Air, and Cocteau Twins along the way.'
 summary: 'THE SUNDOWN SESSIONS returns with...
 
 - The Receiving End
