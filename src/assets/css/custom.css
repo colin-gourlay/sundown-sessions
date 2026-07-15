@@ -394,7 +394,18 @@ label[for]:focus-visible {
   display: block;
   width: 100%;
   height: 100%;
+  image-rendering: auto;
   object-fit: cover;
+}
+
+.listen-live-now-playing__artwork[data-now-playing-low-resolution] {
+  padding: clamp(0.75rem, 4vw, 1.25rem);
+}
+
+.listen-live-now-playing__artwork[data-now-playing-low-resolution] img {
+  border-radius: 0.35rem;
+  box-shadow: 0 10px 24px rgb(0 0 0 / 0.16);
+  object-fit: contain;
 }
 
 .listen-live-artwork-placeholder {

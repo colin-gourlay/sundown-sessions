@@ -3,6 +3,7 @@
 
   var POLL_INTERVAL_MS = 45000;
   var FALLBACK_COPY = "Waiting for track information...";
+  var MIN_SHARP_ARTWORK_DENSITY = 1.5;
 
   var root = document.querySelector("[data-now-playing]");
   if (!root || !window.fetch) {
@@ -54,13 +55,36 @@
 
   function firstUrl(values) {
     for (var i = 0; i < values.length; i += 1) {
-      var value = clean(values[i]);
+      var value = improveArtworkUrl(clean(values[i]));
       if (isUsefulUrl(value)) {
         return value;
       }
     }
 
     return "";
+  }
+
+  function improveArtworkUrl(value) {
+    if (!value) {
+      return "";
+    }
+
+    try {
+      var url = new URL(value, window.location.href);
+      var originalPath = url.pathname;
+
+      // Several metadata providers expose small square artwork by default even
+      // when the same image is available at a larger size. Prefer the larger
+      // rendition before the browser starts loading the image so the live page
+      // does not upscale tiny thumbnails into the 17.5rem artwork frame.
+      url.pathname = url.pathname
+        .replace(/\/([0-9]{2,3})x\1bb(?=\.[a-z]+$)/i, "/600x600bb")
+        .replace(/\/(34s|64s|174s)(?=\/)/i, "/500x500");
+
+      return url.pathname === originalPath ? value : url.href;
+    } catch (error) {
+      return value;
+    }
   }
 
   function isUsefulUrl(value) {
@@ -162,6 +186,16 @@
         trackObject && trackObject.album_title
       ]),
       artwork: firstUrl([
+        source.artworkLarge,
+        source.artwork_large,
+        source.coverartLarge,
+        source.coverart_large,
+        source.coverArtLarge,
+        source.cover_art_large,
+        source.imageLarge,
+        source.image_large,
+        source.imageUrlLarge,
+        source.image_url_large,
         source.coverart,
         source.coverArt,
         source.cover_art,
@@ -177,6 +211,12 @@
         source.image,
         source.imageUrl,
         source.image_url,
+        trackObject && trackObject.artworkLarge,
+        trackObject && trackObject.artwork_large,
+        trackObject && trackObject.coverartLarge,
+        trackObject && trackObject.cover_art_large,
+        trackObject && trackObject.imageLarge,
+        trackObject && trackObject.image_url_large,
         trackObject && trackObject.coverart,
         trackObject && trackObject.artwork,
         trackObject && trackObject.artworkUrl,
@@ -262,11 +302,30 @@
     if (elements.artwork) {
       elements.artwork.hidden = true;
       elements.artwork.removeAttribute("src");
+      elements.artwork.removeAttribute("srcset");
       elements.artwork.alt = "";
+      elements.artwork.onload = null;
+      if (elements.artworkWrap) {
+        elements.artworkWrap.removeAttribute("data-now-playing-low-resolution");
+      }
     }
     if (elements.placeholder) {
       elements.placeholder.hidden = false;
     }
+  }
+
+  function updateArtworkQualityState() {
+    if (!elements.artwork || !elements.artworkWrap || !elements.artwork.naturalWidth || !elements.artwork.naturalHeight) {
+      return;
+    }
+
+    var renderedWidth = elements.artworkWrap.clientWidth || elements.artwork.clientWidth;
+    var renderedHeight = elements.artworkWrap.clientHeight || elements.artwork.clientHeight;
+    var targetWidth = renderedWidth * MIN_SHARP_ARTWORK_DENSITY;
+    var targetHeight = renderedHeight * MIN_SHARP_ARTWORK_DENSITY;
+    var isLowResolution = elements.artwork.naturalWidth < targetWidth || elements.artwork.naturalHeight < targetHeight;
+
+    elements.artworkWrap.toggleAttribute("data-now-playing-low-resolution", isLowResolution);
   }
 
   function renderMetadata(metadata) {
@@ -293,9 +352,11 @@
     setRow(elements.albumRow, elements.album, metadata.album);
 
     if (metadata.artwork && elements.artwork) {
+      elements.artwork.onload = updateArtworkQualityState;
       elements.artwork.src = metadata.artwork;
       elements.artwork.alt = "Album artwork for " + (metadata.track || "the current track") + (metadata.artist ? " by " + metadata.artist : "");
       elements.artwork.hidden = false;
+      updateArtworkQualityState();
       if (elements.placeholder) {
         elements.placeholder.hidden = true;
       }
@@ -303,7 +364,12 @@
       if (elements.artwork) {
         elements.artwork.hidden = true;
         elements.artwork.removeAttribute("src");
+        elements.artwork.removeAttribute("srcset");
         elements.artwork.alt = "";
+        elements.artwork.onload = null;
+        if (elements.artworkWrap) {
+          elements.artworkWrap.removeAttribute("data-now-playing-low-resolution");
+        }
       }
       if (elements.placeholder) {
         elements.placeholder.hidden = false;
