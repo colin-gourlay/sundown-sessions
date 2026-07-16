@@ -7,6 +7,7 @@
 
 {{ $page := .Page }}
 {{ $isShowCard := eq $page.Type "shows" }}
+{{ $isReleaseCard := eq $page.Type "releases" }}
 {{ $featured := "" }}
 {{ $featuredURL := "" }}
 {{ if not .Params.hideFeatureImage }}
@@ -125,9 +126,41 @@
           </h2>
         </a>
       </header>
-      <div class="text-sm text-neutral-500 dark:text-neutral-400">
-        {{ partial "article-meta/basic.html" . }}
-      </div>
+      {{ if $isReleaseCard }}
+        {{ $artistNames := slice }}
+        {{ with .Params.artist }}
+          {{ if reflect.IsSlice . }}{{ range . }}{{ $artistNames = $artistNames | append . }}{{ end }}{{ else }}{{ $artistNames = $artistNames | append . }}{{ end }}
+        {{ else }}
+          {{ with .Params.artists }}
+            {{ if reflect.IsSlice . }}{{ range . }}{{ $artistNames = $artistNames | append . }}{{ end }}{{ else }}{{ $artistNames = $artistNames | append . }}{{ end }}
+          {{ end }}
+        {{ end }}
+        {{ with $artistNames }}
+          <p class="mt-3 text-sm font-semibold leading-snug text-neutral-700 dark:text-neutral-200">{{ delimit . ", " }}</p>
+        {{ end }}
+        {{ $releaseType := .Params.releaseType | default .Params.release_type | default (index .Params "release-types") }}
+        {{ $releaseDate := .Params.releaseDate | default .Params.release_date | default .Date }}
+        {{ $releaseYear := "" }}
+        {{ with $releaseDate }}
+          {{ $dateText := printf "%v" . }}
+          {{ if or (in $dateText "UTC") (in $dateText "+0000") }}{{ $dateText = time.Format "2006" . }}{{ end }}
+          {{ $matches := findRE `\b(1[89][0-9]{2}|20[0-9]{2})\b` $dateText 1 }}
+          {{ with $matches }}{{ $releaseYear = index . 0 }}{{ end }}
+        {{ end }}
+        {{ if or $releaseType $releaseYear .Params.for_sale }}
+          <div class="mt-3 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+            {{ with $releaseType }}
+              {{ if reflect.IsSlice . }}{{ range first 1 . }}<span class="release-card-badge">{{ . }}</span>{{ end }}{{ else }}<span class="release-card-badge">{{ . }}</span>{{ end }}
+            {{ end }}
+            {{ with $releaseYear }}<span>{{ . }}</span>{{ end }}
+            {{ if .Params.for_sale }}{{ partial "for-sale-badge.html" (dict "label" "Available to buy") }}{{ end }}
+          </div>
+        {{ end }}
+      {{ else }}
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          {{ partial "article-meta/basic.html" . }}
+        </div>
+      {{ end }}
       {{ if (.Params.showSummary | default (.Site.Params.list.showSummary | default false)) }}
         <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
           {{ .Summary | plainify }}
