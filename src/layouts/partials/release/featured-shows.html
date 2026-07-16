@@ -188,7 +188,7 @@
           {{- $href = $href | relURL -}}
         {{- end -}}
         <li class="release-featured-shows__row">
-          <a class="release-featured-shows__link" href="{{ $href }}">
+          <a class="release-featured-shows__link" href="{{ $href }}" data-analytics-event="release_featured_show_click" data-analytics-provider="release-detail">
             <span class="release-featured-shows__title">{{ $show.title }}</span>
             {{- with $show.date -}}
               <span class="release-featured-shows__date">

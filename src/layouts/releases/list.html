@@ -1,0 +1,129 @@
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "list" }}
+  {{ $enableToc := .Params.showTableOfContents | default (site.Params.list.showTableOfContents | default false) }}
+  {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
+
+  {{ partial "section-hero.html" . }}
+
+  {{ $tocMargin := cond $showToc "mt-12" "mt-0" }}
+  {{ $topClass := cond (hasPrefix site.Params.header.layout "fixed") "lg:top-[140px]" "lg:top-10" }}
+  <section class="{{ $tocMargin }} prose flex max-w-full flex-col dark:prose-invert lg:flex-row mb-10">
+    {{ if $showToc }}
+      <div class="order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
+        <div class="toc ps-5 print:hidden lg:sticky {{ $topClass }}">
+          {{ partial "toc.html" . }}
+        </div>
+      </div>
+    {{ end }}
+    <div class="min-w-0 min-h-0 max-w-prose w-full">
+      {{ .Content }}
+    </div>
+  </section>
+
+  {{ $releasePages := .RegularPagesRecursive.ByTitle }}
+  {{ if gt (len $releasePages) 0 }}
+    {{ $featured := slice }}
+    {{ range $releasePages }}
+      {{ if and (lt (len $featured) 6) (or .Params.shows .Params.featuredInShows .Params.for_sale) }}
+        {{ $featured = $featured | append . }}
+      {{ end }}
+    {{ end }}
+    {{ if eq (len $featured) 0 }}
+      {{ $featured = first 6 $releasePages }}
+    {{ end }}
+
+    <section class="release-index-discovery mb-12 not-prose" aria-labelledby="release-index-discovery-heading">
+      <div class="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+        <div>
+          <p class="mb-2 text-sm font-semibold uppercase tracking-wide text-primary-600 dark:text-primary-400">Start exploring</p>
+          <h2 id="release-index-discovery-heading" class="text-2xl font-bold text-neutral-800 dark:text-neutral-100">Featured release pathways</h2>
+        </div>
+        <a class="text-sm font-semibold text-primary-600 hover:underline dark:text-primary-400" href="/search/" data-analytics-event="release_index_search_click" data-analytics-provider="release-index">Search artists, releases, tracks and shows</a>
+      </div>
+      <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+        {{ range $featured }}
+          {{ partial "article-link/card.html" . }}
+        {{ end }}
+      </div>
+    </section>
+
+    {{ $types := slice }}
+    {{ $labels := slice }}
+    {{ $years := slice }}
+    {{ range $releasePages }}
+      {{ $releaseType := .Params.releaseType | default .Params.release_type | default (index .Params "release-types") }}
+      {{ with $releaseType }}
+        {{ if reflect.IsSlice . }}{{ range . }}{{ $types = $types | append . }}{{ end }}{{ else }}{{ $types = $types | append . }}{{ end }}
+      {{ end }}
+      {{ with (.Params.label | default .Params.labels) }}
+        {{ if reflect.IsSlice . }}{{ range . }}{{ $labels = $labels | append . }}{{ end }}{{ else }}{{ $labels = $labels | append . }}{{ end }}
+      {{ end }}
+      {{ $releaseDate := .Params.releaseDate | default .Params.release_date | default .Date }}
+      {{ with $releaseDate }}
+        {{ $dateText := printf "%v" . }}
+        {{ if or (in $dateText "UTC") (in $dateText "+0000") }}{{ $dateText = time.Format "2006" . }}{{ end }}
+        {{ $matches := findRE `\b(1[89][0-9]{2}|20[0-9]{2})\b` $dateText 1 }}
+        {{ with $matches }}{{ $years = $years | append (index . 0) }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    <section class="release-index-facets mb-12 not-prose" aria-labelledby="release-index-facets-heading">
+      <h2 id="release-index-facets-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-100">Browse the archive</h2>
+      <div class="grid gap-4 lg:grid-cols-3">
+        {{ with uniq $types }}
+          <div class="rounded-xl border border-neutral-200 bg-white/80 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+            <h3 class="mb-3 text-base font-bold text-neutral-800 dark:text-neutral-100">By release type</h3>
+            <div class="flex flex-wrap gap-2">
+              {{ range first 12 (sort .) }}<a class="release-index-chip" href="{{ relLangURL (printf "release-types/%s/" (. | urlize)) }}" data-analytics-event="release_index_facet_click" data-analytics-taxonomy="release-types">{{ . }}</a>{{ end }}
+            </div>
+          </div>
+        {{ end }}
+        {{ with uniq $years }}
+          <div class="rounded-xl border border-neutral-200 bg-white/80 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+            <h3 class="mb-3 text-base font-bold text-neutral-800 dark:text-neutral-100">By year</h3>
+            <div class="flex flex-wrap gap-2">
+              {{ range first 16 (sort .) }}<a class="release-index-chip" href="{{ relLangURL (printf "years/%s/" (. | urlize)) }}" data-analytics-event="release_index_facet_click" data-analytics-taxonomy="years">{{ . }}</a>{{ end }}
+            </div>
+          </div>
+        {{ end }}
+        {{ with uniq $labels }}
+          <div class="rounded-xl border border-neutral-200 bg-white/80 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70">
+            <h3 class="mb-3 text-base font-bold text-neutral-800 dark:text-neutral-100">By label</h3>
+            <div class="flex flex-wrap gap-2">
+              {{ range first 12 (sort .) }}<a class="release-index-chip" href="{{ relLangURL (printf "labels/%s/" (. | urlize)) }}" data-analytics-event="release_index_facet_click" data-analytics-taxonomy="labels">{{ . }}</a>{{ end }}
+            </div>
+          </div>
+        {{ end }}
+      </div>
+    </section>
+
+    {{ $forSale := where $releasePages "Params.for_sale" true }}
+    {{ with $forSale }}
+      <section class="release-index-availability mb-12 not-prose" aria-labelledby="release-index-availability-heading">
+        <div class="mb-5 flex items-center justify-between gap-3">
+          <h2 id="release-index-availability-heading" class="text-2xl font-bold text-neutral-800 dark:text-neutral-100">Available to buy</h2>
+          <span class="text-sm text-neutral-500 dark:text-neutral-400">{{ len . }} release{{ if ne (len .) 1 }}s{{ end }}</span>
+        </div>
+        <div class="grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4">
+          {{ range first 4 . }}{{ partial "article-link/card.html" . }}{{ end }}
+        </div>
+      </section>
+    {{ end }}
+
+    <section class="release-index-all mb-6 not-prose" aria-labelledby="release-index-all-heading">
+      <h2 id="release-index-all-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-100">All releases</h2>
+      <div class="relative w-screen max-w-[1600px] px-[30px] start-[calc(max(-50vw,-800px)+50%)]">
+        <section class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5">
+          {{ range (.Paginate $releasePages).Pages }}
+            {{ partial "article-link/card.html" . }}
+          {{ end }}
+        </section>
+      </div>
+    </section>
+  {{ else }}
+    <section class="mt-10 prose dark:prose-invert">
+      <p class="py-8 border-t"><em>{{ i18n "list.no_articles" | emojify }}</em></p>
+    </section>
+  {{ end }}
+  {{ partial "pagination.html" . }}
+{{ end }}

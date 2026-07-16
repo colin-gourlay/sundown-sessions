@@ -4059,3 +4059,45 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
     width: min(100%, 18rem);
   }
 }
+
+/* Release archive discovery sections and card metadata. */
+.release-index-chip,
+.release-card-badge {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+  border: 1px solid #d4d4d4; /* neutral-300 */
+  border-radius: 999px;
+  background-color: rgba(245, 245, 245, 0.86); /* neutral-100/86 */
+  padding: 0.2rem 0.65rem;
+  color: #404040; /* neutral-700 */
+  font-size: 0.75rem;
+  font-weight: 700;
+  line-height: 1.35;
+  text-decoration: none;
+}
+
+.release-index-chip:hover,
+.release-index-chip:focus-visible {
+  border-color: #0ea5e9; /* sky-500 */
+  color: #0369a1; /* sky-700 */
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
+.dark .release-index-chip,
+.dark .release-card-badge {
+  border-color: #525252; /* neutral-600 */
+  background-color: rgba(38, 38, 38, 0.86); /* neutral-800/86 */
+  color: #e5e5e5; /* neutral-200 */
+}
+
+.dark .release-index-chip:hover,
+.dark .release-index-chip:focus-visible {
+  border-color: #38bdf8; /* sky-400 */
+  color: #bae6fd; /* sky-200 */
+}
+
+.article-link--card .for-sale-badge {
+  margin-left: 0;
+}
