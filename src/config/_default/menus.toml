@@ -21,8 +21,8 @@
 
 [[footer]]
   identifier = "listen-again"
-  name = "Listen Again"
-  title = "Browse Sundown Sessions shows"
+  name = "Browse Shows"
+  title = "Browse the Sundown Sessions show archive"
   url = "/shows/"
   weight = 10
 
