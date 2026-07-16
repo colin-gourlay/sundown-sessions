@@ -3,7 +3,7 @@
   {{ if .Site.Params.footer.showMenu | default true }}
     {{ $listenURL := "/listen-live/" | relURL }}
     {{ if or $listenURL .Site.Menus.footer }}
-      <nav class="pb-4 text-base font-medium text-neutral-500 dark:text-neutral-400" aria-label="Footer">
+      <nav class="pb-2 text-base font-medium text-neutral-500 dark:text-neutral-400" aria-label="Footer">
         <ul class="flex list-none flex-wrap justify-center gap-x-5 gap-y-2 p-0 sm:justify-start">
           <li class="flex">
             <a
