@@ -92,11 +92,12 @@
 {{ end }}
 {{ $discoverySummary := "" }}
 {{ if gt (len $displayArtists) 0 }}
-  {{ $artistList := delimit $displayArtists ", " }}
+  {{ $discoveryArtists := $displayArtists }}
   {{ if $hasMoreArtists }}
-    {{ $artistList = printf "%s, and more" $artistList }}
+    {{ $discoveryArtists = $discoveryArtists | append "and more" }}
   {{ end }}
-  {{ $discoverySummary = printf "Featuring %s." $artistList }}
+  {{ $artistList := delimit $discoveryArtists ", " " and " }}
+  {{ $discoverySummary = printf "Featuring music from %s." $artistList }}
 {{ else }}
   {{ with .Summary }}
     {{ $discoverySummary = . | plainify | truncate 150 }}
