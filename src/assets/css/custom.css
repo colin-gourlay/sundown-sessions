@@ -1837,7 +1837,7 @@ label[for]:focus-visible {
 /* Shows archive page: editorial gateway above the broadcast list. */
 
 .shows-archive-intro {
-  margin: 0 0 clamp(2.75rem, 5vw, 3.75rem);
+  margin: 0 0 clamp(3.75rem, 6vw, 5rem);
 }
 
 .shows-archive-intro__copy {
@@ -2003,7 +2003,7 @@ label[for]:focus-visible {
 }
 
 .show-card__number {
-  margin-bottom: 0.35rem;
+  margin-bottom: 0.45rem;
   color: #737373; /* neutral-500 */
   font-size: 0.76rem;
   font-weight: 750;
@@ -2055,7 +2055,7 @@ label[for]:focus-visible {
   flex-wrap: wrap;
   align-items: center;
   gap: 0.32rem 0.55rem;
-  margin-top: 0.72rem;
+  margin-top: 0.82rem;
   color: #525252; /* neutral-600 */
   font-size: 0.88rem;
   line-height: 1.35;
@@ -2092,7 +2092,7 @@ label[for]:focus-visible {
 
 .show-card__summary {
   display: -webkit-box;
-  margin: 0.82rem 0 0;
+  margin: 0.92rem 0 0;
   overflow: hidden;
   color: #404040; /* neutral-700 */
   font-size: 1.02rem;
@@ -2109,7 +2109,7 @@ label[for]:focus-visible {
   position: relative;
   z-index: 1;
   align-self: flex-start;
-  margin-top: 0.95rem;
+  margin-top: 1.05rem;
   color: rgba(var(--color-primary-600), 1);
   font-size: 0.92rem;
   font-weight: 700;
@@ -2181,7 +2181,7 @@ label[for]:focus-visible {
 
   .show-card__meta {
     gap: 0.42rem 0.5rem;
-    margin-top: 0.65rem;
+    margin-top: 0.72rem;
   }
 
   .show-card__meta-item {
