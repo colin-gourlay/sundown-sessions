@@ -53,7 +53,7 @@
 {{ if gt (len $titleParts) 1 }}
   {{ $rawShowLabel := index $titleParts 0 }}
   {{ $showLabel = $rawShowLabel }}
-  {{ $showLabel = replaceRE `(?i)^show\s*#` "Broadcast #" $showLabel }}
+  {{ $showLabel = replaceRE `(?i)^broadcast\s*#` "Show #" $showLabel }}
   {{ $showTitle = strings.TrimPrefix (printf "%s: " $rawShowLabel) .Title | emojify }}
 {{ end }}
 
