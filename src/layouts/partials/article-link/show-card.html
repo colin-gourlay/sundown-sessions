@@ -96,8 +96,8 @@
   {{ if $hasMoreArtists }}
     {{ $discoveryArtists = $discoveryArtists | append "and more" }}
   {{ end }}
-  {{ $artistList := delimit $discoveryArtists ", " " and " }}
-  {{ $discoverySummary = printf "Featuring music from %s." $artistList }}
+  {{ $artistList := delimit $discoveryArtists ", " ", " }}
+  {{ $discoverySummary = printf "Discover tracks from %s." $artistList }}
 {{ else }}
   {{ with .Summary }}
     {{ $discoverySummary = . | plainify | truncate 150 }}
