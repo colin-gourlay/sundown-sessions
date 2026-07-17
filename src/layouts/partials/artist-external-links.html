@@ -21,11 +21,31 @@
   {{ $platformKey = replace $platformKey " " "-" }}
   {{ $platformKey = replace $platformKey "_" "-" }}
   {{ $platformKey = replace $platformKey "." "" }}
-  {{ $platformKey = replace $platformKey "official-website" "website" }}
-  {{ $platformKey = replace $platformKey "official-site" "website" }}
-  {{ $platformKey = replace $platformKey "apple-music" "apple" }}
-  {{ if or (eq $platformKey "x") (eq $platformKey "x-twitter") }}
+  {{ $urlLower := lower $url }}
+  {{ if or (in $platformKey "website") (in $platformKey "official-site") }}
+    {{ $platformKey = "website" }}
+  {{ else if in $platformKey "apple-music" }}
+    {{ $platformKey = "apple" }}
+  {{ else if or (in $platformKey "x-twitter") (eq $platformKey "x") (in $platformKey "twitter") }}
     {{ $platformKey = "twitter" }}
+  {{ else if or (in $platformKey "facebook") (in $urlLower "facebook.com") }}
+    {{ $platformKey = "facebook" }}
+  {{ else if or (in $platformKey "instagram") (in $urlLower "instagram.com") }}
+    {{ $platformKey = "instagram" }}
+  {{ else if or (in $platformKey "youtube") (in $urlLower "youtube.com") (in $urlLower "youtu.be") }}
+    {{ $platformKey = "youtube" }}
+  {{ else if or (in $platformKey "bandcamp") (in $urlLower "bandcamp.com") }}
+    {{ $platformKey = "bandcamp" }}
+  {{ else if or (in $platformKey "spotify") (in $urlLower "spotify.com") }}
+    {{ $platformKey = "spotify" }}
+  {{ else if or (in $platformKey "discogs") (in $urlLower "discogs.com") }}
+    {{ $platformKey = "discogs" }}
+  {{ else if or (in $platformKey "musicbrainz") (in $urlLower "musicbrainz.org") }}
+    {{ $platformKey = "musicbrainz" }}
+  {{ else if or (in $platformKey "wikipedia") (in $urlLower "wikipedia.org") }}
+    {{ $platformKey = "wikipedia" }}
+  {{ else if or (in $platformKey "bluesky") (in $urlLower "bsky.app") }}
+    {{ $platformKey = "bluesky" }}
   {{ end }}
 
   {{ if and $url (not (index $linksByPlatform $platformKey)) }}
@@ -40,10 +60,12 @@
   (dict "key" "apple" "label" "Apple Music" "icon" "apple")
   (dict "key" "discogs" "label" "Discogs" "icon" "music")
   (dict "key" "musicbrainz" "label" "MusicBrainz" "icon" "music")
+  (dict "key" "wikipedia" "label" "Wikipedia" "icon" "globe")
   (dict "key" "facebook" "label" "Facebook" "icon" "facebook")
   (dict "key" "instagram" "label" "Instagram" "icon" "instagram")
   (dict "key" "youtube" "label" "YouTube" "icon" "youtube")
   (dict "key" "twitter" "label" "X (Twitter)" "icon" "x-twitter")
+  (dict "key" "bluesky" "label" "Bluesky" "icon" "link")
   (dict "key" "vimeo" "label" "Vimeo" "icon" "link")
   (dict "key" "tiktok" "label" "TikTok" "icon" "tiktok")
 }}
