@@ -3702,7 +3702,7 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   flex-direction: column;
   gap: clamp(3.25rem, 7vw, 5.5rem);
   max-width: 66rem;
-  margin-bottom: 5rem;
+  margin-bottom: 7rem;
 }
 
 .about-page > .space-y-6 img {
