@@ -228,8 +228,8 @@ label[for]:focus-visible {
   border: 1px solid var(--listen-live-soft-border);
   border-radius: 0.5rem;
   background:
-    radial-gradient(circle at 12% 6%, rgb(244 124 60 / 0.14), transparent 34%),
-    radial-gradient(circle at 94% 8%, rgb(106 63 181 / 0.1), transparent 28%),
+    radial-gradient(circle at 12% 6%, rgb(244 124 60 / 0.126), transparent 34%),
+    radial-gradient(circle at 94% 8%, rgb(106 63 181 / 0.09), transparent 28%),
     var(--ss-color-surface-warm);
   box-shadow:
     0 22px 54px var(--ss-color-shadow),
@@ -240,8 +240,8 @@ label[for]:focus-visible {
 .dark .listen-live-live {
   border-color: var(--listen-live-soft-border);
   background:
-    radial-gradient(circle at 12% 6%, rgb(255 138 76 / 0.16), transparent 34%),
-    radial-gradient(circle at 94% 8%, rgb(169 140 255 / 0.14), transparent 28%),
+    radial-gradient(circle at 12% 6%, rgb(255 138 76 / 0.144), transparent 34%),
+    radial-gradient(circle at 94% 8%, rgb(169 140 255 / 0.126), transparent 28%),
     var(--ss-color-surface-warm);
   box-shadow:
     0 24px 60px var(--ss-color-shadow),
@@ -278,9 +278,14 @@ label[for]:focus-visible {
 }
 
 .listen-live-schedule {
-  gap: 0.8rem;
+  gap: 0.95rem;
   max-width: 48rem;
   scroll-margin-top: 6rem;
+}
+
+.listen-live-schedule h2 {
+  font-size: 1.18rem;
+  font-weight: 760;
 }
 
 .listen-live-now-playing h2,
@@ -604,13 +609,15 @@ label[for]:focus-visible {
 
 .listen-live-detail-grid {
   display: grid;
-  gap: 0.75rem;
+  gap: 1rem;
+  align-items: start;
   margin: 0;
 }
 
 .listen-live-detail-grid div {
   display: grid;
-  gap: 0.18rem;
+  gap: 0.25rem;
+  align-content: start;
   padding: 0;
 }
 
@@ -651,14 +658,15 @@ label[for]:focus-visible {
   position: relative;
   display: flex;
   min-width: 0;
-  min-height: 100%;
+  min-height: 8rem;
   flex-direction: column;
+  justify-content: center;
   gap: 0.55rem;
   overflow: hidden;
   border: 1px solid color-mix(in srgb, var(--ss-color-border) 82%, transparent);
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
   background: color-mix(in srgb, var(--ss-color-surface) 88%, white);
-  padding: clamp(1.1rem, 2.5vw, 1.35rem);
+  padding: clamp(1.3rem, 3vw, 1.55rem);
   color: inherit;
   text-decoration: none;
   box-shadow: 0 1px 2px rgb(30 36 56 / 0.05);
@@ -720,7 +728,7 @@ label[for]:focus-visible {
 
   .listen-live-detail-grid {
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 1.35rem;
+    gap: 1.75rem;
   }
 
   .listen-live-more__grid {
