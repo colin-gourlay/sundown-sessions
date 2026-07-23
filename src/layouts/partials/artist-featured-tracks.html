@@ -1,7 +1,9 @@
-{{/* Tracks connected to an artist through track front matter. */}}
+{{/* Tracks connected to an artist through track front matter, together with
+     every broadcast in whose playlist or track guide they appear. */}}
 
 {{ $artistKey := lower (urlize .Title) }}
 {{ $tracks := slice }}
+{{ $shows := where site.RegularPages "Section" "shows" }}
 
 {{ range where site.RegularPages "Section" "tracks" }}
   {{ $track := . }}
@@ -21,14 +23,66 @@
   <section class="release-featured-shows not-prose" role="region" aria-labelledby="artist-featured-tracks-heading">
     <h2 id="artist-featured-tracks-heading" class="release-featured-shows__heading">Tracks Featured on Sundown Sessions</h2>
     <ul class="release-featured-shows__list">
-      {{ range first 12 ($tracks.ByTitle) }}
-        <li class="release-featured-shows__row">
-          <a class="release-featured-shows__link" href="{{ .RelPermalink }}">
-            <span class="release-featured-shows__title">{{ .Title | emojify }}</span>
-            {{ with .Params.release }}
-              <span class="release-featured-shows__date">{{ . }}</span>
+      {{ range $tracks.ByTitle }}
+        {{ $track := . }}
+        {{ $trackTitle := lower .Title }}
+        {{ $trackArtist := .Params.artist | default .Params.artists | default "" }}
+        {{ if reflect.IsSlice $trackArtist }}{{ $trackArtist = delimit $trackArtist " " }}{{ end }}
+        {{ $trackArtist = lower (printf "%v" $trackArtist) }}
+        {{ $appearances := slice }}
+
+        {{ range $shows }}
+          {{ $show := . }}
+          {{ $showText := .RawContent }}
+          {{ with .File }}
+            {{ $showDir := path.Dir (replace .Path "\\" "/") }}
+            {{ range slice "playlist.md" "playlist" "track-info.md" "track-info" }}
+              {{ $includedPath := printf "content/%s/%s" $showDir . }}
+              {{ if fileExists $includedPath }}
+                {{ $showText = printf "%s\n%s" $showText (readFile $includedPath) }}
+              {{ end }}
             {{ end }}
-          </a>
+          {{ end }}
+          {{ $showText = lower $showText }}
+          {{ $matched := false }}
+          {{ range split $showText "\n" }}
+            {{ $line := . }}
+            {{ if and (not $matched) (in $line $trackArtist) (in $line $trackTitle) }}
+              {{ $matched = true }}
+            {{ end }}
+          {{ end }}
+          {{ if $matched }}
+            {{ $appearances = $appearances | append $show }}
+          {{ end }}
+        {{ end }}
+
+        <li class="release-featured-shows__row">
+          <article class="artist-featured-track">
+            <div class="artist-featured-track__details">
+              <a class="artist-featured-track__title" href="{{ $track.RelPermalink }}">{{ $track.Title | emojify }}</a>
+              {{ with .Params.release }}
+                <span class="artist-featured-track__release">from {{ . }}</span>
+              {{ end }}
+            </div>
+            {{ if gt (len $appearances) 0 }}
+              <div class="artist-featured-track__broadcasts">
+                <span class="artist-featured-track__label">Featured on:</span>
+                <ul class="artist-featured-track__appearances">
+                  {{ range $appearances.ByDate.Reverse }}
+                    <li>
+                      <a class="artist-featured-track__show-link" href="{{ .RelPermalink }}">
+                        <span>{{ partial "release/show-card-title.html" . }}</span>
+                        {{ if not .Date.IsZero }}
+                          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</time>
+                        {{ end }}
+                        <span class="artist-featured-track__cta">View Broadcast <span aria-hidden="true">→</span></span>
+                      </a>
+                    </li>
+                  {{ end }}
+                </ul>
+              </div>
+            {{ end }}
+          </article>
         </li>
       {{ end }}
     </ul>
