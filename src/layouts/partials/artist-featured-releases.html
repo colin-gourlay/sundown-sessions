@@ -61,7 +61,11 @@
             <span class="release-discover-card__body">
               <span class="release-discover-card__title">{{ $release.Title | emojify }}</span>
               {{ with ($release.Params.releaseDate | default $release.Params.release_date | default $release.Params.releaseType | default $release.Params.release_type) }}
-                <span class="release-discover-card__meta">{{ . }}</span>
+                {{ $releaseMeta := printf "%v" . }}
+                {{ if gt (len (findRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}` $releaseMeta 1)) 0 }}
+                  {{ $releaseMeta = time.Format "2 January 2006" . }}
+                {{ end }}
+                <span class="release-discover-card__meta">{{ $releaseMeta }}</span>
               {{ end }}
             </span>
           </a>
