@@ -3546,8 +3546,32 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   margin: -0.35rem 1.25rem 0.9rem;
 }
 
-/* Artist featured tracks: a compact track summary followed by all of its
-   broadcast appearances. */
+/* Artist featured tracks: a lightweight list group that follows the same
+   heading and section rhythm as the surrounding artist discovery content. */
+
+.artist-featured-tracks__list {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid #d4d4d4; /* neutral-300 */
+  border-radius: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  padding: 0;
+  list-style: none;
+}
+
+.dark .artist-featured-tracks__list {
+  border-color: #404040; /* neutral-700 */
+  background-color: rgba(23, 23, 23, 0.8); /* neutral-900/80 */
+}
+
+.artist-featured-tracks__row + .artist-featured-tracks__row {
+  border-top: 1px solid #e5e5e5; /* neutral-200 */
+}
+
+.dark .artist-featured-tracks__row + .artist-featured-tracks__row {
+  border-top-color: #404040; /* neutral-700 */
+}
 
 .artist-featured-track {
   display: grid;
@@ -3632,15 +3656,12 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 .artist-featured-track__show-link {
   gap: 0.1rem;
-  padding: 0.7rem 0.8rem;
-  border: 1px solid #e5e5e5; /* neutral-200 */
-  border-radius: 0.5rem;
-  background: #fff;
+  padding: 0.6rem 0;
+  border-top: 1px solid #e5e5e5; /* neutral-200 */
 }
 
 .dark .artist-featured-track__show-link {
   border-color: #404040; /* neutral-700 */
-  background: rgba(23, 23, 23, 0.5); /* neutral-900/50 */
 }
 
 .artist-featured-track__show-link > span:first-child {
