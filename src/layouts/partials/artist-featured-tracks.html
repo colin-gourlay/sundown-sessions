@@ -1,89 +1,111 @@
-{{/* Tracks connected to an artist through track front matter, together with
-     every broadcast in whose playlist or track guide they appear. */}}
+{{/* Build the artist's play history from the structured title shortcodes in
+     published show track guides. Most played tracks do not have standalone
+     track pages, so those pages cannot be the source of truth here. */}}
 
 {{ $artistKey := lower (urlize .Title) }}
-{{ $tracks := slice }}
-{{ $shows := where site.RegularPages "Section" "shows" }}
+{{ $tracks := newScratch }}
+{{ $tracks.Set "items" (dict) }}
 
-{{ range where site.RegularPages "Section" "tracks" }}
-  {{ $track := . }}
-  {{ $trackArtist := .Params.artist | default .Params.artists | default "" }}
-  {{ $matched := false }}
-  {{ if reflect.IsSlice $trackArtist }}
-    {{ range $trackArtist }}
-      {{ if eq (lower (urlize (printf "%v" .))) $artistKey }}{{ $matched = true }}{{ end }}
+{{ range where site.RegularPages "Section" "shows" }}
+  {{ $show := . }}
+  {{ $showMatchesArtist := false }}
+  {{ range .Params.tags }}
+    {{ if eq (lower (urlize (printf "%v" .))) $artistKey }}
+      {{ $showMatchesArtist = true }}
     {{ end }}
-  {{ else }}
-    {{ if eq (lower (urlize (printf "%v" $trackArtist))) $artistKey }}{{ $matched = true }}{{ end }}
   {{ end }}
-  {{ if $matched }}{{ $tracks = $tracks | append $track }}{{ end }}
+  {{ $trackInfo := "" }}
+  {{ with and $showMatchesArtist .File }}
+    {{ $showDir := path.Dir (replace .Path "\\" "/") }}
+    {{ range slice "track-info.md" "track-info" }}
+      {{ $includedPath := printf "content/%s/%s" $showDir . }}
+      {{ if fileExists $includedPath }}
+        {{ $trackInfo = readFile $includedPath }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ range split $trackInfo "\n" }}
+    {{ $line := . }}
+    {{ $titleShortcode := index (findRE `(?i)title\s+"[^"]+"` $line 1) 0 | default "" }}
+    {{ if $titleShortcode }}
+      {{ $titleData := replaceRE `(?i)^title\s+"|"$` "" $titleShortcode }}
+      {{ $titleParts := split $titleData "--" }}
+      {{ if ge (len $titleParts) 2 }}
+        {{ $trackTitle := strings.TrimSpace (index $titleParts 0) }}
+        {{ $trackArtist := strings.TrimSpace (index $titleParts 1) }}
+        {{ if eq (lower (urlize $trackArtist)) $artistKey }}
+          {{ $releaseTitle := "" }}
+          {{ $cells := split $line "|" }}
+          {{ if ge (len $cells) 4 }}
+            {{ $releaseCell := strings.TrimSpace (index $cells 3) }}
+            {{ $releaseShortcode := index (findRE `(?i)release\s+"[^"]+"` $releaseCell 1) 0 | default "" }}
+            {{ if $releaseShortcode }}
+              {{ $releaseData := replaceRE `(?i)^release\s+"|"$` "" $releaseShortcode }}
+              {{ $releaseTitle = strings.TrimSpace (index (split $releaseData "--") 0) }}
+            {{ else }}
+              {{ $releaseTitle = replaceRE `^\[([^\]]+)\]\([^)]+\)$` "$1" $releaseCell }}
+              {{ $releaseTitle = replaceRE `\s+\([0-9]{4}\)\s*$` "" $releaseTitle }}
+              {{ if or (hasPrefix $releaseTitle "{{") (eq $releaseTitle "") }}
+                {{ $releaseTitle = "" }}
+              {{ end }}
+            {{ end }}
+          {{ end }}
+
+          {{ $trackKey := lower (urlize $trackTitle) }}
+          {{ $items := $tracks.Get "items" }}
+          {{ $existing := index $items $trackKey | default (dict "title" $trackTitle "release" "" "shows" (slice)) }}
+          {{ $resolvedRelease := index $existing "release" | default $releaseTitle }}
+          {{ $item := dict
+            "title" (index $existing "title")
+            "release" $resolvedRelease
+            "shows" ((index $existing "shows") | append $show)
+          }}
+          {{ $tracks.SetInMap "items" $trackKey $item }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
 {{ end }}
 
-{{ if gt (len $tracks) 0 }}
+{{ $items := $tracks.Get "items" }}
+{{ if gt (len $items) 0 }}
   <section class="artist-featured-tracks mb-10 not-prose" role="region" aria-labelledby="artist-featured-tracks-heading">
     <h2 id="artist-featured-tracks-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
       Tracks Featured on Sundown Sessions
     </h2>
     <ul class="artist-featured-tracks__list">
-      {{ range $tracks.ByTitle }}
-        {{ $track := . }}
-        {{ $trackTitle := lower .Title }}
-        {{ $trackArtist := .Params.artist | default .Params.artists | default "" }}
-        {{ if reflect.IsSlice $trackArtist }}{{ $trackArtist = delimit $trackArtist " " }}{{ end }}
-        {{ $trackArtist = lower (printf "%v" $trackArtist) }}
-        {{ $appearances := slice }}
-
-        {{ range $shows }}
-          {{ $show := . }}
-          {{ $showText := .RawContent }}
-          {{ with .File }}
-            {{ $showDir := path.Dir (replace .Path "\\" "/") }}
-            {{ range slice "playlist.md" "playlist" "track-info.md" "track-info" }}
-              {{ $includedPath := printf "content/%s/%s" $showDir . }}
-              {{ if fileExists $includedPath }}
-                {{ $showText = printf "%s\n%s" $showText (readFile $includedPath) }}
-              {{ end }}
-            {{ end }}
-          {{ end }}
-          {{ $showText = lower $showText }}
-          {{ $matched := false }}
-          {{ range split $showText "\n" }}
-            {{ $line := . }}
-            {{ if and (not $matched) (in $line $trackArtist) (in $line $trackTitle) }}
-              {{ $matched = true }}
-            {{ end }}
-          {{ end }}
-          {{ if $matched }}
-            {{ $appearances = $appearances | append $show }}
-          {{ end }}
-        {{ end }}
-
+      {{ range sort $items "title" }}
+        {{ $item := . }}
+        {{ $trackPage := site.GetPage (printf "tracks/%s/%s/%s" (substr $artistKey 0 1) $artistKey (urlize .title)) }}
         <li class="artist-featured-tracks__row">
           <article class="artist-featured-track">
             <div class="artist-featured-track__details">
-              <a class="artist-featured-track__title" href="{{ $track.RelPermalink }}">{{ $track.Title | emojify }}</a>
-              {{ with .Params.release }}
+              {{ with $trackPage }}
+                <a class="artist-featured-track__title" href="{{ .RelPermalink }}">{{ $item.title | emojify }}</a>
+              {{ else }}
+                <span class="artist-featured-track__title">{{ .title | emojify }}</span>
+              {{ end }}
+              {{ with .release }}
                 <span class="artist-featured-track__release">from {{ . }}</span>
               {{ end }}
             </div>
-            {{ if gt (len $appearances) 0 }}
-              <div class="artist-featured-track__broadcasts">
-                <span class="artist-featured-track__label">Featured on:</span>
-                <ul class="artist-featured-track__appearances">
-                  {{ range $appearances.ByDate.Reverse }}
-                    <li>
-                      <a class="artist-featured-track__show-link" href="{{ .RelPermalink }}">
-                        <span>{{ partial "release/show-card-title.html" . }}</span>
-                        {{ if not .Date.IsZero }}
-                          <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</time>
-                        {{ end }}
-                        <span class="artist-featured-track__cta">View Broadcast <span aria-hidden="true">→</span></span>
-                      </a>
-                    </li>
-                  {{ end }}
-                </ul>
-              </div>
-            {{ end }}
+            <div class="artist-featured-track__broadcasts">
+              <span class="artist-featured-track__label">Featured on:</span>
+              <ul class="artist-featured-track__appearances">
+                {{ range .shows.ByDate.Reverse }}
+                  <li>
+                    <a class="artist-featured-track__show-link" href="{{ .RelPermalink }}">
+                      <span>{{ partial "release/show-card-title.html" . }}</span>
+                      {{ if not .Date.IsZero }}
+                        <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</time>
+                      {{ end }}
+                      <span class="artist-featured-track__cta">View Broadcast <span aria-hidden="true">→</span></span>
+                    </a>
+                  </li>
+                {{ end }}
+              </ul>
+            </div>
           </article>
         </li>
       {{ end }}
