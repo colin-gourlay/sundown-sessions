@@ -3546,6 +3546,123 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   margin: -0.35rem 1.25rem 0.9rem;
 }
 
+/* Artist featured tracks: a compact track summary followed by all of its
+   broadcast appearances. */
+
+.artist-featured-track {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+.artist-featured-track__details,
+.artist-featured-track__broadcasts,
+.artist-featured-track__show-link {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-featured-track__details,
+.artist-featured-track__broadcasts {
+  gap: 0.2rem;
+}
+
+.artist-featured-track__title,
+.artist-featured-track__show-link {
+  color: inherit;
+  text-decoration: none;
+}
+
+.artist-featured-track__title {
+  width: fit-content;
+  color: #171717; /* neutral-900 */
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.dark .artist-featured-track__title {
+  color: #e5e5e5; /* neutral-200 */
+}
+
+.artist-featured-track__title:hover,
+.artist-featured-track__title:focus-visible,
+.artist-featured-track__show-link:hover span:first-child,
+.artist-featured-track__show-link:focus-visible span:first-child {
+  color: rgba(var(--color-primary-600), 1);
+  text-decoration: underline;
+}
+
+.dark .artist-featured-track__title:hover,
+.dark .artist-featured-track__title:focus-visible,
+.dark .artist-featured-track__show-link:hover span:first-child,
+.dark .artist-featured-track__show-link:focus-visible span:first-child {
+  color: rgba(var(--color-primary-400), 1);
+}
+
+.artist-featured-track__title:focus-visible,
+.artist-featured-track__show-link:focus-visible {
+  border-radius: 0.2rem;
+  outline: 2px solid rgba(var(--color-primary-600), 1);
+  outline-offset: 0.2rem;
+}
+
+.artist-featured-track__release,
+.artist-featured-track__label,
+.artist-featured-track__show-link time {
+  color: #737373; /* neutral-500 */
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.dark .artist-featured-track__release,
+.dark .artist-featured-track__label,
+.dark .artist-featured-track__show-link time {
+  color: #a3a3a3; /* neutral-400 */
+}
+
+.artist-featured-track__appearances {
+  display: grid;
+  gap: 0.5rem;
+  margin: 0.2rem 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.artist-featured-track__show-link {
+  gap: 0.1rem;
+  padding: 0.7rem 0.8rem;
+  border: 1px solid #e5e5e5; /* neutral-200 */
+  border-radius: 0.5rem;
+  background: #fff;
+}
+
+.dark .artist-featured-track__show-link {
+  border-color: #404040; /* neutral-700 */
+  background: rgba(23, 23, 23, 0.5); /* neutral-900/50 */
+}
+
+.artist-featured-track__show-link > span:first-child {
+  color: #262626; /* neutral-800 */
+  font-weight: 650;
+}
+
+.dark .artist-featured-track__show-link > span:first-child {
+  color: #e5e5e5; /* neutral-200 */
+}
+
+.artist-featured-track__cta {
+  margin-top: 0.25rem;
+  color: rgba(var(--color-primary-600), 1);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.dark .artist-featured-track__cta {
+  color: rgba(var(--color-primary-400), 1);
+}
+
 /* Release discovery: responsive onward recommendations for non-sequential
    release pages. Artwork is contained so sleeve art is never cropped. */
 
@@ -3690,6 +3807,11 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
   .release-featured-shows__date {
     flex: none;
+  }
+
+  .artist-featured-track {
+    grid-template-columns: minmax(0, 0.8fr) minmax(0, 1.4fr);
+    align-items: start;
   }
 
   .release-discover-more__grid {
