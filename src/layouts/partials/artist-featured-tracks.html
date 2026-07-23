@@ -20,9 +20,11 @@
 {{ end }}
 
 {{ if gt (len $tracks) 0 }}
-  <section class="release-featured-shows not-prose" role="region" aria-labelledby="artist-featured-tracks-heading">
-    <h2 id="artist-featured-tracks-heading" class="release-featured-shows__heading">Tracks Featured on Sundown Sessions</h2>
-    <ul class="release-featured-shows__list">
+  <section class="artist-featured-tracks mb-10 not-prose" role="region" aria-labelledby="artist-featured-tracks-heading">
+    <h2 id="artist-featured-tracks-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      Tracks Featured on Sundown Sessions
+    </h2>
+    <ul class="artist-featured-tracks__list">
       {{ range $tracks.ByTitle }}
         {{ $track := . }}
         {{ $trackTitle := lower .Title }}
@@ -56,7 +58,7 @@
           {{ end }}
         {{ end }}
 
-        <li class="release-featured-shows__row">
+        <li class="artist-featured-tracks__row">
           <article class="artist-featured-track">
             <div class="artist-featured-track__details">
               <a class="artist-featured-track__title" href="{{ $track.RelPermalink }}">{{ $track.Title | emojify }}</a>
