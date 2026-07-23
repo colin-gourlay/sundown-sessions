@@ -24,9 +24,9 @@
   {{ $urlLower := lower $url }}
   {{ if or (in $platformKey "website") (in $platformKey "official-site") }}
     {{ $platformKey = "website" }}
-  {{ else if in $platformKey "apple-music" }}
+  {{ else if or (in $platformKey "apple-music") (in $urlLower "music.apple.com") }}
     {{ $platformKey = "apple" }}
-  {{ else if or (in $platformKey "x-twitter") (eq $platformKey "x") (in $platformKey "twitter") }}
+  {{ else if or (in $platformKey "x-twitter") (eq $platformKey "x") (in $platformKey "twitter") (in $urlLower "x.com") (in $urlLower "twitter.com") }}
     {{ $platformKey = "twitter" }}
   {{ else if or (in $platformKey "facebook") (in $urlLower "facebook.com") }}
     {{ $platformKey = "facebook" }}
@@ -42,6 +42,10 @@
     {{ $platformKey = "discogs" }}
   {{ else if or (in $platformKey "musicbrainz") (in $urlLower "musicbrainz.org") }}
     {{ $platformKey = "musicbrainz" }}
+  {{ else if or (in $platformKey "vimeo") (in $urlLower "vimeo.com") }}
+    {{ $platformKey = "vimeo" }}
+  {{ else if or (in $platformKey "tiktok") (in $urlLower "tiktok.com") }}
+    {{ $platformKey = "tiktok" }}
   {{ else if or (in $platformKey "wikipedia") (in $urlLower "wikipedia.org") }}
     {{ $platformKey = "wikipedia" }}
   {{ else if or (in $platformKey "bluesky") (in $urlLower "bsky.app") }}
@@ -53,6 +57,8 @@
   {{ end }}
 {{ end }}
 
+{{/* Keep the issue-defined discovery and social priorities first. Destinations
+     outside that sequence remain available, but follow the prioritised links. */}}
 {{ $destinations := slice
   (dict "key" "website" "label" "Official Website" "icon" "globe")
   (dict "key" "bandcamp" "label" "Bandcamp" "icon" "music")
@@ -60,14 +66,14 @@
   (dict "key" "apple" "label" "Apple Music" "icon" "apple")
   (dict "key" "discogs" "label" "Discogs" "icon" "music")
   (dict "key" "musicbrainz" "label" "MusicBrainz" "icon" "music")
-  (dict "key" "wikipedia" "label" "Wikipedia" "icon" "globe")
   (dict "key" "facebook" "label" "Facebook" "icon" "facebook")
   (dict "key" "instagram" "label" "Instagram" "icon" "instagram")
   (dict "key" "youtube" "label" "YouTube" "icon" "youtube")
   (dict "key" "twitter" "label" "X (Twitter)" "icon" "x-twitter")
-  (dict "key" "bluesky" "label" "Bluesky" "icon" "link")
   (dict "key" "vimeo" "label" "Vimeo" "icon" "link")
   (dict "key" "tiktok" "label" "TikTok" "icon" "tiktok")
+  (dict "key" "wikipedia" "label" "Wikipedia" "icon" "globe")
+  (dict "key" "bluesky" "label" "Bluesky" "icon" "link")
 }}
 
 {{ $orderedLinks := slice }}
