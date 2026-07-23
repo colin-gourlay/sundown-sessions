@@ -65,7 +65,7 @@
     }
 
     playerBadge.setAttribute("data-broadcast-state", live ? "live" : "off-air");
-    playerBadge.setAttribute("aria-label", live ? "Live stream status: live now" : "Live stream status: station stream available");
+    playerBadge.setAttribute("aria-label", live ? "Broadcast status: live now" : "Broadcast status: no live show; station stream available");
     playerBadgeLabel.textContent = live ? "Live Now" : "Station Stream";
   }
 

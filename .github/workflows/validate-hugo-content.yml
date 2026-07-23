@@ -5,6 +5,7 @@ on:
     paths:
       - src/content/**
       - src/layouts/**
+      - src/assets/**
       - src/config/**
       - .github/workflows/validate-hugo-content.yml
   push:
@@ -13,6 +14,7 @@ on:
     paths:
       - src/content/**
       - src/layouts/**
+      - src/assets/**
       - src/config/**
       - .github/workflows/validate-hugo-content.yml
 
