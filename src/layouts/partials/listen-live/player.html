@@ -1,9 +1,26 @@
 {{ $streamURL := .src | default "https://betelgeuse.nucast.co.uk:8062/stream" }}
-{{ $streamType := .type | default "audio/mpeg" }}
+{{ $streamType := .type }}
 
-<div class="listen-live-player">
-  <audio controls preload="none" aria-label="Sundown Sessions live stream">
-    <source src="{{ $streamURL }}" type="{{ $streamType }}">
+<div
+  class="listen-live-player"
+  data-listen-live-player
+  data-player-state="idle"
+  data-stream-url="{{ $streamURL }}">
+  <audio controls preload="none" aria-label="Sundown Sessions live stream" data-listen-live-player-audio>
+    <source src="{{ $streamURL }}"{{ with $streamType }} type="{{ . }}"{{ end }}>
     Your browser does not support the audio element.
   </audio>
+  <div class="listen-live-player__feedback">
+    <p
+      class="listen-live-player__connection-status"
+      role="status"
+      aria-live="polite"
+      aria-atomic="true"
+      data-listen-live-player-status>Press play to listen live.</p>
+    <button
+      class="listen-live-player__retry"
+      type="button"
+      data-listen-live-player-retry
+      hidden>Resume live stream</button>
+  </div>
 </div>

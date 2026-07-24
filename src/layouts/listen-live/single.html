@@ -33,9 +33,10 @@
             </header>
 
             <section class="listen-live-live" aria-labelledby="listen-live-player-heading">
-              <p class="listen-live-status" data-live-player-badge data-broadcast-state="off-air" aria-label="Live stream status">
+              <h2 id="listen-live-player-heading" class="sr-only">Listen to Sundown Sessions live</h2>
+              <p class="listen-live-status" data-live-player-badge data-broadcast-state="off-air" aria-label="Broadcast status: no live show; station stream available">
                 <span class="listen-live-status__dot" aria-hidden="true"></span>
-                <span id="listen-live-player-heading" data-live-player-badge-label>Station Stream</span>
+                <span data-live-player-badge-label>Station Stream</span>
               </p>
 
               <div
@@ -120,6 +121,13 @@
     </section>
   </article>
 
+  {{ with resources.Get "js/listen-live-player.js" }}
+    {{ $playerJS := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+    <script
+      defer
+      src="{{ $playerJS.RelPermalink }}"
+      integrity="{{ $playerJS.Data.Integrity }}"></script>
+  {{ end }}
   {{ with resources.Get "js/listen-live-now-playing.js" }}
     {{ $nowPlayingJS := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
     <script
