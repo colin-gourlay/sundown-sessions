@@ -3578,7 +3578,7 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 }
 
 .release-featured-shows__date,
-.release-featured-shows__note {
+.release-featured-shows__teaser {
   color: #737373; /* neutral-500 */
   font-size: 0.875rem;
   font-weight: 600;
@@ -3586,12 +3586,23 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 }
 
 .dark .release-featured-shows__date,
-.dark .release-featured-shows__note {
+.dark .release-featured-shows__teaser {
   color: #a3a3a3; /* neutral-400 */
 }
 
-.release-featured-shows__note {
-  margin: -0.35rem 1.25rem 0.9rem;
+.release-featured-shows__teaser {
+  font-weight: 500;
+}
+
+.release-featured-shows__cta {
+  margin-top: 0.2rem;
+  color: rgba(var(--color-primary-600), 1);
+  font-size: 0.875rem;
+  font-weight: 700;
+}
+
+.dark .release-featured-shows__cta {
+  color: rgba(var(--color-primary-400), 1);
 }
 
 /* Artist featured tracks: a lightweight list group that follows the same
@@ -3865,17 +3876,6 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   .release-tracklist__duration {
     grid-column: auto;
     justify-self: end;
-  }
-
-  .release-featured-shows__link {
-    flex-direction: row;
-    align-items: baseline;
-    justify-content: space-between;
-    gap: 1rem;
-  }
-
-  .release-featured-shows__date {
-    flex: none;
   }
 
   .artist-featured-track {

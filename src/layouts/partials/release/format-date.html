@@ -1,0 +1,25 @@
+{{- $value := . -}}
+{{- $raw := printf "%v" $value | strings.TrimSpace -}}
+{{- $formatted := $raw -}}
+
+{{- if findRE `^\d{4}$` $raw -}}
+  {{- $formatted = $raw -}}
+{{- else if findRE `^\d{4}-\d{2}$` $raw -}}
+  {{- $formatted = time.Format "January 2006" (time.AsTime (printf "%s-01" $raw)) -}}
+{{- else -}}
+  {{- $date := time.AsTime $value -}}
+  {{- $day := int (time.Format "2" $date) -}}
+  {{- $suffix := "th" -}}
+  {{- if or (lt (mod $day 100) 11) (gt (mod $day 100) 13) -}}
+    {{- if eq (mod $day 10) 1 -}}
+      {{- $suffix = "st" -}}
+    {{- else if eq (mod $day 10) 2 -}}
+      {{- $suffix = "nd" -}}
+    {{- else if eq (mod $day 10) 3 -}}
+      {{- $suffix = "rd" -}}
+    {{- end -}}
+  {{- end -}}
+  {{- $formatted = printf "%d%s %s" $day $suffix (time.Format "January 2006" $date) -}}
+{{- end -}}
+
+{{- return $formatted -}}

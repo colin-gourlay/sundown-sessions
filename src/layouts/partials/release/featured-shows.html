@@ -36,7 +36,7 @@
     {{- $fileDate := "" -}}
     {{- if $showRef -}}
       {{- $trimmedRef := strings.TrimSuffix "/" (strings.TrimPrefix "/" $showRef) -}}
-      {{- $candidatePaths := slice $trimmedRef (printf "shows/%s" $trimmedRef) (printf "shows/%s/index.md" $trimmedRef) (printf "/shows/%s" $trimmedRef) (printf "/shows/%s/index.md" $trimmedRef) -}}
+      {{- $candidatePaths := slice (printf "shows/%s" $trimmedRef) (printf "shows/%s/index.md" $trimmedRef) (printf "/shows/%s" $trimmedRef) (printf "/shows/%s/index.md" $trimmedRef) -}}
       {{- if strings.HasPrefix $trimmedRef "shows/" -}}
         {{- $candidatePaths = slice $trimmedRef -}}
       {{- end -}}
@@ -82,6 +82,7 @@
           {{- $frontMatterTitle := replaceRE `(?s).*?title:\s*['"]?([^'"\r\n]+).*` "$1" $showMarkdown -}}
           {{- $frontMatterSlug := replaceRE `(?s).*?slug:\s*['"]?([^'"\r\n]+).*` "$1" $showMarkdown -}}
           {{- $frontMatterDate := replaceRE `(?s).*?date:\s*['"]?([^'"\r\n]+).*` "$1" $showMarkdown -}}
+          {{- $frontMatterDescription := replaceRE `(?s).*?description:\s*['"]?([^'"\r\n]+).*` "$1" $showMarkdown -}}
           {{- if ne $frontMatterTitle $showMarkdown -}}
             {{- $fileTitle = $frontMatterTitle -}}
           {{- end -}}
@@ -92,6 +93,9 @@
           {{- end -}}
           {{- if ne $frontMatterDate $showMarkdown -}}
             {{- $fileDate = $frontMatterDate -}}
+          {{- end -}}
+          {{- if and (not $note) (ne $frontMatterDescription $showMarkdown) -}}
+            {{- $note = $frontMatterDescription | strings.TrimSpace -}}
           {{- end -}}
           {{- if strings.HasPrefix $fileTitle "Show #" -}}
             {{- $fileTitle = replace $fileTitle "Show #" "Sundown Sessions #" -}}
@@ -123,9 +127,28 @@
     {{- end -}}
 
     {{- if and $link $title -}}
+      {{- $teaser := printf "%v" $note | strings.TrimSpace -}}
+      {{- if and (not $teaser) $showPage -}}
+        {{- with index $showPage.Params "description" -}}
+          {{- $teaser = printf "%v" . | plainify | strings.TrimSpace -}}
+        {{- end -}}
+        {{- if not $teaser -}}
+          {{- $teaser = $showPage.Summary | plainify | strings.TrimSpace -}}
+        {{- end -}}
+        {{- if and (not $teaser) $showPage.File -}}
+          {{- $showSourcePath := printf "content/%s" $showPage.File.Path -}}
+          {{- if fileExists $showSourcePath -}}
+            {{- $showSource := readFile $showSourcePath -}}
+            {{- $sourceDescription := replaceRE `(?s).*?description:\s*['"]?([^'"\r\n]+).*` "$1" $showSource -}}
+            {{- if ne $sourceDescription $showSource -}}
+              {{- $teaser = $sourceDescription | strings.TrimSpace -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+      {{- end -}}
       {{- $dedupeKey := $link -}}
       {{- if not (index $seenShows $dedupeKey) -}}
-        {{- $featuredShows = $featuredShows | append (dict "page" $showPage "link" $link "title" $title "date" $date "sortDate" $sortDate "note" $note) -}}
+        {{- $featuredShows = $featuredShows | append (dict "page" $showPage "link" $link "title" $title "date" $date "sortDate" $sortDate "teaser" $teaser) -}}
         {{- $seenShows = merge $seenShows (dict $dedupeKey true) -}}
       {{- end -}}
     {{- end -}}
@@ -170,7 +193,24 @@
     {{- if $matched -}}
       {{- $dedupeKey := $showPage.RelPermalink -}}
       {{- if not (index $seenShows $dedupeKey) -}}
-        {{- $featuredShows = $featuredShows | append (dict "page" $showPage "link" $showPage.RelPermalink "title" (partial "release/show-card-title.html" $showPage) "date" $showPage.Date "sortDate" (time.Format "2006-01-02T15:04:05Z07:00" $showPage.Date) "note" "") -}}
+        {{- $teaser := "" -}}
+        {{- with index $showPage.Params "description" -}}
+          {{- $teaser = printf "%v" . | plainify | strings.TrimSpace -}}
+        {{- end -}}
+        {{- if not $teaser -}}
+          {{- $teaser = $showPage.Summary | plainify | strings.TrimSpace -}}
+        {{- end -}}
+        {{- if and (not $teaser) $showPage.File -}}
+          {{- $showSourcePath := printf "content/%s" $showPage.File.Path -}}
+          {{- if fileExists $showSourcePath -}}
+            {{- $showSource := readFile $showSourcePath -}}
+            {{- $sourceDescription := replaceRE `(?s).*?description:\s*['"]?([^'"\r\n]+).*` "$1" $showSource -}}
+            {{- if ne $sourceDescription $showSource -}}
+              {{- $teaser = $sourceDescription | strings.TrimSpace -}}
+            {{- end -}}
+          {{- end -}}
+        {{- end -}}
+        {{- $featuredShows = $featuredShows | append (dict "page" $showPage "link" $showPage.RelPermalink "title" (partial "release/show-card-title.html" $showPage) "date" $showPage.Date "sortDate" (time.Format "2006-01-02T15:04:05Z07:00" $showPage.Date) "teaser" $teaser) -}}
         {{- $seenShows = merge $seenShows (dict $dedupeKey true) -}}
       {{- end -}}
     {{- end -}}
@@ -200,10 +240,17 @@
                 {{- end -}}
               </span>
             {{- end -}}
+            {{- with $show.teaser -}}
+              <span class="release-featured-shows__teaser">{{ . }}</span>
+            {{- else with $show.page -}}
+              {{- with .Params.description -}}
+                <span class="release-featured-shows__teaser">{{ . | plainify | strings.TrimSpace }}</span>
+              {{- else with .Summary -}}
+                <span class="release-featured-shows__teaser">{{ . | plainify | strings.TrimSpace }}</span>
+              {{- end -}}
+            {{- end -}}
+            <span class="release-featured-shows__cta">View Show <span aria-hidden="true">&rarr;</span></span>
           </a>
-          {{- with $show.note -}}
-            <p class="release-featured-shows__note">{{ . }}</p>
-          {{- end -}}
         </li>
       {{- end -}}
     </ul>
