@@ -12,24 +12,17 @@
 {{- end -}}
 
 {{- if gt (len $artistCards) 0 -}}
-  {{- $heading := cond (eq (len $artistCards) 1) "Artist" "Artists" -}}
   <section
     class="release-artists"
     role="region"
     aria-labelledby="release-artists-heading">
-    <h2 id="release-artists-heading" class="release-artists__heading">{{ $heading }}</h2>
+    <h2 id="release-artists-heading" class="release-artists__heading">Artist Spotlight</h2>
     <div class="release-artists__list" role="list">
       {{- range $artistCards }}
         {{- $artistPage := .page -}}
         <article class="release-artists__item" role="listitem">
           <div class="release-artists__body">
-            <h3 class="release-artists__name">
-              {{- if $artistPage -}}
-                <a href="{{ $artistPage.RelPermalink }}">{{ .name | emojify }}</a>
-              {{- else -}}
-                {{ .name | emojify }}
-              {{- end -}}
-            </h3>
+            <h3 class="release-artists__name">{{ .name | emojify }}</h3>
             {{- with .summary }}
               <p class="release-artists__summary">{{ . }}</p>
             {{- end }}

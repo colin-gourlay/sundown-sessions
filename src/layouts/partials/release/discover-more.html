@@ -209,7 +209,7 @@
               {{- if or (gt $item.year 0) $releaseType -}}
                 <span class="release-discover-card__meta">
                   {{- if gt $item.year 0 -}}{{ $item.year }}{{- end -}}
-                  {{- if and (gt $item.year 0) $releaseType }} &bull; {{ end -}}
+                  {{- if and (gt $item.year 0) $releaseType }} &middot; {{ end -}}
                   {{- with $releaseType -}}{{ . }}{{- end -}}
                 </span>
               {{- end -}}

@@ -1,71 +1,11 @@
 {{- $fields := slice -}}
 
-{{- $artist := "" -}}
-{{- $artistNames := slice -}}
-{{- with .Params.artist -}}
-  {{- if reflect.IsSlice . -}}
-    {{- range . -}}
-      {{- if reflect.IsMap . -}}
-        {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "page") | default (index . "url") | default (index . "slug")) -}}
-          {{- $artistNames = $artistNames | append . -}}
-        {{- end -}}
-      {{- else -}}
-        {{- $artistNames = $artistNames | append . -}}
-      {{- end -}}
-    {{- end -}}
-  {{- else -}}
-    {{- if reflect.IsMap . -}}
-      {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "page") | default (index . "url") | default (index . "slug")) -}}
-        {{- $artistNames = $artistNames | append . -}}
-      {{- end -}}
-    {{- else -}}
-      {{- $artistNames = $artistNames | append . -}}
-    {{- end -}}
-  {{- end -}}
-{{- else -}}
-  {{- with .Params.artists -}}
-    {{- if reflect.IsSlice . -}}
-      {{- range . -}}
-        {{- if reflect.IsMap . -}}
-          {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "page") | default (index . "url") | default (index . "slug")) -}}
-            {{- $artistNames = $artistNames | append . -}}
-          {{- end -}}
-        {{- else -}}
-          {{- $artistNames = $artistNames | append . -}}
-        {{- end -}}
-      {{- end -}}
-    {{- else -}}
-      {{- if reflect.IsMap . -}}
-        {{- with (index . "title" | default (index . "name") | default (index . "artist") | default (index . "page") | default (index . "url") | default (index . "slug")) -}}
-          {{- $artistNames = $artistNames | append . -}}
-        {{- end -}}
-      {{- else -}}
-        {{- $artistNames = $artistNames | append . -}}
-      {{- end -}}
-    {{- end -}}
-  {{- end -}}
-{{- end -}}
-{{- with $artistNames -}}
-  {{- $artist = delimit . ", " -}}
-{{- end -}}
-{{- with $artist -}}
-  {{- $fields = $fields | append (dict "term" "Artist" "value" .) -}}
-{{- end -}}
-
 {{- $releaseDate := .Params.releaseDate | default .Params.release_date | default .Params.date -}}
 {{- if and (not $releaseDate) (not .Date.IsZero) -}}
   {{- $releaseDate = .Date -}}
 {{- end -}}
 {{- with $releaseDate -}}
-  {{- $dateText := . -}}
-  {{- if reflect.IsMap . -}}
-    {{- $dateText = "" -}}
-  {{- else if not (reflect.IsSlice .) -}}
-    {{- $dateText = printf "%v" . -}}
-    {{- if or (in $dateText "UTC") (in $dateText "+0000") -}}
-      {{- $dateText = time.Format (site.Params.dateFormat | default "2 January 2006") . -}}
-    {{- end -}}
-  {{- end -}}
+  {{- $dateText := cond (or (reflect.IsMap .) (reflect.IsSlice .)) "" (partial "release/format-date.html" .) -}}
   {{- with $dateText -}}
     {{- $fields = $fields | append (dict "term" "Released" "value" .) -}}
   {{- end -}}
@@ -89,11 +29,6 @@
 {{- end -}}
 {{- with $releaseYear -}}
   {{- $fields = $fields | append (dict "term" "Year" "values" (slice .) "taxonomyPath" "years") -}}
-{{- end -}}
-
-{{- $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type -}}
-{{- with $releaseType -}}
-  {{- $fields = $fields | append (dict "term" "Release Type" "values" . "taxonomyPath" "release-types") -}}
 {{- end -}}
 
 {{- $label := false -}}
