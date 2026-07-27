@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Rock On!"
 artist: "Del Shannon"
 releaseDate: "1991"
@@ -12,46 +12,47 @@ genres:
 labels:
   - "MCA Records"
   - "Gone Gator Records"
-duration: "0:36:27"
+duration: "36:27"
 featuredInShows:
   - "6"
 shows:
   - "6"
 tracks:
-  - title: "Walk Away"
-    trackNumber: 1
-    duration: "03:39"
-  - title: "Who Left Who"
-    trackNumber: 2
-    duration: "03:22"
-  - title: "Are You Lovin' Me Too"
-    trackNumber: 3
-    duration: "03:16"
-  - title: "Callin' Out My Name"
-    trackNumber: 4
-    duration: "03:46"
-  - title: "I Go to Pieces"
-    trackNumber: 5
-    duration: "04:01"
-  - title: "Lost in a Memory"
-    trackNumber: 6
-    duration: "03:37"
-  - title: "I Got You (The Birds' Song)"
-    trackNumber: 7
-    duration: "03:43"
-  - title: "What Kind of Fool Do You Think I Am?"
-    trackNumber: 8
-    duration: "03:11"
-  - title: "When I Had You"
-    trackNumber: 9
-    duration: "04:18"
-  - title: "Let's Dance"
-    trackNumber: 10
-    duration: "03:31"
+  - trackNumber: 1
+    title: "Walk Away"
+    duration: "3:39"
+  - trackNumber: 2
+    title: "Who Left Who"
+    duration: "3:22"
+  - trackNumber: 3
+    title: "Are You Lovin’ Me Too"
+    duration: "3:16"
+  - trackNumber: 4
+    title: "Callin’ Out My Name"
+    duration: "3:47"
+  - trackNumber: 5
+    title: "I Go to Pieces"
+    duration: "4:01"
+  - trackNumber: 6
+    title: "Lost in a Memory"
+    duration: "3:38"
+  - trackNumber: 7
+    title: "I Got You"
+    duration: "3:43"
+  - trackNumber: 8
+    title: "What Kind of Fool Do You Think I Am?"
+    duration: "3:11"
+  - trackNumber: 9
+    title: "When I Had You"
+    duration: "4:19"
+  - trackNumber: 10
+    title: "Let’s Dance"
+    duration: "3:31"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/8cb200dd-7e5d-3f3c-ad82-ffc47148ba1c"
+tracklist_source: "https://musicbrainz.org/release/2c675521-8ce7-3843-8f7d-0e951ad08023"
+tracklist_edition: "1991 DE"
 ---
-
 ## About
 
 Rock On! is a release by Del Shannon released in 1991. It has been featured on 1 Sundown Sessions show. Featured tracks include Lost In A Memory.

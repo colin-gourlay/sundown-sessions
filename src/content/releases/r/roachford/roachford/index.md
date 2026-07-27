@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Roachford"
 artist: "Roachford"
 releaseDate: "1988-07-11"
@@ -10,46 +10,47 @@ genres:
   - "electronic"
 labels:
   - "Epic"
-duration: "0:40:18"
+duration: "40:49"
 featuredInShows:
   - "1"
 shows:
   - "1"
 tracks:
-  - title: "Give It Up"
-    trackNumber: 1
-    duration: "03:38"
-  - title: "Family Man"
-    trackNumber: 2
-    duration: "03:48"
-  - title: "Cuddly Toy (Feel for Me)"
-    trackNumber: 3
-    duration: "03:47"
-  - title: "Find Me Another Love"
-    trackNumber: 4
-    duration: "04:19"
-  - title: "No Way"
-    trackNumber: 5
-    duration: "04:03"
-  - title: "Kathleen"
-    trackNumber: 6
-    duration: "05:51"
-  - title: "Shotgun (Crazy World We Live In)"
-    trackNumber: 7
-    duration: "03:34"
-  - title: "Lying Again"
-    trackNumber: 8
-    duration: "03:31"
-  - title: "Since"
-    trackNumber: 9
-    duration: "03:22"
-  - title: "Nobody but You"
-    trackNumber: 10
-    duration: "04:25"
+  - trackNumber: 1
+    title: "Give It Up"
+    duration: "3:40"
+  - trackNumber: 2
+    title: "Family Man"
+    duration: "3:49"
+  - trackNumber: 3
+    title: "Cuddly Toy"
+    duration: "3:49"
+  - trackNumber: 4
+    title: "Find Me Another Love"
+    duration: "4:20"
+  - trackNumber: 5
+    title: "No Way"
+    duration: "4:03"
+  - trackNumber: 6
+    title: "Kathleen"
+    duration: "5:51"
+  - trackNumber: 7
+    title: "Beautiful Morning"
+    duration: "3:55"
+  - trackNumber: 8
+    title: "Lying Again"
+    duration: "3:34"
+  - trackNumber: 9
+    title: "Since"
+    duration: "3:23"
+  - trackNumber: 10
+    title: "Nobody but You"
+    duration: "4:25"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/e4ca0aa9-feb0-3c83-a41c-203ef9bb791a"
+tracklist_source: "https://musicbrainz.org/release/10585970-dac4-40f0-ad30-e032756aece2"
+tracklist_edition: "1988 AU"
 ---
-
 ## About
 
 Roachford is a release by Roachford released in 1988-07-11. It has been featured on 1 Sundown Sessions show. Featured tracks include Cuddly Toy.

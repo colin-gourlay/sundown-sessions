@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Flying In A Blue Dream"
 artist: "Joe Satriani"
 releaseDate: "1989-10-30"
@@ -11,70 +11,71 @@ genres:
   - "guitar virtuoso"
 labels:
   - "Food for Thought"
-duration: "1:04:55"
+duration: "1:04:54"
 featuredInShows:
   - "46"
 shows:
   - "46"
 tracks:
-  - title: "Flying in a Blue Dream"
-    trackNumber: 1
-    duration: "05:23"
-  - title: "The Mystical Potato Head Groove Thing"
-    trackNumber: 2
-    duration: "05:09"
-  - title: "Can't Slow Down"
-    trackNumber: 3
-    duration: "04:49"
-  - title: "Headless"
-    trackNumber: 4
-    duration: "01:29"
-  - title: "Strange"
-    trackNumber: 5
-    duration: "05:02"
-  - title: "I Believe"
-    trackNumber: 6
-    duration: "05:54"
-  - title: "One Big Rush"
-    trackNumber: 7
-    duration: "03:25"
-  - title: "Big Bad Moon"
-    trackNumber: 8
-    duration: "05:15"
-  - title: "The Feeling"
-    trackNumber: 9
-    duration: "00:50"
-  - title: "The Phone Call"
-    trackNumber: 10
-    duration: "03:01"
-  - title: "Day at the Beach (New Rays From an Ancient Sun)"
-    trackNumber: 11
-    duration: "02:04"
-  - title: "Back to Shalla-Bal"
-    trackNumber: 12
-    duration: "03:14"
-  - title: "Ride"
-    trackNumber: 13
-    duration: "04:56"
-  - title: "The Forgotten, Part 1"
-    trackNumber: 14
-    duration: "01:12"
-  - title: "The Forgotten, Part 2"
-    trackNumber: 15
-    duration: "05:08"
-  - title: "The Bells of Lal, Part 1"
-    trackNumber: 16
-    duration: "01:19"
-  - title: "The Bells of Lal, Part 2"
-    trackNumber: 17
-    duration: "04:07"
-  - title: "Into the Light"
-    trackNumber: 18
-    duration: "02:29"
+  - trackNumber: 1
+    title: "Flying in a Blue Dream"
+    duration: "5:24"
+  - trackNumber: 2
+    title: "The Mystical Potato Head Groove Thing"
+    duration: "5:10"
+  - trackNumber: 3
+    title: "Can't Slow Down"
+    duration: "4:50"
+  - trackNumber: 4
+    title: "Headless"
+    duration: "1:30"
+  - trackNumber: 5
+    title: "Strange"
+    duration: "5:03"
+  - trackNumber: 6
+    title: "I Believe"
+    duration: "5:54"
+  - trackNumber: 7
+    title: "One Big Rush"
+    duration: "3:25"
+  - trackNumber: 8
+    title: "Big Bad Moon"
+    duration: "5:15"
+  - trackNumber: 9
+    title: "The Feeling"
+    duration: "0:51"
+  - trackNumber: 10
+    title: "The Phone Call"
+    duration: "3:01"
+  - trackNumber: 11
+    title: "Day at the Beach (New Rays From an Ancient Sun)"
+    duration: "2:04"
+  - trackNumber: 12
+    title: "Back to Shalla-Bal"
+    duration: "3:14"
+  - trackNumber: 13
+    title: "Ride"
+    duration: "4:57"
+  - trackNumber: 14
+    title: "The Forgotten, Part 1"
+    duration: "1:12"
+  - trackNumber: 15
+    title: "The Forgotten, Part 2"
+    duration: "5:08"
+  - trackNumber: 16
+    title: "The Bells of Lal, Part 1"
+    duration: "1:19"
+  - trackNumber: 17
+    title: "The Bells of Lal, Part 2"
+    duration: "4:08"
+  - trackNumber: 18
+    title: "Into the Light"
+    duration: "2:29"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/e19b2146-1ea9-31f3-8a51-65e2c7fbe29b"
+tracklist_source: "https://musicbrainz.org/release/d8a53392-7725-43aa-96ab-1b1a09ece98a"
+tracklist_edition: "1989 GB"
 ---
-
 ## About
 
 Flying In A Blue Dream is a release by Joe Satriani released in 1989-10-30. It has been featured on 1 Sundown Sessions show. Featured tracks include Day at the Beach (New Rays from an Ancient Sun).

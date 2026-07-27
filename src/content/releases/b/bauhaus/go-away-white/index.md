@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Go Away White"
 artist: "Bauhaus"
 releaseDate: "2008-03-03"
@@ -10,7 +10,7 @@ genres:
   - "gothic rock"
 labels:
   - "Cooking Vinyl"
-duration: "0:48:58"
+duration: "53:05"
 featuredInShows:
   - "7"
   - "20"
@@ -18,40 +18,44 @@ shows:
   - "7"
   - "20"
 tracks:
-  - title: "Too Much 21st Century"
-    trackNumber: 1
-    duration: "03:53"
-  - title: "Adrenalin"
-    trackNumber: 2
-    duration: "05:39"
-  - title: "Undone"
-    trackNumber: 3
-    duration: "04:46"
-  - title: "International Bulletproof Talent"
-    trackNumber: 4
-    duration: "04:02"
-  - title: "Endless Summer of the Damned"
-    trackNumber: 5
-    duration: "04:44"
-  - title: "Saved"
-    trackNumber: 6
-    duration: "06:27"
-  - title: "Mirror Remains"
-    trackNumber: 7
-    duration: "04:58"
-  - title: "Black Stone Heart"
-    trackNumber: 8
-    duration: "04:32"
-  - title: "The Dog’s a Vapour"
-    trackNumber: 9
-    duration: "06:49"
-  - title: "Zikir"
-    trackNumber: 10
-    duration: "03:04"
+  - trackNumber: 1
+    title: "Too Much 21st Century"
+    duration: "3:54"
+  - trackNumber: 2
+    title: "Adrenalin"
+    duration: "5:40"
+  - trackNumber: 3
+    title: "Undone"
+    duration: "4:46"
+  - trackNumber: 4
+    title: "International Bullet Proof Talent"
+    duration: "4:02"
+  - trackNumber: 5
+    title: "Endless Summer of the Damned"
+    duration: "4:44"
+  - trackNumber: 6
+    title: "Saved"
+    duration: "6:28"
+  - trackNumber: 7
+    title: "Mirror Remains"
+    duration: "4:58"
+  - trackNumber: 8
+    title: "Black Stone Heart"
+    duration: "4:32"
+  - trackNumber: 9
+    title: "The Dog’s a Vapour"
+    duration: "6:50"
+  - trackNumber: 10
+    title: "Zikir"
+    duration: "3:10"
+  - trackNumber: 11
+    title: "Endless Summer of the Damned (live)"
+    duration: "4:01"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/04297c80-a4af-3c3d-8736-0b10ddeb2370"
+tracklist_source: "https://musicbrainz.org/release/0ddd83d1-3640-4d44-9865-2043aa040340"
+tracklist_edition: "2008 None"
 ---
-
 ## About
 
 Go Away White is a release by Bauhaus released in 2008-03-03. It has been featured on 2 Sundown Sessions shows. Featured tracks include International Bullet Proof Talent, Too Much 21st Century.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Enjoy the Melodic Sunshine"
 artist: "Cosmic Rough Riders"
 releaseDate: "2000-11-06"
@@ -12,67 +12,62 @@ genres:
 labels:
   - "Poptones"
   - "Trama"
-duration: "0:48:47"
+duration: "41:15"
 featuredInShows:
   - "7"
 shows:
   - "7"
 tracks:
-  - title: "Brothers Gather Round"
-    trackNumber: 1
-    duration: "01:12"
-  - title: "The Gun Isn’t Loaded"
-    trackNumber: 2
-    duration: "02:52"
-  - title: "Glastonbury Revisited"
-    trackNumber: 3
-    duration: "02:47"
-  - title: "Baby, You’re So Free"
-    trackNumber: 4
-    duration: "03:46"
-  - title: "Value of Life"
-    trackNumber: 5
-    duration: "02:39"
-  - title: "Revolution (In the Summertime?)"
-    trackNumber: 6
-    duration: "03:22"
-  - title: "Have You Heard the News Today?"
-    trackNumber: 7
-    duration: "02:52"
-  - title: "Sometime"
-    trackNumber: 8
-    duration: "03:32"
-  - title: "Melanie"
-    trackNumber: 9
-    duration: "03:24"
-  - title: "The Rain Inside"
-    trackNumber: 10
-    duration: "03:23"
-  - title: "The Charm"
-    trackNumber: 11
-    duration: "02:04"
-  - title: "The Loser"
-    trackNumber: 12
-    duration: "02:26"
-  - title: "You’ve Got Me"
-    trackNumber: 13
-    duration: "03:10"
-  - title: "Emily Darling"
-    trackNumber: 14
-    duration: "02:48"
-  - title: "Morning Sun"
-    trackNumber: 15
-    duration: "00:55"
-  - title: "Annie"
-    trackNumber: 16
-    duration: "03:57"
-  - title: "Universal Thing"
-    trackNumber: 17
-    duration: "03:38"
+  - trackNumber: 1
+    title: "Brothers Gather Round"
+    duration: "1:12"
+  - trackNumber: 2
+    title: "The Gun Isn’t Loaded"
+    duration: "2:52"
+  - trackNumber: 3
+    title: "Glastonbury Revisited"
+    duration: "2:48"
+  - trackNumber: 4
+    title: "Baby, You’re So Free"
+    duration: "3:46"
+  - trackNumber: 5
+    title: "Value of Life"
+    duration: "2:39"
+  - trackNumber: 6
+    title: "Revolution (In the Summertime?)"
+    duration: "3:22"
+  - trackNumber: 7
+    title: "Have You Heard the News Today?"
+    duration: "2:52"
+  - trackNumber: 8
+    title: "Sometime"
+    duration: "3:32"
+  - trackNumber: 9
+    title: "Melanie"
+    duration: "3:24"
+  - trackNumber: 10
+    title: "The Rain Inside"
+    duration: "3:23"
+  - trackNumber: 11
+    title: "The Charm"
+    duration: "2:04"
+  - trackNumber: 12
+    title: "The Loser"
+    duration: "2:26"
+  - trackNumber: 13
+    title: "You’ve Got Me"
+    duration: "3:10"
+  - trackNumber: 14
+    title: "Emily Darling"
+    duration: "2:48"
+  - trackNumber: 15
+    title: "Morning Sun"
+    duration: "0:57"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/65475e01-ccb4-3ad5-82cb-24d49c78d17c"
+tracklist_source: "https://musicbrainz.org/release/14aa41b3-4a0a-4572-b7f1-e000f762f718"
+tracklist_edition: "2000 GB"
 ---
-
 ## About
 
 Enjoy the Melodic Sunshine is a release by Cosmic Rough Riders released in 2000-11-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Revolution (In the Summertime?).

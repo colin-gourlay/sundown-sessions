@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Mantaray"
 artist: "Siouxsie"
 releaseDate: "2007-09-03"
@@ -11,46 +11,47 @@ genres:
 labels:
   - "UMC"
   - "W14 Music"
-duration: "0:40:57"
+duration: "40:57"
 featuredInShows:
   - "20"
 shows:
   - "20"
 tracks:
-  - title: "Into a Swan"
-    trackNumber: 1
-    duration: "04:12"
-  - title: "About to Happen"
-    trackNumber: 2
-    duration: "02:50"
-  - title: "Here Comes That Day"
-    trackNumber: 3
-    duration: "04:03"
-  - title: "Loveless"
-    trackNumber: 4
-    duration: "04:24"
-  - title: "If It Doesn't Kill You"
-    trackNumber: 5
-    duration: "04:32"
-  - title: "One Mile Below"
-    trackNumber: 6
-    duration: "03:00"
-  - title: "Drone Zone"
-    trackNumber: 7
-    duration: "03:22"
-  - title: "Sea of Tranquility"
-    trackNumber: 8
-    duration: "05:13"
-  - title: "They Follow You"
-    trackNumber: 9
-    duration: "05:02"
-  - title: "Heaven and Alchemy"
-    trackNumber: 10
-    duration: "04:19"
+  - trackNumber: 1
+    title: "Into a Swan"
+    duration: "4:12"
+  - trackNumber: 2
+    title: "About to Happen"
+    duration: "2:50"
+  - trackNumber: 3
+    title: "Here Comes That Day"
+    duration: "4:03"
+  - trackNumber: 4
+    title: "Loveless"
+    duration: "4:24"
+  - trackNumber: 5
+    title: "If It Doesn't Kill You"
+    duration: "4:32"
+  - trackNumber: 6
+    title: "One Mile Below"
+    duration: "3:00"
+  - trackNumber: 7
+    title: "Drone Zone"
+    duration: "3:22"
+  - trackNumber: 8
+    title: "Sea of Tranquility"
+    duration: "5:13"
+  - trackNumber: 9
+    title: "They Follow You"
+    duration: "5:02"
+  - trackNumber: 10
+    title: "Heaven and Alchemy"
+    duration: "4:19"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/3841833c-1285-362e-8b4e-dfa389bac378"
+tracklist_source: "https://musicbrainz.org/release/e5727af5-6be8-41b4-8378-822db70a3ce8"
+tracklist_edition: "2007-09-03 XE"
 ---
-
 ## About
 
 Mantaray is a release by Siouxsie released in 2007-09-03. It has been featured on 1 Sundown Sessions show. Featured tracks include Into a Swan.

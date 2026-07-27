@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Days In Europa"
 artist: "Skids"
 releaseDate: "1979-10-12"
@@ -16,30 +16,42 @@ featuredInShows:
 shows:
   - "4"
 tracks:
-  - title: "Animation"
-    trackNumber: 1
-  - title: "Charade"
-    trackNumber: 2
-  - title: "Dulce et Decorum Est (Pro Patria Mori)"
-    trackNumber: 3
-  - title: "Pros and Cons"
-    trackNumber: 4
-  - title: "Home of the Saved"
-    trackNumber: 5
-  - title: "Working for the Yankee Dollar"
-    trackNumber: 6
-  - title: "The Olympian"
-    trackNumber: 7
-  - title: "Thanatos"
-    trackNumber: 8
-  - title: "A Day in Europa"
-    trackNumber: 9
-  - title: "Peaceful Times"
-    trackNumber: 10
+  - trackNumber: 1
+    title: "Animation"
+    duration: "4:50"
+  - trackNumber: 2
+    title: "Charade"
+    duration: "3:55"
+  - trackNumber: 3
+    title: "Dulce et Decorum Est (Pro Patria Mori)"
+    duration: "4:07"
+  - trackNumber: 4
+    title: "Pros and Cons"
+    duration: "3:20"
+  - trackNumber: 5
+    title: "Home of the Saved"
+    duration: "5:07"
+  - trackNumber: 6
+    title: "Working for the Yankee Dollar"
+    duration: "4:55"
+  - trackNumber: 7
+    title: "The Olympian"
+    duration: "3:31"
+  - trackNumber: 8
+    title: "Thanatos"
+    duration: "4:07"
+  - trackNumber: 9
+    title: "A Day in Europa"
+    duration: "3:03"
+  - trackNumber: 10
+    title: "Peaceful Times"
+    duration: "5:05"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/4417730b-534d-3fa3-93f5-4d9c3d7cce79"
+duration: "42:00"
+tracklist_source: "https://musicbrainz.org/release/f9866fe4-e026-4064-ad55-42a56635f7d9"
+tracklist_edition: "1979-10-12 GB"
 ---
-
 ## About
 
 Days In Europa is a release by Skids released in 1979-10-12. It has been featured on 1 Sundown Sessions show. Featured tracks include Charade.

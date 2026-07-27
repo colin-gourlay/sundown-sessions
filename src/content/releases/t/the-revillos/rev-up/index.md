@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Rev Up"
 artist: "The Revillos"
 releaseDate: "1980"
@@ -11,55 +11,56 @@ genres:
 labels:
   - "Dindisc"
   - "Snatzo Recordi"
-duration: "0:28:43"
+duration: "28:44"
 featuredInShows:
   - "9"
 shows:
   - "9"
 tracks:
-  - title: "Secret of the Shadow"
-    trackNumber: 1
-    duration: "01:25"
-  - title: "Rev Up!"
-    trackNumber: 2
-    duration: "02:20"
-  - title: "Rock-A-Boom"
-    trackNumber: 3
-    duration: "02:25"
-  - title: "Voodoo"
-    trackNumber: 4
-    duration: "02:44"
-  - title: "Bobby Come Back to Me"
-    trackNumber: 5
-    duration: "02:27"
-  - title: "Scuba Boy Bop"
-    trackNumber: 6
-    duration: "01:44"
-  - title: "Yeah Yeah"
-    trackNumber: 7
-    duration: "02:14"
-  - title: "Hungry for Love"
-    trackNumber: 8
-    duration: "01:48"
-  - title: "Juke Box Sound"
-    trackNumber: 9
-    duration: "01:57"
-  - title: "On the Beach"
-    trackNumber: 10
-    duration: "03:33"
-  - title: "Cool Jerk"
-    trackNumber: 11
-    duration: "02:11"
-  - title: "Hippy Hippy Sheik"
-    trackNumber: 12
-    duration: "01:30"
-  - title: "Motorbike Beat"
-    trackNumber: 13
-    duration: "02:25"
+  - trackNumber: 1
+    title: "Secret of the Shadow"
+    duration: "1:25"
+  - trackNumber: 2
+    title: "Rev Up!"
+    duration: "2:20"
+  - trackNumber: 3
+    title: "Rock-A-Boom"
+    duration: "2:26"
+  - trackNumber: 4
+    title: "Voodoo"
+    duration: "2:44"
+  - trackNumber: 5
+    title: "Bobby Come Back to Me"
+    duration: "2:27"
+  - trackNumber: 6
+    title: "Scuba Boy Bop"
+    duration: "1:44"
+  - trackNumber: 7
+    title: "Yeah Yeah"
+    duration: "2:14"
+  - trackNumber: 8
+    title: "Hungry for Love"
+    duration: "1:48"
+  - trackNumber: 9
+    title: "Juke Box Sound"
+    duration: "1:57"
+  - trackNumber: 10
+    title: "On the Beach"
+    duration: "3:33"
+  - trackNumber: 11
+    title: "Cool Jerk"
+    duration: "2:11"
+  - trackNumber: 12
+    title: "Hippy Hippy Sheik"
+    duration: "1:30"
+  - trackNumber: 13
+    title: "Motorbike Beat"
+    duration: "2:25"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/a845a6d9-5c76-3e46-83e7-e661f7e319c1"
+tracklist_source: "https://musicbrainz.org/release/30f99386-84a3-4a31-8ff5-3e11363b1050"
+tracklist_edition: "1980 GB"
 ---
-
 ## About
 
 Rev Up is a release by The Revillos released in 1980. It has been featured on 1 Sundown Sessions show. Featured tracks include Motorbike Beat.

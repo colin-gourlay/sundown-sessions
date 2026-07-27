@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Queen of Denmark"
 artist: "John Grant"
 releaseDate: "2010-04-06"
@@ -8,7 +8,7 @@ genres:
   - "rock"
 labels:
   - "Bella Union"
-duration: "1:09:58"
+duration: "1:09:59"
 featuredInShows:
   - "1"
   - "13"
@@ -16,58 +16,75 @@ shows:
   - "1"
   - "13"
 tracks:
-  - title: "TC and Honeybear"
+  - discNumber: 1
     trackNumber: 1
-    duration: "05:06"
-  - title: "Marz"
+    title: "TC and Honeybear"
+    duration: "5:06"
+  - discNumber: 1
     trackNumber: 2
-    duration: "03:58"
-  - title: "Where Dreams Go to Die"
+    title: "Marz"
+    duration: "3:58"
+  - discNumber: 1
     trackNumber: 3
-    duration: "06:04"
-  - title: "Sigourney Weaver"
+    title: "Where Dreams Go to Die"
+    duration: "6:04"
+  - discNumber: 1
     trackNumber: 4
-    duration: "03:31"
-  - title: "Chicken Bones"
+    title: "Sigourney Weaver"
+    duration: "3:31"
+  - discNumber: 1
     trackNumber: 5
-    duration: "03:38"
-  - title: "Silver Platter Club"
+    title: "Chicken Bones"
+    duration: "3:38"
+  - discNumber: 1
     trackNumber: 6
-    duration: "04:11"
-  - title: "It’s Easier"
+    title: "Silver Platter Club"
+    duration: "4:11"
+  - discNumber: 1
     trackNumber: 7
-    duration: "04:38"
-  - title: "Outer Space"
+    title: "It’s Easier"
+    duration: "4:38"
+  - discNumber: 1
     trackNumber: 8
-    duration: "03:15"
-  - title: "Jesus Hates Faggots"
+    title: "Outer Space"
+    duration: "3:15"
+  - discNumber: 1
     trackNumber: 9
-    duration: "03:48"
-  - title: "Caramel"
+    title: "Jesus Hates Faggots"
+    duration: "3:48"
+  - discNumber: 1
     trackNumber: 10
-    duration: "03:35"
-  - title: "Leopard & Lamb"
+    title: "Caramel"
+    duration: "3:35"
+  - discNumber: 1
     trackNumber: 11
-    duration: "04:41"
-  - title: "Queen of Denmark"
+    title: "Leopard & Lamb"
+    duration: "4:41"
+  - discNumber: 1
     trackNumber: 12
-    duration: "04:49"
-  - title: "That’s the Good News"
+    title: "Queen of Denmark"
+    duration: "4:49"
+  - discNumber: 2
     trackNumber: 1
-    duration: "04:14"
-  - title: "Supernatural Defibrillator"
+    title: "That’s the Good News"
+    duration: "4:14"
+  - discNumber: 2
     trackNumber: 2
-    duration: "02:53"
-  - title: "Fireflies"
+    title: "Supernatural Defibrillator"
+    duration: "2:54"
+  - discNumber: 2
     trackNumber: 3
-    duration: "03:42"
-  - title: "What Time?"
+    title: "Fireflies"
+    duration: "3:42"
+  - discNumber: 2
     trackNumber: 4
-    duration: "07:54"
+    title: "What Time?"
+    duration: "7:55"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/35ff2371-1c51-4556-a6a7-4430418f67af"
+tracklist_source: "https://musicbrainz.org/release/b10164a3-a815-49c2-94e8-de953698aba5"
+tracklist_edition: "2010 GB"
 ---
-
 ## About
 
 Queen of Denmark is a release by John Grant released in 2010-04-06. It has been featured on 2 Sundown Sessions shows. Featured tracks include Marz, Where Dreams Go To Die.

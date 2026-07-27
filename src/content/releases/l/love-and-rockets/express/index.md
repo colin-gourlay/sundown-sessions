@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Express"
 artist: "Love and Rockets"
 releaseDate: "1986-09-15"
@@ -11,43 +11,50 @@ genres:
 labels:
   - "Big Time Records"
   - "Beggars Banquet"
-duration: "0:47:31"
+duration: "59:51"
 featuredInShows:
   - "20"
 shows:
   - "20"
 tracks:
-  - title: "It Could Be Sunshine"
-    trackNumber: 1
-    duration: "04:59"
-  - title: "Kundalini Express"
-    trackNumber: 2
-    duration: "05:48"
-  - title: "All in My Mind"
-    trackNumber: 3
-    duration: "04:44"
-  - title: "Life in Laralay"
-    trackNumber: 4
-    duration: "03:32"
-  - title: "Ball of Confusion"
-    trackNumber: 5
-    duration: "07:22"
-  - title: "Yin and Yang The Flower Pot Man"
-    trackNumber: 6
-    duration: "05:54"
-  - title: "Love Me"
-    trackNumber: 7
-    duration: "03:55"
-  - title: "All in My Mind (acoustic version)"
-    trackNumber: 8
-    duration: "05:07"
-  - title: "An American Dream"
-    trackNumber: 9
-    duration: "06:06"
+  - trackNumber: 1
+    title: "Angels and Devils"
+    duration: "6:09"
+  - trackNumber: 2
+    title: "It Could Be Sunshine"
+    duration: "4:59"
+  - trackNumber: 3
+    title: "Kundalini Express"
+    duration: "5:48"
+  - trackNumber: 4
+    title: "All in My Mind"
+    duration: "4:44"
+  - trackNumber: 5
+    title: "Life in Laralay"
+    duration: "3:32"
+  - trackNumber: 6
+    title: "Ball of Confusion"
+    duration: "7:23"
+  - trackNumber: 7
+    title: "Holiday on the Moon"
+    duration: "6:11"
+  - trackNumber: 8
+    title: "Yin and Yang (The Flowerpot Man) (remix)"
+    duration: "5:55"
+  - trackNumber: 9
+    title: "Love Me"
+    duration: "3:56"
+  - trackNumber: 10
+    title: "All in My Mind (acoustic version)"
+    duration: "5:08"
+  - trackNumber: 11
+    title: "An American Dream"
+    duration: "6:06"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/76abb523-ddc9-367e-997b-4d88f9f93da0"
+tracklist_source: "https://musicbrainz.org/release/2059f559-0406-38e4-b71c-00c84efcbcb2"
+tracklist_edition: "1986 US"
 ---
-
 ## About
 
 Express is a release by Love and Rockets released in 1986-09-15. It has been featured on 1 Sundown Sessions show. Featured tracks include Kundalini Express.

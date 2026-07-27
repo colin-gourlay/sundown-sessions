@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The Crossing"
 artist: "Big Country"
 releaseDate: "1983-07-19"
@@ -11,46 +11,47 @@ genres:
   - "pop/rock"
 labels:
   - "Mercury Records"
-duration: "0:48:59"
+duration: "49:01"
 featuredInShows:
   - "15"
 shows:
   - "15"
 tracks:
-  - title: "In a Big Country"
-    trackNumber: 1
-    duration: "04:44"
-  - title: "Inwards"
-    trackNumber: 2
-    duration: "04:38"
-  - title: "Chance"
-    trackNumber: 3
-    duration: "04:24"
-  - title: "1000 Stars"
-    trackNumber: 4
-    duration: "03:53"
-  - title: "The Storm"
-    trackNumber: 5
-    duration: "06:21"
-  - title: "Harvest Home"
-    trackNumber: 6
-    duration: "04:20"
-  - title: "Lost Patrol"
-    trackNumber: 7
-    duration: "04:53"
-  - title: "Close Action"
-    trackNumber: 8
-    duration: "04:16"
-  - title: "Fields of Fire"
-    trackNumber: 9
-    duration: "03:32"
-  - title: "Porrohman"
-    trackNumber: 10
-    duration: "07:53"
+  - trackNumber: 1
+    title: "In a Big Country"
+    duration: "4:45"
+  - trackNumber: 2
+    title: "Inwards"
+    duration: "4:38"
+  - trackNumber: 3
+    title: "Chance"
+    duration: "4:25"
+  - trackNumber: 4
+    title: "1000 Stars"
+    duration: "3:54"
+  - trackNumber: 5
+    title: "The Storm"
+    duration: "6:22"
+  - trackNumber: 6
+    title: "Harvest Home"
+    duration: "4:21"
+  - trackNumber: 7
+    title: "Lost Patrol"
+    duration: "4:54"
+  - trackNumber: 8
+    title: "Close Action"
+    duration: "4:16"
+  - trackNumber: 9
+    title: "Fields of Fire"
+    duration: "3:32"
+  - trackNumber: 10
+    title: "Porrohman"
+    duration: "7:54"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/54459dcf-4964-3c22-ad08-bb2f4dfa4131"
+tracklist_source: "https://musicbrainz.org/release/3bded718-ffff-468a-9c75-cfb048827757"
+tracklist_edition: "1983 DE Made in Germany, without PG 900"
 ---
-
 ## About
 
 The Crossing is a release by Big Country released in 1983-07-19. It has been featured on 1 Sundown Sessions show. Featured tracks include The Storm.

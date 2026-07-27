@@ -3,6 +3,7 @@
 /src/resources/
 /src/hugo_stats.json
 /.idea/
+/.cache/
 
 # Blowfish theme build artefacts (generated during Hugo builds)
 /src/assets/css/compiled/

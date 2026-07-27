@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Electric"
 artist: "The Cult"
 releaseDate: "1987-05-21"
@@ -11,7 +11,7 @@ genres:
   - "alternative rock"
 labels:
   - "BMG Music International"
-duration: "0:38:47"
+duration: "38:52"
 featuredInShows:
   - "12"
   - "46"
@@ -19,43 +19,44 @@ shows:
   - "12"
   - "46"
 tracks:
-  - title: "Wild Flower"
-    trackNumber: 1
-    duration: "03:38"
-  - title: "Peace Dog"
-    trackNumber: 2
-    duration: "03:35"
-  - title: "Lil' Devil"
-    trackNumber: 3
-    duration: "02:44"
-  - title: "Aphrodisiac Jacket"
-    trackNumber: 4
-    duration: "04:11"
-  - title: "Electric Ocean"
-    trackNumber: 5
-    duration: "02:49"
-  - title: "Bad Fun"
-    trackNumber: 6
-    duration: "03:35"
-  - title: "King Contrary Man"
-    trackNumber: 7
-    duration: "03:12"
-  - title: "Love Removal Machine"
-    trackNumber: 8
-    duration: "04:17"
-  - title: "Born to Be Wild"
-    trackNumber: 9
-    duration: "03:55"
-  - title: "Outlaw"
-    trackNumber: 10
-    duration: "02:52"
-  - title: "Memphis Hip Shake"
-    trackNumber: 11
-    duration: "03:59"
+  - trackNumber: 1
+    title: "Wild Flower"
+    duration: "3:37"
+  - trackNumber: 2
+    title: "Peace Dog"
+    duration: "3:35"
+  - trackNumber: 3
+    title: "Lil' Devil"
+    duration: "2:44"
+  - trackNumber: 4
+    title: "Aphrodisiac Jacket"
+    duration: "4:12"
+  - trackNumber: 5
+    title: "Electric Ocean"
+    duration: "2:49"
+  - trackNumber: 6
+    title: "Bad Fun"
+    duration: "3:38"
+  - trackNumber: 7
+    title: "King Contrary Man"
+    duration: "3:12"
+  - trackNumber: 8
+    title: "Love Removal Machine"
+    duration: "4:18"
+  - trackNumber: 9
+    title: "Born to Be Wild"
+    duration: "3:55"
+  - trackNumber: 10
+    title: "Outlaw"
+    duration: "2:53"
+  - trackNumber: 11
+    title: "Memphis Hip Shake"
+    duration: "3:59"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/e9e740ec-a09f-3f29-802f-43af41b7e440"
+tracklist_source: "https://musicbrainz.org/release/01a5b203-9e2c-4b17-a705-a94a1a1901a0"
+tracklist_edition: "1987 GB"
 ---
-
 ## About
 
 Electric is a release by The Cult released in 1987-05-21. It has been featured on 2 Sundown Sessions shows. Featured tracks include Born To Be Wild, Electric Ocean.

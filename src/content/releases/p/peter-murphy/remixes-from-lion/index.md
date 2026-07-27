@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Remixes from Lion"
 artist: "Peter Murphy"
 releaseDate: "2015-06"
@@ -7,49 +7,50 @@ genres:
   - "rock"
 labels:
   - "Nettwerk"
-duration: "1:17:02"
+duration: "1:17:04"
 featuredInShows:
   - "20"
 shows:
   - "20"
 tracks:
-  - title: "Hang Up (Youth Remix)"
-    trackNumber: 1
-    duration: "07:16"
-  - title: "Low Tar Stars (Youth Remix)"
-    trackNumber: 2
-    duration: "04:44"
-  - title: "The Ghost of Shokan Lake (Youth Remix)"
-    trackNumber: 3
-    duration: "06:27"
-  - title: "I Am My Own Name (Youth Remix)"
-    trackNumber: 4
-    duration: "07:06"
-  - title: "I'm On Your Side (Youth Remix)"
-    trackNumber: 5
-    duration: "06:02"
-  - title: "The Sound of Water (Youth Remix)"
-    trackNumber: 6
-    duration: "08:32"
-  - title: "Loctaine (Youth Remix)"
-    trackNumber: 7
-    duration: "06:52"
-  - title: "The Sound of Water"
-    trackNumber: 8
-    duration: "08:44"
-  - title: "Gabriel"
-    trackNumber: 9
-    duration: "05:21"
-  - title: "Prayer of Jonas in the Belly of the Whale (White Star Hawk Spirit Dance)"
-    trackNumber: 10
-    duration: "09:29"
-  - title: "Discreet Medley (Richard Thorne Ambient Remix)"
-    trackNumber: 11
-    duration: "06:24"
+  - trackNumber: 1
+    title: "Hang Up (Youth Remix)"
+    duration: "7:17"
+  - trackNumber: 2
+    title: "Low Tar Stars (Youth Remix)"
+    duration: "4:44"
+  - trackNumber: 3
+    title: "The Ghost of Shokan Lake (Youth Remix)"
+    duration: "6:28"
+  - trackNumber: 4
+    title: "I Am My Own Name (Youth Remix)"
+    duration: "7:07"
+  - trackNumber: 5
+    title: "I'm On Your Side (Youth Remix)"
+    duration: "6:02"
+  - trackNumber: 6
+    title: "The Sound of Water (Youth Remix)"
+    duration: "8:33"
+  - trackNumber: 7
+    title: "Loctaine (Youth Remix)"
+    duration: "6:53"
+  - trackNumber: 8
+    title: "The Sound of Water"
+    duration: "8:45"
+  - trackNumber: 9
+    title: "Gabriel"
+    duration: "5:21"
+  - trackNumber: 10
+    title: "Prayer of Jonas in the Belly of the Whale (White Star Hawk Spirit Dance)"
+    duration: "9:30"
+  - trackNumber: 11
+    title: "Discreet Medley (Richard Thorne Ambient Remix)"
+    duration: "6:24"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/ad358529-d72a-4d35-83fb-7a8000a8c59d"
+tracklist_source: "https://musicbrainz.org/release/a849a5f0-77e2-4e17-a918-eafa53159b8b"
+tracklist_edition: "2015-06 None"
 ---
-
 ## About
 
 Remixes from Lion is a release by Peter Murphy released in 2015-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Hang Up - Youth Remix.

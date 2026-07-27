@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Gung Ho"
 artist: "Patti Smith"
 releaseDate: "2000-03-20"
@@ -10,55 +10,56 @@ genres:
   - "alternative rock"
 labels:
   - "Arista"
-duration: "1:04:36"
+duration: "1:04:35"
 featuredInShows:
   - "15"
 shows:
   - "15"
 tracks:
-  - title: "One Voice"
-    trackNumber: 1
-    duration: "04:04"
-  - title: "Lo and Beholden"
-    trackNumber: 2
-    duration: "04:43"
-  - title: "Boy Cried Wolf"
-    trackNumber: 3
-    duration: "04:51"
-  - title: "Persuasion"
-    trackNumber: 4
-    duration: "04:33"
-  - title: "Gone Pie"
-    trackNumber: 5
-    duration: "04:04"
-  - title: "China Bird"
-    trackNumber: 6
-    duration: "04:07"
-  - title: "Glitter in Their Eyes"
-    trackNumber: 7
-    duration: "03:03"
-  - title: "Strange Messengers"
-    trackNumber: 8
-    duration: "08:02"
-  - title: "Grateful"
-    trackNumber: 9
-    duration: "04:29"
-  - title: "Upright Come"
-    trackNumber: 10
-    duration: "02:58"
-  - title: "New Party"
-    trackNumber: 11
-    duration: "04:30"
-  - title: "Libbie's Song"
-    trackNumber: 12
-    duration: "03:26"
-  - title: "Gung Ho"
-    trackNumber: 13
+  - trackNumber: 1
+    title: "One Voice"
+    duration: "4:05"
+  - trackNumber: 2
+    title: "Lo and Beholden"
+    duration: "4:43"
+  - trackNumber: 3
+    title: "Boy Cried Wolf"
+    duration: "4:52"
+  - trackNumber: 4
+    title: "Persuasion"
+    duration: "4:33"
+  - trackNumber: 5
+    title: "Gone Pie"
+    duration: "4:04"
+  - trackNumber: 6
+    title: "China Bird"
+    duration: "4:07"
+  - trackNumber: 7
+    title: "Glitter in Their Eyes"
+    duration: "3:03"
+  - trackNumber: 8
+    title: "Strange Messengers"
+    duration: "8:03"
+  - trackNumber: 9
+    title: "Grateful"
+    duration: "4:30"
+  - trackNumber: 10
+    title: "Upright Come"
+    duration: "2:58"
+  - trackNumber: 11
+    title: "New Party"
+    duration: "4:30"
+  - trackNumber: 12
+    title: "Libbie's Song"
+    duration: "3:26"
+  - trackNumber: 13
+    title: "Gung Ho"
     duration: "11:41"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/6d5520df-b433-3376-a0c3-3dba9dc5973a"
+tracklist_source: "https://musicbrainz.org/release/bdf5fd1d-9cb5-470a-a0cf-827e0ea09075"
+tracklist_edition: "2000-03-20 DE"
 ---
-
 ## About
 
 Gung Ho is a release by Patti Smith released in 2000-03-20. It has been featured on 1 Sundown Sessions show. Featured tracks include Glitter In Their Eyes.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Vive Le Rock"
 artist: "Adam Ant"
 releaseDate: "1985-09-02"
@@ -11,52 +11,53 @@ genres:
   - "synthpop"
 labels:
   - "CBS"
-duration: "0:39:53"
+duration: "39:54"
 featuredInShows:
   - "14"
 shows:
   - "14"
 tracks:
-  - title: "Vive Le Rock"
-    trackNumber: 1
-    duration: "03:39"
-  - title: "Miss Thing"
-    trackNumber: 2
-    duration: "03:08"
-  - title: "Razor Keen"
-    trackNumber: 3
-    duration: "03:49"
-  - title: "Rip Down"
-    trackNumber: 4
-    duration: "03:23"
-  - title: "Scorpio Rising"
-    trackNumber: 5
-    duration: "04:05"
-  - title: "Apollo 9"
-    trackNumber: 6
-    duration: "03:22"
-  - title: "Hell's Eight Acres"
-    trackNumber: 7
-    duration: "03:52"
-  - title: "Mohair Lockeroom Pin-Up Boys"
-    trackNumber: 8
-    duration: "03:14"
-  - title: "No Zap"
-    trackNumber: 9
-    duration: "03:14"
-  - title: "P.O.E."
-    trackNumber: 10
-    duration: "03:25"
-  - title: "Apollo 9 (a cappella reprise)"
-    trackNumber: 11
-    duration: "01:29"
-  - title: "Human Bondage Den"
-    trackNumber: 12
-    duration: "03:08"
+  - trackNumber: 1
+    title: "Vive Le Rock"
+    duration: "3:40"
+  - trackNumber: 2
+    title: "Miss Thing"
+    duration: "3:08"
+  - trackNumber: 3
+    title: "Razor Keen"
+    duration: "3:50"
+  - trackNumber: 4
+    title: "Rip Down"
+    duration: "3:24"
+  - trackNumber: 5
+    title: "Scorpio Rising"
+    duration: "4:06"
+  - trackNumber: 6
+    title: "Apollo 9"
+    duration: "3:23"
+  - trackNumber: 7
+    title: "Hell's Eight Acres"
+    duration: "3:52"
+  - trackNumber: 8
+    title: "Mohair Lockeroom Pin-Up Boys"
+    duration: "3:14"
+  - trackNumber: 9
+    title: "No Zap"
+    duration: "3:14"
+  - trackNumber: 10
+    title: "P.O.E."
+    duration: "3:25"
+  - trackNumber: 11
+    title: "Apollo 9 (a cappella reprise)"
+    duration: "1:30"
+  - trackNumber: 12
+    title: "Human Bondage Den"
+    duration: "3:08"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/6633ffa1-a37a-3712-89ec-e0429ac73883"
+tracklist_source: "https://musicbrainz.org/release/acae4fab-526e-4e73-bda6-35a1513c931f"
+tracklist_edition: "1985 GB"
 ---
-
 ## About
 
 Vive Le Rock is a release by Adam Ant released in 1985-09-02. It has been featured on 1 Sundown Sessions show. Featured tracks include Miss Thing.

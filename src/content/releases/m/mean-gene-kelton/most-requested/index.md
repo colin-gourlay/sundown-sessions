@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Most Requested"
 artist: "Mean Gene Kelton"
 releaseDate: "1999"
@@ -9,55 +9,56 @@ featuredInShows:
 shows:
   - "8"
 tracks:
-  - title: "Texas Honey"
-    trackNumber: 1
-    duration: "04:17"
-  - title: "Too White to Play the Blues"
-    trackNumber: 2
-    duration: "04:31"
-  - title: "If This Guitar Could Talk"
-    trackNumber: 3
-    duration: "04:47"
-  - title: "Tears on My Guitar"
-    trackNumber: 4
-    duration: "05:38"
-  - title: "Going Back to Memphis"
-    trackNumber: 5
-    duration: "04:12"
-  - title: "Cruisin' Texas Avenue"
-    trackNumber: 6
-    duration: "04:04"
-  - title: "Sinking Deeper (Into the Blues)"
-    trackNumber: 7
-    duration: "04:27"
-  - title: "Big Legged Mama"
-    trackNumber: 8
-    duration: "03:36"
-  - title: "Leaving Paradies (Goodbye Louisiana)"
-    trackNumber: 9
-    duration: "04:47"
-  - title: "The Avon Man"
-    trackNumber: 10
-    duration: "04:53"
-  - title: "Little Black Dress"
-    trackNumber: 11
-    duration: "03:42"
-  - title: "My Blow Up Lover"
-    trackNumber: 12
-    duration: "03:31"
-  - title: "Let Me Pump Your Gas"
-    trackNumber: 13
-    duration: "04:01"
-  - title: "The Texas City Dyke"
-    trackNumber: 14
-    duration: "04:47"
-  - title: "My Baby Don't Wear No Panties"
-    trackNumber: 15
-    duration: "05:28"
+  - trackNumber: 1
+    title: "Texas Honey"
+    duration: "4:17"
+  - trackNumber: 2
+    title: "Too White to Play the Blues"
+    duration: "4:31"
+  - trackNumber: 3
+    title: "If This Guitar Could Talk"
+    duration: "4:47"
+  - trackNumber: 4
+    title: "Tears on My Guitar"
+    duration: "5:38"
+  - trackNumber: 5
+    title: "Going Back to Memphis"
+    duration: "4:12"
+  - trackNumber: 6
+    title: "Cruisin' Texas Avenue"
+    duration: "4:04"
+  - trackNumber: 7
+    title: "Sinking Deeper (Into the Blues)"
+    duration: "4:27"
+  - trackNumber: 8
+    title: "Big Legged Mama"
+    duration: "3:36"
+  - trackNumber: 9
+    title: "Leaving Paradies (Goodbye Louisiana)"
+    duration: "4:47"
+  - trackNumber: 10
+    title: "The Avon Man"
+    duration: "4:53"
+  - trackNumber: 11
+    title: "Little Black Dress"
+    duration: "3:42"
+  - trackNumber: 12
+    title: "My Blow Up Lover"
+    duration: "3:31"
+  - trackNumber: 13
+    title: "Let Me Pump Your Gas"
+    duration: "4:01"
+  - trackNumber: 14
+    title: "The Texas City Dyke"
+    duration: "4:47"
+  - trackNumber: 15
+    title: "My Baby Don't Wear No Panties"
+    duration: "5:28"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/191d26fd-9eff-3cbe-978e-b3c50af8d07e"
+tracklist_source: "https://musicbrainz.org/release/9e291ec6-eaff-40ea-9e4e-51b994f9de0b"
+tracklist_edition: ""
 ---
-
 ## About
 
 Most Requested is a release by Mean Gene Kelton released in 1999. It has been featured on 1 Sundown Sessions show. Featured tracks include My Baby Don't Wear No Panties.

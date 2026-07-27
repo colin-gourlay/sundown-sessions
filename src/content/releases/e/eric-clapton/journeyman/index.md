@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Journeyman"
 artist: "Eric Clapton"
 releaseDate: "1989-10-23"
@@ -12,52 +12,53 @@ genres:
 labels:
   - "Reprise Records"
   - "Duck Records"
-duration: "0:56:58"
+duration: "56:59"
 featuredInShows:
   - "46"
 shows:
   - "46"
 tracks:
-  - title: "Pretending"
-    trackNumber: 1
-    duration: "04:44"
-  - title: "Anything for Your Love"
-    trackNumber: 2
-    duration: "04:10"
-  - title: "Bad Love"
-    trackNumber: 3
-    duration: "05:14"
-  - title: "Running on Faith"
-    trackNumber: 4
-    duration: "05:33"
-  - title: "Hard Times"
-    trackNumber: 5
-    duration: "03:14"
-  - title: "Hound Dog"
-    trackNumber: 6
-    duration: "02:27"
-  - title: "No Alibis"
-    trackNumber: 7
-    duration: "05:38"
-  - title: "Run So Far"
-    trackNumber: 8
-    duration: "04:07"
-  - title: "Old Love"
-    trackNumber: 9
-    duration: "06:24"
-  - title: "Breaking Point"
-    trackNumber: 10
-    duration: "05:32"
-  - title: "Lead Me On"
-    trackNumber: 11
-    duration: "05:52"
-  - title: "Before You Accuse Me"
-    trackNumber: 12
-    duration: "03:56"
+  - trackNumber: 1
+    title: "Pretending"
+    duration: "4:45"
+  - trackNumber: 2
+    title: "Anything for Your Love"
+    duration: "4:11"
+  - trackNumber: 3
+    title: "Bad Love"
+    duration: "5:14"
+  - trackNumber: 4
+    title: "Running on Faith"
+    duration: "5:34"
+  - trackNumber: 5
+    title: "Hard Times"
+    duration: "3:14"
+  - trackNumber: 6
+    title: "Hound Dog"
+    duration: "2:28"
+  - trackNumber: 7
+    title: "No Alibis"
+    duration: "5:39"
+  - trackNumber: 8
+    title: "Run So Far"
+    duration: "4:08"
+  - trackNumber: 9
+    title: "Old Love"
+    duration: "6:24"
+  - trackNumber: 10
+    title: "Breaking Point"
+    duration: "5:33"
+  - trackNumber: 11
+    title: "Lead Me On"
+    duration: "5:52"
+  - trackNumber: 12
+    title: "Before You Accuse Me"
+    duration: "3:57"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/700072d4-ea59-36fc-bc62-e90b7282aa0c"
+tracklist_source: "https://musicbrainz.org/release/00c22ae5-990b-4fad-88a5-b805bdb6867f"
+tracklist_edition: "1989 CA Columbia House edition"
 ---
-
 ## About
 
 Journeyman is a release by Eric Clapton released in 1989-10-23. It has been featured on 1 Sundown Sessions show. Featured tracks include Bad Love.

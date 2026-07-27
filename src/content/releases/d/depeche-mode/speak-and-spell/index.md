@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Speak & Spell"
 artist: "Depeche Mode"
 releaseDate: "1981-10-05"
@@ -11,49 +11,50 @@ genres:
   - "new romantic"
 labels:
   - "Mute"
-duration: "0:39:40"
+duration: "39:40"
 featuredInShows:
   - "15"
 shows:
   - "15"
 tracks:
-  - title: "New Life"
-    trackNumber: 1
-    duration: "03:43"
-  - title: "I Sometimes Wish I Was Dead"
-    trackNumber: 2
-    duration: "02:14"
-  - title: "Puppets"
-    trackNumber: 3
-    duration: "03:55"
-  - title: "Boys Say Go!"
-    trackNumber: 4
-    duration: "03:03"
-  - title: "Nodisco"
-    trackNumber: 5
-    duration: "04:11"
-  - title: "What's Your Name?"
-    trackNumber: 6
-    duration: "02:41"
-  - title: "Photographic"
-    trackNumber: 7
-    duration: "04:44"
-  - title: "Tora! Tora! Tora!"
-    trackNumber: 8
-    duration: "04:34"
-  - title: "Big Muff"
-    trackNumber: 9
-    duration: "04:20"
-  - title: "Any Second Now (Voices)"
-    trackNumber: 10
-    duration: "02:35"
-  - title: "Just Can't Get Enough"
-    trackNumber: 11
-    duration: "03:40"
+  - trackNumber: 1
+    title: "New Life"
+    duration: "3:43"
+  - trackNumber: 2
+    title: "I Sometimes Wish I Was Dead"
+    duration: "2:14"
+  - trackNumber: 3
+    title: "Puppets"
+    duration: "3:55"
+  - trackNumber: 4
+    title: "Boys Say Go!"
+    duration: "3:03"
+  - trackNumber: 5
+    title: "Nodisco"
+    duration: "4:11"
+  - trackNumber: 6
+    title: "What's Your Name?"
+    duration: "2:41"
+  - trackNumber: 7
+    title: "Photographic"
+    duration: "4:44"
+  - trackNumber: 8
+    title: "Tora! Tora! Tora!"
+    duration: "4:34"
+  - trackNumber: 9
+    title: "Big Muff"
+    duration: "4:20"
+  - trackNumber: 10
+    title: "Any Second Now (Voices)"
+    duration: "2:35"
+  - trackNumber: 11
+    title: "Just Can't Get Enough"
+    duration: "3:40"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/7a0e0366-91f4-3444-b45a-83b158004165"
+tracklist_source: "https://musicbrainz.org/release/0ae30711-e85d-3ff0-9cc7-5c343e089792"
+tracklist_edition: "1981-10-05 GB"
 ---
-
 ## About
 
 Speak & Spell is a release by Depeche Mode released in 1981-10-05. It has been featured on 1 Sundown Sessions show. Featured tracks include New Life.

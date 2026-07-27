@@ -1,53 +1,54 @@
-﻿---
+---
 title: "There Are No Saints"
 artist: "Siobhan Wilson"
 releaseDate: "2017-07-14"
 releaseType: "Album"
 labels:
   - "[no label]"
-duration: "0:44:30"
+duration: "44:30"
 featuredInShows:
   - "5"
 shows:
   - "5"
 tracks:
-  - title: "There Are No Saints"
-    trackNumber: 1
-    duration: "01:30"
-  - title: "Whatever Helps"
-    trackNumber: 2
-    duration: "02:58"
-  - title: "Dear God"
-    trackNumber: 3
-    duration: "05:07"
-  - title: "Paris est blanche"
-    trackNumber: 4
-    duration: "03:22"
-  - title: "Disaster and Grace"
-    trackNumber: 5
-    duration: "05:55"
-  - title: "J’Attendrai"
-    trackNumber: 6
-    duration: "03:14"
-  - title: "Incarnation"
-    trackNumber: 7
-    duration: "04:39"
-  - title: "Make You Mine"
-    trackNumber: 8
-    duration: "06:01"
-  - title: "Dark Matter"
-    trackNumber: 9
-    duration: "02:48"
-  - title: "Dystopian Bach"
-    trackNumber: 10
-    duration: "05:02"
-  - title: "It Must Have Been the Moon"
-    trackNumber: 11
-    duration: "03:49"
+  - trackNumber: 1
+    title: "There Are No Saints"
+    duration: "1:30"
+  - trackNumber: 2
+    title: "Whatever Helps"
+    duration: "2:59"
+  - trackNumber: 3
+    title: "Dear God"
+    duration: "5:07"
+  - trackNumber: 4
+    title: "Paris est blanche"
+    duration: "3:23"
+  - trackNumber: 5
+    title: "Disaster and Grace"
+    duration: "5:55"
+  - trackNumber: 6
+    title: "J’Attendrai"
+    duration: "3:14"
+  - trackNumber: 7
+    title: "Incarnation"
+    duration: "4:39"
+  - trackNumber: 8
+    title: "Make You Mine"
+    duration: "6:02"
+  - trackNumber: 9
+    title: "Dark Matter"
+    duration: "2:49"
+  - trackNumber: 10
+    title: "Dystopian Bach"
+    duration: "5:02"
+  - trackNumber: 11
+    title: "It Must Have Been the Moon"
+    duration: "3:50"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/a054a4fd-a4e2-4d46-89f5-4333a21361e7"
+tracklist_source: "https://musicbrainz.org/release/fca516af-e95f-4d85-9c8c-5635823495d7"
+tracklist_edition: "2017-07-14 XW"
 ---
-
 ## About
 
 There Are No Saints is a release by Siobhan Wilson released in 2017-07-14. It has been featured on 1 Sundown Sessions show. Featured tracks include Make You Mine.

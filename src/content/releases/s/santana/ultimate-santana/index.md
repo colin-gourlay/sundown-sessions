@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Ultimate Santana"
 artist: "Santana"
 releaseDate: "2007-10-16"
@@ -13,70 +13,71 @@ labels:
   - "Arista"
   - "Columbia"
   - "Legacy"
-duration: "1:17:41"
+duration: "1:17:40"
 featuredInShows:
   - "11"
 shows:
   - "11"
 tracks:
-  - title: "Into the Night"
-    trackNumber: 1
-    duration: "03:42"
-  - title: "Smooth"
-    trackNumber: 2
-    duration: "04:55"
-  - title: "Maria Maria"
-    trackNumber: 3
-    duration: "04:21"
-  - title: "This Boy’s Fire"
-    trackNumber: 4
-    duration: "03:30"
-  - title: "She’s Not There"
-    trackNumber: 5
-    duration: "04:09"
-  - title: "Black Magic Woman"
-    trackNumber: 6
-    duration: "03:15"
-  - title: "The Game of Love"
-    trackNumber: 7
-    duration: "04:14"
-  - title: "Samba pa ti"
-    trackNumber: 8
-    duration: "04:45"
-  - title: "Evil Ways"
-    trackNumber: 9
-    duration: "03:55"
-  - title: "Put Your Lights On"
-    trackNumber: 10
-    duration: "04:45"
-  - title: "Corazón espinado"
-    trackNumber: 11
-    duration: "04:35"
-  - title: "Why Don’t You & I"
-    trackNumber: 12
-    duration: "03:51"
-  - title: "Just Feel Better"
-    trackNumber: 13
-    duration: "04:12"
-  - title: "Europa (Earth’s Cry Heaven’s Smile)"
-    trackNumber: 14
-    duration: "05:05"
-  - title: "No One to Depend On"
-    trackNumber: 15
-    duration: "05:34"
-  - title: "Oye como va"
-    trackNumber: 16
-    duration: "04:18"
-  - title: "Interplanetary Party"
-    trackNumber: 17
-    duration: "04:06"
-  - title: "The Game of Love"
-    trackNumber: 18
-    duration: "04:20"
+  - trackNumber: 1
+    title: "Into the Night"
+    duration: "3:42"
+  - trackNumber: 2
+    title: "Smooth"
+    duration: "4:56"
+  - trackNumber: 3
+    title: "Maria Maria"
+    duration: "4:21"
+  - trackNumber: 4
+    title: "This Boy’s Fire"
+    duration: "3:30"
+  - trackNumber: 5
+    title: "She’s Not There"
+    duration: "4:09"
+  - trackNumber: 6
+    title: "Black Magic Woman"
+    duration: "3:16"
+  - trackNumber: 7
+    title: "The Game of Love"
+    duration: "4:14"
+  - trackNumber: 8
+    title: "Samba pa ti"
+    duration: "4:45"
+  - trackNumber: 9
+    title: "Evil Ways"
+    duration: "3:56"
+  - trackNumber: 10
+    title: "Put Your Lights On"
+    duration: "4:46"
+  - trackNumber: 11
+    title: "Corazón espinado"
+    duration: "4:36"
+  - trackNumber: 12
+    title: "Why Don’t You & I"
+    duration: "3:51"
+  - trackNumber: 13
+    title: "Just Feel Better"
+    duration: "4:12"
+  - trackNumber: 14
+    title: "Europa (Earth’s Cry Heaven’s Smile)"
+    duration: "5:06"
+  - trackNumber: 15
+    title: "No One to Depend On"
+    duration: "5:34"
+  - trackNumber: 16
+    title: "Oye como va"
+    duration: "4:18"
+  - trackNumber: 17
+    title: "Interplanetary Party"
+    duration: "4:07"
+  - trackNumber: 18
+    title: "The Game of Love"
+    duration: "4:21"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/e5417609-11fe-34e0-afb6-c91696b3939c"
+tracklist_source: "https://musicbrainz.org/release/2464a699-b677-411c-a531-50fb9fafd9f4"
+tracklist_edition: "2007 AU"
 ---
-
 ## About
 
 Ultimate Santana is a release by Santana released in 2007-10-16. It has been featured on 1 Sundown Sessions show. Featured tracks include Europa.

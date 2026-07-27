@@ -1,4 +1,4 @@
-﻿---
+---
 title: "On My Mind"
 artist: "Fabienne DelSol"
 releaseDate: "2010-09-06"
@@ -11,52 +11,53 @@ genres:
   - "garage rock revival"
 labels:
   - "Damaged Goods"
-duration: "0:32:35"
+duration: "32:35"
 featuredInShows:
   - "4"
 shows:
   - "4"
 tracks:
-  - title: "To You"
-    trackNumber: 1
-    duration: "01:43"
-  - title: "Your Queen"
-    trackNumber: 2
-    duration: "03:00"
-  - title: "Ragunboneman"
-    trackNumber: 3
-    duration: "02:32"
-  - title: "On My Mind"
-    trackNumber: 4
-    duration: "03:05"
-  - title: "Pas adieu"
-    trackNumber: 5
-    duration: "03:04"
-  - title: "I Feel So Blue"
-    trackNumber: 6
-    duration: "02:37"
-  - title: "And I Have Learnt to Dream"
-    trackNumber: 7
-    duration: "03:07"
-  - title: "Take Your Seat"
-    trackNumber: 8
-    duration: "03:01"
-  - title: "Faraway Spaceman Blues"
-    trackNumber: 9
-    duration: "02:54"
-  - title: "Count Me Out"
-    trackNumber: 10
-    duration: "02:12"
-  - title: "Ce jour là"
-    trackNumber: 11
-    duration: "02:53"
-  - title: "Strange Shadows"
-    trackNumber: 12
-    duration: "02:27"
+  - trackNumber: 1
+    title: "To You"
+    duration: "1:43"
+  - trackNumber: 2
+    title: "Your Queen"
+    duration: "3:00"
+  - trackNumber: 3
+    title: "Ragunboneman"
+    duration: "2:32"
+  - trackNumber: 4
+    title: "On My Mind"
+    duration: "3:05"
+  - trackNumber: 5
+    title: "Pas adieu"
+    duration: "3:04"
+  - trackNumber: 6
+    title: "I Feel So Blue"
+    duration: "2:37"
+  - trackNumber: 7
+    title: "And I Have Learnt to Dream"
+    duration: "3:07"
+  - trackNumber: 8
+    title: "Take Your Seat"
+    duration: "3:01"
+  - trackNumber: 9
+    title: "Faraway Spaceman Blues"
+    duration: "2:54"
+  - trackNumber: 10
+    title: "Count Me Out"
+    duration: "2:12"
+  - trackNumber: 11
+    title: "Ce jour là"
+    duration: "2:53"
+  - trackNumber: 12
+    title: "Strange Shadows"
+    duration: "2:27"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/5ad75b87-d304-4c7c-b613-072d9bb4956a"
+tracklist_source: "https://musicbrainz.org/release/2953d089-fd55-412e-af7c-b219a27efed5"
+tracklist_edition: "2010-09-06 GB"
 ---
-
 ## About
 
 On My Mind is a release by Fabienne DelSol released in 2010-09-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Ragunboneman.

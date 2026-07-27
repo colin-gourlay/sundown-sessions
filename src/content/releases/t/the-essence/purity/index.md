@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Purity"
 artist: "The Essence"
 releaseDate: "1985"
@@ -10,55 +10,56 @@ genres:
   - "electronic"
 labels:
   - "Midnight Music"
-duration: "0:46:12"
+duration: "46:13"
 featuredInShows:
   - "19"
 shows:
   - "19"
 tracks:
-  - title: "The Last Preach"
-    trackNumber: 1
-    duration: "06:08"
-  - title: "A Reflected Dream"
-    trackNumber: 2
-    duration: "02:56"
-  - title: "The Cat"
-    trackNumber: 3
-    duration: "03:44"
-  - title: "The Blind"
-    trackNumber: 4
-    duration: "02:19"
-  - title: "Never Mine"
-    trackNumber: 5
-    duration: "03:18"
-  - title: "Endless Lakes"
-    trackNumber: 6
-    duration: "03:27"
-  - title: "Forever in Death"
-    trackNumber: 7
-    duration: "02:54"
-  - title: "Salvation"
-    trackNumber: 8
-    duration: "02:46"
-  - title: "The Waving Girl"
-    trackNumber: 9
-    duration: "03:52"
-  - title: "Purity"
-    trackNumber: 10
-    duration: "04:26"
-  - title: "Confusion"
-    trackNumber: 11
-    duration: "04:07"
-  - title: "From My Mouth"
-    trackNumber: 12
-    duration: "01:46"
-  - title: "The Swaying Wind"
-    trackNumber: 13
-    duration: "04:24"
+  - trackNumber: 1
+    title: "The Last Preach"
+    duration: "6:09"
+  - trackNumber: 2
+    title: "A Reflected Dream"
+    duration: "2:56"
+  - trackNumber: 3
+    title: "The Cat"
+    duration: "3:45"
+  - trackNumber: 4
+    title: "The Blind"
+    duration: "2:19"
+  - trackNumber: 5
+    title: "Never Mine"
+    duration: "3:18"
+  - trackNumber: 6
+    title: "Endless Lakes"
+    duration: "3:28"
+  - trackNumber: 7
+    title: "Forever in Death"
+    duration: "2:55"
+  - trackNumber: 8
+    title: "Salvation"
+    duration: "2:46"
+  - trackNumber: 9
+    title: "The Waving Girl"
+    duration: "3:52"
+  - trackNumber: 10
+    title: "Purity"
+    duration: "4:26"
+  - trackNumber: 11
+    title: "Confusion"
+    duration: "4:08"
+  - trackNumber: 12
+    title: "From My Mouth"
+    duration: "1:47"
+  - trackNumber: 13
+    title: "The Swaying Wind"
+    duration: "4:24"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/8bb49a78-87ff-307f-9b84-bf707bfcb464"
+tracklist_source: "https://musicbrainz.org/release/79340fd6-512d-391e-86d8-711a6f9a109f"
+tracklist_edition: "1985 GB"
 ---
-
 ## About
 
 Purity is a release by The Essence released in 1985. It has been featured on 1 Sundown Sessions show. Featured tracks include The Cat.

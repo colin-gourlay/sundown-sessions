@@ -1,4 +1,4 @@
-﻿---
+---
 title: "MEANS"
 artist: "FEWS"
 releaseDate: "2016-05-20"
@@ -9,46 +9,47 @@ genres:
   - "rock"
 labels:
   - "Play It Again Sam"
-duration: "0:36:56"
+duration: "36:56"
 featuredInShows:
   - "19"
 shows:
   - "19"
 tracks:
-  - title: "I.D."
-    trackNumber: 1
-    duration: "02:15"
-  - title: "The Zoo"
-    trackNumber: 2
-    duration: "03:31"
-  - title: "Drinking Games"
-    trackNumber: 3
-    duration: "03:48"
-  - title: "The Queen"
-    trackNumber: 4
-    duration: "02:58"
-  - title: "10 Things"
-    trackNumber: 5
-    duration: "03:50"
-  - title: "100 Goosebumps"
-    trackNumber: 6
-    duration: "02:56"
-  - title: "Keep on Telling Myself"
-    trackNumber: 7
-    duration: "03:59"
-  - title: "If Things Go on Like This"
-    trackNumber: 8
-    duration: "03:03"
-  - title: "Zlatan"
-    trackNumber: 9
-    duration: "02:13"
-  - title: "Ill"
-    trackNumber: 10
-    duration: "08:18"
+  - trackNumber: 1
+    title: "I.D."
+    duration: "2:16"
+  - trackNumber: 2
+    title: "The Zoo"
+    duration: "3:32"
+  - trackNumber: 3
+    title: "Drinking Games"
+    duration: "3:48"
+  - trackNumber: 4
+    title: "The Queen"
+    duration: "2:58"
+  - trackNumber: 5
+    title: "10 Things"
+    duration: "3:51"
+  - trackNumber: 6
+    title: "100 Goosebumps"
+    duration: "2:56"
+  - trackNumber: 7
+    title: "Keep on Telling Myself"
+    duration: "3:59"
+  - trackNumber: 8
+    title: "If Things Go on Like This"
+    duration: "3:04"
+  - trackNumber: 9
+    title: "Zlatan"
+    duration: "2:14"
+  - trackNumber: 10
+    title: "Ill"
+    duration: "8:18"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/44fb53c1-ab01-47b7-9ab1-0a420799b1d7"
+tracklist_source: "https://musicbrainz.org/release/80cf4b93-10dd-405b-98af-0bf0416f6b3a"
+tracklist_edition: "2016-05-20 XW"
 ---
-
 ## About
 
 MEANS is a release by FEWS released in 2016-05-20. It has been featured on 1 Sundown Sessions show. Featured tracks include The Zoo.

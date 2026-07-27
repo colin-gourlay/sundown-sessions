@@ -1,4 +1,4 @@
-﻿---
+---
 title: "A Letter from St. Paul"
 artist: "The Silencers"
 releaseDate: "1987"
@@ -9,46 +9,47 @@ genres:
   - "pop"
   - "rock"
   - "electronic"
-duration: "0:53:25"
+duration: "53:25"
 featuredInShows:
   - "13"
 shows:
   - "13"
 tracks:
-  - title: "Painted Moon"
-    trackNumber: 1
-    duration: "06:08"
-  - title: "I Can't Cry"
-    trackNumber: 2
-    duration: "05:23"
-  - title: "Bullets and Blue Eyes"
-    trackNumber: 3
-    duration: "05:07"
-  - title: "God's Gift"
-    trackNumber: 4
-    duration: "04:55"
-  - title: "I See Red"
-    trackNumber: 5
-    duration: "04:23"
-  - title: "I Ought to Know"
-    trackNumber: 6
-    duration: "04:30"
-  - title: "A Letter From St. Paul"
-    trackNumber: 7
-    duration: "04:37"
-  - title: "Blue Desire"
-    trackNumber: 8
-    duration: "04:11"
-  - title: "Possessed"
-    trackNumber: 9
-    duration: "07:32"
-  - title: "Painted Moon (full version)"
-    trackNumber: 10
-    duration: "06:37"
+  - trackNumber: 1
+    title: "Painted Moon"
+    duration: "6:08"
+  - trackNumber: 2
+    title: "I Can't Cry"
+    duration: "5:23"
+  - trackNumber: 3
+    title: "Bullets and Blue Eyes"
+    duration: "5:07"
+  - trackNumber: 4
+    title: "God's Gift"
+    duration: "4:55"
+  - trackNumber: 5
+    title: "I See Red"
+    duration: "4:23"
+  - trackNumber: 6
+    title: "I Ought to Know"
+    duration: "4:31"
+  - trackNumber: 7
+    title: "A Letter From St. Paul"
+    duration: "4:37"
+  - trackNumber: 8
+    title: "Blue Desire"
+    duration: "4:11"
+  - trackNumber: 9
+    title: "Possessed"
+    duration: "7:33"
+  - trackNumber: 10
+    title: "Painted Moon (full version)"
+    duration: "6:37"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/94ca9c5a-9c52-39b5-af6c-d3612e0b3982"
+tracklist_source: "https://musicbrainz.org/release/779be4a0-a353-4827-9834-a2fd57e0f945"
+tracklist_edition: "1987 GB"
 ---
-
 ## About
 
 A Letter from St. Paul is a release by The Silencers released in 1987. It has been featured on 1 Sundown Sessions show. Featured tracks include Painted Moon.

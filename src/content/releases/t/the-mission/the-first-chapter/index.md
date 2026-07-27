@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The First Chapter"
 artist: "The Mission"
 releaseDate: "1987-06"
@@ -8,43 +8,47 @@ genres:
   - "rock"
 labels:
   - "Mercury Records"
-duration: "0:46:00"
+duration: "44:46"
 featuredInShows:
   - "7"
 shows:
   - "7"
 tracks:
-  - title: "Like a Hurricane"
-    trackNumber: 1
-    duration: "05:00"
-  - title: "Over the Hills and Far Away"
-    trackNumber: 2
-    duration: "03:59"
-  - title: "Naked and Savage"
-    trackNumber: 3
-    duration: "04:45"
-  - title: "Serpents Kiss"
-    trackNumber: 4
-    duration: "04:13"
-  - title: "Dancing Barefoot"
-    trackNumber: 5
-    duration: "03:08"
-  - title: "The Crystal Ocean (extended)"
-    trackNumber: 6
-    duration: "07:37"
-  - title: "Garden of Delight (extended)"
-    trackNumber: 7
-    duration: "05:03"
-  - title: "Wake (RSV)"
-    trackNumber: 8
-    duration: "05:04"
-  - title: "Like a Hurricane (extended)"
-    trackNumber: 9
-    duration: "07:07"
+  - trackNumber: 1
+    title: "Tomorrow Never Knows (edited version)"
+    duration: "3:30"
+  - trackNumber: 2
+    title: "Over the Hills and Far Away"
+    duration: "3:56"
+  - trackNumber: 3
+    title: "Naked and Savage"
+    duration: "4:46"
+  - trackNumber: 4
+    title: "Serpents Kiss"
+    duration: "4:14"
+  - trackNumber: 5
+    title: "Wake (RSV)"
+    duration: "5:00"
+  - trackNumber: 6
+    title: "Like a Hurricane"
+    duration: "4:55"
+  - trackNumber: 7
+    title: "Garden of Delight (extended version)"
+    duration: "5:00"
+  - trackNumber: 8
+    title: "Wishing Well"
+    duration: "2:45"
+  - trackNumber: 9
+    title: "Dancing Barefoot"
+    duration: "3:05"
+  - trackNumber: 10
+    title: "The Crystal Ocean (extended)"
+    duration: "7:35"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/a69bfa81-2f38-3729-8b10-cf4c4477b26d"
+tracklist_source: "https://musicbrainz.org/release/7a7422e7-1487-49a4-8fa6-1c0c2110b6f2"
+tracklist_edition: "1987 US"
 ---
-
 ## About
 
 The First Chapter is a release by The Mission released in 1987-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Naked And Savage.

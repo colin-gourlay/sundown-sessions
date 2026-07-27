@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Angelfish"
 artist: "Angelfish"
 releaseDate: "1993"
@@ -11,7 +11,7 @@ genres:
   - "post-rock"
 labels:
   - "Radioactive Records"
-duration: "0:35:45"
+duration: "35:45"
 featuredInShows:
   - "4"
   - "13"
@@ -19,40 +19,41 @@ shows:
   - "4"
   - "13"
 tracks:
-  - title: "Dogs in a Cage"
-    trackNumber: 1
-    duration: "02:33"
-  - title: "Suffocate Me"
-    trackNumber: 2
-    duration: "03:40"
-  - title: "You Can Love Her"
-    trackNumber: 3
-    duration: "03:48"
-  - title: "King of the World"
-    trackNumber: 4
-    duration: "03:01"
-  - title: "Sleep With Me"
-    trackNumber: 5
-    duration: "03:21"
-  - title: "Heartbreak to Hate"
-    trackNumber: 6
-    duration: "04:15"
-  - title: "The Sun Won’t Shine"
-    trackNumber: 7
-    duration: "03:51"
-  - title: "Mummy Can’t Drive"
-    trackNumber: 8
-    duration: "03:26"
-  - title: "Tomorrow Forever"
-    trackNumber: 9
-    duration: "03:28"
-  - title: "The End"
-    trackNumber: 10
-    duration: "04:22"
+  - trackNumber: 1
+    title: "Dogs in a Cage"
+    duration: "2:33"
+  - trackNumber: 2
+    title: "Suffocate Me"
+    duration: "3:40"
+  - trackNumber: 3
+    title: "You Can Love Her"
+    duration: "3:48"
+  - trackNumber: 4
+    title: "King of the World"
+    duration: "3:01"
+  - trackNumber: 5
+    title: "Sleep With Me"
+    duration: "3:21"
+  - trackNumber: 6
+    title: "Heartbreak to Hate"
+    duration: "4:15"
+  - trackNumber: 7
+    title: "The Sun Won’t Shine"
+    duration: "3:51"
+  - trackNumber: 8
+    title: "Mummy Can’t Drive"
+    duration: "3:26"
+  - trackNumber: 9
+    title: "Tomorrow Forever"
+    duration: "3:28"
+  - trackNumber: 10
+    title: "The End"
+    duration: "4:22"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/b355c98b-66b4-359a-b3ea-32969a617fd0"
+tracklist_source: "https://musicbrainz.org/release/17a48dd6-0fc7-480a-b926-2ce238728734"
+tracklist_edition: "1993 DE"
 ---
-
 ## About
 
 Angelfish is a release by Angelfish released in 1993. It has been featured on 2 Sundown Sessions shows. Featured tracks include Mummy Can't Drive, Suffocate Me.

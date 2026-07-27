@@ -1,4 +1,4 @@
-﻿---
+---
 title: "You Gotta Sin To Get Saved"
 artist: "Maria McKee"
 releaseDate: "1993-06-22"
@@ -9,46 +9,47 @@ genres:
 labels:
   - "Geffen Records"
   - "MCA Records"
-duration: "0:41:10"
+duration: "41:12"
 featuredInShows:
   - "7"
 shows:
   - "7"
 tracks:
-  - title: "I'm Gonna Soothe You"
-    trackNumber: 1
-    duration: "03:39"
-  - title: "My Lonely Sad Eyes"
-    trackNumber: 2
-    duration: "02:42"
-  - title: "My Girlhood Among the Outlaws"
-    trackNumber: 3
-    duration: "03:45"
-  - title: "Only Once"
-    trackNumber: 4
-    duration: "04:04"
-  - title: "I Forgive You"
-    trackNumber: 5
-    duration: "05:11"
-  - title: "I Can't Make It Alone"
-    trackNumber: 6
-    duration: "03:39"
-  - title: "Precious Time"
-    trackNumber: 7
-    duration: "03:38"
-  - title: "The Way Young Lovers Do"
-    trackNumber: 8
-    duration: "03:30"
-  - title: "Why Wasn't I More Grateful (When Life Was Sweet)"
-    trackNumber: 9
-    duration: "05:05"
-  - title: "You Gotta Sin to Get Saved"
-    trackNumber: 10
-    duration: "05:52"
+  - trackNumber: 1
+    title: "I'm Gonna Soothe You"
+    duration: "3:39"
+  - trackNumber: 2
+    title: "My Lonely Sad Eyes"
+    duration: "2:43"
+  - trackNumber: 3
+    title: "My Girlhood Among the Outlaws"
+    duration: "3:46"
+  - trackNumber: 4
+    title: "Only Once"
+    duration: "4:05"
+  - trackNumber: 5
+    title: "I Forgive You"
+    duration: "5:12"
+  - trackNumber: 6
+    title: "I Can't Make It Alone"
+    duration: "3:39"
+  - trackNumber: 7
+    title: "Precious Time"
+    duration: "3:39"
+  - trackNumber: 8
+    title: "The Way Young Lovers Do"
+    duration: "3:31"
+  - trackNumber: 9
+    title: "Why Wasn't I More Grateful (When Life Was Sweet)"
+    duration: "5:05"
+  - trackNumber: 10
+    title: "You Gotta Sin to Get Saved"
+    duration: "5:53"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/e201ff03-40c3-3eea-ad27-3b1891f46672"
+tracklist_source: "https://musicbrainz.org/release/1b870473-3c9b-4741-98a1-eb72afb2fa8b"
+tracklist_edition: "1993 GB"
 ---
-
 ## About
 
 You Gotta Sin To Get Saved is a release by Maria McKee released in 1993-06-22. It has been featured on 1 Sundown Sessions show. Featured tracks include I Can't Make It Alone.

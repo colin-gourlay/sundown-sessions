@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Ballad of the Broken Seas"
 artist: "Isobel Campbell"
 releaseDate: "2006-01-30"
@@ -11,52 +11,53 @@ genres:
   - "rock"
 labels:
   - "V2"
-duration: "0:42:49"
+duration: "42:50"
 featuredInShows:
   - "19"
 shows:
   - "19"
 tracks:
-  - title: "Deus Ibi Est"
-    trackNumber: 1
-    duration: "02:51"
-  - title: "Black Mountain"
-    trackNumber: 2
-    duration: "03:10"
-  - title: "The False Husband"
-    trackNumber: 3
-    duration: "03:53"
-  - title: "Ballad of the Broken Seas"
-    trackNumber: 4
-    duration: "02:42"
-  - title: "Revolver"
-    trackNumber: 5
-    duration: "02:40"
-  - title: "Ramblin' Man"
-    trackNumber: 6
-    duration: "03:29"
-  - title: "(Do You Wanna) Come Walk With Me?"
-    trackNumber: 7
-    duration: "03:27"
-  - title: "Saturday's Gone"
-    trackNumber: 8
-    duration: "04:37"
-  - title: "It's Hard to Kill a Bad Thing"
-    trackNumber: 9
-    duration: "02:53"
-  - title: "Honey Child What Can I Do?"
-    trackNumber: 10
-    duration: "03:44"
-  - title: "Dusty Wreath"
-    trackNumber: 11
-    duration: "03:44"
-  - title: "The Circus Is Leaving Town"
-    trackNumber: 12
-    duration: "05:35"
+  - trackNumber: 1
+    title: "Deus Ibi Est"
+    duration: "2:52"
+  - trackNumber: 2
+    title: "Black Mountain"
+    duration: "3:10"
+  - trackNumber: 3
+    title: "The False Husband"
+    duration: "3:54"
+  - trackNumber: 4
+    title: "Ballad of the Broken Seas"
+    duration: "2:42"
+  - trackNumber: 5
+    title: "Revolver"
+    duration: "2:41"
+  - trackNumber: 6
+    title: "Ramblin' Man"
+    duration: "3:29"
+  - trackNumber: 7
+    title: "(Do You Wanna) Come Walk With Me?"
+    duration: "3:27"
+  - trackNumber: 8
+    title: "Saturday's Gone"
+    duration: "4:37"
+  - trackNumber: 9
+    title: "It's Hard to Kill a Bad Thing"
+    duration: "2:54"
+  - trackNumber: 10
+    title: "Honey Child What Can I Do?"
+    duration: "3:44"
+  - trackNumber: 11
+    title: "Dusty Wreath"
+    duration: "3:45"
+  - trackNumber: 12
+    title: "The Circus Is Leaving Town"
+    duration: "5:35"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/994cdad1-0365-3439-89ed-6686bd563503"
+tracklist_source: "https://musicbrainz.org/release/e32ae79a-336e-4d33-945c-8c5e8206dbd3"
+tracklist_edition: "2006-01-30 GB"
 ---
-
 ## About
 
 Ballad of the Broken Seas is a release by Isobel Campbell released in 2006-01-30. It has been featured on 1 Sundown Sessions show. Featured tracks include The False Husband.

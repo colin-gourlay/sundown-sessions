@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Empires And Dance"
 artist: "Simple Minds"
 releaseDate: "1980-09-01"
@@ -11,46 +11,47 @@ genres:
   - "pop"
 labels:
   - "Arista"
-duration: "0:45:49"
+duration: "45:48"
 featuredInShows:
   - "4"
 shows:
   - "4"
 tracks:
-  - title: "I Travel"
-    trackNumber: 1
-    duration: "04:02"
-  - title: "Today I Died Again"
-    trackNumber: 2
-    duration: "04:38"
-  - title: "Celebrate"
-    trackNumber: 3
-    duration: "05:09"
-  - title: "This Fear of Gods"
-    trackNumber: 4
-    duration: "07:05"
-  - title: "Capital City"
-    trackNumber: 5
-    duration: "06:15"
-  - title: "Constantinople Line"
-    trackNumber: 6
-    duration: "04:40"
-  - title: "Twist/Run/Repulsion"
-    trackNumber: 7
-    duration: "04:32"
-  - title: "Thirty Frames a Second"
-    trackNumber: 8
-    duration: "05:03"
-  - title: "Kant-Kino"
-    trackNumber: 9
-    duration: "01:53"
-  - title: "Room"
-    trackNumber: 10
-    duration: "02:28"
+  - trackNumber: 1
+    title: "I Travel"
+    duration: "4:03"
+  - trackNumber: 2
+    title: "Today I Died Again"
+    duration: "4:38"
+  - trackNumber: 3
+    title: "Celebrate"
+    duration: "5:10"
+  - trackNumber: 4
+    title: "This Fear of Gods"
+    duration: "7:05"
+  - trackNumber: 5
+    title: "Capital City"
+    duration: "6:16"
+  - trackNumber: 6
+    title: "Constantinople Line"
+    duration: "4:40"
+  - trackNumber: 7
+    title: "Twist/Run/Repulsion"
+    duration: "4:32"
+  - trackNumber: 8
+    title: "Thirty Frames a Second"
+    duration: "5:03"
+  - trackNumber: 9
+    title: "Kant-Kino"
+    duration: "1:53"
+  - trackNumber: 10
+    title: "Room"
+    duration: "2:28"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/18a9bbd4-e9cd-3ece-aa3a-c3aa61af571b"
+tracklist_source: "https://musicbrainz.org/release/a513546a-a054-4314-8e99-fc642881d998"
+tracklist_edition: "1980-09-01 GB"
 ---
-
 ## About
 
 Empires And Dance is a release by Simple Minds released in 1980-09-01. It has been featured on 1 Sundown Sessions show. Featured tracks include I Travel.

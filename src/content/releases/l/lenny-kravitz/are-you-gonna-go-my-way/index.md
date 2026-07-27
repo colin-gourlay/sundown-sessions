@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Are You Gonna Go My Way"
 artist: "Lenny Kravitz"
 releaseDate: "1993"
@@ -11,28 +11,29 @@ genres:
   - "alternative rock"
 labels:
   - "Virgin America"
-duration: "0:17:55"
+duration: "17:13"
 featuredInShows:
   - "12"
 shows:
   - "12"
 tracks:
-  - title: "Are You Gonna Go My Way"
-    trackNumber: 1
-    duration: "03:32"
-  - title: "My Love"
-    trackNumber: 2
-    duration: "03:52"
-  - title: "All My Life"
-    trackNumber: 3
-    duration: "06:16"
-  - title: "Someone Like You"
-    trackNumber: 4
-    duration: "04:14"
+  - trackNumber: 1
+    title: "Are You Gonna Go My Way"
+    duration: "3:33"
+  - trackNumber: 2
+    title: "It Ain't Over 'til It's Over"
+    duration: "4:03"
+  - trackNumber: 3
+    title: "Always on the Run"
+    duration: "3:54"
+  - trackNumber: 4
+    title: "Let Love Rule"
+    duration: "5:43"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/9018165c-4df6-3955-ab16-48658eb7e658"
+tracklist_source: "https://musicbrainz.org/release/1e335109-6b8d-4b7a-bb8a-5ced077a2a21"
+tracklist_edition: "1993 XE CD1"
 ---
-
 ## About
 
 Are You Gonna Go My Way is a release by Lenny Kravitz released in 1993. It has been featured on 1 Sundown Sessions show. Featured tracks include Are You Gonna Go My Way.

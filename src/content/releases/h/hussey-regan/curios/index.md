@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Curios"
 artist: "Hussey-Regan"
 releaseDate: "2011-10-10"
@@ -16,46 +16,47 @@ featuredInShows:
 shows:
   - "20"
 tracks:
-  - title: "Naked & Savage"
-    trackNumber: 1
-    duration: "05:36"
-  - title: "Ordinary World"
-    trackNumber: 2
-    duration: "06:35"
-  - title: "Enjoy the Silence"
-    trackNumber: 3
-    duration: "03:56"
-  - title: "Another Lonely Day"
-    trackNumber: 4
-    duration: "04:40"
-  - title: "Wichita Lineman"
-    trackNumber: 5
-    duration: "03:12"
-  - title: "Ashes to Ashes"
-    trackNumber: 6
-    duration: "05:49"
-  - title: "I Go to Sleep"
-    trackNumber: 7
-    duration: "03:13"
-  - title: "Where the Wild Roses Grow"
-    trackNumber: 8
-    duration: "04:09"
-  - title: "Dangerous Eyes"
-    trackNumber: 9
-    duration: "05:54"
-  - title: "Calling Your Name"
-    trackNumber: 10
-    duration: "06:37"
-  - title: "Unravel"
-    trackNumber: 11
-    duration: "04:29"
-  - title: "A Change in the Weather (Aporia mix)"
-    trackNumber: 12
-    duration: "08:51"
+  - trackNumber: 1
+    title: "Naked & Savage"
+    duration: "5:36"
+  - trackNumber: 2
+    title: "Ordinary World"
+    duration: "6:35"
+  - trackNumber: 3
+    title: "Enjoy the Silence"
+    duration: "3:56"
+  - trackNumber: 4
+    title: "Another Lonely Day"
+    duration: "4:40"
+  - trackNumber: 5
+    title: "Wichita Lineman"
+    duration: "3:12"
+  - trackNumber: 6
+    title: "Ashes to Ashes"
+    duration: "5:49"
+  - trackNumber: 7
+    title: "I Go to Sleep"
+    duration: "3:13"
+  - trackNumber: 8
+    title: "Where the Wild Roses Grow"
+    duration: "4:09"
+  - trackNumber: 9
+    title: "Dangerous Eyes"
+    duration: "5:54"
+  - trackNumber: 10
+    title: "Calling Your Name"
+    duration: "6:37"
+  - trackNumber: 11
+    title: "Unravel"
+    duration: "4:29"
+  - trackNumber: 12
+    title: "A Change in the Weather (Aporia mix)"
+    duration: "8:51"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/7cb1f3e4-6b36-4662-8618-58dc50bdcfc7"
+tracklist_source: "https://musicbrainz.org/release/4987441a-efcc-4587-bc81-cc4a80b443e2"
+tracklist_edition: "2011-10-10 GB"
 ---
-
 ## About
 
 Curios is a release by Hussey-Regan released in 2011-10-10. It has been featured on 1 Sundown Sessions show. Featured tracks include Naked and Savage.
