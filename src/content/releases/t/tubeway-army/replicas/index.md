@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Replicas"
 artist: "Tubeway Army"
 releaseDate: "1979-04"
@@ -11,46 +11,47 @@ genres:
   - "classic pop and rock"
 labels:
   - "Atlantic"
-duration: "0:41:57"
+duration: "42:22"
 featuredInShows:
   - "14"
 shows:
   - "14"
 tracks:
-  - title: "Me! I Disconnect From You"
-    trackNumber: 1
-    duration: "03:20"
-  - title: "Are ‘Friends’ Electric?"
-    trackNumber: 2
-    duration: "05:22"
-  - title: "The Machman"
-    trackNumber: 3
-    duration: "03:07"
-  - title: "Praying to the Aliens"
-    trackNumber: 4
-    duration: "03:56"
-  - title: "Down in the Park"
-    trackNumber: 5
-    duration: "04:22"
-  - title: "You Are in My Vision"
-    trackNumber: 6
-    duration: "03:13"
-  - title: "Replicas"
-    trackNumber: 7
-    duration: "04:58"
-  - title: "It Must Have Been Years"
-    trackNumber: 8
-    duration: "04:00"
-  - title: "When the Machines Rock"
-    trackNumber: 9
-    duration: "03:12"
-  - title: "I Nearly Married a Human"
-    trackNumber: 10
-    duration: "06:27"
+  - trackNumber: 1
+    title: "Me! I Disconnect From You"
+    duration: "3:23"
+  - trackNumber: 2
+    title: "Are ‘Friends’ Electric?"
+    duration: "5:24"
+  - trackNumber: 3
+    title: "The Machman"
+    duration: "3:08"
+  - trackNumber: 4
+    title: "Praying to the Aliens"
+    duration: "4:00"
+  - trackNumber: 5
+    title: "Down in the Park"
+    duration: "4:24"
+  - trackNumber: 6
+    title: "You Are in My Vision"
+    duration: "3:15"
+  - trackNumber: 7
+    title: "Replicas"
+    duration: "5:00"
+  - trackNumber: 8
+    title: "It Must Have Been Years"
+    duration: "4:02"
+  - trackNumber: 9
+    title: "When the Machines Rock"
+    duration: "3:15"
+  - trackNumber: 10
+    title: "I Nearly Married a Human"
+    duration: "6:31"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/c1fa1051-0993-397d-be13-2daec83eb841"
+tracklist_source: "https://musicbrainz.org/release/325e77d8-6d9f-4cd9-b076-e40f01342987"
+tracklist_edition: "1979 IT"
 ---
-
 ## About
 
 Replicas is a release by Tubeway Army released in 1979-04. It has been featured on 1 Sundown Sessions show. Featured tracks include Are 'Friends' Electric?.

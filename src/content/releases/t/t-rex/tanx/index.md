@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Tanx"
 artist: "T. Rex"
 releaseDate: "1973-01-28"
@@ -11,55 +11,56 @@ genres:
   - "proto-punk"
 labels:
   - "Reprise Records"
-duration: "0:34:16"
+duration: "34:16"
 featuredInShows:
   - "14"
 shows:
   - "14"
 tracks:
-  - title: "Tenement Lady"
-    trackNumber: 1
-    duration: "02:54"
-  - title: "Rapids"
-    trackNumber: 2
-    duration: "02:45"
-  - title: "Mister Mister"
-    trackNumber: 3
-    duration: "03:27"
-  - title: "Broken Hearted Blues"
-    trackNumber: 4
-    duration: "02:00"
-  - title: "Shock Rock"
-    trackNumber: 5
-    duration: "01:40"
-  - title: "Country Honey"
-    trackNumber: 6
-    duration: "01:45"
-  - title: "Electric Slim & The Factory Hen"
-    trackNumber: 7
-    duration: "03:02"
-  - title: "Mad Donna"
-    trackNumber: 8
-    duration: "02:13"
-  - title: "Born to Boogie"
-    trackNumber: 9
-    duration: "02:03"
-  - title: "Life Is Strange"
-    trackNumber: 10
-    duration: "02:27"
-  - title: "The Street & Babe Shadow"
-    trackNumber: 11
-    duration: "02:15"
-  - title: "Highway Knees"
-    trackNumber: 12
-    duration: "02:32"
-  - title: "Left Hand Luke"
-    trackNumber: 13
-    duration: "05:13"
+  - trackNumber: 1
+    title: "Tenement Lady"
+    duration: "2:54"
+  - trackNumber: 2
+    title: "Rapids"
+    duration: "2:45"
+  - trackNumber: 3
+    title: "Mister Mister"
+    duration: "3:27"
+  - trackNumber: 4
+    title: "Broken Hearted Blues"
+    duration: "2:00"
+  - trackNumber: 5
+    title: "Shock Rock"
+    duration: "1:40"
+  - trackNumber: 6
+    title: "Country Honey"
+    duration: "1:45"
+  - trackNumber: 7
+    title: "Electric Slim & The Factory Hen"
+    duration: "3:02"
+  - trackNumber: 8
+    title: "Mad Donna"
+    duration: "2:13"
+  - trackNumber: 9
+    title: "Born to Boogie"
+    duration: "2:03"
+  - trackNumber: 10
+    title: "Life Is Strange"
+    duration: "2:27"
+  - trackNumber: 11
+    title: "The Street & Babe Shadow"
+    duration: "2:15"
+  - trackNumber: 12
+    title: "Highway Knees"
+    duration: "2:32"
+  - trackNumber: 13
+    title: "Left Hand Luke"
+    duration: "5:13"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/150be579-06f0-3ddf-8b6e-f725dda83e6b"
+tracklist_source: "https://musicbrainz.org/release/2e12d5fc-3b69-40d6-8422-297dc7fdb91e"
+tracklist_edition: "1973 US"
 ---
-
 ## About
 
 Tanx is a release by T. Rex released in 1973-01-28. It has been featured on 1 Sundown Sessions show. Featured tracks include 20th Century Boy.

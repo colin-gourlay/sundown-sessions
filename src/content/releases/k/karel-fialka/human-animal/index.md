@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Human Animal"
 artist: "Karel Fialka"
 releaseDate: "1988"
@@ -9,55 +9,56 @@ genres:
   - "electronic"
 labels:
   - "I.R.S. Records"
-duration: "0:45:57"
+duration: "45:59"
 featuredInShows:
   - "10"
 shows:
   - "10"
 tracks:
-  - title: "Sun in My Eyes"
-    trackNumber: 1
-    duration: "03:18"
-  - title: "Hey Matthew"
-    trackNumber: 2
-    duration: "03:33"
-  - title: "You Be the Judge"
-    trackNumber: 3
-    duration: "04:29"
-  - title: "Ready for It Now"
-    trackNumber: 4
-    duration: "03:35"
-  - title: "Undercurrents"
-    trackNumber: 5
-    duration: "03:05"
-  - title: "This City"
-    trackNumber: 6
-    duration: "03:48"
-  - title: "The Eyes Have It"
-    trackNumber: 7
-    duration: "03:28"
-  - title: "Eat, Drink, Dance, Relax"
-    trackNumber: 8
-    duration: "03:36"
-  - title: "Human Animal"
-    trackNumber: 9
-    duration: "03:34"
-  - title: "L’Etoile D’or"
-    trackNumber: 10
-    duration: "03:25"
-  - title: "Eat, Drink, Dance, Relax, Too"
-    trackNumber: 11
-    duration: "03:36"
-  - title: "The Eyes Have It II"
-    trackNumber: 12
-    duration: "03:23"
-  - title: "Undercurrents (Liquid mix)"
-    trackNumber: 13
-    duration: "03:02"
+  - trackNumber: 1
+    title: "Sun in My Eyes"
+    duration: "3:18"
+  - trackNumber: 2
+    title: "Hey Matthew"
+    duration: "3:34"
+  - trackNumber: 3
+    title: "You Be the Judge"
+    duration: "4:29"
+  - trackNumber: 4
+    title: "Ready for It Now"
+    duration: "3:36"
+  - trackNumber: 5
+    title: "Undercurrents"
+    duration: "3:06"
+  - trackNumber: 6
+    title: "This City"
+    duration: "3:49"
+  - trackNumber: 7
+    title: "The Eyes Have It"
+    duration: "3:28"
+  - trackNumber: 8
+    title: "Eat · Drink · Dance · Relax"
+    duration: "3:37"
+  - trackNumber: 9
+    title: "Human Animal"
+    duration: "3:35"
+  - trackNumber: 10
+    title: "L'Etoile d'Or"
+    duration: "3:26"
+  - trackNumber: 11
+    title: "Eat · Drink · Dance · Relax Too"
+    duration: "3:36"
+  - trackNumber: 12
+    title: "The Eyes Have It 2"
+    duration: "3:23"
+  - trackNumber: 13
+    title: "Undercurrents (Liquid mix)"
+    duration: "3:02"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/9bf96d14-303c-3bba-bcbd-bb52df1d9f4a"
+tracklist_source: "https://musicbrainz.org/release/5c1bf6da-d366-473e-8f7b-7b3037737219"
+tracklist_edition: "1988 US"
 ---
-
 ## About
 
 Human Animal is a release by Karel Fialka released in 1988. It has been featured on 1 Sundown Sessions show. Featured tracks include Hey Matthew.

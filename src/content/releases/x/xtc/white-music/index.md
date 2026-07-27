@@ -1,4 +1,4 @@
-﻿---
+---
 title: "White Music"
 artist: "XTC"
 releaseDate: "1978-01-20"
@@ -11,52 +11,53 @@ genres:
   - "humorous"
 labels:
   - "Virgin"
-duration: "0:36:07"
+duration: "36:07"
 featuredInShows:
   - "15"
 shows:
   - "15"
 tracks:
-  - title: "Radios in Motion"
-    trackNumber: 1
-    duration: "02:54"
-  - title: "Cross Wires"
-    trackNumber: 2
-    duration: "02:05"
-  - title: "This Is Pop"
-    trackNumber: 3
-    duration: "02:41"
-  - title: "Do What You Do"
-    trackNumber: 4
-    duration: "01:16"
-  - title: "Statue of Liberty"
-    trackNumber: 5
-    duration: "02:54"
-  - title: "All Along the Watchtower"
-    trackNumber: 6
-    duration: "05:42"
-  - title: "Into the Atom Age"
-    trackNumber: 7
-    duration: "02:33"
-  - title: "I’ll Set Myself on Fire"
-    trackNumber: 8
-    duration: "03:02"
-  - title: "I’m Bugged"
-    trackNumber: 9
-    duration: "03:59"
-  - title: "New Town Animal in a Furnished Cage"
-    trackNumber: 10
-    duration: "01:53"
-  - title: "Spinning Top"
-    trackNumber: 11
-    duration: "02:40"
-  - title: "Neon Shuffle"
-    trackNumber: 12
-    duration: "04:28"
+  - trackNumber: 1
+    title: "Radios in Motion"
+    duration: "2:54"
+  - trackNumber: 2
+    title: "Cross Wires"
+    duration: "2:05"
+  - trackNumber: 3
+    title: "This Is Pop"
+    duration: "2:41"
+  - trackNumber: 4
+    title: "Do What You Do"
+    duration: "1:16"
+  - trackNumber: 5
+    title: "Statue of Liberty"
+    duration: "2:54"
+  - trackNumber: 6
+    title: "All Along the Watchtower"
+    duration: "5:42"
+  - trackNumber: 7
+    title: "Into the Atom Age"
+    duration: "2:33"
+  - trackNumber: 8
+    title: "I’ll Set Myself on Fire"
+    duration: "3:02"
+  - trackNumber: 9
+    title: "I’m Bugged"
+    duration: "3:59"
+  - trackNumber: 10
+    title: "New Town Animal in a Furnished Cage"
+    duration: "1:53"
+  - trackNumber: 11
+    title: "Spinning Top"
+    duration: "2:40"
+  - trackNumber: 12
+    title: "Neon Shuffle"
+    duration: "4:28"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/576e4598-dfdd-3888-bc7c-6ab01aa28a06"
+tracklist_source: "https://musicbrainz.org/release/04dc44a8-7078-3f0d-be66-7a44b3a9c08f"
+tracklist_edition: "1978 AU"
 ---
-
 ## About
 
 White Music is a release by XTC released in 1978-01-20. It has been featured on 1 Sundown Sessions show. Featured tracks include Statue Of Liberty.

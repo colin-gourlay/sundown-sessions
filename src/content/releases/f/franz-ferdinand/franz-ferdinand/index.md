@@ -8,24 +8,79 @@ for_sale: true
 release_page: true
 shows:
   - "1"
+tracks:
+  - discNumber: 1
+    trackNumber: 1
+    title: "Jacqueline"
+    duration: "3:49"
+  - discNumber: 1
+    trackNumber: 2
+    title: "Tell Her Tonight"
+    duration: "2:18"
+  - discNumber: 1
+    trackNumber: 3
+    title: "Take Me Out"
+    duration: "3:57"
+    url: "/tracks/f/franz-ferdinand/take-me-out/"
+  - discNumber: 1
+    trackNumber: 4
+    title: "The Dark of the Matinée"
+    duration: "4:03"
+  - discNumber: 1
+    trackNumber: 5
+    title: "Auf Achse"
+    duration: "4:20"
+  - discNumber: 1
+    trackNumber: 6
+    title: "Cheating on You"
+    duration: "2:37"
+  - discNumber: 1
+    trackNumber: 7
+    title: "This Fire"
+    duration: "4:15"
+  - discNumber: 1
+    trackNumber: 8
+    title: "Darts of Pleasure"
+    duration: "3:00"
+  - discNumber: 1
+    trackNumber: 9
+    title: "Michael"
+    duration: "3:21"
+  - discNumber: 1
+    trackNumber: 10
+    title: "Come on Home"
+    duration: "3:46"
+  - discNumber: 1
+    trackNumber: 11
+    title: "40′"
+    duration: "3:24"
+  - discNumber: 2
+    trackNumber: 1
+    title: "This Fffire"
+    duration: "3:35"
+  - discNumber: 2
+    trackNumber: 2
+    title: "Van Tango"
+    duration: "3:26"
+  - discNumber: 2
+    trackNumber: 3
+    title: "Shopping for Blood"
+    duration: "3:35"
+  - discNumber: 2
+    trackNumber: 4
+    title: "All for You, Sophia"
+    duration: "2:59"
+  - discNumber: 2
+    trackNumber: 5
+    title: "Words So Leisured"
+    duration: "2:20"
+duration: "54:45"
+tracklist_source: "https://musicbrainz.org/release/002b9cc5-d66f-4d78-bf44-6550401ebff5"
+tracklist_edition: "2004 XE"
 ---
 ## About
 
 Franz Ferdinand is the debut studio album by Scottish rock band Franz Ferdinand, released on 9 February 2004 through Domino Records. It won the Mercury Prize in 2004.
-
-## Tracklist
-
-1. Jacqueline (2:46)
-2. Tell Her Tonight (2:36)
-3. [Take Me Out](/tracks/f/franz-ferdinand/take-me-out/) (3:57)
-4. The Dark of the Matinée (4:23)
-5. Auf Achse (3:41)
-6. Cheating on You (2:37)
-7. This Fire (3:34)
-8. Darts of Pleasure (3:34)
-9. Michael (3:18)
-10. Eleanor Put Your Boots On (3:21)
-11. 40' (3:02)
 
 ## External Links
 

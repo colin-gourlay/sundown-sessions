@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Ghost Dance"
 artist: "Death Cult"
 releaseDate: "1996"
@@ -8,46 +8,47 @@ genres:
   - "rock"
 labels:
   - "Beggars Banquet"
-duration: "0:35:44"
+duration: "35:45"
 featuredInShows:
   - "9"
 shows:
   - "9"
 tracks:
-  - title: "Gods Zoo"
-    trackNumber: 1
-    duration: "03:27"
-  - title: "Brothers Grimm"
-    trackNumber: 2
-    duration: "03:32"
-  - title: "Ghost Dance"
-    trackNumber: 3
-    duration: "03:58"
-  - title: "Horse Nation"
-    trackNumber: 4
-    duration: "03:25"
-  - title: "Christians"
-    trackNumber: 5
-    duration: "03:48"
-  - title: "A Flower in the Desert"
-    trackNumber: 6
-    duration: "03:14"
-  - title: "Too Young"
-    trackNumber: 7
-    duration: "02:56"
-  - title: "Butterflies"
-    trackNumber: 8
-    duration: "02:47"
-  - title: "With Love"
-    trackNumber: 9
-    duration: "03:25"
-  - title: "Gods Zoo (These Times)"
-    trackNumber: 10
-    duration: "05:08"
+  - trackNumber: 1
+    title: "Gods Zoo"
+    duration: "3:27"
+  - trackNumber: 2
+    title: "Brothers Grimm"
+    duration: "3:32"
+  - trackNumber: 3
+    title: "Ghost Dance"
+    duration: "3:58"
+  - trackNumber: 4
+    title: "Horse Nation"
+    duration: "3:25"
+  - trackNumber: 5
+    title: "Christians"
+    duration: "3:49"
+  - trackNumber: 6
+    title: "A Flower in the Desert"
+    duration: "3:15"
+  - trackNumber: 7
+    title: "Too Young"
+    duration: "2:57"
+  - trackNumber: 8
+    title: "Butterflies"
+    duration: "2:48"
+  - trackNumber: 9
+    title: "With Love"
+    duration: "3:26"
+  - trackNumber: 10
+    title: "Gods Zoo (These Times)"
+    duration: "5:08"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/b33a04dc-3032-3fee-a52f-c681c0c07e8d"
+tracklist_source: "https://musicbrainz.org/release/cdf5c820-669f-4490-878e-de97b59eb561"
+tracklist_edition: "1996 US"
 ---
-
 ## About
 
 Ghost Dance is a release by Death Cult released in 1996. It has been featured on 1 Sundown Sessions show. Featured tracks include A Flower In The Desert.

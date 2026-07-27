@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The Sea Of Love"
 artist: "The Adventures"
 releaseDate: "1988"
@@ -9,43 +9,44 @@ genres:
   - "rock"
 labels:
   - "Elektra"
-duration: "0:40:56"
+duration: "40:56"
 featuredInShows:
   - "6"
 shows:
   - "6"
 tracks:
-  - title: "Drowning in the Sea of Love"
-    trackNumber: 1
-    duration: "04:37"
-  - title: "Broken Land"
-    trackNumber: 2
-    duration: "05:06"
-  - title: "You Don't Have to Cry Anymore"
-    trackNumber: 3
-    duration: "04:11"
-  - title: "The Trip to Bountiful (When the Rain Comes Down)"
-    trackNumber: 4
-    duration: "05:08"
-  - title: "Heaven Knows Which Way"
-    trackNumber: 5
-    duration: "04:35"
-  - title: "Hold Me Now"
-    trackNumber: 6
-    duration: "04:05"
-  - title: "The Sound of Summer"
-    trackNumber: 7
-    duration: "04:50"
-  - title: "When Your Heart Was Young"
-    trackNumber: 8
-    duration: "03:51"
-  - title: "One Step From Heaven"
-    trackNumber: 9
-    duration: "04:33"
+  - trackNumber: 1
+    title: "Drowning in the Sea of Love"
+    duration: "4:37"
+  - trackNumber: 2
+    title: "Broken Land"
+    duration: "5:06"
+  - trackNumber: 3
+    title: "You Don't Have to Cry Anymore"
+    duration: "4:11"
+  - trackNumber: 4
+    title: "The Trip to Bountiful (When the Rain Comes Down)"
+    duration: "5:08"
+  - trackNumber: 5
+    title: "Heaven Knows Which Way"
+    duration: "4:35"
+  - trackNumber: 6
+    title: "Hold Me Now"
+    duration: "4:05"
+  - trackNumber: 7
+    title: "The Sound of Summer"
+    duration: "4:50"
+  - trackNumber: 8
+    title: "When Your Heart Was Young"
+    duration: "3:51"
+  - trackNumber: 9
+    title: "One Step From Heaven"
+    duration: "4:33"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/66a60245-808e-3873-987b-ac1ea8a860b3"
+tracklist_source: "https://musicbrainz.org/release/0d16c7cf-5403-4e47-bcce-3fee7577fbb5"
+tracklist_edition: "1988 US"
 ---
-
 ## About
 
 The Sea Of Love is a release by The Adventures released in 1988. It has been featured on 1 Sundown Sessions show. Featured tracks include Broken Land.

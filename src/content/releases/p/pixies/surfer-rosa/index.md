@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Surfer Rosa"
 artist: "Pixies"
 releaseDate: "1988-03-21"
@@ -11,55 +11,56 @@ genres:
   - "college rock"
 labels:
   - "Grabaciones Accidentales"
-duration: "0:33:26"
+duration: "33:32"
 featuredInShows:
   - "11"
 shows:
   - "11"
 tracks:
-  - title: "Bone Machine"
-    trackNumber: 1
-    duration: "03:03"
-  - title: "Break My Body"
-    trackNumber: 2
-    duration: "02:05"
-  - title: "Something Against You"
-    trackNumber: 3
-    duration: "01:47"
-  - title: "Broken Face"
-    trackNumber: 4
-    duration: "01:30"
-  - title: "Gigantic"
-    trackNumber: 5
-    duration: "03:54"
-  - title: "River Euphrates"
-    trackNumber: 6
-    duration: "02:31"
-  - title: "Where Is My Mind?"
-    trackNumber: 7
-    duration: "03:53"
-  - title: "Cactus"
-    trackNumber: 8
-    duration: "02:16"
-  - title: "Tony’s Theme"
-    trackNumber: 9
-    duration: "01:52"
-  - title: "Oh My Golly! / [untitled]"
-    trackNumber: 10
-    duration: "02:32"
-  - title: "Vamos"
-    trackNumber: 11
-    duration: "04:20"
-  - title: "I’m Amazed"
-    trackNumber: 12
-    duration: "01:42"
-  - title: "Brick Is Red"
-    trackNumber: 13
-    duration: "02:00"
+  - trackNumber: 1
+    title: "Bone Machine"
+    duration: "3:04"
+  - trackNumber: 2
+    title: "Break My Body"
+    duration: "2:05"
+  - trackNumber: 3
+    title: "Something Against You"
+    duration: "1:48"
+  - trackNumber: 4
+    title: "Broken Face"
+    duration: "1:30"
+  - trackNumber: 5
+    title: "Gigantic"
+    duration: "3:55"
+  - trackNumber: 6
+    title: "River Euphrates"
+    duration: "2:32"
+  - trackNumber: 7
+    title: "Where Is My Mind?"
+    duration: "3:53"
+  - trackNumber: 8
+    title: "Cactus"
+    duration: "2:17"
+  - trackNumber: 9
+    title: "Tony’s Theme"
+    duration: "1:52"
+  - trackNumber: 10
+    title: "Oh My Golly!"
+    duration: "2:33"
+  - trackNumber: 11
+    title: "Vamos"
+    duration: "4:20"
+  - trackNumber: 12
+    title: "I’m Amazed"
+    duration: "1:42"
+  - trackNumber: 13
+    title: "Brick Is Red"
+    duration: "2:01"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/74e36cbc-a747-3ebf-a60e-51e656c87741"
+tracklist_source: "https://musicbrainz.org/release/379a7960-22cf-480b-b036-6722a1b6f616"
+tracklist_edition: "1988 XE"
 ---
-
 ## About
 
 Surfer Rosa is a release by Pixies released in 1988-03-21. It has been featured on 1 Sundown Sessions show. Featured tracks include Where Is My Mind?.

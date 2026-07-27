@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Love"
 artist: "Love"
 releaseDate: "2017-09-06"
@@ -13,24 +13,30 @@ featuredInShows:
 shows:
   - "6"
 tracks:
-  - title: "=LOVE"
+  - discNumber: 1
     trackNumber: 1
-    duration: "04:07"
-  - title: "記憶のどこかで"
+    title: "=LOVE"
+    duration: "4:08"
+  - discNumber: 1
     trackNumber: 2
-    duration: "04:21"
-  - title: "=LOVE (instrumental)"
+    title: "スタート！"
+    duration: "4:52"
+  - discNumber: 1
     trackNumber: 3
-    duration: "04:07"
-  - title: "記憶のどこかで (instrumental)"
+    title: "=LOVE (instrumental)"
+    duration: "4:08"
+  - discNumber: 1
     trackNumber: 4
-    duration: "04:21"
-  - title: "=LOVE Music Video"
+    title: "スタート！ (instrumental)"
+    duration: "4:46"
+  - discNumber: 2
     trackNumber: 1
+    title: "=LOVE メイキング映像"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/244e176b-b247-42c0-9363-36989c5ecae0"
+tracklist_source: "https://musicbrainz.org/release/6b12d17b-0692-4022-8a23-e7f140e7d5a2"
+tracklist_edition: "2017-09-06 JP Type B"
 ---
-
 ## About
 
 Love is a release by Love released in 2017-09-06. It has been featured on 1 Sundown Sessions show. Featured tracks include My Flash On You.

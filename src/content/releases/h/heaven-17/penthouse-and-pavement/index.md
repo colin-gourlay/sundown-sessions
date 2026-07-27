@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Penthouse And Pavement"
 artist: "Heaven 17"
 releaseDate: "1981"
@@ -11,43 +11,44 @@ genres:
   - "electronic"
 labels:
   - "Virgin"
-duration: "0:37:29"
+duration: "37:04"
 featuredInShows:
   - "5"
 shows:
   - "5"
 tracks:
-  - title: "(We Don’t Need This) Fascist Groove Thang"
-    trackNumber: 1
-    duration: "04:17"
-  - title: "Penthouse and Pavement"
-    trackNumber: 2
-    duration: "06:20"
-  - title: "Play to Win"
-    trackNumber: 3
-    duration: "03:30"
-  - title: "Soul Warfare"
-    trackNumber: 4
-    duration: "04:57"
-  - title: "Geisha Boys and Temple Girls"
-    trackNumber: 5
-    duration: "04:30"
-  - title: "Let’s All Make a Bomb"
-    trackNumber: 6
-    duration: "04:02"
-  - title: "The Height of the Fighting"
-    trackNumber: 7
-    duration: "03:00"
-  - title: "Song With No Name"
-    trackNumber: 8
-    duration: "03:33"
-  - title: "We’re Going to Live for a Very Long Time"
-    trackNumber: 9
-    duration: "03:20"
+  - trackNumber: 1
+    title: "(We Don’t Need This) Fascist Groove Thang"
+    duration: "4:16"
+  - trackNumber: 2
+    title: "Penthouse and Pavement"
+    duration: "6:20"
+  - trackNumber: 3
+    title: "Play to Win"
+    duration: "3:33"
+  - trackNumber: 4
+    title: "Soul Warfare"
+    duration: "5:01"
+  - trackNumber: 5
+    title: "Geisha Boys and Temple Girls"
+    duration: "4:32"
+  - trackNumber: 6
+    title: "Let’s All Make a Bomb"
+    duration: "4:06"
+  - trackNumber: 7
+    title: "The Height of the Fighting"
+    duration: "2:59"
+  - trackNumber: 8
+    title: "Song With No Name"
+    duration: "3:35"
+  - trackNumber: 9
+    title: "We’re Going to Live for a Very Long Time"
+    duration: "2:42"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/1353ea6d-1ec7-3171-9fe0-8a4199d74165"
+tracklist_source: "https://musicbrainz.org/release/6f343160-e212-4de1-bc53-265f5785b052"
+tracklist_edition: "1981 GB"
 ---
-
 ## About
 
 Penthouse And Pavement is a release by Heaven 17 released in 1981. It has been featured on 1 Sundown Sessions show. Featured tracks include Let's All Make A Bomb.

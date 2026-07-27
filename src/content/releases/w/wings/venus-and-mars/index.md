@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Venus And Mars"
 artist: "Wings"
 releaseDate: "1975-05-30"
@@ -9,52 +9,53 @@ genres:
   - "soft rock"
   - "offizielle charts"
   - "5+ wochen"
-duration: "0:41:56"
+duration: "41:56"
 featuredInShows:
   - "15"
 shows:
   - "15"
 tracks:
-  - title: "Venus And Mars"
-    trackNumber: 1
-    duration: "01:18"
-  - title: "Rock Show"
-    trackNumber: 2
-    duration: "05:32"
-  - title: "Love In Song"
-    trackNumber: 3
-    duration: "03:03"
-  - title: "You Gave Me The Answer"
-    trackNumber: 4
-    duration: "02:14"
-  - title: "Magneto And Titanium Man"
-    trackNumber: 5
-    duration: "03:16"
-  - title: "Letting Go"
-    trackNumber: 6
-    duration: "04:32"
-  - title: "Venus And Mars-Reprise"
-    trackNumber: 7
-    duration: "02:05"
-  - title: "Spirits Of Ancient Egypt"
-    trackNumber: 8
-    duration: "02:58"
-  - title: "Medicine Jar"
-    trackNumber: 9
-    duration: "03:37"
-  - title: "Call Me Back Again"
-    trackNumber: 10
-    duration: "04:58"
-  - title: "Listen To What The Man Said"
-    trackNumber: 11
-    duration: "04:00"
-  - title: "Treat Her Gently-Lonely Old People"
-    trackNumber: 12
-    duration: "04:23"
+  - trackNumber: 1
+    title: "Venus And Mars"
+    duration: "1:18"
+  - trackNumber: 2
+    title: "Rock Show"
+    duration: "5:32"
+  - trackNumber: 3
+    title: "Love In Song"
+    duration: "3:03"
+  - trackNumber: 4
+    title: "You Gave Me The Answer"
+    duration: "2:14"
+  - trackNumber: 5
+    title: "Magneto And Titanium Man"
+    duration: "3:16"
+  - trackNumber: 6
+    title: "Letting Go"
+    duration: "4:32"
+  - trackNumber: 7
+    title: "Venus And Mars-Reprise"
+    duration: "2:05"
+  - trackNumber: 8
+    title: "Spirits Of Ancient Egypt"
+    duration: "2:58"
+  - trackNumber: 9
+    title: "Medicine Jar"
+    duration: "3:37"
+  - trackNumber: 10
+    title: "Call Me Back Again"
+    duration: "4:58"
+  - trackNumber: 11
+    title: "Listen To What The Man Said"
+    duration: "4:00"
+  - trackNumber: 12
+    title: "Treat Her Gently-Lonely Old People"
+    duration: "4:23"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/0dd4d0ee-1a30-3d65-b11d-bb9d4e305ffa"
+tracklist_source: "https://musicbrainz.org/release/a9407c68-493a-4279-a1c6-572af07b4fca"
+tracklist_edition: "1975 None"
 ---
-
 ## About
 
 Venus And Mars is a release by Wings released in 1975-05-30. It has been featured on 1 Sundown Sessions show. Featured tracks include Crossroads.

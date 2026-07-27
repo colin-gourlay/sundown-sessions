@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Dino: The Essential Dean Martin"
 artist: "Dean Martin"
 releaseDate: "2004-01-06"
@@ -12,106 +12,107 @@ genres:
 labels:
   - "Capitol Records"
   - "EMI"
-duration: "1:18:13"
+duration: "1:18:15"
 featuredInShows:
   - "10"
 shows:
   - "10"
 tracks:
-  - title: "Ain’t That a Kick in the Head"
-    trackNumber: 1
-    duration: "02:24"
-  - title: "That’s Amore"
-    trackNumber: 2
-    duration: "03:07"
-  - title: "Memories Are Made of This"
-    trackNumber: 3
-    duration: "02:16"
-  - title: "Just in Time"
-    trackNumber: 4
-    duration: "02:13"
-  - title: "Sway"
-    trackNumber: 5
-    duration: "02:42"
-  - title: "I’d Cry Like a Baby"
-    trackNumber: 6
-    duration: "02:35"
-  - title: "Volare (Nel blu dipinto di blu)"
-    trackNumber: 7
-    duration: "02:59"
-  - title: "Under the Bridges of Paris"
-    trackNumber: 8
-    duration: "02:46"
-  - title: "Love Me, Love Me"
-    trackNumber: 9
-    duration: "02:34"
-  - title: "If"
-    trackNumber: 10
-    duration: "02:46"
-  - title: "Mambo Italiano"
-    trackNumber: 11
-    duration: "02:19"
-  - title: "Let Me Go Lover"
-    trackNumber: 12
-    duration: "03:00"
-  - title: "Standing on the Corner"
-    trackNumber: 13
-    duration: "02:47"
-  - title: "You Belong to Me"
-    trackNumber: 14
-    duration: "03:02"
-  - title: "Powder Your Face With Sunshine (Smile! Smile! Smile!)"
-    trackNumber: 15
-    duration: "02:32"
-  - title: "Innamorata (Sweetheart)"
-    trackNumber: 16
-    duration: "02:24"
-  - title: "I’ll Always Love You (Day After Day)"
-    trackNumber: 17
-    duration: "02:33"
-  - title: "Kiss"
-    trackNumber: 18
-    duration: "02:22"
-  - title: "You’re Nobody ’Til Somebody Loves You"
-    trackNumber: 19
-    duration: "02:12"
-  - title: "Return to Me (Ritorna‐Me)"
-    trackNumber: 20
-    duration: "02:23"
-  - title: "The Door Is Still Open (to My Heart)"
-    trackNumber: 21
-    duration: "02:53"
-  - title: "Houston"
-    trackNumber: 22
-    duration: "02:41"
-  - title: "Send Me the Pillow You Dream On"
-    trackNumber: 23
-    duration: "02:29"
-  - title: "Everybody Loves Somebody"
-    trackNumber: 24
-    duration: "02:45"
-  - title: "In the Chapel in the Moonlight"
-    trackNumber: 25
-    duration: "02:32"
-  - title: "I Will"
-    trackNumber: 26
-    duration: "02:22"
-  - title: "Little Old Wine Drinker, Me"
-    trackNumber: 27
-    duration: "02:48"
-  - title: "Somewhere There’s a Someone"
-    trackNumber: 28
-    duration: "02:14"
-  - title: "In the Misty Moonlight"
-    trackNumber: 29
-    duration: "02:44"
-  - title: "Gentle on My Mind"
-    trackNumber: 30
-    duration: "02:35"
+  - trackNumber: 1
+    title: "Ain’t That a Kick in the Head"
+    duration: "2:25"
+  - trackNumber: 2
+    title: "That’s Amore"
+    duration: "3:08"
+  - trackNumber: 3
+    title: "Memories Are Made of This"
+    duration: "2:16"
+  - trackNumber: 4
+    title: "Just in Time"
+    duration: "2:13"
+  - trackNumber: 5
+    title: "Sway"
+    duration: "2:42"
+  - trackNumber: 6
+    title: "I’d Cry Like a Baby"
+    duration: "2:35"
+  - trackNumber: 7
+    title: "Volare (Nel blu dipinto di blu)"
+    duration: "3:00"
+  - trackNumber: 8
+    title: "Under the Bridges of Paris"
+    duration: "2:46"
+  - trackNumber: 9
+    title: "Love Me, Love Me"
+    duration: "2:34"
+  - trackNumber: 10
+    title: "If"
+    duration: "2:47"
+  - trackNumber: 11
+    title: "Mambo Italiano"
+    duration: "2:19"
+  - trackNumber: 12
+    title: "Let Me Go Lover"
+    duration: "3:01"
+  - trackNumber: 13
+    title: "Standing on the Corner"
+    duration: "2:47"
+  - trackNumber: 14
+    title: "You Belong to Me"
+    duration: "3:03"
+  - trackNumber: 15
+    title: "Powder Your Face With Sunshine (Smile! Smile! Smile!)"
+    duration: "2:32"
+  - trackNumber: 16
+    title: "Innamorata (Sweetheart)"
+    duration: "2:24"
+  - trackNumber: 17
+    title: "I’ll Always Love You (Day After Day)"
+    duration: "2:34"
+  - trackNumber: 18
+    title: "Kiss"
+    duration: "2:23"
+  - trackNumber: 19
+    title: "You’re Nobody ’Til Somebody Loves You"
+    duration: "2:13"
+  - trackNumber: 20
+    title: "Return to Me (Ritorna‐Me)"
+    duration: "2:24"
+  - trackNumber: 21
+    title: "The Door Is Still Open (to My Heart)"
+    duration: "2:54"
+  - trackNumber: 22
+    title: "Houston"
+    duration: "2:42"
+  - trackNumber: 23
+    title: "Send Me the Pillow You Dream On"
+    duration: "2:30"
+  - trackNumber: 24
+    title: "Everybody Loves Somebody"
+    duration: "2:45"
+  - trackNumber: 25
+    title: "In the Chapel in the Moonlight"
+    duration: "2:32"
+  - trackNumber: 26
+    title: "I Will"
+    duration: "2:22"
+  - trackNumber: 27
+    title: "Little Old Wine Drinker, Me"
+    duration: "2:49"
+  - trackNumber: 28
+    title: "Somewhere There’s a Someone"
+    duration: "2:15"
+  - trackNumber: 29
+    title: "In the Misty Moonlight"
+    duration: "2:44"
+  - trackNumber: 30
+    title: "Gentle on My Mind"
+    duration: "2:36"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/aa057e81-3c57-3907-87d1-aadb872c3181"
+tracklist_source: "https://musicbrainz.org/release/2bd5d63a-f4de-438b-81f9-690ef9db7e9a"
+tracklist_edition: "2004 AU"
 ---
-
 ## About
 
 Dino: The Essential Dean Martin is a release by Dean Martin released in 2004-01-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Return To Me.

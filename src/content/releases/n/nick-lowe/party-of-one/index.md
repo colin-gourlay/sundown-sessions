@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Party Of One"
 artist: "Nick Lowe"
 releaseDate: "1990"
@@ -11,49 +11,50 @@ genres:
   - "pop rock"
 labels:
   - "Reprise Records"
-duration: "0:36:01"
+duration: "36:01"
 featuredInShows:
   - "8"
 shows:
   - "8"
 tracks:
-  - title: "You Got the Look I Like"
-    trackNumber: 1
-    duration: "03:23"
-  - title: "(I Want to Build a) Jumbo Ark"
-    trackNumber: 2
-    duration: "03:31"
-  - title: "Gai‐Gin Man"
-    trackNumber: 3
-    duration: "02:47"
-  - title: "Who Was That Man?"
-    trackNumber: 4
-    duration: "03:05"
-  - title: "What’s Shakin’ on the Hill"
-    trackNumber: 5
-    duration: "04:02"
-  - title: "Shting‐Shtang"
-    trackNumber: 6
-    duration: "03:22"
-  - title: "All Men Are Liars"
-    trackNumber: 7
-    duration: "03:25"
-  - title: "Rocky Road"
-    trackNumber: 8
-    duration: "03:25"
-  - title: "Refrigerator White"
-    trackNumber: 9
-    duration: "03:07"
-  - title: "I Don’t Know Why You Keep Me On"
-    trackNumber: 10
-    duration: "03:18"
-  - title: "Honey Gun"
-    trackNumber: 11
-    duration: "02:31"
+  - trackNumber: 1
+    title: "You Got the Look I Like"
+    duration: "3:24"
+  - trackNumber: 2
+    title: "(I Want to Build a) Jumbo Ark"
+    duration: "3:32"
+  - trackNumber: 3
+    title: "Gai‐Gin Man"
+    duration: "2:47"
+  - trackNumber: 4
+    title: "Who Was That Man?"
+    duration: "3:05"
+  - trackNumber: 5
+    title: "What’s Shakin’ on the Hill"
+    duration: "4:02"
+  - trackNumber: 6
+    title: "Shting‐Shtang"
+    duration: "3:23"
+  - trackNumber: 7
+    title: "All Men Are Liars"
+    duration: "3:26"
+  - trackNumber: 8
+    title: "Rocky Road"
+    duration: "3:25"
+  - trackNumber: 9
+    title: "Refrigerator White"
+    duration: "3:08"
+  - trackNumber: 10
+    title: "I Don’t Know Why You Keep Me On"
+    duration: "3:18"
+  - trackNumber: 11
+    title: "Honey Gun"
+    duration: "2:31"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/6be32cf4-f46f-35f7-9a4b-8d218137a170"
+tracklist_source: "https://musicbrainz.org/release/c3a2c636-cd9c-366a-87de-479f6ed66451"
+tracklist_edition: "1990 US"
 ---
-
 ## About
 
 Party Of One is a release by Nick Lowe released in 1990. It has been featured on 1 Sundown Sessions show. Featured tracks include You Got The Look I Like.

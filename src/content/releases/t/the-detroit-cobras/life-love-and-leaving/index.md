@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Life, Love And Leaving"
 artist: "The Detroit Cobras"
 releaseDate: "2001-04"
@@ -9,7 +9,7 @@ genres:
   - "rock"
 labels:
   - "Sympathy for the Record Industry"
-duration: "0:29:47"
+duration: "29:48"
 featuredInShows:
   - "1"
   - "4"
@@ -17,52 +17,53 @@ shows:
   - "1"
   - "4"
 tracks:
-  - title: "Hey Sailor"
-    trackNumber: 1
-    duration: "02:26"
-  - title: "He Did It"
-    trackNumber: 2
-    duration: "02:22"
-  - title: "Find Me a Home"
-    trackNumber: 3
-    duration: "01:31"
-  - title: "Oh My Lover"
-    trackNumber: 4
-    duration: "01:34"
-  - title: "Cry On"
-    trackNumber: 5
-    duration: "02:15"
-  - title: "Stupidity"
-    trackNumber: 6
-    duration: "01:56"
-  - title: "Bye Bye Baby"
-    trackNumber: 7
-    duration: "02:31"
-  - title: "Boss Lady"
-    trackNumber: 8
-    duration: "02:09"
-  - title: "Laughing at You"
-    trackNumber: 9
-    duration: "01:35"
-  - title: "Can’t Miss Nothing"
-    trackNumber: 10
-    duration: "01:54"
-  - title: "Right Around the Corner"
-    trackNumber: 11
-    duration: "02:27"
-  - title: "Won’t You Dance With Me"
-    trackNumber: 12
-    duration: "02:14"
-  - title: "Let’s Forget About the Past"
-    trackNumber: 13
-    duration: "02:46"
-  - title: "Shout Bama Lama"
-    trackNumber: 14
-    duration: "02:01"
+  - trackNumber: 1
+    title: "Hey Sailor"
+    duration: "2:26"
+  - trackNumber: 2
+    title: "He Did It"
+    duration: "2:22"
+  - trackNumber: 3
+    title: "Find Me a Home"
+    duration: "1:32"
+  - trackNumber: 4
+    title: "Oh My Lover"
+    duration: "1:35"
+  - trackNumber: 5
+    title: "Cry On"
+    duration: "2:16"
+  - trackNumber: 6
+    title: "Stupidity"
+    duration: "1:56"
+  - trackNumber: 7
+    title: "Bye Bye Baby"
+    duration: "2:32"
+  - trackNumber: 8
+    title: "Boss Lady"
+    duration: "2:09"
+  - trackNumber: 9
+    title: "Laughing at You"
+    duration: "1:35"
+  - trackNumber: 10
+    title: "Can’t Miss Nothing"
+    duration: "1:55"
+  - trackNumber: 11
+    title: "Right Around the Corner"
+    duration: "2:27"
+  - trackNumber: 12
+    title: "Won’t You Dance With Me"
+    duration: "2:15"
+  - trackNumber: 13
+    title: "Let’s Forget About the Past"
+    duration: "2:47"
+  - trackNumber: 14
+    title: "Shout Bama Lama"
+    duration: "2:01"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/25c00fdf-ddad-3cdd-bd76-11a04813dc9f"
+tracklist_source: "https://musicbrainz.org/release/a22a7060-4ef5-4d1b-872d-b13d152ecd68"
+tracklist_edition: "2001-04 US"
 ---
-
 ## About
 
 Life, Love And Leaving is a release by The Detroit Cobras released in 2001-04. It has been featured on 2 Sundown Sessions shows. Featured tracks include Cry On, Shout Bamalama.

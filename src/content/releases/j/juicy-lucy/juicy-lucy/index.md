@@ -1,56 +1,57 @@
-﻿---
+---
 title: "Juicy Lucy"
 artist: "Juicy Lucy"
 releaseDate: "1995"
 releaseType: "Album"
 labels:
   - "Buzz Records"
-duration: "0:56:29"
+duration: "56:29"
 featuredInShows:
   - "12"
 shows:
   - "12"
 tracks:
-  - title: "She Makes Me Go Down"
-    trackNumber: 1
-    duration: "04:30"
-  - title: "Please Please"
-    trackNumber: 2
-    duration: "05:05"
-  - title: "Mom's Apple Pie"
-    trackNumber: 3
-    duration: "03:52"
-  - title: "Come for Me Lady"
-    trackNumber: 4
-    duration: "05:29"
-  - title: "Noise Noise"
-    trackNumber: 5
-    duration: "05:01"
-  - title: "Revolution"
-    trackNumber: 6
-    duration: "04:36"
-  - title: "She Drives Me Crazy"
-    trackNumber: 7
-    duration: "04:35"
-  - title: "My Inspiration"
-    trackNumber: 8
-    duration: "04:34"
-  - title: "Junky for Your Love"
-    trackNumber: 9
-    duration: "04:53"
-  - title: "Sugar Sweet"
-    trackNumber: 10
-    duration: "04:08"
-  - title: "Slippin' Through the Night"
-    trackNumber: 11
-    duration: "04:28"
-  - title: "Wish You Were Here"
-    trackNumber: 12
-    duration: "05:18"
+  - trackNumber: 1
+    title: "She Makes Me Go Down"
+    duration: "4:30"
+  - trackNumber: 2
+    title: "Please Please"
+    duration: "5:05"
+  - trackNumber: 3
+    title: "Mom's Apple Pie"
+    duration: "3:52"
+  - trackNumber: 4
+    title: "Come for Me Lady"
+    duration: "5:29"
+  - trackNumber: 5
+    title: "Noise Noise"
+    duration: "5:01"
+  - trackNumber: 6
+    title: "Revolution"
+    duration: "4:36"
+  - trackNumber: 7
+    title: "She Drives Me Crazy"
+    duration: "4:35"
+  - trackNumber: 8
+    title: "My Inspiration"
+    duration: "4:34"
+  - trackNumber: 9
+    title: "Junky for Your Love"
+    duration: "4:53"
+  - trackNumber: 10
+    title: "Sugar Sweet"
+    duration: "4:08"
+  - trackNumber: 11
+    title: "Slippin' Through the Night"
+    duration: "4:28"
+  - trackNumber: 12
+    title: "Wish You Were Here"
+    duration: "5:18"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/faa011fb-3014-4b48-bc18-52c50b5501af"
+tracklist_source: "https://musicbrainz.org/release/a9b01cf8-d57f-4301-8ed9-966721c712d8"
+tracklist_edition: "1995 US"
 ---
-
 ## About
 
 Juicy Lucy is a release by Juicy Lucy released in 1995. It has been featured on 1 Sundown Sessions show. Featured tracks include Mississippi Woman.

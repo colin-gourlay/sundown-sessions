@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Runaway: The Very Best Of Del Shannon"
 artist: "Del Shannon"
 releaseDate: "2002-01-22"
@@ -11,100 +11,101 @@ featuredInShows:
 shows:
   - "1"
 tracks:
-  - title: "Runaway"
-    trackNumber: 1
-    duration: "02:19"
-  - title: "From Me to You"
-    trackNumber: 2
-    duration: "01:56"
-  - title: "Little Town Flirt"
-    trackNumber: 3
-    duration: "02:49"
-  - title: "Jody"
-    trackNumber: 4
-    duration: "02:25"
-  - title: "I Go to Pieces"
-    trackNumber: 5
-    duration: "02:28"
-  - title: "Happiness"
-    trackNumber: 6
-    duration: "02:22"
-  - title: "Do You Wanna Dance?"
-    trackNumber: 7
-    duration: "02:32"
-  - title: "(Marie’s the Name) His Latest Flame"
-    trackNumber: 8
-    duration: "02:22"
-  - title: "Hats Off to Larry"
-    trackNumber: 9
-    duration: "02:02"
-  - title: "Go Away Little Girl"
-    trackNumber: 10
-    duration: "02:19"
-  - title: "Ginny in the Mirror"
-    trackNumber: 11
-    duration: "02:10"
-  - title: "Don’t Gild the Lily, Lily"
-    trackNumber: 12
-    duration: "02:20"
-  - title: "Keep Searchin’ (We’ll Follow the Sun)"
-    trackNumber: 13
-    duration: "02:09"
-  - title: "Kelly"
-    trackNumber: 14
-    duration: "02:37"
-  - title: "Runaround Sue"
-    trackNumber: 15
-    duration: "02:38"
-  - title: "Stranger in Town"
-    trackNumber: 16
-    duration: "02:31"
-  - title: "Running Scared"
-    trackNumber: 17
-    duration: "02:17"
-  - title: "Hey Little Girl"
-    trackNumber: 18
-    duration: "02:31"
-  - title: "The Swiss Maid"
-    trackNumber: 19
-    duration: "02:07"
-  - title: "Handy Man"
-    trackNumber: 20
-    duration: "02:14"
-  - title: "Dream Baby"
-    trackNumber: 21
-    duration: "02:34"
-  - title: "Two Kinds of Teardrops"
-    trackNumber: 22
-    duration: "02:31"
-  - title: "That’s the Way Love Is"
-    trackNumber: 23
-    duration: "02:27"
-  - title: "So Long Baby"
-    trackNumber: 24
-    duration: "02:02"
-  - title: "Two Silhouettes"
-    trackNumber: 25
-    duration: "02:20"
-  - title: "Misery"
-    trackNumber: 26
-    duration: "01:59"
-  - title: "I Won’t Be There"
-    trackNumber: 27
-    duration: "02:04"
-  - title: "Lies"
-    trackNumber: 28
-    duration: "02:39"
-  - title: "Cry Myself to Sleep"
-    trackNumber: 29
-    duration: "02:22"
-  - title: "Runaway (alternate take)"
-    trackNumber: 30
-    duration: "02:17"
+  - trackNumber: 1
+    title: "Runaway"
+    duration: "2:19"
+  - trackNumber: 2
+    title: "From Me to You"
+    duration: "1:56"
+  - trackNumber: 3
+    title: "Little Town Flirt"
+    duration: "2:49"
+  - trackNumber: 4
+    title: "Jody"
+    duration: "2:25"
+  - trackNumber: 5
+    title: "I Go to Pieces"
+    duration: "2:28"
+  - trackNumber: 6
+    title: "Happiness"
+    duration: "2:22"
+  - trackNumber: 7
+    title: "Do You Wanna Dance?"
+    duration: "2:32"
+  - trackNumber: 8
+    title: "(Marie’s the Name) His Latest Flame"
+    duration: "2:22"
+  - trackNumber: 9
+    title: "Hats Off to Larry"
+    duration: "2:02"
+  - trackNumber: 10
+    title: "Go Away Little Girl"
+    duration: "2:19"
+  - trackNumber: 11
+    title: "Ginny in the Mirror"
+    duration: "2:10"
+  - trackNumber: 12
+    title: "Don’t Gild the Lily, Lily"
+    duration: "2:20"
+  - trackNumber: 13
+    title: "Keep Searchin’ (We’ll Follow the Sun)"
+    duration: "2:09"
+  - trackNumber: 14
+    title: "Kelly"
+    duration: "2:37"
+  - trackNumber: 15
+    title: "Runaround Sue"
+    duration: "2:38"
+  - trackNumber: 16
+    title: "Stranger in Town"
+    duration: "2:31"
+  - trackNumber: 17
+    title: "Running Scared"
+    duration: "2:17"
+  - trackNumber: 18
+    title: "Hey Little Girl"
+    duration: "2:31"
+  - trackNumber: 19
+    title: "The Swiss Maid"
+    duration: "2:07"
+  - trackNumber: 20
+    title: "Handy Man"
+    duration: "2:14"
+  - trackNumber: 21
+    title: "Dream Baby"
+    duration: "2:34"
+  - trackNumber: 22
+    title: "Two Kinds of Teardrops"
+    duration: "2:31"
+  - trackNumber: 23
+    title: "That’s the Way Love Is"
+    duration: "2:27"
+  - trackNumber: 24
+    title: "So Long Baby"
+    duration: "2:02"
+  - trackNumber: 25
+    title: "Two Silhouettes"
+    duration: "2:20"
+  - trackNumber: 26
+    title: "Misery"
+    duration: "1:59"
+  - trackNumber: 27
+    title: "I Won’t Be There"
+    duration: "2:04"
+  - trackNumber: 28
+    title: "Lies"
+    duration: "2:39"
+  - trackNumber: 29
+    title: "Cry Myself to Sleep"
+    duration: "2:22"
+  - trackNumber: 30
+    title: "Runaway (alternate take)"
+    duration: "2:17"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/e10752dd-248d-3d20-953e-1f108d15d48e"
+tracklist_source: "https://musicbrainz.org/release/5149fa80-bb83-4c38-9096-c8645659da72"
+tracklist_edition: "2002-01-22 US"
 ---
-
 ## About
 
 Runaway: The Very Best Of Del Shannon is a release by Del Shannon released in 2002-01-22. It has been featured on 1 Sundown Sessions show. Featured tracks include Runaway.

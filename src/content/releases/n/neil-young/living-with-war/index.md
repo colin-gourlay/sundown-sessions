@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Living with War"
 artist: "Neil Young"
 releaseDate: "2006-05-02"
@@ -11,43 +11,47 @@ genres:
   - "classic pop and rock"
 labels:
   - "Reprise Records"
-duration: "0:38:56"
+duration: "41:53"
 featuredInShows:
   - "10"
 shows:
   - "10"
 tracks:
-  - title: "After the Garden"
-    trackNumber: 1
-    duration: "03:23"
-  - title: "Living With War"
-    trackNumber: 2
-    duration: "05:04"
-  - title: "The Restless Consumer"
-    trackNumber: 3
-    duration: "05:47"
-  - title: "Shock and Awe"
-    trackNumber: 4
-    duration: "04:52"
-  - title: "Families"
-    trackNumber: 5
-    duration: "02:25"
-  - title: "Flags of Freedom"
-    trackNumber: 6
-    duration: "03:42"
-  - title: "Let's Impeach the President"
-    trackNumber: 7
-    duration: "05:10"
-  - title: "Lookin' for a Leader"
-    trackNumber: 8
-    duration: "04:03"
-  - title: "Roger and Out"
-    trackNumber: 9
-    duration: "04:25"
+  - trackNumber: 1
+    title: "After the Garden"
+    duration: "3:24"
+  - trackNumber: 2
+    title: "Living With War"
+    duration: "5:05"
+  - trackNumber: 3
+    title: "The Restless Consumer"
+    duration: "5:48"
+  - trackNumber: 4
+    title: "Shock and Awe"
+    duration: "4:53"
+  - trackNumber: 5
+    title: "Families"
+    duration: "2:26"
+  - trackNumber: 6
+    title: "Flags of Freedom"
+    duration: "3:42"
+  - trackNumber: 7
+    title: "Let's Impeach the President"
+    duration: "5:10"
+  - trackNumber: 8
+    title: "Lookin' for a Leader"
+    duration: "4:03"
+  - trackNumber: 9
+    title: "Roger and Out"
+    duration: "4:25"
+  - trackNumber: 10
+    title: "America the Beautiful"
+    duration: "2:57"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/216257f0-a33b-3b29-b7ff-5d133fef3691"
+tracklist_source: "https://musicbrainz.org/release/0d1a8522-c109-43fa-9d98-7ec0c4cf8496"
+tracklist_edition: "2006 AU"
 ---
-
 ## About
 
 Living with War is a release by Neil Young released in 2006-05-02. It has been featured on 1 Sundown Sessions show. Featured tracks include Heart Of Gold.

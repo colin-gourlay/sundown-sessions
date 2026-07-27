@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The North Star"
 artist: "Roddy Frame"
 releaseDate: "1998-09-21"
@@ -8,46 +8,47 @@ genres:
   - "rock"
 labels:
   - "Independiente"
-duration: "0:37:35"
+duration: "37:35"
 featuredInShows:
   - "4"
 shows:
   - "4"
 tracks:
-  - title: "Back to the One"
-    trackNumber: 1
-    duration: "04:01"
-  - title: "The North Star"
-    trackNumber: 2
-    duration: "04:04"
-  - title: "Here Comes the Ocean"
-    trackNumber: 3
-    duration: "03:23"
-  - title: "River of Brightness"
-    trackNumber: 4
-    duration: "04:22"
-  - title: "Strings"
-    trackNumber: 5
-    duration: "04:10"
-  - title: "Bigger Brighter Better"
-    trackNumber: 6
-    duration: "03:27"
-  - title: "Autumn Flower"
-    trackNumber: 7
-    duration: "04:17"
-  - title: "Reason for Living"
-    trackNumber: 8
-    duration: "03:16"
-  - title: "Sister Shadow"
-    trackNumber: 9
-    duration: "03:38"
-  - title: "Hymn to Grace"
-    trackNumber: 10
-    duration: "02:54"
+  - trackNumber: 1
+    title: "Back to the One"
+    duration: "4:02"
+  - trackNumber: 2
+    title: "The North Star"
+    duration: "4:04"
+  - trackNumber: 3
+    title: "Here Comes the Ocean"
+    duration: "3:23"
+  - trackNumber: 4
+    title: "River of Brightness"
+    duration: "4:23"
+  - trackNumber: 5
+    title: "Strings"
+    duration: "4:10"
+  - trackNumber: 6
+    title: "Bigger Brighter Better"
+    duration: "3:27"
+  - trackNumber: 7
+    title: "Autumn Flower"
+    duration: "4:17"
+  - trackNumber: 8
+    title: "Reason for Living"
+    duration: "3:17"
+  - trackNumber: 9
+    title: "Sister Shadow"
+    duration: "3:38"
+  - trackNumber: 10
+    title: "Hymn to Grace"
+    duration: "2:54"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/909ff44f-97cd-3f0d-93f4-4b352032dff1"
+tracklist_source: "https://musicbrainz.org/release/45ad4dea-446d-4e92-a414-d03028a6a8ba"
+tracklist_edition: "1998-09-21 GB"
 ---
-
 ## About
 
 The North Star is a release by Roddy Frame released in 1998-09-21. It has been featured on 1 Sundown Sessions show. Featured tracks include Reason For Living.

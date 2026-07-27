@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The Cars"
 artist: "The Cars"
 releaseDate: "1978-06-06"
@@ -11,43 +11,44 @@ genres:
   - "bittersweet"
 labels:
   - "Elektra"
-duration: "0:35:11"
+duration: "35:11"
 featuredInShows:
   - "11"
 shows:
   - "11"
 tracks:
-  - title: "Good Times Roll"
-    trackNumber: 1
-    duration: "03:45"
-  - title: "My Best Friend’s Girl"
-    trackNumber: 2
-    duration: "03:43"
-  - title: "Just What I Needed"
-    trackNumber: 3
-    duration: "03:43"
-  - title: "I’m in Touch With Your World"
-    trackNumber: 4
-    duration: "03:31"
-  - title: "Don’t Cha Stop"
-    trackNumber: 5
-    duration: "03:02"
-  - title: "You’re All I’ve Got Tonight"
-    trackNumber: 6
-    duration: "04:13"
-  - title: "Bye Bye Love"
-    trackNumber: 7
-    duration: "04:13"
-  - title: "Moving in Stereo"
-    trackNumber: 8
-    duration: "04:41"
-  - title: "All Mixed Up"
-    trackNumber: 9
-    duration: "04:17"
+  - trackNumber: 1
+    title: "Good Times Roll"
+    duration: "3:45"
+  - trackNumber: 2
+    title: "My Best Friend’s Girl"
+    duration: "3:44"
+  - trackNumber: 3
+    title: "Just What I Needed"
+    duration: "3:43"
+  - trackNumber: 4
+    title: "I’m in Touch With Your World"
+    duration: "3:31"
+  - trackNumber: 5
+    title: "Don’t Cha Stop"
+    duration: "3:03"
+  - trackNumber: 6
+    title: "You’re All I’ve Got Tonight"
+    duration: "4:14"
+  - trackNumber: 7
+    title: "Bye Bye Love"
+    duration: "4:13"
+  - trackNumber: 8
+    title: "Moving in Stereo"
+    duration: "4:41"
+  - trackNumber: 9
+    title: "All Mixed Up"
+    duration: "4:17"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/36172f3d-9b55-37f1-9fd4-0cbd2f3af0ce"
+tracklist_source: "https://musicbrainz.org/release/4484d5e7-f8ea-4b59-82cb-ab55a287d63f"
+tracklist_edition: "1978 GB"
 ---
-
 ## About
 
 The Cars is a release by The Cars released in 1978-06-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Just What I Needed.

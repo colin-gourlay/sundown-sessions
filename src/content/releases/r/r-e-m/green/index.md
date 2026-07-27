@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Green"
 artist: "R.E.M."
 releaseDate: "1988-11-07"
@@ -11,49 +11,50 @@ genres:
   - "modern rock"
 labels:
   - "Warner Bros. Records"
-duration: "0:41:00"
+duration: "41:02"
 featuredInShows:
   - "14"
 shows:
   - "14"
 tracks:
-  - title: "Pop Song 89"
-    trackNumber: 1
-    duration: "03:04"
-  - title: "Get Up"
-    trackNumber: 2
-    duration: "02:41"
-  - title: "You Are the Everything"
-    trackNumber: 3
-    duration: "03:44"
-  - title: "Stand"
-    trackNumber: 4
-    duration: "03:12"
-  - title: "World Leader Pretend"
-    trackNumber: 5
-    duration: "04:19"
-  - title: "The Wrong Child"
-    trackNumber: 6
-    duration: "03:38"
-  - title: "Orange Crush"
-    trackNumber: 7
-    duration: "03:51"
-  - title: "Turn You Inside‐Out"
-    trackNumber: 8
-    duration: "04:17"
-  - title: "Hairshirt"
-    trackNumber: 9
-    duration: "03:55"
-  - title: "I Remember California"
-    trackNumber: 10
-    duration: "05:03"
-  - title: "[untitled]"
-    trackNumber: 11
-    duration: "03:09"
+  - trackNumber: 1
+    title: "Pop Song 89"
+    duration: "3:05"
+  - trackNumber: 2
+    title: "Get Up"
+    duration: "2:42"
+  - trackNumber: 3
+    title: "You Are the Everything"
+    duration: "3:45"
+  - trackNumber: 4
+    title: "Stand"
+    duration: "3:13"
+  - trackNumber: 5
+    title: "World Leader Pretend"
+    duration: "4:20"
+  - trackNumber: 6
+    title: "The Wrong Child"
+    duration: "3:38"
+  - trackNumber: 7
+    title: "Orange Crush"
+    duration: "3:52"
+  - trackNumber: 8
+    title: "Turn You Inside‐Out"
+    duration: "4:17"
+  - trackNumber: 9
+    title: "Hairshirt"
+    duration: "3:56"
+  - trackNumber: 10
+    title: "I Remember California"
+    duration: "5:04"
+  - trackNumber: 11
+    title: "[untitled]"
+    duration: "3:10"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/16a9cef3-b470-3ae1-bf10-cc04232d3e21"
+tracklist_source: "https://musicbrainz.org/release/7a8cb95b-fb1f-4c6e-8a9a-556ea37649fc"
+tracklist_edition: "1988 XE price code France WE 851"
 ---
-
 ## About
 
 Green is a release by R.E.M. released in 1988-11-07. It has been featured on 1 Sundown Sessions show. Featured tracks include Pop Song 89.

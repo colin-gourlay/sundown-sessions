@@ -1,4 +1,4 @@
-﻿---
+---
 title: "My Aim Is True"
 artist: "Elvis Costello"
 releaseDate: "1977-07-22"
@@ -11,52 +11,53 @@ genres:
   - "rock & roll"
 labels:
   - "Stiff Records"
-duration: "0:32:53"
+duration: "32:55"
 featuredInShows:
   - "10"
 shows:
   - "10"
 tracks:
-  - title: "Welcome to the Working Week"
-    trackNumber: 1
-    duration: "01:23"
-  - title: "Miracle Man"
-    trackNumber: 2
-    duration: "03:32"
-  - title: "No Dancing"
-    trackNumber: 3
-    duration: "02:42"
-  - title: "Blame It on Cain"
-    trackNumber: 4
-    duration: "02:53"
-  - title: "Alison"
-    trackNumber: 5
-    duration: "03:26"
-  - title: "Sneaky Feelings"
-    trackNumber: 6
-    duration: "02:10"
-  - title: "(The Angels Wanna Wear My) Red Shoes"
-    trackNumber: 7
-    duration: "02:50"
-  - title: "Less Than Zero"
-    trackNumber: 8
-    duration: "03:15"
-  - title: "Mystery Dance"
-    trackNumber: 9
-    duration: "01:38"
-  - title: "Pay It Back"
-    trackNumber: 10
-    duration: "02:35"
-  - title: "I’m Not Angry"
-    trackNumber: 11
-    duration: "03:01"
-  - title: "Waiting for the End of the World"
-    trackNumber: 12
-    duration: "03:22"
+  - trackNumber: 1
+    title: "Welcome to the Working Week"
+    duration: "1:24"
+  - trackNumber: 2
+    title: "Miracle Man"
+    duration: "3:33"
+  - trackNumber: 3
+    title: "No Dancing"
+    duration: "2:43"
+  - trackNumber: 4
+    title: "Blame It on Cain"
+    duration: "2:53"
+  - trackNumber: 5
+    title: "Alison"
+    duration: "3:26"
+  - trackNumber: 6
+    title: "Sneaky Feelings"
+    duration: "2:11"
+  - trackNumber: 7
+    title: "(The Angels Wanna Wear My) Red Shoes"
+    duration: "2:50"
+  - trackNumber: 8
+    title: "Less Than Zero"
+    duration: "3:16"
+  - trackNumber: 9
+    title: "Mystery Dance"
+    duration: "1:38"
+  - trackNumber: 10
+    title: "Pay It Back"
+    duration: "2:36"
+  - trackNumber: 11
+    title: "I’m Not Angry"
+    duration: "3:02"
+  - trackNumber: 12
+    title: "Waiting for the End of the World"
+    duration: "3:23"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/c7a4740f-2729-3895-8498-08c521886a95"
+tracklist_source: "https://musicbrainz.org/release/a1566ca6-f80c-47eb-a203-75f2ea4d80dc"
+tracklist_edition: "1977-07-22 GB"
 ---
-
 ## About
 
 My Aim Is True is a release by Elvis Costello released in 1977-07-22. It has been featured on 1 Sundown Sessions show. Featured tracks include Watching The Detectives.

@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Killing Kind"
 artist: "Killing Kind"
 releaseDate: "2023-01-27"
@@ -6,40 +6,41 @@ releaseType: "Album"
 labels:
   - "Aenaos Records"
   - "Viskningar och vrål"
-duration: "0:33:33"
+duration: "33:35"
 featuredInShows:
   - "19"
 shows:
   - "19"
 tracks:
-  - title: "This Beautiful World"
-    trackNumber: 1
-    duration: "05:04"
-  - title: "When You Die"
-    trackNumber: 2
-    duration: "03:59"
-  - title: "Build Up, Tear Down"
-    trackNumber: 3
-    duration: "04:21"
-  - title: "Killing Kind"
-    trackNumber: 4
-    duration: "04:05"
-  - title: "The Silence"
-    trackNumber: 5
-    duration: "04:12"
-  - title: "The Game Nobody Wins"
-    trackNumber: 6
-    duration: "03:47"
-  - title: "Silver Lining"
-    trackNumber: 7
-    duration: "03:32"
-  - title: "Bound for Hell"
-    trackNumber: 8
-    duration: "04:29"
+  - trackNumber: 1
+    title: "This Beautiful World"
+    duration: "5:05"
+  - trackNumber: 2
+    title: "When You Die"
+    duration: "4:00"
+  - trackNumber: 3
+    title: "Build Up, Tear Down"
+    duration: "4:22"
+  - trackNumber: 4
+    title: "Killing Kind"
+    duration: "4:06"
+  - trackNumber: 5
+    title: "The Silence"
+    duration: "4:12"
+  - trackNumber: 6
+    title: "The Game Nobody Wins"
+    duration: "3:48"
+  - trackNumber: 7
+    title: "Silver Lining"
+    duration: "3:33"
+  - trackNumber: 8
+    title: "Bound for Hell"
+    duration: "4:29"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/c3d3f562-a9fb-48ea-9278-f3e8f80b1e7b"
+tracklist_source: "https://musicbrainz.org/release/2346cd92-1322-461b-8182-6167b2f7d854"
+tracklist_edition: "2023-01-27 XW"
 ---
-
 ## About
 
 Killing Kind is a release by Killing Kind released in 2023-01-27. It has been featured on 1 Sundown Sessions show. Featured tracks include This Beautiful World.

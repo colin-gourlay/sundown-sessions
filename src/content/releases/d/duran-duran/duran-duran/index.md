@@ -1,4 +1,4 @@
-﻿---
+---
 title: "Duran Duran"
 artist: "Duran Duran"
 releaseDate: "1993-02-11"
@@ -11,55 +11,93 @@ genres:
   - "alternative rock"
 labels:
   - "Parlophone"
-duration: "1:02:36"
+duration: "1:32:35"
 featuredInShows:
   - "5"
 shows:
   - "5"
 tracks:
-  - title: "Too Much Information"
+  - discNumber: 1
     trackNumber: 1
-    duration: "04:56"
-  - title: "Ordinary World"
+    title: "Too Much Information"
+    duration: "4:56"
+  - discNumber: 1
     trackNumber: 2
-    duration: "05:40"
-  - title: "Love Voodoo"
+    title: "Ordinary World"
+    duration: "5:40"
+  - discNumber: 1
     trackNumber: 3
-    duration: "04:58"
-  - title: "Drowning Man"
+    title: "Love Voodoo"
+    duration: "4:58"
+  - discNumber: 1
     trackNumber: 4
-    duration: "05:14"
-  - title: "Shotgun"
+    title: "Drowning Man"
+    duration: "5:14"
+  - discNumber: 1
     trackNumber: 5
-    duration: "00:54"
-  - title: "Come Undone"
+    title: "Shotgun"
+    duration: "0:54"
+  - discNumber: 1
     trackNumber: 6
-    duration: "04:38"
-  - title: "Breath After Breath"
+    title: "Come Undone"
+    duration: "4:39"
+  - discNumber: 1
     trackNumber: 7
-    duration: "04:58"
-  - title: "U.M.F."
+    title: "Breath After Breath"
+    duration: "4:58"
+  - discNumber: 1
     trackNumber: 8
-    duration: "05:34"
-  - title: "Femme Fatale"
+    title: "UMF"
+    duration: "5:33"
+  - discNumber: 1
     trackNumber: 9
-    duration: "04:22"
-  - title: "None of the Above"
+    title: "Femme Fatale"
+    duration: "4:22"
+  - discNumber: 1
     trackNumber: 10
-    duration: "05:18"
-  - title: "Shelter"
+    title: "None of the Above"
+    duration: "5:18"
+  - discNumber: 1
     trackNumber: 11
-    duration: "04:24"
-  - title: "To Whom It May Concern"
+    title: "Shelter"
+    duration: "4:24"
+  - discNumber: 1
     trackNumber: 12
-    duration: "04:23"
-  - title: "Sin of the City"
+    title: "To Whom It May Concern"
+    duration: "4:23"
+  - discNumber: 1
     trackNumber: 13
-    duration: "07:17"
+    title: "Sin of the City"
+    duration: "7:14"
+  - discNumber: 2
+    trackNumber: 1
+    title: "Falling Angel"
+    duration: "4:36"
+  - discNumber: 2
+    trackNumber: 2
+    title: "Stop Dead"
+    duration: "4:32"
+  - discNumber: 2
+    trackNumber: 3
+    title: "Time for Temptation"
+    duration: "4:10"
+  - discNumber: 2
+    trackNumber: 4
+    title: "Come Undone (12″ mix — Comin’ Together)"
+    duration: "7:22"
+  - discNumber: 2
+    trackNumber: 5
+    title: "Ordinary World (acoustic version)"
+    duration: "5:08"
+  - discNumber: 2
+    trackNumber: 6
+    title: "Too Much Information (David Richards 12″ mix)"
+    duration: "4:14"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/faedc66c-59ae-36ee-a89d-9dda4a9ea393"
+tracklist_source: "https://musicbrainz.org/release/a4159630-0da3-32ce-ac3c-de82ca11ab30"
+tracklist_edition: "1993 GB The Wedding Album"
 ---
-
 ## About
 
 Duran Duran is a release by Duran Duran released in 1993-02-11. It has been featured on 1 Sundown Sessions show. Featured tracks include Planet Earth.

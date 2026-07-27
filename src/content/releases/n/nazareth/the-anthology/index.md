@@ -1,4 +1,4 @@
-﻿---
+---
 title: "The Anthology"
 artist: "Nazareth"
 releaseDate: "2009-01-01"
@@ -16,124 +16,163 @@ featuredInShows:
 shows:
   - "8"
 tracks:
-  - title: "Razamanaz"
+  - discNumber: 1
     trackNumber: 1
-    duration: "03:49"
-  - title: "Bad Bad Boy"
+    title: "Razamanaz"
+    duration: "3:49"
+  - discNumber: 1
     trackNumber: 2
-    duration: "03:57"
-  - title: "Broken Down Angel"
+    title: "Bad Bad Boy"
+    duration: "3:57"
+  - discNumber: 1
     trackNumber: 3
-    duration: "03:44"
-  - title: "Woke Up This Morning"
+    title: "Broken Down Angel"
+    duration: "3:44"
+  - discNumber: 1
     trackNumber: 4
-    duration: "03:53"
-  - title: "Go Down Fighting"
+    title: "Woke Up This Morning"
+    duration: "3:53"
+  - discNumber: 1
     trackNumber: 5
-    duration: "03:05"
-  - title: "Turn on Your Receiver"
+    title: "Go Down Fighting"
+    duration: "3:05"
+  - discNumber: 1
     trackNumber: 6
-    duration: "03:19"
-  - title: "Teenage Nervous Breakdown"
+    title: "Turn on Your Receiver"
+    duration: "3:19"
+  - discNumber: 1
     trackNumber: 7
-    duration: "03:43"
-  - title: "This Flight Tonight"
+    title: "Teenage Nervous Breakdown"
+    duration: "3:43"
+  - discNumber: 1
     trackNumber: 8
-    duration: "03:23"
-  - title: "Sunshine"
+    title: "This Flight Tonight"
+    duration: "3:23"
+  - discNumber: 1
     trackNumber: 9
-    duration: "04:14"
-  - title: "Shanghai'd in Shanghai"
+    title: "Sunshine"
+    duration: "4:14"
+  - discNumber: 1
     trackNumber: 10
-    duration: "03:43"
-  - title: "Hair of the Dog"
+    title: "Shanghai'd in Shanghai"
+    duration: "3:43"
+  - discNumber: 1
     trackNumber: 11
-    duration: "04:11"
-  - title: "Love Hurts"
+    title: "Hair of the Dog"
+    duration: "4:11"
+  - discNumber: 1
     trackNumber: 12
-    duration: "03:51"
-  - title: "My White Bicycle"
+    title: "Love Hurts"
+    duration: "3:51"
+  - discNumber: 1
     trackNumber: 13
-    duration: "03:26"
-  - title: "Holy Roller"
+    title: "My White Bicycle"
+    duration: "3:26"
+  - discNumber: 1
     trackNumber: 14
-    duration: "03:24"
-  - title: "Telegram"
+    title: "Holy Roller"
+    duration: "3:24"
+  - discNumber: 1
     trackNumber: 15
-    duration: "07:48"
-  - title: "Expect No Mercy"
+    title: "Telegram"
+    duration: "7:48"
+  - discNumber: 1
     trackNumber: 16
-    duration: "03:27"
-  - title: "Gone Dead Train"
+    title: "Expect No Mercy"
+    duration: "3:27"
+  - discNumber: 1
     trackNumber: 17
-    duration: "03:44"
-  - title: "Place in Your Heart"
+    title: "Gone Dead Train"
+    duration: "3:44"
+  - discNumber: 1
     trackNumber: 18
-    duration: "03:01"
-  - title: "No Mean City"
+    title: "Place in Your Heart"
+    duration: "3:01"
+  - discNumber: 1
     trackNumber: 19
-    duration: "06:30"
-  - title: "Just to Get Into It"
+    title: "No Mean City"
+    duration: "6:30"
+  - discNumber: 2
     trackNumber: 1
-    duration: "04:22"
-  - title: "May the Sunshine"
+    title: "Just to Get Into It"
+    duration: "4:22"
+  - discNumber: 2
     trackNumber: 2
-    duration: "04:54"
-  - title: "Whatever You Want Babe"
+    title: "May the Sunshine"
+    duration: "4:54"
+  - discNumber: 2
     trackNumber: 3
-    duration: "03:41"
-  - title: "Holiday"
+    title: "Whatever You Want Babe"
+    duration: "3:41"
+  - discNumber: 2
     trackNumber: 4
-    duration: "03:37"
-  - title: "Heart's Grown Cold"
+    title: "Holiday"
+    duration: "3:37"
+  - discNumber: 2
     trackNumber: 5
-    duration: "04:13"
-  - title: "Moonlight Eyes"
+    title: "Heart's Grown Cold"
+    duration: "4:13"
+  - discNumber: 2
     trackNumber: 6
-    duration: "03:36"
-  - title: "Cocaine (live)"
+    title: "Moonlight Eyes"
+    duration: "3:36"
+  - discNumber: 2
     trackNumber: 7
-    duration: "04:38"
-  - title: "Little Part of You"
+    title: "Cocaine (live)"
+    duration: "4:38"
+  - discNumber: 2
     trackNumber: 8
-    duration: "03:30"
-  - title: "Dream On"
+    title: "Little Part of You"
+    duration: "3:30"
+  - discNumber: 2
     trackNumber: 9
-    duration: "03:26"
-  - title: "Where Are You Now"
+    title: "Dream On"
+    duration: "3:26"
+  - discNumber: 2
     trackNumber: 10
-    duration: "03:55"
-  - title: "Ruby Tuesday"
+    title: "Where Are You Now"
+    duration: "3:55"
+  - discNumber: 2
     trackNumber: 11
-    duration: "03:28"
-  - title: "This Month's Messiah"
+    title: "Ruby Tuesday"
+    duration: "3:28"
+  - discNumber: 2
     trackNumber: 12
-    duration: "05:17"
-  - title: "Piece of My Heart"
+    title: "This Month's Messiah"
+    duration: "5:17"
+  - discNumber: 2
     trackNumber: 13
-    duration: "04:26"
-  - title: "Winner on the Night"
+    title: "Piece of My Heart"
+    duration: "4:26"
+  - discNumber: 2
     trackNumber: 14
-    duration: "04:11"
-  - title: "Every Time It Rains"
+    title: "Winner on the Night"
+    duration: "4:11"
+  - discNumber: 2
     trackNumber: 15
-    duration: "04:11"
-  - title: "Thinkin' Man's Nightmare"
+    title: "Every Time It Rains"
+    duration: "4:11"
+  - discNumber: 2
     trackNumber: 16
-    duration: "04:02"
-  - title: "Steamroller"
+    title: "Thinkin' Man's Nightmare"
+    duration: "4:02"
+  - discNumber: 2
     trackNumber: 17
-    duration: "04:29"
-  - title: "When the Lights Come Down"
+    title: "Steamroller"
+    duration: "4:29"
+  - discNumber: 2
     trackNumber: 18
-    duration: "03:29"
-  - title: "Goin' Loco"
+    title: "When the Lights Come Down"
+    duration: "3:29"
+  - discNumber: 2
     trackNumber: 19
-    duration: "05:25"
+    title: "Goin' Loco"
+    duration: "5:25"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/300ddc6c-677c-42fc-a9df-95a2123d8840"
+tracklist_source: "https://musicbrainz.org/release/b514f934-447e-46a6-a80a-c4798ee81e78"
+tracklist_edition: "2009 GB"
 ---
-
 ## About
 
 The Anthology is a release by Nazareth released in 2009-01-01. It has been featured on 1 Sundown Sessions show. Featured tracks include Bad, Bad Boy.
