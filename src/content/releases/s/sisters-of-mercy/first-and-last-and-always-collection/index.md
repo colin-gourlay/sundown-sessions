@@ -67,10 +67,10 @@ tracklist_edition: "2015-07-24 XW remastered digital media version / Eldritch mi
 ---
 ## About
 
-First and Last and Always Collection is a release by Sisters of Mercy released in 1985. It has been featured on 1 Sundown Sessions show. Featured tracks include Marian.
+*First and Last and Always Collection* earns its place in the Sundown Sessions catalogue through “Marian”, a selection that offers a direct route into Sisters of Mercy's work.
+
+Heard in the context of the full release, “Marian” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Marian
-
-

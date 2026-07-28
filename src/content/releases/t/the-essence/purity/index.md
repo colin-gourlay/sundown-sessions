@@ -62,6 +62,6 @@ tracklist_edition: "1985 GB"
 ---
 ## About
 
-Purity is a release by The Essence released in 1985. It has been featured on 1 Sundown Sessions show. Featured tracks include The Cat.
+*Purity* earns its place in the Sundown Sessions catalogue through “The Cat”, a selection that offers a direct route into The Essence's work.
 
-
+Heard in the context of the full release, “The Cat” is an invitation to explore beyond the track featured on the show.

@@ -209,10 +209,10 @@ tracklist_edition: "2009-03-09 XE"
 ---
 ## About
 
-Quiet Please: The New Best of Nick Lowe is a release by Nick Lowe released in 2009. It has been featured on 1 Sundown Sessions show. Featured tracks include Half a Boy and Half a Man.
+*Quiet Please: The New Best of Nick Lowe* earns its place in the Sundown Sessions catalogue through “Half a Boy and Half a Man”, a selection that offers a direct route into Nick Lowe's work.
+
+Heard in the context of the full release, “Half a Boy and Half a Man” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Half a Boy and Half a Man
-
-

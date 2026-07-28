@@ -54,6 +54,6 @@ tracklist_edition: "1968 US"
 ---
 ## About
 
-Nazz is a release by Nazz released in 1968. It has been featured on 1 Sundown Sessions show. Featured tracks include Open My Eyes.
+*Nazz* earns its place in the Sundown Sessions catalogue through “Open My Eyes”, a selection that offers a direct route into Nazz's work.
 
-
+Heard in the context of the full release, “Open My Eyes” is an invitation to explore beyond the track featured on the show.

@@ -41,4 +41,4 @@ tracklist_edition: "1972 DE"
 ---
 ## About
 
-Demons and Wizards is the fourth studio album by British hard rock band Uriah Heep, released on Bronze Records in 1972. It reached number 20 on the UK Albums Chart and is widely regarded as the band's breakthrough record, combining Ken Hensley's keyboard-driven symphonic rock with the band's characteristic dual-lead vocal harmonies.
+*Demons and Wizards* reached number 20 on the UK Albums Chart and is widely regarded as the band's breakthrough record, combining Ken Hensley's keyboard-driven symphonic rock with the band's characteristic dual-lead vocal harmonies.

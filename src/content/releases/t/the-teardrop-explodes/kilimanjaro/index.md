@@ -65,4 +65,6 @@ tracklist_edition: "1980 XW"
 ---
 ## About
 
-Kilimanjaro is the debut studio album by Liverpool post-punk band The Teardrop Explodes, released on Mercury Records in 1980. It reached number 24 on the UK Albums Chart and introduced Julian Cope's idiosyncratic vision, blending psychedelic pop with post-punk energy. The album includes the hit 'Reward' and is regarded as a key document of the early-1980s Liverpool music scene.
+*Kilimanjaro* includes the hit 'Reward' and is regarded as a key document of the early-1980s Liverpool music scene.
+
+It reached number 24 on the UK Albums Chart and introduced Julian Cope's idiosyncratic vision, blending psychedelic pop with post-punk energy.

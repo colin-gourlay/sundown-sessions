@@ -44,4 +44,6 @@ tracklist_edition: "1990 US"
 ---
 ## About
 
-Pills 'n' Thrills and Bellyaches is the third studio album by Manchester Madchester band Happy Mondays, released on Factory Records in 1990. It reached number four on the UK Albums Chart and is regarded as their masterpiece, combining the band's chaotic funk-rock with state-of-the-art house production from Paul Oakenfold and Steve Osborne. The album includes 'Step On' and 'Kinky Afro'.
+*Pills 'n' Thrills and Bellyaches* reached number four on the UK Albums Chart and is regarded as their masterpiece, combining the band's chaotic funk-rock with state-of-the-art house production from Paul Oakenfold and Steve Osborne.
+
+The album includes 'Step On' and 'Kinky Afro'.

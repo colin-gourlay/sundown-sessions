@@ -37,10 +37,10 @@ tracklist_edition: "1970 US"
 ---
 ## About
 
-Very 'Eavy, Very 'Umble is a release by Uriah Heep released in 1970. It has been featured on 1 Sundown Sessions show. Featured tracks include Gypsy.
+*Very 'Eavy, Very 'Umble* earns its place in the Sundown Sessions catalogue through “Gypsy”, a selection that offers a direct route into Uriah Heep's work.
+
+Heard in the context of the full release, “Gypsy” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Gypsy
-
-

@@ -50,6 +50,6 @@ tracklist_edition: "1980 CA"
 ---
 ## About
 
-Orchestral Manoeuvres In The Dark is a release by Orchestral Manoeuvres In The Dark released in 1983. It has been featured on 1 Sundown Sessions show. Featured tracks include Messages.
+*Orchestral Manoeuvres In The Dark* earns its place in the Sundown Sessions catalogue through “Messages”, a selection that offers a direct route into Orchestral Manoeuvres In The Dark's work.
 
-
+Heard in the context of the full release, “Messages” is an invitation to explore beyond the track featured on the show.

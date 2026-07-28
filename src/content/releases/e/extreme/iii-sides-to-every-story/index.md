@@ -68,6 +68,6 @@ tracklist_edition: "1992 US Club Edition"
 ---
 ## About
 
-III Sides To Every Story is a release by Extreme released in 1992-08-20. It has been featured on 2 Sundown Sessions shows. Featured tracks include Rest In Peace.
+*III Sides To Every Story* earns its place in the Sundown Sessions catalogue through “Rest In Peace”, a selection that offers a direct route into Extreme's work.
 
-
+Heard in the context of the full release, “Rest In Peace” is an invitation to explore beyond the track featured on the show.

@@ -40,4 +40,6 @@ tracklist_edition: "1979 GB"
 ---
 ## About
 
-Mix-Up is the debut studio album by Sheffield industrial and electronic band Cabaret Voltaire, released on Rough Trade Records in 1979. The album is a landmark of the industrial and post-punk movements, combining tape loops, electronic noise, and found sound with confrontational political and surreal imagery. It had a profound influence on the subsequent development of electronic body music and EBM.
+*Mix-Up* is a landmark of the industrial and post-punk movements, combining tape loops, electronic noise, and found sound with confrontational political and surreal imagery.
+
+It had a profound influence on the subsequent development of electronic body music and EBM.

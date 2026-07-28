@@ -44,4 +44,6 @@ tracklist_edition: "1980 GB"
 ---
 ## About
 
-Visage is the debut studio album by synth-pop collective Visage, released on Polydor Records in 1980. The project was fronted by Steve Strange and featured collaborators from Ultravox and Magazine. The album reached number 13 on the UK Albums Chart and included 'Fade to Grey', one of the defining singles of the New Romantic movement.
+*Visage* reached number 13 on the UK Albums Chart and included 'Fade to Grey', one of the defining singles of the New Romantic movement.
+
+The project was fronted by Steve Strange and featured collaborators from Ultravox and Magazine.

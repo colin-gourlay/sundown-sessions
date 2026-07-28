@@ -20,4 +20,6 @@ tracklist_edition: "1984 NL"
 ---
 ## About
 
-The Last in Line is the second studio album by American heavy metal band Dio, released on Vertigo Records in 1984. It reached number four on the UK Albums Chart, making it one of the most successful heavy metal albums of the year in Britain. Led by the extraordinary vocal power of Ronnie James Dio, the album builds on the success of Holy Diver and further established the band as one of the premier heavy metal acts of the era.
+Led by the extraordinary vocal power of Ronnie James Dio, *The Last in Line* builds on the success of Holy Diver and further established the band as one of the premier heavy metal acts of the era.
+
+It reached number four on the UK Albums Chart, making it one of the most successful heavy metal albums of the year in Britain.

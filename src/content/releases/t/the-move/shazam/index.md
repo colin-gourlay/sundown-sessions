@@ -42,6 +42,6 @@ tracklist_edition: "1970 GB"
 ---
 ## About
 
-Shazam is a release by The Move released in 1970. It has been featured on 2 Sundown Sessions shows. Featured tracks include Cherry Blossom Clinic Revisited, Hello Susie.
+*Shazam* has supplied Sundown Sessions with “Cherry Blossom Clinic Revisited” and “Hello Susie”, giving more than one way into The Move's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

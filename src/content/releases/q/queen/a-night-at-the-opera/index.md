@@ -50,4 +50,6 @@ tracklist_edition: "1975 IT"
 ---
 ## About
 
-A Night at the Opera is the fourth studio album by London rock band Queen, released on EMI Records in 1975. It topped the UK Albums Chart and includes 'Bohemian Rhapsody', one of the most celebrated and inventive singles in the history of popular music. The album is a tour de force of studio craft and theatrical excess, showcasing the band's extraordinary range and ambition.
+*A Night at the Opera* is a tour de force of studio craft and theatrical excess, showcasing the band's extraordinary range and ambition.
+
+It topped the UK Albums Chart and includes 'Bohemian Rhapsody', one of the most celebrated and inventive singles in the history of popular music.

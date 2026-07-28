@@ -39,6 +39,6 @@ tracklist_edition: "2017-09-06 JP Type B"
 ---
 ## About
 
-Love is a release by Love released in 2017-09-06. It has been featured on 1 Sundown Sessions show. Featured tracks include My Flash On You.
+*Love* earns its place in the Sundown Sessions catalogue through “My Flash On You”, a selection that offers a direct route into Love's work.
 
-
+Heard in the context of the full release, “My Flash On You” is an invitation to explore beyond the track featured on the show.

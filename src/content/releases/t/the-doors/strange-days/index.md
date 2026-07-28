@@ -56,6 +56,6 @@ tracklist_edition: "1967-09-27 US mono"
 ---
 ## About
 
-Strange Days is a release by The Doors released in 1967-09-27. It has been featured on 2 Sundown Sessions shows. Featured tracks include Strange Days, When the Music's Over.
+*Strange Days* has supplied Sundown Sessions with “Strange Days” and “When the Music's Over”, giving more than one way into The Doors's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

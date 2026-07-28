@@ -49,4 +49,4 @@ tracklist_edition: "2022-11-18 SE"
 ---
 ## About
 
-In A Different Light is a studio album by Edinburgh post-punk band A Projection, released in 2022. The band draw on the influence of Joy Division, The Chameleons, and early Factory Records bands to create a brooding, atmospheric sound characterised by dark guitar lines and intense, searching vocals.
+The band draw on the influence of Joy Division, The Chameleons, and early Factory Records bands to create a brooding, atmospheric sound characterised by dark guitar lines and intense, searching vocals.

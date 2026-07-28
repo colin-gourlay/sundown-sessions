@@ -54,6 +54,6 @@ tracklist_edition: "1987 GB"
 ---
 ## About
 
-Mainstream is a release by Lloyd Cole and the Commotions released in 1987-10-26. It has been featured on 1 Sundown Sessions show. Featured tracks include My Bag.
+*Mainstream* earns its place in the Sundown Sessions catalogue through “My Bag”, a selection that offers a direct route into Lloyd Cole and the Commotions's work.
 
-
+Heard in the context of the full release, “My Bag” is an invitation to explore beyond the track featured on the show.

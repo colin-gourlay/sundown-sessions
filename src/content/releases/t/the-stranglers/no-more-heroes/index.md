@@ -65,6 +65,6 @@ tracklist_edition: "2007 NL"
 ---
 ## About
 
-No More Heroes is a release by The Stranglers released in 2007. It has been featured on 1 Sundown Sessions show. Featured tracks include No More Heroes.
+*No More Heroes* earns its place in the Sundown Sessions catalogue through “No More Heroes”, a selection that offers a direct route into The Stranglers's work.
 
-
+Heard in the context of the full release, “No More Heroes” is an invitation to explore beyond the track featured on the show.

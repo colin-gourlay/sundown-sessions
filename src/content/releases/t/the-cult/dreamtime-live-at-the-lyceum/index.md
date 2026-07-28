@@ -52,6 +52,6 @@ tracklist_edition: "1985-09-21 JP"
 ---
 ## About
 
-Dreamtime (Live at The Lyceum) is a release by The Cult released in 1985-09-21. It has been featured on 1 Sundown Sessions show. Featured tracks include 83rd Dream.
+*Dreamtime (Live at The Lyceum)* earns its place in the Sundown Sessions catalogue through “83rd Dream”, a selection that offers a direct route into The Cult's work.
 
-
+Heard in the context of the full release, “83rd Dream” is an invitation to explore beyond the track featured on the show.

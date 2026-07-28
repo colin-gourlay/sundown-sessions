@@ -61,6 +61,6 @@ tracklist_edition: "1989 CA Columbia House edition"
 ---
 ## About
 
-Journeyman is a release by Eric Clapton released in 1989-10-23. It has been featured on 1 Sundown Sessions show. Featured tracks include Bad Love.
+*Journeyman* earns its place in the Sundown Sessions catalogue through “Bad Love”, a selection that offers a direct route into Eric Clapton's work.
 
-
+Heard in the context of the full release, “Bad Love” is an invitation to explore beyond the track featured on the show.

@@ -76,10 +76,10 @@ tracklist_edition: "2003 ES"
 ---
 ## About
 
-Four Thousand, Seven Hundred and Seventy seconds; A Shortcut to Teenage Fanclub is a release by Teenage Fanclub released in 2003. It has been featured on 1 Sundown Sessions show. Featured tracks include Ain't That Enough.
+*Four Thousand, Seven Hundred and Seventy seconds; A Shortcut to Teenage Fanclub* earns its place in the Sundown Sessions catalogue through “Ain't That Enough”, a selection that offers a direct route into Teenage Fanclub's work.
+
+Heard in the context of the full release, “Ain't That Enough” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Ain't That Enough
-
-

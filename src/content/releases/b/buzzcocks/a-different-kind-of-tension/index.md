@@ -50,4 +50,6 @@ tracklist_edition: "1979-09 GB"
 ---
 ## About
 
-A Different Kind of Tension is the third studio album by Manchester punk band Buzzcocks, released on United Artists Records in 1979. It reached number 26 on the UK Albums Chart and represents the band at their most experimental, expanding beyond the buzzsaw punk pop of their earlier work into more melodically and rhythmically complex territory. It was their final studio album until the 1990s.
+*A Different Kind of Tension* was their final studio album until the 1990s.
+
+It reached number 26 on the UK Albums Chart and represents the band at their most experimental, expanding beyond the buzzsaw punk pop of their earlier work into more melodically and rhythmically complex territory.

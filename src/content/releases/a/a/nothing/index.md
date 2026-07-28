@@ -22,4 +22,4 @@ tracklist_edition: "2002 GB"
 ---
 ## About
 
-Nothing is the second studio album by British pop punk band A, released on London Records in 2002. The band from High Wycombe built a devoted following on the UK rock circuit during the early 2000s with their energetic, hook-driven songs.
+The band from High Wycombe built a devoted following on the UK rock circuit during the early 2000s with their energetic, hook-driven songs.

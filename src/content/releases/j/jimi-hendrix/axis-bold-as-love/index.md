@@ -63,6 +63,6 @@ tracklist_edition: "1967 FR mono + stereo"
 ---
 ## About
 
-Axis: Bold As Love is a release by Jimi Hendrix released in 1967-12-01. It has been featured on 1 Sundown Sessions show. Featured tracks include Little Wing.
+*Axis: Bold As Love* earns its place in the Sundown Sessions catalogue through “Little Wing”, a selection that offers a direct route into Jimi Hendrix's work.
 
-
+Heard in the context of the full release, “Little Wing” is an invitation to explore beyond the track featured on the show.

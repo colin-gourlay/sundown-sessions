@@ -53,4 +53,6 @@ tracklist_edition: "1984 GB"
 ---
 ## About
 
-Café Bleu is the debut studio album by Paul Weller's post-Jam project The Style Council, released on Polydor Records in 1984. It reached number two on the UK Albums Chart and reflects Weller's embrace of jazz, soul, and European pop influences, representing a dramatic stylistic departure from The Jam's mod rock. The album features the classic 'My Ever Changing Moods'.
+*Café Bleu* reached number two on the UK Albums Chart and reflects Weller's embrace of jazz, soul, and European pop influences, representing a dramatic stylistic departure from The Jam's mod rock.
+
+The album features the classic 'My Ever Changing Moods'.

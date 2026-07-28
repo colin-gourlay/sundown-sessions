@@ -55,10 +55,10 @@ tracklist_edition: "1996 BR"
 ---
 ## About
 
-New Adventures In Hi-Fi is a release by R.E.M. released in 1996. It has been featured on 1 Sundown Sessions show. Featured tracks include E-Bow The Letter.
+*New Adventures In Hi-Fi* earns its place in the Sundown Sessions catalogue through “E-Bow The Letter”, a selection that offers a direct route into R.E.M.'s work.
+
+Heard in the context of the full release, “E-Bow The Letter” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - E-Bow The Letter
-
-

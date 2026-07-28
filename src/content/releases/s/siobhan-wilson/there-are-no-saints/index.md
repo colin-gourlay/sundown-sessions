@@ -51,6 +51,6 @@ tracklist_edition: "2017-07-14 XW"
 ---
 ## About
 
-There Are No Saints is a release by Siobhan Wilson released in 2017-07-14. It has been featured on 1 Sundown Sessions show. Featured tracks include Make You Mine.
+*There Are No Saints* earns its place in the Sundown Sessions catalogue through “Make You Mine”, a selection that offers a direct route into Siobhan Wilson's work.
 
-
+Heard in the context of the full release, “Make You Mine” is an invitation to explore beyond the track featured on the show.

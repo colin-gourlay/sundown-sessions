@@ -64,6 +64,6 @@ tracklist_edition: ""
 ---
 ## About
 
-Out Of The Blue is a release by Robert Hazard & The Heroes released in 2018. It has been featured on 1 Sundown Sessions show. Featured tracks include Escalator Of Life.
+*Out Of The Blue* earns its place in the Sundown Sessions catalogue through “Escalator Of Life”, a selection that offers a direct route into Robert Hazard & The Heroes's work.
 
-
+Heard in the context of the full release, “Escalator Of Life” is an invitation to explore beyond the track featured on the show.

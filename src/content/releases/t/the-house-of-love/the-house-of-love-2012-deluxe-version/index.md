@@ -43,10 +43,10 @@ tracklist_edition: "1987 DE"
 ---
 ## About
 
-The House Of Love (2012 Deluxe Version) is a release by The House of Love released in 2012. It has been featured on 1 Sundown Sessions show. Featured tracks include Christine - 2018 Remaster.
+*The House Of Love (2012 Deluxe Version)* earns its place in the Sundown Sessions catalogue through “Christine - 2018 Remaster”, a selection that offers a direct route into The House of Love's work.
+
+Heard in the context of the full release, “Christine - 2018 Remaster” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Christine - 2018 Remaster
-
-

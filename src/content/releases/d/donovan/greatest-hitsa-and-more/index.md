@@ -73,10 +73,10 @@ tracklist_edition: "1989-09-18 GB"
 ---
 ## About
 
-Greatest Hitsâ€¦ and More is a release by Donovan released in 1989. It has been featured on 1 Sundown Sessions show. Featured tracks include Hurdy Gurdy Man.
+*Greatest Hitsâ€¦ and More* earns its place in the Sundown Sessions catalogue through “Hurdy Gurdy Man”, a selection that offers a direct route into Donovan's work.
+
+Heard in the context of the full release, “Hurdy Gurdy Man” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Hurdy Gurdy Man
-
-

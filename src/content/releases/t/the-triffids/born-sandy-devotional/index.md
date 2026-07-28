@@ -43,4 +43,6 @@ tracklist_edition: "1986-03 GB"
 ---
 ## About
 
-Born Sandy Devotional is the fourth studio album by Perth post-punk band The Triffids, released on Hot Records in 1986. The album is widely regarded as their masterpiece and one of the most accomplished Australian rock albums ever recorded. David McComb's cinematic, plainspoken songwriting evokes the vast landscapes of Western Australia, while the arrangements range from austere country rock to operatic grandeur.
+*Born Sandy Devotional* is widely regarded as their masterpiece and one of the most accomplished Australian rock albums ever recorded.
+
+David McComb's cinematic, plainspoken songwriting evokes the vast landscapes of Western Australia, while the arrangements range from austere country rock to operatic grandeur.

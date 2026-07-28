@@ -58,6 +58,6 @@ tracklist_edition: "1979 US"
 ---
 ## About
 
-Repeat When Necessary is a release by Dave Edmunds released in 1979-06-08. It has been featured on 2 Sundown Sessions shows. Featured tracks include Crawling From The Wreckage, Girls Talk.
+*Repeat When Necessary* has supplied Sundown Sessions with “Crawling From The Wreckage” and “Girls Talk”, giving more than one way into Dave Edmunds's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

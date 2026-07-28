@@ -43,10 +43,10 @@ tracklist_edition: "2007-04-04 SE"
 ---
 ## About
 
-Exploding Boy is a release by The Exploding Boy released in 2007. It has been featured on 1 Sundown Sessions show. Featured tracks include Better Than Fine.
+*Exploding Boy* earns its place in the Sundown Sessions catalogue through “Better Than Fine”, a selection that offers a direct route into The Exploding Boy's work.
+
+Heard in the context of the full release, “Better Than Fine” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Better Than Fine
-
-

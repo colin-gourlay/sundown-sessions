@@ -46,4 +46,4 @@ tracklist_edition: "1978 US"
 ---
 ## About
 
-Moving Targets is the debut studio album by County Durham punk band Penetration, released on Virgin Records in 1978. Fronted by Pauline Murray, the album is one of the finest debut records of the UK punk era, combining raw punk energy with melodic intelligence and Murray's powerful, distinctive voice.
+Fronted by Pauline Murray, *Moving Targets* is one of the finest debut records of the UK punk era, combining raw punk energy with melodic intelligence and Murray's powerful, distinctive voice.

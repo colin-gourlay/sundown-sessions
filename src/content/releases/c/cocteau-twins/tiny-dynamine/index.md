@@ -31,4 +31,4 @@ tracklist_edition: "1985-10-01 XW"
 ---
 ## About
 
-Tiny Dynamine is an EP by Scottish dream pop band Cocteau Twins, released on 4AD in 1985. Alongside its companion release Echoes in a Shallow Bay, it represents the duo at their most ethereal and diaphanous, showcasing Elizabeth Fraser's extraordinary voice alongside Robin Guthrie's shimmering guitar textures.
+Alongside its companion release Echoes in a Shallow Bay, *Tiny Dynamine* represents the duo at their most ethereal and diaphanous, showcasing Elizabeth Fraser's extraordinary voice alongside Robin Guthrie's shimmering guitar textures.

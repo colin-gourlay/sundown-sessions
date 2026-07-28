@@ -133,10 +133,10 @@ tracklist_edition: "2015-12-24 XW Remastered"
 ---
 ## About
 
-The Beatles 1967 - 1970 (Remastered) is a release by The Beatles released in 1973. It has been featured on 1 Sundown Sessions show. Featured tracks include Revolution - Remastered 2009.
+*The Beatles 1967 - 1970 (Remastered)* earns its place in the Sundown Sessions catalogue through “Revolution - Remastered 2009”, a selection that offers a direct route into The Beatles's work.
+
+Heard in the context of the full release, “Revolution - Remastered 2009” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Revolution - Remastered 2009
-
-

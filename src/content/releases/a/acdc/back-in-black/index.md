@@ -19,4 +19,6 @@ tracklist_edition: "1980 PT"
 ---
 ## About
 
-Back in Black is the seventh studio album by Australian hard rock band AC/DC, released in 1980. It topped the UK Albums Chart and is the second best-selling album in music history, selling an estimated 50 million copies worldwide. Recorded as a tribute to former vocalist Bon Scott, who died in February 1980, the album introduced Brian Johnson and is regarded as one of the defining records of hard rock.
+Recorded as a tribute to former vocalist Bon Scott, who died in February 1980, *Back in Black* introduced Brian Johnson and is regarded as one of the defining records of hard rock.
+
+It topped the UK Albums Chart and is the second best-selling album in music history, selling an estimated 50 million copies worldwide.

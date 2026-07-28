@@ -51,4 +51,6 @@ tracklist_edition: "1995 GB made in Holland, printed in the UK"
 ---
 ## About
 
-The Bends is the second studio album by Oxford alternative rock band Radiohead, released on Parlophone in 1995. It reached number four on the UK Albums Chart and is widely regarded as the album on which the band found their distinctive voice, combining alternative rock guitar work with Thom Yorke's emotionally intense lyrics. It includes the singles 'Fake Plastic Trees', 'Just', and 'High and Dry'.
+*The Bends* reached number four on the UK Albums Chart and is widely regarded as the album on which the band found their distinctive voice, combining alternative rock guitar work with Thom Yorke's emotionally intense lyrics.
+
+It includes the singles 'Fake Plastic Trees', 'Just', and 'High and Dry'.

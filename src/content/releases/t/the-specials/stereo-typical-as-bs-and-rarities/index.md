@@ -197,10 +197,10 @@ tracklist_edition: "2000-08-21 GB"
 ---
 ## About
 
-Stereo-Typical: A's, B's & Rarities is a release by The Specials released in 2000. It has been featured on 1 Sundown Sessions show. Featured tracks include Ghost Town.
+*Stereo-Typical: A's, B's & Rarities* earns its place in the Sundown Sessions catalogue through “Ghost Town”, a selection that offers a direct route into The Specials's work.
+
+Heard in the context of the full release, “Ghost Town” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Ghost Town
-
-

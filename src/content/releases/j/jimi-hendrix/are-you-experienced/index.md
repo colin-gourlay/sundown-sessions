@@ -67,6 +67,6 @@ tracklist_edition: "2010 US"
 ---
 ## About
 
-Are You Experienced is a release by Jimi Hendrix released in 2010-07-10. It has been featured on 1 Sundown Sessions show. Featured tracks include Hey Joe.
+*Are You Experienced* earns its place in the Sundown Sessions catalogue through “Hey Joe”, a selection that offers a direct route into Jimi Hendrix's work.
 
-
+Heard in the context of the full release, “Hey Joe” is an invitation to explore beyond the track featured on the show.

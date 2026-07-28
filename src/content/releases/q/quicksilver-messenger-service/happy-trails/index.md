@@ -43,4 +43,6 @@ tracklist_edition: "1969 GB mono"
 ---
 ## About
 
-Happy Trails is the second studio album by San Francisco psychedelic rock band Quicksilver Messenger Service, released on Capitol Records in 1969. The album is dominated by an extended live version of Bo Diddley's 'Who Do You Love', spread across most of the first side, that showcases the band's extended improvisational approach. It is regarded as one of the finest live recordings of the psychedelic era.
+*Happy Trails* is regarded as one of the finest live recordings of the psychedelic era.
+
+The album is dominated by an extended live version of Bo Diddley's 'Who Do You Love', spread across most of the first side, that showcases the band's extended improvisational approach.

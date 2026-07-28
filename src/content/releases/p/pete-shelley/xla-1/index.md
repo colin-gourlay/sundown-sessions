@@ -44,10 +44,10 @@ tracklist_edition: "1983 GB"
 ---
 ## About
 
-XLÂ·1 is a release by Pete Shelley released in 1983. It has been featured on 1 Sundown Sessions show. Featured tracks include Telephone Operator.
+*XLÂ·1* earns its place in the Sundown Sessions catalogue through “Telephone Operator”, a selection that offers a direct route into Pete Shelley's work.
+
+Heard in the context of the full release, “Telephone Operator” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Telephone Operator
-
-

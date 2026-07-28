@@ -63,6 +63,6 @@ tracklist_edition: "1983 GB"
 ---
 ## About
 
-Song and Legend is a release by Sex Gang Children released in 1983. It has been featured on 1 Sundown Sessions show. Featured tracks include Sebastiane.
+*Song and Legend* earns its place in the Sundown Sessions catalogue through “Sebastiane”, a selection that offers a direct route into Sex Gang Children's work.
 
-
+Heard in the context of the full release, “Sebastiane” is an invitation to explore beyond the track featured on the show.

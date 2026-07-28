@@ -61,6 +61,6 @@ tracklist_edition: "2007-07-02 XE"
 ---
 ## About
 
-Fractured Life is a release by Air Traffic released in 2007-07-02. It has been featured on 1 Sundown Sessions show. Featured tracks include Shooting Star.
+*Fractured Life* earns its place in the Sundown Sessions catalogue through “Shooting Star”, a selection that offers a direct route into Air Traffic's work.
 
-
+Heard in the context of the full release, “Shooting Star” is an invitation to explore beyond the track featured on the show.

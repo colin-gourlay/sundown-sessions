@@ -54,6 +54,6 @@ tracklist_edition: "1983 DE Made in Germany, without PG 900"
 ---
 ## About
 
-The Crossing is a release by Big Country released in 1983-07-19. It has been featured on 1 Sundown Sessions show. Featured tracks include The Storm.
+*The Crossing* earns its place in the Sundown Sessions catalogue through “The Storm”, a selection that offers a direct route into Big Country's work.
 
-
+Heard in the context of the full release, “The Storm” is an invitation to explore beyond the track featured on the show.

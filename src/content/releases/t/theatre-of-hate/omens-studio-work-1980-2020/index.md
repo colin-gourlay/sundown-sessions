@@ -449,10 +449,10 @@ tracklist_edition: "2022-01-28 GB"
 ---
 ## About
 
-Omens: Studio Work 1980-2020 is a release by Theatre Of Hate released in 2022. It has been featured on 1 Sundown Sessions show. Featured tracks include Do You Believe In The Westworld?.
+*Omens: Studio Work 1980-2020* earns its place in the Sundown Sessions catalogue through “Do You Believe In The Westworld?”, a selection that offers a direct route into Theatre Of Hate's work.
+
+Heard in the context of the full release, “Do You Believe In The Westworld?” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Do You Believe In The Westworld?
-
-

@@ -41,4 +41,6 @@ tracklist_edition: "1987 GB"
 ---
 ## About
 
-Love is the third studio album by Aztec Camera, released on WEA Records in 1987. It reached number 10 on the UK Albums Chart and saw Roddy Frame pursue a more polished, orchestrated, and commercial sound. The album features lush string arrangements and showcases Frame's gift for melody on tracks such as 'Deep and Wide and Tall'.
+*Love* features lush string arrangements and showcases Frame's gift for melody on tracks such as 'Deep and Wide and Tall'.
+
+It reached number 10 on the UK Albums Chart and saw Roddy Frame pursue a more polished, orchestrated, and commercial sound.

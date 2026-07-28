@@ -30,6 +30,6 @@ tracklist_edition: "1973 DE Keep a/c on labels"
 ---
 ## About
 
-Mind Games is a release by John Lennon released in 1973-10-29. It has been featured on 1 Sundown Sessions show. Featured tracks include Out The Blue.
+*Mind Games* earns its place in the Sundown Sessions catalogue through “Out The Blue”, a selection that offers a direct route into John Lennon's work.
 
-
+Heard in the context of the full release, “Out The Blue” is an invitation to explore beyond the track featured on the show.

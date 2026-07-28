@@ -54,6 +54,6 @@ tracklist_edition: "1983 GB"
 ---
 ## About
 
-The Southern Death Cult is a release by The Southern Death Cult released in 1983. It has been featured on 2 Sundown Sessions shows. Featured tracks include Apache, Moya.
+*The Southern Death Cult* has supplied Sundown Sessions with “Apache” and “Moya”, giving more than one way into The Southern Death Cult's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

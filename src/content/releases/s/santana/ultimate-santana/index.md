@@ -80,6 +80,6 @@ tracklist_edition: "2007 AU"
 ---
 ## About
 
-Ultimate Santana is a release by Santana released in 2007-10-16. It has been featured on 1 Sundown Sessions show. Featured tracks include Europa.
+*Ultimate Santana* earns its place in the Sundown Sessions catalogue through “Europa”, a selection that offers a direct route into Santana's work.
 
-
+Heard in the context of the full release, “Europa” is an invitation to explore beyond the track featured on the show.

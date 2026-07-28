@@ -49,10 +49,10 @@ tracklist_edition: "2004 US"
 ---
 ## About
 
-Come And Get It - The Best Of Apple Records is a release by Jackie Lomax released in 2010. It has been featured on 1 Sundown Sessions show. Featured tracks include Sour Milk Sea.
+*Come And Get It - The Best Of Apple Records* earns its place in the Sundown Sessions catalogue through “Sour Milk Sea”, a selection that offers a direct route into Jackie Lomax's work.
+
+Heard in the context of the full release, “Sour Milk Sea” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Sour Milk Sea
-
-

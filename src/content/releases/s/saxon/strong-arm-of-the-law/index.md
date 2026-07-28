@@ -20,4 +20,6 @@ tracklist_edition: "1980 None"
 ---
 ## About
 
-Strong Arm of the Law is the third studio album by Barnsley heavy metal band Saxon, released on Carrere Records in 1980. It reached number 11 on the UK Albums Chart and is one of the landmark albums of the New Wave of British Heavy Metal movement. The album showcases the band at their most powerful, with the title track and '20,000 Ft' among their most celebrated compositions.
+*Strong Arm of the Law* showcases the band at their most powerful, with the title track and '20,000 Ft' among their most celebrated compositions.
+
+It reached number 11 on the UK Albums Chart and is one of the landmark albums of the New Wave of British Heavy Metal movement.

@@ -35,4 +35,6 @@ tracklist_edition: "1971 DK"
 ---
 ## About
 
-Fireball is the fourth studio album by Hertfordshire hard rock band Deep Purple, released on Harvest Records in 1971. It topped the UK Albums Chart, marking the commercial peak of the band's classic Mk II line-up. The album blends heavy, riff-driven rock with jazz-inflected improvisation, featuring some of the most powerful playing of Ian Gillan, Roger Glover, Ritchie Blackmore, Jon Lord, and Ian Paice's career together.
+*Fireball* blends heavy, riff-driven rock with jazz-inflected improvisation, featuring some of the most powerful playing of Ian Gillan, Roger Glover, Ritchie Blackmore, Jon Lord, and Ian Paice's career together.
+
+It topped the UK Albums Chart, marking the commercial peak of the band's classic Mk II line-up.

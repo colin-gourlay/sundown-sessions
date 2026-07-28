@@ -43,4 +43,4 @@ tracklist_edition: "1967 US mono, Indianapolis pressing"
 ---
 ## About
 
-Buffalo Springfield Again is the second studio album by Canadian-American folk rock band Buffalo Springfield, released on Atco Records in 1967. It is considered their finest work, showcasing the diverse songwriting talents of Neil Young, Stephen Stills, and Richie Furay across a collection of psychedelic folk rock, country rock, and orchestrated pop.
+*Buffalo Springfield Again* is considered their finest work, showcasing the diverse songwriting talents of Neil Young, Stephen Stills, and Richie Furay across a collection of psychedelic folk rock, country rock, and orchestrated pop.

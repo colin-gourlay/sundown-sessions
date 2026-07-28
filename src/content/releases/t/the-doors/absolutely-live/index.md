@@ -60,6 +60,6 @@ tracklist_edition: "1970 GB"
 ---
 ## About
 
-Absolutely Live is a release by The Doors released in 1970-07. It has been featured on 1 Sundown Sessions show. Featured tracks include Who Do You Love.
+*Absolutely Live* earns its place in the Sundown Sessions catalogue through “Who Do You Love”, a selection that offers a direct route into The Doors's work.
 
-
+Heard in the context of the full release, “Who Do You Love” is an invitation to explore beyond the track featured on the show.

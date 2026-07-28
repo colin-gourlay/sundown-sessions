@@ -49,10 +49,10 @@ tracklist_edition: "2003-01-06 GB"
 ---
 ## About
 
-Reel To Real Cacophony is a release by Simple Minds released in 1979. It has been featured on 1 Sundown Sessions show. Featured tracks include Changeling.
+*Reel To Real Cacophony* earns its place in the Sundown Sessions catalogue through “Changeling”, a selection that offers a direct route into Simple Minds's work.
+
+Heard in the context of the full release, “Changeling” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Changeling
-
-

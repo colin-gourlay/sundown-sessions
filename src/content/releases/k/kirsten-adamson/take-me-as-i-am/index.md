@@ -16,9 +16,10 @@ tracks:
 ---
 ## About
 
-Take Me As I Am is a release by Kirsten Adamson released in 2023. It has been featured on 1 Sundown Sessions show. Featured tracks include Take Me As I Am.
+*Take Me As I Am* earns its place in the Sundown Sessions catalogue through “Take Me As I Am”, a selection that offers a direct route into Kirsten Adamson's work.
+
+Heard in the context of the full release, “Take Me As I Am” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Take Me As I Am
-

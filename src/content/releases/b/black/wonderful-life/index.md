@@ -54,6 +54,6 @@ tracklist_edition: "1987 US"
 ---
 ## About
 
-Wonderful Life is a release by Black released in 1987-09-22. It has been featured on 1 Sundown Sessions show. Featured tracks include Blue.
+*Wonderful Life* earns its place in the Sundown Sessions catalogue through “Blue”, a selection that offers a direct route into Black's work.
 
-
+Heard in the context of the full release, “Blue” is an invitation to explore beyond the track featured on the show.

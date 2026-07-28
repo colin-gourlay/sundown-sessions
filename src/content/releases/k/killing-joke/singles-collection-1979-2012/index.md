@@ -147,11 +147,11 @@ tracklist_edition: "2013 XE"
 ---
 ## About
 
-Singles Collection 1979 - 2012 is a release by Killing Joke released in 2013. It has been featured on 2 Sundown Sessions shows. Featured tracks include Eighties, Kings And Queens.
+*Singles Collection 1979 - 2012* has supplied Sundown Sessions with “Eighties” and “Kings And Queens”, giving more than one way into Killing Joke's work.
+
+Together, those choices point beyond isolated favourites towards the character of the wider release.
 
 ## Tracks Featured on Sundown Sessions
 
 - Eighties
 - Kings And Queens
-
-

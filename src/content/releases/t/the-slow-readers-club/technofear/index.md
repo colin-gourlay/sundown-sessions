@@ -16,9 +16,10 @@ tracks:
 ---
 ## About
 
-Technofear is a release by The Slow Readers Club released in 2024. It has been featured on 1 Sundown Sessions show. Featured tracks include Technofear.
+*Technofear* earns its place in the Sundown Sessions catalogue through “Technofear”, a selection that offers a direct route into The Slow Readers Club's work.
+
+Heard in the context of the full release, “Technofear” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Technofear
-

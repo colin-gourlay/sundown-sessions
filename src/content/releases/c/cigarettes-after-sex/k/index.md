@@ -26,6 +26,6 @@ tracklist_edition: "2016-11-15 XW"
 ---
 ## About
 
-K. is a release by Cigarettes After Sex released in 2016-11-15. It has been featured on 1 Sundown Sessions show. Featured tracks include K..
+*K.* earns its place in the Sundown Sessions catalogue through “K.”, a selection that offers a direct route into Cigarettes After Sex's work.
 
-
+Heard in the context of the full release, “K.” is an invitation to explore beyond the track featured on the show.

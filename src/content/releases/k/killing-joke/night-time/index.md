@@ -48,6 +48,6 @@ tracklist_edition: "1985 XE"
 ---
 ## About
 
-Night Time is a release by Killing Joke released in 1985-02. It has been featured on 1 Sundown Sessions show. Featured tracks include Love Like Blood.
+*Night Time* earns its place in the Sundown Sessions catalogue through “Love Like Blood”, a selection that offers a direct route into Killing Joke's work.
 
-
+Heard in the context of the full release, “Love Like Blood” is an invitation to explore beyond the track featured on the show.

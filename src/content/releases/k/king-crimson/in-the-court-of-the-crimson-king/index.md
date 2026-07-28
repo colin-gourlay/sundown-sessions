@@ -29,4 +29,6 @@ tracklist_edition: "1969 NL"
 ---
 ## About
 
-In the Court of the Crimson King is the debut studio album by London progressive rock group King Crimson, released on Island Records in 1969. It reached number five on the UK Albums Chart and is universally regarded as the founding document of progressive rock, combining extended instrumental passages, unconventional time signatures, and literary lyrical ambition. The album's influence on subsequent music is immeasurable.
+*In the Court of the Crimson King* reached number five on the UK Albums Chart and is universally regarded as the founding document of progressive rock, combining extended instrumental passages, unconventional time signatures, and literary lyrical ambition.
+
+The album's influence on subsequent music is immeasurable.

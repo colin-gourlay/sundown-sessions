@@ -57,6 +57,6 @@ tracklist_edition: "1979-06-28 US"
 ---
 ## About
 
-Secrets is a release by Robert Palmer released in 1979-06-28. It has been featured on 1 Sundown Sessions show. Featured tracks include Bad Case Of Loving You (Doctor, Doctor).
+*Secrets* has supplied Sundown Sessions with “Bad Case Of Loving You (Doctor” and “Doctor)”, giving more than one way into Robert Palmer's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

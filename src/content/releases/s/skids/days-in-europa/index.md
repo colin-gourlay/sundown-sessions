@@ -54,6 +54,6 @@ tracklist_edition: "1979-10-12 GB"
 ---
 ## About
 
-Days In Europa is a release by Skids released in 1979-10-12. It has been featured on 1 Sundown Sessions show. Featured tracks include Charade.
+*Days In Europa* earns its place in the Sundown Sessions catalogue through “Charade”, a selection that offers a direct route into Skids's work.
 
-
+Heard in the context of the full release, “Charade” is an invitation to explore beyond the track featured on the show.

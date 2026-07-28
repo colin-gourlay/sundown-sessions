@@ -64,4 +64,4 @@ tracklist_edition: "2007 None"
 ---
 ## About
 
-The Best of Echo & the Bunnymen is a comprehensive compilation covering the Liverpool post-punk band's extensive catalogue, released on Rhino Records in 2006. It traces the band's evolution from their jagged, atmospheric debut through the lush orchestrations of Ocean Rain, and includes their celebrated cover of 'People Are Strange' from the soundtrack to The Lost Boys (1987).
+*The Best of Echo & The Bunnymen* traces the band's evolution from their jagged, atmospheric debut through the lush orchestrations of Ocean Rain, and includes their celebrated cover of 'People Are Strange' from the soundtrack to The Lost Boys (1987).

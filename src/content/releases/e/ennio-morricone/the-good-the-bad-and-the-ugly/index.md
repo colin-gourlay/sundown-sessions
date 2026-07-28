@@ -48,11 +48,11 @@ tracklist_edition: "1968-10 GB"
 ---
 ## About
 
-The Good, The Bad and The Ugly is a release by Ennio Morricone released in 1966. It has been featured on 2 Sundown Sessions shows. Featured tracks include The Ecstasy Of Gold, The Good, The Bad and The Ugly.
+*The Good, The Bad and The Ugly* has supplied Sundown Sessions with “The Ecstasy Of Gold”, “The Good” and “The Bad and The Ugly”, giving more than one way into Ennio Morricone's work.
+
+Together, those choices point beyond isolated favourites towards the character of the wider release.
 
 ## Tracks Featured on Sundown Sessions
 
 - The Ecstasy Of Gold
 - The Good, The Bad and The Ugly
-
-

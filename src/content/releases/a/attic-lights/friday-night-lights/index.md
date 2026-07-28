@@ -48,6 +48,6 @@ tracklist_edition: "2008-10-13 GB"
 ---
 ## About
 
-Friday Night Lights is a release by Attic Lights released in 2008-10-13. It has been featured on 1 Sundown Sessions show. Featured tracks include The Dirty Thirst.
+*Friday Night Lights* earns its place in the Sundown Sessions catalogue through “The Dirty Thirst”, a selection that offers a direct route into Attic Lights's work.
 
-
+Heard in the context of the full release, “The Dirty Thirst” is an invitation to explore beyond the track featured on the show.

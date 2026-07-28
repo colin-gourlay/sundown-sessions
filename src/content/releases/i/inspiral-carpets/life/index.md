@@ -62,4 +62,6 @@ tracklist_edition: "1990 US"
 ---
 ## About
 
-Life is the debut studio album by Oldham indie rock band Inspiral Carpets, released on Mute Records in 1990. It reached number two on the UK Albums Chart and is one of the defining albums of the Madchester era, featuring Clint Boon's distinctive Vox Continental organ sound and Tom Hingley's deadpan vocals. The album includes the anthemic singles 'This Is How It Feels' and 'She Comes in the Fall'.
+*Life* reached number two on the UK Albums Chart and is one of the defining albums of the Madchester era, featuring Clint Boon's distinctive Vox Continental organ sound and Tom Hingley's deadpan vocals.
+
+The album includes the anthemic singles 'This Is How It Feels' and 'She Comes in the Fall'.

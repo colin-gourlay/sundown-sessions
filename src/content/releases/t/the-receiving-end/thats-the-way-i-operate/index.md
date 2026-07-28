@@ -55,4 +55,6 @@ tracklist_edition: "2005-04-26 GB"
 ---
 ## About
 
-*That's the Way I Operate!* is a rare, independently produced CD by Scottish guitar band The Receiving End, dating from around 1992. The title track and “Nothing's Wrong” preserve the direct songwriting and local independent spirit at the heart of the band's Show #2 spotlight. Public catalogue information is limited, so the date and surviving track details follow the band's source CD and the broadcast rather than an inferred commercial edition.
+The title track and “Nothing's Wrong” preserve the direct songwriting and local independent spirit at the heart of the band's Show #2 spotlight.
+
+*That's the Way I Operate!* is a rare, independently produced CD by Scottish guitar band The Receiving End, dating from around 1992. Public catalogue information is limited, so the date and surviving track details follow the band's source CD and the broadcast rather than an inferred commercial edition.

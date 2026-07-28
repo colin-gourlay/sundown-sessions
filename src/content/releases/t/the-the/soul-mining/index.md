@@ -35,4 +35,6 @@ tracklist_edition: "1983 GB"
 ---
 ## About
 
-Soul Mining is the second studio album by Matt Johnson's project The The, released in 1983. It reached number 27 on the UK Albums Chart and is regarded as one of the most original and emotionally searching records of the post-punk era. The album blends synthesisers, guitars, and orchestral textures with Johnson's stark, confessional lyricism on tracks including 'This Is the Day' and 'Uncertain Smile'.
+*Soul Mining* blends synthesisers, guitars, and orchestral textures with Johnson's stark, confessional lyricism on tracks including 'This Is the Day' and 'Uncertain Smile'.
+
+It reached number 27 on the UK Albums Chart and is regarded as one of the most original and emotionally searching records of the post-punk era.

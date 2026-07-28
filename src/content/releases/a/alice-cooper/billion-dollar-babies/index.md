@@ -26,6 +26,6 @@ tracklist_edition: "1973 DE"
 ---
 ## About
 
-Billion Dollar Babies is a release by Alice Cooper released in 1973. It has been featured on 1 Sundown Sessions show. Featured tracks include No More Mr. Nice Guy.
+*Billion Dollar Babies* earns its place in the Sundown Sessions catalogue through “No More Mr. Nice Guy”, a selection that offers a direct route into Alice Cooper's work.
 
-
+Heard in the context of the full release, “No More Mr. Nice Guy” is an invitation to explore beyond the track featured on the show.

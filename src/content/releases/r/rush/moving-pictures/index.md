@@ -35,4 +35,6 @@ tracklist_edition: "1981 DE atomic CD face"
 ---
 ## About
 
-Moving Pictures is the eighth studio album by Canadian progressive rock band Rush, released on Mercury Records in 1981. It reached number three on the UK Albums Chart and is widely regarded as the band's masterpiece, perfectly balancing their progressive rock ambitions with a more accessible, streamlined sound. The album includes 'Tom Sawyer', 'Limelight', and 'YYZ', and remains one of the most beloved rock albums of the era.
+*Moving Pictures* includes 'Tom Sawyer', 'Limelight', and 'YYZ', and remains one of the most beloved rock albums of the era.
+
+It reached number three on the UK Albums Chart and is widely regarded as the band's masterpiece, perfectly balancing their progressive rock ambitions with a more accessible, streamlined sound.

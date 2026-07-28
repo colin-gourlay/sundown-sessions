@@ -57,6 +57,6 @@ tracklist_edition: "1967 US mono"
 ---
 ## About
 
-Forever Changes is a release by Love released in 1967-11-01. It has been featured on 1 Sundown Sessions show. Featured tracks include Alone Again Or.
+*Forever Changes* earns its place in the Sundown Sessions catalogue through “Alone Again Or”, a selection that offers a direct route into Love's work.
 
-
+Heard in the context of the full release, “Alone Again Or” is an invitation to explore beyond the track featured on the show.

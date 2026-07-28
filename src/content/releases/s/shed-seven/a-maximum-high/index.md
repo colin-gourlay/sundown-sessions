@@ -50,4 +50,6 @@ tracklist_edition: "1996-03-29 GB"
 ---
 ## About
 
-A Maximum High is the second studio album by York indie rock band Shed Seven, released on Polydor Records in 1996. It reached number eight on the UK Albums Chart and consolidated the commercial breakthrough of their debut Change Giver. The album reflects the band's anthemic, hook-laden Britpop sound and represents their most commercially successful period.
+*A Maximum High* reached number eight on the UK Albums Chart and consolidated the commercial breakthrough of their debut Change Giver.
+
+The album reflects the band's anthemic, hook-laden Britpop sound and represents their most commercially successful period.

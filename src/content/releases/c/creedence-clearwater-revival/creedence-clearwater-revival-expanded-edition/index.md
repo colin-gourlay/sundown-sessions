@@ -49,10 +49,10 @@ tracklist_edition: "2008 XW expanded edition"
 ---
 ## About
 
-Creedence Clearwater Revival (Expanded Edition) is a release by Creedence Clearwater Revival released in 1968. It has been featured on 1 Sundown Sessions show. Featured tracks include I Put A Spell On You.
+*Creedence Clearwater Revival (Expanded Edition)* earns its place in the Sundown Sessions catalogue through “I Put A Spell On You”, a selection that offers a direct route into Creedence Clearwater Revival's work.
+
+Heard in the context of the full release, “I Put A Spell On You” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - I Put A Spell On You
-
-

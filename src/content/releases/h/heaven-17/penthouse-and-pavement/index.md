@@ -51,6 +51,6 @@ tracklist_edition: "1981 GB"
 ---
 ## About
 
-Penthouse And Pavement is a release by Heaven 17 released in 1981. It has been featured on 1 Sundown Sessions show. Featured tracks include Let's All Make A Bomb.
+*Penthouse And Pavement* earns its place in the Sundown Sessions catalogue through “Let's All Make A Bomb”, a selection that offers a direct route into Heaven 17's work.
 
-
+Heard in the context of the full release, “Let's All Make A Bomb” is an invitation to explore beyond the track featured on the show.

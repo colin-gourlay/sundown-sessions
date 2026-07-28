@@ -58,6 +58,6 @@ tracklist_edition: "1975 None"
 ---
 ## About
 
-Venus And Mars is a release by Wings released in 1975-05-30. It has been featured on 1 Sundown Sessions show. Featured tracks include Crossroads.
+*Venus And Mars* earns its place in the Sundown Sessions catalogue through “Crossroads”, a selection that offers a direct route into Wings's work.
 
-
+Heard in the context of the full release, “Crossroads” is an invitation to explore beyond the track featured on the show.

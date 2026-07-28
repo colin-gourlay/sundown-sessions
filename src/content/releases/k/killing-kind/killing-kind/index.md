@@ -43,6 +43,6 @@ tracklist_edition: "2023-01-27 XW"
 ---
 ## About
 
-Killing Kind is a release by Killing Kind released in 2023-01-27. It has been featured on 1 Sundown Sessions show. Featured tracks include This Beautiful World.
+*Killing Kind* earns its place in the Sundown Sessions catalogue through “This Beautiful World”, a selection that offers a direct route into Killing Kind's work.
 
-
+Heard in the context of the full release, “This Beautiful World” is an invitation to explore beyond the track featured on the show.

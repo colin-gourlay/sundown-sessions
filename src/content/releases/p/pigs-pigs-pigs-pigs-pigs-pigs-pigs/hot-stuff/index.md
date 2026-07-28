@@ -27,6 +27,6 @@ tracklist_edition: "2021-10-20 XW"
 ---
 ## About
 
-Hot Stuff is a release by Pigs Pigs Pigs Pigs Pigs Pigs Pigs released in 2021-10-20. It has been featured on 1 Sundown Sessions show. Featured tracks include Hot Stuff.
+*Hot Stuff* earns its place in the Sundown Sessions catalogue through “Hot Stuff”, a selection that offers a direct route into Pigs Pigs Pigs Pigs Pigs Pigs Pigs's work.
 
-
+Heard in the context of the full release, “Hot Stuff” is an invitation to explore beyond the track featured on the show.

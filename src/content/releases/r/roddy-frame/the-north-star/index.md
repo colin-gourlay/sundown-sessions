@@ -51,6 +51,6 @@ tracklist_edition: "1998-09-21 GB"
 ---
 ## About
 
-The North Star is a release by Roddy Frame released in 1998-09-21. It has been featured on 1 Sundown Sessions show. Featured tracks include Reason For Living.
+*The North Star* earns its place in the Sundown Sessions catalogue through “Reason For Living”, a selection that offers a direct route into Roddy Frame's work.
 
-
+Heard in the context of the full release, “Reason For Living” is an invitation to explore beyond the track featured on the show.

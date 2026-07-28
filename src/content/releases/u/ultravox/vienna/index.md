@@ -30,6 +30,6 @@ tracklist_edition: "1981 DE"
 ---
 ## About
 
-Vienna is a release by Ultravox released in 1981-01-15. It has been featured on 1 Sundown Sessions show. Featured tracks include Astradyne.
+*Vienna* earns its place in the Sundown Sessions catalogue through “Astradyne”, a selection that offers a direct route into Ultravox's work.
 
-
+Heard in the context of the full release, “Astradyne” is an invitation to explore beyond the track featured on the show.

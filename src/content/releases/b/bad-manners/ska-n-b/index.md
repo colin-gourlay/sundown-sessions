@@ -49,10 +49,10 @@ tracklist_edition: "1980-04 GB"
 ---
 ## About
 
-Ska 'N' B is a release by Bad Manners released in 1980. It has been featured on 1 Sundown Sessions show. Featured tracks include Ne-Ne, Na-Na, Na-Na, Nu-Nu.
+*Ska 'N' B* has supplied Sundown Sessions with “Ne-Ne”, “Na-Na”, “Na-Na” and “Nu-Nu”, giving more than one way into Bad Manners's work.
+
+Together, those choices point beyond isolated favourites towards the character of the wider release.
 
 ## Tracks Featured on Sundown Sessions
 
 - Ne-Ne, Na-Na, Na-Na, Nu-Nu
-
-

@@ -63,6 +63,6 @@ tracklist_edition: "1973 US"
 ---
 ## About
 
-Tanx is a release by T. Rex released in 1973-01-28. It has been featured on 1 Sundown Sessions show. Featured tracks include 20th Century Boy.
+*Tanx* earns its place in the Sundown Sessions catalogue through “20th Century Boy”, a selection that offers a direct route into T. Rex's work.
 
-
+Heard in the context of the full release, “20th Century Boy” is an invitation to explore beyond the track featured on the show.

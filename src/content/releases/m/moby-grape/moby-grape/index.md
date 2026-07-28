@@ -52,4 +52,6 @@ tracklist_edition: "1967-06 US stereo"
 ---
 ## About
 
-Moby Grape is the self-titled debut studio album by San Francisco psychedelic rock band Moby Grape, released on Columbia Records in 1967. The album is remarkable for its consistent quality, with five strong songwriters contributing across a blend of folk, country, blues, and psychedelia. Despite its commercial failure at the time, it is now regarded as one of the finest debut albums of the psychedelic era.
+Despite its commercial failure at the time, *Moby Grape* is now regarded as one of the finest debut albums of the psychedelic era.
+
+The album is remarkable for its consistent quality, with five strong songwriters contributing across a blend of folk, country, blues, and psychedelia.

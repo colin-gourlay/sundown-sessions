@@ -53,6 +53,6 @@ tracklist_edition: "2015-06 None"
 ---
 ## About
 
-Remixes from Lion is a release by Peter Murphy released in 2015-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Hang Up - Youth Remix.
+*Remixes from Lion* earns its place in the Sundown Sessions catalogue through “Hang Up - Youth Remix”, a selection that offers a direct route into Peter Murphy's work.
 
-
+Heard in the context of the full release, “Hang Up - Youth Remix” is an invitation to explore beyond the track featured on the show.

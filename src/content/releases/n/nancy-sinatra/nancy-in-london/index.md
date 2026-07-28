@@ -56,6 +56,6 @@ tracklist_edition: "1966 US stereo"
 ---
 ## About
 
-Nancy In London is a release by Nancy Sinatra released in 1966. It has been featured on 1 Sundown Sessions show. Featured tracks include Friday's Child.
+*Nancy In London* earns its place in the Sundown Sessions catalogue through “Friday's Child”, a selection that offers a direct route into Nancy Sinatra's work.
 
-
+Heard in the context of the full release, “Friday's Child” is an invitation to explore beyond the track featured on the show.

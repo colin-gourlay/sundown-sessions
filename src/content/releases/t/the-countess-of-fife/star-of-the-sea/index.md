@@ -49,10 +49,10 @@ tracklist_edition: "1996-07 DE"
 ---
 ## About
 
-Star Of The Sea is a release by The Countess Of Fife released in 2022. It has been featured on 1 Sundown Sessions show. Featured tracks include Trapped.
+*Star Of The Sea* earns its place in the Sundown Sessions catalogue through “Trapped”, a selection that offers a direct route into The Countess Of Fife's work.
+
+Heard in the context of the full release, “Trapped” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Trapped
-
-

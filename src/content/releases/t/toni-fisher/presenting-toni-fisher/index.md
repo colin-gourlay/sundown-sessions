@@ -37,10 +37,10 @@ tracklist_edition: "1976 US"
 ---
 ## About
 
-Presenting Toni Fisher is a release by Toni Fisher released in 1959. It has been featured on 1 Sundown Sessions show. Featured tracks include The Big Hurt.
+*Presenting Toni Fisher* earns its place in the Sundown Sessions catalogue through “The Big Hurt”, a selection that offers a direct route into Toni Fisher's work.
+
+Heard in the context of the full release, “The Big Hurt” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - The Big Hurt
-
-

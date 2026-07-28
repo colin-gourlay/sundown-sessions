@@ -82,6 +82,6 @@ tracklist_edition: "2007 XE Savage Edition"
 ---
 ## About
 
-Born Into This is a release by The Cult released in 2007-08-14. It has been featured on 1 Sundown Sessions show. Featured tracks include Dirty Little Rockstar.
+*Born Into This* earns its place in the Sundown Sessions catalogue through “Dirty Little Rockstar”, a selection that offers a direct route into The Cult's work.
 
-
+Heard in the context of the full release, “Dirty Little Rockstar” is an invitation to explore beyond the track featured on the show.

@@ -54,6 +54,6 @@ tracklist_edition: "1995 US"
 ---
 ## About
 
-Juicy Lucy is a release by Juicy Lucy released in 1995. It has been featured on 1 Sundown Sessions show. Featured tracks include Mississippi Woman.
+*Juicy Lucy* earns its place in the Sundown Sessions catalogue through “Mississippi Woman”, a selection that offers a direct route into Juicy Lucy's work.
 
-
+Heard in the context of the full release, “Mississippi Woman” is an invitation to explore beyond the track featured on the show.

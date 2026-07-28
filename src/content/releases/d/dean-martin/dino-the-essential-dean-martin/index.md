@@ -115,6 +115,6 @@ tracklist_edition: "2004 AU"
 ---
 ## About
 
-Dino: The Essential Dean Martin is a release by Dean Martin released in 2004-01-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Return To Me.
+*Dino: The Essential Dean Martin* earns its place in the Sundown Sessions catalogue through “Return To Me”, a selection that offers a direct route into Dean Martin's work.
 
-
+Heard in the context of the full release, “Return To Me” is an invitation to explore beyond the track featured on the show.

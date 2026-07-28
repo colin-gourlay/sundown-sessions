@@ -41,4 +41,6 @@ tracklist_edition: "1973 US"
 ---
 ## About
 
-Razamanaz is the third studio album by Dunfermline hard rock band Nazareth, released on Mooncrest Records in 1973. It reached number 11 on the UK Albums Chart and marked the commercial breakthrough of the band with the UK hit singles 'Broken Down Angel' and 'Bad Bad Boy'. Produced by Roger Glover of Deep Purple, it remains one of their most celebrated records.
+*Razamanaz* reached number 11 on the UK Albums Chart and marked the commercial breakthrough of the band with the UK hit singles 'Broken Down Angel' and 'Bad Bad Boy'.
+
+Produced by Roger Glover of Deep Purple, it remains one of their most celebrated records.

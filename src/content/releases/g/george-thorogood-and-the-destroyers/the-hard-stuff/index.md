@@ -70,6 +70,6 @@ tracklist_edition: "2006 XW"
 ---
 ## About
 
-The Hard Stuff is a release by George Thorogood & The Destroyers released in 2006-05-22. It has been featured on 2 Sundown Sessions shows. Featured tracks include Love Doctor.
+*The Hard Stuff* earns its place in the Sundown Sessions catalogue through “Love Doctor”, a selection that offers a direct route into George Thorogood & The Destroyers's work.
 
-
+Heard in the context of the full release, “Love Doctor” is an invitation to explore beyond the track featured on the show.

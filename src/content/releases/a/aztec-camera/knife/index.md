@@ -38,4 +38,6 @@ tracklist_edition: "1984 DE \"target\" disc, made in West Germany"
 ---
 ## About
 
-Knife is the second studio album by Aztec Camera, Roddy Frame's songwriting vehicle, released on WEA Records in 1984. It reached number 14 on the UK Albums Chart and was produced by Mark Knopfler of Dire Straits. The album finds Frame moving towards a more polished, MOR-influenced sound while retaining the melodic sophistication of his debut High Land, Hard Rain.
+*Knife* finds Frame moving towards a more polished, MOR-influenced sound while retaining the melodic sophistication of his debut High Land, Hard Rain.
+
+It reached number 14 on the UK Albums Chart and was produced by Mark Knopfler of Dire Straits.

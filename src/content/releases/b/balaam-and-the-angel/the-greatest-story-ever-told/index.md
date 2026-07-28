@@ -58,6 +58,6 @@ tracklist_edition: "1986 GB"
 ---
 ## About
 
-The Greatest Story Ever Told is a release by Balaam And The Angel released in 1986. It has been featured on 1 Sundown Sessions show. Featured tracks include The Wave.
+*The Greatest Story Ever Told* earns its place in the Sundown Sessions catalogue through “The Wave”, a selection that offers a direct route into Balaam And The Angel's work.
 
-
+Heard in the context of the full release, “The Wave” is an invitation to explore beyond the track featured on the show.

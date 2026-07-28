@@ -52,10 +52,10 @@ tracklist_edition: "1987 GB"
 ---
 ## About
 
-Uh... Tears Baby is a release by Win released in 1985. It has been featured on 1 Sundown Sessions show. Featured tracks include You've Got the Power.
+*Uh... Tears Baby* earns its place in the Sundown Sessions catalogue through “You've Got the Power”, a selection that offers a direct route into Win's work.
+
+Heard in the context of the full release, “You've Got the Power” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - You've Got the Power
-
-

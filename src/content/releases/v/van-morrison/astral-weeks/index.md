@@ -37,4 +37,6 @@ tracklist_edition: "1968-11 GB"
 ---
 ## About
 
-Astral Weeks is the second studio album by Belfast singer-songwriter Van Morrison, released on Warner Bros. Records in 1968. Though commercially modest on release, the album is now regarded as one of the greatest ever recorded, combining jazz, folk, and classical elements into an ecstatic, stream-of-consciousness whole. Morrison's extraordinary voice and the intimate, largely improvised arrangements create an effect unique in popular music.
+Though commercially modest on release, *Astral Weeks* is now regarded as one of the greatest ever recorded, combining jazz, folk, and classical elements into an ecstatic, stream-of-consciousness whole.
+
+Records in 1968. Morrison's extraordinary voice and the intimate, largely improvised arrangements create an effect unique in popular music.

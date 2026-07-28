@@ -69,6 +69,6 @@ tracklist_edition: "2011 GB"
 ---
 ## About
 
-lovestrong. is a release by Christina Perri released in 2011-01-01. It has been featured on 1 Sundown Sessions show. Featured tracks include jar of hearts.
+*lovestrong.* earns its place in the Sundown Sessions catalogue through “jar of hearts”, a selection that offers a direct route into Christina Perri's work.
 
-
+Heard in the context of the full release, “jar of hearts” is an invitation to explore beyond the track featured on the show.

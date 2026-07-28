@@ -78,6 +78,6 @@ tracklist_edition: "2011 GB"
 ---
 ## About
 
-Greatest Hits is a release by Westlife released in 2011-11-18. It has been featured on 1 Sundown Sessions show. Featured tracks include Unbreakable.
+*Greatest Hits* earns its place in the Sundown Sessions catalogue through “Unbreakable”, a selection that offers a direct route into Westlife's work.
 
-
+Heard in the context of the full release, “Unbreakable” is an invitation to explore beyond the track featured on the show.

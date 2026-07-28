@@ -20,9 +20,10 @@ tracks:
 ---
 ## About
 
-From Her to Eternity is a release by Nick Cave & The Bad Seeds released in 2009. It has been featured on 1 Sundown Sessions show. Featured tracks include From Her to Eternity.
+*From Her to Eternity* earns its place in the Sundown Sessions catalogue through “From Her to Eternity”, a selection that offers a direct route into Nick Cave & The Bad Seeds's work.
+
+Heard in the context of the full release, “From Her to Eternity” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - From Her to Eternity
-

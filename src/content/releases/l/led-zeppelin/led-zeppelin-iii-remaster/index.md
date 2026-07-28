@@ -43,10 +43,10 @@ tracklist_edition: "2005-05-25 JP 2005 Japanese remaster"
 ---
 ## About
 
-Led Zeppelin III (Remaster) is a release by Led Zeppelin released in 1970. It has been featured on 1 Sundown Sessions show. Featured tracks include Since I've Been Loving You - Remaster.
+*Led Zeppelin III (Remaster)* earns its place in the Sundown Sessions catalogue through “Since I've Been Loving You - Remaster”, a selection that offers a direct route into Led Zeppelin's work.
+
+Heard in the context of the full release, “Since I've Been Loving You - Remaster” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Since I've Been Loving You - Remaster
-
-

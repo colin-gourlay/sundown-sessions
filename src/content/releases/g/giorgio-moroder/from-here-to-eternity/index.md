@@ -47,6 +47,6 @@ tracklist_edition: "1977 GB"
 ---
 ## About
 
-From Here to Eternity is a release by Giorgio Moroder released in 1977-07-22. It has been featured on 1 Sundown Sessions show. Featured tracks include Utopia - Me Giorgio.
+*From Here to Eternity* earns its place in the Sundown Sessions catalogue through “Utopia - Me Giorgio”, a selection that offers a direct route into Giorgio Moroder's work.
 
-
+Heard in the context of the full release, “Utopia - Me Giorgio” is an invitation to explore beyond the track featured on the show.

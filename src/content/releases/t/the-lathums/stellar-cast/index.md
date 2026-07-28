@@ -19,9 +19,10 @@ tracks:
 ---
 ## About
 
-Stellar Cast is a release by The Lathums released in 2024. It has been featured on 1 Sundown Sessions show. Featured tracks include Stellar Cast.
+*Stellar Cast* earns its place in the Sundown Sessions catalogue through “Stellar Cast”, a selection that offers a direct route into The Lathums's work.
+
+Heard in the context of the full release, “Stellar Cast” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Stellar Cast
-

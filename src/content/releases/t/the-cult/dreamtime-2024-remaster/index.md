@@ -43,10 +43,10 @@ tracklist_edition: "2024-02-23 None 2024 remaster"
 ---
 ## About
 
-Dreamtime (2024 Remaster) is a release by The Cult released in 2024. It has been featured on 1 Sundown Sessions show. Featured tracks include 83rd Dream - 2024 Remaster.
+*Dreamtime (2024 Remaster)* earns its place in the Sundown Sessions catalogue through “83rd Dream - 2024 Remaster”, a selection that offers a direct route into The Cult's work.
+
+Heard in the context of the full release, “83rd Dream - 2024 Remaster” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - 83rd Dream - 2024 Remaster
-
-

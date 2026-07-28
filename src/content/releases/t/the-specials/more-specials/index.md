@@ -66,4 +66,6 @@ tracklist_edition: "1980-10 GB"
 ---
 ## About
 
-More Specials is the second studio album by Coventry ska revival band The Specials, released on 2 Tone Records in 1980. It reached number five on the UK Albums Chart and expanded the band's sound beyond ska to incorporate easy listening, lounge, and film soundtrack influences. The album was released just as tensions within the band were reaching breaking point, leading to the departure of several members.
+*More Specials* was released just as tensions within the band were reaching breaking point, leading to the departure of several members.
+
+It reached number five on the UK Albums Chart and expanded the band's sound beyond ska to incorporate easy listening, lounge, and film soundtrack influences.

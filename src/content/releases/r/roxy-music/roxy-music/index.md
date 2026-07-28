@@ -54,6 +54,6 @@ tracklist_edition: "1972 US"
 ---
 ## About
 
-Roxy Music is a release by Roxy Music released in 1972-06-16. It has been featured on 1 Sundown Sessions show. Featured tracks include Virginia Plain.
+*Roxy Music* earns its place in the Sundown Sessions catalogue through “Virginia Plain”, a selection that offers a direct route into Roxy Music's work.
 
-
+Heard in the context of the full release, “Virginia Plain” is an invitation to explore beyond the track featured on the show.

@@ -33,6 +33,6 @@ tracklist_edition: "1983 GB"
 ---
 ## About
 
-Burning Down the House is a release by Talking Heads released in 1983. It has been featured on 1 Sundown Sessions show. Featured tracks include Burning Down the House.
+*Burning Down the House* earns its place in the Sundown Sessions catalogue through “Burning Down the House”, a selection that offers a direct route into Talking Heads's work.
 
-
+Heard in the context of the full release, “Burning Down the House” is an invitation to explore beyond the track featured on the show.

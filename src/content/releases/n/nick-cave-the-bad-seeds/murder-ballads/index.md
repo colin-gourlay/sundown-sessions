@@ -45,4 +45,6 @@ tracklist_edition: "1996 GB"
 ---
 ## About
 
-Murder Ballads is the ninth studio album by Nick Cave & the Bad Seeds, released on Mute Records in 1996. It reached number eight on the UK Albums Chart and is a theatrical collection of murder narratives, featuring guest appearances from PJ Harvey, Kylie Minogue, and Shane MacGowan. The duet with Minogue, 'Where the Wild Roses Grow', became a UK top-ten single and one of Cave's most iconic songs.
+The duet with Minogue, 'Where the Wild Roses Grow', became a UK top-ten single and one of Cave's most iconic songs.
+
+It reached number eight on the UK Albums Chart and is a theatrical collection of murder narratives, featuring guest appearances from PJ Harvey, Kylie Minogue, and Shane MacGowan.

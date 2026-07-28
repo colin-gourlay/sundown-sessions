@@ -133,10 +133,10 @@ tracklist_edition: "2006-10-17 XE"
 ---
 ## About
 
-Fad Gadget By Frank Tovey is a release by Fad Gadget released in 2006. It has been featured on 1 Sundown Sessions show. Featured tracks include Collapsing New People.
+*Fad Gadget By Frank Tovey* earns its place in the Sundown Sessions catalogue through “Collapsing New People”, a selection that offers a direct route into Fad Gadget's work.
+
+Heard in the context of the full release, “Collapsing New People” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Collapsing New People
-
-

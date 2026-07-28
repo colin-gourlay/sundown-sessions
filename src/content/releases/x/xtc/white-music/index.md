@@ -60,6 +60,6 @@ tracklist_edition: "1978 AU"
 ---
 ## About
 
-White Music is a release by XTC released in 1978-01-20. It has been featured on 1 Sundown Sessions show. Featured tracks include Statue Of Liberty.
+*White Music* earns its place in the Sundown Sessions catalogue through “Statue Of Liberty”, a selection that offers a direct route into XTC's work.
 
-
+Heard in the context of the full release, “Statue Of Liberty” is an invitation to explore beyond the track featured on the show.

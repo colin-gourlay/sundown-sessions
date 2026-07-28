@@ -36,6 +36,6 @@ tracklist_edition: "2013-06-20 XW"
 ---
 ## About
 
-There Goes Our Love Again (Remixes) is a release by White Lies released in 2013-06-20. It has been featured on 1 Sundown Sessions show. Featured tracks include There Goes Our Love Again.
+*There Goes Our Love Again (Remixes)* earns its place in the Sundown Sessions catalogue through “There Goes Our Love Again”, a selection that offers a direct route into White Lies's work.
 
-
+Heard in the context of the full release, “There Goes Our Love Again” is an invitation to explore beyond the track featured on the show.

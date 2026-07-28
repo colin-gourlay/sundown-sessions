@@ -71,4 +71,6 @@ tracklist_edition: "1979 AU"
 ---
 ## About
 
-Drums and Wires is the third studio album by Swindon new wave band XTC, released on Virgin Records in 1979. It reached number 34 on the UK Albums Chart and marked a deliberate shift to a more stark, rhythmically driven sound, produced by Steve Lillywhite with contributions from Terry Chambers' prominent, live-room drums. The album is considered a key record in the post-punk canon.
+*Drums And Wires* reached number 34 on the UK Albums Chart and marked a deliberate shift to a more stark, rhythmically driven sound, produced by Steve Lillywhite with contributions from Terry Chambers' prominent, live-room drums.
+
+The album is considered a key record in the post-punk canon.

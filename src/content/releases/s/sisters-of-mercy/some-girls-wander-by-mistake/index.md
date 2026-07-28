@@ -81,6 +81,6 @@ tracklist_edition: "1992 US"
 ---
 ## About
 
-Some Girls Wander by Mistake is a release by Sisters of Mercy released in 1992-04-27. It has been featured on 1 Sundown Sessions show. Featured tracks include Alice.
+*Some Girls Wander by Mistake* earns its place in the Sundown Sessions catalogue through “Alice”, a selection that offers a direct route into Sisters of Mercy's work.
 
-
+Heard in the context of the full release, “Alice” is an invitation to explore beyond the track featured on the show.

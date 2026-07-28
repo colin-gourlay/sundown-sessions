@@ -52,4 +52,6 @@ tracklist_edition: "1998-03-28 JP"
 ---
 ## About
 
-A Storm in Heaven is the debut studio album by Wigan indie rock band The Verve, released on Hut Records in 1993. The album is a swirling, ambitious record that prefigures the more song-orientated approach of their later work, with Nick McCabe's guitar creating dense, textural soundscapes beneath Richard Ashcroft's vocals. It established The Verve as one of the most original and exciting new acts in British indie music.
+*A Storm in Heaven* established The Verve as one of the most original and exciting new acts in British indie music.
+
+The album is a swirling, ambitious record that prefigures the more song-orientated approach of their later work, with Nick McCabe's guitar creating dense, textural soundscapes beneath Richard Ashcroft's vocals.

@@ -77,4 +77,6 @@ tracklist_edition: "2025-05-23 GB"
 ---
 ## About
 
-Orbital (the Brown Album) is the second studio album by Sevenoaks electronic music duo Orbital, released on Internal Records in 1993. It builds on the techno and rave influences of their debut into something more ambitious and melodically rich. The album is a landmark of British electronic music and features some of the duo's most celebrated compositions.
+*Orbital (Brown Album)* is a landmark of British electronic music and features some of the duo's most celebrated compositions.
+
+It builds on the techno and rave influences of their debut into something more ambitious and melodically rich.

@@ -43,4 +43,6 @@ tracklist_edition: "1984-03 GB"
 ---
 ## About
 
-The Icicle Works is the self-titled debut studio album by Liverpool post-punk band The Icicle Works, released on Beggars Banquet in 1984. It introduced the band's blend of melodic guitar rock and introspective lyricism, drawing comparisons to Echo & the Bunnymen and early Simple Minds. The album includes their best-known track, 'Love Is a Wonderful Colour'.
+*The Icicle Works* introduced the band's blend of melodic guitar rock and introspective lyricism, drawing comparisons to Echo & the Bunnymen and early Simple Minds.
+
+The album includes their best-known track, 'Love Is a Wonderful Colour'.

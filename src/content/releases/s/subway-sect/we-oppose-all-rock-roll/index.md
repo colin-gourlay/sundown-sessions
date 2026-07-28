@@ -73,4 +73,6 @@ tracklist_edition: "1996 GB"
 ---
 ## About
 
-We Oppose All Rock & Roll is a retrospective compilation documenting the early recordings of Vic Godard's Subway Sect, one of the most underrated acts of the original UK punk scene. The band's angular, minimal approach was enormously influential on the subsequent post-punk and indie movements.
+The band's angular, minimal approach was enormously influential on the subsequent post-punk and indie movements.
+
+We Oppose All Rock & Roll is a retrospective compilation documenting the early recordings of Vic Godard's Subway Sect, one of the most underrated acts of the original UK punk scene.

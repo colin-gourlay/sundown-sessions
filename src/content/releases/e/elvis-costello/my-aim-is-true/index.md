@@ -60,6 +60,6 @@ tracklist_edition: "1977-07-22 GB"
 ---
 ## About
 
-My Aim Is True is a release by Elvis Costello released in 1977-07-22. It has been featured on 1 Sundown Sessions show. Featured tracks include Watching The Detectives.
+*My Aim Is True* earns its place in the Sundown Sessions catalogue through “Watching The Detectives”, a selection that offers a direct route into Elvis Costello's work.
 
-
+Heard in the context of the full release, “Watching The Detectives” is an invitation to explore beyond the track featured on the show.

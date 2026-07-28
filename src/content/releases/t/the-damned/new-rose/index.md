@@ -28,6 +28,6 @@ tracklist_edition: "1976-10-22 GB"
 ---
 ## About
 
-New Rose is a release by The Damned released in 1976-10-22. It has been featured on 1 Sundown Sessions show. Featured tracks include New Rose.
+*New Rose* earns its place in the Sundown Sessions catalogue through “New Rose”, a selection that offers a direct route into The Damned's work.
 
-
+Heard in the context of the full release, “New Rose” is an invitation to explore beyond the track featured on the show.

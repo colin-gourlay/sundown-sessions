@@ -54,6 +54,6 @@ tracklist_edition: "1980 GB"
 ---
 ## About
 
-Travelogue is a release by The Human League released in 1980-05-23. It has been featured on 1 Sundown Sessions show. Featured tracks include Rock 'n' Roll / Night Clubbing.
+*Travelogue* earns its place in the Sundown Sessions catalogue through “Rock 'n' Roll / Night Clubbing”, a selection that offers a direct route into The Human League's work.
 
-
+Heard in the context of the full release, “Rock 'n' Roll / Night Clubbing” is an invitation to explore beyond the track featured on the show.

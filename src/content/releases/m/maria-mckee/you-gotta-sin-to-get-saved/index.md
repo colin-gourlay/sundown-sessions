@@ -52,6 +52,6 @@ tracklist_edition: "1993 GB"
 ---
 ## About
 
-You Gotta Sin To Get Saved is a release by Maria McKee released in 1993-06-22. It has been featured on 1 Sundown Sessions show. Featured tracks include I Can't Make It Alone.
+*You Gotta Sin To Get Saved* earns its place in the Sundown Sessions catalogue through “I Can't Make It Alone”, a selection that offers a direct route into Maria McKee's work.
 
-
+Heard in the context of the full release, “I Can't Make It Alone” is an invitation to explore beyond the track featured on the show.

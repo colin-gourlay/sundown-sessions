@@ -54,6 +54,6 @@ tracklist_edition: "1980-09-01 GB"
 ---
 ## About
 
-Empires And Dance is a release by Simple Minds released in 1980-09-01. It has been featured on 1 Sundown Sessions show. Featured tracks include I Travel.
+*Empires And Dance* earns its place in the Sundown Sessions catalogue through “I Travel”, a selection that offers a direct route into Simple Minds's work.
 
-
+Heard in the context of the full release, “I Travel” is an invitation to explore beyond the track featured on the show.

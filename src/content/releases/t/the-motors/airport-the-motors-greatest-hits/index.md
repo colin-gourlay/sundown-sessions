@@ -64,10 +64,10 @@ tracklist_edition: "1995 US"
 ---
 ## About
 
-Airport - The Motors Greatest Hits is a release by The Motors released in 1995. It has been featured on 1 Sundown Sessions show. Featured tracks include Dancing The Night Away.
+*Airport - The Motors Greatest Hits* earns its place in the Sundown Sessions catalogue through “Dancing The Night Away”, a selection that offers a direct route into The Motors's work.
+
+Heard in the context of the full release, “Dancing The Night Away” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Dancing The Night Away
-
-

@@ -44,4 +44,6 @@ tracklist_edition: "1981 US"
 ---
 ## About
 
-Dare is the third studio album by Sheffield electro-pop band The Human League, released on Virgin Records in 1981. It reached number one on the UK Albums Chart and spawned the international chart-topper 'Don't You Want Me'. The album is a landmark of the synth-pop genre and remains one of the best-selling British albums of the decade.
+*Dare* is a landmark of the synth-pop genre and remains one of the best-selling British albums of the decade.
+
+It reached number one on the UK Albums Chart and spawned the international chart-topper 'Don't You Want Me'.

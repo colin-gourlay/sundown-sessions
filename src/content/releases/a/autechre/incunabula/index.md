@@ -57,4 +57,6 @@ tracklist_edition: "1993 GB Reversed cover"
 ---
 ## About
 
-Incunabula is the debut studio album by Manchester electronic music duo Autechre (Rob Brown and Sean Booth), released on Warp Records in 1993. The album is a founding document of intelligent dance music (IDM), blending ambient textures with intricate drum programming. It established Autechre as one of the most inventive and uncompromising electronic music acts of their generation.
+*Incunabula* established Autechre as one of the most inventive and uncompromising electronic music acts of their generation.
+
+The album is a founding document of intelligent dance music (IDM), blending ambient textures with intricate drum programming.

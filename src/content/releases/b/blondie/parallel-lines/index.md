@@ -50,4 +50,6 @@ tracklist_edition: "1978 PT"
 ---
 ## About
 
-Parallel Lines is the third studio album by New York new wave band Blondie, released on Chrysalis Records in 1978. It topped the UK Albums Chart and remains one of the best-selling albums of the era, spawning the global number-one single 'Heart of Glass'. The album perfectly blends punk, pop, and disco influences, and is regarded as a landmark of the new wave genre.
+*Parallel Lines* perfectly blends punk, pop, and disco influences, and is regarded as a landmark of the new wave genre.
+
+It topped the UK Albums Chart and remains one of the best-selling albums of the era, spawning the global number-one single 'Heart of Glass'.

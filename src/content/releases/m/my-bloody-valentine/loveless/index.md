@@ -47,4 +47,6 @@ tracklist_edition: "1991 CA"
 ---
 ## About
 
-Loveless is the second studio album by Irish-British shoegazing band My Bloody Valentine, released on Creation Records in 1991. It reached number 24 on the UK Albums Chart and is widely regarded as the definitive shoegaze album and one of the greatest records ever made. Kevin Shields' revolutionary use of tremolo and pitch-shifting created a new vocabulary for electric guitar and changed the direction of alternative rock permanently.
+*Loveless* reached number 24 on the UK Albums Chart and is widely regarded as the definitive shoegaze album and one of the greatest records ever made.
+
+Kevin Shields' revolutionary use of tremolo and pitch-shifting created a new vocabulary for electric guitar and changed the direction of alternative rock permanently.

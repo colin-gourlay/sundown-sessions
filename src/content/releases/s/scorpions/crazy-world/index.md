@@ -31,6 +31,6 @@ tracklist_edition: "1990 GB"
 ---
 ## About
 
-Crazy World is a release by Scorpions released in 1990. It has been featured on 1 Sundown Sessions show. Featured tracks include Wind Of Change.
+*Crazy World* earns its place in the Sundown Sessions catalogue through “Wind Of Change”, a selection that offers a direct route into Scorpions's work.
 
-
+Heard in the context of the full release, “Wind Of Change” is an invitation to explore beyond the track featured on the show.

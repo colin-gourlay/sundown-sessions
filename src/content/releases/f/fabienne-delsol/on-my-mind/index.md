@@ -60,6 +60,6 @@ tracklist_edition: "2010-09-06 GB"
 ---
 ## About
 
-On My Mind is a release by Fabienne DelSol released in 2010-09-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Ragunboneman.
+*On My Mind* earns its place in the Sundown Sessions catalogue through “Ragunboneman”, a selection that offers a direct route into Fabienne DelSol's work.
 
-
+Heard in the context of the full release, “Ragunboneman” is an invitation to explore beyond the track featured on the show.

@@ -93,6 +93,6 @@ tracklist_edition: "1977 DE"
 ---
 ## About
 
-Out of the Blue is a release by Electric Light Orchestra released in 1977-10-28. It has been featured on 1 Sundown Sessions show. Featured tracks include Mr. Blue Sky.
+*Out of the Blue* earns its place in the Sundown Sessions catalogue through “Mr. Blue Sky”, a selection that offers a direct route into Electric Light Orchestra's work.
 
-
+Heard in the context of the full release, “Mr. Blue Sky” is an invitation to explore beyond the track featured on the show.

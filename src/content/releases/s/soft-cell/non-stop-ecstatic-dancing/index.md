@@ -42,6 +42,6 @@ tracklist_edition: "1982 GB"
 ---
 ## About
 
-Non Stop Ecstatic Dancing is a release by Soft Cell released in 1982-06-21. It has been featured on 1 Sundown Sessions show. Featured tracks include Tainted Love / Where Did Our Love Go?.
+*Non Stop Ecstatic Dancing* earns its place in the Sundown Sessions catalogue through “Tainted Love / Where Did Our Love Go?”, a selection that offers a direct route into Soft Cell's work.
 
-
+Heard in the context of the full release, “Tainted Love / Where Did Our Love Go?” is an invitation to explore beyond the track featured on the show.

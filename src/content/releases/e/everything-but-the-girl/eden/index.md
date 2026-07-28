@@ -50,4 +50,6 @@ tracklist_edition: "1984-06-04 GB"
 ---
 ## About
 
-Eden is the debut studio album by Hull duo Everything But the Girl — Tracey Thorn and Ben Watt — released on Blanco y Negro Records in 1984. It reached number 14 on the UK Albums Chart and established their sophisticated, bossa nova-inflected sound. The album is characterised by Thorn's beautifully restrained vocal performances and the pair's collectively mature, understated musical sensibility.
+*Eden* reached number 14 on the UK Albums Chart and established their sophisticated, bossa nova-inflected sound.
+
+The album is characterised by Thorn's beautifully restrained vocal performances and the pair's collectively mature, understated musical sensibility.

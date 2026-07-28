@@ -47,4 +47,4 @@ tracklist_edition: "1997 AU"
 ---
 ## About
 
-Attack of the Grey Lantern is the debut studio album by Chester art pop band Mansun, released on Parlophone in 1997. It debuted at number one on the UK Albums Chart and became one of the most critically celebrated debut albums of the Britpop era, showcasing the band's ambitious blend of glam rock, art pop, and progressive influences under singer Paul Draper's idiosyncratic vision.
+*Attack of the Grey Lantern* debuted at number one on the UK Albums Chart and became one of the most critically celebrated debut albums of the Britpop era, showcasing the band's ambitious blend of glam rock, art pop, and progressive influences under singer Paul Draper's idiosyncratic vision.

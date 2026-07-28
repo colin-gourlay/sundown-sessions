@@ -41,4 +41,6 @@ tracklist_edition: "1975 US"
 ---
 ## About
 
-Fandango! is the fourth studio album by Texas blues rock band ZZ Top, released on London Records in 1975. The first side of the original vinyl features five live recordings, while the second comprises studio material including the hit 'Tush'. The album was a significant commercial success in the United States and consolidated the band's reputation as one of America's finest live acts.
+*Fandango!* consolidated ZZ Top's reputation as one of America's finest live acts and became a significant commercial success in the United States.
+
+The first side of the original vinyl features five live recordings, while the second comprises studio material including the hit 'Tush'.

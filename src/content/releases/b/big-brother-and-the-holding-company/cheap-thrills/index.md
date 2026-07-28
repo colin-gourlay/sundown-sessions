@@ -34,4 +34,6 @@ tracklist_edition: "1968 US mono"
 ---
 ## About
 
-Cheap Thrills is the second studio album by San Francisco psychedelic rock band Big Brother and the Holding Company, released on Columbia Records in 1968. It is best known as the vehicle that introduced Janis Joplin to a mass audience, featuring her ferocious, emotionally uninhibited vocal performances on 'Piece of My Heart' and 'Ball and Chain'. The album topped the US charts for eight weeks.
+*Cheap Thrills* is best known as the vehicle that introduced Janis Joplin to a mass audience, featuring her ferocious, emotionally uninhibited vocal performances on 'Piece of My Heart' and 'Ball and Chain'.
+
+The album topped the US charts for eight weeks.

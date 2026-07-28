@@ -34,4 +34,6 @@ tracklist_edition: "1967 US"
 ---
 ## About
 
-Da Capo is the second studio album by Los Angeles psychedelic rock band Love, released on Elektra Records in 1967. Led by Arthur Lee, the album blends folk, garage rock, R&B, and psychedelia into something genuinely eclectic and unique. The album is notable for the 18-minute Side Two track 'Revelation', which showcases the band's improvisational ambitions.
+*Da Capo* is notable for the 18-minute Side Two track 'Revelation', which showcases the band's improvisational ambitions.
+
+Led by Arthur Lee, the album blends folk, garage rock, R&B, and psychedelia into something genuinely eclectic and unique.

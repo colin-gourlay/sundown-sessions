@@ -141,10 +141,10 @@ tracklist_edition: "2004 GB"
 ---
 ## About
 
-Bird of Paradise - An Anthology is a release by Snowy White released in 2003. It has been featured on 1 Sundown Sessions show. Featured tracks include Bird of Paradise.
+*Bird of Paradise - An Anthology* earns its place in the Sundown Sessions catalogue through “Bird of Paradise”, a selection that offers a direct route into Snowy White's work.
+
+Heard in the context of the full release, “Bird of Paradise” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Bird of Paradise
-
-

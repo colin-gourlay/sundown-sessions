@@ -32,4 +32,6 @@ tracklist_edition: "1973 GB"
 ---
 ## About
 
-Wizzard Brew is the debut studio album by Birmingham glam rock band Wizzard, led by Roy Wood, released on Harvest Records in 1973. It reached number 29 on the UK Albums Chart. Wizzard grew out of the dissolution of The Move and Electric Light Orchestra, and the album showcases Wood's eccentric, multi-layered production aesthetic.
+Wizzard grew out of the dissolution of The Move and Electric Light Orchestra, and the album showcases Wood's eccentric, multi-layered production aesthetic.
+
+It reached number 29 on the UK Albums Chart.

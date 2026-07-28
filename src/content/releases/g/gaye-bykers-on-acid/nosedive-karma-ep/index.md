@@ -16,10 +16,10 @@ tracklist_edition: "1987 GB"
 ---
 ## About
 
-Nosedive Karma EP is a release by Gaye Bykers On Acid released in 1987. It has been featured on 1 Sundown Sessions show. Featured tracks include Nosedive Karma.
+*Nosedive Karma EP* earns its place in the Sundown Sessions catalogue through “Nosedive Karma”, a selection that offers a direct route into Gaye Bykers On Acid's work.
+
+Heard in the context of the full release, “Nosedive Karma” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Nosedive Karma
-
-

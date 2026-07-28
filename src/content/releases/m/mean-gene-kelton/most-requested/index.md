@@ -61,6 +61,6 @@ tracklist_edition: ""
 ---
 ## About
 
-Most Requested is a release by Mean Gene Kelton released in 1999. It has been featured on 1 Sundown Sessions show. Featured tracks include My Baby Don't Wear No Panties.
+*Most Requested* earns its place in the Sundown Sessions catalogue through “My Baby Don't Wear No Panties”, a selection that offers a direct route into Mean Gene Kelton's work.
 
-
+Heard in the context of the full release, “My Baby Don't Wear No Panties” is an invitation to explore beyond the track featured on the show.

@@ -25,9 +25,10 @@ tracks:
 ---
 ## About
 
-Hits'n'Flips is a release by The Move released in 2013. It has been featured on 1 Sundown Sessions show. Featured tracks include Blackberry Way.
+*Hits'n'Flips* earns its place in the Sundown Sessions catalogue through “Blackberry Way”, a selection that offers a direct route into The Move's work.
+
+Heard in the context of the full release, “Blackberry Way” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Blackberry Way
-

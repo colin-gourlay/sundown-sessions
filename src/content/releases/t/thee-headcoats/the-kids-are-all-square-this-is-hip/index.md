@@ -55,6 +55,6 @@ tracklist_edition: "1990-05 GB"
 ---
 ## About
 
-The Kids Are All Square, This Is Hip! is a release by Thee Headcoats released in 1990-05. It has been featured on 1 Sundown Sessions show. Featured tracks include All My Feelings Denied.
+*The Kids Are All Square, This Is Hip!* earns its place in the Sundown Sessions catalogue through “All My Feelings Denied”, a selection that offers a direct route into Thee Headcoats's work.
 
-
+Heard in the context of the full release, “All My Feelings Denied” is an invitation to explore beyond the track featured on the show.

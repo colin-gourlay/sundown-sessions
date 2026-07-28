@@ -57,6 +57,6 @@ tracklist_edition: "1971-12 US"
 ---
 ## About
 
-Distant Light is a release by The Hollies released in 1971-12. It has been featured on 1 Sundown Sessions show. Featured tracks include Long Cool Woman (In a Black Dress).
+*Distant Light* earns its place in the Sundown Sessions catalogue through “Long Cool Woman (In a Black Dress)”, a selection that offers a direct route into The Hollies's work.
 
-
+Heard in the context of the full release, “Long Cool Woman (In a Black Dress)” is an invitation to explore beyond the track featured on the show.

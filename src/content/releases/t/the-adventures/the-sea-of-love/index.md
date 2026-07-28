@@ -49,6 +49,6 @@ tracklist_edition: "1988 US"
 ---
 ## About
 
-The Sea Of Love is a release by The Adventures released in 1988. It has been featured on 1 Sundown Sessions show. Featured tracks include Broken Land.
+*The Sea Of Love* earns its place in the Sundown Sessions catalogue through “Broken Land”, a selection that offers a direct route into The Adventures's work.
 
-
+Heard in the context of the full release, “Broken Land” is an invitation to explore beyond the track featured on the show.

@@ -43,4 +43,4 @@ tracklist_edition: "1993 GB"
 ---
 ## About
 
-Calling from a Country Phone is the second solo studio album by Go-Betweens co-founder Robert Forster, released on Beggars Banquet in 1993. It showcases Forster's gifts as a songwriter and storyteller, with a warm, acoustic-influenced sound that reflects his return to Australia after years living abroad.
+*Calling from a Country Phone* showcases Forster's gifts as a songwriter and storyteller, with a warm, acoustic-influenced sound that reflects his return to Australia after years living abroad.

@@ -55,6 +55,6 @@ tracklist_edition: "1980 GB"
 ---
 ## About
 
-New Clear Days is a release by The Vapors released in 1980. It has been featured on 1 Sundown Sessions show. Featured tracks include News At Ten.
+*New Clear Days* earns its place in the Sundown Sessions catalogue through “News At Ten”, a selection that offers a direct route into The Vapors's work.
 
-
+Heard in the context of the full release, “News At Ten” is an invitation to explore beyond the track featured on the show.

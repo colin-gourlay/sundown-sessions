@@ -25,4 +25,6 @@ tracklist_edition: "1989 GB"
 ---
 ## About
 
-Call Me Blue is a studio album by Irish indie rock band A House, released independently in 2020 as a comeback project. A House were an important act on the late-1980s and early-1990s UK and Irish indie scene, known for their melodic guitar pop and dry wit. Call Me Blue marked their return to recording after a long hiatus.
+Call Me Blue marked their return to recording after a long hiatus.
+
+A House were an important act on the late-1980s and early-1990s UK and Irish indie scene, known for their melodic guitar pop and dry wit.

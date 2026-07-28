@@ -46,6 +46,6 @@ tracklist_edition: "1979 GB"
 ---
 ## About
 
-Down To Earth is a release by Rainbow released in 1979. It has been featured on 1 Sundown Sessions show. Featured tracks include All Night Long.
+*Down To Earth* earns its place in the Sundown Sessions catalogue through “All Night Long”, a selection that offers a direct route into Rainbow's work.
 
-
+Heard in the context of the full release, “All Night Long” is an invitation to explore beyond the track featured on the show.

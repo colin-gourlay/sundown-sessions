@@ -70,4 +70,6 @@ tracklist_edition: "2002-12-16 XW"
 ---
 ## About
 
-Kollected: The Best of Kula Shaker is a compilation album by British psychedelic rock band Kula Shaker, released in 2002. It draws together their most celebrated singles and album tracks, including 'Hush' and 'Tattva'. The band rose to prominence in the mid-1990s Britpop era, blending classic rock with Eastern mysticism.
+*Kollected - The Best of Kula Shaker* draws together their most celebrated singles and album tracks, including 'Hush' and 'Tattva'.
+
+The band rose to prominence in the mid-1990s Britpop era, blending classic rock with Eastern mysticism.

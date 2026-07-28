@@ -40,10 +40,10 @@ tracklist_edition: "1982 US"
 ---
 ## About
 
-The Party's Over is a release by Talk Talk released in 1982. It has been featured on 1 Sundown Sessions show. Featured tracks include Talk Talk.
+*The Party's Over* earns its place in the Sundown Sessions catalogue through “Talk Talk”, a selection that offers a direct route into Talk Talk's work.
+
+Heard in the context of the full release, “Talk Talk” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Talk Talk
-
-

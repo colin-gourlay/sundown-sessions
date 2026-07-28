@@ -31,10 +31,10 @@ tracklist_edition: "1970 GB"
 ---
 ## About
 
-Shazam (2007 Remaster) is a release by The Move released in 1970. It has been featured on 1 Sundown Sessions show. Featured tracks include Hello Susie - 2007 Remaster.
+*Shazam (2007 Remaster)* earns its place in the Sundown Sessions catalogue through “Hello Susie - 2007 Remaster”, a selection that offers a direct route into The Move's work.
+
+Heard in the context of the full release, “Hello Susie - 2007 Remaster” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Hello Susie - 2007 Remaster
-
-

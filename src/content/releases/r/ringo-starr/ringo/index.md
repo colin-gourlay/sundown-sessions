@@ -53,6 +53,6 @@ tracklist_edition: "1973 FR"
 ---
 ## About
 
-Ringo is a release by Ringo Starr released in 1973-11-23. It has been featured on 1 Sundown Sessions show. Featured tracks include It Don't Come Easy.
+*Ringo* earns its place in the Sundown Sessions catalogue through “It Don't Come Easy”, a selection that offers a direct route into Ringo Starr's work.
 
-
+Heard in the context of the full release, “It Don't Come Easy” is an invitation to explore beyond the track featured on the show.

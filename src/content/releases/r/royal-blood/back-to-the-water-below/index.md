@@ -63,6 +63,6 @@ tracklist_edition: "2023-09-01 GB"
 ---
 ## About
 
-Back To The Water Below is a release by Royal Blood released in 2023-09-01. It has been featured on 1 Sundown Sessions show. Featured tracks include Supermodel Avalanches.
+*Back To The Water Below* earns its place in the Sundown Sessions catalogue through “Supermodel Avalanches”, a selection that offers a direct route into Royal Blood's work.
 
-
+Heard in the context of the full release, “Supermodel Avalanches” is an invitation to explore beyond the track featured on the show.

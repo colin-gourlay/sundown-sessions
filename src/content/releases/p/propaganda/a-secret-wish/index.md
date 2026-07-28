@@ -44,4 +44,6 @@ tracklist_edition: "1985 US"
 ---
 ## About
 
-A Secret Wish is the debut studio album by German synth-pop group Propaganda, released on ZTT Records in 1985. It reached number 16 on the UK Albums Chart and is celebrated for its lavish, orchestrated production, overseen by Trevor Horn. The album includes the singles 'Dr Mabuse' and 'Duel', both of which became cult favourites in the UK.
+*A Secret Wish* includes the singles 'Dr Mabuse' and 'Duel', both of which became cult favourites in the UK.
+
+It reached number 16 on the UK Albums Chart and is celebrated for its lavish, orchestrated production, overseen by Trevor Horn.

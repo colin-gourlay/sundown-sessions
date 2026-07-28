@@ -52,6 +52,6 @@ tracklist_edition: "1987 GB"
 ---
 ## About
 
-A Letter from St. Paul is a release by The Silencers released in 1987. It has been featured on 1 Sundown Sessions show. Featured tracks include Painted Moon.
+*A Letter from St. Paul* earns its place in the Sundown Sessions catalogue through “Painted Moon”, a selection that offers a direct route into The Silencers's work.
 
-
+Heard in the context of the full release, “Painted Moon” is an invitation to explore beyond the track featured on the show.

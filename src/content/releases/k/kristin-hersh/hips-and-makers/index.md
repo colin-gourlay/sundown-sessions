@@ -68,6 +68,6 @@ tracklist_edition: "1994 DE"
 ---
 ## About
 
-Hips and Makers is a release by Kristin Hersh released in 1994-01-24. It has been featured on 1 Sundown Sessions show. Featured tracks include Your Ghost.
+*Hips and Makers* earns its place in the Sundown Sessions catalogue through “Your Ghost”, a selection that offers a direct route into Kristin Hersh's work.
 
-
+Heard in the context of the full release, “Your Ghost” is an invitation to explore beyond the track featured on the show.

@@ -62,4 +62,6 @@ tracklist_edition: "1982 GB"
 ---
 ## About
 
-Complete Madness is the first compilation album by Camden ska revival band Madness, released on Stiff Records in 1982. It reached number one on the UK Albums Chart and gathered together the band's most beloved singles, including 'One Step Beyond', 'My Girl', 'Baggy Trousers', and 'House of Fun'. It remains one of the most successful British compilations ever released.
+*Complete Madness* remains one of the most successful British compilations ever released.
+
+It reached number one on the UK Albums Chart and gathered together the band's most beloved singles, including 'One Step Beyond', 'My Girl', 'Baggy Trousers', and 'House of Fun'.

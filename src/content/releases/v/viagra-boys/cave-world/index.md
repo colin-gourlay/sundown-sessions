@@ -60,6 +60,6 @@ tracklist_edition: "2022-07-08 XW"
 ---
 ## About
 
-Cave World is a release by Viagra Boys released in 2022-07-08. It has been featured on 1 Sundown Sessions show. Featured tracks include Troglodyte.
+*Cave World* earns its place in the Sundown Sessions catalogue through “Troglodyte”, a selection that offers a direct route into Viagra Boys's work.
 
-
+Heard in the context of the full release, “Troglodyte” is an invitation to explore beyond the track featured on the show.

@@ -63,6 +63,6 @@ tracklist_edition: "2003 AU"
 ---
 ## About
 
-Fire is a release by Electric Six released in 2003-05-19. It has been featured on 1 Sundown Sessions show. Featured tracks include Synthesizer.
+*Fire* earns its place in the Sundown Sessions catalogue through “Synthesizer”, a selection that offers a direct route into Electric Six's work.
 
-
+Heard in the context of the full release, “Synthesizer” is an invitation to explore beyond the track featured on the show.

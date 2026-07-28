@@ -58,4 +58,6 @@ tracklist_edition: "1978 DE"
 ---
 ## About
 
-An American Prayer is a studio album released posthumously in 1978, pairing spoken-word recordings made by The Doors vocalist Jim Morrison in 1969 and 1970 with new musical accompaniment recorded by the remaining members of The Doors. It is a document of Morrison's considerable gifts as a poet and performer, and includes the track 'A Feast of Friends'.
+*An American Prayer* is a document of Morrison's considerable gifts as a poet and performer, and includes the track 'A Feast of Friends'.
+
+Spoken-word recordings made by Morrison in 1969 and 1970 are paired with later musical accompaniment from the remaining members of The Doors.

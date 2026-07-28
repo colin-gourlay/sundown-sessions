@@ -52,10 +52,10 @@ tracklist_edition: "1995 US Columbia House club edition"
 ---
 ## About
 
-I'm With Stupid is a release by Aimee Mann released in 1995. It has been featured on 1 Sundown Sessions show. Featured tracks include Sugarcoated.
+*I'm With Stupid* earns its place in the Sundown Sessions catalogue through “Sugarcoated”, a selection that offers a direct route into Aimee Mann's work.
+
+Heard in the context of the full release, “Sugarcoated” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Sugarcoated
-
-

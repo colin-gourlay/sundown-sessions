@@ -70,6 +70,6 @@ tracklist_edition: "2000 GB"
 ---
 ## About
 
-Enjoy the Melodic Sunshine is a release by Cosmic Rough Riders released in 2000-11-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Revolution (In the Summertime?).
+*Enjoy the Melodic Sunshine* earns its place in the Sundown Sessions catalogue through “Revolution (In the Summertime?)”, a selection that offers a direct route into Cosmic Rough Riders's work.
 
-
+Heard in the context of the full release, “Revolution (In the Summertime?)” is an invitation to explore beyond the track featured on the show.

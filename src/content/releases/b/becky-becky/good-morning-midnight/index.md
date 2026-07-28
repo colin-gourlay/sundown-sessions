@@ -50,6 +50,6 @@ tracklist_edition: "2014-05-01 XW"
 ---
 ## About
 
-Good Morning, Midnight is a release by Becky Becky released in 2014-05-01. It has been featured on 1 Sundown Sessions show. Featured tracks include Tigers Are Better-Looking.
+*Good Morning, Midnight* earns its place in the Sundown Sessions catalogue through “Tigers Are Better-Looking”, a selection that offers a direct route into Becky Becky's work.
 
-
+Heard in the context of the full release, “Tigers Are Better-Looking” is an invitation to explore beyond the track featured on the show.

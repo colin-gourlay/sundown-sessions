@@ -50,4 +50,6 @@ tracklist_edition: "1997 XE clear tray"
 ---
 ## About
 
-Ladies and Gentlemen We Are Floating in Space is the third studio album by Rugby space rock band Spiritualized, released on Dedicated Records in 1997. It reached number four on the UK Albums Chart and is widely regarded as their masterpiece: a dense, orchestral, and emotionally overwhelming record that blends gospel, blues, and ambient music. The cover, designed to look like a pharmaceutical blister pack, is one of the most celebrated pieces of record packaging of the decade.
+*Ladies and Gentlemen We Are Floating in Space* reached number four on the UK Albums Chart and is widely regarded as their masterpiece: a dense, orchestral, and emotionally overwhelming record that blends gospel, blues, and ambient music.
+
+The cover, designed to look like a pharmaceutical blister pack, is one of the most celebrated pieces of record packaging of the decade.

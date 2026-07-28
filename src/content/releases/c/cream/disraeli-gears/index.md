@@ -47,4 +47,6 @@ tracklist_edition: "1967 DE"
 ---
 ## About
 
-Disraeli Gears is the second studio album by British blues rock supergroup Cream, released on Reaction Records in 1967. It reached number five on the UK Albums Chart and includes 'Sunshine of Your Love' and 'Strange Brew', two of the band's most celebrated tracks. The album is a landmark of psychedelic blues rock and showcases the extraordinary interplay between Eric Clapton, Jack Bruce, and Ginger Baker.
+*Disraeli Gears* is a landmark of psychedelic blues rock and showcases the extraordinary interplay between Eric Clapton, Jack Bruce, and Ginger Baker.
+
+It reached number five on the UK Albums Chart and includes 'Sunshine of Your Love' and 'Strange Brew', two of the band's most celebrated tracks.

@@ -41,6 +41,6 @@ tracklist_edition: "2010 GB"
 ---
 ## About
 
-Poets Of England is a release by The Vermin Poets released in 2010. It has been featured on 1 Sundown Sessions show. Featured tracks include Like Poets Often Do.
+*Poets Of England* earns its place in the Sundown Sessions catalogue through “Like Poets Often Do”, a selection that offers a direct route into The Vermin Poets's work.
 
-
+Heard in the context of the full release, “Like Poets Often Do” is an invitation to explore beyond the track featured on the show.

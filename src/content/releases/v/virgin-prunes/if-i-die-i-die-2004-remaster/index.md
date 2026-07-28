@@ -40,10 +40,10 @@ tracklist_edition: "XW 2004 remaster"
 ---
 ## About
 
-...If I Die, I Die (2004 Remaster) is a release by Virgin Prunes released in 1982. It has been featured on 1 Sundown Sessions show. Featured tracks include Caucasian Walk - 2004 Remaster.
+*...If I Die, I Die (2004 Remaster)* earns its place in the Sundown Sessions catalogue through “Caucasian Walk - 2004 Remaster”, a selection that offers a direct route into Virgin Prunes's work.
+
+Heard in the context of the full release, “Caucasian Walk - 2004 Remaster” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Caucasian Walk - 2004 Remaster
-
-

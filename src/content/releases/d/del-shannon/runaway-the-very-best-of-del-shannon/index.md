@@ -108,6 +108,6 @@ tracklist_edition: "2002-01-22 US"
 ---
 ## About
 
-Runaway: The Very Best Of Del Shannon is a release by Del Shannon released in 2002-01-22. It has been featured on 1 Sundown Sessions show. Featured tracks include Runaway.
+*Runaway: The Very Best Of Del Shannon* earns its place in the Sundown Sessions catalogue through “Runaway”, a selection that offers a direct route into Del Shannon's work.
 
-
+Heard in the context of the full release, “Runaway” is an invitation to explore beyond the track featured on the show.

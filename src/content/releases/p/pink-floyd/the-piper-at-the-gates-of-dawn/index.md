@@ -57,6 +57,6 @@ tracklist_edition: "1967 GB"
 ---
 ## About
 
-The Piper At The Gates Of Dawn is a release by Pink Floyd released in 1967-07-07. It has been featured on 1 Sundown Sessions show. Featured tracks include Astronomy Domine.
+*The Piper At The Gates Of Dawn* earns its place in the Sundown Sessions catalogue through “Astronomy Domine”, a selection that offers a direct route into Pink Floyd's work.
 
-
+Heard in the context of the full release, “Astronomy Domine” is an invitation to explore beyond the track featured on the show.

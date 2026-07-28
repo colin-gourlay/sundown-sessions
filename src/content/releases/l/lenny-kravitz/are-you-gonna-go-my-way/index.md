@@ -36,6 +36,6 @@ tracklist_edition: "1993 XE CD1"
 ---
 ## About
 
-Are You Gonna Go My Way is a release by Lenny Kravitz released in 1993. It has been featured on 1 Sundown Sessions show. Featured tracks include Are You Gonna Go My Way.
+*Are You Gonna Go My Way* earns its place in the Sundown Sessions catalogue through “Are You Gonna Go My Way”, a selection that offers a direct route into Lenny Kravitz's work.
 
-
+Heard in the context of the full release, “Are You Gonna Go My Way” is an invitation to explore beyond the track featured on the show.

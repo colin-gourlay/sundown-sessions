@@ -100,6 +100,6 @@ tracklist_edition: "1993 GB The Wedding Album"
 ---
 ## About
 
-Duran Duran is a release by Duran Duran released in 1993-02-11. It has been featured on 1 Sundown Sessions show. Featured tracks include Planet Earth.
+*Duran Duran* earns its place in the Sundown Sessions catalogue through “Planet Earth”, a selection that offers a direct route into Duran Duran's work.
 
-
+Heard in the context of the full release, “Planet Earth” is an invitation to explore beyond the track featured on the show.

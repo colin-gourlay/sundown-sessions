@@ -47,4 +47,6 @@ tracklist_edition: "1980 GB"
 ---
 ## About
 
-Sound Affects is the fifth studio album by Woking mod revival band The Jam, released on Polydor Records in 1980. It reached number two on the UK Albums Chart and showcased the band's most musically adventurous work, drawing on post-punk, psychedelia, and R&B influences. The album includes the UK number-one single 'Start!' and 'That's Entertainment', considered one of Paul Weller's finest compositions.
+*Sound Affects* includes the UK number-one single 'Start!' and 'That's Entertainment', considered one of Paul Weller's finest compositions.
+
+It reached number two on the UK Albums Chart and showcased the band's most musically adventurous work, drawing on post-punk, psychedelia, and R&B influences.

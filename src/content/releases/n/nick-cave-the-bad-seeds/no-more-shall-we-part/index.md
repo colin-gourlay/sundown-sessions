@@ -191,4 +191,6 @@ tracklist_edition: "2001 None"
 ---
 ## About
 
-No More Shall We Part is the twelfth studio album by Nick Cave & the Bad Seeds, released on Mute Records in 2001. It reached number 16 on the UK Albums Chart and continued the spare, piano-centred approach of The Boatman's Call, but with a somewhat warmer and more expansive palette. The album is notable for its sustained meditation on love, loss, and faith.
+*No More Shall We Part* is notable for its sustained meditation on love, loss, and faith.
+
+It reached number 16 on the UK Albums Chart and continued the spare, piano-centred approach of The Boatman's Call, but with a somewhat warmer and more expansive palette.

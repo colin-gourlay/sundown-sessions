@@ -44,4 +44,6 @@ tracklist_edition: "1980 ES"
 ---
 ## About
 
-Scary Monsters (and Super Creeps) is the fourteenth studio album by David Bowie, released on RCA Records in 1980. It topped the UK Albums Chart and is widely regarded as the final great statement of his classic period. The album features the UK number-one single 'Ashes to Ashes' and 'Fashion', with a sound shaped by Robert Fripp's abrasive guitar work.
+*Scary Monsters (and Super Creeps)* topped the UK Albums Chart and is widely regarded as the final great statement of his classic period.
+
+The album features the UK number-one single 'Ashes to Ashes' and 'Fashion', with a sound shaped by Robert Fripp's abrasive guitar work.

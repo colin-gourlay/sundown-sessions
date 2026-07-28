@@ -53,6 +53,6 @@ tracklist_edition: "1990 US"
 ---
 ## About
 
-Born for Trouble is a release by Willie Nelson released in 1990. It has been featured on 1 Sundown Sessions show. Featured tracks include Ten with a Two.
+*Born for Trouble* earns its place in the Sundown Sessions catalogue through “Ten with a Two”, a selection that offers a direct route into Willie Nelson's work.
 
-
+Heard in the context of the full release, “Ten with a Two” is an invitation to explore beyond the track featured on the show.

@@ -70,6 +70,6 @@ tracklist_edition: "2003 US"
 ---
 ## About
 
-Sumday is a release by Grandaddy released in 2003-06-09. It has been featured on 1 Sundown Sessions show. Featured tracks include I'm On Standby.
+*Sumday* earns its place in the Sundown Sessions catalogue through “I'm On Standby”, a selection that offers a direct route into Grandaddy's work.
 
-
+Heard in the context of the full release, “I'm On Standby” is an invitation to explore beyond the track featured on the show.

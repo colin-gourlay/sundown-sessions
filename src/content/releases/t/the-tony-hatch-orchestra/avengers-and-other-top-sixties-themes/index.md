@@ -253,10 +253,10 @@ tracklist_edition: "2003-05-26 GB"
 ---
 ## About
 
-Avengers and Other Top Sixties Themes is a release by The Tony Hatch Orchestra released in 1998. It has been featured on 1 Sundown Sessions show. Featured tracks include Theme from Crossroads.
+*Avengers and Other Top Sixties Themes* earns its place in the Sundown Sessions catalogue through “Theme from Crossroads”, a selection that offers a direct route into The Tony Hatch Orchestra's work.
+
+Heard in the context of the full release, “Theme from Crossroads” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Theme from Crossroads
-
-

@@ -85,10 +85,10 @@ tracklist_edition: "1989 GB"
 ---
 ## About
 
-The UA Years is a release by Dr Feelgood released in 1989. It has been featured on 1 Sundown Sessions show. Featured tracks include Roxette.
+*The UA Years* earns its place in the Sundown Sessions catalogue through “Roxette”, a selection that offers a direct route into Dr Feelgood's work.
+
+Heard in the context of the full release, “Roxette” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Roxette
-
-

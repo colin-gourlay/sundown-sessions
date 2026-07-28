@@ -76,6 +76,6 @@ tracklist_edition: "2003 GB"
 ---
 ## About
 
-Permission to Land is a release by The Darkness released in 2003-07-07. It has been featured on 1 Sundown Sessions show. Featured tracks include Growing on Me.
+*Permission to Land* earns its place in the Sundown Sessions catalogue through “Growing on Me”, a selection that offers a direct route into The Darkness's work.
 
-
+Heard in the context of the full release, “Growing on Me” is an invitation to explore beyond the track featured on the show.

@@ -81,6 +81,6 @@ tracklist_edition: "1998 BE"
 ---
 ## About
 
-Plastic Bertrand is a release by Plastic Bertrand released in 1998. It has been featured on 1 Sundown Sessions show. Featured tracks include Ca Plane Pour Moi.
+*Plastic Bertrand* earns its place in the Sundown Sessions catalogue through “Ca Plane Pour Moi”, a selection that offers a direct route into Plastic Bertrand's work.
 
-
+Heard in the context of the full release, “Ca Plane Pour Moi” is an invitation to explore beyond the track featured on the show.

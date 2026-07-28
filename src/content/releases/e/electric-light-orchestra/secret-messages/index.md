@@ -24,6 +24,6 @@ tracklist_edition: "1983 GB"
 ---
 ## About
 
-Secret Messages is a release by Electric Light Orchestra released in 1983. It has been featured on 1 Sundown Sessions show. Featured tracks include Four Little Diamonds.
+*Secret Messages* earns its place in the Sundown Sessions catalogue through “Four Little Diamonds”, a selection that offers a direct route into Electric Light Orchestra's work.
 
-
+Heard in the context of the full release, “Four Little Diamonds” is an invitation to explore beyond the track featured on the show.

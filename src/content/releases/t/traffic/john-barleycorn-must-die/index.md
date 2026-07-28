@@ -32,4 +32,6 @@ tracklist_edition: "1970 US"
 ---
 ## About
 
-John Barleycorn Must Die is the fourth studio album by Midlands rock band Traffic, released on Island Records in 1970. It reached number five on the UK Albums Chart and is regarded as one of the most accomplished and influential British rock albums of the era, blending folk, jazz, and psychedelia. The album features Steve Winwood's extraordinary keyboard playing and vocal performances alongside Chris Wood's flute and saxophone work.
+*John Barleycorn Must Die* reached number five on the UK Albums Chart and is regarded as one of the most accomplished and influential British rock albums of the era, blending folk, jazz, and psychedelia.
+
+The album features Steve Winwood's extraordinary keyboard playing and vocal performances alongside Chris Wood's flute and saxophone work.

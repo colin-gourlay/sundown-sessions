@@ -41,4 +41,6 @@ tracklist_edition: "1969 MX"
 ---
 ## About
 
-Let It Bleed is the seventh British studio album by London rock band The Rolling Stones, released on Decca Records in 1969. It topped the UK Albums Chart and is regarded as one of the band's finest works, featuring 'Gimme Shelter', 'You Can't Always Get What You Want', and 'Midnight Rambler'. The album was recorded amid the upheaval surrounding Brian Jones' departure and death.
+*Let It Bleed* was recorded amid the upheaval surrounding Brian Jones' departure and death.
+
+It topped the UK Albums Chart and is regarded as one of the band's finest works, featuring 'Gimme Shelter', 'You Can't Always Get What You Want', and 'Midnight Rambler'.

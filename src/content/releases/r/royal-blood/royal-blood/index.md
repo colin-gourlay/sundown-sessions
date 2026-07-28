@@ -48,4 +48,6 @@ tracklist_edition: "2014 GB"
 ---
 ## About
 
-Royal Blood is the self-titled debut studio album by Brighton rock duo Royal Blood, released on Warner Bros. Records in 2014. It reached number one on the UK Albums Chart on its release week, making Royal Blood the first debut rock act to achieve this in over a decade. The album's raw, bass-driven sound drew comparisons to Queens of the Stone Age and Jack White.
+*Royal Blood*'s raw, bass-driven sound drew comparisons to Queens of the Stone Age and Jack White.
+
+Records in 2014. It reached number one on the UK Albums Chart on its release week, making Royal Blood the first debut rock act to achieve this in over a decade.

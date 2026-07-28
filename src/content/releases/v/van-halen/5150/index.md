@@ -49,6 +49,6 @@ tracklist_edition: "1986 DE"
 ---
 ## About
 
-5150 is a release by Van Halen released in 1986-09-03. It has been featured on 1 Sundown Sessions show. Featured tracks include Why Can't This Be Love.
+*5150* earns its place in the Sundown Sessions catalogue through “Why Can't This Be Love”, a selection that offers a direct route into Van Halen's work.
 
-
+Heard in the context of the full release, “Why Can't This Be Love” is an invitation to explore beyond the track featured on the show.

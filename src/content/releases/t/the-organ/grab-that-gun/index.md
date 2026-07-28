@@ -55,6 +55,6 @@ tracklist_edition: "2004-05-24 CA"
 ---
 ## About
 
-Grab That Gun is a release by The Organ released in 2004-05-24. It has been featured on 1 Sundown Sessions show. Featured tracks include Brother.
+*Grab That Gun* earns its place in the Sundown Sessions catalogue through “Brother”, a selection that offers a direct route into The Organ's work.
 
-
+Heard in the context of the full release, “Brother” is an invitation to explore beyond the track featured on the show.

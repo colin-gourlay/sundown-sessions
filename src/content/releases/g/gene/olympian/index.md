@@ -46,4 +46,6 @@ tracklist_edition: "1995 XE"
 ---
 ## About
 
-Olympian is the debut studio album by London indie rock band Gene, released on Costermonger Records in 1995. The album was praised for its sophisticated, emotionally intelligent guitar pop and drew frequent comparisons to The Smiths, with vocalist Martin Rossiter winning particular acclaim. Gene were considered one of the more literate and thoughtful acts of the Britpop generation.
+*Olympian* was praised for its sophisticated, emotionally intelligent guitar pop and drew frequent comparisons to The Smiths, with vocalist Martin Rossiter winning particular acclaim.
+
+Gene were considered one of the more literate and thoughtful acts of the Britpop generation.

@@ -34,10 +34,10 @@ tracklist_edition: "1969 GB"
 ---
 ## About
 
-Blues Obituary is a release by The Groundhogs released in 1969. It has been featured on 1 Sundown Sessions show. Featured tracks include Natchez Burning.
+*Blues Obituary* earns its place in the Sundown Sessions catalogue through “Natchez Burning”, a selection that offers a direct route into The Groundhogs's work.
+
+Heard in the context of the full release, “Natchez Burning” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Natchez Burning
-
-

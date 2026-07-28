@@ -43,4 +43,6 @@ tracklist_edition: "1985 GB"
 ---
 ## About
 
-Nail is a studio album by the project Foetus (Jim Thirlwell), released on his own Self-immolation label in 1985. Thirlwell's Foetus project blends industrial music, funk, orchestral arrangements, and confrontational lyrics into a singular artistic vision. The album is one of his most acclaimed works and a key document of the 1980s industrial scene.
+*Nail* is one of his most acclaimed works and a key document of the 1980s industrial scene.
+
+Thirlwell's Foetus project blends industrial music, funk, orchestral arrangements, and confrontational lyrics into a singular artistic vision.

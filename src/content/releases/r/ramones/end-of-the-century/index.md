@@ -60,6 +60,6 @@ tracklist_edition: "1980 DE"
 ---
 ## About
 
-End of the Century is a release by Ramones released in 1980-02-04. It has been featured on 1 Sundown Sessions show. Featured tracks include Rock 'n' Roll Radio.
+*End of the Century* earns its place in the Sundown Sessions catalogue through “Rock 'n' Roll Radio”, a selection that offers a direct route into Ramones's work.
 
-
+Heard in the context of the full release, “Rock 'n' Roll Radio” is an invitation to explore beyond the track featured on the show.

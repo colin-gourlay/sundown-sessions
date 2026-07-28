@@ -41,4 +41,6 @@ tracklist_edition: "1980 US"
 ---
 ## About
 
-Killing Joke is the self-titled debut studio album by London post-punk band Killing Joke, released on EG Records in 1980. It reached number 39 on the UK Albums Chart and established the band's distinctive sonic signature: relentless rhythmic drive, abrasive guitars, and Jaz Coleman's howling, apocalyptic vocals. The album was enormously influential on subsequent industrial rock and metal acts.
+*Killing Joke* reached number 39 on the UK Albums Chart and established the band's distinctive sonic signature: relentless rhythmic drive, abrasive guitars, and Jaz Coleman's howling, apocalyptic vocals.
+
+The album was enormously influential on subsequent industrial rock and metal acts.

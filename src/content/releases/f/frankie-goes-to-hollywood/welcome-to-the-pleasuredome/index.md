@@ -57,4 +57,6 @@ tracklist_edition: "1984 XE"
 ---
 ## About
 
-Welcome to the Pleasuredome is the debut studio album by Liverpool dance-pop group Frankie Goes to Hollywood, released on ZTT Records in 1984. It topped the UK Albums Chart on release and was one of the most commercially successful debut albums of the decade. The record included the controversial singles 'Relax' and 'Two Tribes', both of which reached number one in the UK.
+*Welcome to the Pleasuredome* included the controversial singles 'Relax' and 'Two Tribes', both of which reached number one in the UK.
+
+It topped the UK Albums Chart on release and was one of the most commercially successful debut albums of the decade.
