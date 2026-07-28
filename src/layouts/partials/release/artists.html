@@ -19,10 +19,17 @@
     <h2 id="release-artists-heading" class="release-artists__heading">Artist Spotlight</h2>
     <div class="release-artists__list" role="list">
       {{- range $artistCards }}
+        {{- $artist := . -}}
         {{- $artistPage := .page -}}
         <article class="release-artists__item" role="listitem">
           <div class="release-artists__body">
-            <h3 class="release-artists__name">{{ .name | emojify }}</h3>
+            <h3 class="release-artists__name">
+              {{- with $artistPage -}}
+                <a href="{{ .RelPermalink }}">{{ $artist.name | emojify }}</a>
+              {{- else -}}
+                {{ $artist.name | emojify }}
+              {{- end -}}
+            </h3>
             {{- with .summary }}
               <p class="release-artists__summary">{{ . }}</p>
             {{- end }}

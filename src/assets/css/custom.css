@@ -3183,6 +3183,39 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   color: rgba(var(--color-primary-300), 1);
 }
 
+/* Release metadata links remain identifiable without hover, including on
+   touch devices, while unlinked values retain their plain-text treatment. */
+
+.release-details__link {
+  color: inherit;
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--color-primary-500), 0.45);
+  text-decoration-thickness: 0.08rem;
+  text-underline-offset: 0.16rem;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
+}
+
+.release-details__link:hover,
+.release-details__link:focus-visible {
+  color: rgba(var(--color-primary-700), 1);
+  text-decoration-color: currentColor;
+}
+
+.release-details__link:focus-visible {
+  border-radius: 0.125rem;
+  outline: 2px solid rgba(var(--color-primary-500), 0.75);
+  outline-offset: 0.18rem;
+}
+
+.dark .release-details__link {
+  text-decoration-color: rgba(var(--color-primary-400), 0.5);
+}
+
+.dark .release-details__link:hover,
+.dark .release-details__link:focus-visible {
+  color: rgba(var(--color-primary-300), 1);
+}
+
 .release-hero__metadata {
   display: grid;
   gap: 0.9rem;
@@ -3349,14 +3382,27 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
 
 .release-artists__name a {
   color: inherit;
-  text-decoration: none;
+  text-decoration: underline;
+  text-decoration-color: rgba(var(--color-primary-500), 0.4);
+  text-decoration-thickness: 0.08rem;
+  text-underline-offset: 0.125rem;
+  transition: color 0.15s ease, text-decoration-color 0.15s ease;
 }
 
 .release-artists__name a:hover,
 .release-artists__name a:focus-visible {
   color: rgba(var(--color-primary-600), 1);
-  text-decoration: underline;
-  text-underline-offset: 0.125rem;
+  text-decoration-color: currentColor;
+}
+
+.release-artists__name a:focus-visible {
+  border-radius: 0.125rem;
+  outline: 2px solid rgba(var(--color-primary-500), 0.75);
+  outline-offset: 0.18rem;
+}
+
+.dark .release-artists__name a {
+  text-decoration-color: rgba(var(--color-primary-400), 0.45);
 }
 
 .dark .release-artists__name a:hover,
