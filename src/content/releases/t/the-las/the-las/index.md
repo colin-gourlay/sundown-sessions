@@ -50,4 +50,6 @@ tracklist_edition: "1990 GB"
 ---
 ## About
 
-The La's is the sole studio album by Liverpool indie rock band The La's, released on Go! Discs in 1990. It reached number 30 on the UK Albums Chart and is cherished as one of the finest British debut albums of the era, featuring the timeless guitar pop of 'There She Goes'. The album's combination of Merseybeat melody and Lee Mavers' perfectionist vision produced a record of enduring appeal.
+*The La's*'s combination of Merseybeat melody and Lee Mavers' perfectionist vision produced a record of enduring appeal.
+
+It reached number 30 on the UK Albums Chart and is cherished as one of the finest British debut albums of the era, featuring the timeless guitar pop of 'There She Goes'.

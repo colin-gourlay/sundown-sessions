@@ -54,6 +54,6 @@ tracklist_edition: "2006 AU"
 ---
 ## About
 
-Living with War is a release by Neil Young released in 2006-05-02. It has been featured on 1 Sundown Sessions show. Featured tracks include Heart Of Gold.
+*Living with War* earns its place in the Sundown Sessions catalogue through “Heart Of Gold”, a selection that offers a direct route into Neil Young's work.
 
-
+Heard in the context of the full release, “Heart Of Gold” is an invitation to explore beyond the track featured on the show.

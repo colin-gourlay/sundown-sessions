@@ -44,4 +44,6 @@ tracklist_edition: "1994 AU"
 ---
 ## About
 
-Let Love In is the ninth studio album by Nick Cave & the Bad Seeds, released on Mute Records in 1994. The album includes the scorched, guitar-driven 'Do You Love Me?' and the tender 'Red Right Hand', which became one of the group's signature pieces. It represents the band at their most viscerally powerful and is widely regarded as a landmark of their classic period.
+*Let Love In* includes the scorched, guitar-driven 'Do You Love Me?' and the tender 'Red Right Hand', which became one of the group's signature pieces.
+
+It represents the band at their most viscerally powerful and is widely regarded as a landmark of their classic period.

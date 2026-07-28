@@ -25,10 +25,11 @@ tracks:
 ---
 ## About
 
-5 is a release by Goodbye Mr Mackenzie. It has been featured on 1 Sundown Sessions show. Featured tracks include Hard, Normal Boy.
+*5* has supplied Sundown Sessions with “Hard” and “Normal Boy”, giving more than one way into Goodbye Mr Mackenzie's work.
+
+Together, those choices point beyond isolated favourites towards the character of the wider release.
 
 ## Tracks Featured on Sundown Sessions
 
 - Hard
 - Normal Boy
-

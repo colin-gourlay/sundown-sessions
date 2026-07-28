@@ -41,4 +41,6 @@ tracklist_edition: "1969 US"
 ---
 ## About
 
-Ahead Rings Out is the debut studio album by British blues rock band Blodwyn Pig, released on Chrysalis Records in 1969. It reached number nine on the UK Albums Chart and is a fine document of the British blues boom, featuring guitarist Mick Abrahams, formerly of Jethro Tull. The album blends heavy blues riffs with jazz-influenced improvisations.
+*Ahead Rings Out* blends heavy blues riffs with jazz-influenced improvisations.
+
+It reached number nine on the UK Albums Chart and is a fine document of the British blues boom, featuring guitarist Mick Abrahams, formerly of Jethro Tull.

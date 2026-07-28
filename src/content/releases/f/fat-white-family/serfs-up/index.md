@@ -54,6 +54,6 @@ tracklist_edition: "2019-04-19 XE"
 ---
 ## About
 
-Serfs Up! is a release by Fat White Family released in 2019-04-19. It has been featured on 1 Sundown Sessions show. Featured tracks include Feet.
+*Serfs Up!* earns its place in the Sundown Sessions catalogue through “Feet”, a selection that offers a direct route into Fat White Family's work.
 
-
+Heard in the context of the full release, “Feet” is an invitation to explore beyond the track featured on the show.

@@ -51,6 +51,6 @@ tracklist_edition: "1979-10 GB"
 ---
 ## About
 
-Reproduction is a release by The Human League released in 1979-10-01. It has been featured on 1 Sundown Sessions show. Featured tracks include Empire State Human.
+*Reproduction* earns its place in the Sundown Sessions catalogue through “Empire State Human”, a selection that offers a direct route into The Human League's work.
 
-
+Heard in the context of the full release, “Empire State Human” is an invitation to explore beyond the track featured on the show.

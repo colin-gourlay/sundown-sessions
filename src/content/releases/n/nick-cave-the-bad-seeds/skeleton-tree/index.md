@@ -39,4 +39,6 @@ tracklist_edition: "2016-09-09 XE"
 ---
 ## About
 
-Skeleton Tree is the sixteenth studio album by Nick Cave & the Bad Seeds, released on Bad Seed Ltd in 2016. It debuted at number one on the UK Albums Chart and was partly recorded before and partly after the tragic death of Cave's teenage son Arthur. The album is suffused with grief and disorientation, and is considered one of the most powerful and emotionally raw records of Cave's career.
+*Skeleton Tree* is suffused with grief and disorientation, and is considered one of the most powerful and emotionally raw records of Cave's career.
+
+It debuted at number one on the UK Albums Chart and was partly recorded before and partly after the tragic death of Cave's teenage son Arthur.

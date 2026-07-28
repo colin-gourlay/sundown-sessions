@@ -93,10 +93,10 @@ tracklist_edition: "2012-05 None"
 ---
 ## About
 
-Ram is a release by Paul McCartney released in 1971. It has been featured on 1 Sundown Sessions show. Featured tracks include Smile Away.
+*Ram* earns its place in the Sundown Sessions catalogue through “Smile Away”, a selection that offers a direct route into Paul McCartney's work.
+
+Heard in the context of the full release, “Smile Away” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Smile Away
-
-

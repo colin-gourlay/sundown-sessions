@@ -47,4 +47,6 @@ tracklist_edition: "1995 ZA"
 ---
 ## About
 
-Post is the second solo studio album by Icelandic singer Björk, released on One Little Indian Records in 1995. It reached number two on the UK Albums Chart and represents the full flowering of her post-Iceland-debut vision, encompassing dance, orchestral pop, industrial music, and intimate folk. Produced with collaborators including Tricky, Howie B, and Nellee Hooper, it includes the UK singles 'Army of Me' and 'Hyperballad'.
+*Post* reached number two on the UK Albums Chart and represents the full flowering of her post-Iceland-debut vision, encompassing dance, orchestral pop, industrial music, and intimate folk.
+
+Produced with collaborators including Tricky, Howie B, and Nellee Hooper, it includes the UK singles 'Army of Me' and 'Hyperballad'.

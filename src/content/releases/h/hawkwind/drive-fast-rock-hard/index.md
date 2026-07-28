@@ -52,10 +52,10 @@ tracklist_edition: "2002-05 GB"
 ---
 ## About
 
-Drive Fast, Rock Hard is a release by Hawkwind released in 2010. It has been featured on 1 Sundown Sessions show. Featured tracks include Silver Machine.
+*Drive Fast, Rock Hard* earns its place in the Sundown Sessions catalogue through “Silver Machine”, a selection that offers a direct route into Hawkwind's work.
+
+Heard in the context of the full release, “Silver Machine” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Silver Machine
-
-

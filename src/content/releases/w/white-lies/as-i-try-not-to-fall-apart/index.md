@@ -54,4 +54,6 @@ tracklist_edition: "2022-02-18 XE"
 ---
 ## About
 
-As I Try Not To Fall Apart is a release by White Lies released in 2022-02-18. It has been featured on 1 Sundown Sessions show. Featured tracks include I Don't Want To Go To Mars.
+*As I Try Not To Fall Apart* earns its place in the Sundown Sessions catalogue through “I Don't Want To Go To Mars”, a selection that offers a direct route into White Lies's work.
+
+Heard in the context of the full release, “I Don't Want To Go To Mars” is an invitation to explore beyond the track featured on the show.

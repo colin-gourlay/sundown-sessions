@@ -47,4 +47,6 @@ tracklist_edition: "1974-05 US"
 ---
 ## About
 
-Diamond Dogs is the eighth studio album by David Bowie, released on RCA Records in 1974. It topped the UK Albums Chart and was inspired by George Orwell's Nineteen Eighty-Four, presenting a dystopian concept album of post-apocalyptic rock. It was the last Bowie album to feature the Spiders from Mars' guitarist Mick Ronson, and includes the title track and 'Rebel Rebel'.
+*Diamond Dogs* was the last Bowie album to feature the Spiders from Mars' guitarist Mick Ronson, and includes the title track and 'Rebel Rebel'.
+
+It topped the UK Albums Chart and was inspired by George Orwell's Nineteen Eighty-Four, presenting a dystopian concept album of post-apocalyptic rock.

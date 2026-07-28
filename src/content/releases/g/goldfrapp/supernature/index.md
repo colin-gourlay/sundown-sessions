@@ -64,6 +64,6 @@ tracklist_edition: "2005 BR"
 ---
 ## About
 
-Supernature is a release by Goldfrapp released in 2005-08-17. It has been featured on 1 Sundown Sessions show. Featured tracks include Koko.
+*Supernature* earns its place in the Sundown Sessions catalogue through “Koko”, a selection that offers a direct route into Goldfrapp's work.
 
-
+Heard in the context of the full release, “Koko” is an invitation to explore beyond the track featured on the show.

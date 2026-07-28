@@ -59,4 +59,6 @@ tracklist_edition: "1983 GB"
 ---
 ## About
 
-Oil on Canvas is a live album by Japanese-influenced British art pop group Japan, released on Virgin Records in 1983. It reached number five on the UK Albums Chart and was recorded during the band's farewell Visions of China tour in 1982. The album captures the sonic refinement the band had developed across their final studio trilogy.
+*Oil on Canvas* captures the sonic refinement the band had developed across their final studio trilogy.
+
+It reached number five on the UK Albums Chart and was recorded during the band's farewell Visions of China tour in 1982.

@@ -54,6 +54,6 @@ tracklist_edition: "1979 IT"
 ---
 ## About
 
-Replicas is a release by Tubeway Army released in 1979-04. It has been featured on 1 Sundown Sessions show. Featured tracks include Are 'Friends' Electric?.
+*Replicas* earns its place in the Sundown Sessions catalogue through “Are 'Friends' Electric?”, a selection that offers a direct route into Tubeway Army's work.
 
-
+Heard in the context of the full release, “Are 'Friends' Electric?” is an invitation to explore beyond the track featured on the show.

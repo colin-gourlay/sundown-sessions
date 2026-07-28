@@ -53,4 +53,6 @@ tracklist_edition: "1994 GB"
 ---
 ## About
 
-Music for the Jilted Generation is the second studio album by Essex rave act The Prodigy, released on XL Recordings in 1994. It topped the UK Albums Chart, making it the first album associated with rave culture to do so in Britain. The album channels the anger felt by the free-party movement at the introduction of the Criminal Justice Act, combining breakbeat hardcore with punk energy and melodic sophistication.
+*Music for the Jilted Generation* channels the anger felt by the free-party movement at the introduction of the Criminal Justice Act, combining breakbeat hardcore with punk energy and melodic sophistication.
+
+It topped the UK Albums Chart, making it the first album associated with rave culture to do so in Britain.

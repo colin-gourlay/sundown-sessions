@@ -54,6 +54,6 @@ tracklist_edition: "2004 ZA"
 ---
 ## About
 
-Antics is a release by Interpol released in 2004-09-24. It has been featured on 1 Sundown Sessions show. Featured tracks include Slow Hands.
+*Antics* earns its place in the Sundown Sessions catalogue through “Slow Hands”, a selection that offers a direct route into Interpol's work.
 
-
+Heard in the context of the full release, “Slow Hands” is an invitation to explore beyond the track featured on the show.

@@ -52,4 +52,6 @@ tracklist_edition: "1971 CA"
 ---
 ## About
 
-Babbacombe Lee is the sixth studio album by British folk rock band Fairport Convention, released on Island Records in 1971. The album tells the story of John 'Babbacombe' Lee, the 'man they could not hang', in a folk-rock narrative format. It is a distinctive and ambitious work in the band's catalogue, showcasing their ability to marry English folk tradition with contemporary rock instrumentation.
+*Babbacombe Lee* is a distinctive and ambitious work in the band's catalogue, showcasing their ability to marry English folk tradition with contemporary rock instrumentation.
+
+The album tells the story of John 'Babbacombe' Lee, the 'man they could not hang', in a folk-rock narrative format.

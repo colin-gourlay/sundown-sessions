@@ -58,6 +58,6 @@ tracklist_edition: "2008 None"
 ---
 ## About
 
-Go Away White is a release by Bauhaus released in 2008-03-03. It has been featured on 2 Sundown Sessions shows. Featured tracks include International Bullet Proof Talent, Too Much 21st Century.
+*Go Away White* has supplied Sundown Sessions with “International Bullet Proof Talent” and “Too Much 21st Century”, giving more than one way into Bauhaus's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

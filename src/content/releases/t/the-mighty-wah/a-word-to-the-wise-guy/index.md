@@ -49,4 +49,6 @@ tracklist_edition: "1984 DK"
 ---
 ## About
 
-A Word to the Wise Guy is a studio album by Liverpool post-punk act The Mighty Wah!, featuring Pete Wylie's anthemic brand of guitar pop infused with political idealism. The band were an important part of the Liverpool music scene that produced Echo & the Bunnymen and The Teardrop Explodes.
+The band were an important part of the Liverpool music scene that produced Echo & the Bunnymen and The Teardrop Explodes.
+
+A Word to the Wise Guy is a studio album by Liverpool post-punk act The Mighty Wah!, featuring Pete Wylie's anthemic brand of guitar pop infused with political idealism.

@@ -44,4 +44,6 @@ tracklist_edition: "1990 GB"
 ---
 ## About
 
-10 is the tenth studio album by British new wave band The Stranglers, released on Epic Records in 1990. It reached number 15 on the UK Albums Chart and was the first album to feature vocalist Paul Roberts, who replaced founding member Hugh Cornwell following his departure earlier that year. The record demonstrated the band's continued ability to craft polished, melodic rock.
+*10* reached number 15 on the UK Albums Chart and was the first album to feature vocalist Paul Roberts, who replaced founding member Hugh Cornwell following his departure earlier that year.
+
+The record demonstrated the band's continued ability to craft polished, melodic rock.

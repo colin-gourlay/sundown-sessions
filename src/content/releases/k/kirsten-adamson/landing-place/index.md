@@ -38,6 +38,6 @@ tracklist_edition: "2023-02-03 GB"
 ---
 ## About
 
-Landing Place is a release by Kirsten Adamson released in 2023-02-03. It has been featured on 1 Sundown Sessions show. Featured tracks include My Father's Songs.
+*Landing Place* earns its place in the Sundown Sessions catalogue through “My Father's Songs”, a selection that offers a direct route into Kirsten Adamson's work.
 
-
+Heard in the context of the full release, “My Father's Songs” is an invitation to explore beyond the track featured on the show.

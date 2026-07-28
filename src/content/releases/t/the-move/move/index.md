@@ -61,6 +61,6 @@ tracklist_edition: "1968-04 GB stereo"
 ---
 ## About
 
-Move is a release by The Move released in 1968-04. It has been featured on 1 Sundown Sessions show. Featured tracks include Fire Brigade.
+*Move* earns its place in the Sundown Sessions catalogue through “Fire Brigade”, a selection that offers a direct route into The Move's work.
 
-
+Heard in the context of the full release, “Fire Brigade” is an invitation to explore beyond the track featured on the show.

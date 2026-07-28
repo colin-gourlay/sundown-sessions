@@ -54,6 +54,6 @@ tracklist_edition: "1993-09 GB"
 ---
 ## About
 
-Some Fantastic Place is a release by Squeeze released in 1993-09-14. It has been featured on 1 Sundown Sessions show. Featured tracks include Third Rail.
+*Some Fantastic Place* earns its place in the Sundown Sessions catalogue through “Third Rail”, a selection that offers a direct route into Squeeze's work.
 
-
+Heard in the context of the full release, “Third Rail” is an invitation to explore beyond the track featured on the show.

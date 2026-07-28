@@ -47,4 +47,6 @@ tracklist_edition: "1990 FR"
 ---
 ## About
 
-Some Friendly is the debut studio album by Northwich indie rock band The Charlatans, released on Situation Two Records in 1990. It debuted at number one on the UK Albums Chart on its release week, driven by the organ-led groove of 'The Only One I Know'. The album is a key document of the Madchester era, blending psychedelic pop with baggy rhythms and a warm, danceable energy.
+*Some Friendly* is a key document of the Madchester era, blending psychedelic pop with baggy rhythms and a warm, danceable energy.
+
+It debuted at number one on the UK Albums Chart on its release week, driven by the organ-led groove of 'The Only One I Know'.

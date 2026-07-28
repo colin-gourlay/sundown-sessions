@@ -59,6 +59,6 @@ tracklist_edition: "2011-10-10 GB"
 ---
 ## About
 
-Curios is a release by Hussey-Regan released in 2011-10-10. It has been featured on 1 Sundown Sessions show. Featured tracks include Naked and Savage.
+*Curios* earns its place in the Sundown Sessions catalogue through “Naked and Savage”, a selection that offers a direct route into Hussey-Regan's work.
 
-
+Heard in the context of the full release, “Naked and Savage” is an invitation to explore beyond the track featured on the show.

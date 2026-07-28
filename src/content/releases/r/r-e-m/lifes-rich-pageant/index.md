@@ -78,6 +78,6 @@ tracklist_edition: "1986 GB"
 ---
 ## About
 
-Lifes Rich Pageant is a release by R.E.M. released in 1986-07-28. It has been featured on 1 Sundown Sessions show. Featured tracks include Fall On Me.
+*Lifes Rich Pageant* earns its place in the Sundown Sessions catalogue through “Fall On Me”, a selection that offers a direct route into R.E.M.'s work.
 
-
+Heard in the context of the full release, “Fall On Me” is an invitation to explore beyond the track featured on the show.

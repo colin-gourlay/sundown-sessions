@@ -46,4 +46,6 @@ tracklist_edition: "1967-04 US"
 ---
 ## About
 
-Electric Music for the Mind and Body is the debut studio album by Berkeley psychedelic rock band Country Joe and the Fish, released on Vanguard Records in 1967. The album is a landmark of San Francisco psychedelia, blending blues, folk, and experimental music with politically charged lyrics. It captures the spirit of the late-1960s counterculture with remarkable energy and clarity.
+*Electric Music for the Mind and Body* is a landmark of San Francisco psychedelia, blending blues, folk, and experimental music with politically charged lyrics.
+
+It captures the spirit of the late-1960s counterculture with remarkable energy and clarity.

@@ -40,6 +40,6 @@ tracklist_edition: "2012-09-10 GB"
 ---
 ## About
 
-Totem & Taboo is a release by Hugh Cornwell released in 2012-09-10. It has been featured on 1 Sundown Sessions show. Featured tracks include Totem and Taboo.
+*Totem & Taboo* earns its place in the Sundown Sessions catalogue through “Totem and Taboo”, a selection that offers a direct route into Hugh Cornwell's work.
 
-
+Heard in the context of the full release, “Totem and Taboo” is an invitation to explore beyond the track featured on the show.

@@ -57,4 +57,6 @@ tracklist_edition: "1989 AU"
 ---
 ## About
 
-Time is the eighth studio album by Birmingham rock group Electric Light Orchestra, released on Jet Records in 1981. It reached number one on the UK Albums Chart and presented a futuristic, synthesiser-heavy sound that marked a significant departure from the string-laden arrangements of their earlier work. The album spawned the hit single 'Hold On Tight'.
+*Time* reached number one on the UK Albums Chart and presented a futuristic, synthesiser-heavy sound that marked a significant departure from the string-laden arrangements of their earlier work.
+
+The album spawned the hit single 'Hold On Tight'.

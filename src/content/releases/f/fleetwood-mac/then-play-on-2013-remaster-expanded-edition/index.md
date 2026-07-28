@@ -67,10 +67,10 @@ tracklist_edition: "2018-11-16 XW 2013 remaster; expanded edition"
 ---
 ## About
 
-Then Play On (2013 Remaster; Expanded Edition) is a release by Fleetwood Mac released in 1969. It has been featured on 1 Sundown Sessions show. Featured tracks include The Green Manalishi (With the Two Prong Crown) - 2013 Remaster.
+*Then Play On (2013 Remaster; Expanded Edition)* earns its place in the Sundown Sessions catalogue through “The Green Manalishi (With the Two Prong Crown) - 2013 Remaster”, a selection that offers a direct route into Fleetwood Mac's work.
+
+Heard in the context of the full release, “The Green Manalishi (With the Two Prong Crown) - 2013 Remaster” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - The Green Manalishi (With the Two Prong Crown) - 2013 Remaster
-
-

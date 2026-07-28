@@ -57,6 +57,6 @@ tracklist_edition: "1968 GB"
 ---
 ## About
 
-All Of Us is a release by Nirvana released in 1968. It has been featured on 1 Sundown Sessions show. Featured tracks include Rainbow Chaser.
+*All Of Us* earns its place in the Sundown Sessions catalogue through “Rainbow Chaser”, a selection that offers a direct route into Nirvana's work.
 
-
+Heard in the context of the full release, “Rainbow Chaser” is an invitation to explore beyond the track featured on the show.

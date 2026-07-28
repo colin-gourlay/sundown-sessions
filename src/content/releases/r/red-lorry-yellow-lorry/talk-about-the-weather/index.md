@@ -47,6 +47,6 @@ tracklist_edition: "1985 GB"
 ---
 ## About
 
-Talk About The Weather is a release by Red Lorry Yellow Lorry released in 1985. It has been featured on 1 Sundown Sessions show. Featured tracks include Talk About The Weather.
+*Talk About The Weather* earns its place in the Sundown Sessions catalogue through “Talk About The Weather”, a selection that offers a direct route into Red Lorry Yellow Lorry's work.
 
-
+Heard in the context of the full release, “Talk About The Weather” is an invitation to explore beyond the track featured on the show.

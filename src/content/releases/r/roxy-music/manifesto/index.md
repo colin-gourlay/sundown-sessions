@@ -44,4 +44,6 @@ tracklist_edition: "1979 US"
 ---
 ## About
 
-Manifesto is the sixth studio album by British art rock band Roxy Music, released on Polydor Records in 1979. It reached number seven on the UK Albums Chart and marked the band's commercial return after a three-year hiatus. The album features the hit single 'Dance Away' and heralded a more streamlined, polished sound that would define the group's final phase.
+*Manifesto* reached number seven on the UK Albums Chart and marked the band's commercial return after a three-year hiatus.
+
+The album features the hit single 'Dance Away' and heralded a more streamlined, polished sound that would define the group's final phase.

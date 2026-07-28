@@ -78,6 +78,6 @@ tracklist_edition: ""
 ---
 ## About
 
-The Beatles is a release by The Beatles released in 1968. It has been featured on 2 Sundown Sessions shows. Featured tracks include Everybody's Got Something To Hide Except Me And My Monkey, Glass Onion, Good Night.
+*The Beatles* has supplied Sundown Sessions with “Everybody's Got Something To Hide Except Me And My Monkey”, “Glass Onion” and “Good Night”, giving more than one way into The Beatles's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

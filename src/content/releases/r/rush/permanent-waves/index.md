@@ -42,6 +42,6 @@ tracklist_edition: "1980 XE"
 ---
 ## About
 
-Permanent Waves is a release by Rush released in 1980-01-01. It has been featured on 1 Sundown Sessions show. Featured tracks include The Spirit Of Radio.
+*Permanent Waves* earns its place in the Sundown Sessions catalogue through “The Spirit Of Radio”, a selection that offers a direct route into Rush's work.
 
-
+Heard in the context of the full release, “The Spirit Of Radio” is an invitation to explore beyond the track featured on the show.

@@ -44,4 +44,6 @@ tracklist_edition: "1974 GB"
 ---
 ## About
 
-Country Life is the fourth studio album by British art rock band Roxy Music, released on Island Records in 1974. It reached number three on the UK Albums Chart and includes some of the band's most celebrated material, including 'All I Want Is You' and 'The Thrill of It All'. The album showcases the band at their most debonair, blending sophisticated pop with Bryan Ferry's arch romanticism.
+*Country Life* showcases the band at their most debonair, blending sophisticated pop with Bryan Ferry's arch romanticism.
+
+It reached number three on the UK Albums Chart and includes some of the band's most celebrated material, including 'All I Want Is You' and 'The Thrill of It All'.

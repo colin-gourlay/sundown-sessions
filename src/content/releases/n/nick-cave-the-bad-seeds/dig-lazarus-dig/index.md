@@ -21,4 +21,6 @@ tracklist_edition: "2008-02-18 GB"
 ---
 ## About
 
-Dig, Lazarus, Dig!!! is the fourteenth studio album by Nick Cave & the Bad Seeds, released on Mute Records in 2008. It reached number four on the UK Albums Chart and represented a return to a more energetic, rock-driven sound. The album draws on the mythology of Lazarus as a lens through which to examine modern alienation and celebrity culture.
+*Dig, Lazarus, Dig!!!* represented a return to a more energetic, rock-driven sound and reached number four on the UK Albums Chart.
+
+The record draws on the mythology of Lazarus as a lens through which to examine modern alienation and celebrity culture.

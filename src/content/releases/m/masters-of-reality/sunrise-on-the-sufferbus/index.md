@@ -61,4 +61,6 @@ tracklist_edition: "1992 US"
 ---
 ## About
 
-*Sunrise on the Sufferbus* is the second studio album by Masters of Reality, released by Chrysalis in 1992. With Ginger Baker playing drums and Chris Goss producing, it folds blues, psychedelia and heavy rock into an unusually loose, exploratory record. “100 Years (Of Tears to the Wind)” is Show #2's way into that collaboration.
+With Ginger Baker playing drums and Chris Goss producing, *Sunrise on the Sufferbus* folds blues, psychedelia and heavy rock into an unusually loose, exploratory record.
+
+“100 Years (Of Tears to the Wind)” is Show #2's way into that collaboration.

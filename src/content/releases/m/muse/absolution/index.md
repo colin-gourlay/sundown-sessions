@@ -62,4 +62,6 @@ tracklist_edition: "2003 DE"
 ---
 ## About
 
-Absolution is the third studio album by Teignmouth rock trio Muse, released in 2003. It entered the UK Albums Chart at number one and went on to sell over five million copies worldwide. The album showcases the band at their most symphonic, blending progressive rock with heavy metal and orchestral arrangements on tracks such as 'Hysteria' and 'Sing for Absolution'.
+*Absolution* showcases the band at their most symphonic, blending progressive rock with heavy metal and orchestral arrangements on tracks such as 'Hysteria' and 'Sing for Absolution'.
+
+It entered the UK Albums Chart at number one and went on to sell over five million copies worldwide.

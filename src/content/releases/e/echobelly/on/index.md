@@ -52,4 +52,6 @@ tracklist_edition: "1995 JP"
 ---
 ## About
 
-On is the second studio album by London indie rock band Echobelly, released on Fauve Records in 1995. The album built on the promise of their debut Everyone's Got One and featured the singles 'King of the Kerb' and 'Great Things'. Frontwoman Sonya Aurora Madan was one of the most visible South Asian voices in 1990s British indie music.
+*On* built on the promise of their debut Everyone's Got One and featured the singles 'King of the Kerb' and 'Great Things'.
+
+Frontwoman Sonya Aurora Madan was one of the most visible South Asian voices in 1990s British indie music.

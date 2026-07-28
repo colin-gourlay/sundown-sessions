@@ -48,6 +48,6 @@ tracklist_edition: "1969 FR"
 ---
 ## About
 
-The Stooges is a release by The Stooges released in 1969-08-05. It has been featured on 1 Sundown Sessions show. Featured tracks include 1969.
+*The Stooges* earns its place in the Sundown Sessions catalogue through “1969”, a selection that offers a direct route into The Stooges's work.
 
-
+Heard in the context of the full release, “1969” is an invitation to explore beyond the track featured on the show.

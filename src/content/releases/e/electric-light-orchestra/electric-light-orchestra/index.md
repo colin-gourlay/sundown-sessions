@@ -35,6 +35,6 @@ tracklist_edition: "1984 XG"
 ---
 ## About
 
-Electric Light Orchestra is a release by Electric Light Orchestra released in 1984. It has been featured on 1 Sundown Sessions show. Featured tracks include 10538 Overture.
+*Electric Light Orchestra* earns its place in the Sundown Sessions catalogue through “10538 Overture”, a selection that offers a direct route into Electric Light Orchestra's work.
 
-
+Heard in the context of the full release, “10538 Overture” is an invitation to explore beyond the track featured on the show.

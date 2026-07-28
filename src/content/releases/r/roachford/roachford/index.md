@@ -53,6 +53,6 @@ tracklist_edition: "1988 AU"
 ---
 ## About
 
-Roachford is a release by Roachford released in 1988-07-11. It has been featured on 1 Sundown Sessions show. Featured tracks include Cuddly Toy.
+*Roachford* earns its place in the Sundown Sessions catalogue through “Cuddly Toy”, a selection that offers a direct route into Roachford's work.
 
-
+Heard in the context of the full release, “Cuddly Toy” is an invitation to explore beyond the track featured on the show.

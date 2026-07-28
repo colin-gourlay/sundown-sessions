@@ -24,6 +24,6 @@ tracklist_edition: "2024-03-08 XW"
 ---
 ## About
 
-Lost My Shadow is a release by IST IST released in 2024-03-08. It has been featured on 1 Sundown Sessions show. Featured tracks include Lost My Shadow.
+*Lost My Shadow* earns its place in the Sundown Sessions catalogue through “Lost My Shadow”, a selection that offers a direct route into IST IST's work.
 
-
+Heard in the context of the full release, “Lost My Shadow” is an invitation to explore beyond the track featured on the show.

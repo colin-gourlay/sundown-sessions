@@ -43,4 +43,4 @@ tracklist_edition: "1978 GB"
 ---
 ## About
 
-The Modern Dance is the debut studio album by Cleveland avant-punk band Pere Ubu, released on Blank Records in 1978. The album is a landmark of art punk and post-punk music, combining angular guitar, David Thomas's unsettling vocals, and dissonant, avant-garde arrangements into something genuinely unlike anything that had preceded it.
+*The Modern Dance* is a landmark of art punk and post-punk music, combining angular guitar, David Thomas's unsettling vocals, and dissonant, avant-garde arrangements into something genuinely unlike anything that had preceded it.

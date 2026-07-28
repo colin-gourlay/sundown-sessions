@@ -475,8 +475,28 @@ function New-ReleasePageContent {
         $trackText = " Featured tracks include " + (($trackNames | Select-Object -First 3) -join ", ") + "."
     }
 
-    $dateText = if ($releaseDate) { " released in $releaseDate" } else { "" }
-    [void]$builder.AppendLine(("{0} is a release by {1}{2}. It has been featured on {3} Sundown Sessions show{4}.{5}" -f $Candidate.Title, $Candidate.Artist, $dateText, $showCount, $(if ($showCount -eq 1) { "" } else { "s" }), $trackText))
+    if ($trackNames.Count -eq 1) {
+        [void]$builder.AppendLine(("*{0}* earns its place in the Sundown Sessions catalogue through “{1}”, a selection that offers a direct route into {2}'s work." -f $Candidate.Title, $trackNames[0], $Candidate.Artist))
+        [void]$builder.AppendLine()
+        [void]$builder.AppendLine(("Heard in the context of the full release, “{0}” is an invitation to explore beyond the track featured on the show." -f $trackNames[0]))
+    }
+    elseif ($trackNames.Count -gt 1) {
+        $quotedTracks = @($trackNames | Select-Object -First 3 | ForEach-Object { "“$_”" })
+        $selection = if ($quotedTracks.Count -eq 2) {
+            $quotedTracks -join " and "
+        }
+        else {
+            (($quotedTracks[0..($quotedTracks.Count - 2)] -join ", ") + " and " + $quotedTracks[-1])
+        }
+        [void]$builder.AppendLine(("*{0}* has supplied Sundown Sessions with {1}, giving more than one way into {2}'s work." -f $Candidate.Title, $selection, $Candidate.Artist))
+        [void]$builder.AppendLine()
+        [void]$builder.AppendLine("Together, those choices point beyond isolated favourites towards the character of the wider release.")
+    }
+    else {
+        [void]$builder.AppendLine(("*{0}* offers a further route into {1}'s catalogue and the wider story told across their recordings." -f $Candidate.Title, $Candidate.Artist))
+        [void]$builder.AppendLine()
+        [void]$builder.AppendLine("This summary is intentionally provisional: add verified creative context before publishing the release page.")
+    }
     [void]$builder.AppendLine()
 
     if (-not ($Metadata -and $Metadata.Tracks.Count -gt 0) -and $trackNames.Count -gt 0) {

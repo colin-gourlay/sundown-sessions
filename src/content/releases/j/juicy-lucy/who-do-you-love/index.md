@@ -40,10 +40,10 @@ tracklist_edition: "1992 DE"
 ---
 ## About
 
-Who Do You Love is a release by Juicy Lucy released in 2002. It has been featured on 1 Sundown Sessions show. Featured tracks include Who Do You Love?.
+*Who Do You Love* earns its place in the Sundown Sessions catalogue through “Who Do You Love?”, a selection that offers a direct route into Juicy Lucy's work.
+
+Heard in the context of the full release, “Who Do You Love?” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Who Do You Love?
-
-

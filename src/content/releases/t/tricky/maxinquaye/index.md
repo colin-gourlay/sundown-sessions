@@ -50,4 +50,6 @@ tracklist_edition: "1995 GB repress"
 ---
 ## About
 
-Maxinquaye is the debut studio album by Bristol trip-hop artist Tricky, released on Fourth & Broadway in 1995. It reached number three on the UK Albums Chart and is widely regarded as one of the most original and atmospheric British albums of the decade. Named after his late mother, it combines claustrophobic production with the contrasting vocal personalities of Tricky and Martina Topley-Bird.
+*Maxinquaye* reached number three on the UK Albums Chart and is widely regarded as one of the most original and atmospheric British albums of the decade.
+
+Named after his late mother, it combines claustrophobic production with the contrasting vocal personalities of Tricky and Martina Topley-Bird.

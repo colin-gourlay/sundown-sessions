@@ -80,7 +80,7 @@ tracklist_edition: "2004 XE"
 ---
 ## About
 
-Franz Ferdinand is the debut studio album by Scottish rock band Franz Ferdinand, released on 9 February 2004 through Domino Records. It won the Mercury Prize in 2004.
+*Franz Ferdinand* won the Mercury Prize in 2004.
 
 ## External Links
 

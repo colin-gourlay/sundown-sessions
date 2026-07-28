@@ -55,6 +55,6 @@ tracklist_edition: "1991 DE"
 ---
 ## About
 
-Rock On! is a release by Del Shannon released in 1991. It has been featured on 1 Sundown Sessions show. Featured tracks include Lost In A Memory.
+*Rock On!* earns its place in the Sundown Sessions catalogue through “Lost In A Memory”, a selection that offers a direct route into Del Shannon's work.
 
-
+Heard in the context of the full release, “Lost In A Memory” is an invitation to explore beyond the track featured on the show.

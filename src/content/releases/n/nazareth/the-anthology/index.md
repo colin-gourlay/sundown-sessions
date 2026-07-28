@@ -175,6 +175,6 @@ tracklist_edition: "2009 GB"
 ---
 ## About
 
-The Anthology is a release by Nazareth released in 2009-01-01. It has been featured on 1 Sundown Sessions show. Featured tracks include Bad, Bad Boy.
+*The Anthology* has supplied Sundown Sessions with “Bad” and “Bad Boy”, giving more than one way into Nazareth's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

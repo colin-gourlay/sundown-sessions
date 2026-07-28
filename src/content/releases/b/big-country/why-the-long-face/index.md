@@ -61,4 +61,4 @@ tracklist_edition: "1995 US"
 ---
 ## About
 
-Why the Long Face is a studio album by Scottish rock band Big Country, released on Cooking Vinyl in 1995. The album was recorded during a period of transition for the band and features their signature blend of anthemic guitar rock, characterised by Stuart Adamson's use of guitar to create a sound reminiscent of bagpipes.
+*Why the Long Face* was recorded during a period of transition for the band and features their signature blend of anthemic guitar rock, characterised by Stuart Adamson's use of guitar to create a sound reminiscent of bagpipes.

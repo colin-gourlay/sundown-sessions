@@ -52,6 +52,6 @@ tracklist_edition: "2016-05-20 XW"
 ---
 ## About
 
-MEANS is a release by FEWS released in 2016-05-20. It has been featured on 1 Sundown Sessions show. Featured tracks include The Zoo.
+*MEANS* earns its place in the Sundown Sessions catalogue through “The Zoo”, a selection that offers a direct route into FEWS's work.
 
-
+Heard in the context of the full release, “The Zoo” is an invitation to explore beyond the track featured on the show.

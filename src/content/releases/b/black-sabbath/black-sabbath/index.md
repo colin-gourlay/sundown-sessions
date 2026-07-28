@@ -35,4 +35,6 @@ tracklist_edition: "1970 DE"
 ---
 ## About
 
-Black Sabbath is the self-titled debut studio album by Birmingham heavy metal band Black Sabbath, released on Vertigo Records in 1970. It reached number eight on the UK Albums Chart and is universally regarded as the founding document of heavy metal music. The title track and 'The Wizard' established the template of doom-laden, distorted guitar riffs and occult imagery that would define the genre.
+*Black Sabbath* reached number eight on the UK Albums Chart and is universally regarded as the founding document of heavy metal music.
+
+The title track and 'The Wizard' established the template of doom-laden, distorted guitar riffs and occult imagery that would define the genre.

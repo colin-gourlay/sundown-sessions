@@ -60,6 +60,6 @@ tracklist_edition: "2004 GB"
 ---
 ## About
 
-Transmission Impossible is a release by Billy Mackenzie released in 2004. It has been featured on 1 Sundown Sessions show. Featured tracks include Never Turn Your Back On Mother Earth.
+*Transmission Impossible* earns its place in the Sundown Sessions catalogue through “Never Turn Your Back On Mother Earth”, a selection that offers a direct route into Billy Mackenzie's work.
 
-
+Heard in the context of the full release, “Never Turn Your Back On Mother Earth” is an invitation to explore beyond the track featured on the show.

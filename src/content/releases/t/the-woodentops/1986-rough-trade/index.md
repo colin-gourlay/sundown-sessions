@@ -52,9 +52,10 @@ tracklist_edition: "1986 GB"
 ---
 ## About
 
-1986 (Rough Trade) is a release by The Woodentops. It has been featured on 1 Sundown Sessions show. Featured tracks include Travelling Man.
+*1986 (Rough Trade)* earns its place in the Sundown Sessions catalogue through “Travelling Man”, a selection that offers a direct route into The Woodentops' work.
+
+Heard in the context of the full release, “Travelling Man” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Travelling Man
-

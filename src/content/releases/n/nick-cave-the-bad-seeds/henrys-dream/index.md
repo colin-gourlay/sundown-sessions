@@ -41,4 +41,6 @@ tracklist_edition: "1992 US"
 ---
 ## About
 
-Henry's Dream is the eighth studio album by Nick Cave & the Bad Seeds, released on Mute Records in 1992. Produced by David Briggs, the album has a rawer, more direct sound compared to its predecessor The Good Son. Cave's songwriting continues to draw on Southern Gothic imagery and Old Testament themes, and the album includes the ferocious 'Papa Won't Leave You, Henry'.
+Cave's songwriting continues to draw on Southern Gothic imagery and Old Testament themes, and the album includes the ferocious 'Papa Won't Leave You, Henry'.
+
+Produced by David Briggs, the album has a rawer, more direct sound compared to its predecessor The Good Son.

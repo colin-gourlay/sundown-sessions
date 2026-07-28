@@ -47,4 +47,6 @@ tracklist_edition: "1971 GB"
 ---
 ## About
 
-Aqualung is the fourth studio album by British rock band Jethro Tull, released on Chrysalis Records in 1971. It reached number four on the UK Albums Chart and includes the iconic title track alongside 'Locomotive Breath'. The album is loosely thematic, exploring religion, homelessness, and social hypocrisy through Ian Anderson's lyrics and the band's distinctive blend of folk, hard rock, and jazz.
+*Aqualung* is loosely thematic, exploring religion, homelessness, and social hypocrisy through Ian Anderson's lyrics and the band's distinctive blend of folk, hard rock, and jazz.
+
+It reached number four on the UK Albums Chart and includes the iconic title track alongside 'Locomotive Breath'.

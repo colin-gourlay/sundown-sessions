@@ -52,4 +52,6 @@ tracklist_edition: "1993 GB"
 ---
 ## About
 
-Whatever is the debut solo studio album by American singer-songwriter Aimee Mann, released on Imago Records in 1993. Produced by Jon Brion and Brad Jones, it established Mann's distinctive gift for melancholy, richly crafted pop songs infused with literate, emotionally frank lyrics. The album was well received critically and helped establish her reputation as one of the most gifted songwriters of her generation.
+Produced by Jon Brion and Brad Jones, *Whatever* established Mann's distinctive gift for melancholy, richly crafted pop songs infused with literate, emotionally frank lyrics.
+
+The album was well received critically and helped establish her reputation as one of the most gifted songwriters of her generation.

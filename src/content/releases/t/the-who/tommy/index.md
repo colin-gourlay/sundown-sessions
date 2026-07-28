@@ -110,4 +110,6 @@ tracklist_edition: "1969 DE"
 ---
 ## About
 
-Tommy is the fourth studio album by London rock band The Who, released on Track Records in 1969. It reached number two on the UK Albums Chart and is one of the first significant rock operas, telling the story of a 'deaf, dumb, and blind' boy who becomes a pinball champion. The album established Pete Townshend as one of rock music's most ambitious composers.
+*Tommy* established Pete Townshend as one of rock music's most ambitious composers.
+
+It reached number two on the UK Albums Chart and is one of the first significant rock operas, telling the story of a 'deaf, dumb, and blind' boy who becomes a pinball champion.

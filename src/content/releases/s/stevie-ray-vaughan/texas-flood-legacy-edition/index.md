@@ -93,10 +93,10 @@ tracklist_edition: "2013-01-28 XE legacy edition"
 ---
 ## About
 
-Texas Flood (Legacy Edition) is a release by Stevie Ray Vaughan released in 1983. It has been featured on 1 Sundown Sessions show. Featured tracks include Tell Me.
+*Texas Flood (Legacy Edition)* earns its place in the Sundown Sessions catalogue through “Tell Me”, a selection that offers a direct route into Stevie Ray Vaughan's work.
+
+Heard in the context of the full release, “Tell Me” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Tell Me
-
-

@@ -21,10 +21,10 @@ tracklist_edition: "2008-09-22 GB"
 ---
 ## About
 
-Digital EP is a release by The Airborne Toxic Event. It has been featured on 1 Sundown Sessions show. Featured tracks include This Is Nowhere.
+*Digital EP* earns its place in the Sundown Sessions catalogue through “This Is Nowhere”, a selection that offers a direct route into The Airborne Toxic Event's work.
+
+Heard in the context of the full release, “This Is Nowhere” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - This Is Nowhere
-
-

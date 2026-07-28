@@ -37,4 +37,6 @@ tracklist_edition: "1969 GB"
 ---
 ## About
 
-Aoxomoxoa is the third studio album by San Francisco psychedelic rock band Grateful Dead, released on Warner Bros. Records in 1969. The album represents the band at their most psychedelically experimental in the studio, featuring extended compositions and adventurous sound collages produced with the 16-track recording technology they were among the first to employ. It includes 'St. Stephen' and 'China Cat Sunflower'.
+*Aoxomoxoa* represents the band at their most psychedelically experimental in the studio, featuring extended compositions and adventurous sound collages produced with the 16-track recording technology they were among the first to employ.
+
+Records in 1969. It includes 'St. Stephen' and 'China Cat Sunflower'.

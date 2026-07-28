@@ -62,6 +62,6 @@ tracklist_edition: "1985 GB"
 ---
 ## About
 
-Love is a release by The Cult released in 1985-08. It has been featured on 2 Sundown Sessions shows. Featured tracks include Big Neon Glitter, Nirvana.
+*Love* has supplied Sundown Sessions with “Big Neon Glitter” and “Nirvana”, giving more than one way into The Cult's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

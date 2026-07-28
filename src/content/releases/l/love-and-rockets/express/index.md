@@ -57,6 +57,6 @@ tracklist_edition: "1986 US"
 ---
 ## About
 
-Express is a release by Love and Rockets released in 1986-09-15. It has been featured on 1 Sundown Sessions show. Featured tracks include Kundalini Express.
+*Express* earns its place in the Sundown Sessions catalogue through “Kundalini Express”, a selection that offers a direct route into Love and Rockets's work.
 
-
+Heard in the context of the full release, “Kundalini Express” is an invitation to explore beyond the track featured on the show.

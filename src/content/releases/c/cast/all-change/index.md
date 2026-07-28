@@ -50,4 +50,6 @@ tracklist_edition: "1995-10-16 GB"
 ---
 ## About
 
-All Change is the debut studio album by Liverpool indie rock band Cast, released on Polydor Records in 1995. It reached number seven on the UK Albums Chart and marked a confident debut from the band led by former La's bassist John Power. The album blends Merseybeat influences with a modern Britpop sensibility across a set of consistently melodic guitar-pop songs.
+*All Change* blends Merseybeat influences with a modern Britpop sensibility across a set of consistently melodic guitar-pop songs.
+
+It reached number seven on the UK Albums Chart and marked a confident debut from the band led by former La's bassist John Power.

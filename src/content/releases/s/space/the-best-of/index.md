@@ -64,6 +64,6 @@ tracklist_edition: "2009-11-09 GB"
 ---
 ## About
 
-The Best Of is a release by Space released in 2009-11-09. It has been featured on 1 Sundown Sessions show. Featured tracks include Magic Fly.
+*The Best Of* earns its place in the Sundown Sessions catalogue through “Magic Fly”, a selection that offers a direct route into Space's work.
 
-
+Heard in the context of the full release, “Magic Fly” is an invitation to explore beyond the track featured on the show.

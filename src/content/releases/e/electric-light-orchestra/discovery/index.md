@@ -57,6 +57,6 @@ tracklist_edition: "1979 GB white shell"
 ---
 ## About
 
-Discovery is a release by Electric Light Orchestra released in 1979-05-21. It has been featured on 1 Sundown Sessions show. Featured tracks include Don't Bring Me Down.
+*Discovery* earns its place in the Sundown Sessions catalogue through “Don't Bring Me Down”, a selection that offers a direct route into Electric Light Orchestra's work.
 
-
+Heard in the context of the full release, “Don't Bring Me Down” is an invitation to explore beyond the track featured on the show.

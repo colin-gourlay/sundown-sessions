@@ -48,6 +48,6 @@ tracklist_edition: "1986 GB"
 ---
 ## About
 
-The Colour of Spring is a release by Talk Talk released in 1986-03. It has been featured on 1 Sundown Sessions show. Featured tracks include Life's What You Make It.
+*The Colour of Spring* earns its place in the Sundown Sessions catalogue through “Life's What You Make It”, a selection that offers a direct route into Talk Talk's work.
 
-
+Heard in the context of the full release, “Life's What You Make It” is an invitation to explore beyond the track featured on the show.

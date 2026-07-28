@@ -43,10 +43,10 @@ tracklist_edition: "2013 RU"
 ---
 ## About
 
-...Like Clockwork is a release by Queens of the Stone Age released in 2013. It has been featured on 1 Sundown Sessions show. Featured tracks include I Sat By The Ocean.
+*...Like Clockwork* earns its place in the Sundown Sessions catalogue through “I Sat By The Ocean”, a selection that offers a direct route into Queens of the Stone Age's work.
+
+Heard in the context of the full release, “I Sat By The Ocean” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - I Sat By The Ocean
-
-

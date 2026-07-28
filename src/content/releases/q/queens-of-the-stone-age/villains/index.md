@@ -60,7 +60,7 @@ tracklist_edition: "2017-08-25 US"
 ---
 ## About
 
-Villains is the seventh studio album by Queens of the Stone Age, released on 25 August 2017 through Matador Records. Produced by Mark Ronson, it was the band's first album in four years following ...Like Clockwork (2013).
+Produced by Mark Ronson, *Villains* was the band's first album in four years following ...Like Clockwork (2013).
 
 ## External Links
 

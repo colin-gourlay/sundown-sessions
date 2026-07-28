@@ -44,4 +44,6 @@ tracklist_edition: "1976 GB"
 ---
 ## About
 
-Agents of Fortune is the fourth studio album by New York rock band Blue Öyster Cult, released on Columbia Records in 1976. The album includes 'Don't Fear the Reaper', one of the most celebrated rock songs of the decade, and represents the band's commercial peak. The record showcases their eclectic blend of hard rock, progressive rock, and occult imagery.
+*Agents Of Fortune* showcases their eclectic blend of hard rock, progressive rock, and occult imagery.
+
+The album includes 'Don't Fear the Reaper', one of the most celebrated rock songs of the decade, and represents the band's commercial peak.

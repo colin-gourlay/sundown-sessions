@@ -26,6 +26,6 @@ tracklist_edition: "2018-04-19 None"
 ---
 ## About
 
-Nothing Compares 2 U is a release by Prince released in 2018-04-19. It has been featured on 1 Sundown Sessions show. Featured tracks include Nothing Compares 2 U.
+*Nothing Compares 2 U* earns its place in the Sundown Sessions catalogue through “Nothing Compares 2 U”, a selection that offers a direct route into Prince's work.
 
-
+Heard in the context of the full release, “Nothing Compares 2 U” is an invitation to explore beyond the track featured on the show.

@@ -52,10 +52,10 @@ tracklist_edition: "1990 US"
 ---
 ## About
 
-Stuck Together With God's Glue is a release by Something Happens released in 1990. It has been featured on 1 Sundown Sessions show. Featured tracks include Hello, Hello, Hello, Hello, Hello (Petrol).
+*Stuck Together With God's Glue* has supplied Sundown Sessions with “Hello”, “Hello”, “Hello”, “Hello” and “Hello (Petrol)”, giving more than one way into Something Happens's work.
+
+Together, those choices point beyond isolated favourites towards the character of the wider release.
 
 ## Tracks Featured on Sundown Sessions
 
 - Hello, Hello, Hello, Hello, Hello (Petrol)
-
-

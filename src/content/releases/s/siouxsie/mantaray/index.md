@@ -54,6 +54,6 @@ tracklist_edition: "2007-09-03 XE"
 ---
 ## About
 
-Mantaray is a release by Siouxsie released in 2007-09-03. It has been featured on 1 Sundown Sessions show. Featured tracks include Into a Swan.
+*Mantaray* earns its place in the Sundown Sessions catalogue through “Into a Swan”, a selection that offers a direct route into Siouxsie's work.
 
-
+Heard in the context of the full release, “Into a Swan” is an invitation to explore beyond the track featured on the show.

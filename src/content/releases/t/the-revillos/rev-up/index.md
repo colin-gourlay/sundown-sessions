@@ -63,6 +63,6 @@ tracklist_edition: "1980 GB"
 ---
 ## About
 
-Rev Up is a release by The Revillos released in 1980. It has been featured on 1 Sundown Sessions show. Featured tracks include Motorbike Beat.
+*Rev Up* earns its place in the Sundown Sessions catalogue through “Motorbike Beat”, a selection that offers a direct route into The Revillos's work.
 
-
+Heard in the context of the full release, “Motorbike Beat” is an invitation to explore beyond the track featured on the show.

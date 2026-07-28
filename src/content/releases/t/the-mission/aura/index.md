@@ -83,6 +83,6 @@ tracklist_edition: "2001 DE"
 ---
 ## About
 
-Aura is a release by The Mission released in 2001-12-03. It has been featured on 1 Sundown Sessions show. Featured tracks include Dragonfly.
+*Aura* earns its place in the Sundown Sessions catalogue through “Dragonfly”, a selection that offers a direct route into The Mission's work.
 
-
+Heard in the context of the full release, “Dragonfly” is an invitation to explore beyond the track featured on the show.

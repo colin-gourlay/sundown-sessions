@@ -57,6 +57,6 @@ tracklist_edition: "1990 US"
 ---
 ## About
 
-Party Of One is a release by Nick Lowe released in 1990. It has been featured on 1 Sundown Sessions show. Featured tracks include You Got The Look I Like.
+*Party Of One* earns its place in the Sundown Sessions catalogue through “You Got The Look I Like”, a selection that offers a direct route into Nick Lowe's work.
 
-
+Heard in the context of the full release, “You Got The Look I Like” is an invitation to explore beyond the track featured on the show.

@@ -51,6 +51,6 @@ tracklist_edition: "1978 GB"
 ---
 ## About
 
-The Cars is a release by The Cars released in 1978-06-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Just What I Needed.
+*The Cars* earns its place in the Sundown Sessions catalogue through “Just What I Needed”, a selection that offers a direct route into The Cars's work.
 
-
+Heard in the context of the full release, “Just What I Needed” is an invitation to explore beyond the track featured on the show.

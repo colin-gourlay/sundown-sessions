@@ -22,7 +22,9 @@ duration: "3:05"
 ---
 ## About
 
-Geordie Munro is a release by David Latto released in 2022. It has been featured on 3 Sundown Sessions shows. Featured tracks include Geordie Munro.
+*Geordie Munro* earns its place in the Sundown Sessions catalogue through “Geordie Munro”, a selection that offers a direct route into David Latto's work.
+
+Heard in the context of the full release, “Geordie Munro” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 

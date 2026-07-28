@@ -45,6 +45,6 @@ tracklist_edition: "2023 None"
 ---
 ## About
 
-Havin' Such A Good Time is a release by The Vintage Explosion released in 2023. It has been featured on 1 Sundown Sessions show. Featured tracks include Don't Knock Upon My Door.
+*Havin' Such A Good Time* earns its place in the Sundown Sessions catalogue through “Don't Knock Upon My Door”, a selection that offers a direct route into The Vintage Explosion's work.
 
-
+Heard in the context of the full release, “Don't Knock Upon My Door” is an invitation to explore beyond the track featured on the show.

@@ -81,10 +81,10 @@ tracklist_edition: "2003 US"
 ---
 ## About
 
-Paper Monsters (U.S. Version) is a release by Dave Gahan released in 2003. It has been featured on 1 Sundown Sessions show. Featured tracks include Dirty Sticky Floors.
+*Paper Monsters (U.S. Version)* earns its place in the Sundown Sessions catalogue through “Dirty Sticky Floors”, a selection that offers a direct route into Dave Gahan's work.
+
+Heard in the context of the full release, “Dirty Sticky Floors” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Dirty Sticky Floors
-
-

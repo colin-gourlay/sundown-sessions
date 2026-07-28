@@ -56,6 +56,6 @@ tracklist_edition: "2006-03-06 GB"
 ---
 ## About
 
-You See Colours is a release by Delays released in 2006-03-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Valentine.
+*You See Colours* earns its place in the Sundown Sessions catalogue through “Valentine”, a selection that offers a direct route into Delays's work.
 
-
+Heard in the context of the full release, “Valentine” is an invitation to explore beyond the track featured on the show.

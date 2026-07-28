@@ -41,4 +41,6 @@ tracklist_edition: "1985 GB"
 ---
 ## About
 
-This Is the Sea is the third studio album by Scottish rock act The Waterboys, released on Ensign Records in 1985. It reached number 37 on the UK Albums Chart and represents the full flowering of Mike Scott's 'Big Music' — an ambitious, expansive rock sound incorporating violin, piano, and an almost liturgical grandeur. The title track is one of the most celebrated songs in the band's catalogue.
+The title track is one of the most celebrated songs in the band's catalogue.
+
+It reached number 37 on the UK Albums Chart and represents the full flowering of Mike Scott's 'Big Music' — an ambitious, expansive rock sound incorporating violin, piano, and an almost liturgical grandeur.

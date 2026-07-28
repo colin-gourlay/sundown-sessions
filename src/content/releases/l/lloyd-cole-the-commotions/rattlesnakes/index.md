@@ -44,4 +44,6 @@ tracklist_edition: "1984 US"
 ---
 ## About
 
-Rattlesnakes is the debut studio album by Lloyd Cole & the Commotions, released on Polydor Records in 1984. It reached number 13 on the UK Albums Chart and announced Cole as one of the most gifted lyricists of his generation. Influenced by Velvet Underground, the Byrds, and the literary tradition of Kafka and Simone de Beauvoir, the album remains one of the finest British indie debuts of the 1980s.
+Influenced by Velvet Underground, the Byrds, and the literary tradition of Kafka and Simone de Beauvoir, *Rattlesnakes* remains one of the finest British indie debuts of the 1980s.
+
+It reached number 13 on the UK Albums Chart and announced Cole as one of the most gifted lyricists of his generation.

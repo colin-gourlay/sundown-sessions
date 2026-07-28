@@ -54,4 +54,6 @@ tracklist_edition: "2009-01-12 XW"
 ---
 ## About
 
-To Lose My Life... is the debut studio album by London post-punk revival band White Lies, released on Fiction Records in 2009. It debuted at number one on the UK Albums Chart, making White Lies the fastest-selling debut act of 2009. The album channels the dark atmospherics of bands such as Joy Division and Editors.
+*To Lose My Life...* channels the dark atmospherics of bands such as Joy Division and Editors.
+
+It debuted at number one on the UK Albums Chart, making White Lies the fastest-selling debut act of 2009.

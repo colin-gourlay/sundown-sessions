@@ -63,6 +63,6 @@ tracklist_edition: "1965-09-23 AU"
 ---
 ## About
 
-Easy is a release by The Easybeats released in 1965-09-23. It has been featured on 1 Sundown Sessions show. Featured tracks include Friday On My Mind.
+*Easy* earns its place in the Sundown Sessions catalogue through “Friday On My Mind”, a selection that offers a direct route into The Easybeats's work.
 
-
+Heard in the context of the full release, “Friday On My Mind” is an invitation to explore beyond the track featured on the show.

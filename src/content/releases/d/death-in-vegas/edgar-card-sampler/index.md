@@ -36,6 +36,6 @@ tracklist_edition: "2002-12-18 None"
 ---
 ## About
 
-Edgar Card Sampler is a release by Death In Vegas released in 2002-12-18. It has been featured on 1 Sundown Sessions show. Featured tracks include So You Say You Lost Your Baby.
+*Edgar Card Sampler* earns its place in the Sundown Sessions catalogue through “So You Say You Lost Your Baby”, a selection that offers a direct route into Death In Vegas's work.
 
-
+Heard in the context of the full release, “So You Say You Lost Your Baby” is an invitation to explore beyond the track featured on the show.

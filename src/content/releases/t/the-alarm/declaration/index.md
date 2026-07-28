@@ -56,6 +56,6 @@ tracklist_edition: "1984 GB"
 ---
 ## About
 
-Declaration is a release by The Alarm released in 1984-02. It has been featured on 1 Sundown Sessions show. Featured tracks include Sixty Eight Guns.
+*Declaration* earns its place in the Sundown Sessions catalogue through “Sixty Eight Guns”, a selection that offers a direct route into The Alarm's work.
 
-
+Heard in the context of the full release, “Sixty Eight Guns” is an invitation to explore beyond the track featured on the show.

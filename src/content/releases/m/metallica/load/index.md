@@ -68,6 +68,6 @@ tracklist_edition: "1996 XE PMDC France pressing, BIEM/MCPS on disc"
 ---
 ## About
 
-Load is a release by Metallica released in 1996-05-04. It has been featured on 2 Sundown Sessions shows. Featured tracks include King Nothing.
+*Load* earns its place in the Sundown Sessions catalogue through “King Nothing”, a selection that offers a direct route into Metallica's work.
 
-
+Heard in the context of the full release, “King Nothing” is an invitation to explore beyond the track featured on the show.

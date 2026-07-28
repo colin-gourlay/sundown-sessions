@@ -28,4 +28,6 @@ tracklist_edition: "1985-09 GB"
 ---
 ## About
 
-There Are Eight Million Stories is the debut and only studio album by London indie pop band The June Brides, released on Pink Records in 1985. The album captures the band's passionate, brass-infused guitar pop and is considered a key document of the mid-1980s UK indie scene.
+*There Are Eight Million Stories* captures the band's passionate, brass-infused guitar pop and is considered a key document of the mid-1980s UK indie scene.
+
+As The June Brides' sole studio album, it preserves the character of a brief but distinctive catalogue.

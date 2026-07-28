@@ -66,6 +66,6 @@ tracklist_edition: "1984 GB"
 ---
 ## About
 
-The Collection is a release by Ultravox released in 1984-11-02. It has been featured on 1 Sundown Sessions show. Featured tracks include All Stood Still.
+*The Collection* earns its place in the Sundown Sessions catalogue through “All Stood Still”, a selection that offers a direct route into Ultravox's work.
 
-
+Heard in the context of the full release, “All Stood Still” is an invitation to explore beyond the track featured on the show.

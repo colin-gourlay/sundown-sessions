@@ -50,4 +50,6 @@ tracklist_edition: "1964 US"
 ---
 ## About
 
-Handy Man is a studio album by American rock and roll singer Del Shannon, released on Amy Records in 1964. It includes Del Shannon's version of 'Handy Man', originally written by Otis Blackwell and performed by Jimmy Jones, whose version had reached number two on the Billboard Hot 100 in 1960. Shannon's take on the track reached number 22 in the UK Singles Chart.
+Shannon's take on the track reached number 22 in the UK Singles Chart.
+
+It includes Del Shannon's version of 'Handy Man', originally written by Otis Blackwell and performed by Jimmy Jones, whose version had reached number two on the Billboard Hot 100 in 1960.

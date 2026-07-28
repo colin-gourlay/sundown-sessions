@@ -46,10 +46,10 @@ tracklist_edition: "2010-10-01 XW"
 ---
 ## About
 
-Plastic Ono Band is a release by John Lennon released in 1970. It has been featured on 1 Sundown Sessions show. Featured tracks include Love.
+*Plastic Ono Band* earns its place in the Sundown Sessions catalogue through “Love”, a selection that offers a direct route into John Lennon's work.
+
+Heard in the context of the full release, “Love” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Love
-
-

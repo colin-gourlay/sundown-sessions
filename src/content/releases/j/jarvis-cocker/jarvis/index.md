@@ -52,10 +52,10 @@ tracklist_edition: "2006-11 AU"
 ---
 ## About
 
-Jarvis is a release by Jarvis Cocker released in 2006. It has been featured on 1 Sundown Sessions show. Featured tracks include Fat Children.
+*Jarvis* earns its place in the Sundown Sessions catalogue through “Fat Children”, a selection that offers a direct route into Jarvis Cocker's work.
+
+Heard in the context of the full release, “Fat Children” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Fat Children
-
-

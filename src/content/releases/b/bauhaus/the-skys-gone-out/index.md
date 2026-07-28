@@ -51,4 +51,6 @@ tracklist_edition: "1982 GB"
 ---
 ## About
 
-The Sky's Gone Out is the third studio album by gothic rock pioneers Bauhaus, released on Beggars Banquet in 1982. It reached number four on the UK Albums Chart and is regarded as a landmark record in the development of gothic rock. The album includes their acclaimed cover of David Bowie's 'Ziggy Stardust', which was released as a single and reached number 15 in the UK.
+*The Sky's Gone Out* reached number four on the UK Albums Chart and is regarded as a landmark record in the development of gothic rock.
+
+The album includes their acclaimed cover of David Bowie's 'Ziggy Stardust', which was released as a single and reached number 15 in the UK.

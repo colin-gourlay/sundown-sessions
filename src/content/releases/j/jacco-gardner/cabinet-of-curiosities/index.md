@@ -122,6 +122,6 @@ tracklist_edition: "2013-02-11 NL"
 ---
 ## About
 
-Cabinet of Curiosities is a release by Jacco Gardner released in 2013-02-11. It has been featured on 3 Sundown Sessions shows. Featured tracks include Clear The Air, The Ballad of Little Jane, The One Eyed King.
+*Cabinet of Curiosities* has supplied Sundown Sessions with “Clear The Air”, “The Ballad of Little Jane” and “The One Eyed King”, giving more than one way into Jacco Gardner's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

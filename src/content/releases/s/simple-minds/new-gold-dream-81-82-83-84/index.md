@@ -24,6 +24,6 @@ tracklist_edition: "1983-03-01 IT"
 ---
 ## About
 
-New Gold Dream (81/82/83/84) is a release by Simple Minds released in 1983-03-01. It has been featured on 1 Sundown Sessions show. Featured tracks include New Gold Dream (81/82/83/84).
+*New Gold Dream (81/82/83/84)* earns its place in the Sundown Sessions catalogue through “New Gold Dream (81/82/83/84)”, a selection that offers a direct route into Simple Minds's work.
 
-
+Heard in the context of the full release, “New Gold Dream (81/82/83/84)” is an invitation to explore beyond the track featured on the show.

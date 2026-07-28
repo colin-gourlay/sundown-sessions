@@ -46,9 +46,10 @@ tracklist_edition: "2000 US"
 ---
 ## About
 
-Cousteau is a release by CousteauX released in 2000. It has been featured on 1 Sundown Sessions show. Featured tracks include Last Good Day Of The Year.
+*Cousteau* earns its place in the Sundown Sessions catalogue through “Last Good Day Of The Year”, a selection that offers a direct route into CousteauX's work.
+
+Heard in the context of the full release, “Last Good Day Of The Year” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Last Good Day Of The Year
-

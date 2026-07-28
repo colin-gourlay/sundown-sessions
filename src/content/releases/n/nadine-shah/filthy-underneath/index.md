@@ -55,6 +55,6 @@ tracklist_edition: "2024-02-23 GB"
 ---
 ## About
 
-Filthy Underneath is a release by Nadine Shah released in 2024-02-23. It has been featured on 1 Sundown Sessions show. Featured tracks include Greatest Dancer.
+*Filthy Underneath* earns its place in the Sundown Sessions catalogue through “Greatest Dancer”, a selection that offers a direct route into Nadine Shah's work.
 
-
+Heard in the context of the full release, “Greatest Dancer” is an invitation to explore beyond the track featured on the show.

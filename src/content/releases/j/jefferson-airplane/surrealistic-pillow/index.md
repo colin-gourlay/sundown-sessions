@@ -35,4 +35,4 @@ tracklist_edition: "1967 GB"
 ---
 ## About
 
-Surrealistic Pillow is the second studio album by San Francisco psychedelic rock band Jefferson Airplane, released on RCA Victor in 1967. It is considered one of the defining records of the 1960s Summer of Love and the San Francisco psychedelic scene, featuring the hits 'Somebody to Love' and 'White Rabbit', both featuring the extraordinary voice of Grace Slick.
+*Surrealistic Pillow* is considered one of the defining records of the 1960s Summer of Love and the San Francisco psychedelic scene, featuring the hits 'Somebody to Love' and 'White Rabbit', both featuring the extraordinary voice of Grace Slick.

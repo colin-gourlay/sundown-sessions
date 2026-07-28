@@ -51,6 +51,6 @@ tracklist_edition: "1977 NL"
 ---
 ## About
 
-Songs for Swinging Lovers is a release by Radio Stars released in 1977. It has been featured on 1 Sundown Sessions show. Featured tracks include Nervous Wreck.
+*Songs for Swinging Lovers* earns its place in the Sundown Sessions catalogue through “Nervous Wreck”, a selection that offers a direct route into Radio Stars's work.
 
-
+Heard in the context of the full release, “Nervous Wreck” is an invitation to explore beyond the track featured on the show.

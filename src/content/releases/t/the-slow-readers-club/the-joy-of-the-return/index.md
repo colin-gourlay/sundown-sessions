@@ -53,6 +53,6 @@ tracklist_edition: "2020-03-20 XW"
 ---
 ## About
 
-The Joy Of The Return is a release by The Slow Readers Club released in 2020-03-20. It has been featured on 1 Sundown Sessions show. Featured tracks include All I Hear.
+*The Joy Of The Return* earns its place in the Sundown Sessions catalogue through “All I Hear”, a selection that offers a direct route into The Slow Readers Club's work.
 
-
+Heard in the context of the full release, “All I Hear” is an invitation to explore beyond the track featured on the show.

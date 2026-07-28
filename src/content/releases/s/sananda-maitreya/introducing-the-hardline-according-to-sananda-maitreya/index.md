@@ -46,10 +46,10 @@ tracklist_edition: "XW"
 ---
 ## About
 
-Introducing The Hardline According To Sananda Maitreya is a release by Sananda Maitreya released in 1987. It has been featured on 1 Sundown Sessions show. Featured tracks include Who's Loving You.
+*Introducing The Hardline According To Sananda Maitreya* earns its place in the Sundown Sessions catalogue through “Who's Loving You”, a selection that offers a direct route into Sananda Maitreya's work.
+
+Heard in the context of the full release, “Who's Loving You” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Who's Loving You
-
-

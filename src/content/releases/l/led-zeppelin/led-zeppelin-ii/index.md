@@ -41,4 +41,6 @@ tracklist_edition: "1969 US RL Monarch"
 ---
 ## About
 
-Led Zeppelin II is the second studio album by British rock band Led Zeppelin, released on Atlantic Records in 1969. It topped the UK Albums Chart and includes some of the band's most celebrated and influential tracks, including 'Whole Lotta Love' and 'Ramble On'. The album is considered one of the defining works of hard rock and heavy metal.
+*Led Zeppelin II* is considered one of the defining works of hard rock and heavy metal.
+
+It topped the UK Albums Chart and includes some of the band's most celebrated and influential tracks, including 'Whole Lotta Love' and 'Ramble On'.

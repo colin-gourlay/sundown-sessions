@@ -29,11 +29,12 @@ tracks:
 ---
 ## About
 
-Art School Dancing is a release by Becky Becky released in 2015. It has been featured on 3 Sundown Sessions shows. Featured tracks include Champagne on Christmas Day, House of the Black Madonna (live), Sparrow.
+*Art School Dancing* has supplied Sundown Sessions with “Champagne on Christmas Day”, “House of the Black Madonna (live)” and “Sparrow”, giving more than one way into Becky Becky's work.
+
+Together, those choices point beyond isolated favourites towards the character of the wider release.
 
 ## Tracks Featured on Sundown Sessions
 
 - Champagne on Christmas Day
 - House of the Black Madonna (live)
 - Sparrow
-

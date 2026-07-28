@@ -117,10 +117,10 @@ tracklist_edition: "2016-04-08 GB"
 ---
 ## About
 
-The Very Best of The Associates is a release by The Associates released in 2016. It has been featured on 1 Sundown Sessions show. Featured tracks include White Car in Germany.
+*The Very Best of The Associates* earns its place in the Sundown Sessions catalogue through “White Car in Germany”, a selection that offers a direct route into The Associates's work.
+
+Heard in the context of the full release, “White Car in Germany” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - White Car in Germany
-
-

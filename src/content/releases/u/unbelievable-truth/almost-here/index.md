@@ -46,4 +46,6 @@ tracklist_edition: "1998 GB"
 ---
 ## About
 
-Almost Here is the debut studio album by Oxford indie folk trio Unbelievable Truth, released on Virgin Records in 1998. Produced by Nigel Godrich, it is characterised by delicate acoustic arrangements and understated, introspective songwriting. The band included Andy Yorke, brother of Radiohead's Thom Yorke, and the album shares some of the quiet intensity of Radiohead's own work.
+The band included Andy Yorke, brother of Radiohead's Thom Yorke, and the album shares some of the quiet intensity of Radiohead's own work.
+
+Produced by Nigel Godrich, it is characterised by delicate acoustic arrangements and understated, introspective songwriting.

@@ -43,10 +43,10 @@ tracklist_edition: "2023-05-05 XW"
 ---
 ## About
 
-Laughing with Liza is a release by David Bowie released in 2023. It has been featured on 1 Sundown Sessions show. Featured tracks include The Laughing Gnome.
+*Laughing with Liza* earns its place in the Sundown Sessions catalogue through “The Laughing Gnome”, a selection that offers a direct route into David Bowie's work.
+
+Heard in the context of the full release, “The Laughing Gnome” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - The Laughing Gnome
-
-

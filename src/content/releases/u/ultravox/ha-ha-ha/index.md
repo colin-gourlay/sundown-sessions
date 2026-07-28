@@ -48,6 +48,6 @@ tracklist_edition: "1977-10-14 GB"
 ---
 ## About
 
-Ha! Ha! Ha! is a release by Ultravox released in 1977-10-14. It has been featured on 1 Sundown Sessions show. Featured tracks include Young Savage.
+*Ha! Ha! Ha!* earns its place in the Sundown Sessions catalogue through “Young Savage”, a selection that offers a direct route into Ultravox's work.
 
-
+Heard in the context of the full release, “Young Savage” is an invitation to explore beyond the track featured on the show.

@@ -16,9 +16,10 @@ tracks:
 ---
 ## About
 
-Talk to Me of Poison is a release by Dark Hearts released in 2024. It has been featured on 1 Sundown Sessions show. Featured tracks include Talk to Me of Poison.
+*Talk to Me of Poison* earns its place in the Sundown Sessions catalogue through “Talk to Me of Poison”, a selection that offers a direct route into Dark Hearts's work.
+
+Heard in the context of the full release, “Talk to Me of Poison” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Talk to Me of Poison
-

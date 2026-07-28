@@ -54,6 +54,6 @@ tracklist_edition: "1979-09-07 CA"
 ---
 ## About
 
-The Pleasure Principle is a release by Gary Numan released in 1979-09-07. It has been featured on 1 Sundown Sessions show. Featured tracks include Airlane.
+*The Pleasure Principle* earns its place in the Sundown Sessions catalogue through “Airlane”, a selection that offers a direct route into Gary Numan's work.
 
-
+Heard in the context of the full release, “Airlane” is an invitation to explore beyond the track featured on the show.

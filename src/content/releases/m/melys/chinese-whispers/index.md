@@ -31,6 +31,6 @@ tracklist_edition: "2001 GB"
 ---
 ## About
 
-Chinese Whispers is a release by Melys released in 2001. It has been featured on 1 Sundown Sessions show. Featured tracks include Chinese Whispers.
+*Chinese Whispers* earns its place in the Sundown Sessions catalogue through “Chinese Whispers”, a selection that offers a direct route into Melys's work.
 
-
+Heard in the context of the full release, “Chinese Whispers” is an invitation to explore beyond the track featured on the show.

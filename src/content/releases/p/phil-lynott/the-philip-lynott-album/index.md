@@ -46,10 +46,10 @@ tracklist_edition: ""
 ---
 ## About
 
-The Philip Lynott Album is a release by Phil Lynott released in 1982. It has been featured on 1 Sundown Sessions show. Featured tracks include Yellow Pearl.
+*The Philip Lynott Album* earns its place in the Sundown Sessions catalogue through “Yellow Pearl”, a selection that offers a direct route into Phil Lynott's work.
+
+Heard in the context of the full release, “Yellow Pearl” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Yellow Pearl
-
-

@@ -37,10 +37,10 @@ tracklist_edition: "2016-03-18 GB"
 ---
 ## About
 
-Jacob's Ladder is a release by The Filthy Tongues released in 2016. It has been featured on 1 Sundown Sessions show. Featured tracks include Children of the Filthy.
+*Jacob's Ladder* earns its place in the Sundown Sessions catalogue through “Children of the Filthy”, a selection that offers a direct route into The Filthy Tongues's work.
+
+Heard in the context of the full release, “Children of the Filthy” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Children of the Filthy
-
-

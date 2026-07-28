@@ -60,6 +60,6 @@ tracklist_edition: "2006-01-30 GB"
 ---
 ## About
 
-Ballad of the Broken Seas is a release by Isobel Campbell released in 2006-01-30. It has been featured on 1 Sundown Sessions show. Featured tracks include The False Husband.
+*Ballad of the Broken Seas* earns its place in the Sundown Sessions catalogue through “The False Husband”, a selection that offers a direct route into Isobel Campbell's work.
 
-
+Heard in the context of the full release, “The False Husband” is an invitation to explore beyond the track featured on the show.

@@ -40,4 +40,6 @@ tracklist_edition: "1979 GB"
 ---
 ## About
 
-Secondhand Daylight is the second studio album by Manchester post-punk band Magazine, released on Virgin Records in 1979. The album refines the angular art-rock of their debut Real Life, with Barry Adamson's bass lines and Dave Formula's keyboards creating a more cinematic and atmospheric sound. It is regarded as one of the most sophisticated records of the post-punk era.
+*Secondhand Daylight* is regarded as one of the most sophisticated records of the post-punk era.
+
+The album refines the angular art-rock of their debut Real Life, with Barry Adamson's bass lines and Dave Formula's keyboards creating a more cinematic and atmospheric sound.

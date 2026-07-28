@@ -38,4 +38,6 @@ tracklist_edition: "1981-04 AU"
 ---
 ## About
 
-Faith is the third studio album by Crawley post-punk band The Cure, released on Fiction Records in 1981. It reached number 14 on the UK Albums Chart and is the most austere and melancholy of the band's early 'dark trilogy'. Characterised by sparse guitar, bass, and Robert Smith's hushed, grief-stricken vocals, the album is a landmark of gothic and post-punk music.
+Characterised by sparse guitar, bass, and Robert Smith's hushed, grief-stricken vocals, *Faith* is a landmark of gothic and post-punk music.
+
+It reached number 14 on the UK Albums Chart and is the most austere and melancholy of the band's early 'dark trilogy'.

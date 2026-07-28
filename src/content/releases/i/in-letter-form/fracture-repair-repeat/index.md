@@ -55,6 +55,6 @@ tracklist_edition: "2016-05-20 US"
 ---
 ## About
 
-Fracture. Repair. Repeat. is a release by In Letter Form released in 2016-05-20. It has been featured on 1 Sundown Sessions show. Featured tracks include Terror (Is A State Of Mind).
+*Fracture. Repair. Repeat.* earns its place in the Sundown Sessions catalogue through “Terror (Is A State Of Mind)”, a selection that offers a direct route into In Letter Form's work.
 
-
+Heard in the context of the full release, “Terror (Is A State Of Mind)” is an invitation to explore beyond the track featured on the show.

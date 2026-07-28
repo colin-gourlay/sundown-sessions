@@ -78,6 +78,6 @@ tracklist_edition: "1989 GB"
 ---
 ## About
 
-Flying In A Blue Dream is a release by Joe Satriani released in 1989-10-30. It has been featured on 1 Sundown Sessions show. Featured tracks include Day at the Beach (New Rays from an Ancient Sun).
+*Flying In A Blue Dream* earns its place in the Sundown Sessions catalogue through “Day at the Beach (New Rays from an Ancient Sun)”, a selection that offers a direct route into Joe Satriani's work.
 
-
+Heard in the context of the full release, “Day at the Beach (New Rays from an Ancient Sun)” is an invitation to explore beyond the track featured on the show.

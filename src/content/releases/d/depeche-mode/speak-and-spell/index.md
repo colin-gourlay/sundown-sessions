@@ -57,6 +57,6 @@ tracklist_edition: "1981-10-05 GB"
 ---
 ## About
 
-Speak & Spell is a release by Depeche Mode released in 1981-10-05. It has been featured on 1 Sundown Sessions show. Featured tracks include New Life.
+*Speak & Spell* earns its place in the Sundown Sessions catalogue through “New Life”, a selection that offers a direct route into Depeche Mode's work.
 
-
+Heard in the context of the full release, “New Life” is an invitation to explore beyond the track featured on the show.

@@ -28,6 +28,6 @@ tracklist_edition: "2020-02-13 XW 24-Bit 44.1 kHz"
 ---
 ## About
 
-No Time To Die is a release by Billie Eilish released in 2020-02-13. It has been featured on 1 Sundown Sessions show. Featured tracks include No Time To Die.
+*No Time To Die* earns its place in the Sundown Sessions catalogue through “No Time To Die”, a selection that offers a direct route into Billie Eilish's work.
 
-
+Heard in the context of the full release, “No Time To Die” is an invitation to explore beyond the track featured on the show.

@@ -54,6 +54,6 @@ tracklist_edition: "1974 DE"
 ---
 ## About
 
-Kimono My House is a release by Sparks released in 1974-05. It has been featured on 1 Sundown Sessions show. Featured tracks include Amateur Hour.
+*Kimono My House* earns its place in the Sundown Sessions catalogue through “Amateur Hour”, a selection that offers a direct route into Sparks's work.
 
-
+Heard in the context of the full release, “Amateur Hour” is an invitation to explore beyond the track featured on the show.

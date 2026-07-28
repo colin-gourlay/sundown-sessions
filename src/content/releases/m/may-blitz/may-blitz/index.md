@@ -45,6 +45,6 @@ tracklist_edition: "1970 GB"
 ---
 ## About
 
-May Blitz is a release by May Blitz released in 1970. It has been featured on 1 Sundown Sessions show. Featured tracks include I Don't Know?.
+*May Blitz* earns its place in the Sundown Sessions catalogue through “I Don't Know?”, a selection that offers a direct route into May Blitz's work.
 
-
+Heard in the context of the full release, “I Don't Know?” is an invitation to explore beyond the track featured on the show.

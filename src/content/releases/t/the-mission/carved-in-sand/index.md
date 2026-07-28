@@ -52,6 +52,6 @@ tracklist_edition: "1990 CA"
 ---
 ## About
 
-Carved In Sand is a release by The Mission released in 1990-02. It has been featured on 1 Sundown Sessions show. Featured tracks include Deliverance.
+*Carved In Sand* earns its place in the Sundown Sessions catalogue through “Deliverance”, a selection that offers a direct route into The Mission's work.
 
-
+Heard in the context of the full release, “Deliverance” is an invitation to explore beyond the track featured on the show.

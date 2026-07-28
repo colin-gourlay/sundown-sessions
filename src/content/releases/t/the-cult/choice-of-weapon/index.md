@@ -50,4 +50,6 @@ tracklist_edition: "2012-10-16 None"
 ---
 ## About
 
-Choice of Weapon is the ninth studio album by Bradford rock band The Cult, released on Cooking Vinyl in 2012. It reached number 20 on the UK Albums Chart and marked the band's first studio album in five years, following Born Into This (2007). The record received generally positive reviews for its muscular, hook-driven rock sound.
+*Choice of Weapon* reached number 20 on the UK Albums Chart and marked the band's first studio album in five years, following Born Into This (2007).
+
+The record received generally positive reviews for its muscular, hook-driven rock sound.

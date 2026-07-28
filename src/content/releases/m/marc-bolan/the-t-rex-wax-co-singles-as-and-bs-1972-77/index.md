@@ -73,10 +73,10 @@ tracklist_edition: "XE"
 ---
 ## About
 
-The T.Rex Wax Co. Singles A's & B's 1972-77 is a release by Marc Bolan released in 2002. It has been featured on 1 Sundown Sessions show. Featured tracks include Children Of The Revolution.
+*The T.Rex Wax Co. Singles A's & B's 1972-77* earns its place in the Sundown Sessions catalogue through “Children Of The Revolution”, a selection that offers a direct route into Marc Bolan's work.
+
+Heard in the context of the full release, “Children Of The Revolution” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Children Of The Revolution
-
-

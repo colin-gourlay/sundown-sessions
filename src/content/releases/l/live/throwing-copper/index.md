@@ -85,10 +85,10 @@ tracklist_edition: "1994 XE Limited Edition"
 ---
 ## About
 
-Throwing Copper is a release by Live released in 1994. It has been featured on 1 Sundown Sessions show. Featured tracks include Selling The Drama.
+*Throwing Copper* earns its place in the Sundown Sessions catalogue through “Selling The Drama”, a selection that offers a direct route into Live's work.
+
+Heard in the context of the full release, “Selling The Drama” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Selling The Drama
-
-

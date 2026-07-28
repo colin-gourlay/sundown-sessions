@@ -32,10 +32,10 @@ tracklist_edition: "2005 AR"
 ---
 ## About
 
-Sometime In New York City is a release by John Lennon released in 1972. It has been featured on 1 Sundown Sessions show. Featured tracks include New York City.
+*Sometime In New York City* earns its place in the Sundown Sessions catalogue through “New York City”, a selection that offers a direct route into John Lennon's work.
+
+Heard in the context of the full release, “New York City” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - New York City
-
-

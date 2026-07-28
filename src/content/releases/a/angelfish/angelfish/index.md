@@ -56,6 +56,6 @@ tracklist_edition: "1993 DE"
 ---
 ## About
 
-Angelfish is a release by Angelfish released in 1993. It has been featured on 2 Sundown Sessions shows. Featured tracks include Mummy Can't Drive, Suffocate Me.
+*Angelfish* has supplied Sundown Sessions with “Mummy Can't Drive” and “Suffocate Me”, giving more than one way into Angelfish's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

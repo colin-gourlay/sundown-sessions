@@ -64,10 +64,10 @@ tracklist_edition: "1987 GB"
 ---
 ## About
 
-You've Gotta Get Out Of It is a release by The Ruts released in 1980. It has been featured on 1 Sundown Sessions show. Featured tracks include Staring At The Rude Boys.
+*You've Gotta Get Out Of It* earns its place in the Sundown Sessions catalogue through “Staring At The Rude Boys”, a selection that offers a direct route into The Ruts's work.
+
+Heard in the context of the full release, “Staring At The Rude Boys” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Staring At The Rude Boys
-
-

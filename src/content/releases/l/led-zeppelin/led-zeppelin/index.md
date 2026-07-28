@@ -45,6 +45,6 @@ tracklist_edition: "1969-03-31 GB"
 ---
 ## About
 
-Led Zeppelin is a release by Led Zeppelin released in 2001. It has been featured on 1 Sundown Sessions show. Featured tracks include I Can't Quit You Baby.
+*Led Zeppelin* earns its place in the Sundown Sessions catalogue through “I Can't Quit You Baby”, a selection that offers a direct route into Led Zeppelin's work.
 
-
+Heard in the context of the full release, “I Can't Quit You Baby” is an invitation to explore beyond the track featured on the show.

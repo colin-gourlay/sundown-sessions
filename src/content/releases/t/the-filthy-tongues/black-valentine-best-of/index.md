@@ -53,4 +53,6 @@ tracklist_edition: "2023-11-14 XW"
 ---
 ## About
 
-Black Valentine (Best of) is a career-spanning compilation by Glasgow alternative rock band The Filthy Tongues, released on Creeping Bent in 2023. It gathers highlights from their long recording career, including 'Nae Tongues' and their best-known work for the label.
+*Black Valentine (Best of)* gathers highlights from their long recording career, including 'Nae Tongues' and their best-known work for the label.
+
+The collection offers a route through the Glasgow band's alternative-rock catalogue rather than reducing it to a single familiar track.

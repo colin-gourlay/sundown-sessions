@@ -50,4 +50,6 @@ tracklist_edition: "1990 FR"
 ---
 ## About
 
-Let Them Eat Bingo is the debut studio album by Brighton dance-pop act Beats International, Norman Cook's project before he became Fatboy Slim, released on Go! Discs in 1990. It topped the UK Albums Chart, driven by the international number-one hit 'Dub Be Good to Me'. The album blends hip-hop, house, and pop in an irresistible mix that made Cook one of the hottest producers in Britain.
+*Let Them Eat Bingo* blends hip-hop, house, and pop in an irresistible mix that made Cook one of the hottest producers in Britain.
+
+It topped the UK Albums Chart, driven by the international number-one hit 'Dub Be Good to Me'.

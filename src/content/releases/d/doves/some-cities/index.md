@@ -68,4 +68,6 @@ tracklist_edition: "2005 XE special edition"
 ---
 ## About
 
-Some Cities is the third studio album by Manchester indie rock trio Doves, released on Heavenly Recordings in 2005. It debuted at number one on the UK Albums Chart and was nominated for the Mercury Prize. The album reflects the band's expansive, emotionally resonant sound, built on layer upon layer of guitars, keyboards, and Andy Williams' powerful drumming.
+*Some Cities* reflects the band's expansive, emotionally resonant sound, built on layer upon layer of guitars, keyboards, and Andy Williams' powerful drumming.
+
+It debuted at number one on the UK Albums Chart and was nominated for the Mercury Prize.

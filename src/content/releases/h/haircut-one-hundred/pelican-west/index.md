@@ -50,4 +50,6 @@ tracklist_edition: "1982-02 GB"
 ---
 ## About
 
-Pelican West is the debut studio album by Beckenham new wave band Haircut One Hundred, released on Arista Records in 1982. It reached number two on the UK Albums Chart and spawned the hits 'Love Plus One' and 'Favourite Shirts (Boy Meets Girl)'. The album presents a sophisticated, horn-laden blend of funk and pop that made the band one of the leading lights of the early-1980s British new wave scene.
+*Pelican West* presents a sophisticated, horn-laden blend of funk and pop that made the band one of the leading lights of the early-1980s British new wave scene.
+
+It reached number two on the UK Albums Chart and spawned the hits 'Love Plus One' and 'Favourite Shirts (Boy Meets Girl)'.

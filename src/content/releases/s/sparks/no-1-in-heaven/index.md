@@ -31,4 +31,6 @@ tracklist_edition: "1979-03-02 GB"
 ---
 ## About
 
-No. 1 in Heaven is the ninth studio album by American pop duo Sparks, released on Virgin Records in 1979. Produced by Giorgio Moroder, it was a landmark record in the development of synth-pop and electronic dance music, combining Moroder's pulsing Eurodisco production with Ron Mael's deadpan vocal style. The album had a profound influence on the subsequent development of electronic pop in Britain.
+1 In Heaven* was a landmark record in the development of synth-pop and electronic dance music, combining Moroder's pulsing Eurodisco production with Ron Mael's deadpan vocal style.
+
+Produced by Giorgio Moroder, *No. The album had a profound influence on the subsequent development of electronic pop in Britain.

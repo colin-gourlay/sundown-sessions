@@ -59,4 +59,6 @@ tracklist_edition: "2019-10-03 XW"
 ---
 ## About
 
-Ghosteen is the seventeenth studio album by Nick Cave & the Bad Seeds, released in 2019. It reached number two on the UK Albums Chart and is a meditation on grief, loss, and the possibility of transcendence, continuing the reflective journey begun on Skeleton Tree. The album features Cave's most ambient and oceanic sound to date, co-created with Warren Ellis.
+*Ghosteen* features Cave's most ambient and oceanic sound to date, co-created with Warren Ellis.
+
+It reached number two on the UK Albums Chart and is a meditation on grief, loss, and the possibility of transcendence, continuing the reflective journey begun on Skeleton Tree.

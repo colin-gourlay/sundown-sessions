@@ -48,6 +48,6 @@ tracklist_edition: "1986 US"
 ---
 ## About
 
-Infected is a release by The The released in 1986-11-17. It has been featured on 1 Sundown Sessions show. Featured tracks include Infected.
+*Infected* earns its place in the Sundown Sessions catalogue through “Infected”, a selection that offers a direct route into The The's work.
 
-
+Heard in the context of the full release, “Infected” is an invitation to explore beyond the track featured on the show.

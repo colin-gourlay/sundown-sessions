@@ -48,6 +48,6 @@ tracklist_edition: "2024-05-10 GB"
 ---
 ## About
 
-That Golden Time is a release by Villagers released in 2024-05-10. It has been featured on 1 Sundown Sessions show. Featured tracks include That Golden Time.
+*That Golden Time* earns its place in the Sundown Sessions catalogue through “That Golden Time”, a selection that offers a direct route into Villagers's work.
 
-
+Heard in the context of the full release, “That Golden Time” is an invitation to explore beyond the track featured on the show.

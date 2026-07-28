@@ -27,7 +27,9 @@ tracks:
 ---
 ## About
 
-Haste Ye Back is a release by Geordie Munro released in 2012. It has been featured on 1 Sundown Sessions show. Featured tracks include The Alexander Brothers.
+*Haste Ye Back* earns its place in the Sundown Sessions catalogue through “The Alexander Brothers”, a selection that offers a direct route into Geordie Munro's work.
+
+Heard in the context of the full release, “The Alexander Brothers” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 

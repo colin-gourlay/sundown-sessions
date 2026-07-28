@@ -53,4 +53,6 @@ tracklist_edition: "2001-07-23 GB"
 ---
 ## About
 
-Rings Around the World is the fifth studio album by Welsh psychedelic rock band Super Furry Animals, released on Epic Records in 2001. It debuted at number one on the UK Albums Chart, becoming the band's first chart-topper, and went on to win the Welsh Music Prize. The album represents a high-water mark of their career, blending pop hooks with ambitious studio experimentation.
+*Rings Around the World* represents a high-water mark of their career, blending pop hooks with ambitious studio experimentation.
+
+It debuted at number one on the UK Albums Chart, becoming the band's first chart-topper, and went on to win the Welsh Music Prize.

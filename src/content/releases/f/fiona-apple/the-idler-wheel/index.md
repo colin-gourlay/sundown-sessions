@@ -43,10 +43,10 @@ tracklist_edition: "2012-06-18 XE"
 ---
 ## About
 
-The Idler Wheel... is a release by Fiona Apple released in 2012. It has been featured on 1 Sundown Sessions show. Featured tracks include Werewolf.
+*The Idler Wheel...* earns its place in the Sundown Sessions catalogue through “Werewolf”, a selection that offers a direct route into Fiona Apple's work.
+
+Heard in the context of the full release, “Werewolf” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Werewolf
-
-

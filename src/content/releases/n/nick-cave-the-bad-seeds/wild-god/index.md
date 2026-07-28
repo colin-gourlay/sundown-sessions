@@ -18,4 +18,6 @@ tracklist_edition: "2024-03-06 XW"
 ---
 ## About
 
-Wild God is the eighteenth studio album by Nick Cave & the Bad Seeds, released on Bad Seed Ltd in 2024. It debuted at number one on the UK Albums Chart and was received as a joyful, even euphoric record — a striking contrast to the grief-stricken Skeleton Tree and Ghosteen. The album marks something of a spiritual resurgence, finding beauty and hope in the face of loss.
+*Wild God* marks something of a spiritual resurgence, finding beauty and hope in the face of loss.
+
+It debuted at number one on the UK Albums Chart and was received as a joyful, even euphoric record — a striking contrast to the grief-stricken Skeleton Tree and Ghosteen.

@@ -59,6 +59,6 @@ tracklist_edition: "1987 GB"
 ---
 ## About
 
-Electric is a release by The Cult released in 1987-05-21. It has been featured on 2 Sundown Sessions shows. Featured tracks include Born To Be Wild, Electric Ocean.
+*Electric* has supplied Sundown Sessions with “Born To Be Wild” and “Electric Ocean”, giving more than one way into The Cult's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

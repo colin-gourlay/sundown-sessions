@@ -43,10 +43,10 @@ tracklist_edition: "1990 US"
 ---
 ## About
 
-John Peel Session is a release by Adam & The Ants released in 1979. It has been featured on 1 Sundown Sessions show. Featured tracks include Ligotage.
+*John Peel Session* earns its place in the Sundown Sessions catalogue through “Ligotage”, a selection that offers a direct route into Adam & The Ants's work.
+
+Heard in the context of the full release, “Ligotage” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Ligotage
-
-

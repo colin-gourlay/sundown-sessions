@@ -62,6 +62,6 @@ tracklist_edition: "1988 US"
 ---
 ## About
 
-Live Free Or Die is a release by Balaam And The Angel released in 1988. It has been featured on 2 Sundown Sessions shows. Featured tracks include I Feel Love, I'll Show You Something Special.
+*Live Free Or Die* has supplied Sundown Sessions with “I Feel Love” and “I'll Show You Something Special”, giving more than one way into Balaam And The Angel's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

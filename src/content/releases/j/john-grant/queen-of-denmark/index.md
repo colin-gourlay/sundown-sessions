@@ -87,6 +87,6 @@ tracklist_edition: "2010 GB"
 ---
 ## About
 
-Queen of Denmark is a release by John Grant released in 2010-04-06. It has been featured on 2 Sundown Sessions shows. Featured tracks include Marz, Where Dreams Go To Die.
+*Queen of Denmark* has supplied Sundown Sessions with “Marz” and “Where Dreams Go To Die”, giving more than one way into John Grant's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

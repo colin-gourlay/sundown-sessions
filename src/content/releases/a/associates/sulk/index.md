@@ -44,4 +44,6 @@ tracklist_edition: "1982 DE"
 ---
 ## About
 
-Sulk is the second studio album by Dundee art-pop duo Associates, released in 1982. It reached number 10 on the UK Albums Chart and is widely considered their masterpiece, showcasing Billy Mackenzie's extraordinary five-octave vocal range alongside Alan Rankine's inventive production. The album includes the singles 'Party Fears Two' and '18 Carat Love Affair'.
+*Sulk* includes the singles 'Party Fears Two' and '18 Carat Love Affair'.
+
+It reached number 10 on the UK Albums Chart and is widely considered their masterpiece, showcasing Billy Mackenzie's extraordinary five-octave vocal range alongside Alan Rankine's inventive production.

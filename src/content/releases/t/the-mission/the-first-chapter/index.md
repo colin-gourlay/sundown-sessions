@@ -51,6 +51,6 @@ tracklist_edition: "1987 US"
 ---
 ## About
 
-The First Chapter is a release by The Mission released in 1987-06. It has been featured on 1 Sundown Sessions show. Featured tracks include Naked And Savage.
+*The First Chapter* earns its place in the Sundown Sessions catalogue through “Naked And Savage”, a selection that offers a direct route into The Mission's work.
 
-
+Heard in the context of the full release, “Naked And Savage” is an invitation to explore beyond the track featured on the show.

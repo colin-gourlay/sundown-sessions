@@ -69,6 +69,6 @@ tracklist_edition: "1992 JP"
 ---
 ## About
 
-Revenge Of The Goldfish is a release by Inspiral Carpets released in 1992-10-05. It has been featured on 1 Sundown Sessions show. Featured tracks include Bitches Brew.
+*Revenge Of The Goldfish* earns its place in the Sundown Sessions catalogue through “Bitches Brew”, a selection that offers a direct route into Inspiral Carpets's work.
 
-
+Heard in the context of the full release, “Bitches Brew” is an invitation to explore beyond the track featured on the show.

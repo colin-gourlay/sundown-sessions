@@ -50,4 +50,6 @@ tracklist_edition: "1995 MX"
 ---
 ## About
 
-(What's the Story) Morning Glory? is the second studio album by Manchester rock band Oasis, released on Creation Records in 1995. It topped the UK Albums Chart and became the second best-selling album in UK chart history. Featuring the anthems 'Wonderwall', 'Don't Look Back in Anger', and 'Champagne Supernova', it defined the Britpop era and remains one of the most commercially successful British albums ever made.
+Featuring the anthems 'Wonderwall', 'Don't Look Back in Anger', and 'Champagne Supernova', *(What's the Story) Morning Glory?* defined the Britpop era and remains one of the most commercially successful British albums ever made.
+
+It topped the UK Albums Chart and became the second best-selling album in UK chart history.

@@ -50,4 +50,6 @@ tracklist_edition: "1991 US"
 ---
 ## About
 
-Bandwagonesque is the third studio album by Scottish indie rock band Teenage Fanclub, released on Creation Records in 1991. It reached number 22 on the UK Albums Chart and was voted album of the year by Spin magazine, ahead of Nevermind and Achtung Baby. The album distils influences from the Byrds and Big Star into a series of gloriously melodic, hook-laden guitar-pop songs.
+*Bandwagonesque* distils influences from the Byrds and Big Star into a series of gloriously melodic, hook-laden guitar-pop songs.
+
+It reached number 22 on the UK Albums Chart and was voted album of the year by Spin magazine, ahead of Nevermind and Achtung Baby.

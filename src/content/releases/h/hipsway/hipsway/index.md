@@ -61,6 +61,6 @@ tracklist_edition: "1986 GB"
 ---
 ## About
 
-Hipsway is a release by Hipsway released in 1986. It has been featured on 2 Sundown Sessions shows. Featured tracks include The Honeythief, Tinder.
+*Hipsway* has supplied Sundown Sessions with “The Honeythief” and “Tinder”, giving more than one way into Hipsway's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

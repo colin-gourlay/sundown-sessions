@@ -56,6 +56,6 @@ tracklist_edition: "1986-12 US"
 ---
 ## About
 
-Chris Isaak is a release by Chris Isaak released in 1986-12. It has been featured on 1 Sundown Sessions show. Featured tracks include Heart Full of Soul.
+*Chris Isaak* earns its place in the Sundown Sessions catalogue through “Heart Full of Soul”, a selection that offers a direct route into Chris Isaak's work.
 
-
+Heard in the context of the full release, “Heart Full of Soul” is an invitation to explore beyond the track featured on the show.

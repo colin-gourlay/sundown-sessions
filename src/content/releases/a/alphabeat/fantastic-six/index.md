@@ -28,10 +28,10 @@ tracklist_edition: "2007-11-26 GB"
 ---
 ## About
 
-Fantastic Six is a release by Alphabeat released in 2007. It has been featured on 1 Sundown Sessions show. Featured tracks include Fantastic Six.
+*Fantastic Six* earns its place in the Sundown Sessions catalogue through “Fantastic Six”, a selection that offers a direct route into Alphabeat's work.
+
+Heard in the context of the full release, “Fantastic Six” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Fantastic Six
-
-

@@ -41,4 +41,6 @@ tracklist_edition: "1990 GB"
 ---
 ## About
 
-The Good Son is the seventh studio album by Nick Cave & the Bad Seeds, released on Mute Records in 1990. The album represents a significant maturation in Cave's songwriting, trading the confrontational energy of his earlier work for a more measured, orchestrated sound. It draws on American gospel and classical music, and is often cited as the beginning of Cave's great mature period.
+*The Good Son* represents a significant maturation in Cave's songwriting, trading the confrontational energy of his earlier work for a more measured, orchestrated sound.
+
+It draws on American gospel and classical music, and is often cited as the beginning of Cave's great mature period.

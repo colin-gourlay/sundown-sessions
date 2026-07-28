@@ -66,6 +66,6 @@ tracklist_edition: "2001-04 US"
 ---
 ## About
 
-Life, Love And Leaving is a release by The Detroit Cobras released in 2001-04. It has been featured on 2 Sundown Sessions shows. Featured tracks include Cry On, Shout Bamalama.
+*Life, Love And Leaving* has supplied Sundown Sessions with “Cry On” and “Shout Bamalama”, giving more than one way into The Detroit Cobras's work.
 
-
+Together, those choices point beyond isolated favourites towards the character of the wider release.

@@ -54,6 +54,6 @@ tracklist_edition: "2009 BE"
 ---
 ## About
 
-Spinning for the Cause is a release by I Got You On Tape released in 2009-10-12. It has been featured on 1 Sundown Sessions show. Featured tracks include Spinning For The Cause.
+*Spinning for the Cause* earns its place in the Sundown Sessions catalogue through “Spinning For The Cause”, a selection that offers a direct route into I Got You On Tape's work.
 
-
+Heard in the context of the full release, “Spinning For The Cause” is an invitation to explore beyond the track featured on the show.

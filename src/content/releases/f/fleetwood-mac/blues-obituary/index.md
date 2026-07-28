@@ -77,4 +77,4 @@ tracklist_edition: "2000 XE"
 ---
 ## About
 
-Blues Obituary is the second studio album by the original British blues rock version of Fleetwood Mac, released on Immediate Records in 1969. It documents the band led by Peter Green at the height of their creative powers, showcasing the interplay between Green's expressive guitar work and the rhythm section of John McVie and Mick Fleetwood.
+*Blues Obituary* documents the band led by Peter Green at the height of their creative powers, showcasing the interplay between Green's expressive guitar work and the rhythm section of John McVie and Mick Fleetwood.

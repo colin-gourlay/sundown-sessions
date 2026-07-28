@@ -21,6 +21,6 @@ tracklist_edition: "2021-10-07 XW"
 ---
 ## About
 
-The Tipping Point is a release by Tears For Fears released in 2021-10-07. It has been featured on 1 Sundown Sessions show. Featured tracks include My Demons.
+*The Tipping Point* earns its place in the Sundown Sessions catalogue through “My Demons”, a selection that offers a direct route into Tears For Fears's work.
 
-
+Heard in the context of the full release, “My Demons” is an invitation to explore beyond the track featured on the show.

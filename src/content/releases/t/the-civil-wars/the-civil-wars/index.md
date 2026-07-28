@@ -60,6 +60,6 @@ tracklist_edition: "2013 AR"
 ---
 ## About
 
-The Civil Wars is a release by The Civil Wars released in 2013-07-30. It has been featured on 1 Sundown Sessions show. Featured tracks include The One That Got Away.
+*The Civil Wars* earns its place in the Sundown Sessions catalogue through “The One That Got Away”, a selection that offers a direct route into The Civil Wars's work.
 
-
+Heard in the context of the full release, “The One That Got Away” is an invitation to explore beyond the track featured on the show.

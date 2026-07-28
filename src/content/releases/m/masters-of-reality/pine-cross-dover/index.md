@@ -57,6 +57,6 @@ tracklist_edition: "2009-08-24 XE"
 ---
 ## About
 
-Pine/Cross Dover is a release by Masters Of Reality released in 2009-08-24. It has been featured on 1 Sundown Sessions show. Featured tracks include Dreamtime Stomp.
+*Pine/Cross Dover* earns its place in the Sundown Sessions catalogue through “Dreamtime Stomp”, a selection that offers a direct route into Masters Of Reality's work.
 
-
+Heard in the context of the full release, “Dreamtime Stomp” is an invitation to explore beyond the track featured on the show.

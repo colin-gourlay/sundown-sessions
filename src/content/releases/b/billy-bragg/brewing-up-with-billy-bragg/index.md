@@ -47,4 +47,6 @@ tracklist_edition: "1984 GB"
 ---
 ## About
 
-Brewing Up with Billy Bragg is the second studio album by Barking singer-songwriter Billy Bragg, released on Go! Discs in 1984. It reached number 16 on the UK Albums Chart and built on the stark, solo electric guitar and vocal sound of his debut Life's a Riot with Spy vs Spy. The album confirms Bragg's status as one of the most compelling and politically engaged songwriters of the 1980s.
+*Brewing Up with Billy Bragg* confirms Bragg's status as one of the most compelling and politically engaged songwriters of the 1980s.
+
+It reached number 16 on the UK Albums Chart and built on the stark, solo electric guitar and vocal sound of his debut Life's a Riot with Spy vs Spy.

@@ -58,6 +58,6 @@ tracklist_edition: "1966 US mono LP"
 ---
 ## About
 
-(Turn On) The Music Machine is a release by The Music Machine released in 1966. It has been featured on 1 Sundown Sessions show. Featured tracks include The People In Me.
+*(Turn On) The Music Machine* earns its place in the Sundown Sessions catalogue through “The People In Me”, a selection that offers a direct route into The Music Machine's work.
 
-
+Heard in the context of the full release, “The People In Me” is an invitation to explore beyond the track featured on the show.

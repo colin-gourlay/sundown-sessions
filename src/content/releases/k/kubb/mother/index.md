@@ -60,6 +60,6 @@ tracklist_edition: "2005-11-14 GB"
 ---
 ## About
 
-Mother is a release by Kubb released in 2005-11-14. It has been featured on 1 Sundown Sessions show. Featured tracks include Wicked Soul.
+*Mother* earns its place in the Sundown Sessions catalogue through “Wicked Soul”, a selection that offers a direct route into Kubb's work.
 
-
+Heard in the context of the full release, “Wicked Soul” is an invitation to explore beyond the track featured on the show.

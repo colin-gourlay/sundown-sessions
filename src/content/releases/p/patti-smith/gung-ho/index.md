@@ -62,6 +62,6 @@ tracklist_edition: "2000-03-20 DE"
 ---
 ## About
 
-Gung Ho is a release by Patti Smith released in 2000-03-20. It has been featured on 1 Sundown Sessions show. Featured tracks include Glitter In Their Eyes.
+*Gung Ho* earns its place in the Sundown Sessions catalogue through “Glitter In Their Eyes”, a selection that offers a direct route into Patti Smith's work.
 
-
+Heard in the context of the full release, “Glitter In Their Eyes” is an invitation to explore beyond the track featured on the show.

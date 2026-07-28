@@ -61,6 +61,6 @@ tracklist_edition: "1988 US"
 ---
 ## About
 
-Human Animal is a release by Karel Fialka released in 1988. It has been featured on 1 Sundown Sessions show. Featured tracks include Hey Matthew.
+*Human Animal* earns its place in the Sundown Sessions catalogue through “Hey Matthew”, a selection that offers a direct route into Karel Fialka's work.
 
-
+Heard in the context of the full release, “Hey Matthew” is an invitation to explore beyond the track featured on the show.

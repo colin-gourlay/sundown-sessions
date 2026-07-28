@@ -16,10 +16,10 @@ tracklist_edition: "2022-06-08 AF"
 ---
 ## About
 
-As I Am is a release by Jack White released in 2007. It has been featured on 1 Sundown Sessions show. Featured tracks include Another Way to Die.
+*As I Am* earns its place in the Sundown Sessions catalogue through “Another Way to Die”, a selection that offers a direct route into Jack White's work.
+
+Heard in the context of the full release, “Another Way to Die” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Another Way to Die
-
-

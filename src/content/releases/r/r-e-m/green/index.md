@@ -57,6 +57,6 @@ tracklist_edition: "1988 XE price code France WE 851"
 ---
 ## About
 
-Green is a release by R.E.M. released in 1988-11-07. It has been featured on 1 Sundown Sessions show. Featured tracks include Pop Song 89.
+*Green* earns its place in the Sundown Sessions catalogue through “Pop Song 89”, a selection that offers a direct route into R.E.M.'s work.
 
-
+Heard in the context of the full release, “Pop Song 89” is an invitation to explore beyond the track featured on the show.

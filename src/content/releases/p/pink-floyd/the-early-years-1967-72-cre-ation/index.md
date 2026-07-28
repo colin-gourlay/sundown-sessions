@@ -121,10 +121,10 @@ tracklist_edition: "2016-11-11 GB"
 ---
 ## About
 
-The Early Years 1967-72 Cre/ation is a release by Pink Floyd released in 2016. It has been featured on 1 Sundown Sessions show. Featured tracks include See Emily Play.
+*The Early Years 1967-72 Cre/ation* earns its place in the Sundown Sessions catalogue through “See Emily Play”, a selection that offers a direct route into Pink Floyd's work.
+
+Heard in the context of the full release, “See Emily Play” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - See Emily Play
-
-

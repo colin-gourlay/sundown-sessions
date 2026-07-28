@@ -23,6 +23,6 @@ tracklist_edition: "2015-05-19 CA"
 ---
 ## About
 
-TV Set is a release by Spoon released in 2015-05-19. It has been featured on 1 Sundown Sessions show. Featured tracks include TV Set.
+*TV Set* earns its place in the Sundown Sessions catalogue through “TV Set”, a selection that offers a direct route into Spoon's work.
 
-
+Heard in the context of the full release, “TV Set” is an invitation to explore beyond the track featured on the show.

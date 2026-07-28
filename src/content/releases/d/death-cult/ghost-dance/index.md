@@ -51,6 +51,6 @@ tracklist_edition: "1996 US"
 ---
 ## About
 
-Ghost Dance is a release by Death Cult released in 1996. It has been featured on 1 Sundown Sessions show. Featured tracks include A Flower In The Desert.
+*Ghost Dance* earns its place in the Sundown Sessions catalogue through “A Flower In The Desert”, a selection that offers a direct route into Death Cult's work.
 
-
+Heard in the context of the full release, “A Flower In The Desert” is an invitation to explore beyond the track featured on the show.

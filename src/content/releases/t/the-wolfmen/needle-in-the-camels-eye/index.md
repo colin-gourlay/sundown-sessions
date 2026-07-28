@@ -16,9 +16,10 @@ tracks:
 ---
 ## About
 
-Needle In The Camels Eye is a release by The Wolfmen released in 2008. It has been featured on 1 Sundown Sessions show. Featured tracks include Needle In The Camels Eye.
+*Needle In The Camels Eye* earns its place in the Sundown Sessions catalogue through “Needle In The Camels Eye”, a selection that offers a direct route into The Wolfmen's work.
+
+Heard in the context of the full release, “Needle In The Camels Eye” is an invitation to explore beyond the track featured on the show.
 
 ## Tracks Featured on Sundown Sessions
 
 - Needle In The Camels Eye
-

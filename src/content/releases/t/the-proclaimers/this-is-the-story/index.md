@@ -52,4 +52,6 @@ tracklist_edition: "1987 GB"
 ---
 ## About
 
-This Is the Story is the debut studio album by Scottish folk-pop duo The Proclaimers — Craig and Charlie Reid — released on Chrysalis Records in 1987. The album introduced the twins' distinctive blend of acoustic pop, Scottish folk, and uncompromising use of their Leith accent. It includes the song 'Letter from America', which became one of the defining anthems of 1980s Scotland.
+*This Is the Story* includes the song 'Letter from America', which became one of the defining anthems of 1980s Scotland.
+
+The album introduced the twins' distinctive blend of acoustic pop, Scottish folk, and uncompromising use of their Leith accent.

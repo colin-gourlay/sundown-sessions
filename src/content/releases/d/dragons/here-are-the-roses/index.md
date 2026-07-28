@@ -54,6 +54,6 @@ tracklist_edition: "2007-05-30 GB"
 ---
 ## About
 
-Here Are The Roses is a release by Dragons released in 2007-05-30. It has been featured on 1 Sundown Sessions show. Featured tracks include Condition.
+*Here Are The Roses* earns its place in the Sundown Sessions catalogue through “Condition”, a selection that offers a direct route into Dragons's work.
 
-
+Heard in the context of the full release, “Condition” is an invitation to explore beyond the track featured on the show.

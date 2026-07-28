@@ -74,4 +74,6 @@ tracklist_edition: "2000-04-03 GB"
 ---
 ## About
 
-Silence Is Sexy is the ninth studio album by Berlin industrial band Einstürzende Neubauten, released on Mute Records in 2000. The album represents a more introspective and meditative phase in the band's development, trading some of their characteristic sonic violence for a more abstract, refined approach. It is regarded as one of their most accessible and emotionally complex works.
+*Silence is Sexy* is regarded as one of their most accessible and emotionally complex works.
+
+The album represents a more introspective and meditative phase in the band's development, trading some of their characteristic sonic violence for a more abstract, refined approach.

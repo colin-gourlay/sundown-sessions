@@ -44,4 +44,6 @@ tracklist_edition: "1970 GB"
 ---
 ## About
 
-On the Boards is the second and final studio album by Belfast blues rock band Taste, released on Polydor Records in 1970. It reached number 18 on the UK Albums Chart and is widely regarded as their most ambitious work, with guitarist Rory Gallagher displaying some of his most adventurous playing. The album incorporates jazz and folk elements alongside the band's characteristic blues rock.
+*On the Boards* reached number 18 on the UK Albums Chart and is widely regarded as their most ambitious work, with guitarist Rory Gallagher displaying some of his most adventurous playing.
+
+The album incorporates jazz and folk elements alongside the band's characteristic blues rock.
