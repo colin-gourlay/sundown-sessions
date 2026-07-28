@@ -64,4 +64,4 @@ Villains is the seventh studio album by Queens of the Stone Age, released on 25 
 
 ## External Links
 
-- {{< new-tab-link "[Discogs](https://www.discogs.com/master/1344012-Queens-Of-The-Stone-Age-Villains)" >}}
+- {{< new-tab-link "[Discogs](https://www.discogs.com/master/1226820-Queens-Of-The-Stone-Age-Villains)" >}}
