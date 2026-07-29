@@ -1,6 +1,7 @@
 ---
 title: Fandango!
 artist: ZZ Top
+releaseType: Album
 label: London Records
 release_date: "1975"
 release_page: true

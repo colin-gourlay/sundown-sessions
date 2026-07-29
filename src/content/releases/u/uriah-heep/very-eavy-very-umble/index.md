@@ -1,6 +1,7 @@
 ---
 title: "Very 'Eavy, Very 'Umble"
 artist: "Uriah Heep"
+releaseType: Album
 releaseDate: "1970"
 featuredInShows:
   - "12"

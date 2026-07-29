@@ -1,6 +1,7 @@
 ---
 title: Non-Stop Erotic Cabaret
 artist: Soft Cell
+releaseType: Album
 label: Some Bizzare / Phonogram
 release_date: "1981"
 uk_chart_position: 5

@@ -1,6 +1,7 @@
 ---
 title: "Four Thousand, Seven Hundred and Seventy seconds; A Shortcut to Teenage Fanclub"
 artist: "Teenage Fanclub"
+releaseType: Album
 releaseDate: "2003"
 featuredInShows:
   - "7"

@@ -1,6 +1,7 @@
 ---
 title: Talk Talk Talk
 artist: The Psychedelic Furs
+releaseType: Album
 label: CBS Records
 release_date: "1981"
 uk_chart_position: 30

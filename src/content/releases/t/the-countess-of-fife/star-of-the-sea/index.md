@@ -1,6 +1,7 @@
 ---
 title: "Star Of The Sea"
 artist: "The Countess Of Fife"
+releaseType: Album
 releaseDate: "2022"
 featuredInShows:
   - "9"

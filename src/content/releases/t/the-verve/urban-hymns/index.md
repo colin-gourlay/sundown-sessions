@@ -1,6 +1,7 @@
 ---
 title: Urban Hymns
 artist: The Verve
+releaseType: Album
 label: Hut Records
 release_date: "1997"
 uk_chart_position: 1

@@ -1,6 +1,7 @@
 ---
 title: "Ram"
 artist: "Paul McCartney"
+releaseType: Album
 releaseDate: "1971"
 featuredInShows:
   - "4"

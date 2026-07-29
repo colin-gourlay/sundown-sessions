@@ -1,6 +1,7 @@
 ---
 title: American IV - The Man Comes Around
 artist: Johnny Cash
+releaseType: Album
 label: American Recordings
 release_date: "2002"
 release_page: true

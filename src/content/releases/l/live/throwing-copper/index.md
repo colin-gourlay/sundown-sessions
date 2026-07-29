@@ -1,6 +1,7 @@
 ---
 title: "Throwing Copper"
 artist: "Live"
+releaseType: Album
 releaseDate: "1994"
 featuredInShows:
   - "12"

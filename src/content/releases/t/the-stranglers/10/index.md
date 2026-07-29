@@ -1,6 +1,7 @@
 ---
 title: 10
 artist: The Stranglers
+releaseType: Album
 label: Epic Records
 release_date: "1990"
 uk_chart_position: 15

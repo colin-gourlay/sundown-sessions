@@ -1,6 +1,7 @@
 ---
 title: Easter Everywhere
 artist: The 13th Floor Elevators
+releaseType: Album
 label: International Artists
 release_date: "1967"
 release_page: true

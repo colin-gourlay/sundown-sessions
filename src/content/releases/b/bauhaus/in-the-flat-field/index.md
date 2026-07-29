@@ -1,6 +1,7 @@
 ---
 title: In the Flat Field
 artist: Bauhaus
+releaseType: Album
 label: 4AD
 release_date: "1980"
 uk_chart_position: 72

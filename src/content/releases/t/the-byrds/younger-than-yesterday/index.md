@@ -1,6 +1,7 @@
 ---
 title: Younger Than Yesterday
 artist: The Byrds
+releaseType: Album
 label: Columbia Records
 release_date: "1967"
 release_page: true

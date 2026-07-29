@@ -1,6 +1,7 @@
 ---
 title: "Bird of Paradise - An Anthology"
 artist: "Snowy White"
+releaseType: Album
 releaseDate: "2003"
 featuredInShows:
   - "46"

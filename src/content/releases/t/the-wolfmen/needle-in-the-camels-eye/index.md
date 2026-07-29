@@ -1,5 +1,6 @@
 ---
 title: "Needle In The Camels Eye"
+releaseTypeReview: true
 artist: "The Wolfmen"
 releaseDate: "2008"
 featuredInShows:

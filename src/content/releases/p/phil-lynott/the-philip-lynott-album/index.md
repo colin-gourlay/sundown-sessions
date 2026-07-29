@@ -1,6 +1,7 @@
 ---
 title: "The Philip Lynott Album"
 artist: "Phil Lynott"
+releaseType: Album
 releaseDate: "1982"
 featuredInShows:
   - "5"

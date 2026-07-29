@@ -1,6 +1,7 @@
 ---
 title: "Omens: Studio Work 1980-2020"
 artist: "Theatre Of Hate"
+releaseType: Album
 releaseDate: "2022"
 featuredInShows:
   - "9"

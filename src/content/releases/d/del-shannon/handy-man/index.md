@@ -1,6 +1,7 @@
 ---
 title: Handy Man
 artist: Del Shannon
+releaseType: Album
 label: Amy Records
 release_date: "1964"
 release_page: true

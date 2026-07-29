@@ -1,6 +1,7 @@
 ---
 title: Selected Ambient Works 85-92
 artist: Aphex Twin
+releaseType: Album
 label: Apollo Records
 release_date: "1992"
 release_page: true

@@ -1,6 +1,7 @@
 ---
 title: Low
 artist: David Bowie
+releaseType: Album
 label: RCA Records
 release_date: "1977"
 uk_chart_position: 2

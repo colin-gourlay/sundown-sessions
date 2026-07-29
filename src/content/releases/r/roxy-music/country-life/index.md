@@ -1,6 +1,7 @@
 ---
 title: Country Life
 artist: Roxy Music
+releaseType: Album
 label: Island Records
 release_date: "1974"
 uk_chart_position: 3

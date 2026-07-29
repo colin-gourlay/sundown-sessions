@@ -1,6 +1,7 @@
 ---
 title: Attack of the Grey Lantern
 artist: Mansun
+releaseType: Album
 label: Parlophone
 release_date: "1997"
 uk_chart_position: 1

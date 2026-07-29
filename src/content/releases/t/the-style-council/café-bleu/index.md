@@ -1,6 +1,7 @@
 ---
 title: Café Bleu
 artist: The Style Council
+releaseType: Album
 label: Polydor Records
 release_date: "1984"
 uk_chart_position: 2

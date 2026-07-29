@@ -1,6 +1,7 @@
 ---
 title: "...If I Die, I Die (2004 Remaster)"
 artist: "Virgin Prunes"
+releaseType: Album
 releaseDate: "1982"
 featuredInShows:
   - "20"

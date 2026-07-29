@@ -1,6 +1,7 @@
 ---
 title: "Sometime In New York City"
 artist: "John Lennon"
+releaseType: Album
 releaseDate: "1972"
 featuredInShows:
   - "6"

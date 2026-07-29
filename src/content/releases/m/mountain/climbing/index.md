@@ -1,6 +1,7 @@
 ---
 title: Climbing!
 artist: Mountain
+releaseType: Album
 label: Windfall Records
 release_date: "1970"
 release_page: true

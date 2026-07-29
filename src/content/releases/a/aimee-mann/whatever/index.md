@@ -1,6 +1,7 @@
 ---
 title: Whatever
 artist: Aimee Mann
+releaseType: Album
 label: Imago Records
 release_date: "1993"
 release_page: true

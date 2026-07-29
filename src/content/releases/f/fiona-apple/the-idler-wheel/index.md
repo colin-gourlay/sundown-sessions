@@ -1,6 +1,7 @@
 ---
 title: "The Idler Wheel..."
 artist: "Fiona Apple"
+releaseType: Album
 releaseDate: "2012"
 featuredInShows:
   - "11"

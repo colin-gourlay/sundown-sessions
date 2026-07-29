@@ -1,6 +1,7 @@
 ---
 title: London 0 Hull 4
 artist: The Housemartins
+releaseType: Album
 label: Go! Discs
 release_date: "1986"
 uk_chart_position: 3

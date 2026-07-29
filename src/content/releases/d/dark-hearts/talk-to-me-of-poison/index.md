@@ -1,5 +1,6 @@
 ---
 title: "Talk to Me of Poison"
+releaseTypeReview: true
 artist: "Dark Hearts"
 releaseDate: "2024"
 featuredInShows:

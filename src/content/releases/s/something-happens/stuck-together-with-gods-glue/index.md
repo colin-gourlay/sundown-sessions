@@ -1,6 +1,7 @@
 ---
 title: "Stuck Together With God's Glue"
 artist: "Something Happens"
+releaseType: Album
 releaseDate: "1990"
 featuredInShows:
   - "15"

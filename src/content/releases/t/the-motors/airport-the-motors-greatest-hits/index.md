@@ -1,6 +1,7 @@
 ---
 title: "Airport - The Motors Greatest Hits"
 artist: "The Motors"
+releaseType: Album
 releaseDate: "1995"
 featuredInShows:
   - "1"

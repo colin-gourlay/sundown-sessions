@@ -1,6 +1,7 @@
 ---
 title: There Are Eight Million Stories
 artist: The June Brides
+releaseType: Album
 label: Pink Records
 release_date: "1985"
 release_page: true

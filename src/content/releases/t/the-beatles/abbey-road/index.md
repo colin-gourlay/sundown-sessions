@@ -1,6 +1,7 @@
 ---
 title: Abbey Road
 artist: The Beatles
+releaseType: Album
 label: Apple Records
 release_date: "1969"
 uk_chart_position: 1

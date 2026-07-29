@@ -1,6 +1,7 @@
 ---
 title: Black Sabbath
 artist: Black Sabbath
+releaseType: Album
 label: Vertigo Records
 release_date: "1970"
 uk_chart_position: 8

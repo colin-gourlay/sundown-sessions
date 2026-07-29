@@ -1,6 +1,7 @@
 ---
 title: "On"
 artist: Echobelly
+releaseType: Album
 label: Fauve Records
 release_date: "1995"
 release_page: true

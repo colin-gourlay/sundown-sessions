@@ -1,6 +1,7 @@
 ---
 title: "Giant"
 artist: "The Woodentops"
+releaseType: Album
 releaseDate: "1986"
 featuredInShows:
   - "19"

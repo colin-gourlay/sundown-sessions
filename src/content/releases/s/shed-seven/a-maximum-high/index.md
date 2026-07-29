@@ -1,6 +1,7 @@
 ---
 title: A Maximum High
 artist: Shed Seven
+releaseType: Album
 label: Polydor Records
 release_date: "1996"
 uk_chart_position: 8

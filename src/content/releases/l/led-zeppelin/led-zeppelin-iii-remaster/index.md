@@ -1,6 +1,7 @@
 ---
 title: "Led Zeppelin III (Remaster)"
 artist: "Led Zeppelin"
+releaseType: Album
 releaseDate: "1970"
 featuredInShows:
   - "46"

@@ -1,6 +1,7 @@
 ---
 title: Rattlesnakes
 artist: Lloyd Cole & The Commotions
+releaseType: Album
 label: Polydor Records
 release_date: "1984"
 uk_chart_position: 13

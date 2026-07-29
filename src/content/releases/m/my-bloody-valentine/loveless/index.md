@@ -1,6 +1,7 @@
 ---
 title: Loveless
 artist: My Bloody Valentine
+releaseType: Album
 label: Creation Records
 release_date: "1991"
 uk_chart_position: 24

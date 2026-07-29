@@ -1,6 +1,7 @@
 ---
 title: Aqualung
 artist: Jethro Tull
+releaseType: Album
 label: Chrysalis Records
 release_date: "1971"
 uk_chart_position: 4

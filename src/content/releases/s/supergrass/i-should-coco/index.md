@@ -1,6 +1,7 @@
 ---
 title: I Should Coco
 artist: Supergrass
+releaseType: Album
 label: Parlophone
 release_date: "1995"
 uk_chart_position: 1

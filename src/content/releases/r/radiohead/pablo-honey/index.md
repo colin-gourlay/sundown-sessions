@@ -1,6 +1,7 @@
 ---
 title: Pablo Honey
 artist: Radiohead
+releaseType: Album
 label: Parlophone
 release_date: "1993"
 uk_chart_position: 25

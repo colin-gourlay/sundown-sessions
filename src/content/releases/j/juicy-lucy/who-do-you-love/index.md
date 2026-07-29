@@ -1,6 +1,7 @@
 ---
 title: "Who Do You Love"
 artist: "Juicy Lucy"
+releaseType: Album
 releaseDate: "2002"
 featuredInShows:
   - "10"

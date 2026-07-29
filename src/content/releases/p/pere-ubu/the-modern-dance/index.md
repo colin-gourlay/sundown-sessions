@@ -1,6 +1,7 @@
 ---
 title: The Modern Dance
 artist: Pere Ubu
+releaseType: Album
 label: Blank Records
 release_date: "1978"
 release_page: true

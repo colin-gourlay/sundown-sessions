@@ -1,6 +1,7 @@
 ---
 title: Goodbye Jumbo
 artist: World Party
+releaseType: Album
 label: Chrysalis Records
 release_date: "1990"
 release_page: true

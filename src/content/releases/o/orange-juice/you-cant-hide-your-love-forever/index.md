@@ -1,6 +1,7 @@
 ---
 title: You Can't Hide Your Love Forever
 artist: Orange Juice
+releaseType: Album
 label: Polydor Records
 release_date: "1982"
 uk_chart_position: 21

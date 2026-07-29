@@ -1,6 +1,7 @@
 ---
 title: "Greatest Hitsâ€¦ and More"
 artist: "Donovan"
+releaseType: Album
 releaseDate: "1989"
 featuredInShows:
   - "14"

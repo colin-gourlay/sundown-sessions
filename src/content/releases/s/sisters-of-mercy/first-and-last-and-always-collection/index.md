@@ -1,6 +1,7 @@
 ---
 title: "First and Last and Always Collection"
 artist: "Sisters of Mercy"
+releaseType: Album
 releaseDate: "1985"
 featuredInShows:
   - "11"

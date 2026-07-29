@@ -1,6 +1,7 @@
 ---
 title: Wild God
 artist: Nick Cave & The Bad Seeds
+releaseType: Single
 artist_slug: nick-cave-the-bad-seeds
 label: Bad Seed Ltd
 release_date: "2024"

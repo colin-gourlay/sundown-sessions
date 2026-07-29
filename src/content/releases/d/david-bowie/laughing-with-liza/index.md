@@ -1,6 +1,7 @@
 ---
 title: "Laughing with Liza"
 artist: "David Bowie"
+releaseType: Single
 releaseDate: "2023"
 featuredInShows:
   - "10"

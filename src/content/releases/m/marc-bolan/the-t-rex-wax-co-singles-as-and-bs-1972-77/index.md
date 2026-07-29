@@ -1,6 +1,7 @@
 ---
 title: "The T.Rex Wax Co. Singles A's & B's 1972-77"
 artist: "Marc Bolan"
+releaseType: Album
 releaseDate: "2002"
 featuredInShows:
   - "5"

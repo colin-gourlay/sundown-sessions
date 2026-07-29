@@ -1,6 +1,7 @@
 ---
 title: Olympian
 artist: Gene
+releaseType: Album
 label: Costermonger Records
 release_date: "1995"
 release_page: true

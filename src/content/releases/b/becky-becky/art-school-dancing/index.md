@@ -1,5 +1,6 @@
 ---
 title: "Art School Dancing"
+releaseTypeReview: true
 artist: "Becky Becky"
 releaseDate: "2015"
 featuredInShows:

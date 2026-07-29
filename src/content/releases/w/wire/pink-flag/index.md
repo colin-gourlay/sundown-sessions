@@ -1,6 +1,7 @@
 ---
 title: Pink Flag
 artist: Wire
+releaseType: Album
 label: Harvest Records
 release_date: "1977"
 release_page: true

@@ -1,6 +1,7 @@
 ---
 title: "The UA Years"
 artist: "Dr Feelgood"
+releaseType: Album
 releaseDate: "1989"
 featuredInShows:
   - "7"

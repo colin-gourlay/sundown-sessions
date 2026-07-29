@@ -1,5 +1,6 @@
 ---
 title: "Havin' Such A Good Time"
+releaseTypeReview: true
 artist: "The Vintage Explosion"
 releaseDate: "2023"
 duration: "29:50"

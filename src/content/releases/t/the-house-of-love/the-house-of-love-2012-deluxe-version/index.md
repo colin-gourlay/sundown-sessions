@@ -1,6 +1,7 @@
 ---
 title: "The House Of Love (2012 Deluxe Version)"
 artist: "The House of Love"
+releaseType: Album
 releaseDate: "2012"
 featuredInShows:
   - "19"

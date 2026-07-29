@@ -1,6 +1,7 @@
 ---
 title: "Drive Fast, Rock Hard"
 artist: "Hawkwind"
+releaseType: Album
 releaseDate: "2010"
 featuredInShows:
   - "46"

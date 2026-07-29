@@ -1,6 +1,7 @@
 ---
 title: Fireball
 artist: Deep Purple
+releaseType: Album
 label: Harvest Records
 release_date: "1971"
 uk_chart_position: 1

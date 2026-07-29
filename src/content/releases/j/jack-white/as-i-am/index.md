@@ -1,6 +1,7 @@
 ---
 title: "As I Am"
 artist: "Jack White"
+releaseType: Single
 releaseDate: "2007"
 featuredInShows:
   - "6"

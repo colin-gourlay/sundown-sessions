@@ -1,6 +1,7 @@
 ---
 title: The Last in Line
 artist: Dio
+releaseType: Single
 label: Vertigo Records
 release_date: "1984"
 uk_chart_position: 4

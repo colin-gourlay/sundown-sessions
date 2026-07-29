@@ -1,5 +1,6 @@
 ---
 title: "Landing Place"
+releaseTypeReview: true
 artist: "Kirsten Adamson"
 releaseDate: "2023-02-03"
 labels:

@@ -1,5 +1,6 @@
 ---
 title: "Take Me As I Am"
+releaseTypeReview: true
 artist: "Kirsten Adamson"
 releaseDate: "2023"
 featuredInShows:

@@ -1,6 +1,7 @@
 ---
 title: "Creedence Clearwater Revival (Expanded Edition)"
 artist: "Creedence Clearwater Revival"
+releaseType: Album
 releaseDate: "1968"
 featuredInShows:
   - "46"

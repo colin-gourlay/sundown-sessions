@@ -1,6 +1,7 @@
 ---
 title: Calling from a Country Phone
 artist: Robert Forster
+releaseType: Album
 label: Beggars Banquet
 release_date: "1993"
 release_page: true

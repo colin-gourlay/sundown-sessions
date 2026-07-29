@@ -1,6 +1,7 @@
 ---
 title: The Velvet Underground & Nico
 artist: The Velvet Underground
+releaseType: Album
 label: Verve Records
 release_date: "1967"
 release_page: true

@@ -1,6 +1,7 @@
 ---
 title: Dog Man Star
 artist: Suede
+releaseType: Album
 label: Nude Records
 release_date: "1994"
 uk_chart_position: 3

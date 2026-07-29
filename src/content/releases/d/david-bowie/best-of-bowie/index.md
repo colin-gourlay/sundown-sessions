@@ -1,6 +1,7 @@
 ---
 title: Best of Bowie
 artist: David Bowie
+releaseType: Album
 label: EMI Records
 release_date: "2002"
 release_page: true

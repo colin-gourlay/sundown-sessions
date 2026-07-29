@@ -1,6 +1,7 @@
 ---
 title: "Stereo-Typical: A's, B's & Rarities"
 artist: "The Specials"
+releaseType: Album
 releaseDate: "2000"
 featuredInShows:
   - "14"

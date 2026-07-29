@@ -1,6 +1,7 @@
 ---
 title: "The Good, The Bad and The Ugly"
 artist: "Ennio Morricone"
+releaseType: Album
 releaseDate: "1966"
 featuredInShows:
   - "6"

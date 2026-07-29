@@ -1,6 +1,7 @@
 ---
 title: "Uh... Tears Baby"
 artist: "Win"
+releaseType: Album
 releaseDate: "1985"
 featuredInShows:
   - "4"

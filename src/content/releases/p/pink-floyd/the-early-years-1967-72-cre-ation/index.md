@@ -1,6 +1,7 @@
 ---
 title: "The Early Years 1967-72 Cre/ation"
 artist: "Pink Floyd"
+releaseType: Album
 releaseDate: "2016"
 featuredInShows:
   - "1"

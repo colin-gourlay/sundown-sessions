@@ -1,6 +1,7 @@
 ---
 title: Kaleidoscope
 artist: Siouxsie and the Banshees
+releaseType: Album
 label: Polydor Records
 release_date: "1980"
 uk_chart_position: 5

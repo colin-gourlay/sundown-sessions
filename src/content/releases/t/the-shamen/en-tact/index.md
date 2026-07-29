@@ -1,6 +1,7 @@
 ---
 title: En-Tact
 artist: The Shamen
+releaseType: Album
 label: One Little Indian Records
 release_date: "1990"
 release_page: true

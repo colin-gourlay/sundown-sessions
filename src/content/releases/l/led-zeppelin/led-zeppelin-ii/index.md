@@ -1,6 +1,7 @@
 ---
 title: Led Zeppelin II
 artist: Led Zeppelin
+releaseType: Album
 label: Atlantic Records
 release_date: "1969"
 uk_chart_position: 1

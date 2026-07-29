@@ -1,6 +1,7 @@
 ---
 title: A Storm in Heaven
 artist: The Verve
+releaseType: Album
 label: Hut Records
 release_date: "1993"
 release_page: true

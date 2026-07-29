@@ -1,6 +1,7 @@
 ---
 title: Incunabula
 artist: Autechre
+releaseType: Album
 label: Warp Records
 release_date: "1993"
 release_page: true

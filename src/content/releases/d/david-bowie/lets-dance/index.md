@@ -1,6 +1,7 @@
 ---
 title: Let's Dance
 artist: David Bowie
+releaseType: Single
 label: EMI America Records
 release_date: "1983"
 uk_chart_position: 1

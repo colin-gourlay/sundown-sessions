@@ -1,6 +1,7 @@
 ---
 title: "Reel To Real Cacophony"
 artist: "Simple Minds"
+releaseType: Album
 releaseDate: "1979"
 featuredInShows:
   - "5"

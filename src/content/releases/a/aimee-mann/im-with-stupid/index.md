@@ -1,6 +1,7 @@
 ---
 title: "I'm With Stupid"
 artist: "Aimee Mann"
+releaseType: Album
 releaseDate: "1995"
 featuredInShows:
   - "5"

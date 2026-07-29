@@ -1,6 +1,7 @@
 ---
 title: Eden
 artist: Everything But The Girl
+releaseType: Album
 label: Blanco y Negro Records
 release_date: "1984"
 uk_chart_position: 14

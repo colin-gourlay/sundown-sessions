@@ -1,6 +1,7 @@
 ---
 title: Rings Around the World
 artist: Super Furry Animals
+releaseType: Album
 label: Epic Records
 release_date: "2001"
 uk_chart_position: 1

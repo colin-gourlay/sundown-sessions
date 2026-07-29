@@ -1,6 +1,7 @@
 ---
 title: Houses of the Holy
 artist: Led Zeppelin
+releaseType: Album
 label: Atlantic Records
 release_date: "1973"
 uk_chart_position: 1
