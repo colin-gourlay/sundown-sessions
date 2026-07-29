@@ -1,6 +1,7 @@
 ---
 title: A Secret Wish
 artist: Propaganda
+releaseType: Album
 label: ZTT Records
 release_date: "1985"
 uk_chart_position: 16

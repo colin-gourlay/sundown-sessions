@@ -1,6 +1,7 @@
 ---
 title: "Fantastic Six"
 artist: "Alphabeat"
+releaseType: Single
 releaseDate: "2007"
 featuredInShows:
   - "7"

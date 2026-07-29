@@ -1,6 +1,7 @@
 ---
 title: The La's
 artist: The La's
+releaseType: Album
 label: Go! Discs
 release_date: "1990"
 uk_chart_position: 30

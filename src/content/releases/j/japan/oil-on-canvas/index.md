@@ -1,6 +1,7 @@
 ---
 title: Oil on Canvas
 artist: Japan
+releaseType: Album
 label: Virgin Records
 release_date: "1983"
 uk_chart_position: 5

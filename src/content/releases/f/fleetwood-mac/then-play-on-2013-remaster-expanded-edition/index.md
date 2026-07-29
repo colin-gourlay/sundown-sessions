@@ -1,6 +1,7 @@
 ---
 title: "Then Play On (2013 Remaster; Expanded Edition)"
 artist: "Fleetwood Mac"
+releaseType: Album
 releaseDate: "1969"
 featuredInShows:
   - "46"

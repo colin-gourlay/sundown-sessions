@@ -1,6 +1,7 @@
 ---
 title: Franz Ferdinand
 artist: Franz Ferdinand
+releaseType: Album
 label: Domino Records
 release_date: "2004"
 uk_chart_position: 3

@@ -1,6 +1,7 @@
 ---
 title: "Exploding Boy"
 artist: "The Exploding Boy"
+releaseType: Album
 releaseDate: "2007"
 featuredInShows:
   - "14"

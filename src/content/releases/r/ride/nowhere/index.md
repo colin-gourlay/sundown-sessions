@@ -1,6 +1,7 @@
 ---
 title: Nowhere
 artist: Ride
+releaseType: Album
 label: Creation Records
 release_date: "1990"
 uk_chart_position: 11

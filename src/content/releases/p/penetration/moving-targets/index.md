@@ -1,6 +1,7 @@
 ---
 title: Moving Targets
 artist: Penetration
+releaseType: Album
 label: Virgin Records
 release_date: "1978"
 release_page: true

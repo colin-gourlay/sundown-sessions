@@ -1,6 +1,7 @@
 ---
 title: "You've Gotta Get Out Of It"
 artist: "The Ruts"
+releaseType: Album
 releaseDate: "1980"
 featuredInShows:
   - "15"

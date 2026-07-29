@@ -1,6 +1,7 @@
 ---
 title: Razamanaz
 artist: Nazareth
+releaseType: Album
 label: Mooncrest Records
 release_date: "1973"
 uk_chart_position: 11

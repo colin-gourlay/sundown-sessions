@@ -1,6 +1,7 @@
 ---
 title: Fire and Water
 artist: Free
+releaseType: Album
 label: Island Records
 release_date: "1970"
 uk_chart_position: 2

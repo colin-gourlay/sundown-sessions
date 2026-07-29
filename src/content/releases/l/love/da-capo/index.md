@@ -1,6 +1,7 @@
 ---
 title: Da Capo
 artist: Love
+releaseType: Album
 label: Elektra Records
 release_date: "1967"
 release_page: true

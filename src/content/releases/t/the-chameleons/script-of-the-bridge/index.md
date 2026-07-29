@@ -1,6 +1,7 @@
 ---
 title: Script of the Bridge
 artist: The Chameleons
+releaseType: Album
 label: Epic Records
 release_date: "1983"
 release_page: true

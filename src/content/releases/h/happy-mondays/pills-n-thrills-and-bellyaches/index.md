@@ -1,6 +1,7 @@
 ---
 title: Pills 'n' Thrills and Bellyaches
 artist: Happy Mondays
+releaseType: Album
 label: Factory Records
 release_date: "1990"
 uk_chart_position: 4

@@ -1,6 +1,7 @@
 ---
 title: "Fad Gadget By Frank Tovey"
 artist: "Fad Gadget"
+releaseType: Album
 releaseDate: "2006"
 featuredInShows:
   - "14"

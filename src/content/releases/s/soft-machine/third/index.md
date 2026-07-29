@@ -1,6 +1,7 @@
 ---
 title: Third
 artist: Soft Machine
+releaseType: Album
 label: CBS Records
 release_date: "1970"
 release_page: true

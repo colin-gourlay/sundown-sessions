@@ -1,6 +1,7 @@
 ---
 title: Ace of Spades
 artist: Motorhead
+releaseType: Single
 artist_slug: motorhead
 label: Bronze Records
 release_date: "1980"

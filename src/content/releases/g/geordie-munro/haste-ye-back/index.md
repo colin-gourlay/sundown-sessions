@@ -1,5 +1,6 @@
 ---
 title: "Haste Ye Back"
+releaseTypeReview: true
 artist: "The Alexander Brothers"
 releaseDate: "2012"
 featuredInShows:

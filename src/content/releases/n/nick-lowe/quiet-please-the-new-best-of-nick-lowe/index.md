@@ -1,6 +1,7 @@
 ---
 title: "Quiet Please: The New Best of Nick Lowe"
 artist: "Nick Lowe"
+releaseType: Album
 releaseDate: "2009"
 featuredInShows:
   - "15"

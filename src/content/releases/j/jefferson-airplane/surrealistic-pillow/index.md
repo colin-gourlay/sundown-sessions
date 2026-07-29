@@ -1,6 +1,7 @@
 ---
 title: Surrealistic Pillow
 artist: Jefferson Airplane
+releaseType: Album
 label: RCA Victor
 release_date: "1967"
 release_page: true

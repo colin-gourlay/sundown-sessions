@@ -1,6 +1,7 @@
 ---
 title: Almost Here
 artist: Unbelievable Truth
+releaseType: Album
 label: Virgin Records
 release_date: "1998"
 release_page: true

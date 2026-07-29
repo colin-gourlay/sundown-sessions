@@ -1,6 +1,7 @@
 ---
 title: Anything
 artist: The Damned
+releaseType: Single
 label: MCA Records
 release_date: "1986"
 release_page: true

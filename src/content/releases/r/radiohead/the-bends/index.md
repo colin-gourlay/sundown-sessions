@@ -1,6 +1,7 @@
 ---
 title: The Bends
 artist: Radiohead
+releaseType: Album
 label: Parlophone
 release_date: "1995"
 uk_chart_position: 4

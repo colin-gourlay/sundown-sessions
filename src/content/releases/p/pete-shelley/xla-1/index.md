@@ -1,6 +1,7 @@
 ---
 title: "XLÂ·1"
 artist: "Pete Shelley"
+releaseType: Album
 releaseDate: "1983"
 featuredInShows:
   - "19"

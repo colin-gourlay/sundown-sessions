@@ -1,6 +1,7 @@
 ---
 title: Unknown Pleasures
 artist: Joy Division
+releaseType: Album
 label: Factory Records
 release_date: "1979"
 release_page: true

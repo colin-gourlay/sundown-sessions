@@ -1,6 +1,7 @@
 ---
 title: "Shazam (2007 Remaster)"
 artist: "The Move"
+releaseType: Album
 releaseDate: "1970"
 featuredInShows:
   - "46"

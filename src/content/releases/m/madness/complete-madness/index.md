@@ -1,6 +1,7 @@
 ---
 title: Complete Madness
 artist: Madness
+releaseType: Album
 label: Stiff Records
 release_date: "1982"
 uk_chart_position: 1

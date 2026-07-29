@@ -1,6 +1,7 @@
 ---
 title: "Ska 'N' B"
 artist: "Bad Manners"
+releaseType: Album
 releaseDate: "1980"
 featuredInShows:
   - "14"

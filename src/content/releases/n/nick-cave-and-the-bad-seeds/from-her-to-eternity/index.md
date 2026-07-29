@@ -1,5 +1,6 @@
 ---
 title: "From Her to Eternity"
+releaseTypeReview: true
 artist: "Nick Cave & The Bad Seeds"
 releaseDate: "2009"
 featuredInShows:

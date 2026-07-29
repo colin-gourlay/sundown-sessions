@@ -1,6 +1,7 @@
 ---
 title: Mix-Up
 artist: Cabaret Voltaire
+releaseType: Album
 label: Rough Trade Records
 release_date: "1979"
 release_page: true

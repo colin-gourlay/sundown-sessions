@@ -1,6 +1,7 @@
 ---
 title: "Paper Monsters (U.S. Version)"
 artist: "Dave Gahan"
+releaseType: Album
 releaseDate: "2003"
 featuredInShows:
   - "19"

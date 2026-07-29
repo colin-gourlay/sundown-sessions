@@ -1,6 +1,7 @@
 ---
 title: "Presenting Toni Fisher"
 artist: "Toni Fisher"
+releaseType: Album
 releaseDate: "1959"
 featuredInShows:
   - "15"

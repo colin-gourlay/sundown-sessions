@@ -1,6 +1,7 @@
 ---
 title: "The Beatles 1967 - 1970 (Remastered)"
 artist: "The Beatles"
+releaseType: Album
 releaseDate: "1973"
 featuredInShows:
   - "19"

@@ -1,6 +1,7 @@
 ---
 title: "Nosedive Karma EP"
 artist: "Gaye Bykers On Acid"
+releaseType: Single
 releaseDate: "1987"
 featuredInShows:
   - "4"

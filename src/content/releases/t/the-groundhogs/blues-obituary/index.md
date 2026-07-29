@@ -1,6 +1,7 @@
 ---
 title: "Blues Obituary"
 artist: "The Groundhogs"
+releaseType: Album
 releaseDate: "1969"
 featuredInShows:
   - "46"

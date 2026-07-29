@@ -1,6 +1,7 @@
 ---
 title: Manifesto
 artist: Roxy Music
+releaseType: Album
 label: Polydor Records
 release_date: "1979"
 uk_chart_position: 7

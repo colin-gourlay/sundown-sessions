@@ -1,6 +1,7 @@
 ---
 title: Ladies and Gentlemen We Are Floating in Space
 artist: Spiritualized
+releaseType: Album
 label: Dedicated Records
 release_date: "1997"
 uk_chart_position: 4

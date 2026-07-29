@@ -1,6 +1,7 @@
 ---
 title: Skeleton Tree
 artist: Nick Cave & The Bad Seeds
+releaseType: Album
 artist_slug: nick-cave-the-bad-seeds
 label: Bad Seed Ltd
 release_date: "2016"

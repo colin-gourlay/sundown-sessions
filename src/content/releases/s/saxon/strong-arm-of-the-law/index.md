@@ -1,6 +1,7 @@
 ---
 title: Strong Arm of the Law
 artist: Saxon
+releaseType: Single
 label: Carrere Records
 release_date: "1980"
 uk_chart_position: 11

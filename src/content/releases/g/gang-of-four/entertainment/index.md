@@ -1,6 +1,7 @@
 ---
 title: Entertainment!
 artist: Gang Of Four
+releaseType: Album
 label: EMI Records
 release_date: "1979"
 uk_chart_position: 45

@@ -1,6 +1,7 @@
 ---
 title: "Jacob's Ladder"
 artist: "The Filthy Tongues"
+releaseType: Album
 releaseDate: "2016"
 featuredInShows:
   - "13"

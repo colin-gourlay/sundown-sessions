@@ -1,6 +1,7 @@
 ---
 title: "Digital EP"
 artist: "The Airborne Toxic Event"
+releaseType: EP
 featuredInShows:
   - "7"
 shows:

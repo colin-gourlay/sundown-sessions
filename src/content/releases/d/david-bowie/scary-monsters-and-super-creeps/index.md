@@ -1,6 +1,7 @@
 ---
 title: Scary Monsters (and Super Creeps)
 artist: David Bowie
+releaseType: Album
 label: RCA Records
 release_date: "1980"
 uk_chart_position: 1

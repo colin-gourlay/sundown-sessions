@@ -1,6 +1,7 @@
 ---
 title: Nocturama
 artist: Nick Cave & The Bad Seeds
+releaseType: Album
 artist_slug: nick-cave-the-bad-seeds
 label: Mute Records
 release_date: "2003"

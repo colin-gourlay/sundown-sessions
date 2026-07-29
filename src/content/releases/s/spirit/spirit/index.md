@@ -1,6 +1,7 @@
 ---
 title: Spirit
 artist: Spirit
+releaseType: Album
 label: Ode Records
 release_date: "1968"
 release_page: true

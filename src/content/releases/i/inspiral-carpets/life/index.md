@@ -1,6 +1,7 @@
 ---
 title: Life
 artist: Inspiral Carpets
+releaseType: Album
 label: Mute Records
 release_date: "1990"
 uk_chart_position: 2

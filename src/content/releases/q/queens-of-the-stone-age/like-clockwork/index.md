@@ -1,6 +1,7 @@
 ---
 title: "...Like Clockwork"
 artist: "Queens of the Stone Age"
+releaseType: Album
 releaseDate: "2013"
 featuredInShows:
   - "12"

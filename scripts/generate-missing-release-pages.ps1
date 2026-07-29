@@ -552,6 +552,11 @@ foreach ($candidate in ($candidateResult.Candidates | Sort-Object Artist, Title)
         $manualReview.Add("$($candidate.Artist) - $($candidate.Title): not externally enriched")
     }
 
+    if (-not ($metadata -and -not [string]::IsNullOrWhiteSpace($metadata.ReleaseType))) {
+        $manualReview.Add("$($candidate.Artist) - $($candidate.Title): release type not verified; page not created")
+        continue
+    }
+
     $artistSlug = ConvertTo-Slug $candidate.Artist
     $releaseSlug = ConvertTo-Slug $candidate.Slug
     $first = $artistSlug.Substring(0, 1)

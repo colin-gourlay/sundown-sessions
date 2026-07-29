@@ -1,6 +1,7 @@
 ---
 title: "Dreamtime (2024 Remaster)"
 artist: "The Cult"
+releaseType: Album
 releaseDate: "2024"
 featuredInShows:
   - "20"

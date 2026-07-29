@@ -1,6 +1,7 @@
 ---
 title: "Introducing The Hardline According To Sananda Maitreya"
 artist: "Sananda Maitreya"
+releaseType: Album
 releaseDate: "1987"
 featuredInShows:
   - "10"

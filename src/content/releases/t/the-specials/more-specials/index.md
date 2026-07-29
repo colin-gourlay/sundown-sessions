@@ -1,6 +1,7 @@
 ---
 title: More Specials
 artist: The Specials
+releaseType: Album
 label: 2 Tone Records
 release_date: "1980"
 uk_chart_position: 5

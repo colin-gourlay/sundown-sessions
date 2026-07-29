@@ -1,5 +1,6 @@
 ---
 title: "5"
+releaseTypeReview: true
 artist: "Goodbye Mr Mackenzie"
 releaseDate: "1994"
 featuredInShows:

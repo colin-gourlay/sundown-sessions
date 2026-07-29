@@ -1,6 +1,7 @@
 ---
 title: "Avengers and Other Top Sixties Themes"
 artist: "The Tony Hatch Orchestra"
+releaseType: Album
 releaseDate: "1998"
 featuredInShows:
   - "15"

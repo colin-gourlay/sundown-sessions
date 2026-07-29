@@ -1,6 +1,7 @@
 ---
 title: The Rise and Fall of Ziggy Stardust and the Spiders from Mars
 artist: David Bowie
+releaseType: Album
 label: RCA Records
 release_date: "1972"
 uk_chart_position: 5

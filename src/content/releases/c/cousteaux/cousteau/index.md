@@ -1,6 +1,7 @@
 ---
 title: "Cousteau"
 artist: "Cousteau"
+releaseType: Album
 releaseDate: "2000"
 featuredInShows:
   - "9"

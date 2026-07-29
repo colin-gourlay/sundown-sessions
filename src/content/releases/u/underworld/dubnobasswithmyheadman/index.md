@@ -1,6 +1,7 @@
 ---
 title: Dubnobasswithmyheadman
 artist: Underworld
+releaseType: Album
 label: Junior Boy's Own
 release_date: "1994"
 release_page: true

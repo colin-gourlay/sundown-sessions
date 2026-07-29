@@ -1,6 +1,7 @@
 ---
 title: "New Adventures In Hi-Fi"
 artist: "R.E.M."
+releaseType: Album
 releaseDate: "1996"
 featuredInShows:
   - "15"

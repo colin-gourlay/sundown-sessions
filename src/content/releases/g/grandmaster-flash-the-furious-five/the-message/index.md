@@ -1,6 +1,7 @@
 ---
 title: The Message
 artist: Grandmaster Flash & The Furious Five
+releaseType: Album
 label: Sugar Hill Records
 release_date: "1982"
 release_page: true

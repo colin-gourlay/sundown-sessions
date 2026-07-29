@@ -1,6 +1,7 @@
 ---
 title: "Come And Get It - The Best Of Apple Records"
 artist: "Jackie Lomax"
+releaseType: Album
 releaseDate: "2010"
 featuredInShows:
   - "8"

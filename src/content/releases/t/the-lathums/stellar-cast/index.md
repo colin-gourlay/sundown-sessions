@@ -1,5 +1,6 @@
 ---
 title: "Stellar Cast"
+releaseTypeReview: true
 artist: "The Lathums"
 releaseDate: "2024"
 featuredInShows:

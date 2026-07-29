@@ -1,6 +1,7 @@
 ---
 title: Cosmo's Factory
 artist: Creedence Clearwater Revival
+releaseType: Album
 label: Fantasy Records
 release_date: "1970"
 release_page: true

@@ -1,6 +1,7 @@
 ---
 title: "John Peel Session"
 artist: "Adam & The Ants"
+releaseType: Album
 releaseDate: "1979"
 featuredInShows:
   - "5"

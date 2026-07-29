@@ -1,6 +1,7 @@
 ---
 title: Diamond Dogs
 artist: David Bowie
+releaseType: Album
 label: RCA Records
 release_date: "1974"
 uk_chart_position: 1

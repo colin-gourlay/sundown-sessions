@@ -1,6 +1,7 @@
 ---
 title: Nail
 artist: Foetus
+releaseType: Album
 label: Self-immolation Records
 release_date: "1985"
 release_page: true

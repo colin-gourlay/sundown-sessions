@@ -1,6 +1,7 @@
 ---
 title: "Plastic Ono Band"
 artist: "John Lennon"
+releaseType: Album
 releaseDate: "1970"
 featuredInShows:
   - "15"

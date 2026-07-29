@@ -1,6 +1,7 @@
 ---
 title: Elastica
 artist: Elastica
+releaseType: Album
 label: Deceptive Records
 release_date: "1995"
 uk_chart_position: 1

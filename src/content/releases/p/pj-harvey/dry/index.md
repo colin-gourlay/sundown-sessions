@@ -1,6 +1,7 @@
 ---
 title: Dry
 artist: PJ Harvey
+releaseType: Album
 label: Too Pure Records
 release_date: "1992"
 release_page: true

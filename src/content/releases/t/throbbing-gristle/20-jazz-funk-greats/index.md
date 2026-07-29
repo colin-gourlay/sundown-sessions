@@ -1,6 +1,7 @@
 ---
 title: 20 Jazz Funk Greats
 artist: Throbbing Gristle
+releaseType: Album
 label: Industrial Records
 release_date: "1979"
 release_page: true

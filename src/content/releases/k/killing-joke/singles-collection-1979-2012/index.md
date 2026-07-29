@@ -1,6 +1,7 @@
 ---
 title: "Singles Collection 1979 - 2012"
 artist: "Killing Joke"
+releaseType: Album
 releaseDate: "2013"
 featuredInShows:
   - "7"

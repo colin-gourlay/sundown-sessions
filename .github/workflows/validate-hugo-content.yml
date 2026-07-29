@@ -7,6 +7,9 @@ on:
       - src/layouts/**
       - src/assets/**
       - src/config/**
+      - scripts/audit-release-types.py
+      - reports/release-type-audit.md
+      - tests/test_audit_release_types.py
       - .github/workflows/validate-hugo-content.yml
   push:
     branches:
@@ -16,6 +19,9 @@ on:
       - src/layouts/**
       - src/assets/**
       - src/config/**
+      - scripts/audit-release-types.py
+      - reports/release-type-audit.md
+      - tests/test_audit_release_types.py
       - .github/workflows/validate-hugo-content.yml
 
 permissions:
@@ -46,3 +52,8 @@ jobs:
             --panicOnWarning \
             --environment production \
             --baseURL https://example.invalid/
+
+      - name: Validate release types
+        run: |
+          python3 -m pip install --disable-pip-version-check PyYAML
+          python3 scripts/audit-release-types.py --check-report

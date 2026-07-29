@@ -1,6 +1,7 @@
 ---
 title: Moving Pictures
 artist: Rush
+releaseType: Album
 label: Mercury Records
 release_date: "1981"
 uk_chart_position: 3

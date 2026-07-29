@@ -1,6 +1,7 @@
 ---
 title: Jeopardy
 artist: The Sound
+releaseType: Album
 label: Korova Records
 release_date: "1980"
 release_page: true

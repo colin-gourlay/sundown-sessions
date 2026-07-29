@@ -1,6 +1,7 @@
 ---
 title: "Jarvis"
 artist: "Jarvis Cocker"
+releaseType: Album
 releaseDate: "2006"
 featuredInShows:
   - "5"

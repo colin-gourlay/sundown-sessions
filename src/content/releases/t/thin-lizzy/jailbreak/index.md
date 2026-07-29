@@ -1,6 +1,7 @@
 ---
 title: Jailbreak
 artist: Thin Lizzy
+releaseType: Album
 label: Vertigo Records
 release_date: "1976"
 uk_chart_position: 10

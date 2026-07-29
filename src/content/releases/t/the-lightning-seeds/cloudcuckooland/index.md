@@ -1,6 +1,7 @@
 ---
 title: Cloudcuckooland
 artist: The Lightning Seeds
+releaseType: Album
 label: Ghetto Recording Company
 release_date: "1990"
 release_page: true

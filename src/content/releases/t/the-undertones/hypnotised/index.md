@@ -1,6 +1,7 @@
 ---
 title: Hypnotised
 artist: The Undertones
+releaseType: Album
 label: Sire Records
 release_date: "1980"
 uk_chart_position: 6

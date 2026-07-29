@@ -1,6 +1,7 @@
 ---
 title: Faith
 artist: The Cure
+releaseType: Album
 label: Fiction Records
 release_date: "1981"
 uk_chart_position: 14

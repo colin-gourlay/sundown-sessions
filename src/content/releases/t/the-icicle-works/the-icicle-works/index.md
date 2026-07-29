@@ -1,6 +1,7 @@
 ---
 title: The Icicle Works
 artist: The Icicle Works
+releaseType: Album
 label: Beggars Banquet
 release_date: "1984"
 release_page: true

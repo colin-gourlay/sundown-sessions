@@ -1,6 +1,7 @@
 ---
 title: All Change
 artist: Cast
+releaseType: Album
 label: Polydor Records
 release_date: "1995"
 uk_chart_position: 7

@@ -1,6 +1,7 @@
 ---
 title: "The Very Best of The Associates"
 artist: "The Associates"
+releaseType: Album
 releaseDate: "2016"
 featuredInShows:
   - "8"

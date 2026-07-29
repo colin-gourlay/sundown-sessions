@@ -1,5 +1,6 @@
 ---
 title: "Technofear"
+releaseTypeReview: true
 artist: "The Slow Readers Club"
 releaseDate: "2024"
 featuredInShows:

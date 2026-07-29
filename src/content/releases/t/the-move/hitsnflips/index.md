@@ -1,5 +1,6 @@
 ---
 title: "Hits'n'Flips"
+releaseTypeReview: true
 artist: "The Move"
 releaseDate: "2013"
 featuredInShows:

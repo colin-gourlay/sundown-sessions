@@ -1,6 +1,7 @@
 ---
 title: The Smiths
 artist: The Smiths
+releaseType: Album
 label: Rough Trade Records
 release_date: "1984"
 uk_chart_position: 2

@@ -1,6 +1,7 @@
 ---
 title: No. 1 In Heaven
 artist: Sparks
+releaseType: Album
 label: Virgin Records
 release_date: "1979"
 release_page: true

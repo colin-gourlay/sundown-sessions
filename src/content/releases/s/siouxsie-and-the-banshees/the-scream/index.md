@@ -1,6 +1,7 @@
 ---
 title: The Scream
 artist: Siouxsie and the Banshees
+releaseType: Album
 label: Polydor Records
 release_date: "1978"
 uk_chart_position: 12

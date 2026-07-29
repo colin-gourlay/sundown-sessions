@@ -1,6 +1,7 @@
 ---
 title: "Forces of Evil EP"
 artist: "Balaam And The Angel"
+releaseType: EP
 releaseDate: "2024"
 featuredInShows:
   - "20"

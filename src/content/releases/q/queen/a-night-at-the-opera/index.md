@@ -1,6 +1,7 @@
 ---
 title: A Night at the Opera
 artist: Queen
+releaseType: Album
 label: EMI Records
 release_date: "1975"
 uk_chart_position: 1

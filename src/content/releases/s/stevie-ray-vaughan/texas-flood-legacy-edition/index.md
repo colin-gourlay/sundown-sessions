@@ -1,6 +1,7 @@
 ---
 title: "Texas Flood (Legacy Edition)"
 artist: "Stevie Ray Vaughan"
+releaseType: Album
 releaseDate: "1983"
 featuredInShows:
   - "46"

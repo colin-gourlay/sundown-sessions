@@ -1,6 +1,7 @@
 ---
 title: "The Party's Over"
 artist: "Talk Talk"
+releaseType: Album
 releaseDate: "1982"
 featuredInShows:
   - "5"

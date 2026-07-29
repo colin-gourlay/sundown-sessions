@@ -1,6 +1,7 @@
 ---
 title: Aladdin Sane
 artist: David Bowie
+releaseType: Album
 label: RCA Records
 release_date: "1973"
 uk_chart_position: 1

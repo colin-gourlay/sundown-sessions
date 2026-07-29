@@ -1,6 +1,7 @@
 ---
 title: Happy Birthday
 artist: Altered Images
+releaseType: Album
 label: Epic Records
 release_date: "1981"
 uk_chart_position: 26

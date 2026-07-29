@@ -1,6 +1,7 @@
 ---
 title: John Barleycorn Must Die
 artist: Traffic
+releaseType: Album
 label: Island Records
 release_date: "1970"
 uk_chart_position: 5

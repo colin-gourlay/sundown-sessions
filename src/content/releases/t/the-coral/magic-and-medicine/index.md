@@ -1,6 +1,7 @@
 ---
 title: Magic and Medicine
 artist: The Coral
+releaseType: Album
 label: Deltasonic Records
 release_date: "2003"
 uk_chart_position: 2
