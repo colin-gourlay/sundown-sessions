@@ -2,7 +2,8 @@
 title: Screamadelica
 artist: Primal Scream
 releaseType: Album
-label: Creation Records
+labels:
+  - Creation Records
 release_date: "1991"
 uk_chart_position: 8
 release_page: true

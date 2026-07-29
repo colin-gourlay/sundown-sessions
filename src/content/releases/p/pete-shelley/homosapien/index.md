@@ -2,7 +2,8 @@
 title: Homosapien
 artist: Pete Shelley
 releaseType: Single
-label: Genetic Records
+labels:
+  - Genetic Records
 release_date: "1981"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: Leftism
 artist: Leftfield
 releaseType: Album
-label: Hard Hands Records
+labels:
+  - Hard Hands Records
 release_date: "1995"
 uk_chart_position: 3
 release_page: true

@@ -2,7 +2,8 @@
 title: International Velvet
 artist: Catatonia
 releaseType: Album
-label: Blanco y Negro Records
+labels:
+  - Blanco y Negro Records
 release_date: "1998"
 uk_chart_position: 1
 release_page: true

@@ -2,7 +2,8 @@
 title: Ahead Rings Out
 artist: Blodwyn Pig
 releaseType: Album
-label: Chrysalis Records
+labels:
+  - Chrysalis Records
 release_date: "1969"
 uk_chart_position: 9
 release_page: true

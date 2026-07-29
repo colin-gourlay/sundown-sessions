@@ -1,7 +1,8 @@
 ---
 title: Solitude
 artist: Far Corporation
-label: Arista Records
+labels:
+  - Arista Records
 release_date: "1994"
 artwork: "https://coverartarchive.org/release-group/f52d3d9c-f0e6-4a9e-b3d2-698d092caa76/front-500"
 releaseType: Album

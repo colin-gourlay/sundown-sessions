@@ -2,7 +2,8 @@
 title: Sulk
 artist: Associates
 releaseType: Album
-label: Associates Records / Sire
+labels:
+  - Associates Records / Sire
 release_date: "1982"
 uk_chart_position: 10
 release_page: true

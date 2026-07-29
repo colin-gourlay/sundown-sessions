@@ -3,7 +3,8 @@ title: Dig, Lazarus, Dig!!!
 artist: Nick Cave & The Bad Seeds
 releaseType: Single
 artist_slug: nick-cave-the-bad-seeds
-label: Mute Records
+labels:
+  - Mute Records
 release_date: "2008"
 uk_chart_position: 4
 release_page: true

@@ -2,7 +2,8 @@
 title: This Year's Model
 artist: Elvis Costello & The Attractions
 releaseType: Album
-label: Radar Records
+labels:
+  - Radar Records
 release_date: "1978"
 uk_chart_position: 4
 release_page: true

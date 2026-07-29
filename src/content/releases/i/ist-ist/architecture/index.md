@@ -1,7 +1,8 @@
 ---
 title: Architecture
 artist: IST IST
-label: Self-released
+labels:
+  - Self-released
 release_date: "2020"
 releaseDate: "2020-05-01"
 artwork: "https://coverartarchive.org/release-group/0c536afe-dbc4-4af7-8c6d-79899dd813f3/front-500"

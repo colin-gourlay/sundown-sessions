@@ -2,7 +2,8 @@
 title: Love
 artist: Aztec Camera
 releaseType: Album
-label: WEA Records
+labels:
+  - WEA Records
 release_date: "1987"
 uk_chart_position: 10
 release_page: true

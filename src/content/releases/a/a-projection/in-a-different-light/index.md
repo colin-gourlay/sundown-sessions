@@ -2,7 +2,8 @@
 title: In A Different Light
 artist: A Projection
 releaseType: Album
-label: Self-released
+labels:
+  - Self-released
 release_date: "2022"
 release_page: true
 shows:

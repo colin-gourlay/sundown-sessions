@@ -3,7 +3,8 @@ title: The Boatman's Call
 artist: Nick Cave & The Bad Seeds
 releaseType: Album
 artist_slug: nick-cave-the-bad-seeds
-label: Mute Records
+labels:
+  - Mute Records
 release_date: "1997"
 release_page: true
 shows:

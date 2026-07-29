@@ -2,7 +2,8 @@
 title: Dare
 artist: The Human League
 releaseType: Album
-label: Virgin Records
+labels:
+  - Virgin Records
 release_date: "1981"
 uk_chart_position: 1
 release_page: true

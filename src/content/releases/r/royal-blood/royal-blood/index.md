@@ -1,7 +1,8 @@
 ---
 title: Royal Blood
 artist: Royal Blood
-label: Warner Bros. Records
+labels:
+  - Warner Bros. Records
 release_date: "2014"
 releaseType: Album
 release-types: [Album]

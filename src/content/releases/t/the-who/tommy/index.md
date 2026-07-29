@@ -2,7 +2,8 @@
 title: Tommy
 artist: The Who
 releaseType: Album
-label: Track Records
+labels:
+  - Track Records
 release_date: "1969"
 uk_chart_position: 2
 release_page: true

@@ -3,7 +3,8 @@ title: Silence is Sexy
 artist: Einstürzende Neubauten
 releaseType: Album
 artist_slug: einstrzende-neubauten
-label: Mute Records
+labels:
+  - Mute Records
 release_date: "2000"
 release_page: true
 shows:

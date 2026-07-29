@@ -2,7 +2,8 @@
 title: Germ Free Adolescents
 artist: X-Ray Spex
 releaseType: Single
-label: EMI International
+labels:
+  - EMI International
 release_date: "1978"
 uk_chart_position: 30
 release_page: true

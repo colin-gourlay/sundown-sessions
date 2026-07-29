@@ -2,7 +2,8 @@
 title: The Best of Echo & The Bunnymen
 artist: Echo & the Bunnymen
 releaseType: Album
-label: Rhino Records
+labels:
+  - Rhino Records
 release_date: "2006"
 release_page: true
 shows:

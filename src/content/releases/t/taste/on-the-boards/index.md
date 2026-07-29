@@ -2,7 +2,8 @@
 title: On the Boards
 artist: Taste
 releaseType: Album
-label: Polydor Records
+labels:
+  - Polydor Records
 release_date: "1970"
 uk_chart_position: 18
 release_page: true

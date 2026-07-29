@@ -2,7 +2,8 @@
 title: High Land, Hard Rain
 artist: Aztec Camera
 releaseType: Album
-label: Rough Trade Records
+labels:
+  - Rough Trade Records
 release_date: "1983"
 uk_chart_position: 22
 release_page: true

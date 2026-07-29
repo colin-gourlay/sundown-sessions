@@ -1,7 +1,8 @@
 ---
 title: An American Prayer
 artist: Jim Morrison
-label: Elektra Records
+labels:
+  - Elektra Records
 release_date: "1978"
 releaseDate: "1978-11-17"
 artwork: "https://coverartarchive.org/release-group/624782ae-cc06-3f55-87e4-3c3aeb4e5d59/front-500"

@@ -2,7 +2,8 @@
 title: Hats
 artist: The Blue Nile
 releaseType: Album
-label: Linn Records
+labels:
+  - Linn Records
 release_date: "1989"
 uk_chart_position: 12
 release_page: true

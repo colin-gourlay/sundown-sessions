@@ -2,7 +2,8 @@
 title: Too-Rye-Ay
 artist: Dexys Midnight Runners
 releaseType: Album
-label: Mercury Records
+labels:
+  - Mercury Records
 release_date: "1982"
 uk_chart_position: 2
 release_page: true

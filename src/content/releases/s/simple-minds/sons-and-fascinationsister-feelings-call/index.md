@@ -2,7 +2,8 @@
 title: Sons And Fascination/Sister Feelings Call
 artist: Simple Minds
 releaseType: Album
-label: Virgin Records
+labels:
+  - Virgin Records
 release_date: "1981"
 uk_chart_position: 11
 release_page: true

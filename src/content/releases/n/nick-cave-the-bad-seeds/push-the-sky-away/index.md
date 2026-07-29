@@ -2,7 +2,8 @@
 title: Push the Sky Away
 artist: Nick Cave & The Bad Seeds
 artist_slug: nick-cave-the-bad-seeds
-label: Bad Seed Ltd
+labels:
+  - Bad Seed Ltd
 release_date: "2013"
 releaseDate: "2013-02-15"
 artwork: "https://coverartarchive.org/release-group/ae8faaeb-9134-400d-819b-773e20a7d4e4/front-500"

@@ -2,7 +2,8 @@
 title: Smart
 artist: Sleeper
 releaseType: Album
-label: Indolent Records
+labels:
+  - Indolent Records
 release_date: "1995"
 release_page: true
 shows:

@@ -3,7 +3,8 @@ title: In My Tribe
 artist: 10,000 Maniacs
 releaseType: Album
 artist_slug: 10000-maniacs
-label: Elektra Records
+labels:
+  - Elektra Records
 release_date: "1987"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: Some Friendly
 artist: The Charlatans
 releaseType: Album
-label: Situation Two Records
+labels:
+  - Situation Two Records
 release_date: "1990"
 uk_chart_position: 1
 release_page: true

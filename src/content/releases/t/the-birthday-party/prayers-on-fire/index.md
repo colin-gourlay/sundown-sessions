@@ -2,7 +2,8 @@
 title: Prayers on Fire
 artist: The Birthday Party
 releaseType: Album
-label: Missing Link Records
+labels:
+  - Missing Link Records
 release_date: "1981"
 release_page: true
 shows:

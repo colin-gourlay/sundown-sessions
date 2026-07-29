@@ -2,7 +2,8 @@
 title: Buffalo Springfield Again
 artist: Buffalo Springfield
 releaseType: Album
-label: Atco Records
+labels:
+  - Atco Records
 release_date: "1967"
 release_page: true
 shows:

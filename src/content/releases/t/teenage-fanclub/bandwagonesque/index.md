@@ -2,7 +2,8 @@
 title: Bandwagonesque
 artist: Teenage Fanclub
 releaseType: Album
-label: Creation Records
+labels:
+  - Creation Records
 release_date: "1991"
 uk_chart_position: 22
 release_page: true

@@ -3,7 +3,8 @@ title: Abattoir Blues / The Lyre of Orpheus
 artist: Nick Cave & The Bad Seeds
 releaseType: Album
 artist_slug: nick-cave-the-bad-seeds
-label: Mute Records
+labels:
+  - Mute Records
 release_date: "2004"
 uk_chart_position: 2
 release_page: true

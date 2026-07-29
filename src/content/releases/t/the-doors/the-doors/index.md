@@ -2,7 +2,8 @@
 title: The Doors
 artist: The Doors
 releaseType: Album
-label: Elektra Records
+labels:
+  - Elektra Records
 release_date: "1967"
 release_page: true
 shows:

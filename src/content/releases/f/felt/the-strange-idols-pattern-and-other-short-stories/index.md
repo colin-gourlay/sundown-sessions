@@ -2,7 +2,8 @@
 title: The Strange Idols Pattern and Other Short Stories
 artist: Felt
 releaseType: Album
-label: Creation Records
+labels:
+  - Creation Records
 release_date: "1984"
 release_page: true
 shows:

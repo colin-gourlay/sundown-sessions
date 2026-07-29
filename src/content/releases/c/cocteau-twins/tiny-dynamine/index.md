@@ -1,7 +1,8 @@
 ---
 title: Tiny Dynamine
 artist: Cocteau Twins
-label: 4AD
+labels:
+  - 4AD
 release_date: "1985"
 releaseDate: "1985-10-01"
 artwork: "https://coverartarchive.org/release-group/87b135ad-694b-3fb5-9ce9-d7cf893bb3e1/front-500"

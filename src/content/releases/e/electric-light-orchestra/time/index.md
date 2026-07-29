@@ -1,7 +1,8 @@
 ---
 title: Time
 artist: Electric Light Orchestra
-label: Jet Records
+labels:
+  - Jet Records
 release_date: "1981"
 releaseType: Album
 release-types: [Album]

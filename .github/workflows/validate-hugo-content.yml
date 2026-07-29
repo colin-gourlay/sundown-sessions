@@ -8,8 +8,11 @@ on:
       - src/assets/**
       - src/config/**
       - scripts/audit-release-types.py
+      - scripts/audit-release-metadata.py
       - reports/release-type-audit.md
+      - reports/release-metadata-audit.md
       - tests/test_audit_release_types.py
+      - tests/test_audit_release_metadata.py
       - .github/workflows/validate-hugo-content.yml
   push:
     branches:
@@ -20,8 +23,11 @@ on:
       - src/assets/**
       - src/config/**
       - scripts/audit-release-types.py
+      - scripts/audit-release-metadata.py
       - reports/release-type-audit.md
+      - reports/release-metadata-audit.md
       - tests/test_audit_release_types.py
+      - tests/test_audit_release_metadata.py
       - .github/workflows/validate-hugo-content.yml
 
 permissions:
@@ -57,3 +63,6 @@ jobs:
         run: |
           python3 -m pip install --disable-pip-version-check PyYAML
           python3 scripts/audit-release-types.py --check-report
+
+      - name: Audit release details metadata
+        run: python3 scripts/audit-release-metadata.py --check-report

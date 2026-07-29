@@ -2,7 +2,8 @@
 title: Pelican West
 artist: Haircut One Hundred
 releaseType: Album
-label: Arista Records
+labels:
+  - Arista Records
 release_date: "1982"
 uk_chart_position: 2
 release_page: true

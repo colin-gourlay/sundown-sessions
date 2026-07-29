@@ -2,7 +2,8 @@
 title: Let It Bleed
 artist: The Rolling Stones
 releaseType: Album
-label: Decca Records
+labels:
+  - Decca Records
 release_date: "1969"
 uk_chart_position: 1
 release_page: true

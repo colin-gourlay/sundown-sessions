@@ -2,7 +2,8 @@
 title: Brewing Up with Billy Bragg
 artist: Billy Bragg
 releaseType: Album
-label: Go! Discs
+labels:
+  - Go! Discs
 release_date: "1984"
 uk_chart_position: 16
 release_page: true

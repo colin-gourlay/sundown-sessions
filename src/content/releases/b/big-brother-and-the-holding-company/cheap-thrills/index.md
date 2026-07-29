@@ -2,7 +2,8 @@
 title: Cheap Thrills
 artist: Big Brother and the Holding Company
 releaseType: Album
-label: Columbia Records
+labels:
+  - Columbia Records
 release_date: "1968"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: Are You Experienced
 artist: The Jimi Hendrix Experience
 releaseType: Album
-label: Track Records
+labels:
+  - Track Records
 release_date: "1967"
 uk_chart_position: 2
 release_page: true

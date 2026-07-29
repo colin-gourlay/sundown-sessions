@@ -2,7 +2,8 @@
 title: Nuisance
 artist: Menswear
 releaseType: Album
-label: Laurel Records
+labels:
+  - Laurel Records
 release_date: "1995"
 uk_chart_position: 11
 release_page: true

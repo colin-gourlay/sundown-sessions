@@ -1,7 +1,8 @@
 ---
 title: The Sky's Gone Out
 artist: Bauhaus
-label: Beggars Banquet
+labels:
+  - Beggars Banquet
 release_date: "1982"
 releaseDate: "1982-10-01"
 artwork: "https://coverartarchive.org/release-group/705c2c4b-cb73-39a0-9f15-7e83aedafe72/front-500"

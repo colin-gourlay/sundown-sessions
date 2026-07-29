@@ -2,7 +2,8 @@
 title: The Number of the Beast
 artist: Iron Maiden
 releaseType: Album
-label: EMI Records
+labels:
+  - EMI Records
 release_date: "1982"
 uk_chart_position: 1
 release_page: true

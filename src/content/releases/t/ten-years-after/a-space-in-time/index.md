@@ -2,7 +2,8 @@
 title: A Space in Time
 artist: Ten Years After
 releaseType: Album
-label: Chrysalis Records
+labels:
+  - Chrysalis Records
 release_date: "1971"
 uk_chart_position: 36
 release_page: true

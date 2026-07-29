@@ -3,7 +3,8 @@ title: Ghosteen
 artist: Nick Cave & The Bad Seeds
 releaseType: Album
 artist_slug: nick-cave-the-bad-seeds
-label: Ghosteen Ltd
+labels:
+  - Ghosteen Ltd
 release_date: "2019"
 uk_chart_position: 2
 release_page: true

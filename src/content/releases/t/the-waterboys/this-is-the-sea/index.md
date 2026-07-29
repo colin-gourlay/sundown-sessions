@@ -2,7 +2,8 @@
 title: This Is the Sea
 artist: The Waterboys
 releaseType: Album
-label: Ensign Records
+labels:
+  - Ensign Records
 release_date: "1985"
 uk_chart_position: 37
 release_page: true

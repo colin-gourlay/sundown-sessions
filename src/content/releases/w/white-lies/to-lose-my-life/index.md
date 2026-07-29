@@ -1,7 +1,8 @@
 ---
 title: To Lose My Life...
 artist: White Lies
-label: Fiction Records
+labels:
+  - Fiction Records
 release_date: "2009"
 releaseType: Album
 release-types: [Album]

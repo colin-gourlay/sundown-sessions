@@ -2,7 +2,8 @@
 title: Technique
 artist: New Order
 releaseType: Album
-label: Factory Records
+labels:
+  - Factory Records
 release_date: "1989"
 uk_chart_position: 1
 release_page: true

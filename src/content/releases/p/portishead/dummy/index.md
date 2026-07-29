@@ -2,7 +2,8 @@
 title: Dummy
 artist: Portishead
 releaseType: Album
-label: Go! Discs
+labels:
+  - Go! Discs
 release_date: "1994"
 uk_chart_position: 2
 release_page: true

@@ -3,7 +3,8 @@ title: No More Shall We Part
 artist: Nick Cave & The Bad Seeds
 releaseType: Album
 artist_slug: nick-cave-the-bad-seeds
-label: Mute Records
+labels:
+  - Mute Records
 release_date: "2001"
 uk_chart_position: 16
 release_page: true

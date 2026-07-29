@@ -2,7 +2,8 @@
 title: In the Court of the Crimson King
 artist: King Crimson
 releaseType: Album
-label: Island Records
+labels:
+  - Island Records
 release_date: "1969"
 uk_chart_position: 5
 release_page: true

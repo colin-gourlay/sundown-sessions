@@ -1,7 +1,8 @@
 ---
 title: Brace Brace
 artist: Chikinki
-label: Urban Cow Records
+labels:
+  - Urban Cow Records
 release_date: "2007"
 releaseDate: "2007-11-23"
 artwork: "https://coverartarchive.org/release-group/d5cbe8ac-dbd4-3f73-b703-1e21b04fcccc/front-500"

@@ -2,7 +2,8 @@
 title: Kilimanjaro
 artist: The Teardrop Explodes
 releaseType: Album
-label: Mercury Records
+labels:
+  - Mercury Records
 release_date: "1980"
 uk_chart_position: 24
 release_page: true

@@ -2,7 +2,8 @@
 title: Parallel Lines
 artist: Blondie
 releaseType: Album
-label: Chrysalis Records
+labels:
+  - Chrysalis Records
 release_date: "1978"
 uk_chart_position: 1
 release_page: true

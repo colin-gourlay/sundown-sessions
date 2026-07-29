@@ -2,7 +2,8 @@
 title: Blues Obituary
 artist: Fleetwood Mac
 releaseType: Album
-label: Immediate Records
+labels:
+  - Immediate Records
 release_date: "1969"
 release_page: true
 shows:

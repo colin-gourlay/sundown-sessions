@@ -2,7 +2,8 @@
 title: Demons and Wizards
 artist: Uriah Heep
 releaseType: Album
-label: Bronze Records
+labels:
+  - Bronze Records
 release_date: "1972"
 uk_chart_position: 20
 release_page: true

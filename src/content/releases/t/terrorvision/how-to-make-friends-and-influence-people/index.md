@@ -2,7 +2,8 @@
 title: How to Make Friends and Influence People
 artist: Terrorvision
 releaseType: Album
-label: Total Vegas / EMI
+labels:
+  - Total Vegas / EMI
 release_date: "1994"
 uk_chart_position: 18
 release_page: true

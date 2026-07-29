@@ -2,7 +2,8 @@
 title: We Oppose All Rock & Roll
 artist: Subway Sect
 releaseType: Album
-label: Damaged Goods
+labels:
+  - Damaged Goods
 release_date: "2002"
 release_page: true
 shows:

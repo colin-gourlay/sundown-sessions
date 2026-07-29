@@ -2,7 +2,8 @@
 title: Knife
 artist: Aztec Camera
 releaseType: Album
-label: WEA Records
+labels:
+  - WEA Records
 release_date: "1984"
 uk_chart_position: 14
 release_page: true

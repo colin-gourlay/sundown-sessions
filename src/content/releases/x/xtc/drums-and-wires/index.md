@@ -2,7 +2,8 @@
 title: Drums And Wires
 artist: XTC
 releaseType: Album
-label: Virgin Records
+labels:
+  - Virgin Records
 release_date: "1979"
 uk_chart_position: 34
 release_page: true

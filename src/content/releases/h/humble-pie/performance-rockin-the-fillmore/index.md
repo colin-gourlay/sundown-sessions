@@ -2,7 +2,8 @@
 title: Performance - Rockin' the Fillmore
 artist: Humble Pie
 releaseType: Album
-label: A&M Records
+labels:
+  - A&M Records
 release_date: "1971"
 release_page: true
 shows:

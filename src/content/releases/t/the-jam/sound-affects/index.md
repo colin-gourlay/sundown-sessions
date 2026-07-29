@@ -2,7 +2,8 @@
 title: Sound Affects
 artist: The Jam
 releaseType: Album
-label: Polydor Records
+labels:
+  - Polydor Records
 release_date: "1980"
 uk_chart_position: 2
 release_page: true

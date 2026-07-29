@@ -1,7 +1,8 @@
 ---
 title: Kollected - The Best of Kula Shaker
 artist: Kula Shaker
-label: Columbia Records
+labels:
+  - Columbia Records
 release_date: "2002"
 releaseDate: "2002-12-16"
 artwork: "https://coverartarchive.org/release-group/e7c596c9-fe6b-3976-b4ee-160c3a6fb100/front-500"

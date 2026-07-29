@@ -2,7 +2,8 @@
 title: London Calling
 artist: The Clash
 releaseType: Single
-label: CBS Records
+labels:
+  - CBS Records
 release_date: "1979"
 uk_chart_position: 9
 release_page: true
