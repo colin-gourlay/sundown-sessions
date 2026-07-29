@@ -2,7 +2,8 @@
 title: Gold Mother
 artist: James
 releaseType: Album
-label: Fontana Records
+labels:
+  - Fontana Records
 release_date: "1990"
 uk_chart_position: 2
 release_page: true

@@ -2,7 +2,8 @@
 title: Young Americans
 artist: David Bowie
 releaseType: Single
-label: RCA Records
+labels:
+  - RCA Records
 release_date: "1975"
 uk_chart_position: 2
 release_page: true

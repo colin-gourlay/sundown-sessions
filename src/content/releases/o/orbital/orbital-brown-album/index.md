@@ -2,7 +2,8 @@
 title: Orbital (Brown Album)
 artist: Orbital
 releaseType: Album
-label: Internal Records
+labels:
+  - Internal Records
 release_date: "1993"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: Honey Lingers
 artist: Voice Of The Beehive
 releaseType: Album
-label: London Records
+labels:
+  - London Records
 release_date: "1991"
 release_page: true
 shows:

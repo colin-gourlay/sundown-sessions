@@ -1,7 +1,8 @@
 ---
 title: Welcome to the Pleasuredome
 artist: Frankie Goes To Hollywood
-label: ZTT Records
+labels:
+  - ZTT Records
 release_date: "1984"
 releaseType: Album
 release-types: [Album]

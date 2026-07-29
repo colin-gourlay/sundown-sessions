@@ -2,7 +2,8 @@
 title: Bad Company
 artist: Bad Company
 releaseType: Album
-label: Island Records
+labels:
+  - Island Records
 release_date: "1974"
 uk_chart_position: 3
 release_page: true

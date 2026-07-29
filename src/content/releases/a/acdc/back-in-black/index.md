@@ -3,7 +3,8 @@ title: Back in Black
 artist: AC/DC
 releaseType: Single
 artist_slug: acdc
-label: Albert Productions / Atlantic
+labels:
+  - Albert Productions / Atlantic
 release_date: "1980"
 uk_chart_position: 1
 release_page: true

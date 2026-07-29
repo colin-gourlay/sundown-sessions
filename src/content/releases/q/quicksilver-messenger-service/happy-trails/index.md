@@ -2,7 +2,8 @@
 title: Happy Trails
 artist: Quicksilver Messenger Service
 releaseType: Album
-label: Capitol Records
+labels:
+  - Capitol Records
 release_date: "1969"
 release_page: true
 shows:

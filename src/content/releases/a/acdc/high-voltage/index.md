@@ -3,7 +3,8 @@ title: High Voltage
 artist: AC/DC
 releaseType: Album
 artist_slug: acdc
-label: EMI Records
+labels:
+  - EMI Records
 release_date: "1976"
 release_page: true
 shows:

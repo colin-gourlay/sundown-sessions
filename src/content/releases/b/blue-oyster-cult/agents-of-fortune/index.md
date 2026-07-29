@@ -3,7 +3,8 @@ title: Agents Of Fortune
 artist: Blue Oyster Cult
 releaseType: Album
 artist_slug: blue-oyster-cult
-label: Columbia Records
+labels:
+  - Columbia Records
 release_date: "1976"
 release_page: true
 shows:

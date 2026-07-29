@@ -2,7 +2,8 @@
 title: Run Home Slow
 artist: The Teskey Brothers
 releaseType: Album
-label: Ivy League Records
+labels:
+  - Ivy League Records
 release_date: "2019"
 release_page: true
 shows:

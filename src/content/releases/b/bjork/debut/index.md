@@ -2,7 +2,8 @@
 title: Debut
 artist: Bjork
 releaseType: Album
-label: One Little Indian Records
+labels:
+  - One Little Indian Records
 release_date: "1993"
 uk_chart_position: 3
 release_page: true

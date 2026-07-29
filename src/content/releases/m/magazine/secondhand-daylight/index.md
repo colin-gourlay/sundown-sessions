@@ -2,7 +2,8 @@
 title: Secondhand Daylight
 artist: Magazine
 releaseType: Album
-label: Virgin Records
+labels:
+  - Virgin Records
 release_date: "1979"
 release_page: true
 shows:

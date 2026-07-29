@@ -2,7 +2,8 @@
 title: Killing Joke
 artist: Killing Joke
 releaseType: Album
-label: EG Records
+labels:
+  - EG Records
 release_date: "1980"
 uk_chart_position: 39
 release_page: true

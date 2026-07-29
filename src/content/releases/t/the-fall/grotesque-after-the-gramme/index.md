@@ -2,7 +2,8 @@
 title: Grotesque (After the Gramme)
 artist: The Fall
 releaseType: Album
-label: Rough Trade Records
+labels:
+  - Rough Trade Records
 release_date: "1980"
 release_page: true
 shows:

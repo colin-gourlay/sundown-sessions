@@ -2,7 +2,8 @@
 title: So Tough
 artist: Saint Etienne
 releaseType: Album
-label: Heavenly Recordings
+labels:
+  - Heavenly Recordings
 release_date: "1993"
 uk_chart_position: 26
 release_page: true

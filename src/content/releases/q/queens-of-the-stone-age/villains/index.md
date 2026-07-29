@@ -1,7 +1,6 @@
 ---
 title: Villains
 artist: Queens Of The Stone Age
-label: Matador Records
 labels:
   - Matador Records
 release_date: "25 August 2017"

@@ -2,7 +2,8 @@
 title: East Side Story
 artist: Squeeze
 releaseType: Album
-label: A&M Records
+labels:
+  - A&M Records
 release_date: "1981"
 uk_chart_position: 19
 release_page: true

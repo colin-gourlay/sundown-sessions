@@ -2,7 +2,8 @@
 title: This Is the Story
 artist: The Proclaimers
 releaseType: Album
-label: Chrysalis Records
+labels:
+  - Chrysalis Records
 release_date: "1987"
 release_page: true
 shows:

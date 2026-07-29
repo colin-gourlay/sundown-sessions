@@ -1,7 +1,8 @@
 ---
 title: The Bravery
 artist: The Bravery
-label: Island Records
+labels:
+  - Island Records
 release_date: "2005"
 releaseType: Album
 release-types: [Album]

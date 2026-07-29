@@ -2,7 +2,8 @@
 title: Scared To Dance
 artist: Skids
 releaseType: Album
-label: Virgin Records
+labels:
+  - Virgin Records
 release_date: "1979"
 uk_chart_position: 19
 release_page: true

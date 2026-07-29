@@ -2,7 +2,8 @@
 title: Life In A Day
 artist: Simple Minds
 releaseType: Single
-label: Zoom Records
+labels:
+  - Zoom Records
 release_date: "1979"
 release_page: true
 shows:

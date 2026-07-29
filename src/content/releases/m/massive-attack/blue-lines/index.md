@@ -2,7 +2,8 @@
 title: Blue Lines
 artist: Massive Attack
 releaseType: Album
-label: Wild Bunch / Virgin
+labels:
+  - Wild Bunch / Virgin
 release_date: "1991"
 uk_chart_position: 13
 release_page: true

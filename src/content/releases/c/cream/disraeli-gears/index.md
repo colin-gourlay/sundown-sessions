@@ -2,7 +2,8 @@
 title: Disraeli Gears
 artist: Cream
 releaseType: Album
-label: Reaction Records
+labels:
+  - Reaction Records
 release_date: "1967"
 uk_chart_position: 5
 release_page: true

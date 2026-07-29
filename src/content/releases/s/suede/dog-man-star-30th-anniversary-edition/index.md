@@ -2,7 +2,8 @@
 title: Dog Man Star (30th Anniversary Edition)
 artist: Suede
 releaseType: Album
-label: Nude Records
+labels:
+  - Nude Records
 release_date: "2024"
 release_page: true
 shows:

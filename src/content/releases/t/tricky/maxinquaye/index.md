@@ -2,7 +2,8 @@
 title: Maxinquaye
 artist: Tricky
 releaseType: Album
-label: Fourth & Broadway
+labels:
+  - Fourth & Broadway
 release_date: "1995"
 uk_chart_position: 3
 release_page: true

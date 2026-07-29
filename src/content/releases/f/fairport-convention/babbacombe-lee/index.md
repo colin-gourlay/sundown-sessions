@@ -2,7 +2,8 @@
 title: Babbacombe Lee
 artist: Fairport Convention
 releaseType: Album
-label: Island Records
+labels:
+  - Island Records
 release_date: "1971"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: Mass in F Minor
 artist: The Electric Prunes
 releaseType: Album
-label: Reprise Records
+labels:
+  - Reprise Records
 release_date: "1968"
 release_page: true
 shows:

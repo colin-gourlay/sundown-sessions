@@ -2,7 +2,8 @@
 title: Born Sandy Devotional
 artist: The Triffids
 releaseType: Album
-label: Hot Records
+labels:
+  - Hot Records
 release_date: "1986"
 release_page: true
 shows:

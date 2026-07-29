@@ -2,7 +2,8 @@
 title: Electric Music for the Mind and Body
 artist: Country Joe and the Fish
 releaseType: Album
-label: Vanguard Records
+labels:
+  - Vanguard Records
 release_date: "1967"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: Arthur (Or the Decline and Fall of the British Empire)
 artist: The Kinks
 releaseType: Album
-label: Pye Records
+labels:
+  - Pye Records
 release_date: "1969"
 release_page: true
 shows:

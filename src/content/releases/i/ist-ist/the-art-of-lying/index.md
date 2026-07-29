@@ -2,7 +2,8 @@
 title: The Art of Lying
 artist: IST IST
 releaseType: Album
-label: Grita Records
+labels:
+  - Grita Records
 release_date: "2021"
 release_page: true
 shows:

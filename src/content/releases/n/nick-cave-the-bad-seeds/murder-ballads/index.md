@@ -3,7 +3,8 @@ title: Murder Ballads
 artist: Nick Cave & The Bad Seeds
 releaseType: Album
 artist_slug: nick-cave-the-bad-seeds
-label: Mute Records
+labels:
+  - Mute Records
 release_date: "1996"
 uk_chart_position: 8
 release_page: true

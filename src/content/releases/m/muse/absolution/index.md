@@ -1,7 +1,8 @@
 ---
 title: Absolution
 artist: Muse
-label: Taste Media / East West Records
+labels:
+  - Taste Media / East West Records
 release_date: "2003"
 releaseDate: "2003-09-15"
 artwork: "https://coverartarchive.org/release-group/6f151223-f3a3-3e57-810f-598f7897006c/front-500"

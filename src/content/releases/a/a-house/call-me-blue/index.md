@@ -2,7 +2,8 @@
 title: Call Me Blue
 artist: A House
 releaseType: Single
-label: Self-released
+labels:
+  - Self-released
 release_date: "2020"
 release_page: true
 shows:

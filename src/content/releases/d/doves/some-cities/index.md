@@ -1,7 +1,8 @@
 ---
 title: Some Cities
 artist: Doves
-label: Heavenly Recordings
+labels:
+  - Heavenly Recordings
 release_date: "2005"
 releaseDate: "2005-02-21"
 artwork: "https://coverartarchive.org/release-group/d9aa4e3e-d74f-3c02-99d2-1ff37269ed5f/front-500"

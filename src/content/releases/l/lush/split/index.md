@@ -2,7 +2,8 @@
 title: Split
 artist: Lush
 releaseType: Album
-label: 4AD
+labels:
+  - 4AD
 release_date: "1994"
 uk_chart_position: 19
 release_page: true

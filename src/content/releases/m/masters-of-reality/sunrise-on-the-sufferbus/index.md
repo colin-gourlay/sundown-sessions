@@ -1,7 +1,8 @@
 ---
 title: Sunrise on the Sufferbus
 artist: Masters Of Reality
-label: Chrysalis Records
+labels:
+  - Chrysalis Records
 release_date: "1992"
 releaseDate: "1992-06-06"
 artwork: "https://coverartarchive.org/release-group/152b3c5e-e96f-3592-8ad1-6e0301d32368/front-500"

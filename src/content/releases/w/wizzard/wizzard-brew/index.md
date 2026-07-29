@@ -2,7 +2,8 @@
 title: Wizzard Brew
 artist: Wizzard
 releaseType: Album
-label: Harvest Records
+labels:
+  - Harvest Records
 release_date: "1973"
 uk_chart_position: 29
 release_page: true

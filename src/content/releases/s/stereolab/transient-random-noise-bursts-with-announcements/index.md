@@ -2,7 +2,8 @@
 title: Transient Random-Noise Bursts with Announcements
 artist: Stereolab
 releaseType: Album
-label: Duophonic Records
+labels:
+  - Duophonic Records
 release_date: "1993"
 release_page: true
 shows:

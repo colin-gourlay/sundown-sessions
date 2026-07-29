@@ -2,7 +2,8 @@
 title: Music for the Jilted Generation
 artist: The Prodigy
 releaseType: Album
-label: XL Recordings
+labels:
+  - XL Recordings
 release_date: "1994"
 uk_chart_position: 1
 release_page: true

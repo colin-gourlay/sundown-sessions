@@ -2,7 +2,8 @@
 title: OK Computer
 artist: Radiohead
 releaseType: Album
-label: Parlophone
+labels:
+  - Parlophone
 release_date: "1997"
 uk_chart_position: 1
 release_page: true

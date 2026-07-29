@@ -2,7 +2,8 @@
 title: Post
 artist: Bjork
 releaseType: Album
-label: One Little Indian Records
+labels:
+  - One Little Indian Records
 release_date: "1995"
 uk_chart_position: 2
 release_page: true

@@ -2,7 +2,8 @@
 title: Dirk Wears White Sox
 artist: Adam & The Ants
 releaseType: Album
-label: Do It Records
+labels:
+  - Do It Records
 release_date: "1979"
 uk_chart_position: 2
 release_page: true

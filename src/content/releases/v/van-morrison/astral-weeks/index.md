@@ -2,7 +2,8 @@
 title: Astral Weeks
 artist: Van Morrison
 releaseType: Album
-label: Warner Bros. Records
+labels:
+  - Warner Bros. Records
 release_date: "1968"
 release_page: true
 shows:

@@ -1,7 +1,8 @@
 ---
 title: Choice of Weapon
 artist: The Cult
-label: Cooking Vinyl
+labels:
+  - Cooking Vinyl
 release_date: "2012"
 releaseDate: "2012-10-16"
 artwork: "https://coverartarchive.org/release-group/64873062-3ddf-4802-a444-b8d2a5ad4386/front-500"

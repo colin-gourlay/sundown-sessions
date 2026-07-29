@@ -2,7 +2,8 @@
 title: Heroes
 artist: David Bowie
 releaseType: Album
-label: RCA Records
+labels:
+  - RCA Records
 release_date: "1977"
 uk_chart_position: 3
 release_page: true

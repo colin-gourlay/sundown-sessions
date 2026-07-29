@@ -2,7 +2,8 @@
 title: Soul Mining
 artist: The The
 releaseType: Album
-label: Some Bizzare / CBS
+labels:
+  - Some Bizzare / CBS
 release_date: "1983"
 uk_chart_position: 27
 release_page: true

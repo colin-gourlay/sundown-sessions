@@ -2,7 +2,8 @@
 title: British Steel
 artist: Judas Priest
 releaseType: Album
-label: CBS Records
+labels:
+  - CBS Records
 release_date: "1980"
 uk_chart_position: 4
 release_page: true

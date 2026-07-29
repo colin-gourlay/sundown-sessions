@@ -2,7 +2,8 @@
 title: Pyromania
 artist: Def Leppard
 releaseType: Album
-label: Mercury Records
+labels:
+  - Mercury Records
 release_date: "1983"
 uk_chart_position: 18
 release_page: true

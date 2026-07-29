@@ -2,7 +2,8 @@
 title: Aoxomoxoa
 artist: Grateful Dead
 releaseType: Album
-label: Warner Bros. Records
+labels:
+  - Warner Bros. Records
 release_date: "1969"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: Why the Long Face
 artist: Big Country
 releaseType: Album
-label: Cooking Vinyl
+labels:
+  - Cooking Vinyl
 release_date: "1995"
 release_page: true
 shows:

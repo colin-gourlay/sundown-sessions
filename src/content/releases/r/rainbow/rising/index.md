@@ -2,7 +2,8 @@
 title: Rising
 artist: Rainbow
 releaseType: Album
-label: Polydor Records
+labels:
+  - Polydor Records
 release_date: "1976"
 uk_chart_position: 11
 release_page: true

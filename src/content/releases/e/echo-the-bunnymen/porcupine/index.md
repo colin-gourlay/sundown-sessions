@@ -2,7 +2,8 @@
 title: Porcupine
 artist: Echo & The Bunnymen
 releaseType: Album
-label: Korova Records
+labels:
+  - Korova Records
 release_date: "1983"
 uk_chart_position: 2
 release_page: true

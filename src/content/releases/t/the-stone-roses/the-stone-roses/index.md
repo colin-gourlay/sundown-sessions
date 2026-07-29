@@ -2,7 +2,8 @@
 title: The Stone Roses
 artist: The Stone Roses
 releaseType: Album
-label: Silvertone Records
+labels:
+  - Silvertone Records
 release_date: "1989"
 release_page: true
 shows:

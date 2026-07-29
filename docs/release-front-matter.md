@@ -48,12 +48,25 @@ Existing alternatives are also supported for rendering:
 - `releaseDate`, `release_date`, or `date`
 - `artist` or `artists`
 
+The plural taxonomy fields are canonical. Singular `label`, `producer`, and
+`genre` values are rendering-only compatibility aliases: they are reported by
+the metadata audit because Hugo cannot create the corresponding taxonomy term
+pages from those unsupported field names.
+
 `releaseType` is required for new Release pages. The recognised values live in
 `src/data/release-types.yaml`, so the vocabulary can be extended deliberately.
 Use `releaseTypeReview: true` only for an existing release whose type has been
 explicitly reviewed but cannot yet be verified; never use a placeholder such as
 `Unknown`. Run `python3 scripts/audit-release-types.py` after changing release
 metadata and commit the regenerated audit report.
+
+Run `python3 scripts/audit-release-metadata.py` after changing label, producer,
+genre, or tag metadata and commit the regenerated audit report. If a value
+cannot be verified, do not invent one. Add its canonical field name to
+`releaseMetadataUnavailable` only when a reliable source establishes that the
+credit or classification is genuinely unavailable; otherwise leave it missing
+for editorial review. `metadata_source` can record the source used to verify a
+release's details.
 
 Hugo taxonomy pages are generated from taxonomy fields that exist in front matter. Use `genres`, `labels`, `producers`, `tags`, `years`, and `release-types` when a release should be grouped on taxonomy pages. Keep `releaseType` and `releaseDate` as the human-friendly canonical release fields; add `release-types` and `years` alongside them when native Hugo taxonomy indexing is wanted.
 

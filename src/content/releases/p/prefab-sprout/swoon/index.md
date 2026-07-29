@@ -2,7 +2,8 @@
 title: Swoon
 artist: Prefab Sprout
 releaseType: Album
-label: Kitchenware Records
+labels:
+  - Kitchenware Records
 release_date: "1984"
 uk_chart_position: 22
 release_page: true

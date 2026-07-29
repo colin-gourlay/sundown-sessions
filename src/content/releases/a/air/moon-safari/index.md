@@ -1,7 +1,8 @@
 ---
 title: Moon Safari
 artist: Air
-label: Virgin Records
+labels:
+  - Virgin Records
 release_date: "1998"
 releaseDate: "1998-01-16"
 artwork: "https://coverartarchive.org/release-group/b0bf2b77-b8cf-32f6-8893-9741d757b400/front-500"

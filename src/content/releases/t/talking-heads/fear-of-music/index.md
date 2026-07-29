@@ -2,7 +2,8 @@
 title: Fear of Music
 artist: Talking Heads
 releaseType: Album
-label: Sire Records
+labels:
+  - Sire Records
 release_date: "1979"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: (What's the Story) Morning Glory?
 artist: Oasis
 releaseType: Album
-label: Creation Records
+labels:
+  - Creation Records
 release_date: "1995"
 uk_chart_position: 1
 release_page: true

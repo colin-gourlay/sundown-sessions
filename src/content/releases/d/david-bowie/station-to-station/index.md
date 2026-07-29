@@ -2,7 +2,8 @@
 title: Station to Station
 artist: David Bowie
 releaseType: Album
-label: RCA Records
+labels:
+  - RCA Records
 release_date: "1976"
 uk_chart_position: 5
 release_page: true

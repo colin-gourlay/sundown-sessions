@@ -2,7 +2,8 @@
 title: A Different Kind of Tension
 artist: Buzzcocks
 releaseType: Album
-label: United Artists Records
+labels:
+  - United Artists Records
 release_date: "1979"
 uk_chart_position: 26
 release_page: true

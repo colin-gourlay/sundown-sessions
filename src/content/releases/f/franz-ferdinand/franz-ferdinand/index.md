@@ -2,7 +2,17 @@
 title: Franz Ferdinand
 artist: Franz Ferdinand
 releaseType: Album
-label: Domino Records
+labels:
+  - Domino Records
+producers:
+  - Tore Johansson
+  - Franz Ferdinand
+genres:
+  - Indie Rock
+  - Post-Punk Revival
+tags:
+  - franz ferdinand
+  - indie rock
 release_date: "2004"
 uk_chart_position: 3
 for_sale: true
@@ -78,6 +88,7 @@ tracks:
 duration: "54:45"
 tracklist_source: "https://musicbrainz.org/release/002b9cc5-d66f-4d78-bf44-6550401ebff5"
 tracklist_edition: "2004 XE"
+metadata_source: "https://musicbrainz.org/release/7b68d780-c039-4a43-bbaa-aa1b7d25add1"
 ---
 ## About
 

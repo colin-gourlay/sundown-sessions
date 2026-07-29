@@ -2,7 +2,8 @@
 title: Nothing
 artist: A
 releaseType: Single
-label: London Records
+labels:
+  - London Records
 release_date: "2002"
 release_page: true
 shows:

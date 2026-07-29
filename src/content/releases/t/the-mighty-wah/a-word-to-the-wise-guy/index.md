@@ -2,7 +2,8 @@
 title: A Word to the Wise Guy
 artist: The Mighty Wah!
 releaseType: Album
-label: Beggars Banquet
+labels:
+  - Beggars Banquet
 release_date: "1984"
 release_page: true
 shows:

@@ -2,7 +2,8 @@
 title: This Was
 artist: Jethro Tull
 releaseType: Album
-label: Island Records
+labels:
+  - Island Records
 release_date: "1968"
 uk_chart_position: 10
 release_page: true

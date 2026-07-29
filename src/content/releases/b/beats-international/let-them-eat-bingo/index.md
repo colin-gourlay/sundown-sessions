@@ -2,7 +2,8 @@
 title: Let Them Eat Bingo
 artist: Beats International
 releaseType: Album
-label: Go! Discs
+labels:
+  - Go! Discs
 release_date: "1990"
 uk_chart_position: 1
 release_page: true

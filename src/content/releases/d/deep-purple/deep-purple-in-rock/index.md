@@ -2,7 +2,8 @@
 title: Deep Purple in Rock
 artist: Deep Purple
 releaseType: Album
-label: Harvest Records
+labels:
+  - Harvest Records
 release_date: "1970"
 uk_chart_position: 4
 release_page: true
