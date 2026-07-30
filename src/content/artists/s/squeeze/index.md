@@ -2,6 +2,8 @@
 genres: ["New Wave","Pop","Rock"]
 featured_image: artists/s/squeeze/squeeze.jpg
 title: Squeeze
+aliases:
+  - /artists/s/squeeze-2/
 summary: "English new wave band built around Chris Difford and Glenn Tilbrook's melodic, sharply observed songwriting."
 description: "English new wave and pop-rock band from London, built around Chris Difford and Glenn Tilbrook's melodic, sharply observed songwriting and enduring singles."
 discogs_name: "Squeeze (2)"
@@ -22,5 +24,4 @@ Squeeze are an English band formed in Deptford in 1974, centred on Chris Difford
 - {{< new-tab-link "Instagram: [https://www.instagram.com/squeezeogram/](https://www.instagram.com/squeezeogram/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/squeezeofficial](https://twitter.com/squeezeofficial)" >}}
-
 
