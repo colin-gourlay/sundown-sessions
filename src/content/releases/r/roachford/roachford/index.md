@@ -1,16 +1,29 @@
 ---
 title: "Roachford"
 artist: "Roachford"
+artist_slug: "roachford"
 releaseDate: "1988-07-11"
+release_date: "11 July 1988"
 releaseType: "Album"
+release-types:
+  - "Album"
+years:
+  - "1988"
 genres:
-  - "synth-pop"
-  - "pop rock"
-  - "rock"
-  - "electronic"
+  - "Pop Rock"
+  - "Soul"
 labels:
   - "Epic"
+producers:
+  - "Andrew Roachford"
+  - "Fayney"
+tags:
+  - "1980s"
+  - "british soul"
+  - "pop rock"
+  - "roachford"
 duration: "40:49"
+release_page: true
 featuredInShows:
   - "1"
 shows:
@@ -48,11 +61,13 @@ tracks:
     duration: "4:25"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/e4ca0aa9-feb0-3c83-a41c-203ef9bb791a"
+  Official Charts: "https://www.officialcharts.com/albums/roachford-roachford/"
 tracklist_source: "https://musicbrainz.org/release/10585970-dac4-40f0-ad30-e032756aece2"
 tracklist_edition: "1988 AU"
+metadata_source: "https://www.qobuz.com/gb-en/album/roachford-roachford/0886443343139"
 ---
 ## About
 
-*Roachford* earns its place in the Sundown Sessions catalogue through “Cuddly Toy”, a selection that offers a direct route into Roachford's work.
+Roachford's self-titled debut matters because it introduced Andrew Roachford's full musical character at once: a warm, forceful voice set against bright pop hooks, rock instrumentation and an unmistakable soul pulse. “Cuddly Toy” is the immediate calling card, but the album's appeal lies in how naturally that energy carries across a complete record.
 
-Heard in the context of the full release, “Cuddly Toy” is an invitation to explore beyond the track featured on the show.
+Heard in Show #1, “Cuddly Toy” opens the door to a debut built with the confidence of a band already sure of its sound. The surrounding tracks make the case for exploring Roachford beyond the enduring hit.
