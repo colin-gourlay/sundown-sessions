@@ -18,8 +18,8 @@ years:
 tags:
   - alternative rock
   - queens of the stone age
-uk_chart_position: 2
-catalogue_number: "MAT 0983"
+uk_chart_position: 1
+catalogue_number: "OLE-1125-2"
 duration: "48:03"
 for_sale: true
 release_page: true
@@ -55,11 +55,14 @@ tracks:
     title: "Villains of Circumstance"
     duration: "6:09"
 tracklist_source: "https://musicbrainz.org/release/fde9a6de-1610-44d5-8f11-bfc139656a2b"
-tracklist_edition: "2017-08-25 US"
+tracklist_edition: "2017-08-25 US Matador CD"
+metadata_source: "https://musicbrainz.org/release/fde9a6de-1610-44d5-8f11-bfc139656a2b"
 ---
 ## About
 
-Produced by Mark Ronson, *Villains* was the band's first album in four years following ...Like Clockwork (2013).
+Arriving four years after the shadowy sprawl of *...Like Clockwork*, *Villains* finds Queens of the Stone Age tightening their riffs around a sharper rhythmic pulse. Glam-rock swagger, clipped guitars and restless grooves give the record a danceable momentum without sanding away the band's menace.
+
+Mark Ronson's production brings that tension to the foreground: drums hit with unusual snap, keyboards flash through the arrangements and Josh Homme's melodies are given room to strut. The collaboration makes *Villains* a bright, wiry turn in the band's catalogue and a bridge between the weight of its predecessor and the looser experiments that followed.
 
 ## External Links
 

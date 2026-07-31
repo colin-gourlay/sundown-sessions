@@ -7,7 +7,7 @@ track_page: true
 ---
 ## About
 
-"Feet Don't Fail Me" is a track by Queens of the Stone Age, featuring Mark Lanegan on backing vocals. It is the opening track on their seventh studio album, [Villains](/releases/q/queens-of-the-stone-age/villains/) (2017).
+"Feet Don't Fail Me" opens Queens of the Stone Age's seventh studio album, [Villains](/releases/q/queens-of-the-stone-age/villains/) (2017). Its long, suspenseful introduction gives way to a strutting guitar riff and dance-rock pulse, establishing the album's rhythmic direction from the outset.
 
 ## External Links
 
