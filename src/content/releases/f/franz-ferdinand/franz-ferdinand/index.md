@@ -2,6 +2,8 @@
 title: Franz Ferdinand
 artist: Franz Ferdinand
 releaseType: Album
+release-types:
+  - Album
 labels:
   - Domino Records
 producers:
@@ -13,8 +15,12 @@ genres:
 tags:
   - franz ferdinand
   - indie rock
-release_date: "2004"
+releaseDate: 2004-02-09
+release_date: "9 February 2004"
+years:
+  - "2004"
 uk_chart_position: 3
+catalogue_number: "WIGCD136"
 for_sale: true
 release_page: true
 shows:
@@ -66,12 +72,22 @@ tracks:
     title: "40'"
     duration: "3:24"
 duration: "38:45"
-tracklist_source: "https://www.discogs.com/master/4334-Franz-Ferdinand-Franz-Ferdinand"
-tracklist_edition: "2004 Europe standard single-CD edition (WIGCD136)"
+tracklist_source: "https://musicbrainz.org/release/fe44f756-6566-4bd9-be62-3601ea3a11c1"
+tracklist_edition: "2004-02-09 UK Domino standard single-CD edition (WIGCD136)"
+metadata_source: "https://musicbrainz.org/release/fe44f756-6566-4bd9-be62-3601ea3a11c1"
 ---
 ## About
 
-*Franz Ferdinand* won the Mercury Prize in 2004.
+Franz Ferdinand's debut turns wiry, angular guitar music into an invitation to
+the dancefloor. Sharp riffs lock against clipped basslines and propulsive drums,
+giving the album the restless momentum of the Glasgow art-school scene that
+shaped the band while keeping its hooks immediate and playful.
+
+Tore Johansson produced most of the record, helping its lean arrangements land
+with precision; the band themselves produced “Tell Her Tonight” and “This Fire”,
+preserving their rougher charge. The result became a defining release of the
+early-2000s post-punk revival, a commercial breakthrough that reached number
+three in the UK and won the 2004 Mercury Prize.
 
 ## External Links
 
