@@ -33,7 +33,7 @@ tracks:
   - discNumber: 1
     trackNumber: 2
     title: "Tell Her Tonight"
-    duration: "2:17"
+    duration: "2:18"
   - discNumber: 1
     trackNumber: 3
     title: "Take Me Out"
@@ -46,19 +46,19 @@ tracks:
   - discNumber: 1
     trackNumber: 5
     title: "Auf Achse"
-    duration: "4:19"
+    duration: "4:20"
   - discNumber: 1
     trackNumber: 6
     title: "Cheating On You"
-    duration: "2:36"
+    duration: "2:37"
   - discNumber: 1
     trackNumber: 7
     title: "This Fire"
-    duration: "4:14"
+    duration: "4:15"
   - discNumber: 1
     trackNumber: 8
     title: "Darts Of Pleasure"
-    duration: "2:59"
+    duration: "3:00"
   - discNumber: 1
     trackNumber: 9
     title: "Michael"
@@ -71,7 +71,7 @@ tracks:
     trackNumber: 11
     title: "40'"
     duration: "3:24"
-duration: "38:45"
+duration: "38:50"
 tracklist_source: "https://musicbrainz.org/release/fe44f756-6566-4bd9-be62-3601ea3a11c1"
 tracklist_edition: "2004-02-09 UK Domino standard single-CD edition (WIGCD136)"
 metadata_source: "https://musicbrainz.org/release/fe44f756-6566-4bd9-be62-3601ea3a11c1"
