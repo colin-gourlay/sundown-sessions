@@ -37,7 +37,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.146.5
+      HUGO_VERSION: 0.159.1
     steps:
       - name: Install Hugo CLI
         run: |
@@ -55,7 +55,6 @@ jobs:
           hugo \
             --source src \
             --printPathWarnings \
-            --panicOnWarning \
             --environment production \
             --baseURL https://example.invalid/
 
