@@ -6,6 +6,7 @@ from __future__ import annotations
 import argparse
 import datetime as dt
 import re
+from collections import Counter
 from dataclasses import dataclass, field
 from pathlib import Path
 
@@ -18,6 +19,7 @@ DATED_RELEASE_RE = re.compile(
     re.IGNORECASE,
 )
 OLD_YEAR_RE = re.compile(r"\b(19|20)\d{2}\b")
+MD026_TRAILING_PUNCTUATION = ".,;:!。，；：！"
 
 
 @dataclass(order=True)
@@ -90,6 +92,16 @@ def audit_file(path: Path, today: dt.date, stale_days: int) -> Finding | None:
     return None
 
 
+def report_heading(finding: Finding, title_counts: Counter[str]) -> str:
+    title = finding.title
+    if (
+        title_counts[title.casefold()] > 1
+        or (title and title[-1] in MD026_TRAILING_PUNCTUATION)
+    ):
+        return f"{title} — {Path(finding.path).parent.name}"
+    return title
+
+
 def write_report(findings: list[Finding], output: Path, today: dt.date, stale_days: int) -> None:
     output.parent.mkdir(parents=True, exist_ok=True)
     lines = [
@@ -114,9 +126,10 @@ def write_report(findings: list[Finding], output: Path, today: dt.date, stale_da
     ]
 
     if findings:
+        title_counts = Counter(finding.title.casefold() for finding in findings)
         lines.extend(["## Findings", ""])
         for finding in findings:
-            lines.append(f"### {finding.title}")
+            lines.append(f"### {report_heading(finding, title_counts)}")
             lines.append("")
             lines.append(f"- File: `{finding.path}`")
             for reason in finding.reasons:

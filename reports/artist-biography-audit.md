@@ -181,7 +181,7 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: missing `## About` biography text
 
-### B.E.F.
+### B.E.F. — bef
 
 - File: `src/content/artists/b/bef/index.md`
 - Reason: missing `lastReviewed` front matter
@@ -506,13 +506,13 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: possibly stale release or career-currentness wording
 
-### Echo & the Bunnymen
+### Echo & the Bunnymen — echo-and-the-bunnymen
 
 - File: `src/content/artists/e/echo-and-the-bunnymen/index.md`
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 1998
 
-### Echo & the Bunnymen
+### Echo & the Bunnymen — echo-the-bunnymen
 
 - File: `src/content/artists/e/echo-the-bunnymen/index.md`
 - Reason: missing `lastReviewed` front matter
@@ -546,14 +546,14 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 2003
 
-### Elvis Costello & The Attractions
+### Elvis Costello & The Attractions — elvis-costello-and-the-attractions
 
 - File: `src/content/artists/e/elvis-costello-and-the-attractions/index.md`
 - Reason: missing `lastReviewed` front matter
 - Reason: possibly stale release or career-currentness wording
 - Reason: biography mentions no year after 2003
 
-### Elvis Costello & The Attractions
+### Elvis Costello & The Attractions — elvis-costello-the-attractions
 
 - File: `src/content/artists/e/elvis-costello-the-attractions/index.md`
 - Reason: missing `lastReviewed` front matter
@@ -1293,7 +1293,7 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 2003
 
-### R.E.M.
+### R.E.M. — rem
 
 - File: `src/content/artists/r/rem/index.md`
 - Reason: missing `lastReviewed` front matter
@@ -1896,7 +1896,7 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 2010
 
-### The Shock!
+### The Shock! — the-shock
 
 - File: `src/content/artists/t/the-shock/index.md`
 - Reason: missing `lastReviewed` front matter
