@@ -1,16 +1,27 @@
 ---
 title: "Havin' Such A Good Time"
-releaseTypeReview: true
 artist: "The Vintage Explosion"
+artwork: "https://coverartarchive.org/release-group/327865c0-9ed8-4b31-814e-2e5cdffb2610/front-500"
 releaseDate: "2023"
+releaseType: "Album"
+release-types:
+  - "Album"
+years:
+  - "2023"
+releaseMetadataUnavailable:
+  - "labels"
+  - "producers"
+  - "genres"
+  - "tags"
 duration: "29:50"
+release_page: true
 featuredInShows:
   - "1"
 shows:
   - "1"
 tracks:
   - trackNumber: 1
-    title: "Havin' Such A Good TIme"
+    title: "Havin' Such A Good Time"
     duration: "2:17"
   - trackNumber: 2
     title: "Tired of Runnin'"
@@ -42,7 +53,6 @@ tracks:
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/327865c0-9ed8-4b31-814e-2e5cdffb2610"
 tracklist_source: "https://musicbrainz.org/release/00c20025-ac2c-4af0-ae9d-a846b4ce25ca"
-tracklist_edition: "2023 None"
 ---
 ## About
 
