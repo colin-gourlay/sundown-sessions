@@ -9,7 +9,7 @@ shows:
   - "46"
 tracks:
   - trackNumber: 1
-    title: "Hello Suzie"
+    title: "Hello Susie"
     duration: "4:55"
   - trackNumber: 2
     title: "Beautiful Daughter"
