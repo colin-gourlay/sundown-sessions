@@ -17,7 +17,7 @@ shows:
   - "14"
 tracks:
   - trackNumber: 1
-    title: "Hello Suzie"
+    title: "Hello Susie"
     duration: "4:55"
   - trackNumber: 2
     title: "Beautiful Daughter"
@@ -42,6 +42,11 @@ tracklist_edition: "1970 GB"
 ---
 ## About
 
-*Shazam* has supplied Sundown Sessions with “Cherry Blossom Clinic Revisited” and “Hello Susie”, giving more than one way into The Move's work.
+*Shazam* has supplied Sundown Sessions with “Hello Susie” and “Cherry Blossom Clinic Revisited”, giving more than one way into The Move's work.
 
 Together, those choices point beyond isolated favourites towards the character of the wider release.
+
+## Tracks Featured on Sundown Sessions
+
+- Hello Susie
+- Cherry Blossom Clinic Revisited
