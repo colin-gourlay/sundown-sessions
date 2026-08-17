@@ -42,7 +42,7 @@ tracklist_edition: "1970 GB"
 ---
 ## About
 
-*Shazam* has supplied Sundown Sessions with “Cherry Blossom Clinic Revisited” and “Hello Susie”, giving more than one way into The Move's work.
+*Shazam* has supplied Sundown Sessions with “Hello Susie” and “Cherry Blossom Clinic Revisited”, giving more than one way into The Move's work.
 
 Together, those choices point beyond isolated favourites towards the character of the wider release.
 
