@@ -12,3 +12,7 @@
 automation/dotnet/**/bin/
 automation/dotnet/**/obj/
 automation/dotnet/**/TestResults/
+
+# Python cache artefacts
+__pycache__/
+*.pyc
