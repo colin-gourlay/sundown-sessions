@@ -33,6 +33,6 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Spoon" >}} - TV Set
-2. {{< artist-wikilink "The Detroit Cobras" >}} - Shout Bamalama
+2. {{< artist-wikilink "The Detroit Cobras" >}} - Shout Bama Lama
 3. {{< artist-wikilink "Becky Becky" >}} - Champagne on Christmas Day
 4. {{< artist-wikilink "Simple Minds" >}} - I Travel

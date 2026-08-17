@@ -13,7 +13,7 @@ years:
 genres:
   - "Garage Rock"
   - "Soul"
-  - "Rock and Roll"
+  - "Rock And Roll"
 labels:
   - "Sympathy for the Record Industry"
 tags:
@@ -81,6 +81,6 @@ links:
 ---
 ## About
 
-*Life, Love And Leaving* captures what makes The Detroit Cobras so irresistible: deep-cut rhythm-and-blues songs, played with garage-rock urgency and Rachel Nagy's unmistakable bite. Rather than treating the source material like museum pieces, the band make every track feel freshly nicked from a jukebox and thrown straight into a sweat-soaked club set.
+*Life, Love And Leaving* captures what makes The Detroit Cobras so irresistible: deep-cut rhythm and blues songs, played with garage-rock urgency and Rachel Nagy's unmistakable bite. Rather than treating the source material like museum pieces, the band make every track feel freshly nicked from a jukebox and thrown straight into a sweat-soaked club set.
 
-As the group's second album, it sharpens the approach laid out on *Mink Rat or Rabbit* without smoothing away any of the grit. “Cry On” shows the band's flair for emotional directness, while “Shout Bama Lama” leans into the joy and velocity that made The Detroit Cobras such a singular catalogue band.
+As the group's second album, it sharpens the approach laid out on *Mink, Rat or Rabbit* without smoothing away any of the grit. “Cry On” shows the band's flair for emotional directness, while “Shout Bama Lama” leans into the joy and velocity that made The Detroit Cobras such a singular covers band.
