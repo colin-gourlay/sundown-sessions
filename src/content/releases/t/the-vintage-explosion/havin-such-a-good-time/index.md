@@ -52,9 +52,7 @@ tracks:
     duration: "3:07"
 links:
   MusicBrainz: "https://musicbrainz.org/release-group/327865c0-9ed8-4b31-814e-2e5cdffb2610"
-metadata_source: "https://musicbrainz.org/release-group/327865c0-9ed8-4b31-814e-2e5cdffb2610"
 tracklist_source: "https://musicbrainz.org/release/00c20025-ac2c-4af0-ae9d-a846b4ce25ca"
-tracklist_edition: "2023 None"
 ---
 ## About
 
