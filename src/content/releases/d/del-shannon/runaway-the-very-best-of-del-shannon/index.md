@@ -2,9 +2,13 @@
 title: "Runaway: The Very Best Of Del Shannon"
 artist: "Del Shannon"
 releaseDate: "2002-01-22"
-releaseType: "Album"
+releaseType: "Compilation"
+release_page: true
 labels:
   - "Collectables"
+years:
+  - "2002"
+  - "2009"
 duration: "1:10:23"
 featuredInShows:
   - "1"
@@ -108,6 +112,6 @@ tracklist_edition: "2002-01-22 US"
 ---
 ## About
 
-*Runaway: The Very Best Of Del Shannon* earns its place in the Sundown Sessions catalogue through “Runaway”, a selection that offers a direct route into Del Shannon's work.
+*Runaway: The Very Best Of Del Shannon* makes the strongest possible case for Shannon as one of pop's great originals. Opening with the iconic falsetto run of "Runaway" — a sound he conjured himself using an early electronic keyboard he called the musitron — the compilation draws a clean line from that 1961 breakthrough through a decade of restless, inventive singles.
 
-Heard in the context of the full release, “Runaway” is an invitation to explore beyond the track featured on the show.
+What distinguishes this collection is its depth beyond the obvious hits. Tracks such as "Keep Searchin' (We'll Follow the Sun)" and "Hats Off to Larry" reveal a writer who could shift from yearning melancholy to propulsive energy without losing any of his distinctive edge. Thirty tracks across seventy minutes make this one of the most complete introductions to his catalogue available.
