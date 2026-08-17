@@ -1,15 +1,29 @@
 ---
 title: "Life, Love And Leaving"
 artist: "The Detroit Cobras"
+artist_slug: "the-detroit-cobras"
+artwork: "https://coverartarchive.org/release-group/25c00fdf-ddad-3cdd-bd76-11a04813dc9f/front-500"
 releaseDate: "2001-04"
+release_date: "April 2001"
 releaseType: "Album"
+release-types:
+  - "Album"
+years:
+  - "2001"
 genres:
-  - "garage rock"
-  - "soul"
-  - "rock"
+  - "Garage Rock"
+  - "Soul"
+  - "Rock And Roll"
 labels:
   - "Sympathy for the Record Industry"
+tags:
+  - "garage rock"
+  - "rhythm and blues"
+  - "the detroit cobras"
+releaseMetadataUnavailable:
+  - "producers"
 duration: "29:48"
+release_page: true
 featuredInShows:
   - "1"
   - "4"
@@ -59,13 +73,14 @@ tracks:
   - trackNumber: 14
     title: "Shout Bama Lama"
     duration: "2:01"
-links:
-  MusicBrainz: "https://musicbrainz.org/release-group/25c00fdf-ddad-3cdd-bd76-11a04813dc9f"
+metadata_source: "https://musicbrainz.org/release-group/25c00fdf-ddad-3cdd-bd76-11a04813dc9f"
 tracklist_source: "https://musicbrainz.org/release/a22a7060-4ef5-4d1b-872d-b13d152ecd68"
 tracklist_edition: "2001-04 US"
+links:
+  MusicBrainz: "https://musicbrainz.org/release-group/25c00fdf-ddad-3cdd-bd76-11a04813dc9f"
 ---
 ## About
 
-*Life, Love And Leaving* has supplied Sundown Sessions with “Cry On” and “Shout Bamalama”, giving more than one way into The Detroit Cobras's work.
+*Life, Love And Leaving* captures what makes The Detroit Cobras so irresistible: deep-cut rhythm and blues songs, played with garage-rock urgency and Rachel Nagy's unmistakable bite. Rather than treating the source material like museum pieces, the band make every track feel freshly nicked from a jukebox and thrown straight into a sweat-soaked club set.
 
-Together, those choices point beyond isolated favourites towards the character of the wider release.
+As the group's second album, it sharpens the approach laid out on *Mink, Rat or Rabbit* without smoothing away any of the grit. “Cry On” shows the band's flair for emotional directness, while “Shout Bama Lama” leans into the joy and velocity that made The Detroit Cobras such a singular covers band.
