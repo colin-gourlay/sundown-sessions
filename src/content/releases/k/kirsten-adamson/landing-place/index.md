@@ -5,10 +5,13 @@ artist: "Kirsten Adamson"
 releaseDate: "2023-02-03"
 labels:
   - "Kirsten Adamson Music"
+release_page: true
 featuredInShows:
   - "3"
+  - "14"
 shows:
   - "3"
+  - "14"
 tracks:
   - trackNumber: 1
     title: "No Other Mother"
@@ -39,6 +42,11 @@ tracklist_edition: "2023-02-03 GB"
 ---
 ## About
 
-*Landing Place* earns its place in the Sundown Sessions catalogue through “My Father's Songs”, a selection that offers a direct route into Kirsten Adamson's work.
+*Landing Place* matters in the Sundown Sessions archive because it gives Kirsten Adamson's Show #3 selection, “My Father's Songs”, a clear home within a full-length release rather than leaving it as an isolated recommendation. Heard in sequence with “No Other Mother”, “Stars On The South Coast” and the later-show favourite “Without Warning”, the record lands as a coherent statement instead of a one-track snapshot.
 
-Heard in the context of the full release, “My Father's Songs” is an invitation to explore beyond the track featured on the show.
+For listeners arriving from the programme, that makes *Landing Place* the most useful first stop in Adamson's catalogue so far: the 2023 release that anchors her first Sundown Sessions appearance and later resurfaces in Show #14.
+
+## Tracks Featured on Sundown Sessions
+
+- My Father's Songs
+- Without Warning
