@@ -81,7 +81,7 @@ links:
   MusicBrainz: "https://musicbrainz.org/release-group/43b9e851-bdd7-439c-a02a-aac6a9307a7d"
 tracklist_source: "https://musicbrainz.org/release/1d01ed78-51ad-4493-940e-cf4ee4158da9"
 tracklist_edition: "2013-02-11 NL"
-metadata_source: "https://musicbrainz.org/release/1d01ed78-51ad-4493-940e-cf4ee4158da9"
+metadata_source: "https://musicbrainz.org/release-group/43b9e851-bdd7-439c-a02a-aac6a9307a7d"
 ---
 ## About
 
