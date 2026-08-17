@@ -1,11 +1,23 @@
 ---
 title: "Secret Messages"
 artist: "Electric Light Orchestra"
-releaseDate: "1983"
-releaseType: "Single"
+releaseDate: "1983-06-24"
+releaseType: "Album"
 labels:
   - "Jet Records"
-duration: "7:26"
+producers:
+  - "Jeff Lynne"
+genres:
+  - "rock"
+  - "pop rock"
+  - "symphonic rock"
+tags:
+  - "electric light orchestra"
+  - "1983"
+  - "album"
+trackCount: 11
+duration: "46:34"
+release_page: true
 featuredInShows:
   - "1"
 shows:
@@ -13,17 +25,46 @@ shows:
 tracks:
   - trackNumber: 1
     title: "Secret Messages"
-    duration: "3:33"
+    duration: "4:43"
   - trackNumber: 2
-    title: "Buildings Have Eyes"
+    title: "Loser Gone Wild"
+    duration: "5:25"
+  - trackNumber: 3
+    title: "Bluebird"
+    duration: "4:13"
+  - trackNumber: 4
+    title: "Take Me On and On"
+    duration: "4:57"
+  - trackNumber: 5
+    title: "Time After Time"
     duration: "3:53"
+  - trackNumber: 6
+    title: "Four Little Diamonds"
+    duration: "4:09"
+  - trackNumber: 7
+    title: "Stranger"
+    duration: "4:28"
+  - trackNumber: 8
+    title: "Danger Ahead"
+    duration: "3:52"
+  - trackNumber: 9
+    title: "Letter from Spain"
+    duration: "2:51"
+  - trackNumber: 10
+    title: "Train of Gold"
+    duration: "4:21"
+  - trackNumber: 11
+    title: "Rock 'n' Roll Is King"
+    duration: "3:42"
 links:
-  MusicBrainz: "https://musicbrainz.org/release-group/359cad21-cf63-48f9-ada7-54a700aab9c8"
-tracklist_source: "https://musicbrainz.org/release/08334a58-9105-4228-a237-4d6b2a16cb28"
-tracklist_edition: "1983 GB"
+  MusicBrainz: "https://musicbrainz.org/search?query=releasegroup%3A%22Secret+Messages%22+AND+artist%3A%22Electric+Light+Orchestra%22&type=release_group&method=indexed"
+  Wikipedia: "https://en.wikipedia.org/wiki/Secret_Messages"
+  Discogs: "https://www.discogs.com/search/?q=Electric+Light+Orchestra+Secret+Messages&type=all"
+tracklist_source: "https://en.wikipedia.org/wiki/Secret_Messages"
+tracklist_edition: "1983 original album sequence"
 ---
 ## About
 
-*Secret Messages* earns its place in the Sundown Sessions catalogue through “Four Little Diamonds”, a selection that offers a direct route into Electric Light Orchestra's work.
+*Secret Messages* catches Electric Light Orchestra at a turning point: still unmistakably melodic and cinematic, but with a leaner, more electronic edge than the grand symphonic sweep of their 1970s peak.
 
-Heard in the context of the full release, “Four Little Diamonds” is an invitation to explore beyond the track featured on the show.
+Within the band's catalogue it stands as a bridge between the expansive ambition of earlier records and the tighter pop focus of their mid-1980s singles. “Four Little Diamonds”, as heard in Show #1, sits right at that intersection — hook-heavy, polished and full of Jeff Lynne's studio craft.
