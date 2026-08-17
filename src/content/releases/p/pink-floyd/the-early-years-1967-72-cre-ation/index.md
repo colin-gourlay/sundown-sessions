@@ -1,8 +1,26 @@
 ---
-title: "The Early Years 1967-72 Cre/ation"
+title: "The Early Years 1967–1972: Cre/ation"
 artist: "Pink Floyd"
-releaseType: Album
-releaseDate: "2016"
+releaseDate: "2016-11-11"
+release_date: "11 November 2016"
+releaseType: Compilation
+release-types:
+  - Compilation
+years:
+  - "2016"
+genres:
+  - "Psychedelic Rock"
+  - "Progressive Rock"
+  - "Experimental Rock"
+tags:
+  - "pink floyd"
+  - "psychedelic rock"
+  - "progressive rock"
+  - "compilation"
+releaseMetadataUnavailable:
+  - labels
+  - producers
+release_page: true
 featuredInShows:
   - "1"
 shows:
@@ -117,14 +135,17 @@ tracks:
     title: "Stay (2016 remix)"
     duration: "4:08"
 duration: "1:52:54"
+links:
+  MusicBrainz: "https://musicbrainz.org/release/75927c44-af22-4eb0-87a2-df5fb339aedd"
 tracklist_source: "https://musicbrainz.org/release/75927c44-af22-4eb0-87a2-df5fb339aedd"
-tracklist_edition: "2016-11-11 GB"
+tracklist_edition: "2016-11-11 GB 2×CD compilation"
+metadata_source: "https://musicbrainz.org/release/75927c44-af22-4eb0-87a2-df5fb339aedd"
 ---
 ## About
 
-*The Early Years 1967-72 Cre/ation* earns its place in the Sundown Sessions catalogue through “See Emily Play”, a selection that offers a direct route into Pink Floyd's work.
+*The Early Years 1967–1972: Cre/ation* matters because it distils Pink Floyd's formative years into a focused two-disc survey, moving from Syd Barrett's vivid psychedelic singles towards the broader, more exploratory sound that followed. Rather than acting as a generic best-of, it maps a period of rapid change across the band's first seven years on record.
 
-Heard in the context of the full release, “See Emily Play” is an invitation to explore beyond the track featured on the show.
+For Show #1, “See Emily Play” is the clear way in: a bright, strange, instantly memorable early single that still captures the sense of adventure running through the wider compilation. From there, *Cre/ation* opens out into BBC sessions, live performances, soundtrack fragments and later remixes that give this edition its own identity within Pink Floyd's catalogue.
 
 ## Tracks Featured on Sundown Sessions
 
