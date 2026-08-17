@@ -2,11 +2,8 @@
 title: "Queen of Denmark"
 artist: "John Grant"
 artist_slug: "john-grant"
-release_date: "6 April 2010"
-releaseDate: "2010-04-06"
+releaseDate: "2010-04-19"
 releaseType: "Album"
-release-types:
-  - "Album"
 years:
   - "2010"
 genres:
@@ -98,7 +95,7 @@ links:
   MusicBrainz: "https://musicbrainz.org/release-group/35ff2371-1c51-4556-a6a7-4430418f67af"
 metadata_source: "https://musicbrainz.org/release/b10164a3-a815-49c2-94e8-de953698aba5"
 tracklist_source: "https://musicbrainz.org/release/b10164a3-a815-49c2-94e8-de953698aba5"
-tracklist_edition: "2010 GB"
+tracklist_edition: "2010-04-19 GB"
 ---
 ## About
 
