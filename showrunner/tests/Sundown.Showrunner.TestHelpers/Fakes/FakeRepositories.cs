@@ -1,7 +1,7 @@
 using Sundown.Showrunner.Domain.Entities;
 using Sundown.Showrunner.Domain.Repositories;
 
-namespace Sundown.Showrunner.Application.Tests.Fakes;
+namespace Sundown.Showrunner.TestHelpers.Fakes;
 
 public sealed class FakeShowRepository : IShowRepository
 {

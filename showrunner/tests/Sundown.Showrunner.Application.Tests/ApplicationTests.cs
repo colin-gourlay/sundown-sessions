@@ -1,6 +1,6 @@
 using Sundown.Showrunner.Application.Exceptions;
 using Sundown.Showrunner.Application.Queries;
-using Sundown.Showrunner.Application.Tests.Fakes;
+using Sundown.Showrunner.TestHelpers.Fakes;
 using Sundown.Showrunner.Domain.Entities;
 using Xunit;
 

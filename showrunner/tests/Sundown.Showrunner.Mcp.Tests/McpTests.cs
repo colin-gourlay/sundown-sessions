@@ -2,7 +2,7 @@ using ModelContextProtocol.Server;
 using Sundown.Showrunner.Application.Commands;
 using Sundown.Showrunner.Application.Exceptions;
 using Sundown.Showrunner.Application.Queries;
-using Sundown.Showrunner.Mcp.Tests.Fakes;
+using Sundown.Showrunner.TestHelpers.Fakes;
 using Sundown.Showrunner.Domain.Entities;
 using Sundown.Showrunner.Mcp.Tools;
 using Xunit;

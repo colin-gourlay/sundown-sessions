@@ -107,7 +107,10 @@ public sealed class SqliteShowRepository : IShowRepository
 
     private async Task SaveSlotsAsync(int showId, IReadOnlyList<ShowSlot> slots, CancellationToken cancellationToken)
     {
+        await using var transaction = await _db.Connection.BeginTransactionAsync(cancellationToken);
+
         await using var deleteCmd = _db.Connection.CreateCommand();
+        deleteCmd.Transaction = (Microsoft.Data.Sqlite.SqliteTransaction)transaction;
         deleteCmd.CommandText = "DELETE FROM ShowSlots WHERE ShowId = $showId";
         deleteCmd.Parameters.AddWithValue("$showId", showId);
         await deleteCmd.ExecuteNonQueryAsync(cancellationToken);
@@ -115,6 +118,7 @@ public sealed class SqliteShowRepository : IShowRepository
         foreach (var slot in slots)
         {
             await using var insertCmd = _db.Connection.CreateCommand();
+            insertCmd.Transaction = (Microsoft.Data.Sqlite.SqliteTransaction)transaction;
             insertCmd.CommandText = """
                 INSERT INTO ShowSlots (ShowId, Position, RecordingId, ArtistName, TrackTitle, AlbumTitle)
                 VALUES ($showId, $position, $recordingId, $artistName, $trackTitle, $albumTitle)
@@ -127,6 +131,8 @@ public sealed class SqliteShowRepository : IShowRepository
             insertCmd.Parameters.AddWithValue("$albumTitle", (object?)slot.AlbumTitle ?? DBNull.Value);
             await insertCmd.ExecuteNonQueryAsync(cancellationToken);
         }
+
+        await transaction.CommitAsync(cancellationToken);
     }
 
     private static Show ReadShow(SqliteDataReader reader) => new()

@@ -9,5 +9,6 @@
     <Project Path="tests/Sundown.Showrunner.Application.Tests/Sundown.Showrunner.Application.Tests.csproj" />
     <Project Path="tests/Sundown.Showrunner.Domain.Tests/Sundown.Showrunner.Domain.Tests.csproj" />
     <Project Path="tests/Sundown.Showrunner.Mcp.Tests/Sundown.Showrunner.Mcp.Tests.csproj" />
+    <Project Path="tests/Sundown.Showrunner.TestHelpers/Sundown.Showrunner.TestHelpers.csproj" />
   </Folder>
 </Solution>
