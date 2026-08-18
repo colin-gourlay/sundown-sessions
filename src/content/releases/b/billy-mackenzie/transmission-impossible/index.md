@@ -57,9 +57,12 @@ links:
   MusicBrainz: "https://musicbrainz.org/release-group/55bdb6cc-6055-4c8e-9c33-948eed8eabd6"
 tracklist_source: "https://musicbrainz.org/release/96e402ff-f821-4966-8daf-1f4b7d78db05"
 tracklist_edition: "2004 GB"
+release_page: true
 ---
 ## About
 
-*Transmission Impossible* earns its place in the Sundown Sessions catalogue through “Never Turn Your Back On Mother Earth”, a selection that offers a direct route into Billy Mackenzie's work.
+Billy Mackenzie's voice was one of the most extraordinary instruments in post-punk: an acrobatic tenor that could shift from velvet intimacy to operatic intensity within a single phrase. *Transmission Impossible* — released posthumously on One Little Indian — collects solo recordings made after his departure from The Associates, and stands as the most substantial document of what he was working towards in the years before his death in 1997.
 
-Heard in the context of the full release, “Never Turn Your Back On Mother Earth” is an invitation to explore beyond the track featured on the show.
+The album's scope is striking: from the swooping grandeur of "Wild Is The Wind" (the Dimitri Tiomkin standard) to the quietly devastating "At The Edge Of The World", it showcases a singer still deepening his craft. The cover of "Never Turn Your Back On Mother Earth" — originally a Sparks single from *Propaganda* (1974) — sits comfortably here; Mackenzie shared with Ron and Russell Mael a taste for melodrama as a vehicle for genuine feeling.
+
+For anyone arriving via Show 3, the track is a useful introduction, but the full album rewards the time invested.
