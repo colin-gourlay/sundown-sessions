@@ -81,11 +81,10 @@
         <div class="not-found-latest">
           {{- range $latestShows }}
             {{- $showLabel := "" -}}
-            {{- $showTitle := .Title | plainify -}}
+            {{- $showTitle := partial "show/display-title.html" . -}}
             {{- $titleParts := split .Title ": " -}}
             {{- if gt (len $titleParts) 1 -}}
               {{- $showLabel = index $titleParts 0 -}}
-              {{- $showTitle = strings.TrimPrefix (printf "%s: " $showLabel) .Title | plainify -}}
             {{- end -}}
             <a
               class="not-found-show"
