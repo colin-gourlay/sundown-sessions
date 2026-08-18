@@ -81,7 +81,7 @@
         <div class="not-found-latest">
           {{- range $latestShows }}
             {{- $showLabel := "" -}}
-            {{- $showTitle := partial "show/display-title.html" . -}}
+            {{- $showTitle := partial "show/display-title.html" . | plainify -}}
             {{- $titleParts := split .Title ": " -}}
             {{- if gt (len $titleParts) 1 -}}
               {{- $showLabel = index $titleParts 0 -}}
