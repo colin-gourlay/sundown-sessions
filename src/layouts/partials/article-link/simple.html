@@ -25,6 +25,10 @@
 {{ end }}
 
 {{ $page := .Page }}
+{{ $cardTitle := .Title | emojify }}
+{{ if eq $page.Type "shows" }}
+  {{ $cardTitle = partial "show/display-title.html" . }}
+{{ end }}
 {{ $featured := "" }}
 {{ $featuredURL := "" }}
 {{ if not .Params.hideFeatureImage }}
@@ -94,7 +98,7 @@
         {{ end }}
         class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral text-xl font-bold text-neutral-800 hover:underline hover:underline-offset-2">
         <h2>
-          {{ .Title | emojify }}
+          {{ $cardTitle }}
           {{ if .Params.externalUrl }}
             <span class="cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500">
               <span class="rtl:hidden">&#8599;</span>

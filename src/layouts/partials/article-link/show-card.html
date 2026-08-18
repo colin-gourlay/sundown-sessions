@@ -48,13 +48,12 @@
 
 {{/* Split "Show #N: Broadcast Title" into label and title */}}
 {{ $showLabel := "" }}
-{{ $showTitle := .Title | emojify }}
+{{ $showTitle := partial "show/display-title.html" . }}
 {{ $titleParts := split .Title ": " }}
 {{ if gt (len $titleParts) 1 }}
   {{ $rawShowLabel := index $titleParts 0 }}
   {{ $showLabel = $rawShowLabel }}
   {{ $showLabel = replaceRE `(?i)^broadcast\s*#` "Show #" $showLabel }}
-  {{ $showTitle = strings.TrimPrefix (printf "%s: " $rawShowLabel) .Title | emojify }}
 {{ end }}
 
 {{ $featuredArtistCount := len .Params.tags }}

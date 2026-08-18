@@ -77,7 +77,7 @@
           <h1 id="show-hero-heading" class="show-hero__artist">{{ . }}</h1>
         </div>
       {{ else }}
-        <h1 id="show-hero-heading" class="show-hero__artist">{{ $.Title | emojify }}</h1>
+        <h1 id="show-hero-heading" class="show-hero__artist">{{ partial "show/display-title.html" $ }}</h1>
       {{ end }}
       {{ if not $.Date.IsZero }}
         <p class="show-hero__date">{{ $.Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</p>
