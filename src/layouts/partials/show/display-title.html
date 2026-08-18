@@ -3,7 +3,7 @@
 {{- $titleParts := split .Title ": " -}}
 {{- if gt (len $titleParts) 1 -}}
   {{- $titleBase := index $titleParts 0 -}}
-  {{- if and (strings.HasPrefix $titleBase "Show #") (not .Date.IsZero) -}}
+  {{- if and (or (strings.HasPrefix $titleBase "Show #") (strings.HasPrefix $titleBase "Broadcast #")) (not .Date.IsZero) -}}
     {{- $displayTitle = printf "Broadcast %s" (.Date | time.Format $dateFormat) -}}
   {{- else -}}
     {{- $displayTitle = strings.TrimPrefix (printf "%s: " $titleBase) .Title | emojify -}}
