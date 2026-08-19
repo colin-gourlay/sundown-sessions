@@ -21,7 +21,7 @@ tags:
   - "1980s"
 uk_chart_position: 32
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
