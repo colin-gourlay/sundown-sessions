@@ -49,6 +49,10 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.Property(item => item.Id).ValueGeneratedNever();
             builder.Property(item => item.Summary).HasMaxLength(256).IsRequired();
             builder.Property(item => item.Notes).HasMaxLength(2000);
+            builder.HasOne<RecordingEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.RecordingId)
+                .OnDelete(DeleteBehavior.SetNull);
         });
 
         modelBuilder.Entity<ShowEntity>(builder =>
@@ -80,6 +84,10 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.Property(item => item.Id).ValueGeneratedNever();
             builder.Property(item => item.Notes).HasMaxLength(2000);
             builder.HasIndex(item => new { item.ShowId, item.Position }).IsUnique();
+            builder.HasOne<RecordingEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.RecordingId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
 
         modelBuilder.Entity<ReconciliationEntity>(builder =>
@@ -99,6 +107,10 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
             builder.HasIndex(item => new { item.ReconciliationId, item.PlannedRecordingId }).IsUnique();
+            builder.HasOne<PlannedRecordingEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.PlannedRecordingId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
 
         modelBuilder.Entity<BroadcastRecordingEntity>(builder =>
@@ -107,6 +119,14 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
             builder.HasIndex(item => new { item.ShowId, item.PlannedRecordingId }).IsUnique();
+            builder.HasOne<RecordingEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.RecordingId)
+                .OnDelete(DeleteBehavior.Restrict);
+            builder.HasOne<PlannedRecordingEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.PlannedRecordingId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
 
         modelBuilder.Entity<RepeatExceptionEntity>(builder =>
@@ -116,6 +136,14 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.Property(item => item.Id).ValueGeneratedNever();
             builder.Property(item => item.Reason).HasMaxLength(1000).IsRequired();
             builder.HasIndex(item => new { item.ShowId, item.RecordingId }).IsUnique();
+            builder.HasOne<ShowEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.ShowId)
+                .OnDelete(DeleteBehavior.Cascade);
+            builder.HasOne<RecordingEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.RecordingId)
+                .OnDelete(DeleteBehavior.Restrict);
         });
     }
 }

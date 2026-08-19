@@ -11,7 +11,7 @@ using SundownSessions.Showrunner.Persistence;
 namespace SundownSessions.Showrunner.Persistence.Migrations
 {
     [DbContext(typeof(ShowrunnerDbContext))]
-    [Migration("20260819084136_InitialCreate")]
+    [Migration("20260819084400_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -42,6 +42,8 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RecordingId");
+
                     b.ToTable("BacklogItems", (string)null);
                 });
 
@@ -63,6 +65,10 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PlannedRecordingId");
+
+                    b.HasIndex("RecordingId");
 
                     b.HasIndex("ShowId", "PlannedRecordingId")
                         .IsUnique();
@@ -92,6 +98,8 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("RecordingId");
 
                     b.HasIndex("ShowId", "Position")
                         .IsUnique();
@@ -136,6 +144,8 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                         .HasColumnType("TEXT");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("PlannedRecordingId");
 
                     b.HasIndex("ReconciliationId", "PlannedRecordingId")
                         .IsUnique();
@@ -216,6 +226,8 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("RecordingId");
+
                     b.HasIndex("ShowId", "RecordingId")
                         .IsUnique();
 
@@ -251,8 +263,28 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                     b.ToTable("Shows", (string)null);
                 });
 
+            modelBuilder.Entity("SundownSessions.Showrunner.Persistence.BacklogItemEntity", b =>
+                {
+                    b.HasOne("SundownSessions.Showrunner.Persistence.RecordingEntity", null)
+                        .WithMany()
+                        .HasForeignKey("RecordingId")
+                        .OnDelete(DeleteBehavior.SetNull);
+                });
+
             modelBuilder.Entity("SundownSessions.Showrunner.Persistence.BroadcastRecordingEntity", b =>
                 {
+                    b.HasOne("SundownSessions.Showrunner.Persistence.PlannedRecordingEntity", null)
+                        .WithMany()
+                        .HasForeignKey("PlannedRecordingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("SundownSessions.Showrunner.Persistence.RecordingEntity", null)
+                        .WithMany()
+                        .HasForeignKey("RecordingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("SundownSessions.Showrunner.Persistence.ShowEntity", "Show")
                         .WithMany("BroadcastRecordings")
                         .HasForeignKey("ShowId")
@@ -264,6 +296,12 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
 
             modelBuilder.Entity("SundownSessions.Showrunner.Persistence.PlannedRecordingEntity", b =>
                 {
+                    b.HasOne("SundownSessions.Showrunner.Persistence.RecordingEntity", null)
+                        .WithMany()
+                        .HasForeignKey("RecordingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("SundownSessions.Showrunner.Persistence.ShowEntity", "Show")
                         .WithMany("PlannedRecordings")
                         .HasForeignKey("ShowId")
@@ -286,6 +324,12 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
 
             modelBuilder.Entity("SundownSessions.Showrunner.Persistence.ReconciliationItemEntity", b =>
                 {
+                    b.HasOne("SundownSessions.Showrunner.Persistence.PlannedRecordingEntity", null)
+                        .WithMany()
+                        .HasForeignKey("PlannedRecordingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
                     b.HasOne("SundownSessions.Showrunner.Persistence.ReconciliationEntity", "Reconciliation")
                         .WithMany("Items")
                         .HasForeignKey("ReconciliationId")
@@ -304,6 +348,21 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                         .IsRequired();
 
                     b.Navigation("Recording");
+                });
+
+            modelBuilder.Entity("SundownSessions.Showrunner.Persistence.RepeatExceptionEntity", b =>
+                {
+                    b.HasOne("SundownSessions.Showrunner.Persistence.RecordingEntity", null)
+                        .WithMany()
+                        .HasForeignKey("RecordingId")
+                        .OnDelete(DeleteBehavior.Restrict)
+                        .IsRequired();
+
+                    b.HasOne("SundownSessions.Showrunner.Persistence.ShowEntity", null)
+                        .WithMany()
+                        .HasForeignKey("ShowId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
                 });
 
             modelBuilder.Entity("SundownSessions.Showrunner.Persistence.ReconciliationEntity", b =>

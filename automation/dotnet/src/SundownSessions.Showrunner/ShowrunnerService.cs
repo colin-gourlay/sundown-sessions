@@ -438,7 +438,6 @@ public sealed class ShowrunnerService
         var history = await dbContext.BroadcastRecordings
             .AsNoTracking()
             .Where(item => item.RecordingId == recordingId)
-            .OrderBy(item => item.Show.ShowDate)
             .Select(item => new BroadcastHistoryEntry(
                 item.Id,
                 item.ShowId,

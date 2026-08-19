@@ -12,21 +12,6 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
         protected override void Up(MigrationBuilder migrationBuilder)
         {
             migrationBuilder.CreateTable(
-                name: "BacklogItems",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    RecordingId = table.Column<Guid>(type: "TEXT", nullable: true),
-                    Summary = table.Column<string>(type: "TEXT", maxLength: 256, nullable: false),
-                    Notes = table.Column<string>(type: "TEXT", maxLength: 2000, nullable: true),
-                    CreatedAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BacklogItems", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Recordings",
                 columns: table => new
                 {
@@ -42,21 +27,6 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "RepeatExceptions",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ShowId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    RecordingId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    Reason = table.Column<string>(type: "TEXT", maxLength: 1000, nullable: false),
-                    CreatedAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_RepeatExceptions", x => x.Id);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "Shows",
                 columns: table => new
                 {
@@ -69,6 +39,27 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Shows", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BacklogItems",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    RecordingId = table.Column<Guid>(type: "TEXT", nullable: true),
+                    Summary = table.Column<string>(type: "TEXT", maxLength: 256, nullable: false),
+                    Notes = table.Column<string>(type: "TEXT", maxLength: 2000, nullable: true),
+                    CreatedAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BacklogItems", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BacklogItems_Recordings_RecordingId",
+                        column: x => x.RecordingId,
+                        principalTable: "Recordings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.SetNull);
                 });
 
             migrationBuilder.CreateTable(
@@ -92,27 +83,6 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "BroadcastRecordings",
-                columns: table => new
-                {
-                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
-                    ShowId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    RecordingId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    PlannedRecordingId = table.Column<Guid>(type: "TEXT", nullable: false),
-                    BroadcastAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_BroadcastRecordings", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_BroadcastRecordings_Shows_ShowId",
-                        column: x => x.ShowId,
-                        principalTable: "Shows",
-                        principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
-                });
-
-            migrationBuilder.CreateTable(
                 name: "PlannedRecordings",
                 columns: table => new
                 {
@@ -126,6 +96,12 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PlannedRecordings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_PlannedRecordings_Recordings_RecordingId",
+                        column: x => x.RecordingId,
+                        principalTable: "Recordings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
                     table.ForeignKey(
                         name: "FK_PlannedRecordings_Shows_ShowId",
                         column: x => x.ShowId,
@@ -155,6 +131,66 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "RepeatExceptions",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    ShowId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    RecordingId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    Reason = table.Column<string>(type: "TEXT", maxLength: 1000, nullable: false),
+                    CreatedAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_RepeatExceptions", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_RepeatExceptions_Recordings_RecordingId",
+                        column: x => x.RecordingId,
+                        principalTable: "Recordings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_RepeatExceptions_Shows_ShowId",
+                        column: x => x.ShowId,
+                        principalTable: "Shows",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "BroadcastRecordings",
+                columns: table => new
+                {
+                    Id = table.Column<Guid>(type: "TEXT", nullable: false),
+                    ShowId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    RecordingId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    PlannedRecordingId = table.Column<Guid>(type: "TEXT", nullable: false),
+                    BroadcastAtUtc = table.Column<DateTimeOffset>(type: "TEXT", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_BroadcastRecordings", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_BroadcastRecordings_PlannedRecordings_PlannedRecordingId",
+                        column: x => x.PlannedRecordingId,
+                        principalTable: "PlannedRecordings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_BroadcastRecordings_Recordings_RecordingId",
+                        column: x => x.RecordingId,
+                        principalTable: "Recordings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
+                        name: "FK_BroadcastRecordings_Shows_ShowId",
+                        column: x => x.ShowId,
+                        principalTable: "Shows",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ReconciliationItems",
                 columns: table => new
                 {
@@ -167,6 +203,12 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 {
                     table.PrimaryKey("PK_ReconciliationItems", x => x.Id);
                     table.ForeignKey(
+                        name: "FK_ReconciliationItems_PlannedRecordings_PlannedRecordingId",
+                        column: x => x.PlannedRecordingId,
+                        principalTable: "PlannedRecordings",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Restrict);
+                    table.ForeignKey(
                         name: "FK_ReconciliationItems_Reconciliations_ReconciliationId",
                         column: x => x.ReconciliationId,
                         principalTable: "Reconciliations",
@@ -175,16 +217,41 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 });
 
             migrationBuilder.CreateIndex(
+                name: "IX_BacklogItems_RecordingId",
+                table: "BacklogItems",
+                column: "RecordingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BroadcastRecordings_PlannedRecordingId",
+                table: "BroadcastRecordings",
+                column: "PlannedRecordingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_BroadcastRecordings_RecordingId",
+                table: "BroadcastRecordings",
+                column: "RecordingId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_BroadcastRecordings_ShowId_PlannedRecordingId",
                 table: "BroadcastRecordings",
                 columns: new[] { "ShowId", "PlannedRecordingId" },
                 unique: true);
 
             migrationBuilder.CreateIndex(
+                name: "IX_PlannedRecordings_RecordingId",
+                table: "PlannedRecordings",
+                column: "RecordingId");
+
+            migrationBuilder.CreateIndex(
                 name: "IX_PlannedRecordings_ShowId_Position",
                 table: "PlannedRecordings",
                 columns: new[] { "ShowId", "Position" },
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ReconciliationItems_PlannedRecordingId",
+                table: "ReconciliationItems",
+                column: "PlannedRecordingId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_ReconciliationItems_ReconciliationId_PlannedRecordingId",
@@ -203,6 +270,11 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 table: "RecordingExternalIdentifiers",
                 columns: new[] { "RecordingId", "Source", "Value" },
                 unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RepeatExceptions_RecordingId",
+                table: "RepeatExceptions",
+                column: "RecordingId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_RepeatExceptions_ShowId_RecordingId",
@@ -227,9 +299,6 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 name: "BroadcastRecordings");
 
             migrationBuilder.DropTable(
-                name: "PlannedRecordings");
-
-            migrationBuilder.DropTable(
                 name: "ReconciliationItems");
 
             migrationBuilder.DropTable(
@@ -237,6 +306,9 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
 
             migrationBuilder.DropTable(
                 name: "RepeatExceptions");
+
+            migrationBuilder.DropTable(
+                name: "PlannedRecordings");
 
             migrationBuilder.DropTable(
                 name: "Reconciliations");
