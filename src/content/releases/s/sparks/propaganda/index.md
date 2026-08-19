@@ -30,8 +30,10 @@ duration: "32:27"
 release_page: true
 featuredInShows:
   - "1"
+  - "1000"
 shows:
   - "1"
+  - "1000"
 tracks:
   - trackNumber: 1
     title: "Propaganda"
