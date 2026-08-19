@@ -42,7 +42,7 @@ toc: true
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2026-07-07T22:00:00Z
-draft: true
+draft: false
 ---
 
 ## Listen Back
