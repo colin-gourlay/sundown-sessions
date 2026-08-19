@@ -8,11 +8,11 @@
 
 **ADVERTISING BREAK**
 
-1. Barbarossa Beat, Mekon – Phattie's Lunch Box Part Two
+1. Barbarossa Beat feat. Mekon – Phattie's Lunch Box Part Two
 2. Corpus Delicti – Liminal
 3. IST IST – Makes No Difference
 4. Whispering Sons – Dense
-5. Redemption Zero – The Bitter Taste Of Torment
+5. Redemption ZERO – The Bitter Taste Of Torment
 
 ---
 
@@ -21,5 +21,5 @@
 1. The Cramps – Blue Moon Baby
 2. Logan's Close – Hot Blondes In Your Area Tonight
 3. Fabienne DelSol – She Is Gone
-4. Frantic Chant – Mushroom Jim and the Plastic People
+4. Frantic Chant – Mushroom Jim & The Planet Of The Funky Apes
 5. Twisted Nerve – Seance
