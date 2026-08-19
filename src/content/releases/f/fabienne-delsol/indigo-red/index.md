@@ -25,7 +25,7 @@ catalogue_number: "DAMGOOD650"
 duration: "35:09"
 for_sale: true
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
