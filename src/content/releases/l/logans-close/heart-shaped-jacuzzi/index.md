@@ -15,7 +15,7 @@ tags:
   - "logans close"
   - "2020s"
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
