@@ -13,8 +13,10 @@ labels:
   - "Ariola"
 featuredInShows:
   - "15"
+  - "1000"
 shows:
   - "15"
+  - "1000"
 tracks:
   - trackNumber: 1
     title: "Dirty Pictures"
