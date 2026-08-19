@@ -1,0 +1,513 @@
+using Microsoft.EntityFrameworkCore;
+using SundownSessions.Showrunner.Persistence;
+
+namespace SundownSessions.Showrunner;
+
+public sealed class ShowrunnerService
+{
+    private readonly ShowrunnerDbContext dbContext;
+    private readonly IShowrunnerClock clock;
+
+    public ShowrunnerService(ShowrunnerDbContext dbContext, IShowrunnerClock? clock = null)
+    {
+        this.dbContext = dbContext;
+        this.clock = clock ?? new SystemShowrunnerClock();
+    }
+
+    public async Task<ApplicationResult<RecordingModel>> CreateRecordingAsync(CreateRecordingCommand command, CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(command.Title))
+        {
+            return ApplicationResult<RecordingModel>.Failure(
+                ApplicationError.Validation("title", "A recording title is required."));
+        }
+
+        var recording = new RecordingEntity
+        {
+            Id = Guid.NewGuid(),
+            Title = command.Title.Trim(),
+            Artist = command.Artist?.Trim(),
+            Notes = command.Notes?.Trim(),
+            CreatedAtUtc = clock.UtcNow,
+        };
+
+        dbContext.Recordings.Add(recording);
+        await dbContext.SaveChangesAsync(cancellationToken);
+
+        return ApplicationResult<RecordingModel>.Success(Map(recording));
+    }
+
+    public async Task<ApplicationResult<RecordingModel>> GetRecordingAsync(Guid recordingId, CancellationToken cancellationToken = default)
+    {
+        var recording = await dbContext.Recordings
+            .Include(item => item.ExternalIdentifiers.OrderBy(identifier => identifier.Source).ThenBy(identifier => identifier.Value))
+            .SingleOrDefaultAsync(item => item.Id == recordingId, cancellationToken);
+
+        return recording is null
+            ? ApplicationResult<RecordingModel>.Failure(ApplicationError.NotFound("recording", recordingId))
+            : ApplicationResult<RecordingModel>.Success(Map(recording));
+    }
+
+    public async Task<ApplicationResult<RecordingModel>> AddExternalIdentifierAsync(Guid recordingId, AddExternalIdentifierCommand command, CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(command.Source))
+        {
+            return ApplicationResult<RecordingModel>.Failure(
+                ApplicationError.Validation("source", "An external identifier source is required."));
+        }
+
+        if (string.IsNullOrWhiteSpace(command.Value))
+        {
+            return ApplicationResult<RecordingModel>.Failure(
+                ApplicationError.Validation("value", "An external identifier value is required."));
+        }
+
+        var recording = await dbContext.Recordings
+            .Include(item => item.ExternalIdentifiers)
+            .SingleOrDefaultAsync(item => item.Id == recordingId, cancellationToken);
+
+        if (recording is null)
+        {
+            return ApplicationResult<RecordingModel>.Failure(ApplicationError.NotFound("recording", recordingId));
+        }
+
+        var source = command.Source.Trim();
+        var value = command.Value.Trim();
+        var exists = recording.ExternalIdentifiers.Any(item =>
+            string.Equals(item.Source, source, StringComparison.OrdinalIgnoreCase) &&
+            string.Equals(item.Value, value, StringComparison.Ordinal));
+
+        if (exists)
+        {
+            return ApplicationResult<RecordingModel>.Failure(
+                ApplicationError.Conflict(
+                    "duplicate_external_identifier",
+                    "The recording already has that external identifier.",
+                    "externalIdentifier",
+                    source,
+                    value));
+        }
+
+        recording.ExternalIdentifiers.Add(new RecordingExternalIdentifierEntity
+        {
+            Id = Guid.NewGuid(),
+            RecordingId = recording.Id,
+            Source = source,
+            Value = value,
+        });
+
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return await GetRecordingAsync(recording.Id, cancellationToken);
+    }
+
+    public async Task<ApplicationResult<BacklogItemModel>> CreateBacklogItemAsync(CreateBacklogItemCommand command, CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(command.Summary))
+        {
+            return ApplicationResult<BacklogItemModel>.Failure(
+                ApplicationError.Validation("summary", "A backlog item summary is required."));
+        }
+
+        if (command.RecordingId.HasValue)
+        {
+            var recordingExists = await dbContext.Recordings.AnyAsync(item => item.Id == command.RecordingId.Value, cancellationToken);
+            if (!recordingExists)
+            {
+                return ApplicationResult<BacklogItemModel>.Failure(ApplicationError.NotFound("recording", command.RecordingId.Value));
+            }
+        }
+
+        var backlogItem = new BacklogItemEntity
+        {
+            Id = Guid.NewGuid(),
+            RecordingId = command.RecordingId,
+            Summary = command.Summary.Trim(),
+            Notes = command.Notes?.Trim(),
+            CreatedAtUtc = clock.UtcNow,
+        };
+
+        dbContext.BacklogItems.Add(backlogItem);
+        await dbContext.SaveChangesAsync(cancellationToken);
+
+        return ApplicationResult<BacklogItemModel>.Success(Map(backlogItem));
+    }
+
+    public async Task<ApplicationResult<BacklogItemModel>> GetBacklogItemAsync(Guid backlogItemId, CancellationToken cancellationToken = default)
+    {
+        var backlogItem = await dbContext.BacklogItems.SingleOrDefaultAsync(item => item.Id == backlogItemId, cancellationToken);
+        return backlogItem is null
+            ? ApplicationResult<BacklogItemModel>.Failure(ApplicationError.NotFound("backlogItem", backlogItemId))
+            : ApplicationResult<BacklogItemModel>.Success(Map(backlogItem));
+    }
+
+    public async Task<ApplicationResult<ShowModel>> CreateShowAsync(CreateShowCommand command, CancellationToken cancellationToken = default)
+    {
+        if (string.IsNullOrWhiteSpace(command.Slug))
+        {
+            return ApplicationResult<ShowModel>.Failure(ApplicationError.Validation("slug", "A show slug is required."));
+        }
+
+        if (string.IsNullOrWhiteSpace(command.Title))
+        {
+            return ApplicationResult<ShowModel>.Failure(ApplicationError.Validation("title", "A show title is required."));
+        }
+
+        var slug = command.Slug.Trim();
+        var slugExists = await dbContext.Shows.AnyAsync(item => item.Slug == slug, cancellationToken);
+        if (slugExists)
+        {
+            return ApplicationResult<ShowModel>.Failure(
+                ApplicationError.Conflict("duplicate_show_slug", "The show slug already exists.", "slug", slug));
+        }
+
+        var show = new ShowEntity
+        {
+            Id = Guid.NewGuid(),
+            Slug = slug,
+            Title = command.Title.Trim(),
+            ShowDate = command.ShowDate,
+            CreatedAtUtc = clock.UtcNow,
+        };
+
+        dbContext.Shows.Add(show);
+        await dbContext.SaveChangesAsync(cancellationToken);
+
+        return ApplicationResult<ShowModel>.Success(Map(show));
+    }
+
+    public async Task<ApplicationResult<ShowModel>> GetShowAsync(Guid showId, CancellationToken cancellationToken = default)
+    {
+        var show = await dbContext.Shows
+            .Include(item => item.PlannedRecordings.OrderBy(recording => recording.Position))
+            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
+
+        return show is null
+            ? ApplicationResult<ShowModel>.Failure(ApplicationError.NotFound("show", showId))
+            : ApplicationResult<ShowModel>.Success(Map(show));
+    }
+
+    public async Task<ApplicationResult<ShowModel>> PlanRecordingAsync(Guid showId, PlanRecordingCommand command, CancellationToken cancellationToken = default)
+    {
+        if (command.Position < 1)
+        {
+            return ApplicationResult<ShowModel>.Failure(
+                ApplicationError.Validation("position", "A planned recording position must be 1 or greater."));
+        }
+
+        var show = await dbContext.Shows
+            .Include(item => item.PlannedRecordings)
+            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
+
+        if (show is null)
+        {
+            return ApplicationResult<ShowModel>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        var recordingExists = await dbContext.Recordings.AnyAsync(item => item.Id == command.RecordingId, cancellationToken);
+        if (!recordingExists)
+        {
+            return ApplicationResult<ShowModel>.Failure(ApplicationError.NotFound("recording", command.RecordingId));
+        }
+
+        if (show.PlannedRecordings.Any(item => item.Position == command.Position))
+        {
+            return ApplicationResult<ShowModel>.Failure(
+                ApplicationError.Conflict(
+                    "planned_position_in_use",
+                    "That planned recording position is already in use for the show.",
+                    "position",
+                    command.Position.ToString()));
+        }
+
+        show.PlannedRecordings.Add(new PlannedRecordingEntity
+        {
+            Id = Guid.NewGuid(),
+            ShowId = showId,
+            RecordingId = command.RecordingId,
+            Position = command.Position,
+            Notes = command.Notes?.Trim(),
+            CreatedAtUtc = clock.UtcNow,
+        });
+
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return await GetShowAsync(showId, cancellationToken);
+    }
+
+    public async Task<ApplicationResult<RepeatExceptionModel>> RecordRepeatExceptionAsync(Guid showId, RecordRepeatExceptionCommand command, CancellationToken cancellationToken = default)
+    {
+        var reasonResult = RepeatExceptionReason.Create(command.Reason);
+        if (!reasonResult.IsSuccess)
+        {
+            return ApplicationResult<RepeatExceptionModel>.Failure(reasonResult.Error!);
+        }
+
+        var showExists = await dbContext.Shows.AnyAsync(item => item.Id == showId, cancellationToken);
+        if (!showExists)
+        {
+            return ApplicationResult<RepeatExceptionModel>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        var recordingExists = await dbContext.Recordings.AnyAsync(item => item.Id == command.RecordingId, cancellationToken);
+        if (!recordingExists)
+        {
+            return ApplicationResult<RepeatExceptionModel>.Failure(ApplicationError.NotFound("recording", command.RecordingId));
+        }
+
+        var duplicate = await dbContext.RepeatExceptions.AnyAsync(
+            item => item.ShowId == showId && item.RecordingId == command.RecordingId,
+            cancellationToken);
+
+        if (duplicate)
+        {
+            return ApplicationResult<RepeatExceptionModel>.Failure(
+                ApplicationError.Conflict(
+                    "repeat_exception_exists",
+                    "A repeat exception already exists for that recording on the show.",
+                    "recordingId",
+                    command.RecordingId.ToString()));
+        }
+
+        var repeatException = new RepeatExceptionEntity
+        {
+            Id = Guid.NewGuid(),
+            ShowId = showId,
+            RecordingId = command.RecordingId,
+            Reason = reasonResult.Value!.Value,
+            CreatedAtUtc = clock.UtcNow,
+        };
+
+        dbContext.RepeatExceptions.Add(repeatException);
+        await dbContext.SaveChangesAsync(cancellationToken);
+
+        return ApplicationResult<RepeatExceptionModel>.Success(Map(repeatException));
+    }
+
+    public async Task<ApplicationResult<ReconciliationModel>> SaveReconciliationAsync(Guid showId, SaveReconciliationCommand command, CancellationToken cancellationToken = default)
+    {
+        var show = await dbContext.Shows
+            .Include(item => item.PlannedRecordings)
+            .Include(item => item.Reconciliation)
+                .ThenInclude(item => item!.Items)
+            .Include(item => item.BroadcastRecordings)
+            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
+
+        if (show is null)
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        if (show.Reconciliation?.ConfirmedAtUtc is not null)
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(
+                ApplicationError.Conflict(
+                    "reconciliation_already_confirmed",
+                    "The show's reconciliation has already been confirmed.",
+                    "showId",
+                    showId.ToString()));
+        }
+
+        var duplicatePlannedIds = command.Items
+            .GroupBy(item => item.PlannedRecordingId)
+            .Where(group => group.Count() > 1)
+            .Select(group => group.Key)
+            .ToArray();
+
+        if (duplicatePlannedIds.Length > 0)
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(
+                ApplicationError.Validation("items", "A planned recording may appear only once in a reconciliation."));
+        }
+
+        var plannedLookup = show.PlannedRecordings.ToDictionary(item => item.Id, item => item);
+        foreach (var item in command.Items)
+        {
+            if (!plannedLookup.ContainsKey(item.PlannedRecordingId))
+            {
+                return ApplicationResult<ReconciliationModel>.Failure(
+                    ApplicationError.Conflict(
+                        "planned_recording_not_in_show",
+                        "A reconciliation item referenced a planned recording that does not belong to the show.",
+                        "plannedRecordingId",
+                        item.PlannedRecordingId.ToString()));
+            }
+        }
+
+        var reconciliation = show.Reconciliation ?? new ReconciliationEntity
+        {
+            Id = Guid.NewGuid(),
+            ShowId = showId,
+            CreatedAtUtc = clock.UtcNow,
+        };
+
+        if (show.Reconciliation is null)
+        {
+            show.Reconciliation = reconciliation;
+            dbContext.Reconciliations.Add(reconciliation);
+        }
+
+        reconciliation.Items.Clear();
+        foreach (var item in command.Items)
+        {
+            reconciliation.Items.Add(new ReconciliationItemEntity
+            {
+                Id = Guid.NewGuid(),
+                PlannedRecordingId = item.PlannedRecordingId,
+                Outcome = item.Outcome,
+            });
+        }
+
+        reconciliation.ConfirmedAtUtc = null;
+
+        if (command.Confirmed)
+        {
+            var recordingIdsToBroadcast = command.Items
+                .Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast)
+                .Select(item => plannedLookup[item.PlannedRecordingId].RecordingId)
+                .ToArray();
+
+            var repeatExceptions = await dbContext.RepeatExceptions
+                .Where(item => item.ShowId == showId)
+                .ToDictionaryAsync(item => item.RecordingId, cancellationToken);
+
+            var priorBroadcasts = await dbContext.BroadcastRecordings
+                .AsNoTracking()
+                .Where(item => recordingIdsToBroadcast.Contains(item.RecordingId) && item.ShowId != showId)
+                .GroupBy(item => item.RecordingId)
+                .ToDictionaryAsync(group => group.Key, group => group.Select(item => item.Id).ToArray(), cancellationToken);
+
+            foreach (var recordingId in recordingIdsToBroadcast)
+            {
+                if (priorBroadcasts.ContainsKey(recordingId) && !repeatExceptions.ContainsKey(recordingId))
+                {
+                    return ApplicationResult<ReconciliationModel>.Failure(
+                        ApplicationError.Conflict(
+                            "repeat_detected",
+                            "The recording has already been broadcast and requires an explicit repeat exception.",
+                            "recordingId",
+                            recordingId.ToString()));
+                }
+            }
+
+            reconciliation.ConfirmedAtUtc = clock.UtcNow;
+            show.BroadcastRecordings.Clear();
+            foreach (var item in command.Items.Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast))
+            {
+                var plannedRecording = plannedLookup[item.PlannedRecordingId];
+                show.BroadcastRecordings.Add(new BroadcastRecordingEntity
+                {
+                    Id = Guid.NewGuid(),
+                    ShowId = showId,
+                    RecordingId = plannedRecording.RecordingId,
+                    PlannedRecordingId = plannedRecording.Id,
+                    BroadcastAtUtc = clock.UtcNow,
+                });
+            }
+        }
+        else
+        {
+            show.BroadcastRecordings.Clear();
+        }
+
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return await GetReconciliationAsync(showId, cancellationToken);
+    }
+
+    public async Task<ApplicationResult<ReconciliationModel>> GetReconciliationAsync(Guid showId, CancellationToken cancellationToken = default)
+    {
+        var show = await dbContext.Shows
+            .Include(item => item.PlannedRecordings)
+            .Include(item => item.Reconciliation)
+                .ThenInclude(item => item!.Items)
+            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
+
+        if (show is null)
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        if (show.Reconciliation is null)
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(ApplicationError.NotFound("reconciliation", showId));
+        }
+
+        return ApplicationResult<ReconciliationModel>.Success(Map(show.Reconciliation, show.PlannedRecordings));
+    }
+
+    public async Task<IReadOnlyList<BroadcastHistoryEntry>> GetBroadcastHistoryAsync(Guid recordingId, CancellationToken cancellationToken = default)
+    {
+        var history = await dbContext.BroadcastRecordings
+            .AsNoTracking()
+            .Where(item => item.RecordingId == recordingId)
+            .OrderBy(item => item.Show.ShowDate)
+            .Select(item => new BroadcastHistoryEntry(
+                item.Id,
+                item.ShowId,
+                item.Show.Slug,
+                item.Show.ShowDate,
+                item.BroadcastAtUtc))
+            .ToListAsync(cancellationToken);
+
+        return history
+            .OrderBy(item => item.ShowDate)
+            .ThenBy(item => item.BroadcastAtUtc)
+            .ToArray();
+    }
+
+    private static RecordingModel Map(RecordingEntity recording)
+    {
+        return new RecordingModel(
+            recording.Id,
+            recording.Title,
+            recording.Artist,
+            recording.Notes,
+            recording.ExternalIdentifiers
+                .OrderBy(item => item.Source, StringComparer.Ordinal)
+                .ThenBy(item => item.Value, StringComparer.Ordinal)
+                .Select(item => new ExternalIdentifierModel(item.Source, item.Value))
+                .ToArray(),
+            recording.CreatedAtUtc);
+    }
+
+    private static BacklogItemModel Map(BacklogItemEntity backlogItem)
+        => new(backlogItem.Id, backlogItem.Summary, backlogItem.RecordingId, backlogItem.Notes, backlogItem.CreatedAtUtc);
+
+    private static ShowModel Map(ShowEntity show)
+    {
+        return new ShowModel(
+            show.Id,
+            show.Slug,
+            show.Title,
+            show.ShowDate,
+            show.PlannedRecordings
+                .OrderBy(item => item.Position)
+                .Select(item => new PlannedRecordingModel(item.Id, item.RecordingId, item.Position, item.Notes, item.CreatedAtUtc))
+                .ToArray(),
+            show.CreatedAtUtc);
+    }
+
+    private static RepeatExceptionModel Map(RepeatExceptionEntity repeatException)
+        => new(repeatException.Id, repeatException.ShowId, repeatException.RecordingId, repeatException.Reason, repeatException.CreatedAtUtc);
+
+    private static ReconciliationModel Map(ReconciliationEntity reconciliation, IEnumerable<PlannedRecordingEntity> plannedRecordings)
+    {
+        var plannedLookup = plannedRecordings.ToDictionary(item => item.Id, item => item);
+        return new ReconciliationModel(
+            reconciliation.Id,
+            reconciliation.ShowId,
+            reconciliation.ConfirmedAtUtc is not null,
+            reconciliation.CreatedAtUtc,
+            reconciliation.ConfirmedAtUtc,
+            reconciliation.Items
+                .Select(item =>
+                {
+                    var plannedRecording = plannedLookup[item.PlannedRecordingId];
+                    return new ReconciliationItemModel(
+                        item.PlannedRecordingId,
+                        plannedRecording.RecordingId,
+                        plannedRecording.Position,
+                        item.Outcome);
+                })
+                .OrderBy(item => item.PlannedPosition)
+                .ToArray());
+    }
+}

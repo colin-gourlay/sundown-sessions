@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{4115BFE9-0A48-4999-BC02-3053463B3699}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SundownSessions.Showrunner", "src\SundownSessions.Showrunner\SundownSessions.Showrunner.csproj", "{793130AD-DC84-4A00-B119-3184BEB6C219}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3D3C144B-381E-46A1-A107-C4872E8968FC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SundownSessions.Showrunner.Tests", "tests\SundownSessions.Showrunner.Tests\SundownSessions.Showrunner.Tests.csproj", "{C8585BA8-02EF-4648-A61F-CE48192EAD82}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{793130AD-DC84-4A00-B119-3184BEB6C219}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{793130AD-DC84-4A00-B119-3184BEB6C219}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{793130AD-DC84-4A00-B119-3184BEB6C219}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{793130AD-DC84-4A00-B119-3184BEB6C219}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C8585BA8-02EF-4648-A61F-CE48192EAD82}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C8585BA8-02EF-4648-A61F-CE48192EAD82}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C8585BA8-02EF-4648-A61F-CE48192EAD82}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C8585BA8-02EF-4648-A61F-CE48192EAD82}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{793130AD-DC84-4A00-B119-3184BEB6C219} = {4115BFE9-0A48-4999-BC02-3053463B3699}
+		{C8585BA8-02EF-4648-A61F-CE48192EAD82} = {3D3C144B-381E-46A1-A107-C4872E8968FC}
+	EndGlobalSection
+EndGlobal
