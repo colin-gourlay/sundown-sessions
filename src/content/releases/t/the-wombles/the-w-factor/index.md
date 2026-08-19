@@ -18,7 +18,7 @@ tags:
   - "2010s"
 duration: "1:07:00"
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
