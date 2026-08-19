@@ -18,7 +18,7 @@ tags:
   - "2020s"
 for_sale: true
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
