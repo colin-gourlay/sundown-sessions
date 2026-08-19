@@ -20,7 +20,7 @@ tags:
   - "chris spedding"
   - "1970s"
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
