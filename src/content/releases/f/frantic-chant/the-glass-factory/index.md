@@ -23,7 +23,7 @@ tags:
 catalogue_number: "DGAB21516"
 for_sale: true
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
