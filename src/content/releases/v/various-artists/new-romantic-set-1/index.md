@@ -19,7 +19,7 @@ tags:
   - "2020s"
 duration: "1:14:00"
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
