@@ -24,7 +24,7 @@ uk_chart_position: 34
 catalogue_number: "WIKA 46"
 for_sale: true
 release_page: true
-draft: true
+draft: false
 featuredInShows:
   - "1000"
 shows:
