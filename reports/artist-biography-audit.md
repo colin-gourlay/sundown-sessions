@@ -1,6 +1,6 @@
 # Artist Biography Audit Report
 
-Generated: 2026-08-19
+Generated: 2026-08-20
 
 This report flags artist biographies that need a human editorial pass. It does not rewrite copy automatically.
 
