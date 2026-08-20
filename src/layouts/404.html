@@ -12,7 +12,7 @@
     (dict "label" "Browse Shows" "url" "/shows/" "description" "Find recent playlists and broadcasts." "event" "not_found_recovery_click" "provider" "shows")
     (dict "label" "Search the Site" "url" "/search/" "description" "Look for artists, releases, tracks and shows." "event" "not_found_recovery_click" "provider" "search")
     (dict "label" "Meet the Presenter" "url" "/about/" "description" "Learn more about the show and its story." "event" "not_found_recovery_click" "provider" "about")
-    (dict "label" "Contact Us" "url" "/contact/" "description" "Tell us about a broken link or send a request." "event" "not_found_recovery_click" "provider" "contact")
+    (dict "label" "Get in Touch" "url" "/contact/" "description" "Report a broken link or send a request." "event" "not_found_recovery_click" "provider" "contact")
   ) -}}
   {{- $shows := where site.RegularPages "Section" "shows" -}}
   {{- $datedShows := where $shows ".Date.IsZero" "ne" true -}}

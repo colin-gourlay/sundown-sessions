@@ -1,6 +1,6 @@
 ---
 title: 'Contact'
-strapline: "We'd love to hear from you."
+strapline: "I'd love to hear from you."
 description: 'Contact Sundown Sessions with music submissions, gig news, interview ideas, listener messages, label updates, promoter enquiries and festival or venue opportunities.'
 showDate: false
 showReadingTime: false
@@ -31,7 +31,7 @@ If your music is featured on Sundown Sessions, I will always let you know and I 
 
 ## What happens next
 
-Messages are read by the show and we'll respond where we can. There may sometimes be a delay, but thoughtful music, useful details and clear links make it much easier to listen properly.
+Messages are read by the show and I'll respond where I can. There may sometimes be a delay, but thoughtful music, useful details and clear links make it much easier to listen properly.
 
 ## Continue exploring
 
