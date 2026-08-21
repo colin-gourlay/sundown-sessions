@@ -96,6 +96,7 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_PlannedRecordings", x => x.Id);
+                    table.CheckConstraint("CK_PlannedRecordings_Position", "Position >= 1");
                     table.ForeignKey(
                         name: "FK_PlannedRecordings_Recordings_RecordingId",
                         column: x => x.RecordingId,
@@ -202,6 +203,7 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_ReconciliationItems", x => x.Id);
+                    table.CheckConstraint("CK_ReconciliationItems_Outcome", "Outcome IN (0, 1, 2)");
                     table.ForeignKey(
                         name: "FK_ReconciliationItems_PlannedRecordings_PlannedRecordingId",
                         column: x => x.PlannedRecordingId,
@@ -266,9 +268,14 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 unique: true);
 
             migrationBuilder.CreateIndex(
-                name: "IX_RecordingExternalIdentifiers_RecordingId_Source_Value",
+                name: "IX_RecordingExternalIdentifiers_RecordingId",
                 table: "RecordingExternalIdentifiers",
-                columns: new[] { "RecordingId", "Source", "Value" },
+                column: "RecordingId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RecordingExternalIdentifiers_Source_Value",
+                table: "RecordingExternalIdentifiers",
+                columns: new[] { "Source", "Value" },
                 unique: true);
 
             migrationBuilder.CreateIndex(

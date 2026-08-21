@@ -22,6 +22,14 @@ public sealed class ShowrunnerService
                 ApplicationError.Validation("title", "A recording title is required."));
         }
 
+        var lengthError = ValidateLength(command.Title, "title", FieldLimits.Title)
+            ?? ValidateLength(command.Artist, "artist", FieldLimits.Artist)
+            ?? ValidateLength(command.Notes, "notes", FieldLimits.Notes);
+        if (lengthError is not null)
+        {
+            return ApplicationResult<RecordingModel>.Failure(lengthError);
+        }
+
         var recording = new RecordingEntity
         {
             Id = Guid.NewGuid(),
@@ -62,6 +70,13 @@ public sealed class ShowrunnerService
                 ApplicationError.Validation("value", "An external identifier value is required."));
         }
 
+        var lengthError = ValidateLength(command.Source, "source", FieldLimits.ExternalIdentifierSource)
+            ?? ValidateLength(command.Value, "value", FieldLimits.ExternalIdentifierValue);
+        if (lengthError is not null)
+        {
+            return ApplicationResult<RecordingModel>.Failure(lengthError);
+        }
+
         var recording = await dbContext.Recordings
             .Include(item => item.ExternalIdentifiers)
             .SingleOrDefaultAsync(item => item.Id == recordingId, cancellationToken);
@@ -71,7 +86,7 @@ public sealed class ShowrunnerService
             return ApplicationResult<RecordingModel>.Failure(ApplicationError.NotFound("recording", recordingId));
         }
 
-        var source = command.Source.Trim();
+        var source = command.Source.Trim().ToLowerInvariant();
         var value = command.Value.Trim();
         var exists = recording.ExternalIdentifiers.Any(item =>
             string.Equals(item.Source, source, StringComparison.OrdinalIgnoreCase) &&
@@ -83,6 +98,20 @@ public sealed class ShowrunnerService
                 ApplicationError.Conflict(
                     "duplicate_external_identifier",
                     "The recording already has that external identifier.",
+                    "externalIdentifier",
+                    source,
+                    value));
+        }
+
+        var belongsToAnotherRecording = await dbContext.RecordingExternalIdentifiers.AnyAsync(
+            item => item.RecordingId != recordingId && item.Source == source && item.Value == value,
+            cancellationToken);
+        if (belongsToAnotherRecording)
+        {
+            return ApplicationResult<RecordingModel>.Failure(
+                ApplicationError.Conflict(
+                    "external_identifier_in_use",
+                    "That external identifier is already associated with another recording.",
                     "externalIdentifier",
                     source,
                     value));
@@ -106,6 +135,13 @@ public sealed class ShowrunnerService
         {
             return ApplicationResult<BacklogItemModel>.Failure(
                 ApplicationError.Validation("summary", "A backlog item summary is required."));
+        }
+
+        var lengthError = ValidateLength(command.Summary, "summary", FieldLimits.Title)
+            ?? ValidateLength(command.Notes, "notes", FieldLimits.Notes);
+        if (lengthError is not null)
+        {
+            return ApplicationResult<BacklogItemModel>.Failure(lengthError);
         }
 
         if (command.RecordingId.HasValue)
@@ -152,6 +188,13 @@ public sealed class ShowrunnerService
             return ApplicationResult<ShowModel>.Failure(ApplicationError.Validation("title", "A show title is required."));
         }
 
+        var lengthError = ValidateLength(command.Slug, "slug", FieldLimits.ShowSlug)
+            ?? ValidateLength(command.Title, "title", FieldLimits.Title);
+        if (lengthError is not null)
+        {
+            return ApplicationResult<ShowModel>.Failure(lengthError);
+        }
+
         var slug = command.Slug.Trim();
         var slugExists = await dbContext.Shows.AnyAsync(item => item.Slug == slug, cancellationToken);
         if (slugExists)
@@ -194,13 +237,30 @@ public sealed class ShowrunnerService
                 ApplicationError.Validation("position", "A planned recording position must be 1 or greater."));
         }
 
+        var notesLengthError = ValidateLength(command.Notes, "notes", FieldLimits.Notes);
+        if (notesLengthError is not null)
+        {
+            return ApplicationResult<ShowModel>.Failure(notesLengthError);
+        }
+
         var show = await dbContext.Shows
             .Include(item => item.PlannedRecordings)
+            .Include(item => item.Reconciliation)
             .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
 
         if (show is null)
         {
             return ApplicationResult<ShowModel>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        if (show.Reconciliation?.ConfirmedAtUtc is not null)
+        {
+            return ApplicationResult<ShowModel>.Failure(
+                ApplicationError.Conflict(
+                    "show_already_finalised",
+                    "Recordings cannot be planned after the show's reconciliation has been confirmed.",
+                    "showId",
+                    showId.ToString()));
         }
 
         var recordingExists = await dbContext.Recordings.AnyAsync(item => item.Id == command.RecordingId, cancellationToken);
@@ -241,10 +301,22 @@ public sealed class ShowrunnerService
             return ApplicationResult<RepeatExceptionModel>.Failure(reasonResult.Error!);
         }
 
-        var showExists = await dbContext.Shows.AnyAsync(item => item.Id == showId, cancellationToken);
-        if (!showExists)
+        var show = await dbContext.Shows
+            .Include(item => item.Reconciliation)
+            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
+        if (show is null)
         {
             return ApplicationResult<RepeatExceptionModel>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        if (show.Reconciliation?.ConfirmedAtUtc is not null)
+        {
+            return ApplicationResult<RepeatExceptionModel>.Failure(
+                ApplicationError.Conflict(
+                    "show_already_finalised",
+                    "A repeat exception cannot be added after the show's reconciliation has been confirmed.",
+                    "showId",
+                    showId.ToString()));
         }
 
         var recordingExists = await dbContext.Recordings.AnyAsync(item => item.Id == command.RecordingId, cancellationToken);
@@ -318,6 +390,12 @@ public sealed class ShowrunnerService
                 ApplicationError.Validation("items", "A planned recording may appear only once in a reconciliation."));
         }
 
+        if (command.Items.Any(item => !Enum.IsDefined(item.Outcome)))
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(
+                ApplicationError.Validation("items", "Every reconciliation item must have a recognised outcome."));
+        }
+
         var plannedLookup = show.PlannedRecordings.ToDictionary(item => item.Id, item => item);
         foreach (var item in command.Items)
         {
@@ -329,6 +407,63 @@ public sealed class ShowrunnerService
                         "A reconciliation item referenced a planned recording that does not belong to the show.",
                         "plannedRecordingId",
                         item.PlannedRecordingId.ToString()));
+            }
+        }
+
+        if (command.Confirmed)
+        {
+            var reconciledPlannedIds = command.Items.Select(item => item.PlannedRecordingId).ToHashSet();
+            if (plannedLookup.Keys.Any(plannedRecordingId => !reconciledPlannedIds.Contains(plannedRecordingId)))
+            {
+                return ApplicationResult<ReconciliationModel>.Failure(
+                    ApplicationError.Validation(
+                        "items",
+                        "A confirmed reconciliation must include every planned recording."));
+            }
+
+            if (command.Items.Any(item => item.Outcome == ReconciliationItemOutcome.Pending))
+            {
+                return ApplicationResult<ReconciliationModel>.Failure(
+                    ApplicationError.Validation(
+                        "items",
+                        "A confirmed reconciliation cannot contain pending outcomes."));
+            }
+
+            var recordingIdsToBroadcast = command.Items
+                .Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast)
+                .Select(item => plannedLookup[item.PlannedRecordingId].RecordingId)
+                .ToArray();
+
+            var repeatExceptionRecordingIds = await dbContext.RepeatExceptions
+                .Where(item => item.ShowId == showId)
+                .Select(item => item.RecordingId)
+                .ToHashSetAsync(cancellationToken);
+
+            var previouslyBroadcastRecordingIds = await dbContext.BroadcastRecordings
+                .AsNoTracking()
+                .Where(item => recordingIdsToBroadcast.Contains(item.RecordingId) && item.ShowId != showId)
+                .Select(item => item.RecordingId)
+                .Distinct()
+                .ToArrayAsync(cancellationToken);
+
+            var repeatedWithinShowRecordingIds = recordingIdsToBroadcast
+                .GroupBy(recordingId => recordingId)
+                .Where(group => group.Count() > 1)
+                .Select(group => group.Key);
+
+            var repeatedRecordingId = previouslyBroadcastRecordingIds
+                .Concat(repeatedWithinShowRecordingIds)
+                .Distinct()
+                .FirstOrDefault(recordingId => !repeatExceptionRecordingIds.Contains(recordingId));
+
+            if (repeatedRecordingId != Guid.Empty)
+            {
+                return ApplicationResult<ReconciliationModel>.Failure(
+                    ApplicationError.Conflict(
+                        "repeat_detected",
+                        "The recording would be broadcast more than once and requires an explicit repeat exception.",
+                        "recordingId",
+                        repeatedRecordingId.ToString()));
             }
         }
 
@@ -360,35 +495,8 @@ public sealed class ShowrunnerService
 
         if (command.Confirmed)
         {
-            var recordingIdsToBroadcast = command.Items
-                .Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast)
-                .Select(item => plannedLookup[item.PlannedRecordingId].RecordingId)
-                .ToArray();
-
-            var repeatExceptions = await dbContext.RepeatExceptions
-                .Where(item => item.ShowId == showId)
-                .ToDictionaryAsync(item => item.RecordingId, cancellationToken);
-
-            var priorBroadcasts = await dbContext.BroadcastRecordings
-                .AsNoTracking()
-                .Where(item => recordingIdsToBroadcast.Contains(item.RecordingId) && item.ShowId != showId)
-                .GroupBy(item => item.RecordingId)
-                .ToDictionaryAsync(group => group.Key, group => group.Select(item => item.Id).ToArray(), cancellationToken);
-
-            foreach (var recordingId in recordingIdsToBroadcast)
-            {
-                if (priorBroadcasts.ContainsKey(recordingId) && !repeatExceptions.ContainsKey(recordingId))
-                {
-                    return ApplicationResult<ReconciliationModel>.Failure(
-                        ApplicationError.Conflict(
-                            "repeat_detected",
-                            "The recording has already been broadcast and requires an explicit repeat exception.",
-                            "recordingId",
-                            recordingId.ToString()));
-                }
-            }
-
-            reconciliation.ConfirmedAtUtc = clock.UtcNow;
+            var confirmedAtUtc = clock.UtcNow;
+            reconciliation.ConfirmedAtUtc = confirmedAtUtc;
             show.BroadcastRecordings.Clear();
             foreach (var item in command.Items.Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast))
             {
@@ -399,7 +507,7 @@ public sealed class ShowrunnerService
                     ShowId = showId,
                     RecordingId = plannedRecording.RecordingId,
                     PlannedRecordingId = plannedRecording.Id,
-                    BroadcastAtUtc = clock.UtcNow,
+                    BroadcastAtUtc = confirmedAtUtc,
                 });
             }
         }
@@ -433,8 +541,15 @@ public sealed class ShowrunnerService
         return ApplicationResult<ReconciliationModel>.Success(Map(show.Reconciliation, show.PlannedRecordings));
     }
 
-    public async Task<IReadOnlyList<BroadcastHistoryEntry>> GetBroadcastHistoryAsync(Guid recordingId, CancellationToken cancellationToken = default)
+    public async Task<ApplicationResult<IReadOnlyList<BroadcastHistoryEntry>>> GetBroadcastHistoryAsync(Guid recordingId, CancellationToken cancellationToken = default)
     {
+        var recordingExists = await dbContext.Recordings.AnyAsync(item => item.Id == recordingId, cancellationToken);
+        if (!recordingExists)
+        {
+            return ApplicationResult<IReadOnlyList<BroadcastHistoryEntry>>.Failure(
+                ApplicationError.NotFound("recording", recordingId));
+        }
+
         var history = await dbContext.BroadcastRecordings
             .AsNoTracking()
             .Where(item => item.RecordingId == recordingId)
@@ -446,10 +561,10 @@ public sealed class ShowrunnerService
                 item.BroadcastAtUtc))
             .ToListAsync(cancellationToken);
 
-        return history
+        return ApplicationResult<IReadOnlyList<BroadcastHistoryEntry>>.Success(history
             .OrderBy(item => item.ShowDate)
             .ThenBy(item => item.BroadcastAtUtc)
-            .ToArray();
+            .ToArray());
     }
 
     private static RecordingModel Map(RecordingEntity recording)
@@ -508,5 +623,12 @@ public sealed class ShowrunnerService
                 })
                 .OrderBy(item => item.PlannedPosition)
                 .ToArray());
+    }
+
+    private static ApplicationError? ValidateLength(string? value, string field, int maximumLength)
+    {
+        return value?.Trim().Length > maximumLength
+            ? ApplicationError.Validation(field, $"{field} cannot exceed {maximumLength} characters.")
+            : null;
     }
 }

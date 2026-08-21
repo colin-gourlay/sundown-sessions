@@ -17,6 +17,14 @@ public sealed record RepeatExceptionReason
                 ApplicationError.Validation("reason", "A repeat exception requires an explicit reason."));
         }
 
+        if (value.Trim().Length > FieldLimits.RepeatExceptionReason)
+        {
+            return ApplicationResult<RepeatExceptionReason>.Failure(
+                ApplicationError.Validation(
+                    "reason",
+                    $"A repeat exception reason cannot exceed {FieldLimits.RepeatExceptionReason} characters."));
+        }
+
         return ApplicationResult<RepeatExceptionReason>.Success(new RepeatExceptionReason(value.Trim()));
     }
 }

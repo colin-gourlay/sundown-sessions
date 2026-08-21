@@ -11,14 +11,14 @@ using SundownSessions.Showrunner.Persistence;
 namespace SundownSessions.Showrunner.Persistence.Migrations
 {
     [DbContext(typeof(ShowrunnerDbContext))]
-    [Migration("20260819084400_InitialCreate")]
+    [Migration("20260821125429_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
-            modelBuilder.HasAnnotation("ProductVersion", "8.0.22");
+            modelBuilder.HasAnnotation("ProductVersion", "10.0.10");
 
             modelBuilder.Entity("SundownSessions.Showrunner.Persistence.BacklogItemEntity", b =>
                 {
@@ -104,7 +104,10 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                     b.HasIndex("ShowId", "Position")
                         .IsUnique();
 
-                    b.ToTable("PlannedRecordings", (string)null);
+                    b.ToTable("PlannedRecordings", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_PlannedRecordings_Position", "Position >= 1");
+                        });
                 });
 
             modelBuilder.Entity("SundownSessions.Showrunner.Persistence.ReconciliationEntity", b =>
@@ -150,7 +153,10 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                     b.HasIndex("ReconciliationId", "PlannedRecordingId")
                         .IsUnique();
 
-                    b.ToTable("ReconciliationItems", (string)null);
+                    b.ToTable("ReconciliationItems", null, t =>
+                        {
+                            t.HasCheckConstraint("CK_ReconciliationItems_Outcome", "Outcome IN (0, 1, 2)");
+                        });
                 });
 
             modelBuilder.Entity("SundownSessions.Showrunner.Persistence.RecordingEntity", b =>
@@ -199,7 +205,9 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("RecordingId", "Source", "Value")
+                    b.HasIndex("RecordingId");
+
+                    b.HasIndex("Source", "Value")
                         .IsUnique();
 
                     b.ToTable("RecordingExternalIdentifiers", (string)null);

@@ -1,3 +1,4 @@
+using Microsoft.Data.Sqlite;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Design;
 
@@ -10,7 +11,11 @@ public sealed class ShowrunnerDbContextFactory : IDesignTimeDbContextFactory<Sho
     public ShowrunnerDbContext CreateDbContext(string[] args)
     {
         var optionsBuilder = new DbContextOptionsBuilder<ShowrunnerDbContext>();
-        optionsBuilder.UseSqlite($"Data Source={ResolveDatabasePath()}");
+        var connectionString = new SqliteConnectionStringBuilder
+        {
+            DataSource = ResolveDatabasePath(),
+        }.ToString();
+        optionsBuilder.UseSqlite(connectionString);
         return new ShowrunnerDbContext(optionsBuilder.Options);
     }
 
@@ -19,7 +24,14 @@ public sealed class ShowrunnerDbContextFactory : IDesignTimeDbContextFactory<Sho
         var configuredPath = Environment.GetEnvironmentVariable(DatabasePathEnvironmentVariable);
         if (!string.IsNullOrWhiteSpace(configuredPath))
         {
-            return configuredPath;
+            var fullPath = Path.GetFullPath(configuredPath.Trim());
+            var configuredDirectory = Path.GetDirectoryName(fullPath);
+            if (configuredDirectory is not null)
+            {
+                Directory.CreateDirectory(configuredDirectory);
+            }
+
+            return fullPath;
         }
 
         var baseDirectory = Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData);

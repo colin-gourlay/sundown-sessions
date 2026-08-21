@@ -1,0 +1,34 @@
+name: Validate Showrunner
+
+on:
+  pull_request:
+    paths:
+      - automation/dotnet/**
+      - .github/workflows/validate-showrunner.yml
+  push:
+    branches:
+      - main
+    paths:
+      - automation/dotnet/**
+      - .github/workflows/validate-showrunner.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source using v7.0.0
+        uses: actions/checkout@9c091bb21b7c1c1d1991bb908d89e4e9dddfe3e0 # v7.0.0
+
+      - name: Set up .NET using v6.0.0
+        uses: actions/setup-dotnet@a98b56852c35b8e3190ac28c8c2271da59106c68 # v6.0.0
+        with:
+          dotnet-version: 10.0.x
+
+      - name: Restore dependencies
+        run: dotnet restore automation/dotnet/Showrunner.sln
+
+      - name: Build and test
+        run: dotnet test automation/dotnet/Showrunner.sln --configuration Release --no-restore

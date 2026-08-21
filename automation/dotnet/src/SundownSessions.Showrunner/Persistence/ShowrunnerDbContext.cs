@@ -6,6 +6,8 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
 {
     internal DbSet<RecordingEntity> Recordings => Set<RecordingEntity>();
 
+    internal DbSet<RecordingExternalIdentifierEntity> RecordingExternalIdentifiers => Set<RecordingExternalIdentifierEntity>();
+
     internal DbSet<BacklogItemEntity> BacklogItems => Set<BacklogItemEntity>();
 
     internal DbSet<ShowEntity> Shows => Set<ShowEntity>();
@@ -23,9 +25,9 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.ToTable("Recordings");
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
-            builder.Property(item => item.Title).HasMaxLength(256).IsRequired();
-            builder.Property(item => item.Artist).HasMaxLength(256);
-            builder.Property(item => item.Notes).HasMaxLength(2000);
+            builder.Property(item => item.Title).HasMaxLength(FieldLimits.Title).IsRequired();
+            builder.Property(item => item.Artist).HasMaxLength(FieldLimits.Artist);
+            builder.Property(item => item.Notes).HasMaxLength(FieldLimits.Notes);
             builder.HasMany(item => item.ExternalIdentifiers)
                 .WithOne(item => item.Recording)
                 .HasForeignKey(item => item.RecordingId)
@@ -37,9 +39,9 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.ToTable("RecordingExternalIdentifiers");
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
-            builder.Property(item => item.Source).HasMaxLength(64).IsRequired();
-            builder.Property(item => item.Value).HasMaxLength(512).IsRequired();
-            builder.HasIndex(item => new { item.RecordingId, item.Source, item.Value }).IsUnique();
+            builder.Property(item => item.Source).HasMaxLength(FieldLimits.ExternalIdentifierSource).IsRequired();
+            builder.Property(item => item.Value).HasMaxLength(FieldLimits.ExternalIdentifierValue).IsRequired();
+            builder.HasIndex(item => new { item.Source, item.Value }).IsUnique();
         });
 
         modelBuilder.Entity<BacklogItemEntity>(builder =>
@@ -47,8 +49,8 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.ToTable("BacklogItems");
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
-            builder.Property(item => item.Summary).HasMaxLength(256).IsRequired();
-            builder.Property(item => item.Notes).HasMaxLength(2000);
+            builder.Property(item => item.Summary).HasMaxLength(FieldLimits.Title).IsRequired();
+            builder.Property(item => item.Notes).HasMaxLength(FieldLimits.Notes);
             builder.HasOne<RecordingEntity>()
                 .WithMany()
                 .HasForeignKey(item => item.RecordingId)
@@ -60,8 +62,8 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.ToTable("Shows");
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
-            builder.Property(item => item.Slug).HasMaxLength(128).IsRequired();
-            builder.Property(item => item.Title).HasMaxLength(256).IsRequired();
+            builder.Property(item => item.Slug).HasMaxLength(FieldLimits.ShowSlug).IsRequired();
+            builder.Property(item => item.Title).HasMaxLength(FieldLimits.Title).IsRequired();
             builder.HasIndex(item => item.Slug).IsUnique();
             builder.HasMany(item => item.PlannedRecordings)
                 .WithOne(item => item.Show)
@@ -82,7 +84,8 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.ToTable("PlannedRecordings");
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
-            builder.Property(item => item.Notes).HasMaxLength(2000);
+            builder.Property(item => item.Notes).HasMaxLength(FieldLimits.Notes);
+            builder.ToTable(table => table.HasCheckConstraint("CK_PlannedRecordings_Position", "Position >= 1"));
             builder.HasIndex(item => new { item.ShowId, item.Position }).IsUnique();
             builder.HasOne<RecordingEntity>()
                 .WithMany()
@@ -107,6 +110,7 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
             builder.HasIndex(item => new { item.ReconciliationId, item.PlannedRecordingId }).IsUnique();
+            builder.ToTable(table => table.HasCheckConstraint("CK_ReconciliationItems_Outcome", "Outcome IN (0, 1, 2)"));
             builder.HasOne<PlannedRecordingEntity>()
                 .WithMany()
                 .HasForeignKey(item => item.PlannedRecordingId)
@@ -134,7 +138,7 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.ToTable("RepeatExceptions");
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
-            builder.Property(item => item.Reason).HasMaxLength(1000).IsRequired();
+            builder.Property(item => item.Reason).HasMaxLength(FieldLimits.RepeatExceptionReason).IsRequired();
             builder.HasIndex(item => new { item.ShowId, item.RecordingId }).IsUnique();
             builder.HasOne<ShowEntity>()
                 .WithMany()
