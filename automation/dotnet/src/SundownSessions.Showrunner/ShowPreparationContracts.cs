@@ -1,8 +1,36 @@
+using System.Text.Json.Serialization;
+
 namespace SundownSessions.Showrunner;
+
+[JsonConverter(typeof(JsonStringEnumConverter<ShowPreparationStatus>))]
+public enum ShowPreparationStatus
+{
+    Prepared,
+    Unresolved,
+    RepeatConflict,
+}
+
+[JsonConverter(typeof(JsonStringEnumConverter<RecordingMatchKind>))]
+public enum RecordingMatchKind
+{
+    MetadataIdentifier,
+    ExplicitResolution,
+    NormalisedMetadata,
+}
+
+[JsonConverter(typeof(JsonStringEnumConverter<UnresolvedTrackKind>))]
+public enum UnresolvedTrackKind
+{
+    MissingRecording,
+    MissingFile,
+    AmbiguousMatch,
+    IdentifierConflict,
+}
 
 public sealed record ShowPreparationResultModel(
     Guid ShowId,
     string ShowSlug,
+    ShowPreparationStatus Status,
     int TrackCount,
     IReadOnlyList<PreparedTrackModel> MatchedTracks,
     IReadOnlyList<UnresolvedPreparedTrackModel> UnresolvedTracks,
@@ -14,8 +42,8 @@ public sealed record PreparedTrackModel(
     Guid PlannedRecordingId,
     Guid RecordingId,
     int Position,
-    string MatchKind,
-    string SourceFilePath,
+    RecordingMatchKind MatchKind,
+    string SourceLibraryPath,
     string OutputFileName,
     TimeSpan Duration,
     TimeSpan CumulativeDuration);
@@ -24,13 +52,13 @@ public sealed record UnresolvedPreparedTrackModel(
     Guid PlannedRecordingId,
     Guid RecordingId,
     int Position,
-    string Kind,
+    UnresolvedTrackKind Kind,
     string Message,
     IReadOnlyList<UnresolvedCandidateModel> Candidates);
 
 public sealed record UnresolvedCandidateModel(
-    string SourceFilePath,
-    string MatchKind,
+    string SourceLibraryPath,
+    RecordingMatchKind MatchKind,
     string? Title,
     string? Artist,
     string? Album);
@@ -42,10 +70,12 @@ public sealed record RepeatConflictModel(
 
 public sealed record PreparationTimingModel(
     int TrackCount,
+    int MatchedTrackCount,
     IReadOnlyList<PreparedTrackTimingModel> Tracks,
     TimeSpan TotalMusicDuration,
     TimeSpan? ConfiguredShowDuration,
-    TimeSpan? RemainingDuration);
+    TimeSpan? RemainingDuration,
+    TimeSpan? OverrunDuration);
 
 public sealed record PreparedTrackTimingModel(
     Guid PlannedRecordingId,
@@ -54,7 +84,7 @@ public sealed record PreparedTrackTimingModel(
     TimeSpan CumulativeDuration);
 
 public sealed record PreparedBroadcastFolderModel(
-    string FolderPath,
+    string FolderName,
     bool Rebuilt,
     IReadOnlyList<string> CopiedFiles);
 
@@ -63,9 +93,10 @@ public sealed record ShowPreparationOptions(
     string PreparationRootPath,
     TimeSpan? ConfiguredShowDuration = null);
 
-public sealed record ShowPrepareToolRequest(Guid ShowId);
-
-public sealed record ShowPrepareToolResult(
-    bool IsSuccess,
-    ShowPreparationResultModel? Result,
-    ApplicationError? Error);
+public sealed record RecordingResolutionModel(
+    Guid RecordingId,
+    string SourceLibraryPath,
+    string? Title,
+    string? Artist,
+    string? Album,
+    TimeSpan Duration);

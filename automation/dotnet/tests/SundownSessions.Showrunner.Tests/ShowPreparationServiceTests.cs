@@ -1,3 +1,6 @@
+using System.Buffers.Binary;
+using System.Text;
+using Microsoft.EntityFrameworkCore;
 using SundownSessions.Showrunner.Persistence;
 
 namespace SundownSessions.Showrunner.Tests;
@@ -11,9 +14,9 @@ public sealed class ShowPreparationServiceTests
         using var files = new FileFixture();
         var sourcePath = files.CreateFlac("library/track-a.flac");
         var metadata = new StubFlacMetadataReader()
-            .Add(sourcePath, new FlacMetadata("Track A", "Artist A", "Release A", TimeSpan.FromMinutes(4), new Dictionary<string, string>
+            .Add(sourcePath, new FlacMetadata("Track A", "Artist A", "Release A", TimeSpan.FromMinutes(4), new Dictionary<string, IReadOnlyList<string>>
             {
-                ["SPOTIFY_TRACK_ID"] = "abc123",
+                ["SPOTIFY_TRACK_ID"] = ["abc123"],
             }));
 
         await using var context = harness.CreateContext();
@@ -34,8 +37,10 @@ public sealed class ShowPreparationServiceTests
         Assert.Empty(result.Value.RepeatConflicts);
         Assert.NotNull(result.Value.BroadcastFolder);
         Assert.Single(result.Value.BroadcastFolder!.CopiedFiles);
-        Assert.EndsWith("01 - Artist A - Track A.flac", result.Value.BroadcastFolder.CopiedFiles[0], StringComparison.Ordinal);
-        Assert.True(File.Exists(result.Value.BroadcastFolder.CopiedFiles[0]));
+        Assert.Equal("01 - Artist A - Track A.flac", result.Value.BroadcastFolder.CopiedFiles[0]);
+        Assert.True(File.Exists(files.GetPreparedPath(
+            result.Value.BroadcastFolder.FolderName,
+            result.Value.BroadcastFolder.CopiedFiles[0])));
         Assert.Equal(TimeSpan.FromMinutes(4), result.Value.Timing.TotalMusicDuration);
         Assert.Equal(TimeSpan.FromMinutes(56), result.Value.Timing.RemainingDuration);
         Assert.Equal(plan.PlannedRecordings.Single().Id, result.Value.MatchedTracks.Single().PlannedRecordingId);
@@ -49,8 +54,8 @@ public sealed class ShowPreparationServiceTests
         var firstPath = files.CreateFlac("library/one.flac");
         var secondPath = files.CreateFlac("library/two.flac");
         var metadata = new StubFlacMetadataReader()
-            .Add(firstPath, new FlacMetadata("Same Title", "Same Artist", "Album One", TimeSpan.FromMinutes(3), new Dictionary<string, string>()))
-            .Add(secondPath, new FlacMetadata("Same Title", "Same Artist", "Album Two", TimeSpan.FromMinutes(5), new Dictionary<string, string>()));
+            .Add(firstPath, new FlacMetadata("Same Title", "Same Artist", "Album One", TimeSpan.FromMinutes(3), new Dictionary<string, IReadOnlyList<string>>()))
+            .Add(secondPath, new FlacMetadata("Same Title", "Same Artist", "Album Two", TimeSpan.FromMinutes(5), new Dictionary<string, IReadOnlyList<string>>()));
 
         await using var context = harness.CreateContext();
         var service = new ShowrunnerService(context);
@@ -70,10 +75,10 @@ public sealed class ShowPreparationServiceTests
         Assert.Empty(result.Value!.MatchedTracks);
         Assert.Null(result.Value.BroadcastFolder);
         Assert.Equal(2, result.Value.UnresolvedTracks.Count);
-        Assert.Equal("ambiguous_match", result.Value.UnresolvedTracks[0].Kind);
+        Assert.Equal(UnresolvedTrackKind.AmbiguousMatch, result.Value.UnresolvedTracks[0].Kind);
         Assert.Equal(2, result.Value.UnresolvedTracks[0].Candidates.Count);
         Assert.Equal(showWithOne.PlannedRecordings.Single().Id, result.Value.UnresolvedTracks[0].PlannedRecordingId);
-        Assert.Equal("missing_file", result.Value.UnresolvedTracks[1].Kind);
+        Assert.Equal(UnresolvedTrackKind.MissingFile, result.Value.UnresolvedTracks[1].Kind);
     }
 
     [Fact]
@@ -83,7 +88,7 @@ public sealed class ShowPreparationServiceTests
         using var files = new FileFixture();
         var sourcePath = files.CreateFlac("library/repeat.flac");
         var metadata = new StubFlacMetadataReader()
-            .Add(sourcePath, new FlacMetadata("Repeat", "Artist", "Album", TimeSpan.FromMinutes(4), new Dictionary<string, string>()));
+            .Add(sourcePath, new FlacMetadata("Repeat", "Artist", "Album", TimeSpan.FromMinutes(4), new Dictionary<string, IReadOnlyList<string>>()));
 
         await using var context = harness.CreateContext();
         var service = new ShowrunnerService(context);
@@ -126,19 +131,19 @@ public sealed class ShowPreparationServiceTests
         var one = files.CreateFlac("library/a.flac");
         var two = files.CreateFlac("library/b.flac");
         var metadata = new StubFlacMetadataReader()
-            .Add(one, new FlacMetadata("A", "Artist", "Album", TimeSpan.FromMinutes(2), new Dictionary<string, string>()))
-            .Add(two, new FlacMetadata("B", "Artist", "Album", TimeSpan.FromMinutes(3), new Dictionary<string, string>()));
+            .Add(one, new FlacMetadata("A", "Artist", "Album", TimeSpan.FromMinutes(2), new Dictionary<string, IReadOnlyList<string>>()))
+            .Add(two, new FlacMetadata("B", "Artist", "Album", TimeSpan.FromMinutes(3), new Dictionary<string, IReadOnlyList<string>>()));
 
         await using var context = harness.CreateContext();
         var service = new ShowrunnerService(context);
         var recordingA = (await service.CreateRecordingAsync(new CreateRecordingCommand("A", "Artist"))).Value!;
         var recordingB = (await service.CreateRecordingAsync(new CreateRecordingCommand("B", "Artist"))).Value!;
         var show = (await service.CreateShowAsync(new CreateShowCommand("show-c", "Show C", new DateOnly(2026, 8, 21)))).Value!;
-        await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recordingA.Id, 1));
+        var initialPlan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recordingA.Id, 1))).Value!;
 
         var preparation = new ShowPreparationService(context, new ShowPreparationOptions(files.MusicRoot, files.PreparationRoot), metadata);
         var firstRun = await preparation.PrepareShowAsync(show.Id);
-        await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recordingB.Id, 2));
+        var changedPlan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recordingB.Id, 2))).Value!;
         var secondRun = await preparation.PrepareShowAsync(show.Id);
 
         Assert.NotNull(firstRun.Value!.BroadcastFolder);
@@ -146,8 +151,18 @@ public sealed class ShowPreparationServiceTests
         Assert.NotNull(secondRun.Value!.BroadcastFolder);
         Assert.True(secondRun.Value.BroadcastFolder!.Rebuilt);
         Assert.Equal(2, secondRun.Value.BroadcastFolder.CopiedFiles.Count);
-        Assert.True(File.Exists(Path.Combine(secondRun.Value.BroadcastFolder.FolderPath, "01 - Artist - A.flac")));
-        Assert.True(File.Exists(Path.Combine(secondRun.Value.BroadcastFolder.FolderPath, "02 - Artist - B.flac")));
+        Assert.True(File.Exists(files.GetPreparedPath(secondRun.Value.BroadcastFolder.FolderName, "01 - Artist - A.flac")));
+        Assert.True(File.Exists(files.GetPreparedPath(secondRun.Value.BroadcastFolder.FolderName, "02 - Artist - B.flac")));
+
+        await context.Database.ExecuteSqlInterpolatedAsync(
+            $"""DELETE FROM "PlannedRecordings" WHERE "Id" = {initialPlan.PlannedRecordings.Single().Id}""");
+        await context.Database.ExecuteSqlInterpolatedAsync(
+            $"""UPDATE "PlannedRecordings" SET "Position" = 1 WHERE "Id" = {changedPlan.PlannedRecordings.Single(item => item.RecordingId == recordingB.Id).Id}""");
+        var reorderedRun = await preparation.PrepareShowAsync(show.Id);
+
+        Assert.True(reorderedRun.Value!.BroadcastFolder!.Rebuilt);
+        Assert.Equal(["01 - Artist - B.flac"], reorderedRun.Value.BroadcastFolder.CopiedFiles);
+        Assert.False(File.Exists(files.GetPreparedPath(reorderedRun.Value.BroadcastFolder.FolderName, "01 - Artist - A.flac")));
     }
 
     [Fact]
@@ -162,8 +177,8 @@ public sealed class ShowPreparationServiceTests
         await File.WriteAllTextAsync(outsidePath, "outside");
 
         var metadata = new StubFlacMetadataReader()
-            .Add(insidePath, new FlacMetadata("Inside", "Artist", "Album", TimeSpan.FromMinutes(4), new Dictionary<string, string>()))
-            .Add(outsidePath, new FlacMetadata("Outside", "Artist", "Album", TimeSpan.FromMinutes(4), new Dictionary<string, string>()));
+            .Add(insidePath, new FlacMetadata("Inside", "Artist", "Album", TimeSpan.FromMinutes(4), new Dictionary<string, IReadOnlyList<string>>()))
+            .Add(outsidePath, new FlacMetadata("Outside", "Artist", "Album", TimeSpan.FromMinutes(4), new Dictionary<string, IReadOnlyList<string>>()));
 
         await using var context = harness.CreateContext();
         var service = new ShowrunnerService(context);
@@ -179,7 +194,8 @@ public sealed class ShowPreparationServiceTests
         Assert.True(result.IsSuccess);
         Assert.NotNull(result.Value!.BroadcastFolder);
         Assert.Equal(before, after);
-        Assert.DoesNotContain(result.Value.MatchedTracks, item => item.SourceFilePath == outsidePath);
+        Assert.All(result.Value.MatchedTracks, item => Assert.False(Path.IsPathRooted(item.SourceLibraryPath)));
+        Assert.DoesNotContain(result.Value.MatchedTracks, item => item.SourceLibraryPath.Contains("outside", StringComparison.Ordinal));
     }
 
     [Fact]
@@ -198,37 +214,218 @@ public sealed class ShowPreparationServiceTests
     }
 
     [Fact]
-    public async Task ShowPrepareMcpToolMapsApplicationResults()
+    public async Task PrepareShowReturnsStructuredErrorWhenConfiguredMusicRootIsUnavailable()
     {
         using var harness = new SqliteTestHarness();
         using var files = new FileFixture();
-        var sourcePath = files.CreateFlac("library/tool.flac");
-        var metadata = new StubFlacMetadataReader()
-            .Add(sourcePath, new FlacMetadata("Tool", "Artist", "Album", TimeSpan.FromMinutes(3), new Dictionary<string, string>()));
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var show = (await service.CreateShowAsync(
+            new CreateShowCommand("missing-root", "Missing root", new DateOnly(2026, 8, 22)))).Value!;
+        var preparation = new ShowPreparationService(
+            context,
+            new ShowPreparationOptions(files.MusicRoot, files.PreparationRoot),
+            new StubFlacMetadataReader());
+        Directory.Delete(files.MusicRoot, recursive: true);
+
+        var result = await preparation.PrepareShowAsync(show.Id);
+
+        Assert.False(result.IsSuccess);
+        Assert.Equal("music_root_unavailable", result.Error!.Code);
+        Assert.Empty(result.Error.Details);
+    }
+
+    [Fact]
+    public async Task StableIdentifierConflictIsUnresolvedInsteadOfFallingBackToText()
+    {
+        using var harness = new SqliteTestHarness();
+        using var files = new FileFixture();
+        var sourcePath = files.CreateFlac("library/conflict.flac");
+        var metadata = new StubFlacMetadataReader().Add(
+            sourcePath,
+            new FlacMetadata(
+                "Same title",
+                "Same artist",
+                "Release",
+                TimeSpan.FromMinutes(3),
+                new Dictionary<string, IReadOnlyList<string>> { ["SPOTIFY_TRACK_ID"] = ["different-id"] }));
 
         await using var context = harness.CreateContext();
         var service = new ShowrunnerService(context);
-        var recording = (await service.CreateRecordingAsync(new CreateRecordingCommand("Tool", "Artist"))).Value!;
-        var show = (await service.CreateShowAsync(new CreateShowCommand("show-tool", "Show Tool", new DateOnly(2026, 8, 22)))).Value!;
+        var recording = (await service.CreateRecordingAsync(new CreateRecordingCommand("Same title", "Same artist"))).Value!;
+        await service.AddExternalIdentifierAsync(recording.Id, new AddExternalIdentifierCommand("spotify", "spotify:track:expected-id"));
+        var show = (await service.CreateShowAsync(new CreateShowCommand("identifier-conflict", "Conflict", new DateOnly(2026, 8, 23)))).Value!;
         await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1));
 
-        var preparation = new ShowPreparationService(context, new ShowPreparationOptions(files.MusicRoot, files.PreparationRoot), metadata);
-        var tools = new ShowrunnerMcpTools(preparation);
+        var result = await new ShowPreparationService(
+            context,
+            new ShowPreparationOptions(files.MusicRoot, files.PreparationRoot),
+            metadata).PrepareShowAsync(show.Id);
 
-        var success = await tools.ShowPrepareAsync(new ShowPrepareToolRequest(show.Id));
-        var failure = await tools.ShowPrepareAsync(new ShowPrepareToolRequest(Guid.NewGuid()));
-
-        Assert.True(success.IsSuccess);
-        Assert.NotNull(success.Result);
-        Assert.Null(success.Error);
-        Assert.False(failure.IsSuccess);
-        Assert.Null(failure.Result);
-        Assert.Equal("not_found", failure.Error!.Code);
+        Assert.Equal(ShowPreparationStatus.Unresolved, result.Value!.Status);
+        var unresolved = Assert.Single(result.Value.UnresolvedTracks);
+        Assert.Equal(UnresolvedTrackKind.IdentifierConflict, unresolved.Kind);
+        Assert.Equal("library/conflict.flac", Assert.Single(unresolved.Candidates).SourceLibraryPath);
+        Assert.Null(result.Value.BroadcastFolder);
     }
+
+    [Fact]
+    public async Task ReleaseMetadataDisambiguatesTextMatches()
+    {
+        using var harness = new SqliteTestHarness();
+        using var files = new FileFixture();
+        var firstPath = files.CreateFlac("library/first.flac");
+        var secondPath = files.CreateFlac("library/second.flac");
+        var metadata = new StubFlacMetadataReader()
+            .Add(firstPath, new FlacMetadata("Title", "Artist", "First release", TimeSpan.FromMinutes(2), EmptyIdentifiers()))
+            .Add(secondPath, new FlacMetadata("Title", "Artist", "Wanted release", TimeSpan.FromMinutes(4), EmptyIdentifiers()));
+
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var recording = (await service.CreateRecordingAsync(
+            new CreateRecordingCommand("Title", "Artist", ReleaseTitle: "Wanted release"))).Value!;
+        var show = (await service.CreateShowAsync(new CreateShowCommand("release-match", "Release", new DateOnly(2026, 8, 24)))).Value!;
+        await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1));
+
+        var result = await new ShowPreparationService(
+            context,
+            new ShowPreparationOptions(files.MusicRoot, files.PreparationRoot),
+            metadata).PrepareShowAsync(show.Id);
+
+        Assert.Equal("library/second.flac", Assert.Single(result.Value!.MatchedTracks).SourceLibraryPath);
+        Assert.Equal(RecordingMatchKind.NormalisedMetadata, result.Value.MatchedTracks[0].MatchKind);
+    }
+
+    [Fact]
+    public async Task ExplicitResolutionPersistsOnlyAConfiguredRelativeCandidate()
+    {
+        using var harness = new SqliteTestHarness();
+        using var files = new FileFixture();
+        var firstPath = files.CreateFlac("library/one.flac");
+        var secondPath = files.CreateFlac("library/two.flac");
+        var metadata = new StubFlacMetadataReader()
+            .Add(firstPath, new FlacMetadata("Title", "Artist", "One", TimeSpan.FromMinutes(2), EmptyIdentifiers()))
+            .Add(secondPath, new FlacMetadata("Title", "Artist", "Two", TimeSpan.FromMinutes(3), EmptyIdentifiers()));
+
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var recording = (await service.CreateRecordingAsync(new CreateRecordingCommand("Title", "Artist"))).Value!;
+        var show = (await service.CreateShowAsync(new CreateShowCommand("resolved", "Resolved", new DateOnly(2026, 8, 25)))).Value!;
+        await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1));
+        var preparation = new ShowPreparationService(
+            context,
+            new ShowPreparationOptions(files.MusicRoot, files.PreparationRoot),
+            metadata);
+
+        var absoluteAttempt = await preparation.ResolveRecordingAsync(recording.Id, secondPath);
+        var resolution = await preparation.ResolveRecordingAsync(recording.Id, "library/two.flac");
+        var result = await preparation.PrepareShowAsync(show.Id);
+
+        Assert.Equal("validation_failed", absoluteAttempt.Error!.Code);
+        Assert.True(resolution.IsSuccess);
+        Assert.Equal("library/two.flac", resolution.Value!.SourceLibraryPath);
+        var matched = Assert.Single(result.Value!.MatchedTracks);
+        Assert.Equal(RecordingMatchKind.ExplicitResolution, matched.MatchKind);
+        Assert.Equal("library/two.flac", matched.SourceLibraryPath);
+    }
+
+    [Fact]
+    public async Task FailedRebuildPreservesPreviousPreparedFolder()
+    {
+        using var harness = new SqliteTestHarness();
+        using var files = new FileFixture();
+        var firstPath = files.CreateFlac("library/a.flac", "a");
+        var secondPath = files.CreateFlac("library/b.flac", "b");
+        var metadata = new StubFlacMetadataReader()
+            .Add(firstPath, new FlacMetadata("A", "Artist", null, TimeSpan.FromMinutes(2), EmptyIdentifiers()))
+            .Add(secondPath, new FlacMetadata("B", "Artist", null, TimeSpan.FromMinutes(2), EmptyIdentifiers()));
+
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var firstRecording = (await service.CreateRecordingAsync(new CreateRecordingCommand("A", "Artist"))).Value!;
+        var secondRecording = (await service.CreateRecordingAsync(new CreateRecordingCommand("B", "Artist"))).Value!;
+        var show = (await service.CreateShowAsync(new CreateShowCommand("safe-rebuild", "Safe", new DateOnly(2026, 8, 26)))).Value!;
+        await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(firstRecording.Id, 1));
+        var preparation = new ShowPreparationService(
+            context,
+            new ShowPreparationOptions(files.MusicRoot, files.PreparationRoot),
+            metadata);
+        var firstRun = await preparation.PrepareShowAsync(show.Id);
+        var originalPath = files.GetPreparedPath(firstRun.Value!.BroadcastFolder!.FolderName, "01 - Artist - A.flac");
+        await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(secondRecording.Id, 2));
+        metadata.OnRead(path =>
+        {
+            if (path == secondPath && File.Exists(path))
+            {
+                File.Delete(path);
+            }
+        });
+
+        var failedRebuild = await preparation.PrepareShowAsync(show.Id);
+
+        Assert.False(failedRebuild.IsSuccess);
+        Assert.Equal("preparation_folder_failed", failedRebuild.Error!.Code);
+        Assert.True(File.Exists(originalPath));
+        Assert.Equal("a", await File.ReadAllTextAsync(originalPath));
+    }
+
+    [Fact]
+    public async Task OutputFilenameHonoursLinuxByteLimitAndReportsOverrun()
+    {
+        using var harness = new SqliteTestHarness();
+        using var files = new FileFixture();
+        var sourcePath = files.CreateFlac("library/long.flac");
+        var title = string.Concat(Enumerable.Repeat("é", 120));
+        var artist = string.Concat(Enumerable.Repeat("ø", 120));
+        var metadata = new StubFlacMetadataReader().Add(
+            sourcePath,
+            new FlacMetadata(title, artist, null, TimeSpan.FromMinutes(61), EmptyIdentifiers()));
+
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var recording = (await service.CreateRecordingAsync(new CreateRecordingCommand(title, artist))).Value!;
+        var show = (await service.CreateShowAsync(new CreateShowCommand("long-name", "Long", new DateOnly(2026, 8, 27)))).Value!;
+        await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1));
+
+        var result = await new ShowPreparationService(
+            context,
+            new ShowPreparationOptions(files.MusicRoot, files.PreparationRoot, TimeSpan.FromMinutes(60)),
+            metadata).PrepareShowAsync(show.Id);
+
+        var outputName = Assert.Single(result.Value!.MatchedTracks).OutputFileName;
+        Assert.InRange(Encoding.UTF8.GetByteCount(outputName), 1, 240);
+        Assert.Null(result.Value.Timing.RemainingDuration);
+        Assert.Equal(TimeSpan.FromMinutes(1), result.Value.Timing.OverrunDuration);
+    }
+
+    [Fact]
+    public void TagLibReaderReadsEmbeddedFlacMetadataAndAllIdentifierValues()
+    {
+        using var files = new FileFixture();
+        var path = files.CreateMetadataOnlyFlac(
+            "library/tagged.flac",
+            "Embedded title",
+            "Embedded artist",
+            "Embedded release",
+            "first-id",
+            "second-id");
+
+        var metadata = new TagLibFlacMetadataReader().TryRead(path);
+
+        Assert.NotNull(metadata);
+        Assert.Equal("Embedded title", metadata.Title);
+        Assert.Equal("Embedded artist", metadata.Artist);
+        Assert.Equal("Embedded release", metadata.Album);
+        Assert.Equal(["first-id", "second-id"], metadata.Identifiers["SPOTIFY_TRACK_ID"]);
+    }
+
+    private static IReadOnlyDictionary<string, IReadOnlyList<string>> EmptyIdentifiers()
+        => new Dictionary<string, IReadOnlyList<string>>();
 
     private sealed class StubFlacMetadataReader : IFlacMetadataReader
     {
         private readonly Dictionary<string, FlacMetadata> values = new(StringComparer.Ordinal);
+        private Action<string>? onRead;
 
         public StubFlacMetadataReader Add(string path, FlacMetadata metadata)
         {
@@ -236,9 +433,17 @@ public sealed class ShowPreparationServiceTests
             return this;
         }
 
+        public StubFlacMetadataReader OnRead(Action<string> callback)
+        {
+            onRead = callback;
+            return this;
+        }
+
         public FlacMetadata? TryRead(string filePath)
         {
-            values.TryGetValue(Path.GetFullPath(filePath), out var metadata);
+            var fullPath = Path.GetFullPath(filePath);
+            values.TryGetValue(fullPath, out var metadata);
+            onRead?.Invoke(fullPath);
             return metadata;
         }
     }
@@ -265,6 +470,60 @@ public sealed class ShowPreparationServiceTests
             var path = Path.Combine(MusicRoot, relativePath);
             Directory.CreateDirectory(Path.GetDirectoryName(path)!);
             File.WriteAllText(path, content);
+            return path;
+        }
+
+        public string GetPreparedPath(string folderName, string fileName)
+            => Path.Combine(PreparationRoot, folderName, fileName);
+
+        public string CreateMetadataOnlyFlac(
+            string relativePath,
+            string title,
+            string artist,
+            string album,
+            params string[] spotifyIds)
+        {
+            var path = Path.Combine(MusicRoot, relativePath);
+            Directory.CreateDirectory(Path.GetDirectoryName(path)!);
+            var comments = new List<string>
+            {
+                $"TITLE={title}",
+                $"ARTIST={artist}",
+                $"ALBUM={album}",
+            };
+            comments.AddRange(spotifyIds.Select(identifier => $"SPOTIFY_TRACK_ID={identifier}"));
+
+            using var stream = File.Create(path);
+            stream.Write("fLaC"u8);
+            stream.Write([0x00, 0x00, 0x00, 0x22]);
+            Span<byte> streamInfo = stackalloc byte[34];
+            BinaryPrimitives.WriteUInt16BigEndian(streamInfo, 4096);
+            BinaryPrimitives.WriteUInt16BigEndian(streamInfo[2..], 4096);
+            const ulong sampleRateAndTotalSamples = ((ulong)44100 << 44) | ((ulong)1 << 41) | ((ulong)15 << 36) | 44100;
+            BinaryPrimitives.WriteUInt64BigEndian(streamInfo[10..], sampleRateAndTotalSamples);
+            stream.Write(streamInfo);
+
+            using var commentPayload = new MemoryStream();
+            using (var writer = new BinaryWriter(commentPayload, Encoding.UTF8, leaveOpen: true))
+            {
+                var vendor = Encoding.UTF8.GetBytes("Sundown Sessions tests");
+                writer.Write(vendor.Length);
+                writer.Write(vendor);
+                writer.Write(comments.Count);
+                foreach (var comment in comments)
+                {
+                    var bytes = Encoding.UTF8.GetBytes(comment);
+                    writer.Write(bytes.Length);
+                    writer.Write(bytes);
+                }
+            }
+
+            var payload = commentPayload.ToArray();
+            stream.WriteByte(0x84);
+            stream.WriteByte((byte)(payload.Length >> 16));
+            stream.WriteByte((byte)(payload.Length >> 8));
+            stream.WriteByte((byte)payload.Length);
+            stream.Write(payload);
             return path;
         }
 

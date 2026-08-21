@@ -42,6 +42,15 @@ public sealed record ApplicationError(
                     [field] = values,
                 }));
     }
+
+    public static ApplicationError OperationFailed(string code, string message)
+    {
+        return new ApplicationError(
+            code,
+            message,
+            new ReadOnlyDictionary<string, IReadOnlyList<string>>(
+                new Dictionary<string, IReadOnlyList<string>>(StringComparer.Ordinal)));
+    }
 }
 
 public sealed class ApplicationResult

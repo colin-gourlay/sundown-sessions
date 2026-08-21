@@ -24,6 +24,7 @@ public sealed class ShowrunnerService
 
         var lengthError = ValidateLength(command.Title, "title", FieldLimits.Title)
             ?? ValidateLength(command.Artist, "artist", FieldLimits.Artist)
+            ?? ValidateLength(command.ReleaseTitle, "releaseTitle", FieldLimits.Title)
             ?? ValidateLength(command.Notes, "notes", FieldLimits.Notes);
         if (lengthError is not null)
         {
@@ -35,6 +36,7 @@ public sealed class ShowrunnerService
             Id = Guid.NewGuid(),
             Title = command.Title.Trim(),
             Artist = command.Artist?.Trim(),
+            ReleaseTitle = command.ReleaseTitle?.Trim(),
             Notes = command.Notes?.Trim(),
             CreatedAtUtc = clock.UtcNow,
         };
@@ -573,6 +575,7 @@ public sealed class ShowrunnerService
             recording.Id,
             recording.Title,
             recording.Artist,
+            recording.ReleaseTitle,
             recording.Notes,
             recording.ExternalIdentifiers
                 .OrderBy(item => item.Source, StringComparer.Ordinal)
