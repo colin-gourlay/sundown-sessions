@@ -384,7 +384,8 @@ public sealed class ShowrunnerService
         }
 
         var warnings = evidenceResult.Value!.Warnings.ToList();
-        var evidence = CollapseHistoryNoise(evidenceResult.Value.Candidates);
+        var rawEvidenceCandidates = evidenceResult.Value.Candidates;
+        var evidence = CollapseHistoryNoise(rawEvidenceCandidates);
         var remainingEvidenceIndexes = new HashSet<int>(Enumerable.Range(0, evidence.Count));
         var plannedItems = new List<PlannedPlaybackEvidenceItemModel>(show.PlannedRecordings.Count);
         var orderingDifferences = new List<OrderDifferenceModel>();
@@ -460,7 +461,10 @@ public sealed class ShowrunnerService
             .ToArray();
         var detectedPlannedCount = plannedItems.Count(item => item.IsDetected);
 
-        if (evidence.Count == 0 && warnings.All(warning => !string.Equals(warning, "mixxx_history_empty", StringComparison.Ordinal)))
+        if (evidence.Count == 0 &&
+            !evidenceResult.Value.IsIncomplete &&
+            (rawEvidenceCandidates.Count > 0 ||
+             warnings.All(warning => !string.Equals(warning, "mixxx_history_empty", StringComparison.Ordinal))))
         {
             warnings.Add("no_usable_mixxx_data");
         }

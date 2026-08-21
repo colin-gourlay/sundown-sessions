@@ -41,8 +41,8 @@ public sealed class MixxxPlaybackEvidenceReaderTests
     {
         using var fixture = new MixxxSqliteFixture();
         fixture.SeedPlayHistory(("Read only", "Artist", "2026-08-21T19:00:00Z"));
+        File.SetLastWriteTimeUtc(fixture.DatabasePath, new DateTime(2026, 8, 21, 12, 0, 0, DateTimeKind.Utc));
         var before = File.GetLastWriteTimeUtc(fixture.DatabasePath);
-        await Task.Delay(25);
         var reader = new SqliteMixxxPlaybackEvidenceReader(fixture.DatabasePath);
 
         _ = await reader.ReadPlaybackEvidenceAsync();

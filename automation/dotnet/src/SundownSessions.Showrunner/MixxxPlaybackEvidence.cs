@@ -283,7 +283,15 @@ public sealed class SqliteMixxxPlaybackEvidenceReader(string? databasePath = nul
 
         if (value is double doubleValue)
         {
-            return FromUnix((long)doubleValue);
+            try
+            {
+                var rounded = Convert.ToInt64(Math.Round(doubleValue, MidpointRounding.AwayFromZero));
+                return FromUnix(rounded);
+            }
+            catch (OverflowException)
+            {
+                return null;
+            }
         }
 
         if (value is string text)
