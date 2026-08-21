@@ -11,6 +11,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "tests", "tests", "{3D3C144B
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SundownSessions.Showrunner.Tests", "tests\SundownSessions.Showrunner.Tests\SundownSessions.Showrunner.Tests.csproj", "{C8585BA8-02EF-4648-A61F-CE48192EAD82}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SundownSessions.Showrunner.Mcp", "src\SundownSessions.Showrunner.Mcp\SundownSessions.Showrunner.Mcp.csproj", "{B9AD189B-AD2D-47EB-B3E0-2E1F29E58C57}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -28,9 +30,14 @@ Global
 		{C8585BA8-02EF-4648-A61F-CE48192EAD82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C8585BA8-02EF-4648-A61F-CE48192EAD82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C8585BA8-02EF-4648-A61F-CE48192EAD82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9AD189B-AD2D-47EB-B3E0-2E1F29E58C57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9AD189B-AD2D-47EB-B3E0-2E1F29E58C57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9AD189B-AD2D-47EB-B3E0-2E1F29E58C57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9AD189B-AD2D-47EB-B3E0-2E1F29E58C57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{793130AD-DC84-4A00-B119-3184BEB6C219} = {4115BFE9-0A48-4999-BC02-3053463B3699}
 		{C8585BA8-02EF-4648-A61F-CE48192EAD82} = {3D3C144B-381E-46A1-A107-C4872E8968FC}
+		{B9AD189B-AD2D-47EB-B3E0-2E1F29E58C57} = {4115BFE9-0A48-4999-BC02-3053463B3699}
 	EndGlobalSection
 EndGlobal

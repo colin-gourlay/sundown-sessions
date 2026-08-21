@@ -8,6 +8,8 @@ internal sealed class RecordingEntity
 
     public string? Artist { get; set; }
 
+    public string? ReleaseTitle { get; set; }
+
     public string? Notes { get; set; }
 
     public DateTimeOffset CreatedAtUtc { get; set; }

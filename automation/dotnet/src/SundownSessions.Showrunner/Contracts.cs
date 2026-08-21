@@ -1,6 +1,10 @@
 namespace SundownSessions.Showrunner;
 
-public sealed record CreateRecordingCommand(string Title, string? Artist, string? Notes = null);
+public sealed record CreateRecordingCommand(
+    string Title,
+    string? Artist,
+    string? Notes = null,
+    string? ReleaseTitle = null);
 
 public sealed record AddExternalIdentifierCommand(string Source, string Value);
 
@@ -27,6 +31,7 @@ public sealed record RecordingModel(
     Guid Id,
     string Title,
     string? Artist,
+    string? ReleaseTitle,
     string? Notes,
     IReadOnlyList<ExternalIdentifierModel> ExternalIdentifiers,
     DateTimeOffset CreatedAtUtc);

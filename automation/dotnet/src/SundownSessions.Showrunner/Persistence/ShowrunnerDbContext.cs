@@ -27,6 +27,7 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.Property(item => item.Id).ValueGeneratedNever();
             builder.Property(item => item.Title).HasMaxLength(FieldLimits.Title).IsRequired();
             builder.Property(item => item.Artist).HasMaxLength(FieldLimits.Artist);
+            builder.Property(item => item.ReleaseTitle).HasMaxLength(FieldLimits.Title);
             builder.Property(item => item.Notes).HasMaxLength(FieldLimits.Notes);
             builder.HasMany(item => item.ExternalIdentifiers)
                 .WithOne(item => item.Recording)
