@@ -43,7 +43,7 @@ public sealed class TagLibFlacMetadataReader : IFlacMetadataReader
                 file.Properties.Duration,
                 identifiers);
         }
-        catch
+        catch (Exception ex) when (ex is not OutOfMemoryException)
         {
             return null;
         }
@@ -66,8 +66,8 @@ public sealed class ShowPreparationService
         this.dbContext = dbContext;
         this.options = options;
         this.metadataReader = metadataReader ?? new TagLibFlacMetadataReader();
-        musicRoot = NormalizeRoot(options.MusicRootPath);
-        preparationRoot = NormalizeRoot(options.PreparationRootPath);
+        musicRoot = NormaliseRoot(options.MusicRootPath);
+        preparationRoot = NormaliseRoot(options.PreparationRootPath);
     }
 
     public async Task<ApplicationResult<ShowPreparationResultModel>> PrepareShowAsync(Guid showId, CancellationToken cancellationToken = default)
@@ -185,6 +185,10 @@ public sealed class ShowPreparationService
             timingTracks.Add(new PreparedTrackTimingModel(planned.Id, planned.Position, selected.Metadata.Duration, cumulative));
         }
 
+        var matchedCountByRecordingId = matchedTracks
+            .GroupBy(item => item.RecordingId)
+            .ToDictionary(group => group.Key, group => group.Count());
+
         foreach (var track in matchedTracks)
         {
             var priorBroadcasts = priorBroadcastsByRecordingId
@@ -192,16 +196,28 @@ public sealed class ShowPreparationService
                 .Select(item => item.Entry)
                 .ToArray();
 
-            var repeatedWithinShow = matchedTracks.Count(item => item.RecordingId == track.RecordingId) > 1;
+            var repeatedWithinShow = matchedCountByRecordingId.GetValueOrDefault(track.RecordingId, 0) > 1;
             if ((priorBroadcasts.Length > 0 || repeatedWithinShow) && !repeatExceptions.Contains(track.RecordingId))
             {
                 repeatConflicts.Add(new RepeatConflictModel(track.PlannedRecordingId, track.RecordingId, priorBroadcasts));
             }
         }
 
+        var trackPositionByPlannedId = matchedTracks.ToDictionary(item => item.PlannedRecordingId, item => item.Position);
         repeatConflicts = repeatConflicts
-            .DistinctBy(item => item.PlannedRecordingId)
-            .OrderBy(item => matchedTracks.Single(track => track.PlannedRecordingId == item.PlannedRecordingId).Position)
+            .GroupBy(item => item.RecordingId)
+            .Select(group =>
+            {
+                var primary = group.OrderBy(item => trackPositionByPlannedId[item.PlannedRecordingId]).First();
+                var prior = group
+                    .SelectMany(item => item.PriorBroadcasts)
+                    .DistinctBy(item => item.BroadcastRecordingId)
+                    .OrderBy(item => item.ShowDate)
+                    .ThenBy(item => item.BroadcastAtUtc)
+                    .ToArray();
+                return new RepeatConflictModel(primary.PlannedRecordingId, group.Key, prior);
+            })
+            .OrderBy(item => trackPositionByPlannedId[item.PlannedRecordingId])
             .ToList();
 
         PreparedBroadcastFolderModel? folder = null;
@@ -232,21 +248,34 @@ public sealed class ShowPreparationService
 
     private PreparedBroadcastFolderModel PrepareFolder(string showSlug, IReadOnlyList<PreparedTrackModel> matchedTracks)
     {
-        var folderPath = Path.Combine(preparationRoot, SanitizePathSegment(showSlug));
+        var folderPath = Path.Combine(preparationRoot, SanitisePathSegment(showSlug));
         var rebuilt = Directory.Exists(folderPath);
-        if (rebuilt)
-        {
-            Directory.Delete(folderPath, recursive: true);
-        }
-
-        Directory.CreateDirectory(folderPath);
+        var temporaryPath = Path.Combine(preparationRoot, $"{Path.GetFileName(folderPath)}.tmp-{Guid.NewGuid():N}");
+        Directory.CreateDirectory(temporaryPath);
         var copiedFiles = new List<string>(matchedTracks.Count);
-        foreach (var track in matchedTracks.OrderBy(item => item.Position))
+        try
         {
-            var destinationPath = Path.Combine(folderPath, track.OutputFileName);
-            AssertInRoot(destinationPath, folderPath);
-            File.Copy(track.SourceFilePath, destinationPath, overwrite: true);
-            copiedFiles.Add(destinationPath);
+            foreach (var track in matchedTracks.OrderBy(item => item.Position))
+            {
+                var temporaryDestinationPath = Path.Combine(temporaryPath, track.OutputFileName);
+                AssertInRoot(temporaryDestinationPath, temporaryPath);
+                File.Copy(track.SourceFilePath, temporaryDestinationPath, overwrite: true);
+                copiedFiles.Add(Path.Combine(folderPath, track.OutputFileName));
+            }
+
+            if (rebuilt)
+            {
+                Directory.Delete(folderPath, recursive: true);
+            }
+
+            Directory.Move(temporaryPath, folderPath);
+        }
+        finally
+        {
+            if (Directory.Exists(temporaryPath))
+            {
+                Directory.Delete(temporaryPath, recursive: true);
+            }
         }
 
         return new PreparedBroadcastFolderModel(folderPath, rebuilt, copiedFiles);
@@ -297,17 +326,20 @@ public sealed class ShowPreparationService
     {
         var normalisedSource = source.Trim().ToLowerInvariant();
         var normalisedValue = CanonicaliseIdentifierValue(normalisedSource, value);
+        var sourceSpecificMatches = identifiers
+            .Where(pair => IsLikelySourceKey(normalisedSource, pair.Key.Trim()))
+            .Select(pair => CanonicaliseIdentifierValue(normalisedSource, pair.Value))
+            .ToArray();
+
+        if (sourceSpecificMatches.Length > 0)
+        {
+            return sourceSpecificMatches.Any(candidate => string.Equals(candidate, normalisedValue, StringComparison.OrdinalIgnoreCase));
+        }
+
         foreach (var pair in identifiers)
         {
-            var key = pair.Key.Trim();
             var candidate = CanonicaliseIdentifierValue(normalisedSource, pair.Value);
             if (string.Equals(candidate, normalisedValue, StringComparison.OrdinalIgnoreCase))
-            {
-                return true;
-            }
-
-            if (IsLikelySourceKey(normalisedSource, key) &&
-                string.Equals(candidate, normalisedValue, StringComparison.OrdinalIgnoreCase))
             {
                 return true;
             }
@@ -318,13 +350,13 @@ public sealed class ShowPreparationService
 
     private static bool IsLikelySourceKey(string source, string key)
     {
-        var normalisedKey = key.ToUpperInvariant();
+        var uppercaseKey = key.ToUpperInvariant();
         return source switch
         {
-            "spotify" => normalisedKey is "SPOTIFY_TRACK_ID" or "SPOTIFY_TRACK_URI",
-            "musicbrainz" => normalisedKey is "MUSICBRAINZ_TRACKID" or "MUSICBRAINZ_RELEASETRACKID",
-            "isrc" => normalisedKey == "ISRC",
-            _ => string.Equals(normalisedKey, source, StringComparison.OrdinalIgnoreCase),
+            "spotify" => uppercaseKey is "SPOTIFY_TRACK_ID" or "SPOTIFY_TRACK_URI",
+            "musicbrainz" => uppercaseKey is "MUSICBRAINZ_TRACKID" or "MUSICBRAINZ_RELEASETRACKID",
+            "isrc" => uppercaseKey == "ISRC",
+            _ => string.Equals(uppercaseKey, source, StringComparison.OrdinalIgnoreCase),
         };
     }
 
@@ -352,10 +384,10 @@ public sealed class ShowPreparationService
     {
         var artist = recording.Artist ?? metadata.Artist ?? "Unknown Artist";
         var title = recording.Title;
-        return $"{position.ToString($"D{positionWidth}")} - {SanitizePathSegment(artist)} - {SanitizePathSegment(title)}.flac";
+        return $"{position.ToString($"D{positionWidth}")} - {SanitisePathSegment(artist)} - {SanitisePathSegment(title)}.flac";
     }
 
-    private static string SanitizePathSegment(string value)
+    private static string SanitisePathSegment(string value)
     {
         var chars = value.Trim().Select(ch =>
             char.IsControl(ch) || ch is '/' or '\\' or ':' ? '-' : ch).ToArray();
@@ -376,15 +408,14 @@ public sealed class ShowPreparationService
             return string.Empty;
         }
 
-        return string.Concat(value
+        var filtered = string.Concat(value
             .Trim()
             .ToLowerInvariant()
-            .Where(ch => char.IsLetterOrDigit(ch) || char.IsWhiteSpace(ch)))
-            .Replace("  ", " ")
-            .Trim();
+            .Where(ch => char.IsLetterOrDigit(ch) || char.IsWhiteSpace(ch)));
+        return string.Join(' ', filtered.Split((char[]?)null, StringSplitOptions.RemoveEmptyEntries));
     }
 
-    private static string NormalizeRoot(string path)
+    private static string NormaliseRoot(string path)
     {
         var full = Path.GetFullPath(path);
         return full.TrimEnd(Path.DirectorySeparatorChar, Path.AltDirectorySeparatorChar);
@@ -401,7 +432,7 @@ public sealed class ShowPreparationService
     {
         if (!IsInRoot(path, root))
         {
-            throw new InvalidOperationException("Prepared output path escaped the configured preparation root.");
+            throw new InvalidOperationException("Prepared output path is outside the configured preparation root.");
         }
     }
 
