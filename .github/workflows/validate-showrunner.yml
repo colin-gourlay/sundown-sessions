@@ -11,6 +11,7 @@ on:
     paths:
       - automation/dotnet/**
       - .github/workflows/validate-showrunner.yml
+  workflow_dispatch:
 
 permissions:
   contents: read
