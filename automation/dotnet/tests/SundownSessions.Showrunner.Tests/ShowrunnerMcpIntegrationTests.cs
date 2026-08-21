@@ -1,4 +1,5 @@
 using ModelContextProtocol.Client;
+using Microsoft.Data.Sqlite;
 using SundownSessions.Showrunner.Persistence;
 
 namespace SundownSessions.Showrunner.Tests;
@@ -10,6 +11,7 @@ public sealed class ShowrunnerMcpIntegrationTests
     {
         using var harness = new SqliteTestHarness();
         using var files = new McpFileFixture();
+        using var mixxx = new MixxxFixture();
         Guid showId;
         await using (var context = harness.CreateContext())
         {
@@ -31,6 +33,7 @@ public sealed class ShowrunnerMcpIntegrationTests
         environment[ShowrunnerDbContextFactory.DatabasePathEnvironmentVariable] = harness.DatabasePath;
         environment["SUNDOWN_SHOWRUNNER_MUSIC_ROOT"] = files.MusicRoot;
         environment["SUNDOWN_SHOWRUNNER_PREPARATION_ROOT"] = files.PreparationRoot;
+        environment[SqliteMixxxPlaybackEvidenceReader.MixxxDatabasePathEnvironmentVariable] = mixxx.DatabasePath;
 
         var transport = new StdioClientTransport(new StdioClientTransportOptions
         {
@@ -47,7 +50,7 @@ public sealed class ShowrunnerMcpIntegrationTests
 
         var tools = await client.ListToolsAsync(cancellationToken: timeout.Token);
         Assert.Equal(
-            ["recording_resolve", "repeat_exception_create", "show_prepare"],
+            ["recording_resolve", "repeat_exception_create", "show_prepare", "show_reconciliation_confirm", "show_reconciliation_evidence"],
             tools.Select(tool => tool.Name).Order(StringComparer.Ordinal).ToArray());
 
         var result = await client.CallToolAsync(
@@ -66,6 +69,16 @@ public sealed class ShowrunnerMcpIntegrationTests
         Assert.False(preparationResult.TryGetProperty("broadcastFolder", out _));
         Assert.DoesNotContain(files.MusicRoot, json.ToString(), StringComparison.Ordinal);
         Assert.DoesNotContain(files.PreparationRoot, json.ToString(), StringComparison.Ordinal);
+
+        var writeBeforeEvidence = File.GetLastWriteTimeUtc(mixxx.DatabasePath);
+        var evidenceResult = await client.CallToolAsync(
+            "show_reconciliation_evidence",
+            new Dictionary<string, object?> { ["showId"] = showId },
+            cancellationToken: timeout.Token);
+        var writeAfterEvidence = File.GetLastWriteTimeUtc(mixxx.DatabasePath);
+
+        Assert.NotEqual(true, evidenceResult.IsError);
+        Assert.Equal(writeBeforeEvidence, writeAfterEvidence);
     }
 
     private static string FindDotnetDirectory()
@@ -97,6 +110,49 @@ public sealed class ShowrunnerMcpIntegrationTests
         public string MusicRoot { get; }
 
         public string PreparationRoot { get; }
+
+        public void Dispose()
+        {
+            if (Directory.Exists(root))
+            {
+                Directory.Delete(root, recursive: true);
+            }
+        }
+    }
+
+    private sealed class MixxxFixture : IDisposable
+    {
+        private readonly string root = Path.Combine(
+            Path.GetTempPath(),
+            "sundown-showrunner-mixxx-tests",
+            Guid.NewGuid().ToString("N"));
+
+        public MixxxFixture()
+        {
+            Directory.CreateDirectory(root);
+            DatabasePath = Path.Combine(root, "mixxxdb.sqlite");
+
+            using var connection = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = DatabasePath }.ToString());
+            connection.Open();
+            using var command = connection.CreateCommand();
+            command.CommandText = """
+                CREATE TABLE library (
+                    id INTEGER PRIMARY KEY,
+                    title TEXT,
+                    artist TEXT
+                );
+                CREATE TABLE play_history (
+                    id INTEGER PRIMARY KEY,
+                    track_id INTEGER NOT NULL,
+                    played_at TEXT NOT NULL
+                );
+                INSERT INTO library (id, title, artist) VALUES (1, 'Detected title', 'Detected artist');
+                INSERT INTO play_history (track_id, played_at) VALUES (1, '2026-08-21T19:00:00Z');
+                """;
+            command.ExecuteNonQuery();
+        }
+
+        public string DatabasePath { get; }
 
         public void Dispose()
         {

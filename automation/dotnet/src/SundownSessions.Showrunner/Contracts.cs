@@ -20,6 +20,11 @@ public sealed record SaveReconciliationCommand(bool Confirmed, IReadOnlyCollecti
 
 public sealed record ReconciliationItemCommand(Guid PlannedRecordingId, ReconciliationItemOutcome Outcome);
 
+public sealed record ConfirmReconciliationCommand(
+    bool OperatorConfirmed,
+    bool HasUnresolvedAmbiguity,
+    IReadOnlyCollection<ReconciliationItemCommand> Items);
+
 public enum ReconciliationItemOutcome
 {
     Pending = 0,
@@ -72,3 +77,36 @@ public sealed record ReconciliationItemModel(
     Guid RecordingId,
     int PlannedPosition,
     ReconciliationItemOutcome Outcome);
+
+public sealed record PlaybackEvidenceModel(
+    Guid ShowId,
+    int PlannedCount,
+    int DetectedPlannedCount,
+    bool IsIncompleteEvidence,
+    bool HasAmbiguousMatches,
+    IReadOnlyList<string> Warnings,
+    IReadOnlyList<PlannedPlaybackEvidenceItemModel> Planned,
+    IReadOnlyList<UnexpectedPlaybackEvidenceItemModel> Unexpected,
+    IReadOnlyList<OrderDifferenceModel> OrderingDifferences);
+
+public sealed record PlannedPlaybackEvidenceItemModel(
+    Guid PlannedRecordingId,
+    Guid RecordingId,
+    int PlannedPosition,
+    string Title,
+    string? Artist,
+    bool IsDetected,
+    int? DetectedPosition,
+    DateTimeOffset? DetectedAtUtc,
+    bool IsAmbiguousMatch);
+
+public sealed record UnexpectedPlaybackEvidenceItemModel(
+    int DetectedPosition,
+    string Title,
+    string? Artist,
+    DateTimeOffset? DetectedAtUtc);
+
+public sealed record OrderDifferenceModel(
+    Guid PlannedRecordingId,
+    int PlannedPosition,
+    int DetectedPosition);

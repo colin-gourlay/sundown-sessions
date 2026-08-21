@@ -339,6 +339,98 @@ public sealed class ShowrunnerServiceTests
     }
 
     [Fact]
+    public async Task PlaybackEvidenceComparesPlanWithDetectedPlaybackAndHighlightsDifferences()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var recordingA = new CreateRecordingCommand("Track A", "Artist");
+        var recordingB = new CreateRecordingCommand("Track B", "Artist");
+        var recordingC = new CreateRecordingCommand("Track C", "Artist");
+        var setup = new ShowrunnerService(context);
+        var a = (await setup.CreateRecordingAsync(recordingA)).Value!;
+        var b = (await setup.CreateRecordingAsync(recordingB)).Value!;
+        var c = (await setup.CreateRecordingAsync(recordingC)).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("mixxx-evidence", "Mixxx evidence", new DateOnly(2026, 8, 28)))).Value!;
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(a.Id, 1));
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(b.Id, 2));
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(c.Id, 3));
+
+        var evidence = new StubMixxxPlaybackEvidenceReader(new MixxxPlaybackReadModel(
+            false,
+            [],
+            [
+                new MixxxPlaybackCandidateModel("Track B", "Artist", new DateTimeOffset(2026, 8, 28, 19, 00, 00, TimeSpan.Zero)),
+                new MixxxPlaybackCandidateModel("Track B", "Artist", new DateTimeOffset(2026, 8, 28, 19, 00, 01, TimeSpan.Zero)),
+                new MixxxPlaybackCandidateModel("Track A", "Artist", new DateTimeOffset(2026, 8, 28, 19, 04, 00, TimeSpan.Zero)),
+                new MixxxPlaybackCandidateModel("Unexpected", "Guest", new DateTimeOffset(2026, 8, 28, 19, 08, 00, TimeSpan.Zero)),
+            ]));
+        var service = new ShowrunnerService(context, mixxxPlaybackEvidenceReader: evidence);
+
+        var result = await service.GetPlaybackEvidenceAsync(show.Id);
+
+        Assert.True(result.IsSuccess);
+        Assert.Equal(3, result.Value!.PlannedCount);
+        Assert.Equal(2, result.Value.DetectedPlannedCount);
+        Assert.Single(result.Value.Unexpected);
+        Assert.Equal("Unexpected", result.Value.Unexpected[0].Title);
+        Assert.Contains(result.Value.Planned, item => item.Title == "Track C" && !item.IsDetected);
+        Assert.Contains(result.Value.OrderingDifferences, item => item.PlannedPosition == 1 && item.DetectedPosition == 2);
+    }
+
+    [Fact]
+    public async Task PlaybackEvidenceSurfacesIncompleteMixxxState()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context);
+        var recording = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Track", "Artist"))).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("mixxx-incomplete", "Mixxx incomplete", new DateOnly(2026, 8, 29)))).Value!;
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1));
+        var service = new ShowrunnerService(
+            context,
+            mixxxPlaybackEvidenceReader: new StubMixxxPlaybackEvidenceReader(
+                new MixxxPlaybackReadModel(true, ["mixxx_schema_unsupported"], [])));
+
+        var result = await service.GetPlaybackEvidenceAsync(show.Id);
+
+        Assert.True(result.IsSuccess);
+        Assert.True(result.Value!.IsIncompleteEvidence);
+        Assert.Contains("mixxx_schema_unsupported", result.Value.Warnings);
+        Assert.Equal(0, result.Value.DetectedPlannedCount);
+    }
+
+    [Fact]
+    public async Task ConfirmReconciliationRejectsUnresolvedAmbiguityAndAllowsOperatorCorrection()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var recording = (await service.CreateRecordingAsync(new CreateRecordingCommand("Track", "Artist"))).Value!;
+        var show = (await service.CreateShowAsync(new CreateShowCommand("mixxx-confirm", "Mixxx confirm", new DateOnly(2026, 8, 30)))).Value!;
+        var plan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1))).Value!;
+        var plannedRecordingId = plan.PlannedRecordings.Single().Id;
+
+        var rejected = await service.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(
+                true,
+                true,
+                [new ReconciliationItemCommand(plannedRecordingId, ReconciliationItemOutcome.Broadcast)]));
+        var accepted = await service.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(
+                true,
+                false,
+                [new ReconciliationItemCommand(plannedRecordingId, ReconciliationItemOutcome.NotBroadcast)]));
+
+        Assert.False(rejected.IsSuccess);
+        Assert.Equal("validation_failed", rejected.Error!.Code);
+        Assert.True(accepted.IsSuccess);
+        Assert.True(accepted.Value!.IsConfirmed);
+        Assert.Equal(ReconciliationItemOutcome.NotBroadcast, accepted.Value.Items.Single().Outcome);
+    }
+
+    [Fact]
     public async Task BoundaryValidatesPersistenceLimitsAndMissingHistoryRecording()
     {
         using var harness = new SqliteTestHarness();
@@ -350,5 +442,11 @@ public sealed class ShowrunnerServiceTests
 
         Assert.Equal("validation_failed", tooLong.Error!.Code);
         Assert.Equal("not_found", missingHistory.Error!.Code);
+    }
+
+    private sealed class StubMixxxPlaybackEvidenceReader(MixxxPlaybackReadModel model) : IMixxxPlaybackEvidenceReader
+    {
+        public Task<ApplicationResult<MixxxPlaybackReadModel>> ReadPlaybackEvidenceAsync(CancellationToken cancellationToken = default)
+            => Task.FromResult(ApplicationResult<MixxxPlaybackReadModel>.Success(model));
     }
 }
