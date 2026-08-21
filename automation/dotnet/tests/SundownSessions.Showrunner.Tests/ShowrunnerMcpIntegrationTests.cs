@@ -16,6 +16,9 @@ public sealed class ShowrunnerMcpIntegrationTests
             var service = new ShowrunnerService(context);
             showId = (await service.CreateShowAsync(
                 new CreateShowCommand("mcp-show", "MCP Show", new DateOnly(2026, 8, 21)))).Value!.Id;
+            var recording = (await service.CreateRecordingAsync(
+                new CreateRecordingCommand("Missing locally", "Test Artist"))).Value!;
+            await service.PlanRecordingAsync(showId, new PlanRecordingCommand(recording.Id, 1));
         }
 
         var dotnetDirectory = FindDotnetDirectory();
@@ -56,7 +59,11 @@ public sealed class ShowrunnerMcpIntegrationTests
         Assert.NotNull(result.StructuredContent);
         var json = result.StructuredContent.Value;
         Assert.True(json.GetProperty("isSuccess").GetBoolean());
-        Assert.Equal("Prepared", json.GetProperty("result").GetProperty("status").GetString());
+        var preparationResult = json.GetProperty("result");
+        Assert.Equal("Unresolved", preparationResult.GetProperty("status").GetString());
+        var unresolvedTrack = Assert.Single(preparationResult.GetProperty("unresolvedTracks").EnumerateArray());
+        Assert.Equal("MissingFile", unresolvedTrack.GetProperty("kind").GetString());
+        Assert.False(preparationResult.TryGetProperty("broadcastFolder", out _));
         Assert.DoesNotContain(files.MusicRoot, json.ToString(), StringComparison.Ordinal);
         Assert.DoesNotContain(files.PreparationRoot, json.ToString(), StringComparison.Ordinal);
     }
