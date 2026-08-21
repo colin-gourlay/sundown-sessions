@@ -89,9 +89,13 @@ internal sealed class ReconciliationEntity
 
     public DateTimeOffset? ConfirmedAtUtc { get; set; }
 
+    public DateTimeOffset? OperatorConfirmedAtUtc { get; set; }
+
     public ShowEntity Show { get; set; } = null!;
 
     public List<ReconciliationItemEntity> Items { get; } = [];
+
+    public List<ConfirmedPlaybackItemEntity> ConfirmedPlayback { get; } = [];
 }
 
 internal sealed class ReconciliationItemEntity
@@ -103,6 +107,21 @@ internal sealed class ReconciliationItemEntity
     public Guid PlannedRecordingId { get; set; }
 
     public ReconciliationItemOutcome Outcome { get; set; }
+
+    public ReconciliationEntity Reconciliation { get; set; } = null!;
+}
+
+internal sealed class ConfirmedPlaybackItemEntity
+{
+    public Guid Id { get; set; }
+
+    public Guid ReconciliationId { get; set; }
+
+    public Guid RecordingId { get; set; }
+
+    public Guid? PlannedRecordingId { get; set; }
+
+    public int Position { get; set; }
 
     public ReconciliationEntity Reconciliation { get; set; } = null!;
 }

@@ -17,6 +17,8 @@ builder.Logging.AddConsole(options => options.LogToStandardErrorThreshold = LogL
 builder.Services.AddDbContext<ShowrunnerDbContext>(options => options.UseSqlite(connectionString));
 builder.Services.AddScoped<ShowrunnerService>();
 builder.Services.AddScoped<ShowPreparationService>();
+builder.Services.AddScoped<ShowReconciliationService>();
+builder.Services.AddSingleton<IMixxxPlaybackEvidenceReader>(_ => new SqliteMixxxPlaybackEvidenceReader());
 builder.Services.AddSingleton(preparationOptions);
 builder.Services
     .AddMcpServer()

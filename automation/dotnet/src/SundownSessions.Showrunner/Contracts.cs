@@ -23,7 +23,12 @@ public sealed record ReconciliationItemCommand(Guid PlannedRecordingId, Reconcil
 public sealed record ConfirmReconciliationCommand(
     bool OperatorConfirmed,
     bool HasUnresolvedAmbiguity,
-    IReadOnlyCollection<ReconciliationItemCommand> Items);
+    IReadOnlyCollection<ConfirmedPlaybackItemCommand> Items);
+
+public sealed record ConfirmedPlaybackItemCommand(
+    Guid RecordingId,
+    int Position,
+    Guid? PlannedRecordingId = null);
 
 public enum ReconciliationItemOutcome
 {
@@ -68,9 +73,12 @@ public sealed record ReconciliationModel(
     Guid Id,
     Guid ShowId,
     bool IsConfirmed,
+    bool IsOperatorConfirmed,
     DateTimeOffset CreatedAtUtc,
     DateTimeOffset? ConfirmedAtUtc,
-    IReadOnlyList<ReconciliationItemModel> Items);
+    DateTimeOffset? OperatorConfirmedAtUtc,
+    IReadOnlyList<ReconciliationItemModel> Items,
+    IReadOnlyList<ConfirmedPlaybackItemModel> ConfirmedPlayback);
 
 public sealed record ReconciliationItemModel(
     Guid PlannedRecordingId,
@@ -78,13 +86,21 @@ public sealed record ReconciliationItemModel(
     int PlannedPosition,
     ReconciliationItemOutcome Outcome);
 
+public sealed record ConfirmedPlaybackItemModel(
+    Guid RecordingId,
+    int Position,
+    Guid? PlannedRecordingId);
+
 public sealed record PlaybackEvidenceModel(
     Guid ShowId,
+    DateOnly EvidenceDate,
+    string? HistorySessionName,
     int PlannedCount,
     int DetectedPlannedCount,
     bool IsIncompleteEvidence,
     bool HasAmbiguousMatches,
     IReadOnlyList<string> Warnings,
+    IReadOnlyList<MixxxHistorySessionSummaryModel> CandidateSessions,
     IReadOnlyList<PlannedPlaybackEvidenceItemModel> Planned,
     IReadOnlyList<UnexpectedPlaybackEvidenceItemModel> Unexpected,
     IReadOnlyList<OrderDifferenceModel> OrderingDifferences);
@@ -104,9 +120,18 @@ public sealed record UnexpectedPlaybackEvidenceItemModel(
     int DetectedPosition,
     string Title,
     string? Artist,
-    DateTimeOffset? DetectedAtUtc);
+    DateTimeOffset? DetectedAtUtc,
+    Guid? RecordingId,
+    IReadOnlyList<Guid> RecordingCandidates,
+    bool IsAmbiguousMatch);
 
 public sealed record OrderDifferenceModel(
     Guid PlannedRecordingId,
     int PlannedPosition,
     int DetectedPosition);
+
+public sealed record MixxxHistorySessionSummaryModel(
+    string Name,
+    DateTimeOffset? StartedAt,
+    DateTimeOffset? EndedAt,
+    int TrackCount);

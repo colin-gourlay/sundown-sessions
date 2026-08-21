@@ -7,16 +7,11 @@ public sealed class ShowrunnerService
 {
     private readonly ShowrunnerDbContext dbContext;
     private readonly IShowrunnerClock clock;
-    private readonly IMixxxPlaybackEvidenceReader mixxxPlaybackEvidenceReader;
 
-    public ShowrunnerService(
-        ShowrunnerDbContext dbContext,
-        IShowrunnerClock? clock = null,
-        IMixxxPlaybackEvidenceReader? mixxxPlaybackEvidenceReader = null)
+    public ShowrunnerService(ShowrunnerDbContext dbContext, IShowrunnerClock? clock = null)
     {
         this.dbContext = dbContext;
         this.clock = clock ?? new SystemShowrunnerClock();
-        this.mixxxPlaybackEvidenceReader = mixxxPlaybackEvidenceReader ?? new SqliteMixxxPlaybackEvidenceReader();
     }
 
     public async Task<ApplicationResult<RecordingModel>> CreateRecordingAsync(CreateRecordingCommand command, CancellationToken cancellationToken = default)
@@ -260,7 +255,7 @@ public sealed class ShowrunnerService
             return ApplicationResult<ShowModel>.Failure(ApplicationError.NotFound("show", showId));
         }
 
-        if (show.Reconciliation?.ConfirmedAtUtc is not null)
+        if (show.Reconciliation is { ConfirmedAtUtc: not null } or { OperatorConfirmedAtUtc: not null })
         {
             return ApplicationResult<ShowModel>.Failure(
                 ApplicationError.Conflict(
@@ -361,159 +356,14 @@ public sealed class ShowrunnerService
         return ApplicationResult<RepeatExceptionModel>.Success(Map(repeatException));
     }
 
-    public async Task<ApplicationResult<PlaybackEvidenceModel>> GetPlaybackEvidenceAsync(Guid showId, CancellationToken cancellationToken = default)
-    {
-        var show = await dbContext.Shows
-            .AsNoTracking()
-            .Include(item => item.PlannedRecordings.OrderBy(recording => recording.Position))
-            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
-        if (show is null)
-        {
-            return ApplicationResult<PlaybackEvidenceModel>.Failure(ApplicationError.NotFound("show", showId));
-        }
-
-        var recordings = await dbContext.Recordings
-            .AsNoTracking()
-            .Where(item => show.PlannedRecordings.Select(plan => plan.RecordingId).Contains(item.Id))
-            .ToDictionaryAsync(item => item.Id, cancellationToken);
-
-        var evidenceResult = await mixxxPlaybackEvidenceReader.ReadPlaybackEvidenceAsync(cancellationToken);
-        if (!evidenceResult.IsSuccess)
-        {
-            return ApplicationResult<PlaybackEvidenceModel>.Failure(evidenceResult.Error!);
-        }
-
-        var warnings = evidenceResult.Value!.Warnings.ToList();
-        var rawEvidenceCandidates = evidenceResult.Value.Candidates;
-        var evidence = CollapseHistoryNoise(rawEvidenceCandidates);
-        var remainingEvidenceIndexes = new HashSet<int>(Enumerable.Range(0, evidence.Count));
-        var plannedItems = new List<PlannedPlaybackEvidenceItemModel>(show.PlannedRecordings.Count);
-        var orderingDifferences = new List<OrderDifferenceModel>();
-        var hasAmbiguity = false;
-
-        foreach (var planned in show.PlannedRecordings.OrderBy(item => item.Position))
-        {
-            if (!recordings.TryGetValue(planned.RecordingId, out var recording))
-            {
-                warnings.Add("planned_recording_missing");
-                plannedItems.Add(new PlannedPlaybackEvidenceItemModel(
-                    planned.Id,
-                    planned.RecordingId,
-                    planned.Position,
-                    "(missing recording)",
-                    null,
-                    false,
-                    null,
-                    null,
-                    false));
-                continue;
-            }
-
-            var candidateIndexes = remainingEvidenceIndexes
-                .Where(index => MatchesRecording(recording, evidence[index]))
-                .OrderBy(index => index)
-                .ToArray();
-
-            if (candidateIndexes.Length == 0)
-            {
-                plannedItems.Add(new PlannedPlaybackEvidenceItemModel(
-                    planned.Id,
-                    planned.RecordingId,
-                    planned.Position,
-                    recording.Title,
-                    recording.Artist,
-                    false,
-                    null,
-                    null,
-                    false));
-                continue;
-            }
-
-            var selectedIndex = candidateIndexes[0];
-            remainingEvidenceIndexes.Remove(selectedIndex);
-            var detectedPosition = selectedIndex + 1;
-            var ambiguousMatch = candidateIndexes.Length > 1;
-            hasAmbiguity |= ambiguousMatch;
-            if (detectedPosition != planned.Position)
-            {
-                orderingDifferences.Add(new OrderDifferenceModel(planned.Id, planned.Position, detectedPosition));
-            }
-
-            plannedItems.Add(new PlannedPlaybackEvidenceItemModel(
-                planned.Id,
-                planned.RecordingId,
-                planned.Position,
-                recording.Title,
-                recording.Artist,
-                true,
-                detectedPosition,
-                evidence[selectedIndex].PlayedAtUtc,
-                ambiguousMatch));
-        }
-
-        var unexpected = remainingEvidenceIndexes
-            .OrderBy(index => index)
-            .Select(index => new UnexpectedPlaybackEvidenceItemModel(
-                index + 1,
-                evidence[index].Title ?? "(untitled)",
-                evidence[index].Artist,
-                evidence[index].PlayedAtUtc))
-            .ToArray();
-        var detectedPlannedCount = plannedItems.Count(item => item.IsDetected);
-
-        if (evidence.Count == 0 &&
-            !evidenceResult.Value.IsIncomplete &&
-            (rawEvidenceCandidates.Count > 0 ||
-             warnings.All(warning => !string.Equals(warning, "mixxx_history_empty", StringComparison.Ordinal))))
-        {
-            warnings.Add("no_usable_mixxx_data");
-        }
-
-        return ApplicationResult<PlaybackEvidenceModel>.Success(new PlaybackEvidenceModel(
-            showId,
-            show.PlannedRecordings.Count,
-            detectedPlannedCount,
-            evidenceResult.Value.IsIncomplete,
-            hasAmbiguity,
-            warnings.Distinct(StringComparer.Ordinal).ToArray(),
-            plannedItems,
-            unexpected,
-            orderingDifferences));
-    }
-
-    public async Task<ApplicationResult<ReconciliationModel>> ConfirmReconciliationAsync(
-        Guid showId,
-        ConfirmReconciliationCommand command,
-        CancellationToken cancellationToken = default)
-    {
-        if (!command.OperatorConfirmed)
-        {
-            return ApplicationResult<ReconciliationModel>.Failure(
-                ApplicationError.Validation(
-                    "operatorConfirmed",
-                    "Operator confirmation is required before reconciliation can be confirmed."));
-        }
-
-        if (command.HasUnresolvedAmbiguity)
-        {
-            return ApplicationResult<ReconciliationModel>.Failure(
-                ApplicationError.Validation(
-                    "hasUnresolvedAmbiguity",
-                    "Reconciliation cannot be confirmed while unresolved ambiguity remains."));
-        }
-
-        return await SaveReconciliationAsync(
-            showId,
-            new SaveReconciliationCommand(true, command.Items),
-            cancellationToken);
-    }
-
     public async Task<ApplicationResult<ReconciliationModel>> SaveReconciliationAsync(Guid showId, SaveReconciliationCommand command, CancellationToken cancellationToken = default)
     {
         var show = await dbContext.Shows
             .Include(item => item.PlannedRecordings)
             .Include(item => item.Reconciliation)
                 .ThenInclude(item => item!.Items)
+            .Include(item => item.Reconciliation)
+                .ThenInclude(item => item!.ConfirmedPlayback)
             .Include(item => item.BroadcastRecordings)
             .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
 
@@ -522,12 +372,22 @@ public sealed class ShowrunnerService
             return ApplicationResult<ReconciliationModel>.Failure(ApplicationError.NotFound("show", showId));
         }
 
-        if (show.Reconciliation?.ConfirmedAtUtc is not null)
+        if (show.Reconciliation is { ConfirmedAtUtc: not null })
         {
             return ApplicationResult<ReconciliationModel>.Failure(
                 ApplicationError.Conflict(
                     "reconciliation_already_confirmed",
                     "The show's reconciliation has already been confirmed.",
+                    "showId",
+                    showId.ToString()));
+        }
+
+        if (show.Reconciliation is { OperatorConfirmedAtUtc: not null })
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(
+                ApplicationError.Conflict(
+                    "reconciliation_already_operator_confirmed",
+                    "An operator-confirmed reconciliation cannot be replaced by a draft or finalisation payload.",
                     "showId",
                     showId.ToString()));
         }
@@ -680,6 +540,8 @@ public sealed class ShowrunnerService
             .Include(item => item.PlannedRecordings)
             .Include(item => item.Reconciliation)
                 .ThenInclude(item => item!.Items)
+            .Include(item => item.Reconciliation)
+                .ThenInclude(item => item!.ConfirmedPlayback)
             .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
 
         if (show is null)
@@ -764,8 +626,10 @@ public sealed class ShowrunnerService
             reconciliation.Id,
             reconciliation.ShowId,
             reconciliation.ConfirmedAtUtc is not null,
+            reconciliation.OperatorConfirmedAtUtc is not null,
             reconciliation.CreatedAtUtc,
             reconciliation.ConfirmedAtUtc,
+            reconciliation.OperatorConfirmedAtUtc,
             reconciliation.Items
                 .Select(item =>
                 {
@@ -777,6 +641,13 @@ public sealed class ShowrunnerService
                         item.Outcome);
                 })
                 .OrderBy(item => item.PlannedPosition)
+                .ToArray(),
+            reconciliation.ConfirmedPlayback
+                .OrderBy(item => item.Position)
+                .Select(item => new ConfirmedPlaybackItemModel(
+                    item.RecordingId,
+                    item.Position,
+                    item.PlannedRecordingId))
                 .ToArray());
     }
 
@@ -785,61 +656,5 @@ public sealed class ShowrunnerService
         return value?.Trim().Length > maximumLength
             ? ApplicationError.Validation(field, $"{field} cannot exceed {maximumLength} characters.")
             : null;
-    }
-
-    private static bool MatchesRecording(RecordingEntity recording, MixxxPlaybackCandidateModel candidate)
-    {
-        var plannedTitle = NormaliseText(recording.Title);
-        var playedTitle = NormaliseText(candidate.Title);
-        if (!string.Equals(plannedTitle, playedTitle, StringComparison.Ordinal))
-        {
-            return false;
-        }
-
-        var plannedArtist = NormaliseText(recording.Artist);
-        if (string.IsNullOrWhiteSpace(plannedArtist))
-        {
-            return true;
-        }
-
-        return string.Equals(plannedArtist, NormaliseText(candidate.Artist), StringComparison.Ordinal);
-    }
-
-    private static IReadOnlyList<MixxxPlaybackCandidateModel> CollapseHistoryNoise(IReadOnlyList<MixxxPlaybackCandidateModel> candidates)
-    {
-        var cleaned = new List<MixxxPlaybackCandidateModel>(candidates.Count);
-        foreach (var candidate in candidates.OrderBy(item => item.PlayedAtUtc ?? DateTimeOffset.MinValue))
-        {
-            var title = string.IsNullOrWhiteSpace(candidate.Title) ? null : candidate.Title.Trim();
-            if (title is null)
-            {
-                continue;
-            }
-
-            var artist = string.IsNullOrWhiteSpace(candidate.Artist) ? null : candidate.Artist.Trim();
-            var current = new MixxxPlaybackCandidateModel(title, artist, candidate.PlayedAtUtc);
-            var previous = cleaned.LastOrDefault();
-            if (previous is not null &&
-                string.Equals(NormaliseText(previous.Title), NormaliseText(current.Title), StringComparison.Ordinal) &&
-                string.Equals(NormaliseText(previous.Artist), NormaliseText(current.Artist), StringComparison.Ordinal) &&
-                previous.PlayedAtUtc.HasValue &&
-                current.PlayedAtUtc.HasValue &&
-                Math.Abs((current.PlayedAtUtc.Value - previous.PlayedAtUtc.Value).TotalSeconds) <= 2)
-            {
-                continue;
-            }
-
-            cleaned.Add(current);
-        }
-
-        return cleaned;
-    }
-
-    private static string NormaliseText(string? value)
-    {
-        var trimmed = value?.Trim().ToLowerInvariant() ?? string.Empty;
-        var parts = trimmed
-            .Split(' ', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
-        return string.Join(' ', parts);
     }
 }

@@ -339,6 +339,36 @@ public sealed class ShowrunnerServiceTests
     }
 
     [Fact]
+    public async Task PlaybackEvidenceReportsAnExactPlanWithoutDiscrepancies()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context);
+        var first = (await setup.CreateRecordingAsync(new CreateRecordingCommand("First", "Artist"))).Value!;
+        var second = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Second", "Artist"))).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("mixxx-exact", "Mixxx exact", new DateOnly(2026, 8, 28)))).Value!;
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(first.Id, 1));
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(second.Id, 2));
+        var service = new ShowReconciliationService(
+            context,
+            new StubMixxxPlaybackEvidenceReader(new MixxxPlaybackReadModel(
+                false,
+                [],
+                [
+                    new MixxxPlaybackCandidateModel("First", "Artist", null),
+                    new MixxxPlaybackCandidateModel("Second", "Artist", null),
+                ])));
+
+        var result = await service.GetPlaybackEvidenceAsync(show.Id);
+
+        Assert.Equal(2, result.Value!.DetectedPlannedCount);
+        Assert.Empty(result.Value.Unexpected);
+        Assert.Empty(result.Value.OrderingDifferences);
+        Assert.False(result.Value.HasAmbiguousMatches);
+        Assert.All(result.Value.Planned, item => Assert.True(item.IsDetected));
+    }
+
+    [Fact]
     public async Task PlaybackEvidenceComparesPlanWithDetectedPlaybackAndHighlightsDifferences()
     {
         using var harness = new SqliteTestHarness();
@@ -355,6 +385,7 @@ public sealed class ShowrunnerServiceTests
         await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(b.Id, 2));
         await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(c.Id, 3));
 
+        var unexpected = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Unexpected", "Guest"))).Value!;
         var evidence = new StubMixxxPlaybackEvidenceReader(new MixxxPlaybackReadModel(
             false,
             [],
@@ -364,7 +395,7 @@ public sealed class ShowrunnerServiceTests
                 new MixxxPlaybackCandidateModel("Track A", "Artist", new DateTimeOffset(2026, 8, 28, 19, 04, 00, TimeSpan.Zero)),
                 new MixxxPlaybackCandidateModel("Unexpected", "Guest", new DateTimeOffset(2026, 8, 28, 19, 08, 00, TimeSpan.Zero)),
             ]));
-        var service = new ShowrunnerService(context, mixxxPlaybackEvidenceReader: evidence);
+        var service = new ShowReconciliationService(context, evidence);
 
         var result = await service.GetPlaybackEvidenceAsync(show.Id);
 
@@ -373,8 +404,48 @@ public sealed class ShowrunnerServiceTests
         Assert.Equal(2, result.Value.DetectedPlannedCount);
         Assert.Single(result.Value.Unexpected);
         Assert.Equal("Unexpected", result.Value.Unexpected[0].Title);
+        Assert.Equal(unexpected.Id, result.Value.Unexpected[0].RecordingId);
         Assert.Contains(result.Value.Planned, item => item.Title == "Track C" && !item.IsDetected);
         Assert.Contains(result.Value.OrderingDifferences, item => item.PlannedPosition == 1 && item.DetectedPosition == 2);
+        Assert.Contains(result.Value.OrderingDifferences, item => item.PlannedPosition == 2 && item.DetectedPosition == 1);
+        Assert.Equal(show.ShowDate, evidence.RequestedDate);
+    }
+
+    [Fact]
+    public async Task PlaybackEvidenceUsesLocalFileIdentityAndSurfacesTextAmbiguity()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context);
+        var first = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Same", "Artist"))).Value!;
+        var second = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Same", "Artist"))).Value!;
+        await setup.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("local-file", "album/first.flac"));
+        await setup.AddExternalIdentifierAsync(second.Id, new AddExternalIdentifierCommand("local-file", "album/second.flac"));
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("mixxx-identity", "Mixxx identity", new DateOnly(2026, 8, 29)))).Value!;
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(first.Id, 1));
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(second.Id, 2));
+
+        var ambiguousService = new ShowReconciliationService(
+            context,
+            new StubMixxxPlaybackEvidenceReader(new MixxxPlaybackReadModel(
+                false,
+                [],
+                [new MixxxPlaybackCandidateModel("Same", "Artist", null)])));
+        var resolvedService = new ShowReconciliationService(
+            context,
+            new StubMixxxPlaybackEvidenceReader(new MixxxPlaybackReadModel(
+                false,
+                [],
+                [new MixxxPlaybackCandidateModel("Same", "Artist", null, "file:///music/album/second.flac")])));
+
+        var ambiguous = await ambiguousService.GetPlaybackEvidenceAsync(show.Id);
+        var resolved = await resolvedService.GetPlaybackEvidenceAsync(show.Id);
+
+        Assert.True(ambiguous.Value!.HasAmbiguousMatches);
+        Assert.All(ambiguous.Value.Planned, item => Assert.True(item.IsAmbiguousMatch));
+        Assert.Equal(2, ambiguous.Value.Unexpected.Single().RecordingCandidates.Count);
+        Assert.False(resolved.Value!.HasAmbiguousMatches);
+        Assert.Equal(second.Id, resolved.Value.Planned.Single(item => item.IsDetected).RecordingId);
     }
 
     [Fact]
@@ -386,9 +457,9 @@ public sealed class ShowrunnerServiceTests
         var recording = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Track", "Artist"))).Value!;
         var show = (await setup.CreateShowAsync(new CreateShowCommand("mixxx-incomplete", "Mixxx incomplete", new DateOnly(2026, 8, 29)))).Value!;
         await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1));
-        var service = new ShowrunnerService(
+        var service = new ShowReconciliationService(
             context,
-            mixxxPlaybackEvidenceReader: new StubMixxxPlaybackEvidenceReader(
+            new StubMixxxPlaybackEvidenceReader(
                 new MixxxPlaybackReadModel(true, ["mixxx_schema_unsupported"], [])));
 
         var result = await service.GetPlaybackEvidenceAsync(show.Id);
@@ -400,34 +471,74 @@ public sealed class ShowrunnerServiceTests
     }
 
     [Fact]
-    public async Task ConfirmReconciliationRejectsUnresolvedAmbiguityAndAllowsOperatorCorrection()
+    public async Task OperatorConfirmationPersistsCorrectedOrderWithoutCreatingBroadcastHistory()
     {
         using var harness = new SqliteTestHarness();
         await using var context = harness.CreateContext();
-        var service = new ShowrunnerService(context);
-        var recording = (await service.CreateRecordingAsync(new CreateRecordingCommand("Track", "Artist"))).Value!;
-        var show = (await service.CreateShowAsync(new CreateShowCommand("mixxx-confirm", "Mixxx confirm", new DateOnly(2026, 8, 30)))).Value!;
-        var plan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1))).Value!;
-        var plannedRecordingId = plan.PlannedRecordings.Single().Id;
+        var setup = new ShowrunnerService(context);
+        var dropped = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Dropped", "Artist"))).Value!;
+        var played = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Played", "Artist"))).Value!;
+        var unexpected = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Unexpected", "Guest"))).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("mixxx-confirm", "Mixxx confirm", new DateOnly(2026, 8, 30)))).Value!;
+        var firstPlan = (await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(dropped.Id, 1))).Value!;
+        var secondPlan = (await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(played.Id, 2))).Value!;
+        var firstPlanId = firstPlan.PlannedRecordings.Single().Id;
+        var secondPlanId = secondPlan.PlannedRecordings.Single(item => item.RecordingId == played.Id).Id;
+        var service = new ShowReconciliationService(context, new StubMixxxPlaybackEvidenceReader());
 
-        var rejected = await service.ConfirmReconciliationAsync(
-            show.Id,
-            new ConfirmReconciliationCommand(
-                true,
-                true,
-                [new ReconciliationItemCommand(plannedRecordingId, ReconciliationItemOutcome.Broadcast)]));
-        var accepted = await service.ConfirmReconciliationAsync(
+        var result = await service.ConfirmReconciliationAsync(
             show.Id,
             new ConfirmReconciliationCommand(
                 true,
                 false,
-                [new ReconciliationItemCommand(plannedRecordingId, ReconciliationItemOutcome.NotBroadcast)]));
+                [
+                    new ConfirmedPlaybackItemCommand(played.Id, 1, secondPlanId),
+                    new ConfirmedPlaybackItemCommand(unexpected.Id, 2),
+                ]));
 
-        Assert.False(rejected.IsSuccess);
-        Assert.Equal("validation_failed", rejected.Error!.Code);
-        Assert.True(accepted.IsSuccess);
-        Assert.True(accepted.Value!.IsConfirmed);
-        Assert.Equal(ReconciliationItemOutcome.NotBroadcast, accepted.Value.Items.Single().Outcome);
+        Assert.True(result.IsSuccess);
+        Assert.True(result.Value!.IsOperatorConfirmed);
+        Assert.False(result.Value.IsConfirmed);
+        Assert.Null(result.Value.ConfirmedAtUtc);
+        Assert.Equal([played.Id, unexpected.Id], result.Value.ConfirmedPlayback.Select(item => item.RecordingId));
+        Assert.Equal(ReconciliationItemOutcome.NotBroadcast, result.Value.Items.Single(item => item.PlannedRecordingId == firstPlanId).Outcome);
+        Assert.Equal(ReconciliationItemOutcome.Broadcast, result.Value.Items.Single(item => item.PlannedRecordingId == secondPlanId).Outcome);
+        Assert.Empty((await setup.GetBroadcastHistoryAsync(played.Id)).Value!);
+        Assert.Empty((await setup.GetBroadcastHistoryAsync(unexpected.Id)).Value!);
+    }
+
+    [Fact]
+    public async Task OperatorConfirmationRejectsAmbiguityInvalidOrderAndMismatchedPlanLinks()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context);
+        var first = (await setup.CreateRecordingAsync(new CreateRecordingCommand("First", "Artist"))).Value!;
+        var second = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Second", "Artist"))).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("mixxx-invalid", "Mixxx invalid", new DateOnly(2026, 8, 30)))).Value!;
+        var plan = (await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(first.Id, 1))).Value!;
+        var plannedId = plan.PlannedRecordings.Single().Id;
+        var service = new ShowReconciliationService(context, new StubMixxxPlaybackEvidenceReader());
+
+        var ambiguous = await service.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(true, true, []));
+        var invalidOrder = await service.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(
+                true,
+                false,
+                [new ConfirmedPlaybackItemCommand(first.Id, 2, plannedId)]));
+        var mismatched = await service.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(
+                true,
+                false,
+                [new ConfirmedPlaybackItemCommand(second.Id, 1, plannedId)]));
+
+        Assert.Equal("validation_failed", ambiguous.Error!.Code);
+        Assert.Equal("validation_failed", invalidOrder.Error!.Code);
+        Assert.Equal("planned_recording_mismatch", mismatched.Error!.Code);
     }
 
     [Fact]
@@ -444,9 +555,17 @@ public sealed class ShowrunnerServiceTests
         Assert.Equal("not_found", missingHistory.Error!.Code);
     }
 
-    private sealed class StubMixxxPlaybackEvidenceReader(MixxxPlaybackReadModel model) : IMixxxPlaybackEvidenceReader
+    private sealed class StubMixxxPlaybackEvidenceReader(MixxxPlaybackReadModel? model = null) : IMixxxPlaybackEvidenceReader
     {
-        public Task<ApplicationResult<MixxxPlaybackReadModel>> ReadPlaybackEvidenceAsync(CancellationToken cancellationToken = default)
-            => Task.FromResult(ApplicationResult<MixxxPlaybackReadModel>.Success(model));
+        public DateOnly? RequestedDate { get; private set; }
+
+        public Task<ApplicationResult<MixxxPlaybackReadModel>> ReadPlaybackEvidenceAsync(
+            DateOnly showDate,
+            CancellationToken cancellationToken = default)
+        {
+            RequestedDate = showDate;
+            return Task.FromResult(ApplicationResult<MixxxPlaybackReadModel>.Success(
+                model ?? new MixxxPlaybackReadModel(false, [], [])));
+        }
     }
 }

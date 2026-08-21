@@ -9,25 +9,25 @@ public sealed class ShowrunnerTools
     [McpServerTool(Name = "show_reconciliation_evidence", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
     [Description("Reads Mixxx playback evidence and compares it with the authoritative Showrunner plan without mutating Showrunner or Mixxx state.")]
     public static async Task<ShowReconciliationEvidenceToolResult> GetShowReconciliationEvidenceAsync(
-        ShowrunnerService showrunnerService,
+        ShowReconciliationService reconciliationService,
         [Description("The authoritative Showrunner show identifier.")] Guid showId,
         CancellationToken cancellationToken = default)
     {
-        var result = await showrunnerService.GetPlaybackEvidenceAsync(showId, cancellationToken);
+        var result = await reconciliationService.GetPlaybackEvidenceAsync(showId, cancellationToken);
         return result.IsSuccess
             ? new ShowReconciliationEvidenceToolResult(true, result.Value, null)
             : new ShowReconciliationEvidenceToolResult(false, null, result.Error);
     }
 
     [McpServerTool(Name = "show_reconciliation_confirm", ReadOnly = false, Idempotent = false, UseStructuredContent = true)]
-    [Description("Confirms operator-approved reconciliation for a show. Confirmation is rejected if ambiguity is unresolved.")]
+    [Description("Persists an explicit operator-approved final playback order for later finalisation. It does not create permanent broadcast history and rejects unresolved ambiguity.")]
     public static async Task<ShowReconciliationConfirmToolResult> ConfirmShowReconciliationAsync(
-        ShowrunnerService showrunnerService,
+        ShowReconciliationService reconciliationService,
         [Description("The authoritative Showrunner show identifier.")] Guid showId,
         [Description("The explicit operator-approved reconciliation payload.")] ConfirmReconciliationCommand command,
         CancellationToken cancellationToken = default)
     {
-        var result = await showrunnerService.ConfirmReconciliationAsync(showId, command, cancellationToken);
+        var result = await reconciliationService.ConfirmReconciliationAsync(showId, command, cancellationToken);
         return result.IsSuccess
             ? new ShowReconciliationConfirmToolResult(true, result.Value, null)
             : new ShowReconciliationConfirmToolResult(false, null, result.Error);
