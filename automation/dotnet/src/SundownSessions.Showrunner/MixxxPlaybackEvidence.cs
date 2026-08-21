@@ -80,7 +80,7 @@ public sealed class SqliteMixxxPlaybackEvidenceReader(string? databasePath = nul
 
             return ApplicationResult<MixxxPlaybackReadModel>.Success(
                 new MixxxPlaybackReadModel(
-                    warnings.Count > 0,
+                    false,
                     warnings,
                     candidates));
         }

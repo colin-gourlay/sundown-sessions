@@ -16,8 +16,7 @@ Configure the server with environment variables:
 - `SUNDOWN_SHOWRUNNER_SHOW_DURATION_MINUTES`: optional positive programme
   duration used to calculate remaining time or overrun.
 - `SUNDOWN_SHOWRUNNER_MIXXX_DB_PATH`: optional path to Mixxx's SQLite
-  database for playback evidence. Defaults to `~/.mixxx/mixxxdb.sqlite` on
-  Linux.
+  database for playback evidence. Defaults to `~/.mixxx/mixxxdb.sqlite`.
 
 The music root cannot be inside the preparation root. Preparation results use
 root-relative source paths and stable folder/file names; absolute local paths
