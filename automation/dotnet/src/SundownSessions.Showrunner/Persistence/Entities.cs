@@ -134,7 +134,9 @@ internal sealed class BroadcastRecordingEntity
 
     public Guid RecordingId { get; set; }
 
-    public Guid PlannedRecordingId { get; set; }
+    public Guid? PlannedRecordingId { get; set; }
+
+    public int Position { get; set; }
 
     public DateTimeOffset BroadcastAtUtc { get; set; }
 

@@ -299,6 +299,127 @@ public sealed class ShowReconciliationService
         return ApplicationResult<ReconciliationModel>.Success(Map(reconciliation, show.PlannedRecordings));
     }
 
+    public async Task<ApplicationResult<ReconciliationFinalisationSummary>> FinaliseReconciliationAsync(
+        Guid showId,
+        CancellationToken cancellationToken = default)
+    {
+        var show = await dbContext.Shows
+            .Include(item => item.PlannedRecordings)
+            .Include(item => item.Reconciliation)
+                .ThenInclude(item => item!.Items)
+            .Include(item => item.Reconciliation)
+                .ThenInclude(item => item!.ConfirmedPlayback)
+            .Include(item => item.BroadcastRecordings)
+            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
+        if (show is null)
+        {
+            return ApplicationResult<ReconciliationFinalisationSummary>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        if (show.Reconciliation is null || show.Reconciliation.OperatorConfirmedAtUtc is null)
+        {
+            return ApplicationResult<ReconciliationFinalisationSummary>.Failure(
+                ApplicationError.Conflict(
+                    "reconciliation_not_operator_confirmed",
+                    "Finalisation requires an operator-confirmed reconciliation.",
+                    "showId",
+                    showId.ToString()));
+        }
+
+        var reconciliation = show.Reconciliation;
+        var expectedPlayback = reconciliation.ConfirmedPlayback.OrderBy(item => item.Position).ToArray();
+        if (reconciliation.ConfirmedAtUtc is not null)
+        {
+            if (!HasMatchingBroadcastHistory(show.BroadcastRecordings, expectedPlayback))
+            {
+                return ApplicationResult<ReconciliationFinalisationSummary>.Failure(
+                    ApplicationError.Conflict(
+                        "historical_correction_required",
+                        "The show is already finalised but persisted history no longer matches confirmed playback. Use an explicit audited correction workflow.",
+                        "showId",
+                        showId.ToString()));
+            }
+
+            var usedRepeatExceptions = await GetUsedRepeatExceptionsAsync(showId, expectedPlayback, cancellationToken);
+            return ApplicationResult<ReconciliationFinalisationSummary>.Success(new ReconciliationFinalisationSummary(
+                showId,
+                reconciliation.Id,
+                true,
+                true,
+                reconciliation.ConfirmedAtUtc,
+                [],
+                BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings),
+                usedRepeatExceptions));
+        }
+
+        var recordingIdsToBroadcast = expectedPlayback.Select(item => item.RecordingId).ToArray();
+        var repeatExceptionRecordingIds = await dbContext.RepeatExceptions
+            .Where(item => item.ShowId == showId)
+            .Select(item => item.RecordingId)
+            .ToHashSetAsync(cancellationToken);
+        var previouslyBroadcastRecordingIds = await dbContext.BroadcastRecordings
+            .AsNoTracking()
+            .Where(item => recordingIdsToBroadcast.Contains(item.RecordingId) && item.ShowId != showId)
+            .Select(item => item.RecordingId)
+            .Distinct()
+            .ToArrayAsync(cancellationToken);
+        var repeatedWithinShowRecordingIds = recordingIdsToBroadcast
+            .GroupBy(recordingId => recordingId)
+            .Where(group => group.Count() > 1)
+            .Select(group => group.Key);
+        var repeatedRecordingId = previouslyBroadcastRecordingIds
+            .Concat(repeatedWithinShowRecordingIds)
+            .Distinct()
+            .FirstOrDefault(recordingId => !repeatExceptionRecordingIds.Contains(recordingId));
+        if (repeatedRecordingId != Guid.Empty)
+        {
+            return ApplicationResult<ReconciliationFinalisationSummary>.Failure(
+                ApplicationError.Conflict(
+                    "repeat_detected",
+                    "The recording would be broadcast more than once and requires an explicit repeat exception.",
+                    "recordingId",
+                    repeatedRecordingId.ToString()));
+        }
+
+        var finalisedAtUtc = clock.UtcNow;
+        show.BroadcastRecordings.Clear();
+        var addedToHistory = new List<FinalisedBroadcastRecordingModel>(expectedPlayback.Length);
+        for (var index = 0; index < expectedPlayback.Length; index++)
+        {
+            var item = expectedPlayback[index];
+            var entity = new BroadcastRecordingEntity
+            {
+                Id = Guid.NewGuid(),
+                ShowId = showId,
+                RecordingId = item.RecordingId,
+                PlannedRecordingId = item.PlannedRecordingId,
+                Position = index + 1,
+                BroadcastAtUtc = finalisedAtUtc,
+            };
+            show.BroadcastRecordings.Add(entity);
+            addedToHistory.Add(new FinalisedBroadcastRecordingModel(
+                entity.Id,
+                entity.RecordingId,
+                entity.PlannedRecordingId,
+                entity.Position,
+                entity.BroadcastAtUtc));
+        }
+
+        reconciliation.ConfirmedAtUtc = finalisedAtUtc;
+        await dbContext.SaveChangesAsync(cancellationToken);
+
+        var repeatExceptionsUsed = await GetUsedRepeatExceptionsAsync(showId, expectedPlayback, cancellationToken);
+        return ApplicationResult<ReconciliationFinalisationSummary>.Success(new ReconciliationFinalisationSummary(
+            showId,
+            reconciliation.Id,
+            true,
+            false,
+            finalisedAtUtc,
+            addedToHistory,
+            BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings),
+            repeatExceptionsUsed));
+    }
+
     private static IReadOnlyList<MixxxPlaybackCandidateModel> CollapseHistoryNoise(
         IReadOnlyList<MixxxPlaybackCandidateModel> candidates,
         out bool discardedUnusableEvidence)
@@ -331,6 +452,64 @@ public sealed class ShowReconciliationService
         }
 
         return cleaned;
+    }
+
+    private static bool HasMatchingBroadcastHistory(
+        IEnumerable<BroadcastRecordingEntity> persisted,
+        IReadOnlyList<ConfirmedPlaybackItemEntity> expected)
+    {
+        var persistedItems = persisted.OrderBy(item => item.Position).ToArray();
+        if (persistedItems.Length != expected.Count)
+        {
+            return false;
+        }
+
+        for (var index = 0; index < persistedItems.Length; index++)
+        {
+            var persistedItem = persistedItems[index];
+            var expectedItem = expected[index];
+            if (persistedItem.Position != index + 1 ||
+                persistedItem.RecordingId != expectedItem.RecordingId ||
+                persistedItem.PlannedRecordingId != expectedItem.PlannedRecordingId)
+            {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    private static IReadOnlyList<DroppedPlannedRecordingModel> BuildDroppedPlannedRecordings(
+        ReconciliationEntity reconciliation,
+        IEnumerable<PlannedRecordingEntity> plannedRecordings)
+    {
+        var plannedLookup = plannedRecordings.ToDictionary(item => item.Id);
+        return reconciliation.Items
+            .Where(item => item.Outcome == ReconciliationItemOutcome.NotBroadcast)
+            .OrderBy(item => plannedLookup[item.PlannedRecordingId].Position)
+            .Select(item => new DroppedPlannedRecordingModel(
+                item.PlannedRecordingId,
+                plannedLookup[item.PlannedRecordingId].RecordingId,
+                plannedLookup[item.PlannedRecordingId].Position))
+            .ToArray();
+    }
+
+    private async Task<IReadOnlyList<RepeatExceptionModel>> GetUsedRepeatExceptionsAsync(
+        Guid showId,
+        IReadOnlyList<ConfirmedPlaybackItemEntity> expectedPlayback,
+        CancellationToken cancellationToken)
+    {
+        var recordingIds = expectedPlayback
+            .Select(item => item.RecordingId)
+            .Distinct()
+            .ToHashSet();
+
+        var exceptions = await dbContext.RepeatExceptions
+            .AsNoTracking()
+            .Where(item => item.ShowId == showId && recordingIds.Contains(item.RecordingId))
+            .Select(item => new RepeatExceptionModel(item.Id, item.ShowId, item.RecordingId, item.Reason, item.CreatedAtUtc))
+            .ToArrayAsync(cancellationToken);
+        return exceptions.OrderBy(item => item.CreatedAtUtc).ToArray();
     }
 
     private static bool SameTrackEvidence(MixxxPlaybackCandidateModel left, MixxxPlaybackCandidateModel right)

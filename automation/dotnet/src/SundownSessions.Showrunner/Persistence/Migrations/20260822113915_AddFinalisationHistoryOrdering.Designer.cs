@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using SundownSessions.Showrunner.Persistence;
 
@@ -10,9 +11,11 @@ using SundownSessions.Showrunner.Persistence;
 namespace SundownSessions.Showrunner.Persistence.Migrations
 {
     [DbContext(typeof(ShowrunnerDbContext))]
-    partial class ShowrunnerDbContextModelSnapshot : ModelSnapshot
+    [Migration("20260822113915_AddFinalisationHistoryOrdering")]
+    partial class AddFinalisationHistoryOrdering
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "10.0.11");

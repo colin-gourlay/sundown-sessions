@@ -67,7 +67,46 @@ public sealed record BroadcastHistoryEntry(
     Guid ShowId,
     string ShowSlug,
     DateOnly ShowDate,
+    DateTimeOffset BroadcastAtUtc,
+    Guid? PlannedRecordingId = null,
+    int? Position = null);
+
+public sealed record RecordingHistoryQuery(
+    Guid? RecordingId = null,
+    string? Title = null,
+    string? Artist = null);
+
+public sealed record RecordingHistoryQueryResult(
+    bool IsAmbiguous,
+    IReadOnlyList<RecordingHistoryCandidateModel> Candidates);
+
+public sealed record RecordingHistoryCandidateModel(
+    Guid RecordingId,
+    string Title,
+    string? Artist,
+    IReadOnlyList<BroadcastHistoryEntry> BroadcastHistory);
+
+public sealed record ReconciliationFinalisationSummary(
+    Guid ShowId,
+    Guid ReconciliationId,
+    bool IsFinalised,
+    bool IsNoOp,
+    DateTimeOffset? FinalisedAtUtc,
+    IReadOnlyList<FinalisedBroadcastRecordingModel> AddedToPermanentHistory,
+    IReadOnlyList<DroppedPlannedRecordingModel> DroppedPlannedRecordings,
+    IReadOnlyList<RepeatExceptionModel> RepeatExceptionsUsed);
+
+public sealed record FinalisedBroadcastRecordingModel(
+    Guid BroadcastRecordingId,
+    Guid RecordingId,
+    Guid? PlannedRecordingId,
+    int Position,
     DateTimeOffset BroadcastAtUtc);
+
+public sealed record DroppedPlannedRecordingModel(
+    Guid PlannedRecordingId,
+    Guid RecordingId,
+    int PlannedPosition);
 
 public sealed record ReconciliationModel(
     Guid Id,

@@ -33,6 +33,19 @@ public sealed class ShowrunnerTools
             : new ShowReconciliationConfirmToolResult(false, null, result.Error);
     }
 
+    [McpServerTool(Name = "show_reconciliation_finalise", ReadOnly = false, Idempotent = true, UseStructuredContent = true)]
+    [Description("Finalises an operator-confirmed reconciliation into permanent broadcast history. This is consequential and refuses unconfirmed reconciliations.")]
+    public static async Task<ShowReconciliationFinaliseToolResult> FinaliseShowReconciliationAsync(
+        ShowReconciliationService reconciliationService,
+        [Description("The authoritative Showrunner show identifier.")] Guid showId,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await reconciliationService.FinaliseReconciliationAsync(showId, cancellationToken);
+        return result.IsSuccess
+            ? new ShowReconciliationFinaliseToolResult(true, result.Value, null)
+            : new ShowReconciliationFinaliseToolResult(false, null, result.Error);
+    }
+
     [McpServerTool(Name = "show_prepare", ReadOnly = false, Idempotent = true, UseStructuredContent = true)]
     [Description("Matches a Showrunner plan to configured local FLAC metadata, checks repeat history and safely rebuilds its numbered preparation folder when every item is resolved.")]
     public static async Task<ShowPrepareToolResult> PrepareShowAsync(
@@ -76,5 +89,19 @@ public sealed class ShowrunnerTools
         return result.IsSuccess
             ? new RepeatExceptionCreateToolResult(true, result.Value, null)
             : new RepeatExceptionCreateToolResult(false, null, result.Error);
+    }
+
+    [McpServerTool(Name = "recording_history", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
+    [Description("Returns structured broadcast history for an exact recordingId or title/artist query, surfacing ambiguous candidate recordings instead of guessing.")]
+    public static async Task<RecordingHistoryToolResult> GetRecordingHistoryAsync(
+        ShowrunnerService showrunnerService,
+        [Description("Recording history lookup input. Provide recordingId for exact history, or title with optional artist for candidate matching.")]
+        RecordingHistoryQuery query,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await showrunnerService.QueryRecordingHistoryAsync(query, cancellationToken);
+        return result.IsSuccess
+            ? new RecordingHistoryToolResult(true, result.Value, null)
+            : new RecordingHistoryToolResult(false, null, result.Error);
     }
 }
