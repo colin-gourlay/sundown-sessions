@@ -7,6 +7,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+### Added
+
+- Showrunner MCP server (`showrunner/`) providing a local stdio MCP adapter over the deterministic Showrunner application layer, with initial tools: `show_get`, `show_get_by_date`, `recording_search`, `recording_history`, `show_prepare`, `recording_resolve`, and `repeat_exception_create`.
+- CI workflow (`.github/workflows/showrunner-build-and-test.yml`) that builds and tests the Showrunner solution on every change to `showrunner/**`.
+
 ### Removed
 
 - Retired the standalone .NET automation solution and its supporting CI, release, scanning, and enrichment workflows.
