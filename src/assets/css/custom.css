@@ -1173,7 +1173,8 @@ label[for]:focus-visible {
   padding-bottom: 0.15rem;
 }
 
-.show-page-toc #TableOfContents ul {
+.show-page-toc #TableOfContents ul,
+.show-page-toc #TableOfContents-mobile ul {
   margin-top: 0.15rem;
   margin-bottom: 0;
 }
@@ -1507,13 +1508,15 @@ label[for]:focus-visible {
   }
 }
 
-.show-page-toc #TableOfContents li {
+.show-page-toc #TableOfContents li,
+.show-page-toc #TableOfContents-mobile li {
   margin-top: 0.18rem;
   margin-bottom: 0.18rem;
   line-height: 1.35;
 }
 
-.show-page-toc #TableOfContents a {
+.show-page-toc #TableOfContents a,
+.show-page-toc #TableOfContents-mobile a {
   display: inline-block;
   padding-block: 0.08rem;
 }
