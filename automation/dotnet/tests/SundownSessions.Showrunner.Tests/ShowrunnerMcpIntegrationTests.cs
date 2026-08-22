@@ -1,4 +1,5 @@
 using ModelContextProtocol.Client;
+using Microsoft.Data.Sqlite;
 using SundownSessions.Showrunner.Persistence;
 
 namespace SundownSessions.Showrunner.Tests;
@@ -10,7 +11,9 @@ public sealed class ShowrunnerMcpIntegrationTests
     {
         using var harness = new SqliteTestHarness();
         using var files = new McpFileFixture();
+        using var mixxx = new MixxxFixture();
         Guid showId;
+        Guid detectedRecordingId;
         await using (var context = harness.CreateContext())
         {
             var service = new ShowrunnerService(context);
@@ -19,6 +22,8 @@ public sealed class ShowrunnerMcpIntegrationTests
             var recording = (await service.CreateRecordingAsync(
                 new CreateRecordingCommand("Missing locally", "Test Artist"))).Value!;
             await service.PlanRecordingAsync(showId, new PlanRecordingCommand(recording.Id, 1));
+            detectedRecordingId = (await service.CreateRecordingAsync(
+                new CreateRecordingCommand("Detected title", "Detected artist"))).Value!.Id;
         }
 
         var dotnetDirectory = FindDotnetDirectory();
@@ -31,6 +36,7 @@ public sealed class ShowrunnerMcpIntegrationTests
         environment[ShowrunnerDbContextFactory.DatabasePathEnvironmentVariable] = harness.DatabasePath;
         environment["SUNDOWN_SHOWRUNNER_MUSIC_ROOT"] = files.MusicRoot;
         environment["SUNDOWN_SHOWRUNNER_PREPARATION_ROOT"] = files.PreparationRoot;
+        environment[SqliteMixxxPlaybackEvidenceReader.MixxxDatabasePathEnvironmentVariable] = mixxx.DatabasePath;
 
         var transport = new StdioClientTransport(new StdioClientTransportOptions
         {
@@ -47,7 +53,7 @@ public sealed class ShowrunnerMcpIntegrationTests
 
         var tools = await client.ListToolsAsync(cancellationToken: timeout.Token);
         Assert.Equal(
-            ["recording_resolve", "repeat_exception_create", "show_prepare"],
+            ["recording_resolve", "repeat_exception_create", "show_prepare", "show_reconciliation_confirm", "show_reconciliation_evidence"],
             tools.Select(tool => tool.Name).Order(StringComparer.Ordinal).ToArray());
 
         var result = await client.CallToolAsync(
@@ -66,6 +72,50 @@ public sealed class ShowrunnerMcpIntegrationTests
         Assert.False(preparationResult.TryGetProperty("broadcastFolder", out _));
         Assert.DoesNotContain(files.MusicRoot, json.ToString(), StringComparison.Ordinal);
         Assert.DoesNotContain(files.PreparationRoot, json.ToString(), StringComparison.Ordinal);
+
+        var bytesBeforeEvidence = File.ReadAllBytes(mixxx.DatabasePath);
+        var writeBeforeEvidence = File.GetLastWriteTimeUtc(mixxx.DatabasePath);
+        var evidenceResult = await client.CallToolAsync(
+            "show_reconciliation_evidence",
+            new Dictionary<string, object?> { ["showId"] = showId },
+            cancellationToken: timeout.Token);
+        var writeAfterEvidence = File.GetLastWriteTimeUtc(mixxx.DatabasePath);
+
+        Assert.NotEqual(true, evidenceResult.IsError);
+        Assert.Equal(writeBeforeEvidence, writeAfterEvidence);
+        Assert.Equal(bytesBeforeEvidence, File.ReadAllBytes(mixxx.DatabasePath));
+        Assert.NotNull(evidenceResult.StructuredContent);
+        var evidenceJson = evidenceResult.StructuredContent.Value.GetProperty("result");
+        Assert.Equal("2026-08-21", evidenceJson.GetProperty("historySessionName").GetString());
+        Assert.Equal(detectedRecordingId, evidenceJson.GetProperty("unexpected")[0].GetProperty("recordingId").GetGuid());
+        Assert.DoesNotContain(mixxx.DatabasePath, evidenceJson.ToString(), StringComparison.Ordinal);
+
+        var confirmationResult = await client.CallToolAsync(
+            "show_reconciliation_confirm",
+            new Dictionary<string, object?>
+            {
+                ["showId"] = showId,
+                ["command"] = new
+                {
+                    operatorConfirmed = true,
+                    hasUnresolvedAmbiguity = false,
+                    items = new[]
+                    {
+                        new { recordingId = detectedRecordingId, position = 1, plannedRecordingId = (Guid?)null },
+                    },
+                },
+            },
+            cancellationToken: timeout.Token);
+
+        Assert.NotEqual(true, confirmationResult.IsError);
+        var confirmationJson = confirmationResult.StructuredContent!.Value.GetProperty("result");
+        Assert.True(confirmationJson.GetProperty("isOperatorConfirmed").GetBoolean());
+        Assert.False(confirmationJson.GetProperty("isConfirmed").GetBoolean());
+        await using var verificationContext = harness.CreateContext();
+        var persisted = await new ShowrunnerService(verificationContext).GetReconciliationAsync(showId);
+        Assert.True(persisted.Value!.IsOperatorConfirmed);
+        Assert.Equal(detectedRecordingId, persisted.Value.ConfirmedPlayback.Single().RecordingId);
+        Assert.Empty((await new ShowrunnerService(verificationContext).GetBroadcastHistoryAsync(detectedRecordingId)).Value!);
     }
 
     private static string FindDotnetDirectory()
@@ -97,6 +147,68 @@ public sealed class ShowrunnerMcpIntegrationTests
         public string MusicRoot { get; }
 
         public string PreparationRoot { get; }
+
+        public void Dispose()
+        {
+            if (Directory.Exists(root))
+            {
+                Directory.Delete(root, recursive: true);
+            }
+        }
+    }
+
+    private sealed class MixxxFixture : IDisposable
+    {
+        private readonly string root = Path.Combine(
+            Path.GetTempPath(),
+            "sundown-showrunner-mixxx-tests",
+            Guid.NewGuid().ToString("N"));
+
+        public MixxxFixture()
+        {
+            Directory.CreateDirectory(root);
+            DatabasePath = Path.Combine(root, "mixxxdb.sqlite");
+
+            using var connection = new SqliteConnection(new SqliteConnectionStringBuilder { DataSource = DatabasePath }.ToString());
+            connection.Open();
+            using var command = connection.CreateCommand();
+            command.CommandText = """
+                CREATE TABLE Playlists (
+                    id INTEGER PRIMARY KEY,
+                    name TEXT,
+                    hidden INTEGER NOT NULL,
+                    date_created TEXT,
+                    date_modified TEXT
+                );
+                CREATE TABLE PlaylistTracks (
+                    id INTEGER PRIMARY KEY,
+                    playlist_id INTEGER NOT NULL,
+                    track_id INTEGER NOT NULL,
+                    position INTEGER NOT NULL,
+                    pl_datetime_added TEXT
+                );
+                CREATE TABLE library (
+                    id INTEGER PRIMARY KEY,
+                    title TEXT,
+                    artist TEXT,
+                    location INTEGER
+                );
+                CREATE TABLE track_locations (
+                    id INTEGER PRIMARY KEY,
+                    location TEXT
+                );
+                INSERT INTO Playlists (id, name, hidden, date_created, date_modified)
+                VALUES (1, '2026-08-21', 2, '2026-08-21T19:00:00', '2026-08-21T19:04:00');
+                INSERT INTO track_locations (id, location) VALUES (1, '/music/detected.flac');
+                INSERT INTO library (id, title, artist, location)
+                VALUES (1, 'Detected title', 'Detected artist', 1);
+                INSERT INTO PlaylistTracks (id, playlist_id, track_id, position, pl_datetime_added)
+                VALUES (1, 1, 1, 1, '2026-08-21T19:00:00');
+                """;
+            command.ExecuteNonQuery();
+        }
+
+        public string DatabasePath { get; }
 
         public void Dispose()
         {

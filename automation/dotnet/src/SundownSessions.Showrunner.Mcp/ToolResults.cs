@@ -14,3 +14,13 @@ public sealed record RepeatExceptionCreateToolResult(
     bool IsSuccess,
     RepeatExceptionModel? Result,
     ApplicationError? Error);
+
+public sealed record ShowReconciliationEvidenceToolResult(
+    bool IsSuccess,
+    PlaybackEvidenceModel? Result,
+    ApplicationError? Error);
+
+public sealed record ShowReconciliationConfirmToolResult(
+    bool IsSuccess,
+    ReconciliationModel? Result,
+    ApplicationError? Error);

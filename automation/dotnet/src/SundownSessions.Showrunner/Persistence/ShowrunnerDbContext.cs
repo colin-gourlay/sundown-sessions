@@ -103,6 +103,10 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
                 .WithOne(item => item.Reconciliation)
                 .HasForeignKey(item => item.ReconciliationId)
                 .OnDelete(DeleteBehavior.Cascade);
+            builder.HasMany(item => item.ConfirmedPlayback)
+                .WithOne(item => item.Reconciliation)
+                .HasForeignKey(item => item.ReconciliationId)
+                .OnDelete(DeleteBehavior.Cascade);
         });
 
         modelBuilder.Entity<ReconciliationItemEntity>(builder =>
@@ -112,6 +116,26 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.Property(item => item.Id).ValueGeneratedNever();
             builder.HasIndex(item => new { item.ReconciliationId, item.PlannedRecordingId }).IsUnique();
             builder.ToTable(table => table.HasCheckConstraint("CK_ReconciliationItems_Outcome", "Outcome IN (0, 1, 2)"));
+            builder.HasOne<PlannedRecordingEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.PlannedRecordingId)
+                .OnDelete(DeleteBehavior.Restrict);
+        });
+
+        modelBuilder.Entity<ConfirmedPlaybackItemEntity>(builder =>
+        {
+            builder.ToTable("ConfirmedPlaybackItems");
+            builder.HasKey(item => item.Id);
+            builder.Property(item => item.Id).ValueGeneratedNever();
+            builder.ToTable(table => table.HasCheckConstraint("CK_ConfirmedPlaybackItems_Position", "Position >= 1"));
+            builder.HasIndex(item => new { item.ReconciliationId, item.Position }).IsUnique();
+            builder.HasIndex(item => new { item.ReconciliationId, item.PlannedRecordingId })
+                .IsUnique()
+                .HasFilter("\"PlannedRecordingId\" IS NOT NULL");
+            builder.HasOne<RecordingEntity>()
+                .WithMany()
+                .HasForeignKey(item => item.RecordingId)
+                .OnDelete(DeleteBehavior.Restrict);
             builder.HasOne<PlannedRecordingEntity>()
                 .WithMany()
                 .HasForeignKey(item => item.PlannedRecordingId)

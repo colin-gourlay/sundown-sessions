@@ -255,7 +255,7 @@ public sealed class ShowrunnerService
             return ApplicationResult<ShowModel>.Failure(ApplicationError.NotFound("show", showId));
         }
 
-        if (show.Reconciliation?.ConfirmedAtUtc is not null)
+        if (show.Reconciliation is { ConfirmedAtUtc: not null } or { OperatorConfirmedAtUtc: not null })
         {
             return ApplicationResult<ShowModel>.Failure(
                 ApplicationError.Conflict(
@@ -362,6 +362,8 @@ public sealed class ShowrunnerService
             .Include(item => item.PlannedRecordings)
             .Include(item => item.Reconciliation)
                 .ThenInclude(item => item!.Items)
+            .Include(item => item.Reconciliation)
+                .ThenInclude(item => item!.ConfirmedPlayback)
             .Include(item => item.BroadcastRecordings)
             .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
 
@@ -370,12 +372,22 @@ public sealed class ShowrunnerService
             return ApplicationResult<ReconciliationModel>.Failure(ApplicationError.NotFound("show", showId));
         }
 
-        if (show.Reconciliation?.ConfirmedAtUtc is not null)
+        if (show.Reconciliation is { ConfirmedAtUtc: not null })
         {
             return ApplicationResult<ReconciliationModel>.Failure(
                 ApplicationError.Conflict(
                     "reconciliation_already_confirmed",
                     "The show's reconciliation has already been confirmed.",
+                    "showId",
+                    showId.ToString()));
+        }
+
+        if (show.Reconciliation is { OperatorConfirmedAtUtc: not null })
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(
+                ApplicationError.Conflict(
+                    "reconciliation_already_operator_confirmed",
+                    "An operator-confirmed reconciliation cannot be replaced by a draft or finalisation payload.",
                     "showId",
                     showId.ToString()));
         }
@@ -528,6 +540,8 @@ public sealed class ShowrunnerService
             .Include(item => item.PlannedRecordings)
             .Include(item => item.Reconciliation)
                 .ThenInclude(item => item!.Items)
+            .Include(item => item.Reconciliation)
+                .ThenInclude(item => item!.ConfirmedPlayback)
             .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
 
         if (show is null)
@@ -612,8 +626,10 @@ public sealed class ShowrunnerService
             reconciliation.Id,
             reconciliation.ShowId,
             reconciliation.ConfirmedAtUtc is not null,
+            reconciliation.OperatorConfirmedAtUtc is not null,
             reconciliation.CreatedAtUtc,
             reconciliation.ConfirmedAtUtc,
+            reconciliation.OperatorConfirmedAtUtc,
             reconciliation.Items
                 .Select(item =>
                 {
@@ -625,6 +641,13 @@ public sealed class ShowrunnerService
                         item.Outcome);
                 })
                 .OrderBy(item => item.PlannedPosition)
+                .ToArray(),
+            reconciliation.ConfirmedPlayback
+                .OrderBy(item => item.Position)
+                .Select(item => new ConfirmedPlaybackItemModel(
+                    item.RecordingId,
+                    item.Position,
+                    item.PlannedRecordingId))
                 .ToArray());
     }
 

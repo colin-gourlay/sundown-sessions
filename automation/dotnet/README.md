@@ -15,6 +15,14 @@ Configure the server with environment variables:
   folders.
 - `SUNDOWN_SHOWRUNNER_SHOW_DURATION_MINUTES`: optional positive programme
   duration used to calculate remaining time or overrun.
+- `SUNDOWN_SHOWRUNNER_MIXXX_DB_PATH`: optional path to Mixxx's SQLite
+  database for playback evidence. Defaults to `~/.mixxx/mixxxdb.sqlite`.
+
+The Mixxx adapter opens that database read-only and understands Mixxx history
+playlists (`Playlists.hidden = 2` with ordered `PlaylistTracks`). Evidence is
+limited to a history session matching the Showrunner show date. If no session
+or more than one session matches, the result remains explicitly incomplete and
+includes session summaries rather than combining or guessing.
 
 The music root cannot be inside the preparation root. Preparation results use
 root-relative source paths and stable folder/file names; absolute local paths
@@ -29,7 +37,7 @@ dotnet run \
   --project automation/dotnet/src/SundownSessions.Showrunner.Mcp
 ```
 
-The stdio server exposes three focused tools:
+The stdio server exposes focused tools:
 
 - `show_prepare` matches a plan, checks repeats, calculates timings and rebuilds
   the numbered folder only when preparation is fully resolved.
@@ -37,6 +45,12 @@ The stdio server exposes three focused tools:
   `show_prepare`.
 - `repeat_exception_create` records an explicit repeat reason separately from
   preparation.
+- `show_reconciliation_evidence` reads Mixxx playback evidence and compares it
+  with the authoritative show plan, returning dropped/unexpected/order
+  differences and uncertainty explicitly.
+- `show_reconciliation_confirm` confirms an explicit operator-approved
+  playback order and rejects unresolved ambiguity. It stores reconciliation
+  state for later finalisation; it does not create permanent broadcast history.
 
 ## Verify
 
