@@ -606,10 +606,10 @@ public sealed class ShowrunnerService
         }
         else
         {
-            var normalisedTitle = query.Title!.Trim().ToLowerInvariant();
+            var normalisedTitle = query.Title!.Trim().ToLower();
             var normalisedArtist = string.IsNullOrWhiteSpace(query.Artist)
                 ? null
-                : query.Artist.Trim().ToLowerInvariant();
+                : query.Artist.Trim().ToLower();
             candidatesQuery = candidatesQuery.Where(item =>
                 item.Title.Trim().ToLower() == normalisedTitle &&
                 (normalisedArtist == null || (item.Artist != null && item.Artist.Trim().ToLower() == normalisedArtist)));

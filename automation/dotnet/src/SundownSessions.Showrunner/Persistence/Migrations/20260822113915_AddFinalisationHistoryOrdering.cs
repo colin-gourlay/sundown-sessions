@@ -32,14 +32,14 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
 
             migrationBuilder.Sql(
                 """
-                UPDATE "BroadcastRecordings" AS "target"
+                UPDATE "BroadcastRecordings"
                 SET "Position" = (
                     SELECT COUNT(*)
                     FROM "BroadcastRecordings" AS "prior"
-                    WHERE "prior"."ShowId" = "target"."ShowId"
+                    WHERE "prior"."ShowId" = "BroadcastRecordings"."ShowId"
                       AND (
-                          "prior"."BroadcastAtUtc" < "target"."BroadcastAtUtc"
-                          OR ("prior"."BroadcastAtUtc" = "target"."BroadcastAtUtc" AND "prior"."Id" <= "target"."Id")
+                          "prior"."BroadcastAtUtc" < "BroadcastRecordings"."BroadcastAtUtc"
+                          OR ("prior"."BroadcastAtUtc" = "BroadcastRecordings"."BroadcastAtUtc" AND "prior"."Id" <= "BroadcastRecordings"."Id")
                       )
                 );
                 """);
