@@ -512,15 +512,18 @@ public sealed class ShowrunnerService
             var confirmedAtUtc = clock.UtcNow;
             reconciliation.ConfirmedAtUtc = confirmedAtUtc;
             show.BroadcastRecordings.Clear();
-            foreach (var item in command.Items.Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast))
+            foreach (var item in command.Items
+                         .Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast)
+                         .Select((item, index) => new { Item = item, Position = index + 1 }))
             {
-                var plannedRecording = plannedLookup[item.PlannedRecordingId];
+                var plannedRecording = plannedLookup[item.Item.PlannedRecordingId];
                 show.BroadcastRecordings.Add(new BroadcastRecordingEntity
                 {
                     Id = Guid.NewGuid(),
                     ShowId = showId,
                     RecordingId = plannedRecording.RecordingId,
                     PlannedRecordingId = plannedRecording.Id,
+                    Position = item.Position,
                     BroadcastAtUtc = confirmedAtUtc,
                 });
             }
@@ -574,13 +577,94 @@ public sealed class ShowrunnerService
                 item.ShowId,
                 item.Show.Slug,
                 item.Show.ShowDate,
-                item.BroadcastAtUtc))
+                item.BroadcastAtUtc,
+                item.PlannedRecordingId,
+                item.Position))
             .ToListAsync(cancellationToken);
 
         return ApplicationResult<IReadOnlyList<BroadcastHistoryEntry>>.Success(history
             .OrderBy(item => item.ShowDate)
             .ThenBy(item => item.BroadcastAtUtc)
+            .ThenBy(item => item.Position ?? int.MaxValue)
             .ToArray());
+    }
+
+    public async Task<ApplicationResult<RecordingHistoryQueryResult>> QueryRecordingHistoryAsync(
+        RecordingHistoryQuery query,
+        CancellationToken cancellationToken = default)
+    {
+        if (query.RecordingId is null && string.IsNullOrWhiteSpace(query.Title))
+        {
+            return ApplicationResult<RecordingHistoryQueryResult>.Failure(
+                ApplicationError.Validation("query", "Provide recordingId or title for history lookup."));
+        }
+
+        var candidatesQuery = dbContext.Recordings.AsNoTracking();
+        if (query.RecordingId.HasValue)
+        {
+            candidatesQuery = candidatesQuery.Where(item => item.Id == query.RecordingId.Value);
+        }
+        else
+        {
+            var normalisedTitle = query.Title!.Trim().ToLower();
+            var normalisedArtist = string.IsNullOrWhiteSpace(query.Artist)
+                ? null
+                : query.Artist.Trim().ToLower();
+            candidatesQuery = candidatesQuery.Where(item =>
+                item.Title.Trim().ToLower() == normalisedTitle &&
+                (normalisedArtist == null || (item.Artist != null && item.Artist.Trim().ToLower() == normalisedArtist)));
+        }
+
+        var candidates = await candidatesQuery
+            .Select(item => new { item.Id, item.Title, item.Artist })
+            .OrderBy(item => item.Title)
+            .ThenBy(item => item.Artist)
+            .ToArrayAsync(cancellationToken);
+
+        if (query.RecordingId.HasValue && candidates.Length == 0)
+        {
+            return ApplicationResult<RecordingHistoryQueryResult>.Failure(
+                ApplicationError.NotFound("recording", query.RecordingId.Value));
+        }
+
+        var candidateIds = candidates.Select(item => item.Id).ToArray();
+        var historyRows = await dbContext.BroadcastRecordings
+            .AsNoTracking()
+            .Where(item => candidateIds.Contains(item.RecordingId))
+            .Select(item => new
+            {
+                item.RecordingId,
+                Entry = new BroadcastHistoryEntry(
+                    item.Id,
+                    item.ShowId,
+                    item.Show.Slug,
+                    item.Show.ShowDate,
+                    item.BroadcastAtUtc,
+                    item.PlannedRecordingId,
+                    item.Position),
+            })
+            .ToArrayAsync(cancellationToken);
+
+        var historyByRecordingId = historyRows
+            .GroupBy(item => item.RecordingId)
+            .ToDictionary(
+                group => group.Key,
+                group => (IReadOnlyList<BroadcastHistoryEntry>)group.Select(item => item.Entry)
+                    .OrderBy(item => item.ShowDate)
+                    .ThenBy(item => item.BroadcastAtUtc)
+                    .ThenBy(item => item.Position ?? int.MaxValue)
+                    .ToArray());
+
+        var result = candidates
+            .Select(candidate => new RecordingHistoryCandidateModel(
+                candidate.Id,
+                candidate.Title,
+                candidate.Artist,
+                historyByRecordingId.GetValueOrDefault(candidate.Id, [])))
+            .ToArray();
+
+        return ApplicationResult<RecordingHistoryQueryResult>.Success(
+            new RecordingHistoryQueryResult(result.Length > 1, result));
     }
 
     private static RecordingModel Map(RecordingEntity recording)
@@ -657,4 +741,5 @@ public sealed class ShowrunnerService
             ? ApplicationError.Validation(field, $"{field} cannot exceed {maximumLength} characters.")
             : null;
     }
+
 }

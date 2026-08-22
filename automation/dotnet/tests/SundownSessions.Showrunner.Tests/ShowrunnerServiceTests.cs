@@ -542,6 +542,187 @@ public sealed class ShowrunnerServiceTests
     }
 
     [Fact]
+    public async Task FinalisationPersistsConfirmedPlaybackDroppedPlansAndUnexpectedAiredTracks()
+    {
+        using var harness = new SqliteTestHarness();
+        var clock = new TestClock(new DateTimeOffset(2026, 8, 31, 20, 0, 0, TimeSpan.Zero));
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context, clock);
+        var dropped = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Dropped", "Artist"))).Value!;
+        var played = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Played", "Artist"))).Value!;
+        var unexpected = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Unexpected", "Guest"))).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("finalise-mixed", "Finalise mixed", new DateOnly(2026, 8, 31)))).Value!;
+        var firstPlan = (await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(dropped.Id, 1))).Value!;
+        var secondPlan = (await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(played.Id, 2))).Value!;
+        var firstPlanId = firstPlan.PlannedRecordings.Single().Id;
+        var secondPlanId = secondPlan.PlannedRecordings.Single(item => item.RecordingId == played.Id).Id;
+        var reconciliation = new ShowReconciliationService(context, new StubMixxxPlaybackEvidenceReader(), clock);
+        await reconciliation.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(
+                true,
+                false,
+                [
+                    new ConfirmedPlaybackItemCommand(played.Id, 1, secondPlanId),
+                    new ConfirmedPlaybackItemCommand(unexpected.Id, 2),
+                ]));
+
+        var result = await reconciliation.FinaliseReconciliationAsync(show.Id);
+
+        Assert.True(result.IsSuccess);
+        Assert.True(result.Value!.IsFinalised);
+        Assert.False(result.Value.IsNoOp);
+        Assert.Equal(2, result.Value.AddedToPermanentHistory.Count);
+        Assert.Equal([played.Id, unexpected.Id], result.Value.AddedToPermanentHistory.OrderBy(item => item.Position).Select(item => item.RecordingId));
+        var droppedPlanned = Assert.Single(result.Value.DroppedPlannedRecordings);
+        Assert.Equal(firstPlanId, droppedPlanned.PlannedRecordingId);
+        Assert.Equal(dropped.Id, droppedPlanned.RecordingId);
+        var playedHistory = await setup.GetBroadcastHistoryAsync(played.Id);
+        var unexpectedHistory = await setup.GetBroadcastHistoryAsync(unexpected.Id);
+        var droppedHistory = await setup.GetBroadcastHistoryAsync(dropped.Id);
+        Assert.Single(playedHistory.Value!);
+        Assert.Equal(secondPlanId, playedHistory.Value![0].PlannedRecordingId);
+        Assert.Equal(1, playedHistory.Value![0].Position);
+        Assert.Single(unexpectedHistory.Value!);
+        Assert.Null(unexpectedHistory.Value![0].PlannedRecordingId);
+        Assert.Equal(2, unexpectedHistory.Value![0].Position);
+        Assert.Empty(droppedHistory.Value!);
+    }
+
+    [Fact]
+    public async Task FinalisationRequiresOperatorConfirmedReconciliation()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context);
+        var recording = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Unconfirmed", null))).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("finalise-unconfirmed", "Finalise unconfirmed", new DateOnly(2026, 8, 31)))).Value!;
+        await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1));
+        var reconciliation = new ShowReconciliationService(context, new StubMixxxPlaybackEvidenceReader());
+
+        var result = await reconciliation.FinaliseReconciliationAsync(show.Id);
+
+        Assert.False(result.IsSuccess);
+        Assert.Equal("reconciliation_not_operator_confirmed", result.Error!.Code);
+    }
+
+    [Fact]
+    public async Task FinalisationIsIdempotentAndDoesNotDuplicateBroadcastHistory()
+    {
+        using var harness = new SqliteTestHarness();
+        var clock = new TestClock(new DateTimeOffset(2026, 9, 1, 19, 0, 0, TimeSpan.Zero));
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context, clock);
+        var recording = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Idempotent", null))).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("finalise-idempotent", "Finalise idempotent", new DateOnly(2026, 9, 1)))).Value!;
+        var plan = (await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1))).Value!;
+        var plannedId = plan.PlannedRecordings.Single().Id;
+        var reconciliation = new ShowReconciliationService(context, new StubMixxxPlaybackEvidenceReader(), clock);
+        await reconciliation.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(true, false, [new ConfirmedPlaybackItemCommand(recording.Id, 1, plannedId)]));
+        var first = await reconciliation.FinaliseReconciliationAsync(show.Id);
+        clock.Advance(TimeSpan.FromMinutes(10));
+
+        var second = await reconciliation.FinaliseReconciliationAsync(show.Id);
+
+        Assert.True(first.IsSuccess);
+        Assert.True(second.IsSuccess);
+        Assert.False(first.Value!.IsNoOp);
+        Assert.True(second.Value!.IsNoOp);
+        Assert.Empty(second.Value.AddedToPermanentHistory);
+        Assert.Equal(first.Value.FinalisedAtUtc, second.Value.FinalisedAtUtc);
+        var history = await setup.GetBroadcastHistoryAsync(recording.Id);
+        Assert.Single(history.Value!);
+    }
+
+    [Fact]
+    public async Task FinalisationSummaryIncludesUsedRepeatExceptions()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context);
+        var recording = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Repeat", "Artist"))).Value!;
+        var priorShow = (await setup.CreateShowAsync(new CreateShowCommand("repeat-prior", "Repeat prior", new DateOnly(2026, 9, 2)))).Value!;
+        var priorPlan = (await setup.PlanRecordingAsync(priorShow.Id, new PlanRecordingCommand(recording.Id, 1))).Value!;
+        await setup.SaveReconciliationAsync(
+            priorShow.Id,
+            new SaveReconciliationCommand(
+                true,
+                [new ReconciliationItemCommand(priorPlan.PlannedRecordings.Single().Id, ReconciliationItemOutcome.Broadcast)]));
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("repeat-current", "Repeat current", new DateOnly(2026, 9, 3)))).Value!;
+        var plan = (await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1))).Value!;
+        var plannedId = plan.PlannedRecordings.Single().Id;
+        const string reason = "Editorial reprise";
+        await setup.RecordRepeatExceptionAsync(show.Id, new RecordRepeatExceptionCommand(recording.Id, reason));
+        var reconciliation = new ShowReconciliationService(context, new StubMixxxPlaybackEvidenceReader());
+        await reconciliation.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(true, false, [new ConfirmedPlaybackItemCommand(recording.Id, 1, plannedId)]));
+
+        var result = await reconciliation.FinaliseReconciliationAsync(show.Id);
+
+        Assert.True(result.IsSuccess);
+        Assert.Single(result.Value!.RepeatExceptionsUsed);
+        Assert.Equal(reason, result.Value.RepeatExceptionsUsed[0].Reason);
+    }
+
+    [Fact]
+    public async Task RecordingHistoryLookupSupportsExactAndAmbiguousQueries()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var first = (await service.CreateRecordingAsync(new CreateRecordingCommand("Shared title", "Shared artist"))).Value!;
+        var second = (await service.CreateRecordingAsync(new CreateRecordingCommand("Shared title", "Shared artist"))).Value!;
+        var show = (await service.CreateShowAsync(new CreateShowCommand("history-query", "History query", new DateOnly(2026, 9, 2)))).Value!;
+        var plan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(first.Id, 1))).Value!;
+        await service.SaveReconciliationAsync(
+            show.Id,
+            new SaveReconciliationCommand(
+                true,
+                [new ReconciliationItemCommand(plan.PlannedRecordings.Single().Id, ReconciliationItemOutcome.Broadcast)]));
+
+        var exact = await service.QueryRecordingHistoryAsync(new RecordingHistoryQuery(RecordingId: first.Id));
+        var ambiguous = await service.QueryRecordingHistoryAsync(new RecordingHistoryQuery(Title: "Shared title", Artist: "Shared artist"));
+
+        Assert.True(exact.IsSuccess);
+        Assert.False(exact.Value!.IsAmbiguous);
+        Assert.Single(exact.Value.Candidates);
+        Assert.Single(exact.Value.Candidates[0].BroadcastHistory);
+        Assert.True(ambiguous.IsSuccess);
+        Assert.True(ambiguous.Value!.IsAmbiguous);
+        Assert.Equal(2, ambiguous.Value.Candidates.Count);
+        Assert.Single(ambiguous.Value.Candidates.Single(item => item.RecordingId == first.Id).BroadcastHistory);
+        Assert.Empty(ambiguous.Value.Candidates.Single(item => item.RecordingId == second.Id).BroadcastHistory);
+    }
+
+    [Fact]
+    public async Task FinalisedReconciliationRejectsOrdinaryCorrectionAttempts()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var setup = new ShowrunnerService(context);
+        var original = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Original", null))).Value!;
+        var correction = (await setup.CreateRecordingAsync(new CreateRecordingCommand("Correction", null))).Value!;
+        var show = (await setup.CreateShowAsync(new CreateShowCommand("correction-rejected", "Correction rejected", new DateOnly(2026, 9, 2)))).Value!;
+        var plan = (await setup.PlanRecordingAsync(show.Id, new PlanRecordingCommand(original.Id, 1))).Value!;
+        var plannedId = plan.PlannedRecordings.Single().Id;
+        var reconciliation = new ShowReconciliationService(context, new StubMixxxPlaybackEvidenceReader());
+        await reconciliation.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(true, false, [new ConfirmedPlaybackItemCommand(original.Id, 1, plannedId)]));
+        await reconciliation.FinaliseReconciliationAsync(show.Id);
+
+        var correctionAttempt = await reconciliation.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(true, false, [new ConfirmedPlaybackItemCommand(correction.Id, 1)]));
+
+        Assert.False(correctionAttempt.IsSuccess);
+        Assert.Equal("show_already_finalised", correctionAttempt.Error!.Code);
+    }
+
+    [Fact]
     public async Task BoundaryValidatesPersistenceLimitsAndMissingHistoryRecording()
     {
         using var harness = new SqliteTestHarness();
