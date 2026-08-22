@@ -115,9 +115,31 @@ def write_report(findings: list[Finding], output: Path, today: dt.date, stale_da
 
     if findings:
         lines.extend(["## Findings", ""])
+
+        def _safe_heading(title: str) -> str:
+            """Strip trailing sentence-ending punctuation to satisfy MD026."""
+            return re.sub(r"[.!?:]+$", "", title).strip()
+
+        # Count how many findings share the same sanitised heading.
+        heading_counts: dict[str, int] = {}
         for finding in findings:
-            lines.append(f"### {finding.title}")
+            key = _safe_heading(finding.title)
+            heading_counts[key] = heading_counts.get(key, 0) + 1
+
+        # Emit findings; disambiguate duplicate headings with a numeric suffix
+        # starting at (2) so the first occurrence stays unsuffixed.
+        seen_headings: dict[str, int] = {}
+        for finding in findings:
+            safe_title = _safe_heading(finding.title)
+            if heading_counts[safe_title] > 1:
+                seen_headings[safe_title] = seen_headings.get(safe_title, 0) + 1
+                count = seen_headings[safe_title]
+                heading = safe_title if count == 1 else f"{safe_title} ({count})"
+            else:
+                heading = safe_title
+            lines.append(f"### {heading}")
             lines.append("")
+            lines.append(f"- Artist: {finding.title}")
             lines.append(f"- File: `{finding.path}`")
             for reason in finding.reasons:
                 lines.append(f"- Reason: {reason}")
