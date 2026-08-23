@@ -99,9 +99,10 @@ public sealed class ShowPreparationServiceTests
 
         var prior = (await service.CreateShowAsync(new CreateShowCommand("prior-show", "Prior", new DateOnly(2026, 8, 21)))).Value!;
         var priorPlan = (await service.PlanRecordingAsync(prior.Id, new PlanRecordingCommand(recording.Id, 1))).Value!;
-        await service.SaveReconciliationAsync(
+        await ShowrunnerTestOperations.FinaliseShowAsync(
+            context,
             prior.Id,
-            new SaveReconciliationCommand(true, [new ReconciliationItemCommand(priorPlan.PlannedRecordings.Single().Id, ReconciliationItemOutcome.Broadcast)]));
+            [new ConfirmedPlaybackItemCommand(recording.Id, 1, priorPlan.PlannedRecordings.Single().Id)]);
 
         var target = (await service.CreateShowAsync(new CreateShowCommand("target-show", "Target", new DateOnly(2026, 8, 22)))).Value!;
         await service.PlanRecordingAsync(target.Id, new PlanRecordingCommand(recording.Id, 1));

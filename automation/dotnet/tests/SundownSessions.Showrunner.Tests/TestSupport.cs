@@ -23,14 +23,18 @@ internal sealed class SqliteTestHarness : IDisposable
 
     public string DatabasePath { get; }
 
-    public ShowrunnerDbContext CreateContext()
+    public ShowrunnerDbContext CreateContext(bool migrate = true)
     {
         var options = new DbContextOptionsBuilder<ShowrunnerDbContext>()
             .UseSqlite($"Data Source={DatabasePath}")
             .Options;
 
         var context = new ShowrunnerDbContext(options);
-        context.Database.Migrate();
+        if (migrate)
+        {
+            context.Database.Migrate();
+        }
+
         return context;
     }
 
@@ -39,6 +43,40 @@ internal sealed class SqliteTestHarness : IDisposable
         if (Directory.Exists(directoryPath))
         {
             Directory.Delete(directoryPath, recursive: true);
+        }
+    }
+}
+
+internal sealed class EmptyMixxxPlaybackEvidenceReader : IMixxxPlaybackEvidenceReader
+{
+    public Task<ApplicationResult<MixxxPlaybackReadModel>> ReadPlaybackEvidenceAsync(
+        DateOnly showDate,
+        CancellationToken cancellationToken = default)
+        => Task.FromResult(ApplicationResult<MixxxPlaybackReadModel>.Success(
+            new MixxxPlaybackReadModel(false, [], [])));
+}
+
+internal static class ShowrunnerTestOperations
+{
+    public static async Task FinaliseShowAsync(
+        ShowrunnerDbContext context,
+        Guid showId,
+        IReadOnlyCollection<ConfirmedPlaybackItemCommand> playback,
+        IShowrunnerClock? clock = null)
+    {
+        var service = new ShowReconciliationService(context, new EmptyMixxxPlaybackEvidenceReader(), clock);
+        var confirmation = await service.ConfirmReconciliationAsync(
+            showId,
+            new ConfirmReconciliationCommand(true, false, playback));
+        if (!confirmation.IsSuccess)
+        {
+            throw new InvalidOperationException($"Test setup could not confirm reconciliation: {confirmation.Error!.Code}");
+        }
+
+        var finalisation = await service.FinaliseReconciliationAsync(showId);
+        if (!finalisation.IsSuccess)
+        {
+            throw new InvalidOperationException($"Test setup could not finalise reconciliation: {finalisation.Error!.Code}");
         }
     }
 }

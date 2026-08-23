@@ -51,6 +51,15 @@ The stdio server exposes focused tools:
 - `show_reconciliation_confirm` confirms an explicit operator-approved
   playback order and rejects unresolved ambiguity. It stores reconciliation
   state for later finalisation; it does not create permanent broadcast history.
+- `show_reconciliation_finalise` persistently finalises an
+  operator-confirmed reconciliation into permanent broadcast history.
+- `recording_history` returns structured permanent broadcast history for an
+  exact recording identifier or an ambiguity-safe title/artist lookup.
+
+Permanent broadcast history has one write path: confirm the operator-approved
+playback order, then call `show_reconciliation_finalise`. The older application
+reconciliation-save operation stores draft state only and cannot bypass this
+boundary.
 
 ## Verify
 

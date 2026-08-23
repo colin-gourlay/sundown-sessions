@@ -147,7 +147,11 @@ public sealed class ShowrunnerDbContext(DbContextOptions<ShowrunnerDbContext> op
             builder.ToTable("BroadcastRecordings");
             builder.HasKey(item => item.Id);
             builder.Property(item => item.Id).ValueGeneratedNever();
-            builder.HasIndex(item => new { item.ShowId, item.PlannedRecordingId }).IsUnique();
+            builder.ToTable(table => table.HasCheckConstraint("CK_BroadcastRecordings_Position", "Position >= 1"));
+            builder.HasIndex(item => new { item.ShowId, item.Position }).IsUnique();
+            builder.HasIndex(item => new { item.ShowId, item.PlannedRecordingId })
+                .IsUnique()
+                .HasFilter("\"PlannedRecordingId\" IS NOT NULL");
             builder.HasOne<RecordingEntity>()
                 .WithMany()
                 .HasForeignKey(item => item.RecordingId)

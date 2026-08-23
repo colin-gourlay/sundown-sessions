@@ -24,6 +24,7 @@ public sealed class ShowrunnerMcpIntegrationTests
             await service.PlanRecordingAsync(showId, new PlanRecordingCommand(recording.Id, 1));
             detectedRecordingId = (await service.CreateRecordingAsync(
                 new CreateRecordingCommand("Detected title", "Detected artist"))).Value!.Id;
+            await service.CreateRecordingAsync(new CreateRecordingCommand("Detected title", "Different artist"));
         }
 
         var dotnetDirectory = FindDotnetDirectory();
@@ -53,7 +54,15 @@ public sealed class ShowrunnerMcpIntegrationTests
 
         var tools = await client.ListToolsAsync(cancellationToken: timeout.Token);
         Assert.Equal(
-            ["recording_resolve", "repeat_exception_create", "show_prepare", "show_reconciliation_confirm", "show_reconciliation_evidence"],
+            [
+                "recording_history",
+                "recording_resolve",
+                "repeat_exception_create",
+                "show_prepare",
+                "show_reconciliation_confirm",
+                "show_reconciliation_evidence",
+                "show_reconciliation_finalise",
+            ],
             tools.Select(tool => tool.Name).Order(StringComparer.Ordinal).ToArray());
 
         var result = await client.CallToolAsync(
@@ -116,6 +125,35 @@ public sealed class ShowrunnerMcpIntegrationTests
         Assert.True(persisted.Value!.IsOperatorConfirmed);
         Assert.Equal(detectedRecordingId, persisted.Value.ConfirmedPlayback.Single().RecordingId);
         Assert.Empty((await new ShowrunnerService(verificationContext).GetBroadcastHistoryAsync(detectedRecordingId)).Value!);
+
+        var finalisationResult = await client.CallToolAsync(
+            "show_reconciliation_finalise",
+            new Dictionary<string, object?> { ["showId"] = showId },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, finalisationResult.IsError);
+        var finalisationJson = finalisationResult.StructuredContent!.Value.GetProperty("result");
+        Assert.True(finalisationJson.GetProperty("isFinalised").GetBoolean());
+        Assert.False(finalisationJson.GetProperty("isNoOp").GetBoolean());
+        Assert.Equal(1, finalisationJson.GetProperty("addedToPermanentHistory").GetArrayLength());
+
+        var historyByIdResult = await client.CallToolAsync(
+            "recording_history",
+            new Dictionary<string, object?> { ["query"] = new { recordingId = detectedRecordingId } },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, historyByIdResult.IsError);
+        var historyByIdJson = historyByIdResult.StructuredContent!.Value.GetProperty("result");
+        Assert.False(historyByIdJson.GetProperty("isAmbiguous").GetBoolean());
+        var exactCandidate = Assert.Single(historyByIdJson.GetProperty("candidates").EnumerateArray());
+        Assert.Equal(1, exactCandidate.GetProperty("broadcastHistory").GetArrayLength());
+
+        var ambiguousHistoryResult = await client.CallToolAsync(
+            "recording_history",
+            new Dictionary<string, object?> { ["query"] = new { title = "Detected title" } },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, ambiguousHistoryResult.IsError);
+        var ambiguousHistoryJson = ambiguousHistoryResult.StructuredContent!.Value.GetProperty("result");
+        Assert.True(ambiguousHistoryJson.GetProperty("isAmbiguous").GetBoolean());
+        Assert.Equal(2, ambiguousHistoryJson.GetProperty("candidates").GetArrayLength());
     }
 
     private static string FindDotnetDirectory()

@@ -364,7 +364,6 @@ public sealed class ShowrunnerService
                 .ThenInclude(item => item!.Items)
             .Include(item => item.Reconciliation)
                 .ThenInclude(item => item!.ConfirmedPlayback)
-            .Include(item => item.BroadcastRecordings)
             .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
 
         if (show is null)
@@ -390,6 +389,22 @@ public sealed class ShowrunnerService
                     "An operator-confirmed reconciliation cannot be replaced by a draft or finalisation payload.",
                     "showId",
                     showId.ToString()));
+        }
+
+        if (command.Confirmed)
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(
+                ApplicationError.Conflict(
+                    "operator_confirmation_required",
+                    "Permanent history can only be created by confirming the final playback order and invoking reconciliation finalisation. This operation saves draft reconciliation state only.",
+                    "showId",
+                    showId.ToString()));
+        }
+
+        if (command.Items is null)
+        {
+            return ApplicationResult<ReconciliationModel>.Failure(
+                ApplicationError.Validation("items", "Reconciliation items are required."));
         }
 
         var duplicatePlannedIds = command.Items
@@ -424,63 +439,6 @@ public sealed class ShowrunnerService
             }
         }
 
-        if (command.Confirmed)
-        {
-            var reconciledPlannedIds = command.Items.Select(item => item.PlannedRecordingId).ToHashSet();
-            if (plannedLookup.Keys.Any(plannedRecordingId => !reconciledPlannedIds.Contains(plannedRecordingId)))
-            {
-                return ApplicationResult<ReconciliationModel>.Failure(
-                    ApplicationError.Validation(
-                        "items",
-                        "A confirmed reconciliation must include every planned recording."));
-            }
-
-            if (command.Items.Any(item => item.Outcome == ReconciliationItemOutcome.Pending))
-            {
-                return ApplicationResult<ReconciliationModel>.Failure(
-                    ApplicationError.Validation(
-                        "items",
-                        "A confirmed reconciliation cannot contain pending outcomes."));
-            }
-
-            var recordingIdsToBroadcast = command.Items
-                .Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast)
-                .Select(item => plannedLookup[item.PlannedRecordingId].RecordingId)
-                .ToArray();
-
-            var repeatExceptionRecordingIds = await dbContext.RepeatExceptions
-                .Where(item => item.ShowId == showId)
-                .Select(item => item.RecordingId)
-                .ToHashSetAsync(cancellationToken);
-
-            var previouslyBroadcastRecordingIds = await dbContext.BroadcastRecordings
-                .AsNoTracking()
-                .Where(item => recordingIdsToBroadcast.Contains(item.RecordingId) && item.ShowId != showId)
-                .Select(item => item.RecordingId)
-                .Distinct()
-                .ToArrayAsync(cancellationToken);
-
-            var repeatedWithinShowRecordingIds = recordingIdsToBroadcast
-                .GroupBy(recordingId => recordingId)
-                .Where(group => group.Count() > 1)
-                .Select(group => group.Key);
-
-            var repeatedRecordingId = previouslyBroadcastRecordingIds
-                .Concat(repeatedWithinShowRecordingIds)
-                .Distinct()
-                .FirstOrDefault(recordingId => !repeatExceptionRecordingIds.Contains(recordingId));
-
-            if (repeatedRecordingId != Guid.Empty)
-            {
-                return ApplicationResult<ReconciliationModel>.Failure(
-                    ApplicationError.Conflict(
-                        "repeat_detected",
-                        "The recording would be broadcast more than once and requires an explicit repeat exception.",
-                        "recordingId",
-                        repeatedRecordingId.ToString()));
-            }
-        }
-
         var reconciliation = show.Reconciliation ?? new ReconciliationEntity
         {
             Id = Guid.NewGuid(),
@@ -503,31 +461,6 @@ public sealed class ShowrunnerService
                 PlannedRecordingId = item.PlannedRecordingId,
                 Outcome = item.Outcome,
             });
-        }
-
-        reconciliation.ConfirmedAtUtc = null;
-
-        if (command.Confirmed)
-        {
-            var confirmedAtUtc = clock.UtcNow;
-            reconciliation.ConfirmedAtUtc = confirmedAtUtc;
-            show.BroadcastRecordings.Clear();
-            foreach (var item in command.Items.Where(item => item.Outcome == ReconciliationItemOutcome.Broadcast))
-            {
-                var plannedRecording = plannedLookup[item.PlannedRecordingId];
-                show.BroadcastRecordings.Add(new BroadcastRecordingEntity
-                {
-                    Id = Guid.NewGuid(),
-                    ShowId = showId,
-                    RecordingId = plannedRecording.RecordingId,
-                    PlannedRecordingId = plannedRecording.Id,
-                    BroadcastAtUtc = confirmedAtUtc,
-                });
-            }
-        }
-        else
-        {
-            show.BroadcastRecordings.Clear();
         }
 
         await dbContext.SaveChangesAsync(cancellationToken);
@@ -574,13 +507,104 @@ public sealed class ShowrunnerService
                 item.ShowId,
                 item.Show.Slug,
                 item.Show.ShowDate,
-                item.BroadcastAtUtc))
+                item.BroadcastAtUtc,
+                item.PlannedRecordingId,
+                item.Position))
             .ToListAsync(cancellationToken);
 
         return ApplicationResult<IReadOnlyList<BroadcastHistoryEntry>>.Success(history
             .OrderBy(item => item.ShowDate)
             .ThenBy(item => item.BroadcastAtUtc)
+            .ThenBy(item => item.Position ?? int.MaxValue)
             .ToArray());
+    }
+
+    public async Task<ApplicationResult<RecordingHistoryQueryResult>> QueryRecordingHistoryAsync(
+        RecordingHistoryQuery query,
+        CancellationToken cancellationToken = default)
+    {
+        if (query.RecordingId is null && string.IsNullOrWhiteSpace(query.Title))
+        {
+            return ApplicationResult<RecordingHistoryQueryResult>.Failure(
+                ApplicationError.Validation("query", "Provide recordingId or title for history lookup."));
+        }
+
+        IReadOnlyList<RecordingEntity> candidates;
+        if (query.RecordingId.HasValue)
+        {
+            candidates = await dbContext.Recordings
+                .AsNoTracking()
+                .Where(item => item.Id == query.RecordingId.Value)
+                .ToArrayAsync(cancellationToken);
+        }
+        else
+        {
+            var normalisedTitle = query.Title!.Trim();
+            var normalisedArtist = string.IsNullOrWhiteSpace(query.Artist)
+                ? null
+                : query.Artist.Trim();
+
+            // SQLite's lower()/NOCASE handling is ASCII-only. Identity ambiguity must
+            // not depend on the host database's limited Unicode case folding.
+            candidates = (await dbContext.Recordings
+                    .AsNoTracking()
+                    .ToArrayAsync(cancellationToken))
+                .Where(item => string.Equals(item.Title.Trim(), normalisedTitle, StringComparison.OrdinalIgnoreCase) &&
+                               (normalisedArtist is null ||
+                                string.Equals(item.Artist?.Trim(), normalisedArtist, StringComparison.OrdinalIgnoreCase)))
+                .ToArray();
+        }
+
+        var orderedCandidates = candidates
+            .OrderBy(item => item.Title)
+            .ThenBy(item => item.Artist)
+            .ThenBy(item => item.Id)
+            .ToArray();
+
+        if (query.RecordingId.HasValue && orderedCandidates.Length == 0)
+        {
+            return ApplicationResult<RecordingHistoryQueryResult>.Failure(
+                ApplicationError.NotFound("recording", query.RecordingId.Value));
+        }
+
+        var candidateIds = orderedCandidates.Select(item => item.Id).ToArray();
+        var historyRows = await dbContext.BroadcastRecordings
+            .AsNoTracking()
+            .Where(item => candidateIds.Contains(item.RecordingId))
+            .Select(item => new
+            {
+                item.RecordingId,
+                Entry = new BroadcastHistoryEntry(
+                    item.Id,
+                    item.ShowId,
+                    item.Show.Slug,
+                    item.Show.ShowDate,
+                    item.BroadcastAtUtc,
+                    item.PlannedRecordingId,
+                    item.Position),
+            })
+            .ToArrayAsync(cancellationToken);
+
+        var historyByRecordingId = historyRows
+            .GroupBy(item => item.RecordingId)
+            .ToDictionary(
+                group => group.Key,
+                group => (IReadOnlyList<BroadcastHistoryEntry>)group.Select(item => item.Entry)
+                    .OrderBy(item => item.ShowDate)
+                    .ThenBy(item => item.BroadcastAtUtc)
+                    .ThenBy(item => item.Position ?? int.MaxValue)
+                    .ToArray());
+
+        var result = orderedCandidates
+            .Select(candidate => new RecordingHistoryCandidateModel(
+                candidate.Id,
+                candidate.Title,
+                candidate.Artist,
+                historyByRecordingId.GetValueOrDefault(candidate.Id, [])))
+            .ToArray();
+
+        return ApplicationResult<RecordingHistoryQueryResult>.Success(
+            new RecordingHistoryQueryResult(result.Length > 1, result));
     }
 
     private static RecordingModel Map(RecordingEntity recording)

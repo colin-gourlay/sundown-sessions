@@ -24,3 +24,13 @@ public sealed record ShowReconciliationConfirmToolResult(
     bool IsSuccess,
     ReconciliationModel? Result,
     ApplicationError? Error);
+
+public sealed record ShowReconciliationFinaliseToolResult(
+    bool IsSuccess,
+    ReconciliationFinalisationSummary? Result,
+    ApplicationError? Error);
+
+public sealed record RecordingHistoryToolResult(
+    bool IsSuccess,
+    RecordingHistoryQueryResult? Result,
+    ApplicationError? Error);
