@@ -56,6 +56,11 @@ The stdio server exposes focused tools:
 - `recording_history` returns structured permanent broadcast history for an
   exact recording identifier or an ambiguity-safe title/artist lookup.
 
+Permanent broadcast history has one write path: confirm the operator-approved
+playback order, then call `show_reconciliation_finalise`. The older application
+reconciliation-save operation stores draft state only and cannot bypass this
+boundary.
+
 ## Verify
 
 ```bash
