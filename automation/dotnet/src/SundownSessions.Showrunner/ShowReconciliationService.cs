@@ -340,7 +340,14 @@ public sealed class ShowReconciliationService
                         showId.ToString()));
             }
 
-            var usedRepeatExceptions = await GetUsedRepeatExceptionsAsync(showId, expectedPlayback, cancellationToken);
+            var idempotentRequiredRepeatExceptionIds = await GetRequiredRepeatExceptionRecordingIdsAsync(
+                showId,
+                expectedPlayback,
+                cancellationToken);
+            var idempotentUsedRepeatExceptions = await GetUsedRepeatExceptionsAsync(
+                showId,
+                idempotentRequiredRepeatExceptionIds,
+                cancellationToken);
             return ApplicationResult<ReconciliationFinalisationSummary>.Success(new ReconciliationFinalisationSummary(
                 showId,
                 reconciliation.Id,
@@ -349,28 +356,25 @@ public sealed class ShowReconciliationService
                 reconciliation.ConfirmedAtUtc,
                 [],
                 BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings),
-                usedRepeatExceptions));
+                idempotentUsedRepeatExceptions));
         }
 
-        var recordingIdsToBroadcast = expectedPlayback.Select(item => item.RecordingId).ToArray();
-        var repeatExceptionRecordingIds = await dbContext.RepeatExceptions
-            .Where(item => item.ShowId == showId)
+        var requiredRepeatExceptionIds = await GetRequiredRepeatExceptionRecordingIdsAsync(
+            showId,
+            expectedPlayback,
+            cancellationToken);
+        var usedRepeatExceptions = await GetUsedRepeatExceptionsAsync(
+            showId,
+            requiredRepeatExceptionIds,
+            cancellationToken);
+        var repeatExceptionRecordingIds = usedRepeatExceptions
             .Select(item => item.RecordingId)
-            .ToHashSetAsync(cancellationToken);
-        var previouslyBroadcastRecordingIds = await dbContext.BroadcastRecordings
-            .AsNoTracking()
-            .Where(item => recordingIdsToBroadcast.Contains(item.RecordingId) && item.ShowId != showId)
+            .ToHashSet();
+        var repeatedRecordingId = expectedPlayback
             .Select(item => item.RecordingId)
-            .Distinct()
-            .ToArrayAsync(cancellationToken);
-        var repeatedWithinShowRecordingIds = recordingIdsToBroadcast
-            .GroupBy(recordingId => recordingId)
-            .Where(group => group.Count() > 1)
-            .Select(group => group.Key);
-        var repeatedRecordingId = previouslyBroadcastRecordingIds
-            .Concat(repeatedWithinShowRecordingIds)
-            .Distinct()
-            .FirstOrDefault(recordingId => !repeatExceptionRecordingIds.Contains(recordingId));
+            .FirstOrDefault(recordingId =>
+                requiredRepeatExceptionIds.Contains(recordingId) &&
+                !repeatExceptionRecordingIds.Contains(recordingId));
         if (repeatedRecordingId != Guid.Empty)
         {
             return ApplicationResult<ReconciliationFinalisationSummary>.Failure(
@@ -408,7 +412,6 @@ public sealed class ShowReconciliationService
         reconciliation.ConfirmedAtUtc = finalisedAtUtc;
         await dbContext.SaveChangesAsync(cancellationToken);
 
-        var repeatExceptionsUsed = await GetUsedRepeatExceptionsAsync(showId, expectedPlayback, cancellationToken);
         return ApplicationResult<ReconciliationFinalisationSummary>.Success(new ReconciliationFinalisationSummary(
             showId,
             reconciliation.Id,
@@ -417,7 +420,7 @@ public sealed class ShowReconciliationService
             finalisedAtUtc,
             addedToHistory,
             BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings),
-            repeatExceptionsUsed));
+            usedRepeatExceptions));
     }
 
     private static IReadOnlyList<MixxxPlaybackCandidateModel> CollapseHistoryNoise(
@@ -494,19 +497,45 @@ public sealed class ShowReconciliationService
             .ToArray();
     }
 
-    private async Task<IReadOnlyList<RepeatExceptionModel>> GetUsedRepeatExceptionsAsync(
+    private async Task<HashSet<Guid>> GetRequiredRepeatExceptionRecordingIdsAsync(
         Guid showId,
         IReadOnlyList<ConfirmedPlaybackItemEntity> expectedPlayback,
         CancellationToken cancellationToken)
     {
         var recordingIds = expectedPlayback
             .Select(item => item.RecordingId)
-            .Distinct()
+            .ToArray();
+        var required = recordingIds
+            .GroupBy(recordingId => recordingId)
+            .Where(group => group.Count() > 1)
+            .Select(group => group.Key)
             .ToHashSet();
+
+        var previouslyBroadcast = await dbContext.BroadcastRecordings
+            .AsNoTracking()
+            .Where(item => recordingIds.Contains(item.RecordingId) && item.ShowId != showId)
+            .Select(item => item.RecordingId)
+            .Distinct()
+            .ToArrayAsync(cancellationToken);
+        required.UnionWith(previouslyBroadcast);
+        return required;
+    }
+
+    private async Task<IReadOnlyList<RepeatExceptionModel>> GetUsedRepeatExceptionsAsync(
+        Guid showId,
+        IReadOnlySet<Guid> requiredRecordingIds,
+        CancellationToken cancellationToken)
+    {
+        if (requiredRecordingIds.Count == 0)
+        {
+            return [];
+        }
+
+        var requiredIds = requiredRecordingIds.ToArray();
 
         var exceptions = await dbContext.RepeatExceptions
             .AsNoTracking()
-            .Where(item => item.ShowId == showId && recordingIds.Contains(item.RecordingId))
+            .Where(item => item.ShowId == showId && requiredIds.Contains(item.RecordingId))
             .Select(item => new RepeatExceptionModel(item.Id, item.ShowId, item.RecordingId, item.Reason, item.CreatedAtUtc))
             .ToArrayAsync(cancellationToken);
         return exceptions.OrderBy(item => item.CreatedAtUtc).ToArray();

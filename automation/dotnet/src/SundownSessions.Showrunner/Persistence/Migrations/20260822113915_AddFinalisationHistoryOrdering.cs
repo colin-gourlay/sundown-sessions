@@ -34,13 +34,9 @@ namespace SundownSessions.Showrunner.Persistence.Migrations
                 """
                 UPDATE "BroadcastRecordings"
                 SET "Position" = (
-                    SELECT COUNT(*)
-                    FROM "BroadcastRecordings" AS "prior"
-                    WHERE "prior"."ShowId" = "BroadcastRecordings"."ShowId"
-                      AND (
-                          "prior"."BroadcastAtUtc" < "BroadcastRecordings"."BroadcastAtUtc"
-                          OR ("prior"."BroadcastAtUtc" = "BroadcastRecordings"."BroadcastAtUtc" AND "prior"."Id" <= "BroadcastRecordings"."Id")
-                      )
+                    SELECT "PlannedRecordings"."Position"
+                    FROM "PlannedRecordings"
+                    WHERE "PlannedRecordings"."Id" = "BroadcastRecordings"."PlannedRecordingId"
                 );
                 """);
 
