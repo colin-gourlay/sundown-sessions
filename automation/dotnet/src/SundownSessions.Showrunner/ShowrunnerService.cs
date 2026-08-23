@@ -89,7 +89,7 @@ public sealed class ShowrunnerService
         }
 
         var source = command.Source.Trim().ToLowerInvariant();
-        var value = command.Value.Trim();
+        var value = CanonicaliseExternalIdentifierValue(source, command.Value);
         var exists = recording.ExternalIdentifiers.Any(item =>
             string.Equals(item.Source, source, StringComparison.OrdinalIgnoreCase) &&
             string.Equals(item.Value, value, StringComparison.Ordinal));
@@ -293,6 +293,83 @@ public sealed class ShowrunnerService
 
         await dbContext.SaveChangesAsync(cancellationToken);
         return await GetShowAsync(showId, cancellationToken);
+    }
+
+    public async Task<ApplicationResult<ShowPlanRefreshResult>> RefreshShowPlanAsync(
+        Guid showId,
+        RefreshShowPlanCommand command,
+        CancellationToken cancellationToken = default)
+    {
+        if (command.Items is null)
+        {
+            return ApplicationResult<ShowPlanRefreshResult>.Failure(
+                ApplicationError.Validation("items", "A show plan refresh requires an explicit ordered item list."));
+        }
+
+        var notesLengthError = command.Items
+            .Select(item => ValidateLength(item.Notes, "notes", FieldLimits.Notes))
+            .FirstOrDefault(error => error is not null);
+        if (notesLengthError is not null)
+        {
+            return ApplicationResult<ShowPlanRefreshResult>.Failure(notesLengthError);
+        }
+
+        var show = await dbContext.Shows
+            .Include(item => item.PlannedRecordings)
+            .Include(item => item.Reconciliation)
+            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
+
+        if (show is null)
+        {
+            return ApplicationResult<ShowPlanRefreshResult>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        if (show.Reconciliation is { ConfirmedAtUtc: not null } or { OperatorConfirmedAtUtc: not null })
+        {
+            return ApplicationResult<ShowPlanRefreshResult>.Failure(
+                ApplicationError.Conflict(
+                    "show_already_finalised",
+                    "The show plan cannot be refreshed after the show's reconciliation has been confirmed.",
+                    "showId",
+                    showId.ToString()));
+        }
+
+        var recordingIds = command.Items.Select(item => item.RecordingId).Distinct().ToArray();
+        if (recordingIds.Length > 0)
+        {
+            var existingRecordingIds = await dbContext.Recordings
+                .Where(item => recordingIds.Contains(item.Id))
+                .Select(item => item.Id)
+                .ToHashSetAsync(cancellationToken);
+            var missingRecordingId = recordingIds.FirstOrDefault(item => !existingRecordingIds.Contains(item));
+            if (missingRecordingId != Guid.Empty)
+            {
+                return ApplicationResult<ShowPlanRefreshResult>.Failure(ApplicationError.NotFound("recording", missingRecordingId));
+            }
+        }
+
+        if (show.PlannedRecordings.Count > 0)
+        {
+            dbContext.RemoveRange(show.PlannedRecordings);
+            show.PlannedRecordings.Clear();
+        }
+
+        var position = 1;
+        foreach (var item in command.Items)
+        {
+            show.PlannedRecordings.Add(new PlannedRecordingEntity
+            {
+                Id = Guid.NewGuid(),
+                ShowId = showId,
+                RecordingId = item.RecordingId,
+                Position = position++,
+                Notes = item.Notes?.Trim(),
+                CreatedAtUtc = clock.UtcNow,
+            });
+        }
+
+        await dbContext.SaveChangesAsync(cancellationToken);
+        return await BuildShowPlanRefreshResultAsync(showId, cancellationToken);
     }
 
     public async Task<ApplicationResult<RepeatExceptionModel>> RecordRepeatExceptionAsync(Guid showId, RecordRepeatExceptionCommand command, CancellationToken cancellationToken = default)
@@ -523,10 +600,22 @@ public sealed class ShowrunnerService
         RecordingHistoryQuery query,
         CancellationToken cancellationToken = default)
     {
-        if (query.RecordingId is null && string.IsNullOrWhiteSpace(query.Title))
+        var hasExternalIdentifierSource = !string.IsNullOrWhiteSpace(query.ExternalIdentifierSource);
+        var hasExternalIdentifierValue = !string.IsNullOrWhiteSpace(query.ExternalIdentifierValue);
+        if (hasExternalIdentifierSource != hasExternalIdentifierValue)
         {
             return ApplicationResult<RecordingHistoryQueryResult>.Failure(
-                ApplicationError.Validation("query", "Provide recordingId or title for history lookup."));
+                ApplicationError.Validation(
+                    "query",
+                    "Provide both externalIdentifierSource and externalIdentifierValue for exact identifier lookup."));
+        }
+
+        if (query.RecordingId is null && !hasExternalIdentifierSource && string.IsNullOrWhiteSpace(query.Title))
+        {
+            return ApplicationResult<RecordingHistoryQueryResult>.Failure(
+                ApplicationError.Validation(
+                    "query",
+                    "Provide recordingId, an external identifier, or title for history lookup."));
         }
 
         IReadOnlyList<RecordingEntity> candidates;
@@ -534,7 +623,20 @@ public sealed class ShowrunnerService
         {
             candidates = await dbContext.Recordings
                 .AsNoTracking()
+                .Include(item => item.ExternalIdentifiers)
                 .Where(item => item.Id == query.RecordingId.Value)
+                .ToArrayAsync(cancellationToken);
+        }
+        else if (hasExternalIdentifierSource)
+        {
+            var source = query.ExternalIdentifierSource!.Trim().ToLowerInvariant();
+            var value = CanonicaliseExternalIdentifierValue(source, query.ExternalIdentifierValue!);
+            candidates = await dbContext.Recordings
+                .AsNoTracking()
+                .Include(item => item.ExternalIdentifiers)
+                .Where(item => item.ExternalIdentifiers.Any(identifier =>
+                    identifier.Source == source &&
+                    identifier.Value == value))
                 .ToArrayAsync(cancellationToken);
         }
         else
@@ -548,6 +650,7 @@ public sealed class ShowrunnerService
             // not depend on the host database's limited Unicode case folding.
             candidates = (await dbContext.Recordings
                     .AsNoTracking()
+                    .Include(item => item.ExternalIdentifiers)
                     .ToArrayAsync(cancellationToken))
                 .Where(item => string.Equals(item.Title.Trim(), normalisedTitle, StringComparison.OrdinalIgnoreCase) &&
                                (normalisedArtist is null ||
@@ -567,10 +670,88 @@ public sealed class ShowrunnerService
                 ApplicationError.NotFound("recording", query.RecordingId.Value));
         }
 
-        var candidateIds = orderedCandidates.Select(item => item.Id).ToArray();
+        var historyByRecordingId = await GetBroadcastHistoryLookupAsync(
+            orderedCandidates.Select(item => item.Id).ToArray(),
+            cancellationToken);
+
+        var result = orderedCandidates
+            .Select(candidate => new RecordingHistoryCandidateModel(
+                candidate.Id,
+                candidate.Title,
+                candidate.Artist,
+                MapExternalIdentifiers(candidate.ExternalIdentifiers),
+                historyByRecordingId.GetValueOrDefault(candidate.Id, [])))
+            .ToArray();
+
+        return ApplicationResult<RecordingHistoryQueryResult>.Success(
+            new RecordingHistoryQueryResult(result.Length > 1, result));
+    }
+
+    private async Task<ApplicationResult<ShowPlanRefreshResult>> BuildShowPlanRefreshResultAsync(
+        Guid showId,
+        CancellationToken cancellationToken)
+    {
+        var show = await dbContext.Shows
+            .AsNoTracking()
+            .Include(item => item.PlannedRecordings.OrderBy(recording => recording.Position))
+            .SingleOrDefaultAsync(item => item.Id == showId, cancellationToken);
+        if (show is null)
+        {
+            return ApplicationResult<ShowPlanRefreshResult>.Failure(ApplicationError.NotFound("show", showId));
+        }
+
+        var recordingIds = show.PlannedRecordings.Select(item => item.RecordingId).Distinct().ToArray();
+        var recordings = recordingIds.Length == 0
+            ? new Dictionary<Guid, RecordingEntity>()
+            : await dbContext.Recordings
+                .AsNoTracking()
+                .Include(item => item.ExternalIdentifiers)
+                .Where(item => recordingIds.Contains(item.Id))
+                .ToDictionaryAsync(item => item.Id, cancellationToken);
+        var historyByRecordingId = await GetBroadcastHistoryLookupAsync(recordingIds, cancellationToken);
+
+        var plannedRecordings = show.PlannedRecordings
+            .OrderBy(item => item.Position)
+            .Select(item =>
+            {
+                if (!recordings.TryGetValue(item.RecordingId, out var recording))
+                {
+                    throw new InvalidOperationException("The planned recording no longer exists in authoritative state.");
+                }
+
+                return new PlannedShowRecordingDetailModel(
+                    item.Id,
+                    item.RecordingId,
+                    item.Position,
+                    recording.Title,
+                    recording.Artist,
+                    recording.ReleaseTitle,
+                    item.Notes,
+                    MapExternalIdentifiers(recording.ExternalIdentifiers),
+                    historyByRecordingId.GetValueOrDefault(item.RecordingId, []));
+            })
+            .ToArray();
+
+        return ApplicationResult<ShowPlanRefreshResult>.Success(new ShowPlanRefreshResult(
+            show.Id,
+            show.Slug,
+            plannedRecordings.Length,
+            plannedRecordings));
+    }
+
+    private async Task<Dictionary<Guid, IReadOnlyList<BroadcastHistoryEntry>>> GetBroadcastHistoryLookupAsync(
+        IReadOnlyCollection<Guid> recordingIds,
+        CancellationToken cancellationToken)
+    {
+        if (recordingIds.Count == 0)
+        {
+            return [];
+        }
+
+        var ids = recordingIds.ToArray();
         var historyRows = await dbContext.BroadcastRecordings
             .AsNoTracking()
-            .Where(item => candidateIds.Contains(item.RecordingId))
+            .Where(item => ids.Contains(item.RecordingId))
             .Select(item => new
             {
                 item.RecordingId,
@@ -585,7 +766,7 @@ public sealed class ShowrunnerService
             })
             .ToArrayAsync(cancellationToken);
 
-        var historyByRecordingId = historyRows
+        return historyRows
             .GroupBy(item => item.RecordingId)
             .ToDictionary(
                 group => group.Key,
@@ -594,17 +775,6 @@ public sealed class ShowrunnerService
                     .ThenBy(item => item.BroadcastAtUtc)
                     .ThenBy(item => item.Position ?? int.MaxValue)
                     .ToArray());
-
-        var result = orderedCandidates
-            .Select(candidate => new RecordingHistoryCandidateModel(
-                candidate.Id,
-                candidate.Title,
-                candidate.Artist,
-                historyByRecordingId.GetValueOrDefault(candidate.Id, [])))
-            .ToArray();
-
-        return ApplicationResult<RecordingHistoryQueryResult>.Success(
-            new RecordingHistoryQueryResult(result.Length > 1, result));
     }
 
     private static RecordingModel Map(RecordingEntity recording)
@@ -615,13 +785,16 @@ public sealed class ShowrunnerService
             recording.Artist,
             recording.ReleaseTitle,
             recording.Notes,
-            recording.ExternalIdentifiers
-                .OrderBy(item => item.Source, StringComparer.Ordinal)
-                .ThenBy(item => item.Value, StringComparer.Ordinal)
-                .Select(item => new ExternalIdentifierModel(item.Source, item.Value))
-                .ToArray(),
+            MapExternalIdentifiers(recording.ExternalIdentifiers),
             recording.CreatedAtUtc);
     }
+
+    private static IReadOnlyList<ExternalIdentifierModel> MapExternalIdentifiers(IEnumerable<RecordingExternalIdentifierEntity> identifiers)
+        => identifiers
+            .OrderBy(item => item.Source, StringComparer.Ordinal)
+            .ThenBy(item => item.Value, StringComparer.Ordinal)
+            .Select(item => new ExternalIdentifierModel(item.Source, item.Value))
+            .ToArray();
 
     private static BacklogItemModel Map(BacklogItemEntity backlogItem)
         => new(backlogItem.Id, backlogItem.Summary, backlogItem.RecordingId, backlogItem.Notes, backlogItem.CreatedAtUtc);
@@ -680,5 +853,25 @@ public sealed class ShowrunnerService
         return value?.Trim().Length > maximumLength
             ? ApplicationError.Validation(field, $"{field} cannot exceed {maximumLength} characters.")
             : null;
+    }
+
+    private static string CanonicaliseExternalIdentifierValue(string source, string value)
+    {
+        var trimmed = value.Trim();
+        if (source.Equals("spotify", StringComparison.OrdinalIgnoreCase))
+        {
+            if (trimmed.StartsWith("spotify:track:", StringComparison.OrdinalIgnoreCase))
+            {
+                return trimmed["spotify:track:".Length..];
+            }
+
+            if (trimmed.StartsWith("https://open.spotify.com/track/", StringComparison.OrdinalIgnoreCase))
+            {
+                var trackPart = trimmed["https://open.spotify.com/track/".Length..];
+                return trackPart.Split('?', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)[0];
+            }
+        }
+
+        return trimmed;
     }
 }

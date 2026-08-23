@@ -328,6 +328,18 @@ public sealed class ShowReconciliationService
 
         var reconciliation = show.Reconciliation;
         var expectedPlayback = reconciliation.ConfirmedPlayback.OrderBy(item => item.Position).ToArray();
+        var summaryRecordingIds = show.PlannedRecordings
+            .Select(item => item.RecordingId)
+            .Concat(expectedPlayback.Select(item => item.RecordingId))
+            .Distinct()
+            .ToArray();
+        var recordingsById = summaryRecordingIds.Length == 0
+            ? new Dictionary<Guid, RecordingEntity>()
+            : await dbContext.Recordings
+                .AsNoTracking()
+                .Include(item => item.ExternalIdentifiers)
+                .Where(item => summaryRecordingIds.Contains(item.Id))
+                .ToDictionaryAsync(item => item.Id, cancellationToken);
         if (reconciliation.ConfirmedAtUtc is not null)
         {
             if (!HasMatchingBroadcastHistory(show.BroadcastRecordings, expectedPlayback))
@@ -355,7 +367,7 @@ public sealed class ShowReconciliationService
                 true,
                 reconciliation.ConfirmedAtUtc,
                 [],
-                BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings),
+                BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings, recordingsById),
                 idempotentUsedRepeatExceptions));
         }
 
@@ -401,12 +413,20 @@ public sealed class ShowReconciliationService
                 BroadcastAtUtc = finalisedAtUtc,
             };
             show.BroadcastRecordings.Add(entity);
+            var recording = recordingsById[item.RecordingId];
             addedToHistory.Add(new FinalisedBroadcastRecordingModel(
                 entity.Id,
                 entity.RecordingId,
                 entity.PlannedRecordingId,
                 entity.Position,
-                entity.BroadcastAtUtc));
+                entity.BroadcastAtUtc,
+                recording.Title,
+                recording.Artist,
+                recording.ExternalIdentifiers
+                    .OrderBy(identifier => identifier.Source, StringComparer.Ordinal)
+                    .ThenBy(identifier => identifier.Value, StringComparer.Ordinal)
+                    .Select(identifier => new ExternalIdentifierModel(identifier.Source, identifier.Value))
+                    .ToArray()));
         }
 
         reconciliation.ConfirmedAtUtc = finalisedAtUtc;
@@ -419,7 +439,7 @@ public sealed class ShowReconciliationService
             false,
             finalisedAtUtc,
             addedToHistory,
-            BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings),
+            BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings, recordingsById),
             usedRepeatExceptions));
     }
 
@@ -484,16 +504,29 @@ public sealed class ShowReconciliationService
 
     private static IReadOnlyList<DroppedPlannedRecordingModel> BuildDroppedPlannedRecordings(
         ReconciliationEntity reconciliation,
-        IEnumerable<PlannedRecordingEntity> plannedRecordings)
+        IEnumerable<PlannedRecordingEntity> plannedRecordings,
+        IReadOnlyDictionary<Guid, RecordingEntity> recordingsById)
     {
         var plannedLookup = plannedRecordings.ToDictionary(item => item.Id);
         return reconciliation.Items
             .Where(item => item.Outcome == ReconciliationItemOutcome.NotBroadcast)
             .OrderBy(item => plannedLookup[item.PlannedRecordingId].Position)
-            .Select(item => new DroppedPlannedRecordingModel(
-                item.PlannedRecordingId,
-                plannedLookup[item.PlannedRecordingId].RecordingId,
-                plannedLookup[item.PlannedRecordingId].Position))
+            .Select(item =>
+            {
+                var plannedRecording = plannedLookup[item.PlannedRecordingId];
+                var recording = recordingsById[plannedRecording.RecordingId];
+                return new DroppedPlannedRecordingModel(
+                    item.PlannedRecordingId,
+                    plannedRecording.RecordingId,
+                    plannedRecording.Position,
+                    recording.Title,
+                    recording.Artist,
+                    recording.ExternalIdentifiers
+                        .OrderBy(identifier => identifier.Source, StringComparer.Ordinal)
+                        .ThenBy(identifier => identifier.Value, StringComparer.Ordinal)
+                        .Select(identifier => new ExternalIdentifierModel(identifier.Source, identifier.Value))
+                        .ToArray());
+            })
             .ToArray();
     }
 

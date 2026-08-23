@@ -136,6 +136,113 @@ public sealed class ShowrunnerServiceTests
     }
 
     [Fact]
+    public async Task SpotifyExternalIdentifiersAreCanonicalisedForAssociationAndHistoryLookup()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var recording = (await service.CreateRecordingAsync(new CreateRecordingCommand("Canonical Spotify", "Artist"))).Value!;
+        var otherRecording = (await service.CreateRecordingAsync(new CreateRecordingCommand("Different Recording", "Artist"))).Value!;
+
+        var associated = await service.AddExternalIdentifierAsync(
+            recording.Id,
+            new AddExternalIdentifierCommand("spotify", "spotify:track:abc123"));
+        var duplicate = await service.AddExternalIdentifierAsync(
+            otherRecording.Id,
+            new AddExternalIdentifierCommand("spotify", "https://open.spotify.com/track/abc123?si=test"));
+        var history = await service.QueryRecordingHistoryAsync(new RecordingHistoryQuery(
+            ExternalIdentifierSource: "spotify",
+            ExternalIdentifierValue: "https://open.spotify.com/track/abc123"));
+
+        Assert.True(associated.IsSuccess);
+        Assert.Equal("abc123", associated.Value!.ExternalIdentifiers.Single().Value);
+        Assert.False(duplicate.IsSuccess);
+        Assert.Equal("external_identifier_in_use", duplicate.Error!.Code);
+        Assert.True(history.IsSuccess);
+        Assert.False(history.Value!.IsAmbiguous);
+        var candidate = Assert.Single(history.Value.Candidates);
+        Assert.Equal(recording.Id, candidate.RecordingId);
+        Assert.Equal("abc123", candidate.ExternalIdentifiers.Single().Value);
+    }
+
+    [Fact]
+    public async Task ShowPlanRefreshReplacesMutableOrderAndReturnsAuthoritativeRepeatHistory()
+    {
+        using var harness = new SqliteTestHarness();
+        var clock = new TestClock(new DateTimeOffset(2026, 8, 19, 10, 0, 0, TimeSpan.Zero));
+
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context, clock);
+        var first = (await service.CreateRecordingAsync(new CreateRecordingCommand("First Refresh", "Artist"))).Value!;
+        var second = (await service.CreateRecordingAsync(new CreateRecordingCommand("Second Refresh", "Artist"))).Value!;
+        await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("spotify", "spotify:track:first-refresh"));
+
+        var priorShow = (await service.CreateShowAsync(new CreateShowCommand("refresh-prior", "Refresh Prior", new DateOnly(2026, 8, 18)))).Value!;
+        var priorPlan = (await service.PlanRecordingAsync(priorShow.Id, new PlanRecordingCommand(first.Id, 1))).Value!;
+        await ShowrunnerTestOperations.FinaliseShowAsync(
+            context,
+            priorShow.Id,
+            [new ConfirmedPlaybackItemCommand(first.Id, 1, priorPlan.PlannedRecordings.Single().Id)],
+            clock);
+
+        var show = (await service.CreateShowAsync(new CreateShowCommand("refresh-target", "Refresh Target", new DateOnly(2026, 8, 19)))).Value!;
+        var originalPlan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(first.Id, 1))).Value!;
+
+        var refreshed = await service.RefreshShowPlanAsync(
+            show.Id,
+            new RefreshShowPlanCommand(
+                [
+                    new RefreshShowPlanItemCommand(second.Id),
+                    new RefreshShowPlanItemCommand(first.Id, "Closing track"),
+                ]));
+        var persisted = await service.GetShowAsync(show.Id);
+
+        Assert.True(refreshed.IsSuccess);
+        Assert.Equal(2, refreshed.Value!.PlannedCount);
+        Assert.Equal(second.Id, refreshed.Value.PlannedRecordings[0].RecordingId);
+        Assert.Equal(first.Id, refreshed.Value.PlannedRecordings[1].RecordingId);
+        Assert.Equal("Closing track", refreshed.Value.PlannedRecordings[1].Notes);
+        Assert.Single(refreshed.Value.PlannedRecordings[1].BroadcastHistory);
+        Assert.Equal("first-refresh", refreshed.Value.PlannedRecordings[1].ExternalIdentifiers.Single().Value);
+        Assert.True(persisted.IsSuccess);
+        Assert.Equal([second.Id, first.Id], persisted.Value!.PlannedRecordings.Select(item => item.RecordingId).ToArray());
+        Assert.DoesNotContain(persisted.Value.PlannedRecordings, item => item.Id == originalPlan.PlannedRecordings.Single().Id);
+    }
+
+    [Fact]
+    public async Task FinalisationSummaryIncludesExternalIdentifiersForHousekeeping()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var dropped = (await service.CreateRecordingAsync(new CreateRecordingCommand("Dropped Spotify", "Artist"))).Value!;
+        var played = (await service.CreateRecordingAsync(new CreateRecordingCommand("Played Spotify", "Artist"))).Value!;
+        await service.AddExternalIdentifierAsync(dropped.Id, new AddExternalIdentifierCommand("spotify", "spotify:track:dropped-id"));
+        await service.AddExternalIdentifierAsync(played.Id, new AddExternalIdentifierCommand("spotify", "spotify:track:played-id"));
+        var show = (await service.CreateShowAsync(new CreateShowCommand("spotify-housekeeping", "Spotify housekeeping", new DateOnly(2026, 8, 26)))).Value!;
+        var firstPlan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(dropped.Id, 1))).Value!;
+        var secondPlan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(played.Id, 2))).Value!;
+
+        var reconciliation = new ShowReconciliationService(context, new EmptyMixxxPlaybackEvidenceReader());
+        await reconciliation.ConfirmReconciliationAsync(
+            show.Id,
+            new ConfirmReconciliationCommand(
+                true,
+                false,
+                [new ConfirmedPlaybackItemCommand(played.Id, 1, secondPlan.PlannedRecordings.Single(item => item.RecordingId == played.Id).Id)]));
+        var finalised = await reconciliation.FinaliseReconciliationAsync(show.Id);
+
+        Assert.True(finalised.IsSuccess);
+        var broadcast = Assert.Single(finalised.Value!.AddedToPermanentHistory);
+        Assert.Equal("Played Spotify", broadcast.Title);
+        Assert.Equal("played-id", broadcast.ExternalIdentifiers.Single().Value);
+        var droppedSummary = Assert.Single(finalised.Value.DroppedPlannedRecordings);
+        Assert.Equal(firstPlan.PlannedRecordings.Single().Id, droppedSummary.PlannedRecordingId);
+        Assert.Equal("Dropped Spotify", droppedSummary.Title);
+        Assert.Equal("dropped-id", droppedSummary.ExternalIdentifiers.Single().Value);
+    }
+
+    [Fact]
     public async Task AuthoritativeStateSurvivesIndependentOfExternalServiceAvailability()
     {
         using var harness = new SqliteTestHarness();

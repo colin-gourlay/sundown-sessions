@@ -14,6 +14,10 @@ public sealed record CreateShowCommand(string Slug, string Title, DateOnly ShowD
 
 public sealed record PlanRecordingCommand(Guid RecordingId, int Position, string? Notes = null);
 
+public sealed record RefreshShowPlanCommand(IReadOnlyCollection<RefreshShowPlanItemCommand> Items);
+
+public sealed record RefreshShowPlanItemCommand(Guid RecordingId, string? Notes = null);
+
 public sealed record RecordRepeatExceptionCommand(Guid RecordingId, string Reason);
 
 public sealed record SaveReconciliationCommand(bool Confirmed, IReadOnlyCollection<ReconciliationItemCommand> Items);
@@ -60,6 +64,23 @@ public sealed record ShowModel(
 
 public sealed record PlannedRecordingModel(Guid Id, Guid RecordingId, int Position, string? Notes, DateTimeOffset CreatedAtUtc);
 
+public sealed record ShowPlanRefreshResult(
+    Guid ShowId,
+    string ShowSlug,
+    int PlannedCount,
+    IReadOnlyList<PlannedShowRecordingDetailModel> PlannedRecordings);
+
+public sealed record PlannedShowRecordingDetailModel(
+    Guid PlannedRecordingId,
+    Guid RecordingId,
+    int Position,
+    string Title,
+    string? Artist,
+    string? ReleaseTitle,
+    string? Notes,
+    IReadOnlyList<ExternalIdentifierModel> ExternalIdentifiers,
+    IReadOnlyList<BroadcastHistoryEntry> BroadcastHistory);
+
 public sealed record RepeatExceptionModel(Guid Id, Guid ShowId, Guid RecordingId, string Reason, DateTimeOffset CreatedAtUtc);
 
 public sealed record BroadcastHistoryEntry(
@@ -73,6 +94,8 @@ public sealed record BroadcastHistoryEntry(
 
 public sealed record RecordingHistoryQuery(
     Guid? RecordingId = null,
+    string? ExternalIdentifierSource = null,
+    string? ExternalIdentifierValue = null,
     string? Title = null,
     string? Artist = null);
 
@@ -84,6 +107,7 @@ public sealed record RecordingHistoryCandidateModel(
     Guid RecordingId,
     string Title,
     string? Artist,
+    IReadOnlyList<ExternalIdentifierModel> ExternalIdentifiers,
     IReadOnlyList<BroadcastHistoryEntry> BroadcastHistory);
 
 public sealed record ReconciliationFinalisationSummary(
@@ -101,12 +125,18 @@ public sealed record FinalisedBroadcastRecordingModel(
     Guid RecordingId,
     Guid? PlannedRecordingId,
     int Position,
-    DateTimeOffset BroadcastAtUtc);
+    DateTimeOffset BroadcastAtUtc,
+    string Title,
+    string? Artist,
+    IReadOnlyList<ExternalIdentifierModel> ExternalIdentifiers);
 
 public sealed record DroppedPlannedRecordingModel(
     Guid PlannedRecordingId,
     Guid RecordingId,
-    int PlannedPosition);
+    int PlannedPosition,
+    string Title,
+    string? Artist,
+    IReadOnlyList<ExternalIdentifierModel> ExternalIdentifiers);
 
 public sealed record ReconciliationModel(
     Guid Id,

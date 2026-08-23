@@ -13,15 +13,16 @@ public sealed class ShowrunnerMcpIntegrationTests
         using var files = new McpFileFixture();
         using var mixxx = new MixxxFixture();
         Guid showId;
+        Guid missingRecordingId;
         Guid detectedRecordingId;
         await using (var context = harness.CreateContext())
         {
             var service = new ShowrunnerService(context);
             showId = (await service.CreateShowAsync(
                 new CreateShowCommand("mcp-show", "MCP Show", new DateOnly(2026, 8, 21)))).Value!.Id;
-            var recording = (await service.CreateRecordingAsync(
-                new CreateRecordingCommand("Missing locally", "Test Artist"))).Value!;
-            await service.PlanRecordingAsync(showId, new PlanRecordingCommand(recording.Id, 1));
+            missingRecordingId = (await service.CreateRecordingAsync(
+                new CreateRecordingCommand("Missing locally", "Test Artist"))).Value!.Id;
+            await service.PlanRecordingAsync(showId, new PlanRecordingCommand(missingRecordingId, 1));
             detectedRecordingId = (await service.CreateRecordingAsync(
                 new CreateRecordingCommand("Detected title", "Detected artist"))).Value!.Id;
             await service.CreateRecordingAsync(new CreateRecordingCommand("Detected title", "Different artist"));
@@ -55,15 +56,71 @@ public sealed class ShowrunnerMcpIntegrationTests
         var tools = await client.ListToolsAsync(cancellationToken: timeout.Token);
         Assert.Equal(
             [
-                "recording_history",
-                "recording_resolve",
-                "repeat_exception_create",
-                "show_prepare",
-                "show_reconciliation_confirm",
-                "show_reconciliation_evidence",
-                "show_reconciliation_finalise",
+            "recording_external_identifier_add",
+            "recording_history",
+            "recording_resolve",
+            "repeat_exception_create",
+            "show_plan_refresh",
+            "show_prepare",
+            "show_reconciliation_confirm",
+            "show_reconciliation_evidence",
+            "show_reconciliation_finalise",
             ],
             tools.Select(tool => tool.Name).Order(StringComparer.Ordinal).ToArray());
+
+        var refreshPlanResult = await client.CallToolAsync(
+            "show_plan_refresh",
+            new Dictionary<string, object?>
+            {
+                ["showId"] = showId,
+                ["command"] = new
+                {
+                    items = new[]
+                    {
+                        new { recordingId = detectedRecordingId, notes = "Imported from Spotify" },
+                    },
+                },
+            },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, refreshPlanResult.IsError);
+        var refreshPlanJson = refreshPlanResult.StructuredContent!.Value.GetProperty("result");
+        Assert.Equal(1, refreshPlanJson.GetProperty("plannedCount").GetInt32());
+        Assert.Equal(detectedRecordingId, refreshPlanJson.GetProperty("plannedRecordings")[0].GetProperty("recordingId").GetGuid());
+        Assert.Equal("Imported from Spotify", refreshPlanJson.GetProperty("plannedRecordings")[0].GetProperty("notes").GetString());
+
+        var addExternalIdentifierResult = await client.CallToolAsync(
+            "recording_external_identifier_add",
+            new Dictionary<string, object?>
+            {
+                ["recordingId"] = detectedRecordingId,
+                ["source"] = "spotify",
+                ["value"] = "https://open.spotify.com/track/detected-id?si=123",
+            },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, addExternalIdentifierResult.IsError);
+        Assert.Equal(
+            "detected-id",
+            addExternalIdentifierResult.StructuredContent!.Value
+                .GetProperty("result")
+                .GetProperty("externalIdentifiers")[0]
+                .GetProperty("value")
+                .GetString());
+
+        var restorePlanResult = await client.CallToolAsync(
+            "show_plan_refresh",
+            new Dictionary<string, object?>
+            {
+                ["showId"] = showId,
+                ["command"] = new
+                {
+                    items = new[]
+                    {
+                        new { recordingId = missingRecordingId },
+                    },
+                },
+            },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, restorePlanResult.IsError);
 
         var result = await client.CallToolAsync(
             "show_prepare",
@@ -135,6 +192,12 @@ public sealed class ShowrunnerMcpIntegrationTests
         Assert.True(finalisationJson.GetProperty("isFinalised").GetBoolean());
         Assert.False(finalisationJson.GetProperty("isNoOp").GetBoolean());
         Assert.Equal(1, finalisationJson.GetProperty("addedToPermanentHistory").GetArrayLength());
+        Assert.Equal(
+            "detected-id",
+            finalisationJson.GetProperty("addedToPermanentHistory")[0]
+                .GetProperty("externalIdentifiers")[0]
+                .GetProperty("value")
+                .GetString());
 
         var historyByIdResult = await client.CallToolAsync(
             "recording_history",
@@ -145,6 +208,18 @@ public sealed class ShowrunnerMcpIntegrationTests
         Assert.False(historyByIdJson.GetProperty("isAmbiguous").GetBoolean());
         var exactCandidate = Assert.Single(historyByIdJson.GetProperty("candidates").EnumerateArray());
         Assert.Equal(1, exactCandidate.GetProperty("broadcastHistory").GetArrayLength());
+        Assert.Equal("detected-id", exactCandidate.GetProperty("externalIdentifiers")[0].GetProperty("value").GetString());
+
+        var historyByExternalIdentifierResult = await client.CallToolAsync(
+            "recording_history",
+            new Dictionary<string, object?> { ["query"] = new { externalIdentifierSource = "spotify", externalIdentifierValue = "spotify:track:detected-id" } },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, historyByExternalIdentifierResult.IsError);
+        var historyByExternalIdentifierJson = historyByExternalIdentifierResult.StructuredContent!.Value.GetProperty("result");
+        Assert.False(historyByExternalIdentifierJson.GetProperty("isAmbiguous").GetBoolean());
+        Assert.Equal(
+            detectedRecordingId,
+            historyByExternalIdentifierJson.GetProperty("candidates")[0].GetProperty("recordingId").GetGuid());
 
         var ambiguousHistoryResult = await client.CallToolAsync(
             "recording_history",
