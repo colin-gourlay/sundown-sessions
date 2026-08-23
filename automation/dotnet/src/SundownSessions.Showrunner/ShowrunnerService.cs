@@ -90,6 +90,11 @@ public sealed class ShowrunnerService
 
         var source = command.Source.Trim().ToLowerInvariant();
         var value = CanonicaliseExternalIdentifierValue(source, command.Value);
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return ApplicationResult<RecordingModel>.Failure(
+                ApplicationError.Validation("value", "An external identifier value is required."));
+        }
         var exists = recording.ExternalIdentifiers.Any(item =>
             string.Equals(item.Source, source, StringComparison.OrdinalIgnoreCase) &&
             string.Equals(item.Value, value, StringComparison.Ordinal));
@@ -260,7 +265,7 @@ public sealed class ShowrunnerService
             return ApplicationResult<ShowModel>.Failure(
                 ApplicationError.Conflict(
                     "show_already_finalised",
-                    "Recordings cannot be planned after the show's reconciliation has been confirmed.",
+                    "Recordings cannot be planned after the show's reconciliation has been operator-confirmed or finalised.",
                     "showId",
                     showId.ToString()));
         }
@@ -329,7 +334,7 @@ public sealed class ShowrunnerService
             return ApplicationResult<ShowPlanRefreshResult>.Failure(
                 ApplicationError.Conflict(
                     "show_already_finalised",
-                    "The show plan cannot be refreshed after the show's reconciliation has been confirmed.",
+                    "The show plan cannot be refreshed after the show's reconciliation has been operator-confirmed or finalised.",
                     "showId",
                     showId.ToString()));
         }
@@ -631,6 +636,14 @@ public sealed class ShowrunnerService
         {
             var source = query.ExternalIdentifierSource!.Trim().ToLowerInvariant();
             var value = CanonicaliseExternalIdentifierValue(source, query.ExternalIdentifierValue!);
+            if (string.IsNullOrWhiteSpace(value))
+            {
+                return ApplicationResult<RecordingHistoryQueryResult>.Failure(
+                    ApplicationError.Validation(
+                        "query",
+                        "The external identifier value must contain a supported identifier."));
+            }
+
             candidates = await dbContext.Recordings
                 .AsNoTracking()
                 .Include(item => item.ExternalIdentifiers)
@@ -862,13 +875,13 @@ public sealed class ShowrunnerService
         {
             if (trimmed.StartsWith("spotify:track:", StringComparison.OrdinalIgnoreCase))
             {
-                return trimmed["spotify:track:".Length..];
+                return trimmed["spotify:track:".Length..].Trim();
             }
 
             if (trimmed.StartsWith("https://open.spotify.com/track/", StringComparison.OrdinalIgnoreCase))
             {
                 var trackPart = trimmed["https://open.spotify.com/track/".Length..];
-                return trackPart.Split('?', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries)[0];
+                return trackPart.Split('?', 2, StringSplitOptions.TrimEntries)[0].Trim();
             }
         }
 

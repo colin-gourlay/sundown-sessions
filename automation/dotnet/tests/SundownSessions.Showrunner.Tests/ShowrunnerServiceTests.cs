@@ -150,19 +150,29 @@ public sealed class ShowrunnerServiceTests
         var duplicate = await service.AddExternalIdentifierAsync(
             otherRecording.Id,
             new AddExternalIdentifierCommand("spotify", "https://open.spotify.com/track/abc123?si=test"));
+        var invalid = await service.AddExternalIdentifierAsync(
+            otherRecording.Id,
+            new AddExternalIdentifierCommand("spotify", "spotify:track:"));
         var history = await service.QueryRecordingHistoryAsync(new RecordingHistoryQuery(
             ExternalIdentifierSource: "spotify",
             ExternalIdentifierValue: "https://open.spotify.com/track/abc123"));
+        var invalidHistory = await service.QueryRecordingHistoryAsync(new RecordingHistoryQuery(
+            ExternalIdentifierSource: "spotify",
+            ExternalIdentifierValue: "https://open.spotify.com/track/?si=test"));
 
         Assert.True(associated.IsSuccess);
         Assert.Equal("abc123", associated.Value!.ExternalIdentifiers.Single().Value);
         Assert.False(duplicate.IsSuccess);
         Assert.Equal("external_identifier_in_use", duplicate.Error!.Code);
+        Assert.False(invalid.IsSuccess);
+        Assert.Equal("validation_failed", invalid.Error!.Code);
         Assert.True(history.IsSuccess);
         Assert.False(history.Value!.IsAmbiguous);
         var candidate = Assert.Single(history.Value.Candidates);
         Assert.Equal(recording.Id, candidate.RecordingId);
         Assert.Equal("abc123", candidate.ExternalIdentifiers.Single().Value);
+        Assert.False(invalidHistory.IsSuccess);
+        Assert.Equal("validation_failed", invalidHistory.Error!.Code);
     }
 
     [Fact]
