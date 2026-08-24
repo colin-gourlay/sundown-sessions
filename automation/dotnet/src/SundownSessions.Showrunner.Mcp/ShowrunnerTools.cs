@@ -137,34 +137,21 @@ public sealed class ShowrunnerTools
             : new RecordingHistoryToolResult(false, null, result.Error);
     }
 
-    [McpServerTool(Name = "recording_create", ReadOnly = false, Idempotent = false, UseStructuredContent = true)]
-    [Description("Creates a new authoritative Showrunner recording for a non-Spotify candidate such as a demo, Bandcamp release, or local FLAC. Use recording_history first to avoid duplicates. After creation, use recording_external_identifier_add to attach a source reference such as a Todoist task identifier.")]
-    public static async Task<RecordingCreateToolResult> CreateRecordingAsync(
+    [McpServerTool(Name = "backlog_candidate_import", ReadOnly = false, Idempotent = true, UseStructuredContent = true)]
+    [Description("Atomically imports one externally captured candidate into the authoritative Showrunner backlog. Provide exactly one resolved recording identity: recordingId for an existing recording, or newRecording only after recording_history finds no match. The external reference is preserved for housekeeping, and an identical retry returns the existing recording and backlog item as a no-op.")]
+    public static async Task<BacklogCandidateImportToolResult> ImportBacklogCandidateAsync(
         ShowrunnerService showrunnerService,
-        [Description("The recording to create.")] CreateRecordingCommand command,
+        [Description("The resolved candidate, its integration-neutral external source reference, and backlog text.")] ImportBacklogCandidateCommand command,
         CancellationToken cancellationToken = default)
     {
-        var result = await showrunnerService.CreateRecordingAsync(command, cancellationToken);
+        var result = await showrunnerService.ImportBacklogCandidateAsync(command, cancellationToken);
         return result.IsSuccess
-            ? new RecordingCreateToolResult(true, result.Value, null)
-            : new RecordingCreateToolResult(false, null, result.Error);
-    }
-
-    [McpServerTool(Name = "backlog_item_create", ReadOnly = false, Idempotent = false, UseStructuredContent = true)]
-    [Description("Adds a candidate to the Showrunner planning backlog, optionally linked to an authoritative recording. Use this after recording_create or recording_history to import a non-Spotify candidate for show planning consideration.")]
-    public static async Task<BacklogItemCreateToolResult> CreateBacklogItemAsync(
-        ShowrunnerService showrunnerService,
-        [Description("The backlog item to create.")] CreateBacklogItemCommand command,
-        CancellationToken cancellationToken = default)
-    {
-        var result = await showrunnerService.CreateBacklogItemAsync(command, cancellationToken);
-        return result.IsSuccess
-            ? new BacklogItemCreateToolResult(true, result.Value, null)
-            : new BacklogItemCreateToolResult(false, null, result.Error);
+            ? new BacklogCandidateImportToolResult(true, result.Value, null)
+            : new BacklogCandidateImportToolResult(false, null, result.Error);
     }
 
     [McpServerTool(Name = "backlog_item_list", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
-    [Description("Returns all Showrunner backlog items in creation order. Use this to see outstanding non-Spotify candidates before planning a show.")]
+    [Description("Returns the authoritative Showrunner backlog in stable chronological order. Use recording_history with a linked recordingId to inspect identity, external references, and prior broadcasts before planning.")]
     public static async Task<BacklogItemListToolResult> ListBacklogItemsAsync(
         ShowrunnerService showrunnerService,
         CancellationToken cancellationToken = default)

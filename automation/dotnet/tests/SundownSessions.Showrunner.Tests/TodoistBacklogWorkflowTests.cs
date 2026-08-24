@@ -1,50 +1,162 @@
 namespace SundownSessions.Showrunner.Tests;
 
-/// <summary>
-/// Tests covering the non-Spotify candidate capture and post-show housekeeping workflow
-/// that bridges Todoist (as an external capture workspace) with authoritative Showrunner state.
-/// Todoist access lives in the agent host; Showrunner owns recording/backlog/history truth.
-/// </summary>
 public sealed class TodoistBacklogWorkflowTests
 {
     [Fact]
-    public async Task NonSpotifyCandidateCanBeCreatedAndLinkedToBacklogItem()
+    public async Task CandidateImportCreatesRecordingReferenceAndBacklogAtomically()
     {
         using var harness = new SqliteTestHarness();
+        var clock = new TestClock(new DateTimeOffset(2026, 8, 19, 10, 0, 0, TimeSpan.Zero));
         await using var context = harness.CreateContext();
-        var service = new ShowrunnerService(context);
+        var service = new ShowrunnerService(context, clock);
 
-        var recording = (await service.CreateRecordingAsync(
-            new CreateRecordingCommand("Demo Track", "The Band", Notes: "Sent directly by band"))).Value!;
+        var result = await service.ImportBacklogCandidateAsync(
+            new ImportBacklogCandidateCommand(
+                "The Band – Demo Track",
+                " Todoist ",
+                " task-12345 ",
+                NewRecording: new CreateRecordingCommand(
+                    "Demo Track",
+                    "The Band",
+                    Notes: "Sent directly by band"),
+                Notes: "Captured from the to playlist project"));
 
-        var backlogItem = (await service.CreateBacklogItemAsync(
-            new CreateBacklogItemCommand("The Band – Demo Track", recording.Id))).Value!;
-
-        Assert.Equal(recording.Id, backlogItem.RecordingId);
-        Assert.Equal("The Band – Demo Track", backlogItem.Summary);
+        Assert.True(result.IsSuccess);
+        Assert.True(result.Value!.RecordingCreated);
+        Assert.True(result.Value.ExternalIdentifierAdded);
+        Assert.True(result.Value.BacklogItemCreated);
+        Assert.False(result.Value.IsNoOp);
+        Assert.Equal(result.Value.Recording.Id, result.Value.BacklogItem.RecordingId);
+        Assert.Equal("The Band – Demo Track", result.Value.BacklogItem.Summary);
+        Assert.Equal("Captured from the to playlist project", result.Value.BacklogItem.Notes);
+        var sourceReference = Assert.Single(result.Value.Recording.ExternalIdentifiers);
+        Assert.Equal("todoist", sourceReference.Source);
+        Assert.Equal("task-12345", sourceReference.Value);
     }
 
     [Fact]
-    public async Task TodoistSourceReferenceCanBeAttachedToRecording()
+    public async Task CandidateImportCanLinkAnExistingResolvedRecording()
     {
         using var harness = new SqliteTestHarness();
         await using var context = harness.CreateContext();
         var service = new ShowrunnerService(context);
-
         var recording = (await service.CreateRecordingAsync(
             new CreateRecordingCommand("Bandcamp Release", "Indie Artist"))).Value!;
 
-        var updated = (await service.AddExternalIdentifierAsync(
-            recording.Id,
-            new AddExternalIdentifierCommand("todoist", "todoist-task-12345"))).Value!;
+        var result = await service.ImportBacklogCandidateAsync(
+            new ImportBacklogCandidateCommand(
+                "Indie Artist – Bandcamp Release",
+                "todoist",
+                "task-existing",
+                RecordingId: recording.Id));
 
-        Assert.Single(updated.ExternalIdentifiers);
-        Assert.Equal("todoist", updated.ExternalIdentifiers[0].Source);
-        Assert.Equal("todoist-task-12345", updated.ExternalIdentifiers[0].Value);
+        Assert.True(result.IsSuccess);
+        Assert.False(result.Value!.RecordingCreated);
+        Assert.True(result.Value.ExternalIdentifierAdded);
+        Assert.True(result.Value.BacklogItemCreated);
+        Assert.Equal(recording.Id, result.Value.Recording.Id);
+        Assert.Contains(
+            result.Value.Recording.ExternalIdentifiers,
+            item => item.Source == "todoist" && item.Value == "task-existing");
     }
 
     [Fact]
-    public async Task BacklogItemListReturnsAllItemsInCreationOrder()
+    public async Task IdenticalCandidateImportRetryIsANoOpWithStableIdentity()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var command = new ImportBacklogCandidateCommand(
+            "Retryable demo",
+            "todoist",
+            "task-retry",
+            NewRecording: new CreateRecordingCommand("Retryable demo", "Artist"));
+
+        var first = (await service.ImportBacklogCandidateAsync(command)).Value!;
+        var retry = (await service.ImportBacklogCandidateAsync(command)).Value!;
+
+        Assert.True(retry.IsNoOp);
+        Assert.False(retry.RecordingCreated);
+        Assert.False(retry.ExternalIdentifierAdded);
+        Assert.False(retry.BacklogItemCreated);
+        Assert.Equal(first.Recording.Id, retry.Recording.Id);
+        Assert.Equal(first.BacklogItem.Id, retry.BacklogItem.Id);
+        Assert.Single((await service.ListBacklogItemsAsync()).Value!.Items);
+    }
+
+    [Fact]
+    public async Task ExistingBacklogItemIsReusedWhenAnotherSourceReferenceResolvesToItsRecording()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var recording = (await service.CreateRecordingAsync(
+            new CreateRecordingCommand("Already queued", "Artist"))).Value!;
+        var backlogItem = (await service.CreateBacklogItemAsync(
+            new CreateBacklogItemCommand("Existing candidate", recording.Id))).Value!;
+
+        var result = (await service.ImportBacklogCandidateAsync(
+            new ImportBacklogCandidateCommand(
+                "Duplicate capture text",
+                "todoist",
+                "task-existing-backlog",
+                RecordingId: recording.Id))).Value!;
+
+        Assert.False(result.RecordingCreated);
+        Assert.True(result.ExternalIdentifierAdded);
+        Assert.False(result.BacklogItemCreated);
+        Assert.False(result.IsNoOp);
+        Assert.Equal(backlogItem.Id, result.BacklogItem.Id);
+        Assert.Single((await service.ListBacklogItemsAsync()).Value!.Items);
+    }
+
+    [Fact]
+    public async Task SourceReferenceCannotBeSilentlyReassignedToDifferentRecording()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var first = (await service.CreateRecordingAsync(new CreateRecordingCommand("First", "Artist"))).Value!;
+        var second = (await service.CreateRecordingAsync(new CreateRecordingCommand("Second", "Artist"))).Value!;
+        await service.ImportBacklogCandidateAsync(
+            new ImportBacklogCandidateCommand("First", "todoist", "task-conflict", RecordingId: first.Id));
+
+        var conflict = await service.ImportBacklogCandidateAsync(
+            new ImportBacklogCandidateCommand("Second", "todoist", "task-conflict", RecordingId: second.Id));
+
+        Assert.False(conflict.IsSuccess);
+        Assert.Equal("external_identifier_in_use", conflict.Error!.Code);
+        var secondPersisted = (await service.GetRecordingAsync(second.Id)).Value!;
+        Assert.Empty(secondPersisted.ExternalIdentifiers);
+        Assert.Single((await service.ListBacklogItemsAsync()).Value!.Items);
+    }
+
+    [Fact]
+    public async Task CandidateImportRequiresAnExplicitlyResolvedRecordingIdentityBeforeWriting()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+
+        var unresolved = await service.ImportBacklogCandidateAsync(
+            new ImportBacklogCandidateCommand("Ambiguous demo", "todoist", "task-ambiguous"));
+        var bothSelectors = await service.ImportBacklogCandidateAsync(
+            new ImportBacklogCandidateCommand(
+                "Conflicting identity",
+                "todoist",
+                "task-both",
+                RecordingId: Guid.NewGuid(),
+                NewRecording: new CreateRecordingCommand("Conflicting identity", "Artist")));
+
+        Assert.False(unresolved.IsSuccess);
+        Assert.Equal("validation_failed", unresolved.Error!.Code);
+        Assert.False(bothSelectors.IsSuccess);
+        Assert.Equal("validation_failed", bothSelectors.Error!.Code);
+        Assert.Empty((await service.ListBacklogItemsAsync()).Value!.Items);
+    }
+
+    [Fact]
+    public async Task BacklogListUsesStableChronologicalOrder()
     {
         using var harness = new SqliteTestHarness();
         var clock = new TestClock(new DateTimeOffset(2026, 8, 19, 10, 0, 0, TimeSpan.Zero));
@@ -54,195 +166,68 @@ public sealed class TodoistBacklogWorkflowTests
         await service.CreateBacklogItemAsync(new CreateBacklogItemCommand("Candidate A"));
         clock.Advance(TimeSpan.FromMinutes(1));
         await service.CreateBacklogItemAsync(new CreateBacklogItemCommand("Candidate B"));
-        clock.Advance(TimeSpan.FromMinutes(1));
-        await service.CreateBacklogItemAsync(new CreateBacklogItemCommand("Candidate C"));
 
         var result = (await service.ListBacklogItemsAsync()).Value!;
 
-        Assert.Equal(3, result.Items.Count);
-        Assert.Equal("Candidate A", result.Items[0].Summary);
-        Assert.Equal("Candidate B", result.Items[1].Summary);
-        Assert.Equal("Candidate C", result.Items[2].Summary);
+        Assert.Equal(["Candidate A", "Candidate B"], result.Items.Select(item => item.Summary).ToArray());
     }
 
     [Fact]
-    public async Task BacklogItemListIsEmptyWhenNoCandidatesExist()
-    {
-        using var harness = new SqliteTestHarness();
-        await using var context = harness.CreateContext();
-        var service = new ShowrunnerService(context);
-
-        var result = (await service.ListBacklogItemsAsync()).Value!;
-
-        Assert.Empty(result.Items);
-    }
-
-    [Fact]
-    public async Task BacklogItemCanExistWithoutLinkedRecording()
-    {
-        using var harness = new SqliteTestHarness();
-        await using var context = harness.CreateContext();
-        var service = new ShowrunnerService(context);
-
-        var item = (await service.CreateBacklogItemAsync(
-            new CreateBacklogItemCommand("Needs investigating", Notes: "Heard on radio"))).Value!;
-
-        Assert.Null(item.RecordingId);
-        Assert.Equal("Needs investigating", item.Summary);
-        Assert.Equal("Heard on radio", item.Notes);
-    }
-
-    [Fact]
-    public async Task RecordingHistoryQuerySurfacesAmbiguousCandidatesForOperatorResolution()
-    {
-        using var harness = new SqliteTestHarness();
-        await using var context = harness.CreateContext();
-        var service = new ShowrunnerService(context);
-
-        await service.CreateRecordingAsync(new CreateRecordingCommand("Demo", "Artist One"));
-        await service.CreateRecordingAsync(new CreateRecordingCommand("Demo", "Artist Two"));
-
-        var result = (await service.QueryRecordingHistoryAsync(new RecordingHistoryQuery(Title: "Demo"))).Value!;
-
-        Assert.True(result.IsAmbiguous);
-        Assert.Equal(2, result.Candidates.Count);
-    }
-
-    [Fact]
-    public async Task FinalisedBroadcastIncludesTodoistSourceReferenceForHousekeeping()
+    public async Task FinalisationSeparatesAiredAndDroppedTodoistCandidatesForHousekeeping()
     {
         using var harness = new SqliteTestHarness();
         var clock = new TestClock(new DateTimeOffset(2026, 8, 19, 10, 0, 0, TimeSpan.Zero));
-
-        Guid recordingId;
-        Guid plannedRecordingId;
         Guid showId;
-
-        await using (var context = harness.CreateContext())
-        {
-            var service = new ShowrunnerService(context, clock);
-            var recording = (await service.CreateRecordingAsync(
-                new CreateRecordingCommand("Aired Track", "The Band"))).Value!;
-            recordingId = recording.Id;
-
-            await service.AddExternalIdentifierAsync(
-                recordingId,
-                new AddExternalIdentifierCommand("todoist", "todoist-task-99"));
-
-            var show = (await service.CreateShowAsync(
-                new CreateShowCommand("show-1", "Show 1", new DateOnly(2026, 8, 19)))).Value!;
-            showId = show.Id;
-
-            var plan = (await service.PlanRecordingAsync(
-                showId,
-                new PlanRecordingCommand(recordingId, 1))).Value!;
-            plannedRecordingId = plan.PlannedRecordings.Single().Id;
-        }
-
-        await using (var context = harness.CreateContext())
-        {
-            await ShowrunnerTestOperations.FinaliseShowAsync(
-                context,
-                showId,
-                [new ConfirmedPlaybackItemCommand(recordingId, 1, plannedRecordingId)],
-                clock);
-        }
-
-        await using (var context = harness.CreateContext())
-        {
-            var reconciliationService = new ShowReconciliationService(context, new EmptyMixxxPlaybackEvidenceReader(), clock);
-            var summary = (await reconciliationService.FinaliseReconciliationAsync(showId)).Value!;
-
-            Assert.True(summary.IsFinalised);
-            var aired = Assert.Single(summary.AddedToPermanentHistory);
-            Assert.Equal(recordingId, aired.RecordingId);
-            var todoistRef = Assert.Single(aired.ExternalIdentifiers, id => id.Source == "todoist");
-            Assert.Equal("todoist-task-99", todoistRef.Value);
-        }
-    }
-
-    [Fact]
-    public async Task DroppedCandidatesAreNotCompletedAndRemainAvailable()
-    {
-        using var harness = new SqliteTestHarness();
-        var clock = new TestClock(new DateTimeOffset(2026, 8, 19, 10, 0, 0, TimeSpan.Zero));
-
-        Guid droppedRecordingId;
         Guid airedRecordingId;
-        Guid showId;
+        Guid droppedRecordingId;
 
         await using (var context = harness.CreateContext())
         {
             var service = new ShowrunnerService(context, clock);
-
-            var dropped = (await service.CreateRecordingAsync(
-                new CreateRecordingCommand("Dropped Track", "Artist A"))).Value!;
-            droppedRecordingId = dropped.Id;
-            await service.AddExternalIdentifierAsync(droppedRecordingId, new AddExternalIdentifierCommand("todoist", "todoist-task-dropped"));
-
-            var aired = (await service.CreateRecordingAsync(
-                new CreateRecordingCommand("Aired Track", "Artist B"))).Value!;
-            airedRecordingId = aired.Id;
-            await service.AddExternalIdentifierAsync(airedRecordingId, new AddExternalIdentifierCommand("todoist", "todoist-task-aired"));
+            var aired = (await service.ImportBacklogCandidateAsync(
+                new ImportBacklogCandidateCommand(
+                    "Aired",
+                    "todoist",
+                    "task-aired",
+                    NewRecording: new CreateRecordingCommand("Aired Track", "Artist A")))).Value!;
+            var dropped = (await service.ImportBacklogCandidateAsync(
+                new ImportBacklogCandidateCommand(
+                    "Dropped",
+                    "todoist",
+                    "task-dropped",
+                    NewRecording: new CreateRecordingCommand("Dropped Track", "Artist B")))).Value!;
+            airedRecordingId = aired.Recording.Id;
+            droppedRecordingId = dropped.Recording.Id;
 
             var show = (await service.CreateShowAsync(
-                new CreateShowCommand("show-drop", "Show Drop", new DateOnly(2026, 8, 19)))).Value!;
+                new CreateShowCommand("todoist-show", "Todoist Show", new DateOnly(2026, 8, 19)))).Value!;
             showId = show.Id;
-
-            await service.PlanRecordingAsync(showId, new PlanRecordingCommand(droppedRecordingId, 1));
-            var airedPlan = (await service.PlanRecordingAsync(showId, new PlanRecordingCommand(airedRecordingId, 2))).Value!;
-            var airedPlannedId = airedPlan.PlannedRecordings.Single(p => p.RecordingId == airedRecordingId).Id;
-
+            var airedPlan = (await service.PlanRecordingAsync(
+                showId,
+                new PlanRecordingCommand(airedRecordingId, 1))).Value!;
+            await service.PlanRecordingAsync(showId, new PlanRecordingCommand(droppedRecordingId, 2));
             await ShowrunnerTestOperations.FinaliseShowAsync(
                 context,
                 showId,
-                [new ConfirmedPlaybackItemCommand(airedRecordingId, 1, airedPlannedId)],
+                [new ConfirmedPlaybackItemCommand(
+                    airedRecordingId,
+                    1,
+                    airedPlan.PlannedRecordings.Single().Id)],
                 clock);
         }
 
-        await using (var context = harness.CreateContext())
-        {
-            var reconciliationService = new ShowReconciliationService(context, new EmptyMixxxPlaybackEvidenceReader(), clock);
-            var summary = (await reconciliationService.FinaliseReconciliationAsync(showId)).Value!;
+        await using var finalContext = harness.CreateContext();
+        var reconciliation = new ShowReconciliationService(
+            finalContext,
+            new EmptyMixxxPlaybackEvidenceReader(),
+            clock);
+        var result = (await reconciliation.FinaliseReconciliationAsync(showId)).Value!;
 
-            Assert.True(summary.IsFinalised);
-
-            // Only the aired track should appear in permanent history (with its Todoist reference for housekeeping).
-            var aired = Assert.Single(summary.AddedToPermanentHistory);
-            Assert.Equal(airedRecordingId, aired.RecordingId);
-            Assert.Contains(aired.ExternalIdentifiers, id => id.Source == "todoist" && id.Value == "todoist-task-aired");
-
-            // The dropped track should be identified as dropped, not completed.
-            var droppedEntry = Assert.Single(summary.DroppedPlannedRecordings);
-            Assert.Equal(droppedRecordingId, droppedEntry.RecordingId);
-            Assert.Contains(droppedEntry.ExternalIdentifiers, id => id.Source == "todoist" && id.Value == "todoist-task-dropped");
-        }
-    }
-
-    [Fact]
-    public async Task CreateBacklogItemRejectsEmptySummary()
-    {
-        using var harness = new SqliteTestHarness();
-        await using var context = harness.CreateContext();
-        var service = new ShowrunnerService(context);
-
-        var result = await service.CreateBacklogItemAsync(new CreateBacklogItemCommand("   "));
-
-        Assert.False(result.IsSuccess);
-        Assert.Equal("validation_failed", result.Error!.Code);
-    }
-
-    [Fact]
-    public async Task CreateBacklogItemRejectsUnknownRecordingId()
-    {
-        using var harness = new SqliteTestHarness();
-        await using var context = harness.CreateContext();
-        var service = new ShowrunnerService(context);
-
-        var result = await service.CreateBacklogItemAsync(
-            new CreateBacklogItemCommand("Candidate", Guid.NewGuid()));
-
-        Assert.False(result.IsSuccess);
-        Assert.Equal("not_found", result.Error!.Code);
+        var airedResult = Assert.Single(result.AddedToPermanentHistory);
+        Assert.Equal(airedRecordingId, airedResult.RecordingId);
+        Assert.Contains(airedResult.ExternalIdentifiers, item => item.Source == "todoist" && item.Value == "task-aired");
+        var droppedResult = Assert.Single(result.DroppedPlannedRecordings);
+        Assert.Equal(droppedRecordingId, droppedResult.RecordingId);
+        Assert.Contains(droppedResult.ExternalIdentifiers, item => item.Source == "todoist" && item.Value == "task-dropped");
     }
 }

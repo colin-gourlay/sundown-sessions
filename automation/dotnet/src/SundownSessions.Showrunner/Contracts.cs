@@ -10,6 +10,14 @@ public sealed record AddExternalIdentifierCommand(string Source, string Value);
 
 public sealed record CreateBacklogItemCommand(string Summary, Guid? RecordingId = null, string? Notes = null);
 
+public sealed record ImportBacklogCandidateCommand(
+    string Summary,
+    string ExternalIdentifierSource,
+    string ExternalIdentifierValue,
+    Guid? RecordingId = null,
+    CreateRecordingCommand? NewRecording = null,
+    string? Notes = null);
+
 public sealed record CreateShowCommand(string Slug, string Title, DateOnly ShowDate);
 
 public sealed record PlanRecordingCommand(Guid RecordingId, int Position, string? Notes = null);
@@ -100,6 +108,14 @@ public sealed record RecordingHistoryQuery(
     string? Artist = null);
 
 public sealed record BacklogItemListResult(IReadOnlyList<BacklogItemModel> Items);
+
+public sealed record BacklogCandidateImportResult(
+    RecordingModel Recording,
+    BacklogItemModel BacklogItem,
+    bool RecordingCreated,
+    bool ExternalIdentifierAdded,
+    bool BacklogItemCreated,
+    bool IsNoOp);
 
 public sealed record RecordingHistoryQueryResult(
     bool IsAmbiguous,

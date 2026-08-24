@@ -45,14 +45,9 @@ public sealed record RecordingHistoryToolResult(
     RecordingHistoryQueryResult? Result,
     ApplicationError? Error);
 
-public sealed record RecordingCreateToolResult(
+public sealed record BacklogCandidateImportToolResult(
     bool IsSuccess,
-    RecordingModel? Result,
-    ApplicationError? Error);
-
-public sealed record BacklogItemCreateToolResult(
-    bool IsSuccess,
-    BacklogItemModel? Result,
+    BacklogCandidateImportResult? Result,
     ApplicationError? Error);
 
 public sealed record BacklogItemListToolResult(

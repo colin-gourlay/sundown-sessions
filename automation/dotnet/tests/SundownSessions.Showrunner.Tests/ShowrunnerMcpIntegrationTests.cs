@@ -56,9 +56,8 @@ public sealed class ShowrunnerMcpIntegrationTests
         var tools = await client.ListToolsAsync(cancellationToken: timeout.Token);
         Assert.Equal(
             [
-            "backlog_item_create",
+            "backlog_candidate_import",
             "backlog_item_list",
-            "recording_create",
             "recording_external_identifier_add",
             "recording_history",
             "recording_resolve",
@@ -70,6 +69,78 @@ public sealed class ShowrunnerMcpIntegrationTests
             "show_reconciliation_finalise",
             ],
             tools.Select(tool => tool.Name).Order(StringComparer.Ordinal).ToArray());
+
+        var importCandidateArguments = new Dictionary<string, object?>
+        {
+            ["command"] = new
+            {
+                summary = "MCP Todoist candidate",
+                externalIdentifierSource = "todoist",
+                externalIdentifierValue = "mcp-task-1",
+                newRecording = new
+                {
+                    title = "MCP-only demo",
+                    artist = "MCP Artist",
+                },
+            },
+        };
+        var importCandidateResult = await client.CallToolAsync(
+            "backlog_candidate_import",
+            importCandidateArguments,
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, importCandidateResult.IsError);
+        var importCandidateJson = importCandidateResult.StructuredContent!.Value.GetProperty("result");
+        Assert.True(importCandidateJson.GetProperty("recordingCreated").GetBoolean());
+        Assert.True(importCandidateJson.GetProperty("externalIdentifierAdded").GetBoolean());
+        Assert.True(importCandidateJson.GetProperty("backlogItemCreated").GetBoolean());
+        Assert.False(importCandidateJson.GetProperty("isNoOp").GetBoolean());
+        var importedRecordingId = importCandidateJson.GetProperty("recording").GetProperty("id").GetGuid();
+        var importedBacklogItemId = importCandidateJson.GetProperty("backlogItem").GetProperty("id").GetGuid();
+
+        var retryCandidateResult = await client.CallToolAsync(
+            "backlog_candidate_import",
+            importCandidateArguments,
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, retryCandidateResult.IsError);
+        var retryCandidateJson = retryCandidateResult.StructuredContent!.Value.GetProperty("result");
+        Assert.True(retryCandidateJson.GetProperty("isNoOp").GetBoolean());
+        Assert.Equal(importedRecordingId, retryCandidateJson.GetProperty("recording").GetProperty("id").GetGuid());
+        Assert.Equal(importedBacklogItemId, retryCandidateJson.GetProperty("backlogItem").GetProperty("id").GetGuid());
+
+        var conflictingCandidateResult = await client.CallToolAsync(
+            "backlog_candidate_import",
+            new Dictionary<string, object?>
+            {
+                ["command"] = new
+                {
+                    summary = "Conflicting MCP candidate",
+                    externalIdentifierSource = "todoist",
+                    externalIdentifierValue = "mcp-task-1",
+                    newRecording = new
+                    {
+                        title = "A different recording",
+                        artist = "MCP Artist",
+                    },
+                },
+            },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, conflictingCandidateResult.IsError);
+        var conflictingCandidateJson = conflictingCandidateResult.StructuredContent!.Value;
+        Assert.False(conflictingCandidateJson.GetProperty("isSuccess").GetBoolean());
+        Assert.Equal(
+            "external_identifier_in_use",
+            conflictingCandidateJson.GetProperty("error").GetProperty("code").GetString());
+
+        var listBacklogResult = await client.CallToolAsync(
+            "backlog_item_list",
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, listBacklogResult.IsError);
+        var listedBacklogItems = listBacklogResult.StructuredContent!.Value
+            .GetProperty("result")
+            .GetProperty("items");
+        var listedBacklogItem = Assert.Single(listedBacklogItems.EnumerateArray());
+        Assert.Equal(importedBacklogItemId, listedBacklogItem.GetProperty("id").GetGuid());
+        Assert.Equal(importedRecordingId, listedBacklogItem.GetProperty("recordingId").GetGuid());
 
         var refreshPlanResult = await client.CallToolAsync(
             "show_plan_refresh",
