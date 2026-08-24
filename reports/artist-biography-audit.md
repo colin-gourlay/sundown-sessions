@@ -1,6 +1,6 @@
 # Artist Biography Audit Report
 
-Generated: 2026-07-13
+Generated: 2026-08-19
 
 This report flags artist biographies that need a human editorial pass. It does not rewrite copy automatically.
 
@@ -14,7 +14,7 @@ This report flags artist biographies that need a human editorial pass. It does n
 
 ## Summary
 
-- Artist pages needing review: 381
+- Artist pages needing review: 365
 
 ## Findings
 
@@ -69,12 +69,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: possibly stale release or career-currentness wording
 - Reason: biography mentions no year after 2017
-
-### Air
-
-- File: `src/content/artists/a/air/index.md`
-- Reason: missing `lastReviewed` front matter
-- Reason: biography mentions no year after 1998
 
 ### Air Traffic
 
@@ -169,11 +163,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/b/barracudas/index.md`
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 1985
-
-### Bauhaus
-
-- File: `src/content/artists/b/bauhaus/index.md`
-- Reason: missing `lastReviewed` front matter
 
 ### Becky Lopez
 
@@ -301,11 +290,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: missing `## About` biography text
 
-### Chikinki
-
-- File: `src/content/artists/c/chikinki/index.md`
-- Reason: missing `lastReviewed` front matter
-
 ### China White
 
 - File: `src/content/artists/c/china-white/index.md`
@@ -349,11 +333,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/c/clear-light-2/index.md`
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 1966
-
-### Cocteau Twins
-
-- File: `src/content/artists/c/cocteau-twins/index.md`
-- Reason: missing `lastReviewed` front matter
 
 ### Codeine Velvet Club
 
@@ -482,12 +461,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 2014
 
-### Doves
-
-- File: `src/content/artists/d/doves/index.md`
-- Reason: missing `lastReviewed` front matter
-- Reason: possibly stale release or career-currentness wording
-
 ### Dr. Feelgood
 
 - File: `src/content/artists/d/dr-feelgood/index.md`
@@ -585,11 +558,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/f/fairport-convention/index.md`
 - Reason: missing `lastReviewed` front matter
 
-### Far Corporation
-
-- File: `src/content/artists/f/far-corporation/index.md`
-- Reason: missing `lastReviewed` front matter
-
 ### Feeder
 
 - File: `src/content/artists/f/feeder/index.md`
@@ -630,11 +598,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: possibly stale release or career-currentness wording
 - Reason: biography mentions no year after 2010
-
-### Frankie Goes To Hollywood
-
-- File: `src/content/artists/f/frankie-goes-to-hollywood/index.md`
-- Reason: missing `lastReviewed` front matter
 
 ### Furniture
 
@@ -801,12 +764,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/j/jarvis-cocker/index.md`
 - Reason: missing `lastReviewed` front matter
 
-### Jim Morrison
-
-- File: `src/content/artists/j/jim-morrison/index.md`
-- Reason: missing `lastReviewed` front matter
-- Reason: biography mentions no year after 1993
-
 ### Jimi Hendrix
 
 - File: `src/content/artists/j/jimi-hendrix/index.md`
@@ -901,11 +858,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 ### Kubb
 
 - File: `src/content/artists/k/kubb/index.md`
-- Reason: missing `lastReviewed` front matter
-
-### Kula Shaker
-
-- File: `src/content/artists/k/kula-shaker/index.md`
 - Reason: missing `lastReviewed` front matter
 
 ### Led Zeppelin
@@ -1028,13 +980,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 2018
 
-### Masters Of Reality
-
-- File: `src/content/artists/m/masters-of-reality/index.md`
-- Reason: missing `lastReviewed` front matter
-- Reason: possibly stale release or career-currentness wording
-- Reason: biography mentions no year after 1981
-
 ### May Blitz
 
 - File: `src/content/artists/m/may-blitz/index.md`
@@ -1127,11 +1072,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/m/morrissey/index.md`
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 1988
-
-### Muse
-
-- File: `src/content/artists/m/muse/index.md`
-- Reason: missing `lastReviewed` front matter
 
 ### Nadine Shah
 
@@ -1350,11 +1290,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/r/roxy-music/index.md`
 - Reason: missing `lastReviewed` front matter
 
-### Royal Blood
-
-- File: `src/content/artists/r/royal-blood/index.md`
-- Reason: missing `lastReviewed` front matter
-
 ### Rush
 
 - File: `src/content/artists/r/rush/index.md`
@@ -1496,13 +1431,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/s/spoon/index.md`
 - Reason: missing `lastReviewed` front matter
 
-### Squeeze (2)
-
-- File: `src/content/artists/s/squeeze-2/index.md`
-- Reason: missing `lastReviewed` front matter
-- Reason: possibly stale release or career-currentness wording
-- Reason: biography mentions no year after 1990
-
 ### Status Quo
 
 - File: `src/content/artists/s/status-quo/index.md`
@@ -1624,12 +1552,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/t/the-bluebells/index.md`
 - Reason: missing `lastReviewed` front matter
 
-### The Bravery
-
-- File: `src/content/artists/t/the-bravery/index.md`
-- Reason: missing `lastReviewed` front matter
-- Reason: possibly stale release or career-currentness wording
-
 ### The Cars
 
 - File: `src/content/artists/t/the-cars/index.md`
@@ -1669,11 +1591,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 - File: `src/content/artists/t/the-cramps/index.md`
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 2009
-
-### The Cult
-
-- File: `src/content/artists/t/the-cult/index.md`
-- Reason: missing `lastReviewed` front matter
 
 ### The Damned
 
@@ -2112,12 +2029,6 @@ This report flags artist biographies that need a human editorial pass. It does n
 
 - File: `src/content/artists/w/westlife/index.md`
 - Reason: missing `lastReviewed` front matter
-
-### White Lies
-
-- File: `src/content/artists/w/white-lies/index.md`
-- Reason: missing `lastReviewed` front matter
-- Reason: possibly stale release or career-currentness wording
 
 ### Willie Nelson
 
