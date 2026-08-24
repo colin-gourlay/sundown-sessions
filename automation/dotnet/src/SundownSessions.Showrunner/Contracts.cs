@@ -70,6 +70,15 @@ public sealed record ShowModel(
     IReadOnlyList<PlannedRecordingModel> PlannedRecordings,
     DateTimeOffset CreatedAtUtc);
 
+public sealed record ShowLookupQuery(
+    Guid? ShowId = null,
+    string? Slug = null,
+    DateOnly? ShowDate = null);
+
+public sealed record ShowLookupResult(
+    bool IsAmbiguous,
+    IReadOnlyList<ShowModel> Matches);
+
 public sealed record PlannedRecordingModel(Guid Id, Guid RecordingId, int Position, string? Notes, DateTimeOffset CreatedAtUtc);
 
 public sealed record ShowPlanRefreshResult(

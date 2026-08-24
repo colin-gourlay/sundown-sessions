@@ -20,14 +20,17 @@ public sealed record ApplicationError(
     }
 
     public static ApplicationError NotFound(string resource, Guid id)
+        => NotFound(resource, id.ToString());
+
+    public static ApplicationError NotFound(string resource, string identifier)
     {
         return new ApplicationError(
             "not_found",
-            $"{resource} '{id}' was not found.",
+            $"{resource} '{identifier}' was not found.",
             new ReadOnlyDictionary<string, IReadOnlyList<string>>(
                 new Dictionary<string, IReadOnlyList<string>>(StringComparer.Ordinal)
                 {
-                    [resource] = new[] { id.ToString() },
+                    [resource] = new[] { identifier },
                 }));
     }
 

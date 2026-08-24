@@ -62,6 +62,7 @@ public sealed class ShowrunnerMcpIntegrationTests
             "recording_history",
             "recording_resolve",
             "repeat_exception_create",
+            "show_get",
             "show_plan_refresh",
             "show_prepare",
             "show_reconciliation_confirm",
@@ -69,6 +70,31 @@ public sealed class ShowrunnerMcpIntegrationTests
             "show_reconciliation_finalise",
             ],
             tools.Select(tool => tool.Name).Order(StringComparer.Ordinal).ToArray());
+
+        var showGetResult = await client.CallToolAsync(
+            "show_get",
+            new Dictionary<string, object?>
+            {
+                ["query"] = new { showDate = "2026-08-21" },
+            },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, showGetResult.IsError);
+        var showGetJson = showGetResult.StructuredContent!.Value.GetProperty("result");
+        Assert.False(showGetJson.GetProperty("isAmbiguous").GetBoolean());
+        var foundShow = Assert.Single(showGetJson.GetProperty("matches").EnumerateArray());
+        Assert.Equal(showId, foundShow.GetProperty("id").GetGuid());
+        Assert.Equal("mcp-show", foundShow.GetProperty("slug").GetString());
+
+        var invalidShowGetResult = await client.CallToolAsync(
+            "show_get",
+            new Dictionary<string, object?> { ["query"] = new { } },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, invalidShowGetResult.IsError);
+        var invalidShowGetJson = invalidShowGetResult.StructuredContent!.Value;
+        Assert.False(invalidShowGetJson.GetProperty("isSuccess").GetBoolean());
+        Assert.Equal(
+            "validation_failed",
+            invalidShowGetJson.GetProperty("error").GetProperty("code").GetString());
 
         var importCandidateArguments = new Dictionary<string, object?>
         {

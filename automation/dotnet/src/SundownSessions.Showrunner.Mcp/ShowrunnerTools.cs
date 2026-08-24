@@ -6,6 +6,19 @@ namespace SundownSessions.Showrunner.Mcp;
 [McpServerToolType]
 public sealed class ShowrunnerTools
 {
+    [McpServerTool(Name = "show_get", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
+    [Description("Finds an authoritative Showrunner show by exactly one identifier: showId, slug, or showDate. Date lookups return every match and explicitly report ambiguity instead of selecting a show implicitly.")]
+    public static async Task<ShowGetToolResult> GetShowAsync(
+        ShowrunnerService showrunnerService,
+        [Description("Show lookup input. Provide exactly one of showId, slug, or showDate.")] ShowLookupQuery query,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await showrunnerService.FindShowAsync(query, cancellationToken);
+        return result.IsSuccess
+            ? new ShowGetToolResult(true, result.Value, null)
+            : new ShowGetToolResult(false, null, result.Error);
+    }
+
     [McpServerTool(Name = "show_reconciliation_evidence", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
     [Description("Reads Mixxx playback evidence and compares it with the authoritative Showrunner plan without mutating Showrunner or Mixxx state.")]
     public static async Task<ShowReconciliationEvidenceToolResult> GetShowReconciliationEvidenceAsync(

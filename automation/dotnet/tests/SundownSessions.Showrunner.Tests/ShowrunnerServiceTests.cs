@@ -5,6 +5,36 @@ namespace SundownSessions.Showrunner.Tests;
 public sealed class ShowrunnerServiceTests
 {
     [Fact]
+    public async Task ShowLookupRequiresOneSelectorAndSurfacesDateAmbiguity()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var showDate = new DateOnly(2026, 8, 25);
+        var first = (await service.CreateShowAsync(
+            new CreateShowCommand("tuesday-early", "Tuesday Early", showDate))).Value!;
+        var second = (await service.CreateShowAsync(
+            new CreateShowCommand("tuesday-late", "Tuesday Late", showDate))).Value!;
+
+        var missingSelector = await service.FindShowAsync(new ShowLookupQuery());
+        var conflictingSelectors = await service.FindShowAsync(
+            new ShowLookupQuery(ShowId: first.Id, Slug: first.Slug));
+        var bySlug = await service.FindShowAsync(new ShowLookupQuery(Slug: $" {second.Slug} "));
+        var byDate = await service.FindShowAsync(new ShowLookupQuery(ShowDate: showDate));
+
+        Assert.False(missingSelector.IsSuccess);
+        Assert.Equal("validation_failed", missingSelector.Error!.Code);
+        Assert.False(conflictingSelectors.IsSuccess);
+        Assert.Equal("validation_failed", conflictingSelectors.Error!.Code);
+        Assert.True(bySlug.IsSuccess);
+        Assert.False(bySlug.Value!.IsAmbiguous);
+        Assert.Equal(second.Id, Assert.Single(bySlug.Value.Matches).Id);
+        Assert.True(byDate.IsSuccess);
+        Assert.True(byDate.Value!.IsAmbiguous);
+        Assert.Equal([first.Id, second.Id], byDate.Value.Matches.Select(show => show.Id));
+    }
+
+    [Fact]
     public async Task RecordingsCanExistWithoutSpotifyIdentifiers()
     {
         using var harness = new SqliteTestHarness();

@@ -1,5 +1,10 @@
 namespace SundownSessions.Showrunner.Mcp;
 
+public sealed record ShowGetToolResult(
+    bool IsSuccess,
+    ShowLookupResult? Result,
+    ApplicationError? Error);
+
 public sealed record ShowPrepareToolResult(
     bool IsSuccess,
     ShowPreparationResultModel? Result,
