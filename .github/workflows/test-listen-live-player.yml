@@ -2,12 +2,7 @@ name: Test Listen Live Player
 
 on:
   pull_request:
-    paths:
-      - src/assets/js/listen-live-player.js
-      - src/layouts/listen-live/**
-      - src/layouts/partials/listen-live/**
-      - tests/js/**
-      - .github/workflows/test-listen-live-player.yml
+    branches: [main]
   push:
     branches:
       - main

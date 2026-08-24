@@ -2,18 +2,7 @@ name: Validate Hugo Content
 
 on:
   pull_request:
-    paths:
-      - src/content/**
-      - src/layouts/**
-      - src/assets/**
-      - src/config/**
-      - scripts/audit-release-types.py
-      - scripts/audit-release-metadata.py
-      - reports/release-type-audit.md
-      - reports/release-metadata-audit.md
-      - tests/test_audit_release_types.py
-      - tests/test_audit_release_metadata.py
-      - .github/workflows/validate-hugo-content.yml
+    branches: [main]
   push:
     branches:
       - main
@@ -65,3 +54,9 @@ jobs:
 
       - name: Audit release details metadata
         run: python3 scripts/audit-release-metadata.py --check-report
+
+      - name: Audit release tracklists
+        run: python3 scripts/audit-release-tracklists.py --check
+
+      - name: Test content audit tooling
+        run: python3 -m unittest discover -s tests -p 'test_*.py'

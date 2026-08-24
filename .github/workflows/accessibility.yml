@@ -2,11 +2,7 @@ name: Accessibility
 
 on:
   pull_request:
-    paths:
-      - src/**
-      - docs/accessibility.md
-      - .pa11yci.json
-      - .github/workflows/accessibility.yml
+    branches: [main]
   push:
     branches:
       - main
@@ -55,4 +51,4 @@ jobs:
           echo $! > /tmp/sundown-http-server.pid
 
       - name: Run pa11y accessibility checks
-        run: npx --yes pa11y-ci --config .pa11yci.json
+        run: npx --yes pa11y-ci@4.1.1 --config .pa11yci.json
