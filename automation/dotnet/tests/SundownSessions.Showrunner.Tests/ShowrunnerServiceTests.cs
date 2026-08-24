@@ -159,6 +159,10 @@ public sealed class ShowrunnerServiceTests
         var invalidHistory = await service.QueryRecordingHistoryAsync(new RecordingHistoryQuery(
             ExternalIdentifierSource: "spotify",
             ExternalIdentifierValue: "https://open.spotify.com/track/?si=test"));
+        var conflictingLookup = await service.QueryRecordingHistoryAsync(new RecordingHistoryQuery(
+            RecordingId: recording.Id,
+            ExternalIdentifierSource: "spotify",
+            ExternalIdentifierValue: "abc123"));
 
         Assert.True(associated.IsSuccess);
         Assert.Equal("abc123", associated.Value!.ExternalIdentifiers.Single().Value);
@@ -173,6 +177,8 @@ public sealed class ShowrunnerServiceTests
         Assert.Equal("abc123", candidate.ExternalIdentifiers.Single().Value);
         Assert.False(invalidHistory.IsSuccess);
         Assert.Equal("validation_failed", invalidHistory.Error!.Code);
+        Assert.False(conflictingLookup.IsSuccess);
+        Assert.Equal("validation_failed", conflictingLookup.Error!.Code);
     }
 
     [Fact]
@@ -205,6 +211,13 @@ public sealed class ShowrunnerServiceTests
                     new RefreshShowPlanItemCommand(second.Id),
                     new RefreshShowPlanItemCommand(first.Id, "Closing track"),
                 ]));
+        var retried = await service.RefreshShowPlanAsync(
+            show.Id,
+            new RefreshShowPlanCommand(
+                [
+                    new RefreshShowPlanItemCommand(second.Id),
+                    new RefreshShowPlanItemCommand(first.Id, "Closing track"),
+                ]));
         var persisted = await service.GetShowAsync(show.Id);
 
         Assert.True(refreshed.IsSuccess);
@@ -214,9 +227,65 @@ public sealed class ShowrunnerServiceTests
         Assert.Equal("Closing track", refreshed.Value.PlannedRecordings[1].Notes);
         Assert.Single(refreshed.Value.PlannedRecordings[1].BroadcastHistory);
         Assert.Equal("first-refresh", refreshed.Value.PlannedRecordings[1].ExternalIdentifiers.Single().Value);
+        Assert.True(retried.IsSuccess);
+        Assert.Equal(
+            refreshed.Value.PlannedRecordings.Select(item => item.PlannedRecordingId),
+            retried.Value!.PlannedRecordings.Select(item => item.PlannedRecordingId));
         Assert.True(persisted.IsSuccess);
         Assert.Equal([second.Id, first.Id], persisted.Value!.PlannedRecordings.Select(item => item.RecordingId).ToArray());
-        Assert.DoesNotContain(persisted.Value.PlannedRecordings, item => item.Id == originalPlan.PlannedRecordings.Single().Id);
+        Assert.Contains(persisted.Value.PlannedRecordings, item => item.Id == originalPlan.PlannedRecordings.Single().Id);
+    }
+
+    [Fact]
+    public async Task ShowPlanRefreshRefusesToInvalidateDraftReconciliationReferences()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var recording = (await service.CreateRecordingAsync(new CreateRecordingCommand("Draft plan", "Artist"))).Value!;
+        var show = (await service.CreateShowAsync(new CreateShowCommand("draft-plan", "Draft plan", new DateOnly(2026, 8, 20)))).Value!;
+        var plan = (await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 1))).Value!;
+        await service.SaveReconciliationAsync(
+            show.Id,
+            new SaveReconciliationCommand(
+                false,
+                [new ReconciliationItemCommand(plan.PlannedRecordings.Single().Id, ReconciliationItemOutcome.NotBroadcast)]));
+
+        var result = await service.RefreshShowPlanAsync(show.Id, new RefreshShowPlanCommand([]));
+        var appended = await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recording.Id, 2));
+
+        Assert.False(result.IsSuccess);
+        Assert.Equal("show_reconciliation_started", result.Error!.Code);
+        Assert.False(appended.IsSuccess);
+        Assert.Equal("show_reconciliation_started", appended.Error!.Code);
+        Assert.Single((await service.GetShowAsync(show.Id)).Value!.PlannedRecordings);
+    }
+
+    [Fact]
+    public async Task ShowPlanRefreshCanShrinkAPlanWithoutTransientPositionConflicts()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var recordings = new[]
+        {
+            (await service.CreateRecordingAsync(new CreateRecordingCommand("First", null))).Value!,
+            (await service.CreateRecordingAsync(new CreateRecordingCommand("Second", null))).Value!,
+            (await service.CreateRecordingAsync(new CreateRecordingCommand("Third", null))).Value!,
+        };
+        var show = (await service.CreateShowAsync(new CreateShowCommand("shrink-plan", "Shrink plan", new DateOnly(2026, 8, 20)))).Value!;
+        for (var index = 0; index < recordings.Length; index++)
+        {
+            await service.PlanRecordingAsync(show.Id, new PlanRecordingCommand(recordings[index].Id, index + 1));
+        }
+
+        var result = await service.RefreshShowPlanAsync(
+            show.Id,
+            new RefreshShowPlanCommand([new RefreshShowPlanItemCommand(recordings[2].Id)]));
+
+        Assert.True(result.IsSuccess);
+        Assert.Equal(recordings[2].Id, result.Value!.PlannedRecordings.Single().RecordingId);
+        Assert.Equal(1, result.Value.PlannedRecordings.Single().Position);
     }
 
     [Fact]
@@ -241,6 +310,7 @@ public sealed class ShowrunnerServiceTests
                 false,
                 [new ConfirmedPlaybackItemCommand(played.Id, 1, secondPlan.PlannedRecordings.Single(item => item.RecordingId == played.Id).Id)]));
         var finalised = await reconciliation.FinaliseReconciliationAsync(show.Id);
+        var retried = await reconciliation.FinaliseReconciliationAsync(show.Id);
 
         Assert.True(finalised.IsSuccess);
         var broadcast = Assert.Single(finalised.Value!.AddedToPermanentHistory);
@@ -250,6 +320,9 @@ public sealed class ShowrunnerServiceTests
         Assert.Equal(firstPlan.PlannedRecordings.Single().Id, droppedSummary.PlannedRecordingId);
         Assert.Equal("Dropped Spotify", droppedSummary.Title);
         Assert.Equal("dropped-id", droppedSummary.ExternalIdentifiers.Single().Value);
+        Assert.True(retried.IsSuccess);
+        Assert.True(retried.Value!.IsNoOp);
+        Assert.Equal("played-id", retried.Value.AddedToPermanentHistory.Single().ExternalIdentifiers.Single().Value);
     }
 
     [Fact]
@@ -779,7 +852,9 @@ public sealed class ShowrunnerServiceTests
         Assert.True(second.IsSuccess);
         Assert.False(first.Value!.IsNoOp);
         Assert.True(second.Value!.IsNoOp);
-        Assert.Empty(second.Value.AddedToPermanentHistory);
+        Assert.Equal(
+            first.Value.AddedToPermanentHistory.Single().BroadcastRecordingId,
+            second.Value.AddedToPermanentHistory.Single().BroadcastRecordingId);
         Assert.Equal(first.Value.FinalisedAtUtc, second.Value.FinalisedAtUtc);
         var history = await setup.GetBroadcastHistoryAsync(recording.Id);
         Assert.Single(history.Value!);

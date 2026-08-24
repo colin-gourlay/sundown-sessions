@@ -366,7 +366,10 @@ public sealed class ShowReconciliationService
                 true,
                 true,
                 reconciliation.ConfirmedAtUtc,
-                [],
+                show.BroadcastRecordings
+                    .OrderBy(item => item.Position)
+                    .Select(item => MapFinalisedBroadcastRecording(item, recordingsById[item.RecordingId]))
+                    .ToArray(),
                 BuildDroppedPlannedRecordings(reconciliation, show.PlannedRecordings, recordingsById),
                 idempotentUsedRepeatExceptions));
         }
@@ -414,19 +417,7 @@ public sealed class ShowReconciliationService
             };
             show.BroadcastRecordings.Add(entity);
             var recording = recordingsById[item.RecordingId];
-            addedToHistory.Add(new FinalisedBroadcastRecordingModel(
-                entity.Id,
-                entity.RecordingId,
-                entity.PlannedRecordingId,
-                entity.Position,
-                entity.BroadcastAtUtc,
-                recording.Title,
-                recording.Artist,
-                recording.ExternalIdentifiers
-                    .OrderBy(identifier => identifier.Source, StringComparer.Ordinal)
-                    .ThenBy(identifier => identifier.Value, StringComparer.Ordinal)
-                    .Select(identifier => new ExternalIdentifierModel(identifier.Source, identifier.Value))
-                    .ToArray()));
+            addedToHistory.Add(MapFinalisedBroadcastRecording(entity, recording));
         }
 
         reconciliation.ConfirmedAtUtc = finalisedAtUtc;
@@ -529,6 +520,23 @@ public sealed class ShowReconciliationService
             })
             .ToArray();
     }
+
+    private static FinalisedBroadcastRecordingModel MapFinalisedBroadcastRecording(
+        BroadcastRecordingEntity broadcast,
+        RecordingEntity recording)
+        => new(
+            broadcast.Id,
+            broadcast.RecordingId,
+            broadcast.PlannedRecordingId,
+            broadcast.Position,
+            broadcast.BroadcastAtUtc,
+            recording.Title,
+            recording.Artist,
+            recording.ExternalIdentifiers
+                .OrderBy(identifier => identifier.Source, StringComparer.Ordinal)
+                .ThenBy(identifier => identifier.Value, StringComparer.Ordinal)
+                .Select(identifier => new ExternalIdentifierModel(identifier.Source, identifier.Value))
+                .ToArray());
 
     private async Task<HashSet<Guid>> GetRequiredRepeatExceptionRecordingIdsAsync(
         Guid showId,

@@ -72,8 +72,16 @@ public sealed class ShowrunnerService
                 ApplicationError.Validation("value", "An external identifier value is required."));
         }
 
-        var lengthError = ValidateLength(command.Source, "source", FieldLimits.ExternalIdentifierSource)
-            ?? ValidateLength(command.Value, "value", FieldLimits.ExternalIdentifierValue);
+        var source = command.Source.Trim().ToLowerInvariant();
+        var value = CanonicaliseExternalIdentifierValue(source, command.Value);
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return ApplicationResult<RecordingModel>.Failure(
+                ApplicationError.Validation("value", "An external identifier value is required and must use a supported format."));
+        }
+
+        var lengthError = ValidateLength(source, "source", FieldLimits.ExternalIdentifierSource)
+            ?? ValidateLength(value, "value", FieldLimits.ExternalIdentifierValue);
         if (lengthError is not null)
         {
             return ApplicationResult<RecordingModel>.Failure(lengthError);
@@ -88,13 +96,6 @@ public sealed class ShowrunnerService
             return ApplicationResult<RecordingModel>.Failure(ApplicationError.NotFound("recording", recordingId));
         }
 
-        var source = command.Source.Trim().ToLowerInvariant();
-        var value = CanonicaliseExternalIdentifierValue(source, command.Value);
-        if (string.IsNullOrWhiteSpace(value))
-        {
-            return ApplicationResult<RecordingModel>.Failure(
-                ApplicationError.Validation("value", "An external identifier value is required."));
-        }
         var exists = recording.ExternalIdentifiers.Any(item =>
             string.Equals(item.Source, source, StringComparison.OrdinalIgnoreCase) &&
             string.Equals(item.Value, value, StringComparison.Ordinal));
@@ -270,6 +271,16 @@ public sealed class ShowrunnerService
                     showId.ToString()));
         }
 
+        if (show.Reconciliation is not null)
+        {
+            return ApplicationResult<ShowModel>.Failure(
+                ApplicationError.Conflict(
+                    "show_reconciliation_started",
+                    "Recordings cannot be planned after reconciliation has started.",
+                    "showId",
+                    showId.ToString()));
+        }
+
         var recordingExists = await dbContext.Recordings.AnyAsync(item => item.Id == command.RecordingId, cancellationToken);
         if (!recordingExists)
         {
@@ -339,6 +350,16 @@ public sealed class ShowrunnerService
                     showId.ToString()));
         }
 
+        if (show.Reconciliation is not null)
+        {
+            return ApplicationResult<ShowPlanRefreshResult>.Failure(
+                ApplicationError.Conflict(
+                    "show_reconciliation_started",
+                    "The show plan cannot be refreshed after reconciliation has started.",
+                    "showId",
+                    showId.ToString()));
+        }
+
         var recordingIds = command.Items.Select(item => item.RecordingId).Distinct().ToArray();
         if (recordingIds.Length > 0)
         {
@@ -353,27 +374,76 @@ public sealed class ShowrunnerService
             }
         }
 
-        if (show.PlannedRecordings.Count > 0)
+        var requestedItems = command.Items
+            .Select(item => new RefreshShowPlanItemCommand(item.RecordingId, NormaliseOptionalText(item.Notes)))
+            .ToArray();
+        var existingItems = show.PlannedRecordings.OrderBy(item => item.Position).ToArray();
+        if (existingItems.Length == requestedItems.Length &&
+            existingItems.Zip(requestedItems).All(pair =>
+                pair.First.RecordingId == pair.Second.RecordingId &&
+                string.Equals(pair.First.Notes, pair.Second.Notes, StringComparison.Ordinal)))
         {
-            dbContext.RemoveRange(show.PlannedRecordings);
-            show.PlannedRecordings.Clear();
+            return await BuildShowPlanRefreshResultAsync(showId, cancellationToken);
         }
 
-        var position = 1;
-        foreach (var item in command.Items)
+        // Preserve planned-recording identity where possible. Recreating every row
+        // makes a retry observably non-idempotent and needlessly invalidates IDs that
+        // the operator may already have seen. Move current rows out of the target
+        // position range first so SQLite's unique (show, position) index cannot be
+        // violated while positions are swapped.
+        await using var transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
+        var temporaryPositionStart = Math.Max(
+            requestedItems.Length,
+            existingItems.Select(item => item.Position).DefaultIfEmpty(0).Max()) + 1;
+        for (var index = 0; index < existingItems.Length; index++)
         {
-            show.PlannedRecordings.Add(new PlannedRecordingEntity
+            existingItems[index].Position = temporaryPositionStart + index;
+        }
+
+        if (existingItems.Length > 0)
+        {
+            await dbContext.SaveChangesAsync(cancellationToken);
+        }
+
+        var reusableByRecording = existingItems
+            .GroupBy(item => item.RecordingId)
+            .ToDictionary(
+                group => group.Key,
+                group => new Queue<PlannedRecordingEntity>(group.OrderBy(item => item.Position)));
+        var retainedIds = new HashSet<Guid>();
+        for (var index = 0; index < requestedItems.Length; index++)
+        {
+            var item = requestedItems[index];
+            PlannedRecordingEntity planned;
+            if (reusableByRecording.TryGetValue(item.RecordingId, out var reusable) && reusable.Count > 0)
             {
-                Id = Guid.NewGuid(),
-                ShowId = showId,
-                RecordingId = item.RecordingId,
-                Position = position++,
-                Notes = item.Notes?.Trim(),
-                CreatedAtUtc = clock.UtcNow,
-            });
+                planned = reusable.Dequeue();
+                retainedIds.Add(planned.Id);
+                planned.Position = index + 1;
+                planned.Notes = item.Notes;
+            }
+            else
+            {
+                show.PlannedRecordings.Add(new PlannedRecordingEntity
+                {
+                    Id = Guid.NewGuid(),
+                    ShowId = showId,
+                    RecordingId = item.RecordingId,
+                    Position = index + 1,
+                    Notes = item.Notes,
+                    CreatedAtUtc = clock.UtcNow,
+                });
+            }
+        }
+
+        var removedItems = existingItems.Where(item => !retainedIds.Contains(item.Id)).ToArray();
+        if (removedItems.Length > 0)
+        {
+            dbContext.RemoveRange(removedItems);
         }
 
         await dbContext.SaveChangesAsync(cancellationToken);
+        await transaction.CommitAsync(cancellationToken);
         return await BuildShowPlanRefreshResultAsync(showId, cancellationToken);
     }
 
@@ -615,12 +685,25 @@ public sealed class ShowrunnerService
                     "Provide both externalIdentifierSource and externalIdentifierValue for exact identifier lookup."));
         }
 
-        if (query.RecordingId is null && !hasExternalIdentifierSource && string.IsNullOrWhiteSpace(query.Title))
+        var hasTitle = !string.IsNullOrWhiteSpace(query.Title);
+        var lookupStrategyCount = (query.RecordingId.HasValue ? 1 : 0) +
+                                  (hasExternalIdentifierSource ? 1 : 0) +
+                                  (hasTitle ? 1 : 0);
+        if (lookupStrategyCount != 1 || (!hasTitle && !string.IsNullOrWhiteSpace(query.Artist)))
         {
             return ApplicationResult<RecordingHistoryQueryResult>.Failure(
                 ApplicationError.Validation(
                     "query",
-                    "Provide recordingId, an external identifier, or title for history lookup."));
+                    "Provide exactly one lookup strategy: recordingId, an external identifier pair, or title with optional artist."));
+        }
+
+        var lengthError = hasExternalIdentifierSource
+            ? ValidateLength(query.ExternalIdentifierSource!.Trim(), "externalIdentifierSource", FieldLimits.ExternalIdentifierSource)
+            : ValidateLength(query.Title, "title", FieldLimits.Title)
+              ?? ValidateLength(query.Artist, "artist", FieldLimits.Artist);
+        if (lengthError is not null)
+        {
+            return ApplicationResult<RecordingHistoryQueryResult>.Failure(lengthError);
         }
 
         IReadOnlyList<RecordingEntity> candidates;
@@ -642,6 +725,12 @@ public sealed class ShowrunnerService
                     ApplicationError.Validation(
                         "query",
                         "The external identifier value must contain a supported identifier."));
+            }
+
+            var valueLengthError = ValidateLength(value, "externalIdentifierValue", FieldLimits.ExternalIdentifierValue);
+            if (valueLengthError is not null)
+            {
+                return ApplicationResult<RecordingHistoryQueryResult>.Failure(valueLengthError);
             }
 
             candidates = await dbContext.Recordings
@@ -875,16 +964,39 @@ public sealed class ShowrunnerService
         {
             if (trimmed.StartsWith("spotify:track:", StringComparison.OrdinalIgnoreCase))
             {
-                return trimmed["spotify:track:".Length..].Trim();
+                return ValidateSpotifyTrackId(trimmed["spotify:track:".Length..]);
             }
 
-            if (trimmed.StartsWith("https://open.spotify.com/track/", StringComparison.OrdinalIgnoreCase))
+            if (Uri.TryCreate(trimmed, UriKind.Absolute, out var uri))
             {
-                var trackPart = trimmed["https://open.spotify.com/track/".Length..];
-                return trackPart.Split('?', 2, StringSplitOptions.TrimEntries)[0].Trim();
+                if (!string.Equals(uri.Scheme, Uri.UriSchemeHttps, StringComparison.OrdinalIgnoreCase) ||
+                    !string.Equals(uri.Host, "open.spotify.com", StringComparison.OrdinalIgnoreCase))
+                {
+                    return string.Empty;
+                }
+
+                var pathParts = uri.AbsolutePath
+                    .Split('/', StringSplitOptions.RemoveEmptyEntries | StringSplitOptions.TrimEntries);
+                return pathParts.Length == 2 && string.Equals(pathParts[0], "track", StringComparison.OrdinalIgnoreCase)
+                    ? ValidateSpotifyTrackId(pathParts[1])
+                    : string.Empty;
             }
+
+            return ValidateSpotifyTrackId(trimmed);
         }
 
         return trimmed;
     }
+
+    private static string ValidateSpotifyTrackId(string value)
+    {
+        var trimmed = value.Trim();
+        return trimmed.Length > 0 && trimmed.All(character =>
+            !char.IsWhiteSpace(character) && character is not ':' and not '/' and not '?' and not '#')
+            ? trimmed
+            : string.Empty;
+    }
+
+    private static string? NormaliseOptionalText(string? value)
+        => string.IsNullOrWhiteSpace(value) ? null : value.Trim();
 }
