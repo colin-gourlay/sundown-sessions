@@ -5,9 +5,19 @@ public sealed record ShowPrepareToolResult(
     ShowPreparationResultModel? Result,
     ApplicationError? Error);
 
+public sealed record ShowPlanRefreshToolResult(
+    bool IsSuccess,
+    ShowPlanRefreshResult? Result,
+    ApplicationError? Error);
+
 public sealed record RecordingResolveToolResult(
     bool IsSuccess,
     RecordingResolutionModel? Result,
+    ApplicationError? Error);
+
+public sealed record RecordingExternalIdentifierAddToolResult(
+    bool IsSuccess,
+    RecordingModel? Result,
     ApplicationError? Error);
 
 public sealed record RepeatExceptionCreateToolResult(

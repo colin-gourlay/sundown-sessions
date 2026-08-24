@@ -59,6 +59,20 @@ public sealed class ShowrunnerTools
             : new ShowPrepareToolResult(false, null, result.Error);
     }
 
+    [McpServerTool(Name = "show_plan_refresh", ReadOnly = false, Idempotent = true, UseStructuredContent = true)]
+    [Description("Intentionally replaces the mutable Showrunner plan with an explicit ordered recording list so an agent can sync the current Spotify-visible running order without making Spotify authoritative.")]
+    public static async Task<ShowPlanRefreshToolResult> RefreshShowPlanAsync(
+        ShowrunnerService showrunnerService,
+        [Description("The authoritative Showrunner show identifier.")] Guid showId,
+        [Description("The explicit ordered plan to persist for the show.")] RefreshShowPlanCommand command,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await showrunnerService.RefreshShowPlanAsync(showId, command, cancellationToken);
+        return result.IsSuccess
+            ? new ShowPlanRefreshToolResult(true, result.Value, null)
+            : new ShowPlanRefreshToolResult(false, null, result.Error);
+    }
+
     [McpServerTool(Name = "recording_resolve", ReadOnly = false, Idempotent = true, UseStructuredContent = true)]
     [Description("Persists an explicit operator choice between a Showrunner recording and one relative FLAC candidate returned by show_prepare.")]
     public static async Task<RecordingResolveToolResult> ResolveRecordingAsync(
@@ -71,6 +85,24 @@ public sealed class ShowrunnerTools
         return result.IsSuccess
             ? new RecordingResolveToolResult(true, result.Value, null)
             : new RecordingResolveToolResult(false, null, result.Error);
+    }
+
+    [McpServerTool(Name = "recording_external_identifier_add", ReadOnly = false, Idempotent = false, UseStructuredContent = true)]
+    [Description("Associates one external identifier, such as a Spotify track identifier, with an authoritative Showrunner recording without making that external identifier the recording's identity.")]
+    public static async Task<RecordingExternalIdentifierAddToolResult> AddRecordingExternalIdentifierAsync(
+        ShowrunnerService showrunnerService,
+        [Description("The authoritative Showrunner recording identifier.")] Guid recordingId,
+        [Description("The external identifier source, for example spotify.")] string source,
+        [Description("The external identifier value, for example a Spotify URI, track ID, or canonical URL.")] string value,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await showrunnerService.AddExternalIdentifierAsync(
+            recordingId,
+            new AddExternalIdentifierCommand(source, value),
+            cancellationToken);
+        return result.IsSuccess
+            ? new RecordingExternalIdentifierAddToolResult(true, result.Value, null)
+            : new RecordingExternalIdentifierAddToolResult(false, null, result.Error);
     }
 
     [McpServerTool(Name = "repeat_exception_create", ReadOnly = false, Idempotent = true, UseStructuredContent = true)]
@@ -92,10 +124,10 @@ public sealed class ShowrunnerTools
     }
 
     [McpServerTool(Name = "recording_history", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
-    [Description("Returns structured broadcast history for an exact recordingId or title/artist query, surfacing ambiguous candidate recordings instead of guessing.")]
+    [Description("Returns structured broadcast history for an exact recordingId, an exact external identifier such as a Spotify track ID, or a title/artist query, surfacing ambiguous candidate recordings instead of guessing.")]
     public static async Task<RecordingHistoryToolResult> GetRecordingHistoryAsync(
         ShowrunnerService showrunnerService,
-        [Description("Recording history lookup input. Provide recordingId for exact history, or title with optional artist for candidate matching.")]
+        [Description("Recording history lookup input. Provide recordingId, or externalIdentifierSource with externalIdentifierValue, or title with optional artist for candidate matching.")]
         RecordingHistoryQuery query,
         CancellationToken cancellationToken = default)
     {
