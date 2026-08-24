@@ -147,11 +147,19 @@ public sealed class TodoistBacklogWorkflowTests
                 "task-both",
                 RecordingId: Guid.NewGuid(),
                 NewRecording: new CreateRecordingCommand("Conflicting identity", "Artist")));
+        var unknownRecording = await service.ImportBacklogCandidateAsync(
+            new ImportBacklogCandidateCommand(
+                "Missing identity",
+                "todoist",
+                "task-missing",
+                RecordingId: Guid.NewGuid()));
 
         Assert.False(unresolved.IsSuccess);
         Assert.Equal("validation_failed", unresolved.Error!.Code);
         Assert.False(bothSelectors.IsSuccess);
         Assert.Equal("validation_failed", bothSelectors.Error!.Code);
+        Assert.False(unknownRecording.IsSuccess);
+        Assert.Equal("not_found", unknownRecording.Error!.Code);
         Assert.Empty((await service.ListBacklogItemsAsync()).Value!.Items);
     }
 
