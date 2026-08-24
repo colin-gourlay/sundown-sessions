@@ -115,6 +115,9 @@ The stdio server exposes focused tools:
   state for later finalisation; it does not create permanent broadcast history.
 - `show_reconciliation_finalise` persistently finalises an
   operator-confirmed reconciliation into permanent broadcast history.
+- `show_publication_export` returns the finalised, ordered factual show state
+  needed by a repository-aware publication agent. It excludes operator notes,
+  local-file references, Todoist task references and other workflow state.
 - `recording_history` returns structured permanent broadcast history for an
   exact recording identifier, exact external identifier, or an ambiguity-safe
   title/artist lookup.
@@ -126,6 +129,10 @@ boundary. A finalisation retry returns the same played/dropped recording and
 external-identifier summary, allowing interrupted external housekeeping to be
 resumed safely. Manual Spotify housekeeping never creates broadcast history,
 and Spotify availability cannot roll back or alter authoritative history.
+
+The host-neutral publication procedure and its editorial, schema-drift and
+validation safeguards are documented in
+[Showrunner publication workflow](../../docs/showrunner-publication-workflow.md).
 
 ## Verify
 

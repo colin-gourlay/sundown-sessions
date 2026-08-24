@@ -338,6 +338,7 @@ public sealed class ShowrunnerMcpIntegrationTests
         Assert.NotEqual(true, publicationExportResult.IsError);
         var publicationExportJson = publicationExportResult.StructuredContent!.Value.GetProperty("result");
         Assert.True(publicationExportJson.GetProperty("isFinalised").GetBoolean());
+        Assert.NotEqual(default, publicationExportJson.GetProperty("finalisedAtUtc").GetDateTimeOffset());
         Assert.Equal(showId, publicationExportJson.GetProperty("showId").GetGuid());
         Assert.Equal("mcp-show", publicationExportJson.GetProperty("slug").GetString());
         Assert.Equal("2026-08-21", publicationExportJson.GetProperty("showDate").GetString());
@@ -365,6 +366,7 @@ public sealed class ShowrunnerMcpIntegrationTests
         Assert.NotEqual(true, nonFinalisedExportResult.IsError);
         var nonFinalisedExportJson = nonFinalisedExportResult.StructuredContent!.Value.GetProperty("result");
         Assert.False(nonFinalisedExportJson.GetProperty("isFinalised").GetBoolean());
+        Assert.False(nonFinalisedExportJson.TryGetProperty("finalisedAtUtc", out _));
         Assert.Equal(0, nonFinalisedExportJson.GetProperty("finalPlaylist").GetArrayLength());
     }
 

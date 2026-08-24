@@ -1014,6 +1014,91 @@ public sealed class ShowrunnerServiceTests
     }
 
     [Fact]
+    public async Task PublicationExportUsesFinalisationStateEvenWhenNothingAired()
+    {
+        using var harness = new SqliteTestHarness();
+        var clock = new TestClock(new DateTimeOffset(2026, 9, 4, 23, 15, 0, TimeSpan.Zero));
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context, clock);
+        var show = (await service.CreateShowAsync(
+            new CreateShowCommand("silent-show", "Silent show", new DateOnly(2026, 9, 4)))).Value!;
+
+        var beforeFinalisation = await service.GetPublicationExportAsync(new ShowLookupQuery(ShowId: show.Id));
+        await ShowrunnerTestOperations.FinaliseShowAsync(context, show.Id, [], clock);
+        var afterFinalisation = await service.GetPublicationExportAsync(new ShowLookupQuery(ShowId: show.Id));
+
+        Assert.True(beforeFinalisation.IsSuccess);
+        Assert.False(beforeFinalisation.Value!.IsFinalised);
+        Assert.Null(beforeFinalisation.Value.FinalisedAtUtc);
+        Assert.Empty(beforeFinalisation.Value.FinalPlaylist);
+        Assert.True(afterFinalisation.IsSuccess);
+        Assert.True(afterFinalisation.Value!.IsFinalised);
+        Assert.Equal(clock.UtcNow, afterFinalisation.Value.FinalisedAtUtc);
+        Assert.Empty(afterFinalisation.Value.FinalPlaylist);
+    }
+
+    [Fact]
+    public async Task PublicationExportIsOrderedAndExcludesWorkflowOnlyIdentifiers()
+    {
+        using var harness = new SqliteTestHarness();
+        var clock = new TestClock(new DateTimeOffset(2026, 9, 5, 23, 15, 0, TimeSpan.Zero));
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context, clock);
+        var first = (await service.CreateRecordingAsync(
+            new CreateRecordingCommand("First", "First artist", ReleaseTitle: "First release"))).Value!;
+        var second = (await service.CreateRecordingAsync(
+            new CreateRecordingCommand("Second", null))).Value!;
+        await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("spotify", "spotify:track:first"));
+        await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("musicbrainz", "mbid-first"));
+        await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("local-file", "private/first.flac"));
+        await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("todoist", "task-first"));
+        var show = (await service.CreateShowAsync(
+            new CreateShowCommand("publication-order", "Publication order", new DateOnly(2026, 9, 5)))).Value!;
+        await ShowrunnerTestOperations.FinaliseShowAsync(
+            context,
+            show.Id,
+            [
+                new ConfirmedPlaybackItemCommand(second.Id, 1),
+                new ConfirmedPlaybackItemCommand(first.Id, 2),
+            ],
+            clock);
+
+        var result = await service.GetPublicationExportAsync(new ShowLookupQuery(Slug: show.Slug));
+        var repeatedResult = await service.GetPublicationExportAsync(new ShowLookupQuery(Slug: show.Slug));
+
+        Assert.True(result.IsSuccess);
+        Assert.True(result.Value!.IsFinalised);
+        Assert.Equal([second.Id, first.Id], result.Value.FinalPlaylist.Select(item => item.RecordingId));
+        Assert.Null(result.Value.FinalPlaylist[0].Artist);
+        Assert.Null(result.Value.FinalPlaylist[0].ReleaseTitle);
+        Assert.Equal(
+            ["musicbrainz", "spotify"],
+            result.Value.FinalPlaylist[1].ExternalIdentifiers.Select(item => item.Source));
+        Assert.Equal(
+            result.Value.FinalPlaylist.Select(item => item.RecordingId),
+            repeatedResult.Value!.FinalPlaylist.Select(item => item.RecordingId));
+        Assert.Equal(
+            result.Value.FinalPlaylist[1].ExternalIdentifiers,
+            repeatedResult.Value.FinalPlaylist[1].ExternalIdentifiers);
+    }
+
+    [Fact]
+    public async Task PublicationExportSurfacesAmbiguousShowDates()
+    {
+        using var harness = new SqliteTestHarness();
+        await using var context = harness.CreateContext();
+        var service = new ShowrunnerService(context);
+        var showDate = new DateOnly(2026, 9, 6);
+        await service.CreateShowAsync(new CreateShowCommand("early-show", "Early show", showDate));
+        await service.CreateShowAsync(new CreateShowCommand("late-show", "Late show", showDate));
+
+        var result = await service.GetPublicationExportAsync(new ShowLookupQuery(ShowDate: showDate));
+
+        Assert.False(result.IsSuccess);
+        Assert.Equal("ambiguous_show", result.Error!.Code);
+    }
+
+    [Fact]
     public async Task BoundaryValidatesPersistenceLimitsAndMissingHistoryRecording()
     {
         using var harness = new SqliteTestHarness();

@@ -176,7 +176,7 @@ public sealed class ShowrunnerTools
     }
 
     [McpServerTool(Name = "show_publication_export", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
-    [Description("Returns the finalised broadcast state of a show for publication. Accepts exactly one identifier: showId, slug, or showDate. Excludes private/internal fields such as operator notes, FLAC paths and backlog state. Returns IsFinalised = false when the show has not yet been finalised through show_reconciliation_finalise.")]
+    [Description("Returns the finalised broadcast state of a show for publication. Accepts exactly one identifier: showId, slug, or showDate. Excludes private/internal fields and workflow-only identifiers such as operator notes, local FLAC references and Todoist task references. Returns IsFinalised = false when the show has not yet been finalised through show_reconciliation_finalise.")]
     public static async Task<ShowPublicationExportToolResult> GetPublicationExportAsync(
         ShowrunnerService showrunnerService,
         [Description("Show lookup input. Provide exactly one of showId, slug, or showDate.")] ShowLookupQuery query,

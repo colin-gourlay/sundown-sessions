@@ -238,6 +238,7 @@ public sealed record ShowPublicationExportResult(
     string Title,
     DateOnly ShowDate,
     bool IsFinalised,
+    DateTimeOffset? FinalisedAtUtc,
     IReadOnlyList<PublicationTrackEntry> FinalPlaylist);
 
 public sealed record PublicationTrackEntry(

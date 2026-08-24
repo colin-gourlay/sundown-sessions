@@ -458,15 +458,17 @@ public sealed class ShowrunnerService
 
         var matchedShow = lookupResult.Value.Matches[0];
         var show = await dbContext.Shows
+            .AsNoTracking()
+            .Include(item => item.Reconciliation)
             .Include(item => item.BroadcastRecordings)
             .SingleAsync(item => item.Id == matchedShow.Id, cancellationToken);
 
-        var isFinalised = show.BroadcastRecordings.Count > 0;
+        var finalisedAtUtc = show.Reconciliation?.ConfirmedAtUtc;
 
-        if (!isFinalised)
+        if (finalisedAtUtc is null)
         {
             return ApplicationResult<ShowPublicationExportResult>.Success(
-                new ShowPublicationExportResult(show.Id, show.Slug, show.Title, show.ShowDate, false, []));
+                new ShowPublicationExportResult(show.Id, show.Slug, show.Title, show.ShowDate, false, null, []));
         }
 
         var recordingIds = show.BroadcastRecordings.Select(item => item.RecordingId).Distinct().ToArray();
@@ -487,12 +489,12 @@ public sealed class ShowrunnerService
                     recording.Title,
                     recording.Artist,
                     recording.ReleaseTitle,
-                    MapExternalIdentifiers(recording.ExternalIdentifiers));
+                    MapPublicationExternalIdentifiers(recording.ExternalIdentifiers));
             })
             .ToArray();
 
         return ApplicationResult<ShowPublicationExportResult>.Success(
-            new ShowPublicationExportResult(show.Id, show.Slug, show.Title, show.ShowDate, true, playlist));
+            new ShowPublicationExportResult(show.Id, show.Slug, show.Title, show.ShowDate, true, finalisedAtUtc, playlist));
     }
 
     public async Task<ApplicationResult<ShowModel>> PlanRecordingAsync(Guid showId, PlanRecordingCommand command, CancellationToken cancellationToken = default)
@@ -1155,6 +1157,11 @@ public sealed class ShowrunnerService
             .ThenBy(item => item.Value, StringComparer.Ordinal)
             .Select(item => new ExternalIdentifierModel(item.Source, item.Value))
             .ToArray();
+
+    private static IReadOnlyList<ExternalIdentifierModel> MapPublicationExternalIdentifiers(
+        IEnumerable<RecordingExternalIdentifierEntity> identifiers)
+        => MapExternalIdentifiers(identifiers.Where(item =>
+            item.Source is not "local-file" and not "todoist"));
 
     private static BacklogItemModel Map(BacklogItemEntity backlogItem)
         => new(backlogItem.Id, backlogItem.Summary, backlogItem.RecordingId, backlogItem.Notes, backlogItem.CreatedAtUtc);
