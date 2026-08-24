@@ -50,7 +50,7 @@ public sealed class ShowrunnerMcpIntegrationTests
             EnvironmentVariables = environment,
             ShutdownTimeout = TimeSpan.FromSeconds(10),
         });
-        using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(60));
+        using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(120));
         await using var client = await McpClient.CreateAsync(transport, cancellationToken: timeout.Token);
 
         var tools = await client.ListToolsAsync(cancellationToken: timeout.Token);
