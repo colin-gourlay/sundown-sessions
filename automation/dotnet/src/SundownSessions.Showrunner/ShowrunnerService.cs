@@ -436,6 +436,65 @@ public sealed class ShowrunnerService
             new ShowLookupResult(matches.Length > 1, matches));
     }
 
+    public async Task<ApplicationResult<ShowPublicationExportResult>> GetPublicationExportAsync(
+        ShowLookupQuery query,
+        CancellationToken cancellationToken = default)
+    {
+        var lookupResult = await FindShowAsync(query, cancellationToken);
+        if (!lookupResult.IsSuccess)
+        {
+            return ApplicationResult<ShowPublicationExportResult>.Failure(lookupResult.Error!);
+        }
+
+        if (lookupResult.Value!.IsAmbiguous)
+        {
+            return ApplicationResult<ShowPublicationExportResult>.Failure(
+                ApplicationError.Conflict(
+                    "ambiguous_show",
+                    "The query matched more than one show. Provide showId or slug for an unambiguous lookup.",
+                    "showDate",
+                    query.ShowDate?.ToString("yyyy-MM-dd") ?? string.Empty));
+        }
+
+        var matchedShow = lookupResult.Value.Matches[0];
+        var show = await dbContext.Shows
+            .Include(item => item.BroadcastRecordings)
+            .SingleAsync(item => item.Id == matchedShow.Id, cancellationToken);
+
+        var isFinalised = show.BroadcastRecordings.Count > 0;
+
+        if (!isFinalised)
+        {
+            return ApplicationResult<ShowPublicationExportResult>.Success(
+                new ShowPublicationExportResult(show.Id, show.Slug, show.Title, show.ShowDate, false, []));
+        }
+
+        var recordingIds = show.BroadcastRecordings.Select(item => item.RecordingId).Distinct().ToArray();
+        var recordingsById = await dbContext.Recordings
+            .AsNoTracking()
+            .Include(item => item.ExternalIdentifiers)
+            .Where(item => recordingIds.Contains(item.Id))
+            .ToDictionaryAsync(item => item.Id, cancellationToken);
+
+        var playlist = show.BroadcastRecordings
+            .OrderBy(item => item.Position)
+            .Select(item =>
+            {
+                var recording = recordingsById[item.RecordingId];
+                return new PublicationTrackEntry(
+                    item.RecordingId,
+                    item.Position,
+                    recording.Title,
+                    recording.Artist,
+                    recording.ReleaseTitle,
+                    MapExternalIdentifiers(recording.ExternalIdentifiers));
+            })
+            .ToArray();
+
+        return ApplicationResult<ShowPublicationExportResult>.Success(
+            new ShowPublicationExportResult(show.Id, show.Slug, show.Title, show.ShowDate, true, playlist));
+    }
+
     public async Task<ApplicationResult<ShowModel>> PlanRecordingAsync(Guid showId, PlanRecordingCommand command, CancellationToken cancellationToken = default)
     {
         if (command.Position < 1)
