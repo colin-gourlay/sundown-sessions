@@ -170,7 +170,7 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: missing `## About` biography text
 
-### B.E.F&#46;
+### B.E.F.
 
 - File: `src/content/artists/b/bef/index.md`
 - Reason: missing `lastReviewed` front matter
@@ -1233,7 +1233,7 @@ This report flags artist biographies that need a human editorial pass. It does n
 - Reason: missing `lastReviewed` front matter
 - Reason: biography mentions no year after 2003
 
-### R.E.M&#46;
+### R.E.M.
 
 - File: `src/content/artists/r/rem/index.md`
 - Reason: missing `lastReviewed` front matter
