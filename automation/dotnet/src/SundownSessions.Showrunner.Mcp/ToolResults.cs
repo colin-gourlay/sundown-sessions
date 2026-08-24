@@ -44,3 +44,18 @@ public sealed record RecordingHistoryToolResult(
     bool IsSuccess,
     RecordingHistoryQueryResult? Result,
     ApplicationError? Error);
+
+public sealed record RecordingCreateToolResult(
+    bool IsSuccess,
+    RecordingModel? Result,
+    ApplicationError? Error);
+
+public sealed record BacklogItemCreateToolResult(
+    bool IsSuccess,
+    BacklogItemModel? Result,
+    ApplicationError? Error);
+
+public sealed record BacklogItemListToolResult(
+    bool IsSuccess,
+    BacklogItemListResult? Result,
+    ApplicationError? Error);

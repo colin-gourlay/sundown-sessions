@@ -184,6 +184,19 @@ public sealed class ShowrunnerService
             : ApplicationResult<BacklogItemModel>.Success(Map(backlogItem));
     }
 
+    public async Task<ApplicationResult<BacklogItemListResult>> ListBacklogItemsAsync(CancellationToken cancellationToken = default)
+    {
+        // Ordering is applied client-side because SQLite does not support
+        // DateTimeOffset in ORDER BY clauses.
+        var items = (await dbContext.BacklogItems
+            .ToListAsync(cancellationToken))
+            .OrderBy(item => item.CreatedAtUtc)
+            .Select(item => Map(item))
+            .ToList();
+
+        return ApplicationResult<BacklogItemListResult>.Success(new BacklogItemListResult(items));
+    }
+
     public async Task<ApplicationResult<ShowModel>> CreateShowAsync(CreateShowCommand command, CancellationToken cancellationToken = default)
     {
         if (string.IsNullOrWhiteSpace(command.Slug))

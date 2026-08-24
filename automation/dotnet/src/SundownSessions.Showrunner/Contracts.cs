@@ -99,6 +99,8 @@ public sealed record RecordingHistoryQuery(
     string? Title = null,
     string? Artist = null);
 
+public sealed record BacklogItemListResult(IReadOnlyList<BacklogItemModel> Items);
+
 public sealed record RecordingHistoryQueryResult(
     bool IsAmbiguous,
     IReadOnlyList<RecordingHistoryCandidateModel> Candidates);

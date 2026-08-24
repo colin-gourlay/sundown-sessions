@@ -56,6 +56,9 @@ public sealed class ShowrunnerMcpIntegrationTests
         var tools = await client.ListToolsAsync(cancellationToken: timeout.Token);
         Assert.Equal(
             [
+            "backlog_item_create",
+            "backlog_item_list",
+            "recording_create",
             "recording_external_identifier_add",
             "recording_history",
             "recording_resolve",
