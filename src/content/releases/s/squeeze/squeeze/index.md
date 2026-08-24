@@ -44,6 +44,7 @@ tracks:
   - trackNumber: 6
     title: "Take Me I’m Yours"
     duration: "3:46"
+    url: "/tracks/s/squeeze/take-me-im-yours/"
   - trackNumber: 7
     title: "The Call"
     duration: "5:17"
