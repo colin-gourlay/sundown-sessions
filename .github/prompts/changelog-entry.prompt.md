@@ -7,6 +7,7 @@ agent: "agent"
 Draft updates for `CHANGELOG.md` under the `Unreleased` section using Keep a Changelog categories.
 
 Task constraints:
+
 - Categorise items under Added, Changed, Deprecated, Removed, Fixed, or Security.
 - Keep entries concise, user-relevant, and specific.
 - Avoid duplicate or speculative statements.
@@ -14,6 +15,7 @@ Task constraints:
 - Write all new text in British English.
 
 Execution guidance:
+
 1. Map each input change to a single best-fit category.
 2. Draft bullet points in consistent style.
 3. Flag ambiguous items needing clarification.
