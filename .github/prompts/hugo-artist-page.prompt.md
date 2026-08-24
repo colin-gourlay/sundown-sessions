@@ -7,6 +7,7 @@ agent: "agent"
 Create or update an artist page under `src/content/artists/` following current repository conventions.
 
 Task constraints:
+
 - Follow existing artist page front matter and formatting patterns.
 - Keep biography and descriptive copy concise, factual, and publish-ready.
 - Preserve existing permalink and folder conventions.
@@ -14,6 +15,7 @@ Task constraints:
 - Write all new human-facing text in British English.
 
 Execution guidance:
+
 1. Inspect at least one nearby artist page for structure and tone.
 2. Apply the requested content updates.
 3. Confirm front matter completeness and image/link consistency.
