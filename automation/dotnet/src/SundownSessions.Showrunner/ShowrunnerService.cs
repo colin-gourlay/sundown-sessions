@@ -16,19 +16,10 @@ public sealed class ShowrunnerService
 
     public async Task<ApplicationResult<RecordingModel>> CreateRecordingAsync(CreateRecordingCommand command, CancellationToken cancellationToken = default)
     {
-        if (string.IsNullOrWhiteSpace(command.Title))
+        var validationError = ValidateRecording(command);
+        if (validationError is not null)
         {
-            return ApplicationResult<RecordingModel>.Failure(
-                ApplicationError.Validation("title", "A recording title is required."));
-        }
-
-        var lengthError = ValidateLength(command.Title, "title", FieldLimits.Title)
-            ?? ValidateLength(command.Artist, "artist", FieldLimits.Artist)
-            ?? ValidateLength(command.ReleaseTitle, "releaseTitle", FieldLimits.Title)
-            ?? ValidateLength(command.Notes, "notes", FieldLimits.Notes);
-        if (lengthError is not null)
-        {
-            return ApplicationResult<RecordingModel>.Failure(lengthError);
+            return ApplicationResult<RecordingModel>.Failure(validationError);
         }
 
         var recording = new RecordingEntity
@@ -139,17 +130,10 @@ public sealed class ShowrunnerService
 
     public async Task<ApplicationResult<BacklogItemModel>> CreateBacklogItemAsync(CreateBacklogItemCommand command, CancellationToken cancellationToken = default)
     {
-        if (string.IsNullOrWhiteSpace(command.Summary))
+        var validationError = ValidateBacklogItem(command.Summary, command.Notes);
+        if (validationError is not null)
         {
-            return ApplicationResult<BacklogItemModel>.Failure(
-                ApplicationError.Validation("summary", "A backlog item summary is required."));
-        }
-
-        var lengthError = ValidateLength(command.Summary, "summary", FieldLimits.Title)
-            ?? ValidateLength(command.Notes, "notes", FieldLimits.Notes);
-        if (lengthError is not null)
-        {
-            return ApplicationResult<BacklogItemModel>.Failure(lengthError);
+            return ApplicationResult<BacklogItemModel>.Failure(validationError);
         }
 
         if (command.RecordingId.HasValue)
@@ -182,6 +166,162 @@ public sealed class ShowrunnerService
         return backlogItem is null
             ? ApplicationResult<BacklogItemModel>.Failure(ApplicationError.NotFound("backlogItem", backlogItemId))
             : ApplicationResult<BacklogItemModel>.Success(Map(backlogItem));
+    }
+
+    public async Task<ApplicationResult<BacklogCandidateImportResult>> ImportBacklogCandidateAsync(
+        ImportBacklogCandidateCommand command,
+        CancellationToken cancellationToken = default)
+    {
+        if (command.RecordingId.HasValue == (command.NewRecording is not null))
+        {
+            return ApplicationResult<BacklogCandidateImportResult>.Failure(
+                ApplicationError.Validation(
+                    "recording",
+                    "Provide exactly one resolved recording identity: recordingId or newRecording."));
+        }
+
+        var backlogValidation = ValidateBacklogItem(command.Summary, command.Notes);
+        if (backlogValidation is not null)
+        {
+            return ApplicationResult<BacklogCandidateImportResult>.Failure(backlogValidation);
+        }
+
+        var identifierValidation = ValidateExternalIdentifier(
+            command.ExternalIdentifierSource,
+            command.ExternalIdentifierValue);
+        if (identifierValidation.Error is not null)
+        {
+            return ApplicationResult<BacklogCandidateImportResult>.Failure(identifierValidation.Error);
+        }
+
+        if (command.NewRecording is not null)
+        {
+            var recordingValidation = ValidateRecording(command.NewRecording);
+            if (recordingValidation is not null)
+            {
+                return ApplicationResult<BacklogCandidateImportResult>.Failure(recordingValidation);
+            }
+        }
+
+        var source = identifierValidation.Source!;
+        var value = identifierValidation.Value!;
+        await using var transaction = await dbContext.Database.BeginTransactionAsync(cancellationToken);
+
+        var existingIdentifier = await dbContext.RecordingExternalIdentifiers
+            .Include(item => item.Recording)
+            .ThenInclude(item => item.ExternalIdentifiers)
+            .SingleOrDefaultAsync(item => item.Source == source && item.Value == value, cancellationToken);
+
+        RecordingEntity recording;
+        var recordingCreated = false;
+        var externalIdentifierAdded = false;
+        if (existingIdentifier is not null)
+        {
+            recording = existingIdentifier.Recording;
+            var identityMatches = command.RecordingId.HasValue
+                ? command.RecordingId.Value == recording.Id
+                : RecordingMatches(recording, command.NewRecording!);
+            if (!identityMatches)
+            {
+                return ApplicationResult<BacklogCandidateImportResult>.Failure(
+                    ApplicationError.Conflict(
+                        "external_identifier_in_use",
+                        "That external identifier is already associated with a different recording.",
+                        "externalIdentifier",
+                        source,
+                        value,
+                        recording.Id.ToString()));
+            }
+        }
+        else
+        {
+            if (command.RecordingId.HasValue)
+            {
+                var existingRecording = await dbContext.Recordings
+                    .Include(item => item.ExternalIdentifiers)
+                    .SingleOrDefaultAsync(item => item.Id == command.RecordingId.Value, cancellationToken);
+                if (existingRecording is null)
+                {
+                    return ApplicationResult<BacklogCandidateImportResult>.Failure(
+                        ApplicationError.NotFound("recording", command.RecordingId.Value));
+                }
+
+                recording = existingRecording;
+            }
+            else
+            {
+                var newRecording = command.NewRecording!;
+                recording = new RecordingEntity
+                {
+                    Id = Guid.NewGuid(),
+                    Title = newRecording.Title.Trim(),
+                    Artist = NormaliseOptionalText(newRecording.Artist),
+                    ReleaseTitle = NormaliseOptionalText(newRecording.ReleaseTitle),
+                    Notes = NormaliseOptionalText(newRecording.Notes),
+                    CreatedAtUtc = clock.UtcNow,
+                };
+                dbContext.Recordings.Add(recording);
+                recordingCreated = true;
+            }
+
+            recording.ExternalIdentifiers.Add(new RecordingExternalIdentifierEntity
+            {
+                Id = Guid.NewGuid(),
+                RecordingId = recording.Id,
+                Source = source,
+                Value = value,
+            });
+            externalIdentifierAdded = true;
+        }
+
+        var backlogItem = (await dbContext.BacklogItems
+            .Where(item => item.RecordingId == recording.Id)
+            .ToListAsync(cancellationToken))
+            .OrderBy(item => item.CreatedAtUtc)
+            .ThenBy(item => item.Id)
+            .FirstOrDefault();
+        var backlogItemCreated = false;
+        if (backlogItem is null)
+        {
+            backlogItem = new BacklogItemEntity
+            {
+                Id = Guid.NewGuid(),
+                RecordingId = recording.Id,
+                Summary = command.Summary.Trim(),
+                Notes = NormaliseOptionalText(command.Notes),
+                CreatedAtUtc = clock.UtcNow,
+            };
+            dbContext.BacklogItems.Add(backlogItem);
+            backlogItemCreated = true;
+        }
+
+        await dbContext.SaveChangesAsync(cancellationToken);
+        await transaction.CommitAsync(cancellationToken);
+
+        var isNoOp = !recordingCreated && !externalIdentifierAdded && !backlogItemCreated;
+        return ApplicationResult<BacklogCandidateImportResult>.Success(
+            new BacklogCandidateImportResult(
+                Map(recording),
+                Map(backlogItem),
+                recordingCreated,
+                externalIdentifierAdded,
+                backlogItemCreated,
+                isNoOp));
+    }
+
+    public async Task<ApplicationResult<BacklogItemListResult>> ListBacklogItemsAsync(CancellationToken cancellationToken = default)
+    {
+        // Ordering is applied client-side because SQLite does not support
+        // DateTimeOffset in ORDER BY clauses.
+        var items = (await dbContext.BacklogItems
+            .AsNoTracking()
+            .ToListAsync(cancellationToken))
+            .OrderBy(item => item.CreatedAtUtc)
+            .ThenBy(item => item.Id)
+            .Select(item => Map(item))
+            .ToList();
+
+        return ApplicationResult<BacklogItemListResult>.Success(new BacklogItemListResult(items));
     }
 
     public async Task<ApplicationResult<ShowModel>> CreateShowAsync(CreateShowCommand command, CancellationToken cancellationToken = default)
@@ -956,6 +1096,63 @@ public sealed class ShowrunnerService
             ? ApplicationError.Validation(field, $"{field} cannot exceed {maximumLength} characters.")
             : null;
     }
+
+    private static ApplicationError? ValidateRecording(CreateRecordingCommand command)
+    {
+        if (string.IsNullOrWhiteSpace(command.Title))
+        {
+            return ApplicationError.Validation("title", "A recording title is required.");
+        }
+
+        return ValidateLength(command.Title, "title", FieldLimits.Title)
+            ?? ValidateLength(command.Artist, "artist", FieldLimits.Artist)
+            ?? ValidateLength(command.ReleaseTitle, "releaseTitle", FieldLimits.Title)
+            ?? ValidateLength(command.Notes, "notes", FieldLimits.Notes);
+    }
+
+    private static ApplicationError? ValidateBacklogItem(string summary, string? notes)
+    {
+        if (string.IsNullOrWhiteSpace(summary))
+        {
+            return ApplicationError.Validation("summary", "A backlog item summary is required.");
+        }
+
+        return ValidateLength(summary, "summary", FieldLimits.Title)
+            ?? ValidateLength(notes, "notes", FieldLimits.Notes);
+    }
+
+    private static (string? Source, string? Value, ApplicationError? Error) ValidateExternalIdentifier(
+        string sourceValue,
+        string identifierValue)
+    {
+        if (string.IsNullOrWhiteSpace(sourceValue))
+        {
+            return (null, null, ApplicationError.Validation("externalIdentifierSource", "An external identifier source is required."));
+        }
+
+        if (string.IsNullOrWhiteSpace(identifierValue))
+        {
+            return (null, null, ApplicationError.Validation("externalIdentifierValue", "An external identifier value is required."));
+        }
+
+        var source = sourceValue.Trim().ToLowerInvariant();
+        var value = CanonicaliseExternalIdentifierValue(source, identifierValue);
+        if (string.IsNullOrWhiteSpace(value))
+        {
+            return (null, null, ApplicationError.Validation(
+                "externalIdentifierValue",
+                "An external identifier value is required and must use a supported format."));
+        }
+
+        var lengthError = ValidateLength(source, "externalIdentifierSource", FieldLimits.ExternalIdentifierSource)
+            ?? ValidateLength(value, "externalIdentifierValue", FieldLimits.ExternalIdentifierValue);
+        return lengthError is null ? (source, value, null) : (null, null, lengthError);
+    }
+
+    private static bool RecordingMatches(RecordingEntity recording, CreateRecordingCommand command)
+        => string.Equals(recording.Title, command.Title.Trim(), StringComparison.Ordinal) &&
+           string.Equals(recording.Artist, NormaliseOptionalText(command.Artist), StringComparison.Ordinal) &&
+           string.Equals(recording.ReleaseTitle, NormaliseOptionalText(command.ReleaseTitle), StringComparison.Ordinal);
 
     private static string CanonicaliseExternalIdentifierValue(string source, string value)
     {

@@ -136,4 +136,29 @@ public sealed class ShowrunnerTools
             ? new RecordingHistoryToolResult(true, result.Value, null)
             : new RecordingHistoryToolResult(false, null, result.Error);
     }
+
+    [McpServerTool(Name = "backlog_candidate_import", ReadOnly = false, Idempotent = true, UseStructuredContent = true)]
+    [Description("Atomically imports one externally captured candidate into the authoritative Showrunner backlog. Provide exactly one resolved recording identity: recordingId for an existing recording, or newRecording only after recording_history finds no match. The external reference is preserved for housekeeping, and an identical retry returns the existing recording and backlog item as a no-op.")]
+    public static async Task<BacklogCandidateImportToolResult> ImportBacklogCandidateAsync(
+        ShowrunnerService showrunnerService,
+        [Description("The resolved candidate, its integration-neutral external source reference, and backlog text.")] ImportBacklogCandidateCommand command,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await showrunnerService.ImportBacklogCandidateAsync(command, cancellationToken);
+        return result.IsSuccess
+            ? new BacklogCandidateImportToolResult(true, result.Value, null)
+            : new BacklogCandidateImportToolResult(false, null, result.Error);
+    }
+
+    [McpServerTool(Name = "backlog_item_list", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
+    [Description("Returns the authoritative Showrunner backlog in stable chronological order. Use recording_history with a linked recordingId to inspect identity, external references, and prior broadcasts before planning.")]
+    public static async Task<BacklogItemListToolResult> ListBacklogItemsAsync(
+        ShowrunnerService showrunnerService,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await showrunnerService.ListBacklogItemsAsync(cancellationToken);
+        return result.IsSuccess
+            ? new BacklogItemListToolResult(true, result.Value, null)
+            : new BacklogItemListToolResult(false, null, result.Error);
+    }
 }

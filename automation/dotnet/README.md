@@ -56,6 +56,29 @@ workflow, reassess whether the chosen agent host has a safe integration before
 adding a thin replaceable adapter. Until then, playlist reading, backlog
 removal and show-playlist correction remain explicit manual steps.
 
+## Todoist integration placement
+
+Todoist remains an external capture workspace. Showrunner does not accept
+Todoist credentials or proxy its API: the MCP-capable agent host reads and
+completes tasks through its own replaceable integration. Showrunner receives
+only structured, operator-resolved recording data and an integration-neutral
+external source reference.
+
+`backlog_candidate_import` persists the recording (when new), source reference
+and backlog item in one transaction. The caller must provide exactly one
+resolved identity: an existing `recordingId`, or `newRecording` only after an
+ambiguity-safe `recording_history` lookup finds no match. The source/value pair
+is the retry key, so an identical retry returns the same recording and backlog
+item with `isNoOp: true`; it cannot silently reassign the task to a different
+recording.
+
+After finalisation, `show_reconciliation_finalise` returns source references
+separately for recordings that aired and recordings that were planned but
+dropped. The agent host can therefore complete only aired Todoist tasks and
+leave dropped candidates available. A Todoist outage cannot affect Showrunner
+finalisation, and the stable finalisation retry payload supports later
+housekeeping retries.
+
 ## Run the MCP server
 
 From the repository root:
@@ -73,6 +96,10 @@ The stdio server exposes focused tools:
   `show_prepare`.
 - `recording_external_identifier_add` associates a Spotify or other external
   identifier with an existing authoritative recording.
+- `backlog_candidate_import` atomically imports an externally captured,
+  identity-resolved candidate and is safely retryable by source reference.
+- `backlog_item_list` returns the authoritative backlog in stable chronological
+  order.
 - `show_plan_refresh` intentionally refreshes the mutable planned order and
   returns authoritative repeat history. It is blocked once reconciliation has
   started.
