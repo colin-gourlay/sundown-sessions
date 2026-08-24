@@ -377,6 +377,65 @@ public sealed class ShowrunnerService
             : ApplicationResult<ShowModel>.Success(Map(show));
     }
 
+    public async Task<ApplicationResult<ShowLookupResult>> FindShowAsync(
+        ShowLookupQuery query,
+        CancellationToken cancellationToken = default)
+    {
+        var selectorCount = (query.ShowId.HasValue ? 1 : 0)
+            + (query.Slug is not null ? 1 : 0)
+            + (query.ShowDate.HasValue ? 1 : 0);
+        if (selectorCount != 1)
+        {
+            return ApplicationResult<ShowLookupResult>.Failure(
+                ApplicationError.Validation(
+                    "query",
+                    "Provide exactly one of showId, slug, or showDate."));
+        }
+
+        var slug = query.Slug?.Trim();
+        if (query.Slug is not null && string.IsNullOrEmpty(slug))
+        {
+            return ApplicationResult<ShowLookupResult>.Failure(
+                ApplicationError.Validation("slug", "A show slug must not be empty."));
+        }
+
+        IQueryable<ShowEntity> shows = dbContext.Shows
+            .AsNoTracking()
+            .Include(item => item.PlannedRecordings.OrderBy(recording => recording.Position));
+
+        string identifier;
+        if (query.ShowId.HasValue)
+        {
+            shows = shows.Where(item => item.Id == query.ShowId.Value);
+            identifier = query.ShowId.Value.ToString();
+        }
+        else if (slug is not null)
+        {
+            shows = shows.Where(item => item.Slug == slug);
+            identifier = slug;
+        }
+        else
+        {
+            var showDate = query.ShowDate!.Value;
+            shows = shows.Where(item => item.ShowDate == showDate);
+            identifier = showDate.ToString("yyyy-MM-dd");
+        }
+
+        var matchingShows = await shows
+            .OrderBy(item => item.ShowDate)
+            .ThenBy(item => item.Slug)
+            .ToListAsync(cancellationToken);
+        var matches = matchingShows.Select(Map).ToArray();
+
+        if (matches.Length == 0)
+        {
+            return ApplicationResult<ShowLookupResult>.Failure(ApplicationError.NotFound("show", identifier));
+        }
+
+        return ApplicationResult<ShowLookupResult>.Success(
+            new ShowLookupResult(matches.Length > 1, matches));
+    }
+
     public async Task<ApplicationResult<ShowModel>> PlanRecordingAsync(Guid showId, PlanRecordingCommand command, CancellationToken cancellationToken = default)
     {
         if (command.Position < 1)

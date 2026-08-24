@@ -90,6 +90,8 @@ dotnet run \
 
 The stdio server exposes focused tools:
 
+- `show_get` finds a show by its authoritative identifier, slug, or broadcast
+  date and surfaces multiple shows on the same date as ambiguous.
 - `show_prepare` matches a plan, checks repeats, calculates timings and rebuilds
   the numbered folder only when preparation is fully resolved.
 - `recording_resolve` records an explicit choice of a candidate returned by

@@ -18,59 +18,16 @@ The site improves discoverability and editorial quality for the Sundown Sessions
 
 ## Project Overview
 
-This repository contains:
-
-- The Hugo-based website content, templates, and static assets under [src/](src/).
-- The Showrunner MCP server under [showrunner/](showrunner/), which exposes deterministic show-preparation capabilities to agent hosts over local stdio.
+This repository contains the Hugo-based website content, templates, and static assets under [src/](src/).
 
 ## Architecture Overview
 
 ```mermaid
 flowchart LR
   A[src Hugo website] --> B[public site output]
-  C[Agent host MCP client] -->|stdio MCP| D[showrunner/Sundown.Showrunner.Mcp]
-  D --> E[Application layer]
-  E --> F[Domain layer]
-  E --> G[SQLite database]
 ```
 
 ## Setup Instructions
-
-### Showrunner MCP Server Local Setup
-
-Prerequisites:
-
-- [.NET 9 SDK](https://dotnet.microsoft.com/download/dotnet/9)
-
-The Showrunner MCP server lives under [showrunner/](showrunner/). It uses local stdio transport and connects to a SQLite database.
-
-Build and test from the repository root:
-
-```bash
-dotnet build showrunner/Sundown.Showrunner.sln
-dotnet test showrunner/Sundown.Showrunner.sln
-```
-
-Run the MCP server (for use with an MCP-capable agent host):
-
-```bash
-SHOWRUNNER_DB="Data Source=/path/to/showrunner.db" \
-  dotnet run --project showrunner/src/Sundown.Showrunner.Mcp
-```
-
-The server communicates over stdin/stdout using the MCP stdio transport. Configure your MCP-capable agent host (Buzz, ChatGPT, Claude Desktop, or any compatible client) to launch this process as a local stdio MCP server.
-
-The initial tool surface exposed by the server is:
-
-| Tool | Description |
-| --- | --- |
-| `show_get` | Retrieve a show by numeric ID |
-| `show_get_by_date` | Retrieve a show by broadcast date (YYYY-MM-DD) |
-| `recording_search` | Search recordings by artist, title or album |
-| `recording_history` | Return the broadcast history for a recording |
-| `show_prepare` | Mark a show as prepared and surface repeat conflicts |
-| `recording_resolve` | Assign a recording to a show slot |
-| `repeat_exception_create` | Approve a previously played recording for replay |
 
 ### Hugo Website Local Setup
 
@@ -115,7 +72,6 @@ until real IDs are supplied.
 ## Workstream Details
 
 - Website content and layouts: [src/content/](src/content/) and [src/layouts/](src/layouts/)
-- Showrunner MCP server: [showrunner/](showrunner/)
 
 ## Roadmap
 
@@ -161,7 +117,6 @@ Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing.
 | --- | --- |
 | [![markdown linter](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/lint-markdown.yml/badge.svg)](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/lint-markdown.yml) | Markdown lint status |
 | [![deployment - github pages](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/deploy-github-pages.yml/badge.svg)](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/deploy-github-pages.yml) | Production deployment status |
-| [![showrunner - build and test](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/showrunner-build-and-test.yml/badge.svg)](https://github.com/colin-gourlay/sundown-sessions/actions/workflows/showrunner-build-and-test.yml) | Showrunner MCP server build and test status |
 
 ## Licence
 
