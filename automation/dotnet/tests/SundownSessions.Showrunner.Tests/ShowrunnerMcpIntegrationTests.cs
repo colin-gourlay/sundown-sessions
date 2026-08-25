@@ -44,7 +44,7 @@ public sealed class ShowrunnerMcpIntegrationTests
         {
             Name = "Sundown Showrunner integration test",
             Command = "dotnet",
-            Arguments = ["run", "--no-build", "--configuration", "Release", "--project", projectPath],
+            Arguments = ["run", "--configuration", "Release", "--project", projectPath],
             WorkingDirectory = dotnetDirectory,
             InheritEnvironmentVariables = false,
             EnvironmentVariables = environment,
