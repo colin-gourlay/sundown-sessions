@@ -3,6 +3,7 @@
 {{ $artworkURL := partial "release/artwork-url.html" . }}
 
 {{ $artists := partial "release/resolve-artists.html" . }}
+{{ $artistCredit := .Params.artist_credit | default .Params.artistCredit }}
 {{ $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type }}
 {{ $accentColor := "" }}
 {{ with .Params.artworkAccent }}
@@ -46,17 +47,32 @@
           class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
           {{ .Title | emojify }}
         </h1>
-        {{ with $artists }}
+        {{ if $artistCredit }}
           <p class="release-hero__artist text-lg font-medium text-neutral-700 dark:text-neutral-300">
-            {{- range $index, $artist := . -}}
-              {{- if gt $index 0 }}, {{ end -}}
+            {{- if eq (len $artists) 1 -}}
+              {{- $artist := index $artists 0 -}}
               {{- with $artist.page -}}
-                <a class="release-hero__artist-link" href="{{ .RelPermalink }}">{{ $artist.name | emojify }}</a>
+                <a class="release-hero__artist-link" href="{{ .RelPermalink }}">{{ $artistCredit | emojify }}</a>
               {{- else -}}
-                <span>{{ $artist.name | emojify }}</span>
+                <span>{{ $artistCredit | emojify }}</span>
               {{- end -}}
+            {{- else -}}
+              <span>{{ $artistCredit | emojify }}</span>
             {{- end -}}
           </p>
+        {{ else }}
+          {{ with $artists }}
+            <p class="release-hero__artist text-lg font-medium text-neutral-700 dark:text-neutral-300">
+              {{- range $index, $artist := . -}}
+                {{- if gt $index 0 }}, {{ end -}}
+                {{- with $artist.page -}}
+                  <a class="release-hero__artist-link" href="{{ .RelPermalink }}">{{ $artist.name | emojify }}</a>
+                {{- else -}}
+                  <span>{{ $artist.name | emojify }}</span>
+                {{- end -}}
+              {{- end -}}
+            </p>
+          {{ end }}
         {{ end }}
       </div>
 
