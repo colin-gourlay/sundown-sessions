@@ -1,5 +1,7 @@
 ---
 title: David Latto
+aliases:
+  - /artists/d/david-latto-2/
 summary: "Scottish singer-songwriter associated with melodic, roots-informed independent songwriting."
 description: "Scottish singer-songwriter known for melodic, roots-informed independent songwriting and a recurring Sundown Sessions favourite in the Geordie Munro thread."
 genres: ["Folk","Singer-Songwriter","Scottish"]

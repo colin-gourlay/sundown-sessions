@@ -3,6 +3,10 @@ title: "Geordie Munro"
 artist: "David Latto"
 artist_slug: "david-latto"
 artist_credit: "David Latto & The Lang Spoons"
+labels:
+  - David Latto & The Lang Spoons
+producers:
+  - Stephen Watkins
 releaseDate: "2022-07-29"
 release_date: "29 July 2022"
 releaseType: Single
@@ -16,14 +20,12 @@ tags:
   - indie rock
   - scottish music
   - the lang spoons
-releaseMetadataUnavailable:
-  - labels
-  - producers
-artwork: "https://is1-ssl.mzstatic.com/image/thumb/Music112/v4/fc/0e/cd/fc0ecd6e-5c4a-ce38-93b1-f79dd3b40768/102982.jpg/1200x1200bb.jpg"
+artwork: "cover.jpg"
 tracks:
   - trackNumber: 1
     title: "Geordie Munro"
     duration: "3:05"
+    url: "/tracks/d/david-latto/geordie-munro/"
 tracklist_source: "https://music.apple.com/gb/album/geordie-munro/1632002571?i=1632002573"
 tracklist_edition: "2022-07-29 GB digital single"
 metadata_source: "https://music.apple.com/gb/album/geordie-munro-single/1632002571"
