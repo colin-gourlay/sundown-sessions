@@ -59,3 +59,8 @@ public sealed record BacklogItemListToolResult(
     bool IsSuccess,
     BacklogItemListResult? Result,
     ApplicationError? Error);
+
+public sealed record ShowPublicationExportToolResult(
+    bool IsSuccess,
+    ShowPublicationExportResult? Result,
+    ApplicationError? Error);

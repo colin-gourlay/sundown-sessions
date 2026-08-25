@@ -50,7 +50,7 @@ public sealed class ShowrunnerMcpIntegrationTests
             EnvironmentVariables = environment,
             ShutdownTimeout = TimeSpan.FromSeconds(10),
         });
-        using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(60));
+        using var timeout = new CancellationTokenSource(TimeSpan.FromSeconds(120));
         await using var client = await McpClient.CreateAsync(transport, cancellationToken: timeout.Token);
 
         var tools = await client.ListToolsAsync(cancellationToken: timeout.Token);
@@ -65,6 +65,7 @@ public sealed class ShowrunnerMcpIntegrationTests
             "show_get",
             "show_plan_refresh",
             "show_prepare",
+            "show_publication_export",
             "show_reconciliation_confirm",
             "show_reconciliation_evidence",
             "show_reconciliation_finalise",
@@ -329,6 +330,44 @@ public sealed class ShowrunnerMcpIntegrationTests
         var ambiguousHistoryJson = ambiguousHistoryResult.StructuredContent!.Value.GetProperty("result");
         Assert.True(ambiguousHistoryJson.GetProperty("isAmbiguous").GetBoolean());
         Assert.Equal(2, ambiguousHistoryJson.GetProperty("candidates").GetArrayLength());
+
+        var publicationExportResult = await client.CallToolAsync(
+            "show_publication_export",
+            new Dictionary<string, object?> { ["query"] = new { showId = showId } },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, publicationExportResult.IsError);
+        var publicationExportJson = publicationExportResult.StructuredContent!.Value.GetProperty("result");
+        Assert.True(publicationExportJson.GetProperty("isFinalised").GetBoolean());
+        Assert.NotEqual(default, publicationExportJson.GetProperty("finalisedAtUtc").GetDateTimeOffset());
+        Assert.Equal(showId, publicationExportJson.GetProperty("showId").GetGuid());
+        Assert.Equal("mcp-show", publicationExportJson.GetProperty("slug").GetString());
+        Assert.Equal("2026-08-21", publicationExportJson.GetProperty("showDate").GetString());
+        var exportedPlaylist = publicationExportJson.GetProperty("finalPlaylist");
+        Assert.Equal(1, exportedPlaylist.GetArrayLength());
+        var exportedTrack = exportedPlaylist[0];
+        Assert.Equal(detectedRecordingId, exportedTrack.GetProperty("recordingId").GetGuid());
+        Assert.Equal(1, exportedTrack.GetProperty("position").GetInt32());
+        Assert.Equal("Detected title", exportedTrack.GetProperty("title").GetString());
+        Assert.Equal("Detected artist", exportedTrack.GetProperty("artist").GetString());
+        Assert.Equal(
+            "spotify",
+            exportedTrack.GetProperty("externalIdentifiers")[0].GetProperty("source").GetString());
+        Assert.False(exportedTrack.TryGetProperty("notes", out _));
+        Assert.DoesNotContain(files.MusicRoot, publicationExportJson.ToString(), StringComparison.Ordinal);
+        Assert.DoesNotContain(files.PreparationRoot, publicationExportJson.ToString(), StringComparison.Ordinal);
+        Assert.DoesNotContain(mixxx.DatabasePath, publicationExportJson.ToString(), StringComparison.Ordinal);
+
+        var nonFinalisedShowId = (await new ShowrunnerService(harness.CreateContext()).CreateShowAsync(
+            new CreateShowCommand("unfinalised-show", "Unfinalised Show", new DateOnly(2026, 9, 1)))).Value!.Id;
+        var nonFinalisedExportResult = await client.CallToolAsync(
+            "show_publication_export",
+            new Dictionary<string, object?> { ["query"] = new { showId = nonFinalisedShowId } },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, nonFinalisedExportResult.IsError);
+        var nonFinalisedExportJson = nonFinalisedExportResult.StructuredContent!.Value.GetProperty("result");
+        Assert.False(nonFinalisedExportJson.GetProperty("isFinalised").GetBoolean());
+        Assert.False(nonFinalisedExportJson.TryGetProperty("finalisedAtUtc", out _));
+        Assert.Equal(0, nonFinalisedExportJson.GetProperty("finalPlaylist").GetArrayLength());
     }
 
     private static string FindDotnetDirectory()

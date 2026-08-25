@@ -231,3 +231,20 @@ public sealed record MixxxHistorySessionSummaryModel(
     DateTimeOffset? StartedAt,
     DateTimeOffset? EndedAt,
     int TrackCount);
+
+public sealed record ShowPublicationExportResult(
+    Guid ShowId,
+    string Slug,
+    string Title,
+    DateOnly ShowDate,
+    bool IsFinalised,
+    DateTimeOffset? FinalisedAtUtc,
+    IReadOnlyList<PublicationTrackEntry> FinalPlaylist);
+
+public sealed record PublicationTrackEntry(
+    Guid RecordingId,
+    int Position,
+    string Title,
+    string? Artist,
+    string? ReleaseTitle,
+    IReadOnlyList<ExternalIdentifierModel> ExternalIdentifiers);
