@@ -2,7 +2,12 @@
 genres: ["Gothic Rock","New Wave","Post-Punk","Punk","Punk Rock","Rock"]
 featured_image: artists/t/the-damned/the-damned.jpg
 title: The Damned
+summary: "English punk pioneers whose theatrical darkness, melodic instinct and irreverent energy continually pushed beyond the genre's first boundaries."
+description: "English punk pioneers known for explosive early singles, theatrical gothic atmosphere and the enduring melodic chemistry of Dave Vanian and Captain Sensible."
+editorialSummary: >
+  The Damned combine punk velocity, gothic theatre and a sly melodic instinct, making their long catalogue far stranger and richer than labels suggest.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -19,5 +24,4 @@ As one of the first gothic rock bands, the Damned, featuring lead singer Vanian'
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/thedamned](https://twitter.com/thedamned)" >}}
-
 

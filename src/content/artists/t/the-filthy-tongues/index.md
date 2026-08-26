@@ -7,7 +7,7 @@ description: "Edinburgh rock band carrying dark Scottish storytelling, post-punk
 editorialSummary: >
   The Filthy Tongues craft cinematic alternative rock filled with atmosphere, intensity and emotional depth.
 artist_page: true
-lastReviewed: 2026-07-13
+lastReviewed: 2026-08-26
 ---
 
 ## About
@@ -20,5 +20,4 @@ The Filthy Tongues are an alternative rock band from Edinburgh, Scotland, featur
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/filthytongues](https://twitter.com/filthytongues)" >}}
-
 

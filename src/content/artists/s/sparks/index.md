@@ -7,7 +7,7 @@ description: "American art-pop duo formed by brothers Ron and Russell Mael, cele
 editorialSummary: >
   Sparks have spent decades reinventing pop music with wit, invention and fearless originality unlike anyone else.
 artist_page: true
-lastReviewed: 2026-07-13
+lastReviewed: 2026-08-26
 ---
 
 ## About
@@ -21,5 +21,4 @@ Sparks are an American art-pop duo formed by brothers Ron and Russell Mael in Lo
 - {{< new-tab-link "Instagram: [https://www.instagram.com/sparks_official/](https://www.instagram.com/sparks_official/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/sparksofficial](https://twitter.com/sparksofficial)" >}}
-
 

@@ -2,13 +2,18 @@
 genres: ["Alternative Rock","New Romantic","New Wave","Pop Rock","Post-Punk","Rock","Celtic Rock"]
 featured_image: artists/b/big-country/big-country.jpg
 title: Big Country
+summary: "Scottish rock band whose ringing guitars, anthemic melodies and emotional directness created an unmistakably expansive sound."
+description: "Scottish rock band known for ringing, bagpipe-like guitars, anthemic melodies and the emotionally direct songwriting of Stuart Adamson."
+editorialSummary: >
+  Big Country make ringing guitars feel vast and windswept, carrying anthemic melodies with urgency, pride and unmistakable emotional force.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
-Big Country are a Scottish rock band formed in Dunfermline, Fife, in 1981.
-The height of the band's popularity was in the early to mid 1980s, although they have retained a cult following for many years since. The band's music incorporated Scottish folk and martial music styles, and the band engineered their guitar-driven sound to evoke the sound of bagpipes, fiddles, and other traditional folk instruments.
-The band's "classic" lineup between 1982 and 2000, consisted of Stuart Adamson (vocals, guitar) Bruce Watson (guitar) Tony Butler (bass guitar) and Mark Brzezicki (drums). Following Adamson's death in 2001, the band reformed in 2007, with the surviving members. Between 2010 and 2013, the band reformed with Mike Peters of The Alarm on lead vocals. Since then the band has continued with only two of the original members (Watson and Brzezicki).
+Big Country emerged from Dunfermline with a guitar sound unlike any of their contemporaries. Stuart Adamson and Bruce Watson used effects and interlocking lines to evoke pipes and fiddles, while Tony Butler and Mark Brzezicki supplied the powerful rhythm beneath songs built for wide-open spaces.
+
+From "In a Big Country" and "Fields of Fire" to the darker sweep of *The Seer* and *The Buffalo Skinners*, their catalogue combines Scottish musical character, rock momentum and Adamson's searching, humane songwriting.
 
 
 
@@ -18,5 +23,4 @@ The band's "classic" lineup between 1982 and 2000, consisted of Stuart Adamson (
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/bigcountryuk](https://twitter.com/bigcountryuk)" >}}
-
 

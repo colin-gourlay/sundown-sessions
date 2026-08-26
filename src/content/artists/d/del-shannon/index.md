@@ -7,7 +7,7 @@ description: "American rock and roll singer-songwriter remembered for dramatic p
 editorialSummary: >
   Del Shannon's timeless melodies and unmistakable voice helped shape the sound of early rock and pop.
 artist_page: true
-lastReviewed: 2026-07-13
+lastReviewed: 2026-08-26
 ---
 
 ## About
