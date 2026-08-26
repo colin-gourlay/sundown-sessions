@@ -5,9 +5,9 @@ title: The Detroit Cobras
 summary: "Detroit garage rock band celebrated for raw, soul-soaked covers and Rachel Nagy's commanding vocals."
 description: "Detroit garage rock band celebrated for raw, soul-soaked covers, deep rhythm-and-blues cuts and Rachel Nagy's commanding vocals."
 editorialSummary: >
-  The Detroit Cobras revive forgotten rhythm and blues classics with swagger, soul and infectious garage rock energy.
+  The Detroit Cobras revive overlooked rhythm and blues with Rachel Nagy's commanding voice, raw garage-rock swagger and an infectious sense of joy.
 artist_page: true
-lastReviewed: 2026-07-13
+lastReviewed: 2026-08-26
 ---
 
 ## About

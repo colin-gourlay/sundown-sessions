@@ -2,7 +2,12 @@
 genres: ["Alternative Rock","Dance-Punk","Indie Pop","Indie Rock","Post-Punk"]
 featured_image: artists/s/spoon/spoon.jpg
 title: Spoon
+summary: "Austin rock band whose lean arrangements, clipped rhythms and sly melodic turns make every carefully placed sound count."
+description: "Austin rock band led by Britt Daniel and Jim Eno, celebrated for economical arrangements, rhythmic precision and an adventurous independent catalogue."
+editorialSummary: >
+  Spoon strip rock songs to their most potent details, using clipped rhythms, wiry guitars and sly hooks to make restraint feel endlessly inventive.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -18,5 +23,4 @@ Spoon released their debut studio album, Telephono, in 1996 through Matador Reco
 - {{< new-tab-link "Instagram: [https://www.instagram.com/spoontheband/](https://www.instagram.com/spoontheband/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/SpoonTheBand](https://twitter.com/SpoonTheBand)" >}}
-
 

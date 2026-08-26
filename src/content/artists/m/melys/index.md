@@ -2,7 +2,12 @@
 genres: []
 featured_image: artists/m/melys/melys.jpg
 title: Melys
+summary: "Welsh independent band pairing dreamy textures, melodic noise and bilingual songwriting with a playful, unmistakably personal spirit."
+description: "Welsh independent rock band from Betws-y-Coed known for bilingual songwriting, melodic experimentation and a close creative relationship with John Peel."
+editorialSummary: >
+  Melys balance dreamy melody and fuzzy momentum with a playful experimental streak, making bilingual indie pop that remains warm, strange and immediately inviting.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -14,5 +19,4 @@ Melys (English translation:"Sweet") are a Welsh independent rock band from Betws
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/melysmusic](https://twitter.com/melysmusic)" >}}
-
 

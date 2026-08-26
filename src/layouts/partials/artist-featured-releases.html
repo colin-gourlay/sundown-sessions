@@ -1,7 +1,11 @@
 {{/* Releases connected to an artist through release front matter or bundle path. */}}
 
 {{ $artistName := .Title }}
-{{ $artistKey := lower (urlize $artistName) }}
+{{ $artistTitleKey := lower (urlize $artistName) }}
+{{ $artistKey := $artistTitleKey }}
+{{ with .File }}
+  {{ $artistKey = lower (path.Base (strings.TrimSuffix "/" .Dir)) }}
+{{ end }}
 {{ $releases := slice }}
 
 {{ range where site.RegularPages "Section" "releases" }}
@@ -18,13 +22,16 @@
           {{ else }}
             {{ $name = . }}
           {{ end }}
-          {{ if eq (lower (urlize (printf "%v" $name))) $artistKey }}{{ $artistMatches = true }}{{ end }}
+          {{ $releaseArtistKey := lower (urlize (printf "%v" $name)) }}
+          {{ if or (eq $releaseArtistKey $artistKey) (eq $releaseArtistKey $artistTitleKey) }}{{ $artistMatches = true }}{{ end }}
         {{ end }}
       {{ else if reflect.IsMap . }}
         {{ $name := index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug") | default "" }}
-        {{ if eq (lower (urlize (printf "%v" $name))) $artistKey }}{{ $artistMatches = true }}{{ end }}
+        {{ $releaseArtistKey := lower (urlize (printf "%v" $name)) }}
+        {{ if or (eq $releaseArtistKey $artistKey) (eq $releaseArtistKey $artistTitleKey) }}{{ $artistMatches = true }}{{ end }}
       {{ else }}
-        {{ if eq (lower (urlize (printf "%v" .))) $artistKey }}{{ $artistMatches = true }}{{ end }}
+        {{ $releaseArtistKey := lower (urlize (printf "%v" .)) }}
+        {{ if or (eq $releaseArtistKey $artistKey) (eq $releaseArtistKey $artistTitleKey) }}{{ $artistMatches = true }}{{ end }}
       {{ end }}
     {{ end }}
   {{ end }}

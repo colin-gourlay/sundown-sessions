@@ -2,7 +2,12 @@
 genres: ["Folk","Pop","Pop Rock","Pop Soul","Rock","Rock And Roll","Singer-Songwriter","Soft Rock","Classical"]
 featured_image: artists/p/paul-mccartney/paul-mccartney.jpg
 title: Paul McCartney
+summary: "Liverpool songwriter whose melodic instinct, restless experimentation and warm performances connect the Beatles, Wings and an enduring solo catalogue."
+description: "English singer-songwriter and multi-instrumentalist whose work with the Beatles, Wings and as a solo artist reshaped modern popular music."
+editorialSummary: >
+  Paul McCartney pairs an unfailing gift for melody with restless curiosity, moving easily between intimate ballads, vivid pop and inventive studio experiments.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -18,5 +23,4 @@ McCartney has written or co-written a record 32 songs that have topped the Billb
 - {{< new-tab-link "Instagram: [https://www.instagram.com/paulmccartney/](https://www.instagram.com/paulmccartney/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/PaulMcCartney](https://twitter.com/PaulMcCartney)" >}}
-
 

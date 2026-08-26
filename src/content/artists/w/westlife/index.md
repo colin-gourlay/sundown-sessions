@@ -2,7 +2,12 @@
 genres: ["Pop"]
 featured_image: artists/w/westlife/westlife.jpg
 title: Westlife
+summary: "Irish pop group known for polished harmonies, sweeping ballads and choruses designed to land with maximum emotional force."
+description: "Irish pop vocal group known for polished harmonies, chart-topping ballads and an enduring catalogue of expansive, emotionally direct songs."
+editorialSummary: >
+  Westlife turn polished harmonies and sweeping arrangements into emotionally direct pop, with every chorus built to reach the back of the room.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -18,5 +23,4 @@ After reforming in 2018, the quartet released the studio albums Spectrum (2019) 
 - {{< new-tab-link "Instagram: [https://www.instagram.com/westlife/](https://www.instagram.com/westlife/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/westlifemusic](https://twitter.com/westlifemusic)" >}}
-
 
