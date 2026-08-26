@@ -46,3 +46,13 @@ This applies to pages, microcopy, metadata, contact copy and all editorial prose
 - Confirm assumptions from nearby code before making changes.
 - Maintain clear, deterministic behaviour.
 - If requirements are ambiguous, choose the smallest safe implementation and document assumptions in the response.
+
+## Markdown Linting
+
+All Markdown files are linted using markdownlint. The shared ruleset is in `.markdownlint.json`. When authoring or editing Markdown, ensure content passes linting locally with:
+
+```bash
+npx markdownlint-cli2 "**/*.md" "!src/themes/**"
+```
+
+The `Lint Markdown` GitHub Actions workflow validates Markdown on pull requests.

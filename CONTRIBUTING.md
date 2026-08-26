@@ -121,6 +121,24 @@ The detailed accessibility baseline, review checklist, and automated/manual vali
 - Let the affected workflows pass before merging.
 - Keep non-action Docker image digests under separate review when they are introduced.
 
+## Markdown Linting
+
+All Markdown files in this repository are linted using [markdownlint](https://github.com/DavidAnson/markdownlint).
+
+The shared ruleset is defined in `.markdownlint.json` at the repository root.
+
+### Running Linting Locally
+
+Run the linter locally before opening a pull request:
+
+```bash
+npx markdownlint-cli2 "**/*.md" "!src/themes/**"
+```
+
+### GitHub Action
+
+The `Lint Markdown` workflow runs automatically on pull requests and pushes when Markdown files or the linting configuration change. The workflow must pass before changes are merged.
+
 ## Additional Repository Standards
 
 - Use British English in documentation and user-facing text.
