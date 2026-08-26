@@ -32,3 +32,10 @@
   title = "Get in touch with the show."
   url = "/contact/"
   weight = 20
+
+[[footer]]
+  identifier = "corrections"
+  name = "Suggest a correction"
+  title = "Report inaccurate, outdated or missing content."
+  url = "/corrections/"
+  weight = 30
