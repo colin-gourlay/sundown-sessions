@@ -17,6 +17,12 @@ mainSections = ["shows", "releases", "artists"]
 # a follow-up slice; kept here so editorial config remains in a single file.
 listen_live_stream_url = ""
 
+[forms]
+  # GitHub Pages cannot process form submissions itself. Corrections use the
+  # existing private Formspree inbox; see docs/correction-submissions.md before
+  # switching this to a dedicated form with the optional GitHub integration.
+  correctionAction = "https://formspree.io/f/xzbnwyez"
+
 [analytics]
   [analytics.google]
     measurementId = "todo-measurement_id"

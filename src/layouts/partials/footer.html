@@ -1,4 +1,5 @@
 <footer id="site-footer" class="py-10 print:hidden">
+  {{ $currentPage := . }}
   {{/* Footer menu */}}
   {{ if .Site.Params.footer.showMenu | default true }}
     {{ $listenURL := "/listen-live/" | relURL }}
@@ -18,10 +19,14 @@
           </li>
           {{ range .Site.Menus.footer }}
             {{ $isExternal := or (strings.HasPrefix .URL "http:") (strings.HasPrefix .URL "https:") }}
+            {{ $menuURL := .URL }}
+            {{ if and (eq .Identifier "corrections") (ne $currentPage.RelPermalink "/corrections/") }}
+              {{ $menuURL = printf "%s?page=%s" .URL ($currentPage.RelPermalink | urlquery) }}
+            {{ end }}
             <li class="flex">
               <a
                 class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
-                href="{{ .URL }}"
+                href="{{ $menuURL | safeURL }}"
                 {{ if $isExternal }}
                   target="_blank"
                   rel="noopener noreferrer"

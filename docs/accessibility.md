@@ -9,7 +9,7 @@ Accessibility is a core quality attribute of the site. It should be considered d
 The standard applies to all public-facing pages, templates, components, and content, including:
 
 - Homepage and section listing pages.
-- Show, artist, release, track, about, contact, search, and listen-live pages.
+- Show, artist, release, track, about, contact, corrections, search, and listen-live pages.
 - Header navigation, footer navigation, menus, forms, media players, theme switching, search, and other interactive elements.
 - Images, artwork, icons, embedded media, and editorial content.
 
