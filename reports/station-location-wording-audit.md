@@ -71,7 +71,7 @@ No direct match found for `Tuesday evenings from 7pm–10pm UK time`.
 | `src/content/shows/2/transcript-with-timestamps` | Contains Kirkcaldy mention |
 | `src/content/shows/4/transcript` | Contains Kirkcaldy mention |
 | `src/content/shows/4/transcript-with-timestamps` | Contains Kirkcaldy mention |
-| `src/content/shows/39/39-show-transcript.md5` | Contains Kirkcaldy mention |
+| `src/content/shows/39/39-show-transcript.md5` | Contains Kirkcaldy mention (`.md5` is the actual filename in the repository, not a checksum file) |
 
 ### Haddington and Scotland references
 
