@@ -2,7 +2,11 @@
      published show track guides. Most played tracks do not have standalone
      track pages, so those pages cannot be the source of truth here. */}}
 
-{{ $artistKey := lower (urlize .Title) }}
+{{ $artistTitleKey := lower (urlize .Title) }}
+{{ $artistKey := $artistTitleKey }}
+{{ with .File }}
+  {{ $artistKey = lower (path.Base (strings.TrimSuffix "/" .Dir)) }}
+{{ end }}
 {{ $tracks := newScratch }}
 {{ $tracks.Set "items" (dict) }}
 
@@ -10,7 +14,8 @@
   {{ $show := . }}
   {{ $showMatchesArtist := false }}
   {{ range .Params.tags }}
-    {{ if eq (lower (urlize (printf "%v" .))) $artistKey }}
+    {{ $showArtistKey := lower (urlize (printf "%v" .)) }}
+    {{ if or (eq $showArtistKey $artistKey) (eq $showArtistKey $artistTitleKey) }}
       {{ $showMatchesArtist = true }}
     {{ end }}
   {{ end }}
@@ -34,7 +39,8 @@
       {{ if ge (len $titleParts) 2 }}
         {{ $trackTitle := strings.TrimSpace (index $titleParts 0) }}
         {{ $trackArtist := strings.TrimSpace (index $titleParts 1) }}
-        {{ if eq (lower (urlize $trackArtist)) $artistKey }}
+        {{ $trackArtistKey := lower (urlize $trackArtist) }}
+        {{ if or (eq $trackArtistKey $artistKey) (eq $trackArtistKey $artistTitleKey) }}
           {{ $releaseTitle := "" }}
           {{ $cells := split $line "|" }}
           {{ if ge (len $cells) 4 }}

@@ -14,12 +14,12 @@
 - ADVERTISING BREAK
 
 1. {{< artist-wikilink "Angelfish" >}} - Suffocate Me
-2. Goodbye Mr Mackenzie - Normal Boy
+2. {{< artist-wikilink "Goodbye Mr Mackenzie" "goodbye-mr-mackenzie" >}} - Normal Boy
 3. {{< artist-wikilink "Skids" >}} - Charade
 
 - NEWS
 
-1. Goodbye Mr Mackenzie - Hard
+1. {{< artist-wikilink "Goodbye Mr Mackenzie" "goodbye-mr-mackenzie" >}} - Hard
 2. {{< artist-wikilink "Hipsway" >}} - Tinder
 3. {{< artist-wikilink "Win" >}} - You've Got the Power
 4. {{< artist-wikilink "Attic Lights" >}} - The Dirty Thirst

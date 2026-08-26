@@ -5,9 +5,9 @@ title: Becky Becky
 summary: "Brighton synth-pop duo whose dark electronic pop blends literary detail, theatrical tension and underground club energy."
 description: "Brighton synth-pop duo whose dark electronic pop blends literary detail, theatrical tension and underground club energy with a cult independent edge."
 editorialSummary: >
-  Becky Becky creates inventive art-pop filled with infectious melodies, bold ideas and unexpected musical twists.
+  Becky Becky turn literary ideas, dark electronics and underground club energy into theatrical art-pop full of tension and unexpected melodic hooks.
 artist_page: true
-lastReviewed: 2026-07-13
+lastReviewed: 2026-08-26
 ---
 
 ## About
@@ -21,6 +21,5 @@ Becky Becky are a Brighton electro-synth-pop duo built around Gemma L. Williams,
 - {{< new-tab-link "Instagram: [https://www.instagram.com/beckybeckymusic/](https://www.instagram.com/beckybeckymusic/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/beckybeckymusic](https://twitter.com/beckybeckymusic)" >}}
-
 
 

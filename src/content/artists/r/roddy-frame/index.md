@@ -2,7 +2,12 @@
 genres: ["Folk","Indie Pop","Jazz","Pop","Post-Punk","Rock","Singer-Songwriter","Soul"]
 featured_image: artists/r/roddy-frame/roddy-frame.jpg
 title: Roddy Frame
+summary: "Scottish songwriter whose graceful guitar playing and literate melodies connect Aztec Camera's bright pop with an intimate solo catalogue."
+description: "Scottish singer-songwriter and Aztec Camera founder celebrated for intricate guitar playing, literate lyrics and graceful, soul-informed melodic pop."
+editorialSummary: >
+  Roddy Frame combines intricate guitar work with clear-eyed writing, crafting graceful songs where bright pop surfaces carry tenderness, doubt and quiet resolve.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -14,5 +19,4 @@ Since the end of the Aztec Camera project, Frame has released four solo albums, 
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/roddyframe](https://twitter.com/roddyframe)" >}}
-
 
