@@ -2,17 +2,20 @@
 genres: ["Alternative Rock","New Wave","Pop","Pop Rock","Post-Punk","Rock","Neo-Psychedelia"]
 featured_image: artists/e/echo-and-the-bunnymen/echo-and-the-bunnymen.jpg
 title: Echo & the Bunnymen
+aliases:
+  - /artists/e/echo-the-bunnymen/
+summary: "Liverpool post-punk band blending atmospheric guitars, brooding grandeur and Ian McCulloch's commanding voice."
+description: "Liverpool post-punk band known for atmospheric guitar music, brooding grandeur and Ian McCulloch's commanding, romantic vocal performances."
+editorialSummary: >
+  Echo & the Bunnymen turn shadowy guitars and widescreen drama into post-punk songs that feel mysterious, romantic and instantly recognisable.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
-Echo & the Bunnymen are an English rock band formed in Liverpool in 1978. The original line-up consisted of vocalist Ian McCulloch, guitarist Will Sergeant and bassist Les Pattinson. By 1980, Pete de Freitas joined as the band's drummer.
-Their 1980 debut album Crocodiles went into the top 20 of the UK Albums Chart. After releasing their second album Heaven Up Here in 1981, the band's cult status was followed by mainstream success in the UK in 1983 when they scored a UK Top 10 hit with "The Cutter", and the album which the song came from, Porcupine, hit number 2 in the UK. Ocean Rain (1984), continued the band's UK chart success with its lead single "The Killing Moon" entering into the top 10.
-After they released a self-titled album in 1987, McCulloch left the band and was replaced by singer Noel Burke. In 1989, de Freitas was killed in a motorcycle accident. After working together as Electrafixion, McCulloch and Sergeant regrouped with Pattinson in 1997 and returned as Echo & the Bunnymen, before Pattinson's departure in 1998. The band has done some touring and released several albums since the late 1990s to varying degrees of success.
+Echo & the Bunnymen emerged from Liverpool's post-punk scene with Ian McCulloch's commanding voice set against Will Sergeant's atmospheric guitar, Les Pattinson's bass and Pete de Freitas's propulsive drumming. Their music balances darkness and grandeur without losing its sharp melodic edge.
 
-### Current Lineup
-
-Will Sergeant, Ian McCulloch, Simon Finley, Stephen Brennan
+Albums such as *Crocodiles*, *Heaven Up Here* and *Ocean Rain* contain enduring songs including "The Cutter" and "The Killing Moon". Their version of the Doors' "People Are Strange", recorded for *The Lost Boys*, brings that same sense of mystery to a familiar song.
 
 ## External Links
 
@@ -20,4 +23,3 @@ Will Sergeant, Ian McCulloch, Simon Finley, Stephen Brennan
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/OfficialEATB](https://twitter.com/OfficialEATB)" >}}
-

@@ -10,7 +10,7 @@ discogs_name: "David Latto (2)"
 editorialSummary: >
   David Latto crafts thoughtful, melodic songwriting that reflects the heart of Scotland's vibrant independent music scene.
 artist_page: true
-lastReviewed: 2026-07-13
+lastReviewed: 2026-08-26
 ---
 
 ## About

@@ -27,9 +27,9 @@
 
   {{ range split $trackInfo "\n" }}
     {{ $line := . }}
-    {{ $titleShortcode := index (findRE `(?i)title\s+"[^"]+"` $line 1) 0 | default "" }}
+    {{ $titleShortcode := index (findRE `(?i)(?:title|track-info-featured-guest)\s+"[^"]+"` $line 1) 0 | default "" }}
     {{ if $titleShortcode }}
-      {{ $titleData := replaceRE `(?i)^title\s+"|"$` "" $titleShortcode }}
+      {{ $titleData := replaceRE `(?i)^(?:title|track-info-featured-guest)\s+"|"$` "" $titleShortcode }}
       {{ $titleParts := split $titleData "--" }}
       {{ if ge (len $titleParts) 2 }}
         {{ $trackTitle := strings.TrimSpace (index $titleParts 0) }}

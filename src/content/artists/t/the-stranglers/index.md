@@ -2,7 +2,12 @@
 genres: ["Alternative Rock","New Wave","Pop Rock","Post-Punk","Punk","Punk Rock","Rock","Art Punk","Baroque Pop","Pub Rock"]
 featured_image: artists/t/the-stranglers/the-stranglers.jpg
 title: The Stranglers
+summary: "English band blending punk confrontation with melodic bass, distinctive keyboards and a restless appetite for musical reinvention."
+description: "English rock band known for Jean-Jacques Burnel's melodic bass, Dave Greenfield's keyboards and a singular path through punk, pop and art rock."
+editorialSummary: >
+  The Stranglers pair menace and dark humour with melodic bass and unmistakable keyboards, always sounding more curious than their punk reputation implies.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -20,5 +25,4 @@ Keyboard player Dave Greenfield died on 3 May 2020 after contracting COVID-19 wh
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/StranglersSite](https://twitter.com/StranglersSite)" >}}
-
 
