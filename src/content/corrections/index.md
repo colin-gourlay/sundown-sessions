@@ -15,4 +15,4 @@ If you've spotted a typo, broken link, missing information or anything else that
 
 ## Report a correction
 
-{{< form-correction action="https://formspree.io/f/placeholder" >}}
+{{< form-correction >}}
