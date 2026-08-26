@@ -1,17 +1,18 @@
-{{ $action := .Get "action" }}
+{{ $action := .Get "action" | default .Site.Params.forms.correctionAction }}
 {{ $formID := printf "correction-form-%d" .Ordinal }}
 {{ $toastRegionID := printf "correction-form-toast-region-%d" .Ordinal }}
 {{ if $action }}
   <div class="not-prose mt-8 max-w-2xl rounded-xl border border-neutral-300 bg-neutral-50 px-5 py-6 shadow-sm dark:border-neutral-700 dark:bg-neutral-900 sm:px-7 sm:py-7">
     <form id="{{ $formID }}" action="{{ $action }}" method="POST" accept-charset="UTF-8" class="space-y-5" data-analytics-event="correction_submit" data-analytics-provider="formspree">
-      <input type="hidden" name="_subject" value="Sundown Sessions correction report" />
+      <input type="hidden" name="subject" value="[Correction] Sundown Sessions website" />
+      <input type="hidden" name="tags" value="correction,content,triage" />
       <div class="hidden">
         <label for="{{ $formID }}-website">Website</label>
         <input id="{{ $formID }}-website" name="_gotcha" type="text" tabindex="-1" autocomplete="off" />
       </div>
       <div>
         <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-page-url">Page URL</label>
-        <input id="{{ $formID }}-page-url" name="page_url" type="url" inputmode="url" autocomplete="url" aria-describedby="{{ $formID }}-page-url-help" placeholder="https://sundownsessions.com/..." class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
+        <input id="{{ $formID }}-page-url" name="page_url" type="url" inputmode="url" aria-describedby="{{ $formID }}-page-url-help" placeholder="https://sundownsessions.com/..." class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
         <p id="{{ $formID }}-page-url-help" class="mt-2 mb-0 text-sm leading-6 text-neutral-600 dark:text-neutral-400">Paste the address of the page where you spotted the issue.</p>
       </div>
       <div>
@@ -37,6 +38,11 @@
         <p id="{{ $formID }}-suggested-correction-help" class="mt-2 mb-0 text-sm leading-6 text-neutral-600 dark:text-neutral-400">Optional. If you know what the correct information should be, share it here.</p>
       </div>
       <div>
+        <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-supporting-link">Supporting link</label>
+        <input id="{{ $formID }}-supporting-link" name="supporting_link" type="url" inputmode="url" aria-describedby="{{ $formID }}-supporting-link-help" class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
+        <p id="{{ $formID }}-supporting-link-help" class="mt-2 mb-0 text-sm leading-6 text-neutral-600 dark:text-neutral-400">Optional. Add a link to a source or an uploaded screenshot if it helps explain the correction.</p>
+      </div>
+      <div>
         <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-name">Name</label>
         <input id="{{ $formID }}-name" name="name" type="text" autocomplete="name" class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
         <p class="mt-2 mb-0 text-sm leading-6 text-neutral-600 dark:text-neutral-400">Optional.</p>
@@ -44,7 +50,7 @@
       <div>
         <label class="mb-2.5 block text-sm font-semibold text-neutral-900 dark:text-neutral" for="{{ $formID }}-email">Email</label>
         <input id="{{ $formID }}-email" name="email" type="email" autocomplete="email" aria-describedby="{{ $formID }}-email-help" class="block w-full rounded-lg border border-neutral-300 bg-white px-4 py-3.5 text-base text-neutral-900 shadow-sm outline-none transition focus:border-primary-500 focus:ring-2 focus:ring-primary-300 dark:border-neutral-600 dark:bg-neutral-800 dark:text-neutral dark:focus:border-primary-400 dark:focus:ring-primary-900" />
-        <p id="{{ $formID }}-email-help" class="mt-2 mb-0 text-sm leading-6 text-neutral-600 dark:text-neutral-400">Optional. Include your email address if you'd like a follow-up.</p>
+        <p id="{{ $formID }}-email-help" class="mt-2 mb-0 text-sm leading-6 text-neutral-600 dark:text-neutral-400">Optional. Include your email address if you'd like a follow-up. It will not be displayed on the website.</p>
       </div>
       <div class="flex flex-col gap-4 pt-3 sm:flex-row sm:items-center">
         <button type="submit" class="correction-form__submit inline-flex items-center justify-center rounded-lg bg-primary-600 px-7 py-3.5 text-sm font-semibold text-white transition hover:bg-primary-500 focus:outline-none focus:ring-2 focus:ring-primary-300 disabled:cursor-not-allowed disabled:opacity-70 dark:bg-primary-500 dark:hover:bg-primary-400 dark:focus:ring-primary-900">
@@ -131,6 +137,10 @@
             headers: { Accept: "application/json" }
           });
 
+          if (response.status === 429) {
+            throw new Error("rate-limit");
+          }
+
           if (!response.ok) {
             throw new Error("Request failed");
           }
@@ -138,7 +148,10 @@
           form.reset();
           showToast("success", "Thank you — your correction has been received. I'll review it as soon as I can.");
         } catch (error) {
-          showToast("error", "Sorry, your correction could not be sent. Please try again in a few moments.");
+          const message = error.message === "rate-limit"
+            ? "There have been too many submissions. Please wait a minute and try again."
+            : "Sorry, your correction could not be sent. Please try again in a few moments.";
+          showToast("error", message);
         } finally {
           form.dataset.submitting = "false";
 
@@ -154,18 +167,49 @@
         }
       });
 
-      // Pre-fill the page URL from the referrer if arriving from another page on the site
-      const pageUrlInput = form.querySelector('#{{ $formID }}-page-url');
-      if (pageUrlInput && !pageUrlInput.value && document.referrer) {
+      const setPageUrl = value => {
+        if (!value) return false;
+
         try {
-          const referrer = new URL(document.referrer);
-          if (referrer.hostname === window.location.hostname) {
-            pageUrlInput.value = document.referrer;
-          }
-        } catch (e) {
-          // Ignore invalid referrer
+          const candidate = new URL(value, window.location.origin);
+          if (candidate.origin !== window.location.origin) return false;
+
+          pageUrlInput.value = candidate.href;
+          return true;
+        } catch (error) {
+          return false;
+        }
+      };
+
+      // Prefer the page explicitly supplied by site links. Referrer is retained
+      // as a fallback for visitors who navigate to the form another way.
+      const pageUrlInput = form.querySelector('#{{ $formID }}-page-url');
+      if (pageUrlInput && !pageUrlInput.value) {
+        const requestedPage = new URLSearchParams(window.location.search).get("page");
+        if (!setPageUrl(requestedPage) && document.referrer) {
+          setPageUrl(document.referrer);
         }
       }
+
+      const subjectInput = form.elements.namedItem("subject");
+      const correctionTypeInput = form.elements.namedItem("correction_type");
+      const updateSubject = () => {
+        if (!subjectInput) return;
+
+        const type = correctionTypeInput?.value || "Website";
+        let page = "";
+        try {
+          page = pageUrlInput?.value ? new URL(pageUrlInput.value).pathname : "";
+        } catch (error) {
+          // The browser reports invalid URL input before submission.
+        }
+        subjectInput.value = `[Correction] ${type}${page ? ` — ${page}` : ""}`.slice(0, 180);
+      };
+
+      correctionTypeInput?.addEventListener("change", updateSubject);
+      pageUrlInput?.addEventListener("change", updateSubject);
+      form.addEventListener("submit", updateSubject, { capture: true });
+      updateSubject();
     })();
   </script>
 {{ else }}
