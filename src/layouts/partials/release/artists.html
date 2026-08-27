@@ -4,7 +4,7 @@
   {{- $artist := . -}}
   {{- $summary := "" -}}
   {{- with .page -}}
-    {{- $summary = .Summary | plainify | strings.TrimSpace -}}
+    {{- $summary = .Summary | plainify | htmlUnescape | strings.TrimSpace -}}
   {{- end -}}
   {{- with $summary -}}
     {{- $artistCards = $artistCards | append (merge $artist (dict "summary" $summary)) -}}
