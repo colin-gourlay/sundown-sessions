@@ -1,0 +1,105 @@
+{{ $page := .page }}
+{{ $anchorID := .anchorID }}
+
+{{ $featuredURL := "" }}
+{{ if not $page.Params.hideFeatureImage }}
+  {{ $featureImage := $page.Params.featureimage | default $page.Params.featured_image }}
+  {{ with $featureImage }}
+    {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+      {{ $featuredURL = . }}
+    {{ else }}
+      {{ $featured := $page.Resources.GetMatch . }}
+      {{ if not $featured }}{{ $featured = $page.Resources.GetMatch (path.Base .) }}{{ end }}
+      {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+      {{ with $featured }}
+        {{ $featuredURL = .RelPermalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if not $featuredURL }}
+    {{ $images := $page.Resources.ByType "image" }}
+    {{ range slice "*feature*" "*featured*" "*cover*" "*thumbnail*" "*.jpg" "*.jpeg" "*.png" "*.webp" }}
+      {{ if not $featuredURL }}
+        {{ with $images.GetMatch . }}
+          {{ $featuredURL = .RelPermalink }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $artistSlug := $page.Title | urlize }}
+{{ with $page.File }}
+  {{ $artistSlug = path.Base (strings.TrimSuffix "/" .Dir) }}
+{{ end }}
+
+{{ $broadcastCount := 0 }}
+{{ with site.GetPage "shows" }}
+  {{ range .Pages }}
+    {{ $matched := false }}
+    {{ range .Params.tags | default (slice) }}
+      {{ if or (eq (. | urlize) $artistSlug) (eq (lower .) (lower $page.Title)) }}
+        {{ $matched = true }}
+      {{ end }}
+    {{ end }}
+    {{ if $matched }}
+      {{ $broadcastCount = add $broadcastCount 1 }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $metadata := $page.Params.genres | default (slice) }}
+{{ if eq (len $metadata) 0 }}
+  {{ $metadata = $page.Params.tags | default (slice) }}
+{{ end }}
+{{ $metadata = first 3 $metadata }}
+
+{{ $summary := $page.Params.editorialSummary | default $page.Params.summary | default $page.Description }}
+
+{{ $cleanTitle := replaceRE `[^[:alnum:]]+` " " $page.Title }}
+{{ $initials := "" }}
+{{ range split $cleanTitle " " }}
+  {{ $word := strings.TrimSpace . }}
+  {{ $wordLower := lower $word }}
+  {{ if and (lt (len $initials) 2) (ne $word "") (not (in (slice "the" "and" "of" "a" "an") $wordLower)) }}
+    {{ $initials = printf "%s%s" $initials (upper (substr $word 0 1)) }}
+  {{ end }}
+{{ end }}
+{{ if eq $initials "" }}
+  {{ $initials = upper (substr ($page.Title | plainify) 0 1) }}
+{{ end }}
+
+<article
+  {{ with $anchorID }}id="{{ . }}"{{ end }}
+  role="listitem"
+  class="artists-card">
+  <a href="{{ $page.RelPermalink }}" class="artists-card__link" aria-label="Explore {{ $page.Title | plainify }}">
+    <span class="artists-card__media">
+      {{ if $featuredURL }}
+        <img
+          src="{{ $featuredURL }}"
+          alt="{{ $page.Title }}"
+          loading="lazy"
+          decoding="async">
+      {{ else }}
+        <span class="artists-card__placeholder" aria-hidden="true">
+          <span class="artists-card__initials">{{ $initials }}</span>
+          <span class="artists-card__brand">Sundown Sessions</span>
+        </span>
+      {{ end }}
+    </span>
+    <span class="artists-card__body">
+      <span class="artists-card__title">{{ $page.Title | emojify }}</span>
+      <span class="artists-card__broadcasts">
+        Featured in {{ $broadcastCount }} {{ if eq $broadcastCount 1 }}broadcast{{ else }}broadcasts{{ end }}
+      </span>
+      {{ with $metadata }}
+        <span class="artists-card__metadata">{{ delimit . " &middot; " | safeHTML }}</span>
+      {{ end }}
+      {{ with $summary }}
+        <span class="artists-card__summary">{{ . | plainify }}</span>
+      {{ end }}
+    </span>
+  </a>
+</article>

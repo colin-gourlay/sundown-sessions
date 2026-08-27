@@ -1,0 +1,89 @@
+{{/* Release hero card for individual release pages. */}}
+
+{{ $artworkURL := partial "release/artwork-url.html" . }}
+
+{{ $artists := partial "release/resolve-artists.html" . }}
+{{ $artistCredit := .Params.artist_credit | default .Params.artistCredit }}
+{{ $releaseType := .Params.releaseType | default .Params.release_type | default .Params.type }}
+{{ $accentColor := "" }}
+{{ with .Params.artworkAccent }}
+  {{ $accentColor = . }}
+{{ else }}
+  {{ with .Params.artwork_accent }}
+    {{ $accentColor = . }}
+  {{ else }}
+    {{ with .Params.accentColor }}
+      {{ $accentColor = . }}
+    {{ else }}
+      {{ with .Params.accent_color }}
+        {{ $accentColor = . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<section
+  class="release-hero{{ with $accentColor }} release-hero--accent{{ end }} mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
+  {{ with $accentColor }}style="--release-accent: {{ . | safeCSS }};"{{ end }}
+  role="region"
+  aria-labelledby="release-hero-heading">
+  <div class="release-hero__layout flex flex-col sm:flex-row">
+    {{ with $artworkURL }}
+      <div class="release-hero__artwork flex items-center justify-center bg-neutral-100 dark:bg-neutral-800 sm:shrink-0">
+        <img
+          src="{{ . }}"
+          alt="{{ $.Title }} artwork"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="nozoom object-contain">
+      </div>
+    {{ end }}
+
+    <div class="release-hero__content flex flex-1 flex-col justify-center">
+      <div class="release-hero__heading-group">
+        <h1
+          id="release-hero-heading"
+          class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
+          {{ .Title | emojify }}
+        </h1>
+        {{ if $artistCredit }}
+          <p class="release-hero__artist text-lg font-medium text-neutral-700 dark:text-neutral-300">
+            {{- if eq (len $artists) 1 -}}
+              {{- $artist := index $artists 0 -}}
+              {{- with $artist.page -}}
+                <a class="release-hero__artist-link" href="{{ .RelPermalink }}">{{ $artistCredit | emojify }}</a>
+              {{- else -}}
+                <span>{{ $artistCredit | emojify }}</span>
+              {{- end -}}
+            {{- else -}}
+              <span>{{ $artistCredit | emojify }}</span>
+            {{- end -}}
+          </p>
+        {{ else }}
+          {{ with $artists }}
+            <p class="release-hero__artist text-lg font-medium text-neutral-700 dark:text-neutral-300">
+              {{- range $index, $artist := . -}}
+                {{- if gt $index 0 }}, {{ end -}}
+                {{- with $artist.page -}}
+                  <a class="release-hero__artist-link" href="{{ .RelPermalink }}">{{ $artist.name | emojify }}</a>
+                {{- else -}}
+                  <span>{{ $artist.name | emojify }}</span>
+                {{- end -}}
+              {{- end -}}
+            </p>
+          {{ end }}
+        {{ end }}
+      </div>
+
+      {{ with $releaseType }}
+        <dl class="release-hero__metadata">
+          <div>
+            <dt>Type</dt>
+            <dd>{{ . }}</dd>
+          </div>
+        </dl>
+      {{ end }}
+    </div>
+  </div>
+</section>

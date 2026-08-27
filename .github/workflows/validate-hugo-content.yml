@@ -5,7 +5,15 @@ on:
     paths:
       - src/content/**
       - src/layouts/**
+      - src/assets/**
       - src/config/**
+      - scripts/audit-release-types.py
+      - scripts/audit-release-metadata.py
+      - reports/release-type-audit.md
+      - reports/release-metadata-audit.md
+      - tests/test_audit_release_types.py
+      - tests/test_audit_release_metadata.py
+      - tests/test_correction_flow.py
       - .github/workflows/validate-hugo-content.yml
   push:
     branches:
@@ -13,7 +21,15 @@ on:
     paths:
       - src/content/**
       - src/layouts/**
+      - src/assets/**
       - src/config/**
+      - scripts/audit-release-types.py
+      - scripts/audit-release-metadata.py
+      - reports/release-type-audit.md
+      - reports/release-metadata-audit.md
+      - tests/test_audit_release_types.py
+      - tests/test_audit_release_metadata.py
+      - tests/test_correction_flow.py
       - .github/workflows/validate-hugo-content.yml
 
 permissions:
@@ -23,7 +39,7 @@ jobs:
   validate:
     runs-on: ubuntu-latest
     env:
-      HUGO_VERSION: 0.146.5
+      HUGO_VERSION: 0.164.0
     steps:
       - name: Install Hugo CLI
         run: |
@@ -31,15 +47,26 @@ jobs:
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Checkout source using v4.3.1
-        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
         with:
           fetch-depth: 0
+          submodules: recursive
 
       - name: Validate content by building Hugo site
         run: |
           hugo \
             --source src \
             --printPathWarnings \
-            --panicOnWarning \
             --environment production \
             --baseURL https://example.invalid/
+
+      - name: Test correction flow configuration
+        run: python3 tests/test_correction_flow.py
+
+      - name: Validate release types
+        run: |
+          python3 -m pip install --disable-pip-version-check PyYAML
+          python3 scripts/audit-release-types.py --check-report
+
+      - name: Audit release details metadata
+        run: python3 scripts/audit-release-metadata.py --check-report

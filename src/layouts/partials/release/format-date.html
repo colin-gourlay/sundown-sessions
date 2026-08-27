@@ -1,0 +1,14 @@
+{{- $value := . -}}
+{{- $raw := printf "%v" $value | strings.TrimSpace -}}
+{{- $formatted := $raw -}}
+{{- $dateFormat := site.Params.dateFormat | default "2 January 2006" -}}
+
+{{- if findRE `^\d{4}$` $raw -}}
+  {{- $formatted = $raw -}}
+{{- else if findRE `^\d{4}-\d{2}$` $raw -}}
+  {{- $formatted = time.Format "January 2006" (time.AsTime (printf "%s-01" $raw)) -}}
+{{- else -}}
+  {{- $formatted = time.Format $dateFormat (time.AsTime $value) -}}
+{{- end -}}
+
+{{- return $formatted -}}

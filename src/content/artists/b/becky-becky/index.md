@@ -2,17 +2,17 @@
 genres: ["Electropop"]
 featured_image: artists/b/becky-becky/becky-becky.jpg
 title: Becky Becky
+summary: "Brighton synth-pop duo whose dark electronic pop blends literary detail, theatrical tension and underground club energy."
+description: "Brighton synth-pop duo whose dark electronic pop blends literary detail, theatrical tension and underground club energy with a cult independent edge."
+editorialSummary: >
+  Becky Becky turn literary ideas, dark electronics and underground club energy into theatrical art-pop full of tension and unexpected melodic hooks.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
+
 ## About
 
-Becky Becky is a Scottish electropop musician. Their debut album, Good Morning, Midnight, was released in May 2014.
-
-## Show(s) appeared on
-
-- [Show #6](/shows/featuring-the-thieves/) (4th July 2024) - Featuring: The Thieves
-- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
+Becky Becky are a Brighton electro-synth-pop duo built around Gemma L. Williams, who also records as {{< artist-wikilink "Woodpecker Wooliams" >}}, and {{< artist-wikilink "Peter J D Mason" >}}, previously of {{< artist-wikilink "Fence Collective" >}}. Their music pairs literary inspiration with dark, theatrical electronics, from the Jean Rhys-inspired {{< release "Good Morning, Midnight--Becky Becky" >}} onwards, while retaining the independent spirit associated with {{< label-wikilink "Robot Elephant Records" >}}.
 
 ## External Links
 
@@ -21,7 +21,5 @@ Becky Becky is a Scottish electropop musician. Their debut album, Good Morning, 
 - {{< new-tab-link "Instagram: [https://www.instagram.com/beckybeckymusic/](https://www.instagram.com/beckybeckymusic/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/beckybeckymusic](https://twitter.com/beckybeckymusic)" >}}
-
-
 
 

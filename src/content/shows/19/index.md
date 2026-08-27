@@ -39,15 +39,38 @@ keywords:
  - 'Nick Cave & The Bad Seeds'
  - 'The House of Love'
  - 'In Letter Form'
+tags:
+ - 'TBD'
+ - 'Suede'
+ - 'The Beatles'
+ - 'The Woodentops'
+ - 'A House'
+ - 'Villagers'
+ - 'Ultravox'
+ - 'Robert Hazard & The Heroes'
+ - 'Dave Gahan'
+ - 'FEWS'
+ - 'The Organ'
+ - 'The Lathums'
+ - 'Killing Kind'
+ - 'The Essence'
+ - 'The Charlatans'
+ - 'Pete Shelley'
+ - 'Fat White Family'
+ - 'Isobel Campbell'
+ - 'Nancy Sinatra'
+ - 'Nick Cave & The Bad Seeds'
+ - 'The House of Love'
+ - 'In Letter Form'
 toc: true
 featured_image: '19-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-11-12T22:00:00Z
-draft: false
+draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/19/playlist" >}}
 
 ---
@@ -57,10 +80,11 @@ draft: false
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/19/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/19/track-info" >}}

@@ -7,6 +7,7 @@ agent: "agent"
 Create or update a show entry under `src/content/shows/` using existing repository patterns.
 
 Task constraints:
+
 - Keep output aligned with existing show bundle structure and naming conventions.
 - Preserve required front matter fields and style consistency.
 - Use existing section headings and shortcode composition patterns such as `include_content`.
@@ -14,6 +15,7 @@ Task constraints:
 - Write all new human-facing text in British English.
 
 Execution guidance:
+
 1. Inspect one representative show bundle to mirror structure and style.
 2. Apply only the requested additions or amendments.
 3. Validate dates, slug usage, and section ordering.

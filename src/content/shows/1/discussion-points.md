@@ -1,20 +1,36 @@
 ---
 purpose: discussion-points
 ---
-- _Sparks 'your favourite bands favourite band'_
-  - {{< new-tab-link "[The Sparks Brothers](https://www.imdb.com/title/tt8610436/)" >}}
-  - {{< new-tab-link "[Official trailer](https://www.imdb.com/video/vi1807859737/)" >}}
-- _Interpol_
-  - {{< new-tab-link "[Touring Europe](https://twitter.com/Interpol/status/1782319169746207097)" >}} to mark the 20th anniversary of **_'Antics'_**
-- _The Motors_
-  - Old Grey Whistle Test (1978): {{< new-tab-link "[Dancing The Night Away](https://www.youtube.com/watch?v=a8X1EKyhLHw)" >}}
-- _Art School Dancing_ 
-  - {{< new-tab-link "[Official Facebook Group](https://www.facebook.com/groups/111016498936043)" >}}
-  - {{< new-tab-link "[Show archive](https://unlistenablerubbish.wordpress.com)" >}}
-- _Teskey Brothers_ 
-  - {{< new-tab-link "[180 Grams podcast](https://open.spotify.com/show/5n49kEwq2st3GST82veWoI)" >}}
-- _The Vintage Explosion_
-  - {{< new-tab-link "[Live at Usher Hall, Edinburgh - November 2024](https://www.usherhall.co.uk/whats-on/vintage-explosion)" >}}
-- _Nick Cave & The Bad Seeds_
-  - The new album **_Wild God_** will be released on 30 August - available to {{< new-tab-link "[pre-order here](https://linktr.ee/nickcave)" >}}
-  - {{< new-tab-link "[The Wild God Tour - UK & Europe 2024](https://www.nickcave.com/tour-dates/)" >}}
+
+### [Sparks](/artists/s/sparks/)
+
+Often described as *"your favourite band's favourite band."*
+
+- {{< new-tab-link "[Documentary: The Sparks Brothers (2021)](https://www.imdb.com/title/tt8610436/)" >}}
+- {{< new-tab-link "[Video: The Sparks Brothers official trailer](https://www.imdb.com/video/vi1807859737/)" >}}
+
+### [Interpol](/artists/i/interpol/)
+
+- {{< new-tab-link "[Tour: Interpol mark 20 years of Antics (2024)](https://twitter.com/Interpol/status/1782319169746207097)" >}}
+
+### [The Motors](/artists/t/the-motors/)
+
+- {{< new-tab-link "[TV: Dancing The Night Away on Old Grey Whistle Test (1978)](https://www.youtube.com/watch?v=a8X1EKyhLHw)" >}}
+
+### Art School Dancing
+
+- {{< new-tab-link "[Community: Art School Dancing official Facebook group](https://www.facebook.com/groups/111016498936043)" >}}
+- {{< new-tab-link "[Archive: Art School Dancing show archive](https://unlistenablerubbish.wordpress.com)" >}}
+
+### [The Teskey Brothers](/artists/t/the-teskey-brothers/)
+
+- {{< new-tab-link "[Podcast: 180 Grams interview](https://open.spotify.com/show/5n49kEwq2st3GST82veWoI)" >}}
+
+### [The Vintage Explosion](/artists/t/the-vintage-explosion/)
+
+- {{< new-tab-link "[Live: The Vintage Explosion at Usher Hall, Edinburgh - 9 November 2024](https://www.usherhall.co.uk/whats-on/vintage-explosion)" >}}
+
+### [Nick Cave & The Bad Seeds](/artists/n/nick-cave-the-bad-seeds/)
+
+- {{< new-tab-link "[Release: Nick Cave & The Bad Seeds - Wild God - 30 August 2024](https://linktr.ee/nickcave)" >}}
+- {{< new-tab-link "[Tour: Nick Cave & The Bad Seeds - UK & Europe 2024](https://www.nickcave.com/tour-dates/)" >}}

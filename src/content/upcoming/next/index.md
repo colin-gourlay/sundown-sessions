@@ -1,9 +1,10 @@
 ---
-title: 'Show #57: Broadcast 14th April 2026'
-description: 'The next Sundown Sessions broadcast'
-summary: 'THE SUNDOWN SESSIONS returns with another eclectic mix of aural delight for your listening pleasure. Tune in on East Coast FM on Tuesday 14th April from 8pm for a brand new featured guest and a carefully curated playlist spanning decades of great music.'
-date: 2026-04-14T19:00:00Z
+title: 'Frantic Chant: live interview and acoustic session coming soon'
+description: 'Teaser for the next Sundown Sessions featured guest'
+summary: 'Edinburgh band Frantic Chant will be in the studio for a live interview and exclusive acoustic session on an upcoming Sundown Sessions broadcast. Full broadcast details, playlist, and show notes will be shared once confirmed.'
 read_more_copy: 'Find out more...'
+featured_image: 'cover.png'
+draft: true
 ---
 
 Full details — including the featured guest, playlist, and show notes — will be published here after the broadcast.

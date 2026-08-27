@@ -37,15 +37,37 @@ keywords:
  - 'Death Cult'
  - 'Sisters of Mercy'
  - 'The Mission'
+tags:
+ - 'Colin Gourlay from ANDYSMANCLUB'
+ - 'The Revillos'
+ - 'Inspiral Carpets'
+ - 'The Alarm'
+ - 'Red Lorry Yellow Lorry'
+ - 'Simple Minds'
+ - 'Orchestral Manoeuvres In The Dark'
+ - 'Gary Numan'
+ - 'Visage'
+ - 'The Beatles'
+ - 'I Got You On Tape'
+ - 'CousteauX'
+ - 'The Countess of Fife'
+ - 'Black'
+ - 'Electric Light Orchestra'
+ - 'Ultravox'
+ - 'Theatre Of Hate'
+ - 'Death Cult'
+ - 'Sisters of Mercy'
+ - 'The Mission'
+ - 'ANDYSMANCLUB'
 toc: true
 featured_image: '9-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-08-14T22:00:00Z
-draft: false
+draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/9/playlist" >}}
 
 ---
@@ -55,11 +77,12 @@ draft: false
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/9/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/9/track-info" >}}
 

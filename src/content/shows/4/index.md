@@ -37,6 +37,28 @@ keywords:
  - 'The Detroit Cobras'
  - 'Becky Becky'
  - 'Simple Minds'
+tags:
+ - 'Kenny Armour from ANDYSMANCLUB'
+ - 'Paul McCartney'
+ - 'Elvis Costello & The Attractions'
+ - 'The Cult'
+ - 'Gaye Bykers On Acid'
+ - 'The Alexander Brothers'
+ - 'Westlife'
+ - 'Angelfish'
+ - 'Goodbye Mr Mackenzie'
+ - 'Skids'
+ - 'Hipsway'
+ - 'Win'
+ - 'Attic Lights'
+ - 'Roddy Frame'
+ - 'Melys'
+ - 'Fabienne DelSol'
+ - 'Spoon'
+ - 'The Detroit Cobras'
+ - 'Becky Becky'
+ - 'Simple Minds'
+ - 'ANDYSMANCLUB'
 toc: true
 featured_image: '4-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -45,12 +67,12 @@ date: 2024-06-26T22:00:00Z
 draft: false
 ---
 
-## Listen On Demand
+## Listen Back
 {{< include_content "/shows/4/listen-again" >}}
 
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/4/playlist" >}}
 
 ---
@@ -60,10 +82,11 @@ draft: false
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/4/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/4/track-info" >}}

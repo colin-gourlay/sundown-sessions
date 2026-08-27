@@ -1,0 +1,44 @@
+{{ $links := slice }}
+{{ range $field := slice .Params.listenAgain .Params.listen_again .Params.listen .Params.links }}
+  {{ with $field }}
+    {{ if reflect.IsMap . }}
+      {{ range $key, $value := . }}
+        {{ $url := "" }}
+        {{ $label := $key }}
+        {{ if reflect.IsMap $value }}
+          {{ $url = index $value "url" | default (index $value "href") | default (index $value "link") | default "" }}
+          {{ $label = index $value "label" | default (index $value "title") | default $key }}
+        {{ else }}
+          {{ $url = $value }}
+        {{ end }}
+        {{ with $url }}{{ $links = $links | append (dict "url" . "label" $label "icon" "play" "analyticsEvent" "listen_again_click" "provider" $label) }}{{ end }}
+      {{ end }}
+    {{ else if reflect.IsSlice . }}
+      {{ range . }}
+        {{ if reflect.IsMap . }}
+          {{ $url := index . "url" | default (index . "href") | default (index . "link") | default "" }}
+          {{ $label := index . "label" | default (index . "title") | default "Listen Again" }}
+          {{ with $url }}{{ $links = $links | append (dict "url" . "label" $label "icon" "play" "analyticsEvent" "listen_again_click" "provider" $label) }}{{ end }}
+        {{ else }}
+          {{ $links = $links | append (dict "url" . "label" "Listen Again" "icon" "play" "analyticsEvent" "listen_again_click" "provider" "Listen Again") }}
+        {{ end }}
+      {{ end }}
+    {{ else }}
+      {{ $links = $links | append (dict "url" . "label" "Listen Again" "icon" "play" "analyticsEvent" "listen_again_click" "provider" "Listen Again") }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ $mixcloudURL := "" }}
+{{ range $links }}
+  {{ if and (not $mixcloudURL) (in (lower .url) "mixcloud.com") }}
+    {{ $mixcloudURL = .url }}
+  {{ end }}
+{{ end }}
+
+{{ with $mixcloudURL }}
+  {{ partial "show/listen-on-demand-card.html" (dict
+    "url" .
+    "copy" ($.Params.listenOnDemandCopy | default $.Params.listen_on_demand_copy)
+  ) }}
+{{ end }}

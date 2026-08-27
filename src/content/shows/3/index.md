@@ -38,6 +38,28 @@ keywords:
  - 'Visage'
  - 'Sparks'
  - 'The Filthy Tongues'
+tags:
+ - 'Blue On Shock'
+ - 'The Stranglers'
+ - 'Johnny Cash'
+ - 'Billy Mackenzie'
+ - 'The Damned'
+ - 'Echo & the Bunnymen'
+ - 'Voice Of The Beehive'
+ - 'Del Shannon'
+ - 'David Latto'
+ - 'Pete Shelley'
+ - 'Magazine'
+ - 'Simple Minds'
+ - 'Elvis Costello & The Attractions'
+ - 'Skids'
+ - 'Big Country'
+ - 'Kirsten Adamson'
+ - 'Aimee Mann'
+ - 'Unbelievable Truth'
+ - 'Visage'
+ - 'Sparks'
+ - 'The Filthy Tongues'
 toc: true
 featured_image: '3-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -46,25 +68,26 @@ date: 2024-06-19T22:00:00Z
 draft: false
 ---
 
-## Listen On Demand
+## Listen Back
 {{< include_content "/shows/3/listen-again" >}}
 
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/3/playlist" >}}
 
 ---
 
-## Featured band: Blue On Shock
+## Artist Spotlight
 {{< include_content "/shows/3/featured-guest" >}}
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/3/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/3/track-info" >}}

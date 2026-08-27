@@ -1,53 +1,31 @@
 # Sundown Sessions
 
+[![Made with love](https://img.shields.io/badge/Made%20with-%E2%9D%A4%EF%B8%8F-red.svg)](https://www.linkedin.com/in/colingourlay)
+
 Sundown Sessions curates and publishes eclectic music sessions for listeners who want to discover beyond algorithmic playlists.
 
 ![Sundown Sessions logo](src/static/images/sundown-sessions-logo.jpg)
 
 ## Problem Statement
 
-Curating a diverse catalogue of shows, artists, and episodes is difficult to do consistently when editorial content and music operations are handled in separate, informal workflows. This project exists to solve that by combining:
+Curating a diverse catalogue of shows, artists, and episodes is difficult to do consistently when editorial content and music operations are handled in informal workflows. This project exists to solve that with:
 
 - a Hugo website that presents content clearly and consistently
-- an automation platform that prepares and enriches music data before publication
 
-Together, these workstreams improve discoverability, editorial quality, and operational repeatability.
+The site improves discoverability and editorial quality for the Sundown Sessions catalogue.
 
 ![Sundown Sessions homepage banner showing editorial presentation style](src/static/images/sundown-sessions-banner.jpg)
 
 ## Project Overview
 
-This repository contains two primary workstreams:
-
-- [src/](src/): Hugo-based website content, templates, and static assets
-- [automation/dotnet/](automation/dotnet/): ContentOps automation platform built with .NET and clean architecture boundaries
+This repository contains the Hugo-based website content, templates, and static assets under [src/](src/).
 
 ## Architecture Overview
 
-At repository level, website publishing and automation are intentionally separated while still cooperating through content preparation flow.
-
 ```mermaid
 flowchart LR
-  A[automation/dotnet ContentOps] -->|prepare and enrich content| B[src Hugo website]
-  B --> C[public site output]
-  A --> D[Spotify integration library]
-  A --> E[Lidarr integration library]
+  A[src Hugo website] --> B[public site output]
 ```
-
-Within ContentOps, domain rules, orchestration, infrastructure, and CLI wiring are separated to preserve deterministic behaviour and testability.
-
-```mermaid
-flowchart TB
-  CLI[SundownMedia.ContentOps.Cli] --> APP[SundownMedia.ContentOps.Application]
-  APP --> DOMAIN[SundownMedia.ContentOps.Domain]
-  CLI --> INFRA[SundownMedia.ContentOps.Infrastructure]
-  INFRA --> APP
-  INFRA --> DOMAIN
-  INFRA --> SPOT[SundownMedia.Integration.Spotify]
-  INFRA --> LID[SundownMedia.Integration.Lidarr]
-```
-
-For deeper automation architecture and operational detail, see [automation/dotnet/README.md](automation/dotnet/README.md).
 
 ## Setup Instructions
 
@@ -56,6 +34,12 @@ For deeper automation architecture and operational detail, see [automation/dotne
 Prerequisites:
 
 - Hugo Extended (current stable release)
+
+The site uses the [Blowfish](https://github.com/nunocoracao/blowfish) theme,
+vendored as a git submodule under `src/themes/blowfish`. After cloning, run
+`git submodule update --init --recursive` to fetch it. The investigation and
+decision behind adopting Blowfish are recorded in
+[docs/theme-investigation.md](docs/theme-investigation.md).
 
 Run locally from the repository root:
 
@@ -73,43 +57,21 @@ hugo --environment production
 
 The local site is available at [http://localhost:1313](http://localhost:1313) by default.
 
-### ContentOps .NET Local Setup
+### Website Analytics
 
-Prerequisites:
+Analytics is configured under `params.analytics` in
+[`src/config/_default/params.toml`](src/config/_default/params.toml).
+Placeholder values disable providers, so no live provider scripts are loaded
+until real IDs are supplied.
 
-- .NET SDK 10.0.100 (pinned in [automation/dotnet/global.json](automation/dotnet/global.json))
-
-Restore, build, and test:
-
-```powershell
-Set-Location automation/dotnet
-dotnet restore SundownMedia.ContentOps.sln
-dotnet build SundownMedia.ContentOps.sln --configuration Release --no-restore
-dotnet test SundownMedia.ContentOps.sln --configuration Release --no-build
-```
-
-Publish the CLI binary (Linux self-contained):
-
-```powershell
-Set-Location automation/dotnet
-dotnet publish src/SundownMedia.ContentOps.Cli/SundownMedia.ContentOps.Cli.csproj `
-  --configuration Release `
-  --runtime linux-x64 `
-  --self-contained true `
-  -p:PublishSingleFile=true `
-  -p:DebugType=none `
-  -p:DebugSymbols=false `
-  --output ./publish
-```
-
-These commands mirror the release workflow in [.github/workflows/contentops-release.yml](.github/workflows/contentops-release.yml).
+- GA4 requires replacing `todo-measurement_id` with a real measurement ID.
+- Microsoft Clarity requires replacing `todo-project_id` with a real project ID.
+- Plausible and self-hosted Umami are reserved in configuration for future use.
+- Custom events are sent through `window.sundownAnalytics.track(...)`.
 
 ## Workstream Details
 
 - Website content and layouts: [src/content/](src/content/) and [src/layouts/](src/layouts/)
-- ContentOps solution root: [automation/dotnet/SundownMedia.ContentOps.sln](automation/dotnet/SundownMedia.ContentOps.sln)
-- Integration libraries: [automation/dotnet/integrations/](automation/dotnet/integrations/)
-- Automation tests: [automation/dotnet/tests/](automation/dotnet/tests/)
 
 ## Roadmap
 
@@ -117,19 +79,15 @@ This roadmap is indicative direction rather than a delivery commitment. Complete
 
 ### Now
 
-- Improve contributor onboarding across both workstreams
+- Improve contributor onboarding
 - Keep website content structure consistent for artists and shows
-- Stabilise ContentOps release and runtime guidance
 
 ### Next
 
-- Expand ContentOps beyond initial album intake workflows
-- Strengthen operational tracing and observability in automation flows
 - Improve editorial tooling and content curation ergonomics
 
 ### Later
 
-- Increase reuse of Spotify and Lidarr integration libraries across additional workflows
 - Extend website discovery and presentation capabilities for long-tail catalogue content
 - Formalise richer contributor documentation as the platform footprint grows
 
@@ -137,7 +95,7 @@ This roadmap is indicative direction rather than a delivery commitment. Complete
 
 - Keep changes scoped to the requested area and avoid unrelated refactors
 - Use British English in documentation and user-facing text
-- Keep architecture boundaries clear between website and automation concerns
+- Keep website content, layout, and configuration changes scoped to their relevant areas
 
 ## Branching Convention
 
@@ -152,7 +110,6 @@ Please read [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md) before contributing.
 ## Releases and Versioning
 
 - Release history and notable changes: [CHANGELOG.md](CHANGELOG.md)
-- ContentOps release tags use the `contentops/v<version>` namespace
 
 ## GitHub Actions
 

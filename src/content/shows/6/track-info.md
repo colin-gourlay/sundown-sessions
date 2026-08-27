@@ -2,7 +2,7 @@
 ---
 | #  | Title                                                               | Album                                 | Duration | Notes                                                                          |
 |:--:|:--------------------------------------------------------------------|---------------------------------------|:--------:|--------------------------------------------------------------------------------|
-| 1  | {{<title "7 & 7 Is--Love">}}                                        | Da Capo (1966)                        |   2:19   |                                                                                |
+| 1  | {{<title "7 & 7 Is--Love">}}                                        | {{<release "Da Capo (1966)--Love--da-capo">}} |   2:19   |                                                                                |
 | 2  | {{<title "Rock 'n' Roll Radio--Ramones">}}                          | End of the Century (1980)             |   3:49   |                                                                                |
 | 3  | {{<title "New York City--John Lennon">}}                            | Sometime In New York City (1972)      |   4:34   | Produced by Phil Spector                                                       |
 | 4  | {{<title "Crawling From The Wreckage--Dave Edmunds">}}              | Repeat When Necessary (1979)          |   2:56   | Released on 09 June 1979                                                       |
@@ -21,7 +21,6 @@
 | 17 | {{<title "Apache--The Southern Death Cult">}}                       | The Southern Death Cult (1983)        |   2:41   |                                                                                |
 | 18 | {{<title "Broken Land--The Adventures">}}                           | The Sea Of Love (1988)                |   5:04   |                                                                                |
 | 19 | {{<title "Lost In A Memory--Del Shannon">}}                         | Rock On! (2009)                       |   3:36   |                                                                                |
-| 20 | {{<title "Sparrow--Becky Becky">}}                                  | Art School Dancing (2015)             |   4:07   |                                                                                |
+| 20 | {{<title "Sparrow--Becky Becky">}}                                  | {{<release "Art School Dancing (2015)--Becky Becky--art-school-dancing">}} |   4:07   |                                                                                |
 | 21 | {{<title "Rock 'n' Roll / Night Clubbing--The Human League">}}      | Travelogue (1980)                     |   6:23   |                                                                                |
 | 22 | {{<title "Alone Again Or--Love">}}                                  | Forever Changes (1967)                |   3:17   |                                                                                |
-

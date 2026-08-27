@@ -1,0 +1,161 @@
+{{/* Horizontal show card used by the shows listing page */}}
+{{ $page := .Page }}
+{{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
+
+{{/* Image resolution mirrors the logic in card.html */}}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+{{ if not .Params.hideFeatureImage }}
+  {{ with $page }}
+    {{ $featureImage := .Params.featureimage | default .Params.featured_image }}
+    {{ with $featureImage }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ if site.Params.hotlinkFeatureImage }}
+          {{ $featuredURL = . }}
+        {{ else }}
+          {{ $featured = resources.GetRemote . }}
+        {{ end }}
+      {{ else }}
+        {{ $featured = $page.Resources.GetMatch . }}
+        {{ if not $featured }}{{ $featured = $page.Resources.GetMatch (path.Base .) }}{{ end }}
+        {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not (or $featured $featuredURL) }}
+      {{ $images := .Resources.ByType "image" }}
+      {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+        {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not (or $featured $featuredURL) }}
+      {{ $default := site.Store.Get "defaultFeaturedImage" }}
+      {{ if $default.url }}
+        {{ $featuredURL = $default.url }}
+      {{ else if $default.obj }}
+        {{ $featured = $default.obj }}
+      {{ end }}
+    {{ end }}
+
+    {{ if not $featuredURL }}
+      {{ with $featured }}
+        {{ $featuredURL = .RelPermalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{/* Split "Show #N: Broadcast Title" into label and title */}}
+{{ $showLabel := "" }}
+{{ $showTitle := partial "show/display-title.html" . }}
+{{ $titleParts := split .Title ": " }}
+{{ if gt (len $titleParts) 1 }}
+  {{ $rawShowLabel := index $titleParts 0 }}
+  {{ $showLabel = $rawShowLabel }}
+  {{ $showLabel = replaceRE `(?i)^broadcast\s*#` "Show #" $showLabel }}
+{{ end }}
+
+{{ $featuredArtistCount := len .Params.tags }}
+{{ $trackCount := 0 }}
+{{ with $page.File }}
+  {{ $showDir := path.Dir (replace .Path "\\" "/") }}
+  {{ $trackInfoPath := printf "content/%s/track-info.md" $showDir }}
+  {{ $playlistPath := printf "content/%s/playlist.md" $showDir }}
+  {{ if fileExists $trackInfoPath }}
+    {{ $trackRows := findRE `(?m)^\|\s*\d+\s*\|` (readFile $trackInfoPath) }}
+    {{ $trackCount = len $trackRows }}
+  {{ else if fileExists $playlistPath }}
+    {{ $playlistRows := findRE `(?m)^\d+\.\s+` (readFile $playlistPath) }}
+    {{ $trackCount = len $playlistRows }}
+  {{ end }}
+{{ end }}
+
+{{ $summaryArtists := slice }}
+{{ with .Params.summary }}
+  {{ range findRE `(?m)^\s*-\s+(.+?)\s*$` . }}
+    {{ $artist := replaceRE `^\s*-\s+` "" . | strings.TrimSpace }}
+    {{ if and $artist (not (in (lower $artist) "and much")) }}
+      {{ $summaryArtists = $summaryArtists | append $artist }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $artistSource := $summaryArtists }}
+{{ if eq (len $artistSource) 0 }}
+  {{ $artistSource = .Params.tags }}
+{{ end }}
+{{ $displayArtists := first 5 $artistSource }}
+{{ $hasMoreArtists := gt $featuredArtistCount (len $displayArtists) }}
+{{ if and (eq $featuredArtistCount 0) (gt (len $artistSource) (len $displayArtists)) }}
+  {{ $hasMoreArtists = true }}
+{{ end }}
+{{ $discoverySummary := "" }}
+{{ if gt (len $displayArtists) 0 }}
+  {{ $discoveryArtists := $displayArtists }}
+  {{ if $hasMoreArtists }}
+    {{ $discoveryArtists = $discoveryArtists | append "and more" }}
+  {{ end }}
+  {{ $artistList := delimit $discoveryArtists ", " ", " }}
+  {{ $discoverySummary = printf "Discover tracks from %s." $artistList }}
+{{ else }}
+  {{ with .Summary }}
+    {{ $discoverySummary = . | plainify | truncate 150 }}
+  {{ end }}
+{{ end }}
+
+<article
+  class="article-link--show-card group not-prose">
+
+  <a
+    href="{{ $page.RelPermalink }}"
+    class="show-card__image-link"
+    tabindex="-1"
+    aria-hidden="true">
+    {{ with $featuredURL }}
+      <img
+        src="{{ . }}"
+        alt=""
+        role="presentation"
+        loading="lazy"
+        decoding="async"
+        class="show-card__image">
+    {{ else }}
+      <div class="show-card__image-placeholder"></div>
+    {{ end }}
+  </a>
+
+  <div class="show-card__content">
+    {{ if $showLabel }}
+      <div class="show-card__number">
+        {{ $showLabel }}
+      </div>
+    {{ end }}
+
+    <header>
+      <a
+        href="{{ $page.RelPermalink }}"
+        class="show-card__title-link">
+        <h2 class="show-card__title">{{ $showTitle }}</h2>
+      </a>
+    </header>
+
+    <div class="show-card__meta">
+      {{ if gt $trackCount 0 }}
+        <span class="show-card__meta-item">
+          {{ $trackCount }} {{ if eq $trackCount 1 }}track{{ else }}tracks{{ end }}
+        </span>
+      {{ end }}
+      {{ if gt $featuredArtistCount 0 }}
+        <span class="show-card__meta-item">
+          {{ $featuredArtistCount }} featured {{ if eq $featuredArtistCount 1 }}artist{{ else }}artists{{ end }}
+        </span>
+      {{ end }}
+    </div>
+
+    {{ with $discoverySummary }}
+      <p class="show-card__summary">{{ . }}</p>
+    {{ end }}
+
+    <a href="{{ $page.RelPermalink }}" class="show-card__cta">View broadcast &rarr;</a>
+  </div>
+</article>

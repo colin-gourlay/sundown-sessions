@@ -5,6 +5,7 @@
   "MD022": false,
   "MD024": { "siblings_only": true },
   "MD025": false,
+  "MD026": { "punctuation": ",;:!¿?" },
   "MD029": false,
   "MD033": false,
   "MD034": false,

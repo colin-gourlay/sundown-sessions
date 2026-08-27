@@ -14,9 +14,3 @@ Marco continued to collaborate with Adam throughout his solo career, until short
 ### Current Lineup
 
 Marco Pirroni, Stuart Goddard
-
-## Show(s) appeared on
-
-- [Show #20](/shows/featuring-tbd/) (19th November 2024) - Featuring: TBD
-- [Show #5](/shows/featuring-white-china/) (17th July 2024) - Featuring: White China
-

@@ -1,4 +1,4 @@
 ---
 title: Tracks
-description: Track pages for songs featured on Sundown Sessions.
+description: Explore every song played on Sundown Sessions.
 ---

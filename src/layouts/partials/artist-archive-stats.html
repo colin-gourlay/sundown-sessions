@@ -1,0 +1,45 @@
+{{/* Derive artist archive statistics from the show playlists.
+     Playlist entries are the canonical source for tracks played because a
+     dedicated track page may not exist for every broadcast entry. */}}
+
+{{ $artistTitleLower := lower .Title }}
+{{ $artistSlug := .Title | urlize }}
+{{ with .File }}
+  {{ $artistSlug = path.Base (strings.TrimSuffix "/" .Dir) }}
+{{ end }}
+
+{{ $featuredShows := slice }}
+{{ $trackCount := 0 }}
+{{ $showsSection := site.GetPage "shows" }}
+
+{{ if $showsSection }}
+  {{ range where $showsSection.Pages ".Date.IsZero" false }}
+    {{ $showPage := . }}
+    {{ $showTrackCount := 0 }}
+    {{ $playlistPath := printf "content/%s/playlist.md" .File.Dir }}
+    {{ if fileExists $playlistPath }}
+      {{ $playlist := readFile $playlistPath }}
+      {{ range findRE `(?m)^\s*\d+\.\s+.*{{<\s*(?:artist-wikilink|featured-guest-wikilink)\s+[^>]+>}}.*\s-\s+\S.*$` $playlist }}
+        {{ range findRE `{{<\s*(?:artist-wikilink|featured-guest-wikilink)\s+[^>]+>}}` . }}
+          {{ $quotedArgs := findRE `"[^"]+"` . }}
+          {{ if gt (len $quotedArgs) 0 }}
+            {{ $linkTitle := index $quotedArgs 0 | strings.TrimPrefix `"` | strings.TrimSuffix `"` }}
+            {{ $linkSlug := $linkTitle | urlize }}
+            {{ if gt (len $quotedArgs) 1 }}
+              {{ $linkSlug = index $quotedArgs 1 | strings.TrimPrefix `"` | strings.TrimSuffix `"` | urlize }}
+            {{ end }}
+            {{ if or (eq $linkSlug $artistSlug) (eq (lower $linkTitle) $artistTitleLower) }}
+              {{ $trackCount = add $trackCount 1 }}
+              {{ $showTrackCount = add $showTrackCount 1 }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ if gt $showTrackCount 0 }}
+      {{ $featuredShows = $featuredShows | append $showPage }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ return (dict "featuredShows" $featuredShows "trackCount" $trackCount) }}

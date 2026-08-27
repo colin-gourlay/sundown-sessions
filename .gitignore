@@ -1,9 +1,21 @@
 /resources/
 /src/public/
 /src/resources/
+/src/hugo_stats.json
 /.idea/
+/.cache/
+
+# Blowfish theme build artefacts (generated during Hugo builds)
+/src/assets/css/compiled/
 
 # ContentOps .NET artifacts
 automation/dotnet/**/bin/
 automation/dotnet/**/obj/
 automation/dotnet/**/TestResults/
+automation/dotnet/**/*.db
+automation/dotnet/**/*.db-shm
+automation/dotnet/**/*.db-wal
+
+# Python cache artefacts
+__pycache__/
+*.pyc

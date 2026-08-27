@@ -16,16 +16,19 @@
     {{ if ge (len $parts) 4 }}
         {{ with index $parts 3 | strings.TrimSpace }}{{ $artistSlug = . | urlize }}{{ end }}
     {{ end }}
-    {{ $artistUri := printf "artists/%s/%s" $artistFirstChar $artistSlug | absURL }}
+    {{ $artistPath := printf "artists/%s/%s" $artistFirstChar $artistSlug }}
+    {{ $artistUri := printf "%s/" $artistPath | absURL }}
+    {{ with site.GetPage $artistPath }}{{ $artistUri = .RelPermalink }}{{ end }}
     {{ $releaseUri := printf "%s-large.jpeg" $artist | urlize }}
     {{ $trackSlug := $track | urlize }}
     {{ $trackPage := $.Site.GetPage (printf "tracks/%s/%s/%s" $artistFirstChar $artistSlug $trackSlug) }}
+    {{ $artworkHref := $.Page.Scratch.Get "trackGuideReleaseHref" }}
     <div style="display: flex; align-items: center;">
-        <img src="{{ $releaseUri }}" alt="" style="width: 20%; height: auto; margin-right: 10px;">
+        {{ if $artworkHref }}<a class="track-title__artwork-link" href="{{ $artworkHref }}" aria-label="View release page">{{ end }}<img src="{{ $releaseUri }}" alt="" loading="lazy" style="width: 20%; height: auto; margin-right: 10px;">{{ if $artworkHref }}</a>{{ end }}
         <div>
-            {{ if $trackPage }}<a href="{{ $trackPage.Permalink }}">{{ $track }}</a>{{ else if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}
+            <span class="track-title__name">{{ if $trackPage }}<a href="{{ $trackPage.Permalink }}">{{ $track }}</a>{{ else if $trackUri }}<a href="{{ $trackUri }}">{{ $track }}</a>{{ else }}{{ $track }}{{ end }}</span>
             <br>
-            <a href="{{ $artistUri }}">{{ $artist }}</a>
+            <span class="track-title__artist"><a href="{{ $artistUri }}">{{ $artist }}</a></span>
         </div>
     </div>
 {{ end }}

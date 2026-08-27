@@ -1,0 +1,13 @@
+{{- $measurementId := "" -}}
+{{- with .Site.Params.analytics.google.measurementId -}}
+  {{- $measurementId = strings.TrimSpace . -}}
+{{- end -}}
+{{- if and $measurementId (ne $measurementId "todo-measurement_id") -}}
+  <script async src="https://www.googletagmanager.com/gtag/js?id={{ $measurementId }}"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag("js", new Date());
+    gtag("config", "{{ $measurementId }}");
+  </script>
+{{- end -}}

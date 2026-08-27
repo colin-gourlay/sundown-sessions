@@ -8,21 +8,9 @@ updates:
     labels:
       - dependencies
       - github-actions
+      - security
     groups:
       github-actions:
-        patterns:
-          - "*"
-
-  - package-ecosystem: nuget
-    directory: /automation/dotnet
-    schedule:
-      interval: weekly
-    open-pull-requests-limit: 10
-    labels:
-      - dependencies
-      - dotnet
-    groups:
-      dotnet-dependencies:
         patterns:
           - "*"
 

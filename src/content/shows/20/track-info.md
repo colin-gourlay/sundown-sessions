@@ -19,6 +19,6 @@
 | 15 | {{<title "Lost My Shadow--IST IST">}} | Lost My Shadow (2024) | 3:07 | Released on [RECORD LABEL] on the 08 March 2024 |
 | 16 | {{<title "Technofear--The Slow Readers Club">}} | Technofear (2024) | 3:20 | Released on [RECORD LABEL] on the 11 October 2024 |
 | 17 | {{<title "To Lose My Life--White Lies">}} | To Lose My Life... (Bonus remix version) (2008) | 3:11 | Released on [RECORD LABEL] on the 01 January 2008 |
-| 18 | {{<title "The Day the World Turned Day-Glo--X-Ray Spex">}} | Germ Free Adolescents (1978) | 2:52 | Released on [RECORD LABEL] on the 10 November 1978 |
+| 18 | {{<title "The Day the World Turned Day-Glo--X-Ray Spex">}} | {{<release "Germ Free Adolescents (1978)--X-Ray Spex--germ-free-adolescents">}} | 2:52 | Released on [RECORD LABEL] on the 10 November 1978 |
 | 19 | {{<title "Moya--The Southern Death Cult">}} | The Southern Death Cult (1983) | 4:41 | Released on [RECORD LABEL] on the 13 June 1983 |
 | 20 | {{<title "Kundalini Express--Love and Rockets">}} | Express (1986) | 5:48 | Released on [RECORD LABEL] on the 15 September 1986 |

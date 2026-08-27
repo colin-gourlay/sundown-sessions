@@ -1,0 +1,5 @@
+{{ $link := .Get 0 }}
+{{ $slugOverride := .Get 1 }}
+{{ $slug := $link | urlize }}
+{{ with $slugOverride }}{{ $slug = . | urlize }}{{ end }}
+<a href="{{ printf "/labels/%s" $slug | absURL }}">{{ $link }}</a>

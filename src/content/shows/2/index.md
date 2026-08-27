@@ -2,6 +2,7 @@
 title: 'Show #2: Broadcast 12th June 2024'
 slug: 'featuring-the-receiving-end'
 description: 'featuring The Receiving End'
+heroTeaser: 'Bold reinterpretations lead into guitar-driven discoveries and after-dark atmospheres, with The Receiving End, Chikinki, Air, and Cocteau Twins along the way.'
 summary: 'THE SUNDOWN SESSIONS returns with...
 
 - The Receiving End
@@ -22,7 +23,29 @@ keywords:
  - 'Frankie Goes To Hollywood'
  - 'Bauhaus'
  - 'Far Corporation'
- - 'David Latto & The Lang Spoons'
+ - 'David Latto'
+ - 'Royal Blood'
+ - 'Muse'
+ - 'Electric Light Orchestra'
+ - 'White Lies'
+ - 'Chikinki'
+ - 'The Bravery'
+ - 'Doves'
+ - 'Jim Morrison'
+ - 'Air'
+ - 'IST IST'
+ - 'Nick Cave & The Bad Seeds'
+ - 'Cocteau Twins'
+ - 'Masters Of Reality'
+ - 'The Cult'
+ - 'The Filthy Tongues'
+tags:
+ - 'The Receiving End'
+ - 'Kula Shaker'
+ - 'Frankie Goes To Hollywood'
+ - 'Bauhaus'
+ - 'Far Corporation'
+ - 'David Latto'
  - 'Royal Blood'
  - 'Muse'
  - 'Electric Light Orchestra'
@@ -46,25 +69,26 @@ date: 2024-06-12T22:00:00Z
 draft: false
 ---
 
-## Listen On Demand
+## Listen Back
 {{< include_content "/shows/2/listen-again" >}}
 
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/2/playlist" >}}
 
 ---
 
-## Featured band: The Receiving End
+## Artist Spotlight
 {{< include_content "/shows/2/featured-guest" >}}
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/2/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/2/track-info" >}}

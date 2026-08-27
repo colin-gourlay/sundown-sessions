@@ -1,7 +1,12 @@
 ---
 title: Gaye Bykers On Acid
 featured_image: artists/g/gaye-bykers-on-acid/gaye-bykers-on-acid.jpg
+summary: "Leicester grebo originals colliding punk, psychedelia, metal and samples with unruly humour and confrontational live energy."
+description: "Leicester alternative rock band known for fusing punk, psychedelia, metal and electronic samples within the late-1980s grebo scene."
+editorialSummary: >
+  Gaye Bykers On Acid turn punk, psychedelia and electronic noise into a gleefully chaotic rush powered by riffs, samples and irreverent invention.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -13,4 +18,3 @@ Gaye Bykers On Acid used various pseudonyms: They pretended to be a thrash metal
 ### Current Lineup
 
 Ian Hoxley, Tony Horsfall, Kevin Hyde, Ian 'Robber' Reynolds
-

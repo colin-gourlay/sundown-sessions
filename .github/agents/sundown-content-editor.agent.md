@@ -19,6 +19,21 @@ Deliver high-quality content updates across `src/content/`, preserving repositor
 - Keep edits tightly scoped to the requested content task.
 - Write all new human-facing text in British English.
 
+## Release Editorial Style
+
+Treat the `## About` section of a release page as editorial copy, not a
+restatement of its front matter.
+
+- Lead with why the release matters, what makes it distinctive, or the most
+  useful route into it.
+- Use a warm, knowledgeable, independent voice and keep the summary concise.
+- Add verified creative context only where it helps explain the release's
+  sound, significance, reception, or place in the artist's wider story.
+- Do not open with the release date, label, format, track count, duration, or
+  an encyclopaedic definition such as “X is the nth album by Y”.
+- Do not invent context or copy third-party descriptions. Leave an explicit
+  editorial-review note when reliable context is unavailable.
+
 ## Do Not Use When
 
 - The task is primarily a .NET implementation, refactor, or test-fix activity in `automation/dotnet/`.

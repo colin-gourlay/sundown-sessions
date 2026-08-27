@@ -38,15 +38,37 @@ keywords:
  - 'John Grant'
  - 'The Filthy Tongues'
  - 'The The'
+tags:
+ - 'Becky Becky'
+ - 'The Bravery'
+ - 'Hipsway'
+ - 'Lloyd Cole and the Commotions'
+ - 'The Silencers'
+ - 'Angelfish'
+ - 'Skids'
+ - 'The Velvet Underground'
+ - 'Killing Joke'
+ - 'Electric Light Orchestra'
+ - 'The Move'
+ - 'Christina Perri'
+ - 'Franz Ferdinand'
+ - 'Sparks'
+ - 'Squeeze'
+ - 'Becky Becky'
+ - 'Pink Floyd'
+ - 'Jacco Gardner'
+ - 'John Grant'
+ - 'The Filthy Tongues'
+ - 'The The'
 toc: true
 featured_image: '13-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-10-01T22:00:00Z
-draft: false
+draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/13/playlist" >}}
 
 ---
@@ -56,10 +78,11 @@ draft: false
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/13/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/13/track-info" >}}

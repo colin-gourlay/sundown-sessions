@@ -1,0 +1,5 @@
+{{ $label := "Available to buy" }}
+{{ if reflect.IsMap . }}
+  {{ with .label }}{{ $label = . }}{{ end }}
+{{ end }}
+<span class="for-sale-badge">{{ $label }}</span>

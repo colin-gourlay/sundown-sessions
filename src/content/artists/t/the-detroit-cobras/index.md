@@ -2,16 +2,14 @@
 genres: ["Garage Rock"]
 featured_image: artists/t/the-detroit-cobras/the-detroit-cobras.jpg
 title: The Detroit Cobras
+summary: "Detroit garage rock band celebrated for raw, soul-soaked covers and Rachel Nagy's commanding vocals."
+description: "Detroit garage rock band celebrated for raw, soul-soaked covers, deep rhythm-and-blues cuts and Rachel Nagy's commanding vocals."
+editorialSummary: >
+  The Detroit Cobras revive overlooked rhythm and blues with Rachel Nagy's commanding voice, raw garage-rock swagger and an infectious sense of joy.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
+
 ## About
 
-The Detroit Cobras are an American garage rock band from Detroit, Michigan, which was formed in 1994 by guitarist Steve Shaw, guitarist Mary Ramirez, bassist Jeff Meier, drummer Vic Hill, and singer Rachel Nagy. The group was later known (with the exception of Rachel Nagy, and Mary Ramirez) for a constantly changing assortment of musicians. Rachel Nagy died on January 14, 2022.
-
-
-
-## Show(s) appeared on
-
-- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
-
+The Detroit Cobras were an American garage-rock band from Detroit, formed in 1994 and fronted by Rachel Nagy. Rather than simply covering old rhythm and blues, soul and rock 'n' roll songs, they reanimated them with grit, swagger and punk energy, turning deep-cut material into raw, joyous performances.

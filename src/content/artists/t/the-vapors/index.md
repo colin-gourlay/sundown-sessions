@@ -10,10 +10,6 @@ The Vapors are an English new wave and power pop band that initially existed bet
 
 
 
-## Show(s) appeared on
-
-- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/TheVaporsOfficial](https://www.facebook.com/TheVaporsOfficial)" >}}

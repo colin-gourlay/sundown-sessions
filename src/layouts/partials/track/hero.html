@@ -1,0 +1,20 @@
+{{ $artist := .Params.artist | default .Params.artists }}
+{{ if reflect.IsSlice $artist }}{{ $artist = delimit $artist ", " }}{{ end }}
+{{ $release := .Params.release | default .Params.album }}
+
+<header id="single_header" class="mb-8 max-w-prose">
+  {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
+    <div class="mb-5">
+      {{ partial "breadcrumbs.html" . }}
+    </div>
+  {{ end }}
+  <p class="mb-2 text-sm font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">Track</p>
+  <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+    {{ .Title | emojify }}
+  </h1>
+  {{ if or $artist $release }}
+    <p class="mt-2 text-lg font-medium text-neutral-700 dark:text-neutral-300">
+      {{ with $artist }}{{ . }}{{ end }}{{ if and $artist $release }} &middot; {{ end }}{{ with $release }}{{ . }}{{ end }}
+    </p>
+  {{ end }}
+</header>

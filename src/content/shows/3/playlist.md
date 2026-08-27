@@ -4,7 +4,7 @@
 2. {{< artist-wikilink "Johnny Cash" >}} - Hurt
 3. {{< artist-wikilink "Billy Mackenzie" >}} - Never Turn Your Back On Mother Earth
 4. {{< artist-wikilink "The Damned" >}} - Alone Again Or
-5. {{< artist-wikilink "Echo And The Bunnymen" >}} - People Are Strange
+5. {{< artist-wikilink "Echo & the Bunnymen" "echo-and-the-bunnymen" >}} - People Are Strange
 6. {{< artist-wikilink "Voice Of The Beehive" >}} - I Think I Love You
 7. {{< artist-wikilink "Del Shannon" >}} - Handy Man
 
@@ -23,7 +23,7 @@
 - NEWS
 
 1. {{< artist-wikilink "Simple Minds" >}} - Chelsea Girl
-2. {{< artist-wikilink "Elvis Costello And The Attractions" >}} - (I Don't Want To Go) To Chelsea
+2. {{< artist-wikilink "Elvis Costello & The Attractions" "elvis-costello-and-the-attractions" >}} - (I Don't Want To Go) To Chelsea
 3. {{< artist-wikilink "Skids" >}} - TV Stars
 4. {{< artist-wikilink "Big Country" >}} - You Dreamer
 5. {{< artist-wikilink "Kirsten Adamson" >}} - My Father's Songs

@@ -1,0 +1,35 @@
+{{ $artist := lower (printf "%v" (.Params.artist | default "")) }}
+{{ $title := lower .Title }}
+{{ $featuredShows := slice }}
+
+{{ range where site.RegularPages "Section" "shows" }}
+  {{ $show := . }}
+  {{ $showText := lower .RawContent }}
+  {{ with .File }}
+    {{ $trackInfoPath := printf "content/%s/track-info.md" (path.Dir (replace .Path "\\" "/")) }}
+    {{ if fileExists $trackInfoPath }}
+      {{ $showText = printf "%s\n%s" $showText (lower (readFile $trackInfoPath)) }}
+    {{ end }}
+  {{ end }}
+  {{ if and (in $showText $title) (or (not $artist) (in $showText $artist)) }}
+    {{ $featuredShows = $featuredShows | append $show }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $featuredShows) 0 }}
+  <section class="release-featured-shows not-prose" role="region" aria-labelledby="track-featured-shows-heading">
+    <h2 id="track-featured-shows-heading" class="release-featured-shows__heading">Featured in Shows</h2>
+    <ul class="release-featured-shows__list">
+      {{ range $featuredShows.ByDate.Reverse }}
+        <li class="release-featured-shows__row">
+          <a class="release-featured-shows__link" href="{{ .RelPermalink }}">
+            <span class="release-featured-shows__title">{{ partial "release/show-card-title.html" . }}</span>
+            {{ if not .Date.IsZero }}
+              <span class="release-featured-shows__date">{{ .Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</span>
+            {{ end }}
+          </a>
+        </li>
+      {{ end }}
+    </ul>
+  </section>
+{{ end }}

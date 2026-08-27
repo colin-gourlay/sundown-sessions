@@ -12,7 +12,3 @@ After playing the trumpet in jazz bands in the 1940s, he became a studio arrange
 Morricone composed for Hollywood directors such as Don Siegel, Mike Nichols, Brian De Palma, Barry Levinson, Oliver Stone, Warren Beatty, John Carpenter, and Quentin Tarantino. He has also worked with directors such as Bernardo Bertolucci, Mauro Bolognini, Giuliano Montaldo, Roland Joffé, Roman Polanski, Henri Verneuil, Mario Bava, Lucio Fulci, Umberto Lenzi, Gillo Pontecorvo, and Pier Paolo Pasolini. His best-known compositions include "The Ecstasy of Gold", "Se telefonando", "Man with a Harmonica", "Here's to You", "Chi Mai", "Gabriel's Oboe", and "E Più Ti Penso". He has influenced many artists including Hans Zimmer, Danger Mouse, Dire Straits, Muse, Metallica, Fields of the Nephilim, and Radiohead.
 
 
-
-## Show(s) appeared on
-
-- [Show #6](/shows/featuring-the-thieves/) (24th July 2024) - Featuring: The Thieves

@@ -2,20 +2,20 @@
 genres: ["New Wave","Pop","Rock"]
 featured_image: artists/s/squeeze/squeeze.jpg
 title: Squeeze
+aliases:
+  - /artists/s/squeeze-2/
+summary: "English new wave band built around Chris Difford and Glenn Tilbrook's melodic, sharply observed songwriting."
+description: "English new wave and pop-rock band from London, built around Chris Difford and Glenn Tilbrook's melodic, sharply observed songwriting and enduring singles."
 discogs_name: "Squeeze (2)"
+editorialSummary: >
+  Squeeze pair exceptional songwriting with timeless melodies, wit and everyday storytelling that still sounds effortlessly fresh.
 artist_page: true
+lastReviewed: 2026-07-13
 ---
+
 ## About
 
-Squeeze are an English rock band that came to prominence in the United Kingdom during the new wave period of the late 1970s, and continued recording in the 1980s, 1990s and 2010s. In the UK, their singles "Cool for Cats", "Up the Junction", and "Labelled with Love" were top-ten chart hits. Though not as commercially successful in the United States, Squeeze had American hits with "Tempted", "Black Coffee in Bed", and "Hourglass", and were considered a part of the Second British Invasion.
-In the vast majority of their material, lyrics are written by Chris Difford and music by Glenn Tilbrook, who are guitarists and vocalists in the band. The duo were hailed as "the heirs to Lennon and McCartney's throne" during the band's initial popularity in the late 1970s. The group formed in Deptford, London, in 1974, and first broke up in 1982. Squeeze then reformed in 1985, and disbanded again in 1999.
-The band reunited for tours through the United States and United Kingdom in 2007. In 2010, they issued Spot the Difference, an album of newly recorded versions of older material. The band's first album of all-new material since 1998, Cradle to the Grave, was released in October 2015, followed by another album, The Knowledge, in October 2017.
-
-
-
-## Show(s) appeared on
-
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
+Squeeze are an English band formed in Deptford in 1974, centred on Chris Difford's lyrics and Glenn Tilbrook's melodies. Their new wave-era singles, including "Take Me I'm Yours", "Cool for Cats", "Up the Junction" and "Tempted", made them one of Britain's great pop songwriting bands, and their later reunions have kept that Difford/Tilbrook partnership in front of new audiences.
 
 ## External Links
 
@@ -24,5 +24,4 @@ The band reunited for tours through the United States and United Kingdom in 2007
 - {{< new-tab-link "Instagram: [https://www.instagram.com/squeezeogram/](https://www.instagram.com/squeezeogram/)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/squeezeofficial](https://twitter.com/squeezeofficial)" >}}
-
 

@@ -17,7 +17,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Validate PR metadata with GitHub Script using v7.1.0
-        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b
+        uses: actions/github-script@f28e40c7f34bde8b3046d885e986cb6290c5673b # v7.1.0
         with:
           script: |
             const pr = context.payload.pull_request;
@@ -28,30 +28,14 @@ jobs:
             const titleValid = titlePattern.test(title);
             const bodyValid = body.length >= 20;
 
-            const files = await github.paginate(github.rest.pulls.listFiles, {
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              pull_number: pr.number,
-              per_page: 100,
-            });
-
-            const changedPaths = files.map((f) => f.filename);
-            const touchesContentOps = changedPaths.some((path) => path.startsWith('automation/dotnet/'));
-            const changelogUpdated = changedPaths.includes('CHANGELOG.md');
-
             const failures = [];
-            const notices = [];
 
             if (!titleValid) {
-              failures.push('PR title must follow Conventional Commits, for example: feat(contentops): add CI checks');
+              failures.push('PR title must follow Conventional Commits, for example: feat(website): add show listing');
             }
 
             if (!bodyValid) {
               failures.push('PR description is too short. Please include clear context and intent.');
-            }
-
-            if (touchesContentOps && !changelogUpdated) {
-              notices.push('ContentOps files changed without a CHANGELOG update. Add an entry if this change affects behaviour or release notes.');
             }
 
             const header = '## PR Governance Check';
@@ -65,14 +49,6 @@ jobs:
               lines.push('');
             } else {
               lines.push('- Required metadata checks passed.');
-              lines.push('');
-            }
-
-            if (notices.length > 0) {
-              lines.push('### Advisory notices');
-              for (const item of notices) {
-                lines.push(`- ${item}`);
-              }
               lines.push('');
             }
 

@@ -37,15 +37,36 @@ keywords:
  - 'X-Ray Spex'
  - 'The Southern Death Cult'
  - 'Love and Rockets'
+tags:
+ - 'TBD'
+ - 'Dark Hearts'
+ - 'Balaam And The Angel'
+ - 'Hussey-Regan'
+ - 'Viagra Boys'
+ - 'Bauhaus'
+ - 'The Cult'
+ - 'Killing Joke'
+ - 'Adam & The Ants'
+ - 'Wire'
+ - 'Virgin Prunes'
+ - 'Pigs Pigs Pigs Pigs Pigs Pigs Pigs'
+ - 'Siouxsie'
+ - 'Peter Murphy'
+ - 'IST IST'
+ - 'The Slow Readers Club'
+ - 'White Lies'
+ - 'X-Ray Spex'
+ - 'The Southern Death Cult'
+ - 'Love and Rockets'
 toc: true
 featured_image: '20-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-11-19T22:00:00Z
-draft: false
+draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/20/playlist" >}}
 
 ---
@@ -55,10 +76,11 @@ draft: false
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/20/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/20/track-info" >}}
