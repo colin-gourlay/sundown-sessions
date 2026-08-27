@@ -10,7 +10,3 @@ Lloyd Cole and the Commotions were a British rock and pop band that formed in Gl
 
 
 
-## Show(s) appeared on
-
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
-

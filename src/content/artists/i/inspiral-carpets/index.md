@@ -11,10 +11,6 @@ Several line-ups were loosely used from 1980 until Lambert and singer Stephen Ho
 
 
 
-## Show(s) appeared on
-
-- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/OfficialInspirals](https://www.facebook.com/OfficialInspirals)" >}}

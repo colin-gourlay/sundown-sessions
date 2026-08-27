@@ -13,10 +13,6 @@ Led Zeppelin are one of the best-selling music artists of all time, with estimat
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/ledzeppelin](https://www.facebook.com/ledzeppelin)" >}}

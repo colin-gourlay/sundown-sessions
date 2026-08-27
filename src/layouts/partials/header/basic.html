@@ -1,0 +1,61 @@
+<div class="main-menu flex items-center w-full gap-2 p-1 pl-0">
+
+  {{/* Left: circular logo avatar + site title */}}
+  <div class="flex items-center gap-3 shrink-0">
+    <a href="{{ "" | relLangURL }}" class="flex items-center gap-3" title="Go to the {{ .Site.Title }} home page">
+      {{ with .Site.Params.headerAvatar }}
+        <img
+          src="{{ . }}"
+          alt="{{ $.Site.Title }} logo"
+          class="h-10 w-10 rounded-full object-cover nozoom"
+          width="40"
+          height="40">
+      {{ end }}
+      {{ if not .Site.Params.disableTextInHeader | default true }}
+        <span class="text-base font-semibold">{{ .Site.Title | markdownify }}</span>
+      {{ end }}
+    </a>
+  </div>
+
+  {{/* Centre: desktop nav links */}}
+  {{ if .Site.Menus.main }}
+    <nav class="hidden md:flex flex-1 justify-center items-center gap-x-6 h-12">
+      {{ $currentPath := strings.TrimSuffix "/" $.RelPermalink }}
+      {{ range .Site.Menus.main }}
+        {{ $menuPath := strings.TrimSuffix "/" (.URL | relLangURL) }}
+        {{ $isCurrent := or ($.IsMenuCurrent "main" .) ($.HasMenuCurrent "main" .) }}
+        {{ $isCurrent = or $isCurrent (eq $currentPath $menuPath) }}
+        {{ $isCurrent = or $isCurrent (and (ne $menuPath "") (strings.HasPrefix $currentPath (printf "%s/" $menuPath))) }}
+        <a
+          href="{{ .URL }}"
+          {{ if or (strings.HasPrefix .URL "http:" ) (strings.HasPrefix .URL "https:" ) }}
+            target="_blank"
+          {{ end }}
+          class="flex items-center text-base font-medium bf-icon-color-hover{{ if $isCurrent }} active underline decoration-2 underline-offset-4 decoration-primary-500 dark:decoration-primary-400{{ end }}"
+          {{ if $isCurrent }}aria-current="page"{{ end }}
+          {{ with or .Name .Pre }}aria-label="{{ . }}"{{ end }}
+          title="{{ .Title }}">
+          {{ if .Pre }}
+            <span {{ if and .Pre .Name }}class="mr-1"{{ end }}>
+              {{ partial "icon.html" .Pre }}
+            </span>
+          {{ end }}
+          {{ if .Name }}
+            <span class="break-normal">{{ .Name | markdownify }}</span>
+          {{ end }}
+        </a>
+      {{ end }}
+    </nav>
+  {{ end }}
+
+  {{/* Right: desktop actions + mobile hamburger */}}
+  <div class="flex items-center ms-auto gap-x-3">
+    <div class="hidden md:flex items-center">
+      {{ partial "header/components/desktop-menu.html" . }}
+    </div>
+    <div class="flex md:hidden items-center">
+      {{ partial "header/components/mobile-menu.html" . }}
+    </div>
+  </div>
+
+</div>

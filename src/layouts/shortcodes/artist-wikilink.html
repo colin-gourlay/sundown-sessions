@@ -1,9 +1,9 @@
 {{ $link := .Get 0 }}
+{{ $slugOverride := .Get 1 }}
 {{ $firstChar := index $link 0 | printf "%c" | lower }}
 {{ $slug := $link | urlize }}
-{{ $page := site.GetPage (printf "artists/%s/%s" $firstChar $slug) }}
-{{ if $page -}}
-<a href="{{ $page.RelPermalink }}">{{ $link }}</a>
-{{- else -}}
-<a href="{{ printf "artists/%s/%s/" $firstChar $slug | absURL }}">{{ $link }}</a>
-{{- end }}
+{{ with $slugOverride }}{{ $slug = . | urlize }}{{ end }}
+{{ $artistPath := printf "artists/%s/%s" $firstChar $slug }}
+{{ $artistUri := printf "%s/" $artistPath | absURL }}
+{{ with site.GetPage $artistPath }}{{ $artistUri = .RelPermalink }}{{ end }}
+<a href="{{ $artistUri }}">{{ $link }}</a>

@@ -1,0 +1,171 @@
+{{/* Used by
+  1. list.html and term.html (when the cardView option is enabled)
+  2. Recent articles template (when the cardView option is enabled)
+  3. Shortcode list.html
+*/}}
+{{ $disableImageOptimization := site.Store.Get "disableImageOptimization" }}
+
+{{ $page := .Page }}
+{{ $isShowCard := eq $page.Type "shows" }}
+{{ $isReleaseCard := eq $page.Type "releases" }}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+{{ if not .Params.hideFeatureImage }}
+  {{/* frontmatter */}}
+  {{ with $page }}
+    {{ $featureImage := .Params.featureimage | default .Params.featured_image }}
+    {{ with $featureImage }}
+      {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+        {{ if site.Params.hotlinkFeatureImage }}
+          {{ $featuredURL = . }}
+        {{ else }}
+          {{ $featured = resources.GetRemote . }}
+        {{ end }}
+      {{ else }}
+        {{ $featured = $page.Resources.GetMatch . }}
+        {{ if not $featured }}{{ $featured = $page.Resources.GetMatch (path.Base .) }}{{ end }}
+        {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{/* page resources */}}
+    {{ if not (or $featured $featuredURL) }}
+      {{ $images := .Resources.ByType "image" }}
+      {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+        {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{/* fallback to default */}}
+    {{ if not (or $featured $featuredURL) }}
+      {{ $default := site.Store.Get "defaultFeaturedImage" }}
+      {{ if $default.url }}
+        {{ $featuredURL = $default.url }}
+      {{ else if $default.obj }}
+        {{ $featured = $default.obj }}
+      {{ end }}
+    {{ end }}
+
+    {{/* generate image URL if not hotlink */}}
+    {{ if not $featuredURL }}
+      {{ with $featured }}
+        {{ $featuredURL = .RelPermalink }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+
+{{/* For show cards, derive a shorter branded title: "Sundown Sessions #N"
+     Show titles follow the pattern "Show #N: Broadcast [date]". The split
+     on ": " always produces at least one element so index 0 is safe; if the
+     pattern does not match, $cardTitle falls back to the original page title. */}}
+{{ $cardTitle := .Title | emojify }}
+{{ if $isShowCard }}
+  {{ $titleParts := split .Title ": " }}
+  {{ $titleBase := index $titleParts 0 }}
+  {{ if strings.HasPrefix $titleBase "Show #" }}
+    {{ $cardTitle = replace $titleBase "Show #" "Sundown Sessions #" }}
+  {{ end }}
+{{ end }}
+
+<article
+  class="article-link--card group relative min-h-full min-w-full overflow-hidden rounded-xl border border-neutral-300 bg-white/80 shadow-sm transition hover:-translate-y-0.5 hover:shadow-lg dark:border-neutral-700 dark:bg-neutral-900/80">
+  {{ with $featuredURL }}
+    <div class="flex-none relative w-full overflow-hidden bg-neutral-100 dark:bg-neutral-800 {{ if $isShowCard }}aspect-square{{ else }}aspect-[4/3]{{ end }}">
+      <img
+        src="{{ . }}"
+        alt="{{ $page.Title }}"
+        loading="lazy"
+        decoding="async"
+        class="not-prose absolute inset-0 h-full w-full {{ if $isShowCard }}object-contain{{ else }}object-cover transition duration-300 ease-out group-hover:scale-[1.02] motion-reduce:transform-none{{ end }}">
+    </div>
+  {{ end }}
+  {{ if and $isShowCard (not $featuredURL) }}
+    <div aria-hidden="true" role="presentation" class="flex-none relative aspect-square w-full bg-gradient-to-br from-neutral-100 to-neutral-200 dark:from-neutral-800 dark:to-neutral-900"></div>
+  {{ end }}
+  {{ if and .Draft .Site.Params.article.showDraftLabel }}
+    <span class="absolute top-0 right-0 m-2">
+      {{ partial "badge.html" (i18n "article.draft" | emojify) }}
+    </span>
+  {{ end }}
+  <div class="flex flex-col p-4 sm:p-5">
+    {{ if $isShowCard }}
+      {{ $featuredArtist := "" }}
+      {{ with first 1 (default (slice) .Params.tags) }}
+        {{ $featuredArtist = index . 0 }}
+      {{ end }}
+      <header>
+        <a
+          href="{{ $page.RelPermalink }}"
+          class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral font-bold text-neutral-800 hover:underline hover:underline-offset-2 text-base leading-tight">
+          <h2>{{ $cardTitle }}</h2>
+        </a>
+      </header>
+      {{ if $featuredArtist }}
+        <p class="mt-4 text-base font-bold leading-snug tracking-tight text-neutral-900 dark:text-neutral-100">Featuring {{ $featuredArtist }}</p>
+      {{ end }}
+      <p class="mt-2.5 text-sm font-medium text-neutral-500 dark:text-neutral-400">{{ partial "meta/date.html" .Date }}</p>
+    {{ else }}
+      <header>
+        <a
+          {{ with $page.Params.externalUrl }}
+            href="{{ . }}" target="_blank" rel="external"
+          {{ else }}
+            href="{{ $page.RelPermalink }}"
+          {{ end }}
+          class="not-prose before:absolute before:inset-0 decoration-primary-500 dark:text-neutral font-bold text-neutral-800 hover:underline hover:underline-offset-2 text-xl">
+          <h2>
+            {{ .Title | emojify }}
+            {{ if .Params.externalUrl }}
+              <span class="cursor-default align-top text-xs text-neutral-400 dark:text-neutral-500">
+                <span class="rtl:hidden">&#8599;</span>
+                <span class="ltr:hidden">&#8598;</span>
+              </span>
+            {{ end }}
+          </h2>
+        </a>
+      </header>
+      {{ if $isReleaseCard }}
+        {{ $artistNames := slice }}
+        {{ with .Params.artist }}
+          {{ if reflect.IsSlice . }}{{ range . }}{{ $artistNames = $artistNames | append . }}{{ end }}{{ else }}{{ $artistNames = $artistNames | append . }}{{ end }}
+        {{ else }}
+          {{ with .Params.artists }}
+            {{ if reflect.IsSlice . }}{{ range . }}{{ $artistNames = $artistNames | append . }}{{ end }}{{ else }}{{ $artistNames = $artistNames | append . }}{{ end }}
+          {{ end }}
+        {{ end }}
+        {{ with $artistNames }}
+          <p class="mt-3 text-sm font-semibold leading-snug text-neutral-700 dark:text-neutral-200">{{ delimit . ", " }}</p>
+        {{ end }}
+        {{ $releaseType := .Params.releaseType | default .Params.release_type | default (index .Params "release-types") }}
+        {{ $releaseDate := .Params.releaseDate | default .Params.release_date | default .Date }}
+        {{ $releaseYear := "" }}
+        {{ with $releaseDate }}
+          {{ $dateText := printf "%v" . }}
+          {{ if or (in $dateText "UTC") (in $dateText "+0000") }}{{ $dateText = time.Format "2006" . }}{{ end }}
+          {{ $matches := findRE `\b(1[89][0-9]{2}|20[0-9]{2})\b` $dateText 1 }}
+          {{ with $matches }}{{ $releaseYear = index . 0 }}{{ end }}
+        {{ end }}
+        {{ if or $releaseType $releaseYear .Params.for_sale }}
+          <div class="mt-3 flex flex-wrap items-center gap-2 text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">
+            {{ with $releaseType }}
+              {{ if reflect.IsSlice . }}{{ range first 1 . }}<span class="release-card-badge">{{ . }}</span>{{ end }}{{ else }}<span class="release-card-badge">{{ . }}</span>{{ end }}
+            {{ end }}
+            {{ with $releaseYear }}<span>{{ . }}</span>{{ end }}
+            {{ if .Params.for_sale }}{{ partial "for-sale-badge.html" (dict "label" "Available to buy") }}{{ end }}
+          </div>
+        {{ end }}
+      {{ else }}
+        <div class="text-sm text-neutral-500 dark:text-neutral-400">
+          {{ partial "article-meta/basic.html" . }}
+        </div>
+      {{ end }}
+      {{ if (.Params.showSummary | default (.Site.Params.list.showSummary | default false)) }}
+        <div class="article-link__summary prose dark:prose-invert mt-1 line-clamp-5">
+          {{ .Summary | plainify }}
+        </div>
+      {{ end }}
+    {{ end }}
+  </div>
+</article>

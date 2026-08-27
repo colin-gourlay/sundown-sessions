@@ -10,8 +10,8 @@ Nick Watkinson (vocals)
 John Alder (guitar/backing vocals)
 Paddy O'Toole (keyboards)
 Alex Baird (drums)
-Steve Prudence (bass) [1978 - 1980]
-Michael Cotton (bass/vocals) [1981]
+Steve Prudence (bass) (1978–1980)
+Michael Cotton (bass/vocals) (1981)
 
 
 ### Current Lineup

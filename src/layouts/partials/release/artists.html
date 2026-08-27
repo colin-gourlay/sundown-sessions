@@ -1,0 +1,41 @@
+{{- $artists := partial "release/resolve-artists.html" . -}}
+{{- $artistCards := slice -}}
+{{- range $artists -}}
+  {{- $artist := . -}}
+  {{- $summary := "" -}}
+  {{- with .page -}}
+    {{- $summary = .Summary | plainify | htmlUnescape | strings.TrimSpace -}}
+  {{- end -}}
+  {{- with $summary -}}
+    {{- $artistCards = $artistCards | append (merge $artist (dict "summary" $summary)) -}}
+  {{- end -}}
+{{- end -}}
+
+{{- if gt (len $artistCards) 0 -}}
+  <section
+    class="release-artists"
+    role="region"
+    aria-labelledby="release-artists-heading">
+    <h2 id="release-artists-heading" class="release-artists__heading">Artist Spotlight</h2>
+    <div class="release-artists__list" role="list">
+      {{- range $artistCards }}
+        {{- $artist := . -}}
+        {{- $artistPage := .page -}}
+        <article class="release-artists__item" role="listitem">
+          <div class="release-artists__body">
+            <h3 class="release-artists__name">
+              {{- with $artistPage -}}
+                <a href="{{ .RelPermalink }}">{{ $artist.name | emojify }}</a>
+              {{- else -}}
+                {{ $artist.name | emojify }}
+              {{- end -}}
+            </h3>
+            {{- with .summary }}
+              <p class="release-artists__summary">{{ . }}</p>
+            {{- end }}
+          </div>
+        </article>
+      {{- end }}
+    </div>
+  </section>
+{{- end -}}

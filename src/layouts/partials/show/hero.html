@@ -1,0 +1,93 @@
+{{ $featureImage := .Params.featureimage | default .Params.featured_image }}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+{{ with $featureImage }}
+  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+    {{ $featuredURL = . }}
+  {{ else }}
+    {{ $featured = $.Resources.GetMatch . }}
+    {{ if not $featured }}{{ $featured = $.Resources.GetMatch (path.Base .) }}{{ end }}
+    {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+    {{ if not $featured }}{{ $featuredURL = . | relURL }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not (or $featured $featuredURL) }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ range slice "*show-logo*" "*feature*" "*cover*" "*thumbnail*" }}
+    {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $featuredURL }}{{ with $featured }}{{ $featuredURL = .RelPermalink }}{{ end }}{{ end }}
+
+{{ $showNumber := .Title | replaceRE `(?i)^show\s*#?([0-9]+).*$` "$1" }}
+{{ if eq $showNumber .Title }}{{ $showNumber = "" }}{{ end }}
+{{ $showLabel := cond (ne $showNumber "") (printf "Show #%s" $showNumber) (.Title | replaceRE `(?i):\s*broadcast.*$` "") }}
+
+{{ $featuredArtist := "" }}
+{{ with .Description }}
+  {{ $featuredArtist = . | replaceRE `(?i)^\s*featuring\s+` "" | strings.TrimSpace }}
+{{ end }}
+{{ if not $featuredArtist }}
+  {{ with .Params.summary }}
+    {{ $summaryArtists := findRE `(?m)^\s*-\s+(.+?)\s*$` . }}
+    {{ with $summaryArtists }}
+      {{ $featuredArtist = index . 0 | replaceRE `^\s*-\s+` "" | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ if not $featuredArtist }}
+  {{ with .Params.tags }}
+    {{ $featuredArtist = index . 0 }}
+  {{ end }}
+{{ end }}
+
+{{ $showTeaser := .Params.heroTeaser | default .Params.hero_teaser | default .Params.teaser | default .Params.standfirst | default "" }}
+{{ if not $showTeaser }}
+  {{ $summaryArtists := slice }}
+  {{ with .Params.summary }}
+    {{ range findRE `(?m)^\s*-\s+(.+?)\s*$` . }}
+      {{ $artist := . | replaceRE `^\s*-\s+` "" | strings.TrimSpace }}
+      {{ if and $artist (not (findRE `(?i)much,?\s+much\s+more` $artist)) }}
+        {{ $summaryArtists = $summaryArtists | append $artist }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+  {{ with first 4 $summaryArtists }}
+    {{ $showTeaser = printf "A Sundown Sessions broadcast with %s and more." (delimit . ", " " and ") }}
+  {{ else }}
+    {{ with .Params.summary }}
+      {{ $showTeaser = . | plainify | replaceRE `(?i)^\s*live on east coast fm,\s*` "" | replaceRE `\s+` " " | strings.TrimSpace }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+{{ $hasListenOnDemand := or (or (in .RawContent "## Listen Back") (in .RawContent "## Listen On Demand")) (in .RawContent "/listen-again") }}
+
+<section class="show-hero mb-8 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70" role="region" aria-labelledby="show-hero-heading">
+  <div class="show-hero__layout">
+    {{ with $featuredURL }}
+      <div class="show-hero__artwork bg-neutral-100 dark:bg-neutral-800">
+        <img src="{{ . }}" alt="{{ $.Title }} artwork" loading="eager" decoding="async" fetchpriority="high" class="nozoom">
+      </div>
+    {{ end }}
+    <div class="show-hero__content">
+      <p class="show-hero__eyebrow">{{ $showLabel }}</p>
+      {{ with $featuredArtist }}
+        <div class="show-hero__feature">
+          <p class="show-hero__feature-label">Featuring</p>
+          <h1 id="show-hero-heading" class="show-hero__artist">{{ . }}</h1>
+        </div>
+      {{ else }}
+        <h1 id="show-hero-heading" class="show-hero__artist">{{ partial "show/display-title.html" $ }}</h1>
+      {{ end }}
+      {{ if not $.Date.IsZero }}
+        <p class="show-hero__date">{{ $.Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</p>
+      {{ end }}
+      {{ with $showTeaser }}
+        <p class="show-hero__teaser">{{ . }}</p>
+      {{ end }}
+      {{ if $hasListenOnDemand }}
+        <a class="show-hero__shortcut" href="#listen-back">Listen on Demand</a>
+      {{ end }}
+    </div>
+  </div>
+</section>

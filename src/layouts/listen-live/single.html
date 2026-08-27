@@ -1,0 +1,145 @@
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "single" }}
+
+  <article>
+    {{ if .Params.showHero | default (site.Params.article.showHero | default false) }}
+      {{ $heroStyle := .Params.heroStyle }}
+      {{ if not $heroStyle }}{{ $heroStyle = site.Params.article.heroStyle }}{{ end }}
+      {{ $heroStyle := print "hero/" $heroStyle ".html" }}
+      {{ if templates.Exists (printf "partials/%s" $heroStyle) }}
+        {{ partial $heroStyle . }}
+      {{ else }}
+        {{ partial "hero/basic.html" . }}
+      {{ end }}
+    {{ end }}
+
+    <header id="single_header" class="mt-5 max-w-prose">
+      {{ if .Params.showBreadcrumbs | default (site.Params.article.showBreadcrumbs | default false) }}
+        {{ partial "breadcrumbs.html" . }}
+      {{ end }}
+      <h1 class="mt-0 text-4xl font-extrabold text-neutral-900 dark:text-neutral">
+        {{ .Title | emojify }}
+      </h1>
+    </header>
+
+    <section class="flex flex-col max-w-full mt-0 lg:flex-row">
+      <div class="min-w-0 min-h-0 max-w-fit">
+        <div class="article-content max-w-none mb-20">
+          <div class="listen-live-page">
+            <header class="listen-live-intro">
+              <p class="listen-live-strapline">Alternative Music After Dark</p>
+              <p class="listen-live-broadcast-cue" data-live-status><span class="listen-live-broadcast-cue__label">Next live broadcast:</span> <a class="listen-live-broadcast-cue__time" href="#broadcast-details">Tuesday &bull; 8pm&ndash;10pm (UK)</a></p>
+              <p class="listen-live-standfirst" data-live-standfirst>Every broadcast is carefully curated, blending new discoveries, exclusive first plays, artist interviews and music chosen for after-dark listening.</p>
+            </header>
+
+            <section class="listen-live-live" aria-labelledby="listen-live-player-heading">
+              <h2 id="listen-live-player-heading" class="sr-only">Listen to Sundown Sessions live</h2>
+              <p class="listen-live-status" data-live-player-badge data-broadcast-state="off-air" aria-label="Broadcast status: no live show; station stream available">
+                <span class="listen-live-status__dot" aria-hidden="true"></span>
+                <span data-live-player-badge-label>Station Stream</span>
+              </p>
+
+              <div
+                class="listen-live-player-shell"
+                data-now-playing
+                data-now-playing-json="https://betelgeuse.nucast.co.uk:2020/json/stream/8062">
+                <div class="listen-live-now-playing__artwork" data-now-playing-artwork-wrap>
+                  <img data-now-playing-artwork alt="" decoding="async" hidden>
+                  <span class="listen-live-artwork-placeholder" data-now-playing-artwork-placeholder>
+                    <span class="listen-live-artwork-avatar">
+                      <img src="{{ "/images/sundown-sessions-logo.jpg" | relURL }}" alt="Sundown Sessions" loading="lazy" decoding="async">
+                    </span>
+                  </span>
+                </div>
+
+                <div class="listen-live-player-shell__main">
+                  <section class="listen-live-now-playing" aria-labelledby="now-playing-heading">
+                    <h2 id="now-playing-heading">Now Playing</h2>
+                    <div class="listen-live-now-playing__body" data-now-playing-state="fallback">
+                      <p class="listen-live-now-playing__fallback" data-now-playing-fallback>Waiting for track information...</p>
+                      <dl class="listen-live-now-playing__details" data-now-playing-details hidden>
+                        <div class="listen-live-now-playing__detail listen-live-now-playing__detail--artist" data-now-playing-artist-row hidden>
+                          <dt>Artist</dt>
+                          <dd data-now-playing-artist></dd>
+                        </div>
+                        <div class="listen-live-now-playing__detail listen-live-now-playing__detail--track" data-now-playing-track-row hidden>
+                          <dt>Track</dt>
+                          <dd data-now-playing-track></dd>
+                        </div>
+                        <div class="listen-live-now-playing__detail listen-live-now-playing__detail--album" data-now-playing-album-row hidden>
+                          <dt>Album</dt>
+                          <dd data-now-playing-album></dd>
+                        </div>
+                      </dl>
+                    </div>
+                  </section>
+
+                  {{ partial "listen-live/player.html" (dict "src" "" "type" "") }}
+
+                  <p class="listen-live-player__note">Problems playing? <a href="https://betelgeuse.nucast.co.uk/public/8062">Open the NuCast player</a>.</p>
+                </div>
+              </div>
+            </section>
+
+            <div class="listen-live-lower">
+              <section id="broadcast-details" class="listen-live-section listen-live-schedule" aria-labelledby="broadcast-details-heading">
+                <h2 id="broadcast-details-heading">Broadcast Details</h2>
+
+                <dl class="listen-live-detail-grid" aria-label="Broadcast details">
+                  <div>
+                    <dt>Live broadcasts</dt>
+                    <dd>Tuesday &bull; 8pm&ndash;10pm</dd>
+                  </div>
+                  <div>
+                    <dt>Time zone</dt>
+                    <dd>UK time</dd>
+                  </div>
+                  <div>
+                    <dt>Shows archive</dt>
+                    <dd><a href="{{ "/shows/" | relURL }}">Available anytime</a></dd>
+                  </div>
+                </dl>
+              </section>
+
+              <section class="listen-live-section listen-live-more" aria-labelledby="continue-exploring-heading">
+                <h2 id="continue-exploring-heading">Continue Exploring</h2>
+                <div class="listen-live-more__grid">
+                  <a class="listen-live-more__card" href="{{ "/shows/" | relURL }}">
+                    <span class="listen-live-more__card-label">Browse Shows</span>
+                    <small>Explore past Sundown Sessions broadcasts and track listings.</small>
+                  </a>
+                  <a class="listen-live-more__card" href="{{ "/artists/" | relURL }}">
+                    <span class="listen-live-more__card-label">Featured Artists</span>
+                    <small>Discover the artists featured across Sundown Sessions.</small>
+                  </a>
+                </div>
+              </section>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </article>
+
+  {{ with resources.Get "js/listen-live-player.js" }}
+    {{ $playerJS := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+    <script
+      defer
+      src="{{ $playerJS.RelPermalink }}"
+      integrity="{{ $playerJS.Data.Integrity }}"></script>
+  {{ end }}
+  {{ with resources.Get "js/listen-live-now-playing.js" }}
+    {{ $nowPlayingJS := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+    <script
+      defer
+      src="{{ $nowPlayingJS.RelPermalink }}"
+      integrity="{{ $nowPlayingJS.Data.Integrity }}"></script>
+  {{ end }}
+  {{ with resources.Get "js/listen-live-schedule.js" }}
+    {{ $scheduleJS := . | resources.Minify | resources.Fingerprint (site.Params.fingerprintAlgorithm | default "sha512") }}
+    <script
+      defer
+      src="{{ $scheduleJS.RelPermalink }}"
+      integrity="{{ $scheduleJS.Data.Integrity }}"></script>
+  {{ end }}
+{{ end }}

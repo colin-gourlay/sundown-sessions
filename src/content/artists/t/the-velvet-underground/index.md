@@ -13,10 +13,6 @@ After Morrison's death in 1995, the remaining members played a final performance
 
 
 
-## Show(s) appeared on
-
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/TheVelvetUnderground](https://www.facebook.com/TheVelvetUnderground)" >}}

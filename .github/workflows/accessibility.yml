@@ -1,0 +1,58 @@
+name: Accessibility
+
+on:
+  pull_request:
+    paths:
+      - src/**
+      - docs/accessibility.md
+      - .pa11yci.json
+      - .github/workflows/accessibility.yml
+  push:
+    branches:
+      - main
+    paths:
+      - src/**
+      - docs/accessibility.md
+      - .pa11yci.json
+      - .github/workflows/accessibility.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  pa11y:
+    runs-on: ubuntu-latest
+    env:
+      HUGO_VERSION: 0.164.0
+    steps:
+      - name: Checkout source using v4.3.1
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+        with:
+          fetch-depth: 0
+          submodules: recursive
+
+      - name: Install Hugo CLI
+        run: |
+          wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
+          && sudo dpkg -i ${{ runner.temp }}/hugo.deb
+
+      - name: Set up Node.js using v6.0.0
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v6.0.0
+        with:
+          node-version: 22
+
+      - name: Build Hugo site
+        run: |
+          hugo \
+            --source src \
+            --environment production \
+            --baseURL http://127.0.0.1:1313/
+
+      - name: Serve built site
+        run: |
+          python3 -m http.server 1313 --bind 127.0.0.1 --directory ./src/public &
+          echo $! > /tmp/sundown-http-server.pid
+
+      - name: Run pa11y accessibility checks
+        run: npx --yes pa11y-ci --config .pa11yci.json

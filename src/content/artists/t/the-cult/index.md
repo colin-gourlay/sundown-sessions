@@ -2,7 +2,12 @@
 genres: ["Alternative Rock","Gothic Rock","Hard Rock","New Wave","Post-Punk","Rock"]
 featured_image: artists/t/the-cult/the-cult.jpg
 title: The Cult
+summary: "English rock band led by Ian Astbury and Billy Duffy, moving from post-punk atmosphere to widescreen hard rock."
+description: "English rock band formed in 1983, centred on vocalist Ian Astbury and guitarist Billy Duffy."
+editorialSummary: >
+  The Cult fuse gothic atmosphere, ringing guitar and hard-rock force in widescreen songs built for drama, movement and Ian Astbury's commanding voice.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
@@ -12,20 +17,9 @@ By the time of their fifth studio album Ceremony (1991), tensions and creative d
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
-- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
-- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
-- [Show #4](/shows/featuring-kenny-armour-from-andysmanclub/) (26th June 2024) - Featuring: Kenny Armour from ANDYSMANCLUB
-- [Show #2](/shows/featuring-the-receiving-end/) (12th June 2024) - Featuring: The Receiving End
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/officialcult](https://www.facebook.com/officialcult)" >}}
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/officialcult](https://twitter.com/officialcult)" >}}
-
-

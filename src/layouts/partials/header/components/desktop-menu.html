@@ -1,0 +1,46 @@
+<nav class="flex items-center gap-x-5 h-12">
+  {{ partial "header/components/translations.html" . }}
+  {{ if .Site.Params.enableA11y | default false }}
+    {{ partial "header/components/a11y.html" (dict "prefix" "desktop-") }}
+  {{ end }}
+
+  {{ if .Site.Params.enableSearch | default false }}
+    <button
+      id="search-button"
+      aria-label="Search"
+      class="text-base bf-icon-color-hover"
+      title="{{ i18n "search.open_button_title" }}">
+      {{ partial "icon.html" "search" }}
+    </button>
+  {{ end }}
+
+  {{ if .Site.Params.footer.showAppearanceSwitcher | default false }}
+    <div class="flex items-center">
+      <button
+        id="appearance-switcher"
+        aria-label="Dark mode switcher"
+        type="button"
+        class="text-base bf-icon-color-hover">
+        <div class="flex items-center justify-center dark:hidden" title="{{ i18n "footer.dark_appearance" }}">
+          {{ partial "icon.html" "moon" }}
+        </div>
+        <div class="items-center justify-center hidden dark:flex" title="{{ i18n "footer.light_appearance" }}">
+          {{ partial "icon.html" "sun" }}
+        </div>
+      </button>
+    </div>
+  {{ end }}
+
+  {{ $listenURL := "/listen-live/" | relURL }}
+  <a
+    href="{{ $listenURL }}"
+    data-analytics-event="listen_live_click"
+    data-analytics-provider="listen-live-page"
+    aria-label="Listen Live"
+    class="ss-primary-action inline-flex items-center gap-2 px-4 py-2 rounded-full transition-colors font-medium text-sm">
+    <span class="flex items-center justify-center h-3 w-3">
+      {{ partial "icon.html" "play" }}
+    </span>
+    <span>Listen Live</span>
+  </a>
+</nav>

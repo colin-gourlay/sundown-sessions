@@ -1,0 +1,82 @@
+{{ $page := .page }}
+{{ $content := .content }}
+{{ $rows := slice }}
+
+{{ range split $content "\n" }}
+  {{ $line := strings.TrimSpace . }}
+  {{ if and (hasPrefix $line "|") (not (findRE `^\|\s*:?-+` $line)) (not (findRE `^\|\s*#\s*\|` $line)) }}
+    {{ $cells := split $line "|" }}
+    {{ if ge (len $cells) 6 }}
+      {{ $number := strings.TrimSpace (index $cells 1) }}
+      {{ $title := strings.TrimSpace (index $cells 2) }}
+      {{ $album := strings.TrimSpace (index $cells 3) }}
+      {{ $duration := strings.TrimSpace (index $cells 4) }}
+      {{ $notes := strings.TrimSpace (index $cells 5) }}
+      {{ $releaseHref := "" }}
+      {{ $releaseParts := findRESubmatch `\{\{<\s*release\s+"([^"]+)"\s*>\}\}` $album }}
+      {{ if gt (len $releaseParts) 0 }}
+        {{ with index $releaseParts 0 }}
+          {{ $parts := split (index . 1) "--" }}
+          {{ if ge (len $parts) 2 }}
+            {{ $releaseName := index $parts 0 }}
+            {{ $artist := index $parts 1 }}
+            {{ $artistFirstChar := index $artist 0 | printf "%c" | lower }}
+            {{ $artistSlug := $artist | urlize }}
+            {{ $releaseSlug := $releaseName | urlize }}
+            {{ if ge (len $parts) 3 }}
+              {{ with index $parts 2 | strings.TrimSpace }}{{ $releaseSlug = . | urlize }}{{ end }}
+            {{ end }}
+            {{ with $page.Site.GetPage (printf "releases/%s/%s/%s" $artistFirstChar $artistSlug $releaseSlug) }}
+              {{ $releaseHref = .Permalink }}
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+      {{ if $title }}
+        {{ $rows = $rows | append (dict
+          "number" $number
+          "title" $title
+          "album" $album
+          "duration" $duration
+          "notes" $notes
+          "releaseHref" $releaseHref
+        ) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $rows) 0 }}
+  <div class="show-track-guide not-prose">
+    <p class="show-track-guide__intro">
+      A guided companion to the broadcast sequence: what was played, where it came from, and the extra context that shaped its place in the show.
+    </p>
+    <ol class="show-track-guide__list">
+      {{ range $rows }}
+        <li class="show-track-guide__item" value="{{ .number }}">
+          <div class="show-track-guide__number" aria-hidden="true">{{ .number }}</div>
+          <div class="show-track-guide__body">
+            {{ $page.Scratch.Set "trackGuideReleaseHref" .releaseHref }}
+            <div class="show-track-guide__identity" role="heading" aria-level="3">{{ $page.RenderString .title }}</div>
+            {{ $page.Scratch.Delete "trackGuideReleaseHref" }}
+            <div class="show-track-guide__details">
+              {{ with .album }}
+                {{ $page.Scratch.Set "trackGuideReleaseMeta" true }}
+                <div class="show-track-guide__meta">{{ $page.RenderString . }}</div>
+                {{ $page.Scratch.Delete "trackGuideReleaseMeta" }}
+              {{ end }}
+              {{ with .notes }}
+                <div class="show-track-guide__context">
+                  <p class="show-track-guide__context-label">Why It Mattered</p>
+                  <div class="show-track-guide__context-copy">{{ $page.RenderString . }}</div>
+                </div>
+              {{ end }}
+            </div>
+          </div>
+        </li>
+      {{ end }}
+    </ol>
+  </div>
+{{ else }}
+  {{ $page.RenderString $content }}
+{{ end }}

@@ -40,6 +40,30 @@ keywords:
  - 'Live'
  - 'Status Quo'
  - 'Rush'
+tags:
+ - 'A celebration of Vertigo Records'
+ - 'Lenny Kravitz'
+ - 'Masters Of Reality'
+ - 'Extreme'
+ - 'Queens of the Stone Age'
+ - 'The Cult'
+ - 'Juicy Lucy'
+ - 'The Doors'
+ - 'Creedence Clearwater Revival'
+ - 'Led Zeppelin'
+ - 'Black Sabbath'
+ - 'Rainbow'
+ - 'ZZ Top'
+ - 'Jimi Hendrix'
+ - 'Metallica'
+ - 'Blue Oyster Cult'
+ - 'Bad Company'
+ - 'May Blitz'
+ - 'Thin Lizzy'
+ - 'Uriah Heep'
+ - 'Live'
+ - 'Status Quo'
+ - 'Rush'
 toc: true
 featured_image: '12-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -48,7 +72,7 @@ date: 2024-09-25T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/12/playlist" >}}
 
 ---
@@ -58,10 +82,11 @@ draft: true
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/12/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/12/track-info" >}}

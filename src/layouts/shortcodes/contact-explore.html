@@ -1,0 +1,17 @@
+<nav class="not-prose my-6" aria-label="Continue exploring">
+  {{ $links := slice
+    (dict "label" "Browse shows →" "url" "/shows/")
+    (dict "label" "Listen live →" "url" "/listen-live/")
+    (dict "label" "About Sundown Sessions →" "url" "/about/")
+    (dict "label" "Mixcloud / Listen Again →" "url" "https://www.mixcloud.com/sundownsessions/")
+  }}
+  <ul class="m-0 grid list-none gap-2 p-0 sm:grid-cols-2">
+    {{ range $links }}
+      <li>
+        <a class="block rounded-lg border border-neutral-200 bg-white px-4 py-3 text-sm font-semibold text-neutral-800 no-underline transition hover:border-primary-500 hover:text-primary-700 dark:border-neutral-700 dark:bg-neutral-900 dark:text-neutral-200 dark:hover:border-primary-400 dark:hover:text-primary-400" href="{{ .url | safeURL }}">
+          {{ .label }}
+        </a>
+      </li>
+    {{ end }}
+  </ul>
+</nav>

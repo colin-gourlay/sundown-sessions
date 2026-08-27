@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-2 Tone Ska revival group formed in 1978 in Birmingham, England by guitarist/vocalist Dave Wakeling with David Steele (bass) and Andy Cox (guitar) along with rapper/toaster Ranking Roger (Roger Charlery), drummer Everett Morton and veteran Jamaican saxophonist Saxa ([url=http://www.discogs.com/artist/1511592-Lionel-Martin-2]Lionel Martin[/url]). **As there was an eponymous power pop US group (later known as Paul Collins' Beat) emerging at the time they were forced to use the names The English Beat on their North American releases and The British Beat briefly in Australia.** 
+2 Tone Ska revival group formed in 1978 in Birmingham, England by guitarist/vocalist Dave Wakeling with David Steele (bass) and Andy Cox (guitar) along with rapper/toaster Ranking Roger (Roger Charlery), drummer Everett Morton and veteran Jamaican saxophonist Saxa ([Lionel Martin](http://www.discogs.com/artist/1511592-Lionel-Martin-2)). **As there was an eponymous power pop US group (later known as Paul Collins' Beat) emerging at the time they were forced to use the names The English Beat on their North American releases and The British Beat briefly in Australia.** 
 
 The band enjoyed immediate chart success and established their own record label Go-Feet Records. After the split in 1983, Steele and Cox went on to form Fine Young Cannibals and later 2 Men A Drum Machine And A Trumpet while Wakeling, Ranking Roger and Saxa formed General Public. Saxa and Everett Morton also formed International Beat, with some guest appearances by Ranking Roger who also joined members of The Specials in Special Beat.
 

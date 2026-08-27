@@ -35,15 +35,34 @@ keywords:
  - 'Del Shannon'
  - 'Becky Becky'
  - 'The Human League'
+tags:
+ - 'The Thieves'
+ - 'Love'
+ - 'Ramones'
+ - 'John Lennon'
+ - 'Dave Edmunds'
+ - 'Plastic Bertrand'
+ - 'Ennio Morricone'
+ - 'Jack White'
+ - 'Billie Eilish'
+ - 'Royal Blood'
+ - 'White Lies'
+ - 'Cigarettes After Sex'
+ - 'Magazine'
+ - 'The Southern Death Cult'
+ - 'The Adventures'
+ - 'Del Shannon'
+ - 'Becky Becky'
+ - 'The Human League'
 toc: true
 featured_image: '6-show-logo.jpeg'
 read_more_copy: Show notes...
 show_reading_time: true
 date: 2024-07-24T22:00:00Z
-draft: false
+draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/6/playlist" >}}
 
 ---
@@ -53,10 +72,11 @@ draft: false
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/6/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/6/track-info" >}}

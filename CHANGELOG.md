@@ -7,26 +7,14 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
-### Added
-
-- New features that have been added since the last release
-
-### Changed
-
-- Changes to existing functionality since the last release
-
-### Deprecated
-
-- Features that are planned to be removed in a future release
-
 ### Removed
 
-- Features that have been removed since the last release
+- Retired the standalone .NET automation solution and its supporting CI, release, scanning, and enrichment workflows.
 
-### Fixed
+## [v1.0.0-alpha] - 2024-06-14
 
-- Any bug fixes since the last release
+### Added
 
-### Security
+- Show-specific shortcodes and refactored Hugo templates
 
-- Any security fixes since the last release
+[v1.0.0-alpha]: https://github.com/colin-gourlay/sundown-sessions/releases/tag/v1.0.0-alpha

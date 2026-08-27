@@ -1,44 +1,186 @@
-favicon = "favicon.ico"
-custom_css = ["css/tables.css", "css/live-player.css", "css/tiles.css"]
-mainSections = ["shows"]
-# Stream URL for the live radio broadcast. Remove or leave empty to hide the player.
-listen_live_stream_url = "https://radio-stream.mp3"
+# -- Blowfish theme parameters --
+# Reference: https://blowfish.page/docs/configuration/#theme-parameters
 
-# Optional broadcast schedule. When set, the live player is only shown during these windows.
-# day:       0=Sunday, 1=Monday, 2=Tuesday, 3=Wednesday, 4=Thursday, 5=Friday, 6=Saturday (UTC)
-# start_utc: broadcast start time in "HH:MM" format (24-hour UTC)
-# end_utc:   broadcast end time in "HH:MM" format (24-hour UTC)
-# A window that crosses midnight is supported (e.g. start_utc="22:00", end_utc="00:00").
-[[listen_live_schedule]]
-day = 2
-start_utc = "22:00"
-end_utc = "00:00"
+colorScheme = "blowfish"
+defaultAppearance = "auto"
+autoSwitchAppearance = true
 
-[[ananke_socials]]
-name = "facebook"
-url = "https://www.facebook.com/sundownsessionsuk"
+enableSearch = true
+enableCodeCopy = false
 
-[[ananke_socials]]
-name = "instagram"
-url = "https://www.instagram.com/sundownsessionsshow"
+dateFormat = "2 January 2006"
 
-[[ananke_socials]]
-name = "tiktok"
-url = "https://www.tiktok.com/@sundownsessionsshow"
+# Sections that contribute to listings such as the homepage recent list.
+mainSections = ["shows", "releases", "artists"]
 
-[[ananke_socials]]
-name = "pinterest"
-url = "https://www.pinterest.co.uk/sundownsessionsshow/"
+# Stream URL for a live broadcast. Reintroduced as a Blowfish-shaped feature in
+# a follow-up slice; kept here so editorial config remains in a single file.
+listen_live_stream_url = ""
 
-[[ananke_socials]]
-name = "twitter"
-url = "https://x.com/sundown_session"
+[forms]
+  # GitHub Pages cannot process form submissions itself. Corrections use the
+  # existing private Formspree inbox; see docs/correction-submissions.md before
+  # switching this to a dedicated form with the optional GitHub integration.
+  correctionAction = "https://formspree.io/f/xzbnwyez"
 
-[[ananke_socials]]
-name = "mastodon"
-url = "https://mastodon.scot/@sundown_sessions"
+[analytics]
+  [analytics.google]
+    measurementId = "todo-measurement_id"
 
-[[ananke_socials]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/colingourlay"
-follow = false
+  [analytics.clarity]
+    projectId = "todo-project_id"
+
+  [analytics.plausible]
+    domain = "todo-domain"
+
+  [analytics.umami]
+    websiteId = "todo-website_id"
+    scriptUrl = "todo-script_url"
+
+# Path to the circular avatar image displayed in the header alongside the site title.
+# Resolved as a static file path (e.g. /images/my-logo.jpg).
+headerAvatar = "/images/sundown-sessions-logo.jpg"
+
+[notFound]
+  eyebrow = "404 Not Found"
+  title = "Signal Lost"
+  message = "The page you're looking for seems to have drifted off air."
+  recovery = "There is still plenty worth listening to. Try one of these routes back into Sundown Sessions."
+  image = "/images/404.png"
+  imageAlt = "Illustration of headphones around a radio tower with a 404 not found message."
+
+  [notFound.primary]
+    label = "Listen Live"
+    url = "/listen-live/"
+    event = "listen_live_click"
+    provider = "404-primary"
+
+  [notFound.secondary]
+    label = "Back Home"
+    url = "/"
+    event = "not_found_recovery_click"
+    provider = "home"
+
+  [[notFound.links]]
+    label = "Browse Shows"
+    url = "/shows/"
+    description = "Find recent playlists and broadcasts."
+    event = "not_found_recovery_click"
+    provider = "shows"
+
+  [[notFound.links]]
+    label = "Search the Site"
+    url = "/search/"
+    description = "Look for artists, releases, tracks and shows."
+    event = "not_found_recovery_click"
+    provider = "search"
+
+  [[notFound.links]]
+    label = "Meet the Presenter"
+    url = "/about/"
+    description = "Learn more about the show and its story."
+    event = "not_found_recovery_click"
+    provider = "about"
+
+  [[notFound.links]]
+    label = "Contact Us"
+    url = "/contact/"
+    description = "Tell us about a broken link or send a request."
+    event = "not_found_recovery_click"
+    provider = "contact"
+
+[favicon]
+  # Static favicon asset paths. Tenant-specific builds can override these values
+  # without changing the Blowfish partial.
+  ico = "favicon.ico"
+  icon16 = "favicon-16x16.png"
+  icon32 = "favicon-32x32.png"
+  icon48 = "favicon-48x48.png"
+  appleTouchIcon = "apple-touch-icon.png"
+  manifest = "site.webmanifest"
+  themeColor = "#1E2438"
+
+[header]
+  layout = "basic"
+
+[footer]
+  showMenu = true
+  showCopyright = true
+  showThemeAttribution = false
+  showAppearanceSwitcher = true
+  showScrollToTop = true
+
+[homepage]
+  layout = "custom"
+  homepageImage = "/images/sundown-sessions-banner.png"
+  homepageImagePosition = "50% 62%"
+  showRecent = true
+  showRecentItems = 5
+  showMoreLink = false
+
+[article]
+  showDate = true
+  showDateUpdated = false
+  showAuthor = false
+  showHero = true
+  heroStyle = "basic"
+  showBreadcrumbs = true
+  showDraftLabel = true
+  showEdit = false
+  showHeadingAnchors = true
+  showPagination = true
+  invertPagination = false
+  showReadingTime = true
+  showTableOfContents = false
+  showRelatedContent = false
+  showTaxonomies = true
+  showWordCount = false
+  sharingLinks = ["facebook", "twitter", "mastodon", "pinterest", "email"]
+  showZenMode = false
+
+[list]
+  showHero = false
+  showBreadcrumbs = true
+  showSummary = true
+  showTableOfContents = false
+  showCards = true
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = true
+  constrainItemsWidth = false
+
+[sitemap]
+  excludedKinds = ["taxonomy", "term"]
+
+[taxonomy]
+  showTermCount = true
+  showHero = false
+  showBreadcrumbs = true
+  showSummary = false
+
+[term]
+  showHero = false
+  showBreadcrumbs = true
+  showSummary = false
+  showWordCount = false
+  showPagination = true
+  groupByYear = false
+  cardView = true
+  cardViewScreenWidth = false
+
+# -- Author --
+# `[params.author].links` is the Blowfish equivalent of the prior project's
+# `[[socials]]` / `[[ananke_socials]]` entries. Each link is `{ service = "url" }`.
+[author]
+  name = "Sundown Sessions"
+  headline = "Eclectic music sessions for listeners who want to discover beyond algorithmic playlists."
+  links = [
+    { facebook = "https://www.facebook.com/sundownsessionsuk" },
+    { instagram = "https://www.instagram.com/sundownsessionsshow" },
+    { tiktok = "https://www.tiktok.com/@sundownsessionsshow" },
+    { mixcloud = "https://www.mixcloud.com/sundownsessions/" },
+    { pinterest = "https://www.pinterest.co.uk/sundownsessionsshow/" },
+    { "x-twitter" = "https://x.com/sundown_session" },
+    { mastodon = "https://mastodon.scot/@sundown_sessions" },
+    { linkedin = "https://www.linkedin.com/in/colingourlay" },
+  ]

@@ -11,10 +11,6 @@ Bowie developed an interest in music from an early age. He studied art, music an
 After uneven commercial success in the late 1970s, Bowie had three number-one hits: the 1980 single "Ashes to Ashes", its album Scary Monsters (and Super Creeps) and "Under Pressure" (a 1981 collaboration with Queen). He achieved his greatest commercial success in the 1980s with Let's Dance (1983). Between 1988 and 1992, he fronted the hard rock band Tin Machine before resuming his solo career in 1993. Throughout the 1990s and 2000s, Bowie continued to experiment with musical styles, including industrial and jungle. He also continued acting; his roles included Major Jack Celliers in Merry Christmas, Mr. Lawrence (1983), Jareth the Goblin King in Labyrinth (1986), Phillip Jeffries in Twin Peaks: Fire Walk with Me (1992), Andy Warhol in the biopic Basquiat (1996), and Nikola Tesla in The Prestige (2006), among other film and television appearances and cameos. He ceased touring after 2004 and his last live performance was at a charity event in 2006. He returned from a decade-long recording hiatus in 2013 with The Next Day and remained musically active until his death from liver cancer in 2016. He died two days after both his 69th birthday and the release of his final album, Blackstar.
 During his lifetime, his record sales, estimated at over 100 million worldwide, made him one of the best-selling musicians of all time. Often dubbed the "chameleon of rock" due to his constant musical reinventions, he was inducted into the Rock and Roll Hall of Fame in 1996. Rolling Stone ranked him among the greatest artists in history. As of 2022, Bowie was the best-selling vinyl artist of the 21st century.
 
-## Show(s) appeared on
-
-- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/davidbowie](https://www.facebook.com/davidbowie)" >}}

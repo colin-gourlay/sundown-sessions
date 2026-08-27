@@ -1,0 +1,94 @@
+{{/* Render the existing artist link shortcodes as an accessible card of
+     destinations without exposing raw URLs. Keeping the extraction here avoids
+     a migration of the artist content collection. */}}
+
+{{ $externalSection := "" }}
+{{ range split .RawContent "\n## " }}
+  {{ $section := . | strings.TrimSpace }}
+  {{ if or (hasPrefix $section "External Links") (hasPrefix $section "## External Links") (hasPrefix $section "Artist Links") (hasPrefix $section "## Artist Links") (hasPrefix $section "Explore Further") (hasPrefix $section "## Explore Further") }}
+    {{ $externalSection = $section }}
+  {{ end }}
+{{ end }}
+
+{{ $linkPattern := `(?m)^\s*-\s+\{\{<\s*new-tab-link\s+"([^":]+):\s+\[[^\]]+\]\((https?://[^)]+)\)"\s*>\}\}\s*$` }}
+{{ $externalLinks := findRESubmatch $linkPattern $externalSection }}
+
+{{ $linksByPlatform := dict }}
+{{ range $externalLinks }}
+  {{ $platform := index . 1 | strings.TrimSpace }}
+  {{ $url := index . 2 | strings.TrimSpace }}
+  {{ $platformKey := lower $platform }}
+  {{ $platformKey = replace $platformKey " " "-" }}
+  {{ $platformKey = replace $platformKey "_" "-" }}
+  {{ $platformKey = replace $platformKey "." "" }}
+  {{ $urlLower := lower $url }}
+  {{ if or (in $platformKey "website") (in $platformKey "official-site") }}
+    {{ $platformKey = "website" }}
+  {{ else if or (in $platformKey "apple-music") (in $urlLower "music.apple.com") }}
+    {{ $platformKey = "apple" }}
+  {{ else if or (in $platformKey "x-twitter") (eq $platformKey "x") (in $platformKey "twitter") (in $urlLower "x.com") (in $urlLower "twitter.com") }}
+    {{ $platformKey = "twitter" }}
+  {{ else if or (in $platformKey "facebook") (in $urlLower "facebook.com") }}
+    {{ $platformKey = "facebook" }}
+  {{ else if or (in $platformKey "instagram") (in $urlLower "instagram.com") }}
+    {{ $platformKey = "instagram" }}
+  {{ else if or (in $platformKey "youtube") (in $urlLower "youtube.com") (in $urlLower "youtu.be") }}
+    {{ $platformKey = "youtube" }}
+  {{ else if or (in $platformKey "bandcamp") (in $urlLower "bandcamp.com") }}
+    {{ $platformKey = "bandcamp" }}
+  {{ else if or (in $platformKey "spotify") (in $urlLower "spotify.com") }}
+    {{ $platformKey = "spotify" }}
+  {{ else if or (in $platformKey "discogs") (in $urlLower "discogs.com") }}
+    {{ $platformKey = "discogs" }}
+  {{ else if or (in $platformKey "musicbrainz") (in $urlLower "musicbrainz.org") }}
+    {{ $platformKey = "musicbrainz" }}
+  {{ else if or (in $platformKey "vimeo") (in $urlLower "vimeo.com") }}
+    {{ $platformKey = "vimeo" }}
+  {{ else if or (in $platformKey "tiktok") (in $urlLower "tiktok.com") }}
+    {{ $platformKey = "tiktok" }}
+  {{ else if or (in $platformKey "wikipedia") (in $urlLower "wikipedia.org") }}
+    {{ $platformKey = "wikipedia" }}
+  {{ else if or (in $platformKey "bluesky") (in $urlLower "bsky.app") }}
+    {{ $platformKey = "bluesky" }}
+  {{ end }}
+
+  {{ if and $url (not (index $linksByPlatform $platformKey)) }}
+    {{ $linksByPlatform = merge $linksByPlatform (dict $platformKey $url) }}
+  {{ end }}
+{{ end }}
+
+{{/* Keep the issue-defined discovery and social priorities first. Destinations
+     outside that sequence remain available, but follow the prioritised links. */}}
+{{ $destinations := slice
+  (dict "key" "website" "label" "Official Website" "icon" "globe")
+  (dict "key" "bandcamp" "label" "Bandcamp" "icon" "music")
+  (dict "key" "spotify" "label" "Spotify" "icon" "spotify")
+  (dict "key" "apple" "label" "Apple Music" "icon" "apple")
+  (dict "key" "discogs" "label" "Discogs" "icon" "music")
+  (dict "key" "musicbrainz" "label" "MusicBrainz" "icon" "music")
+  (dict "key" "facebook" "label" "Facebook" "icon" "facebook")
+  (dict "key" "instagram" "label" "Instagram" "icon" "instagram")
+  (dict "key" "youtube" "label" "YouTube" "icon" "youtube")
+  (dict "key" "twitter" "label" "X (Twitter)" "icon" "x-twitter")
+  (dict "key" "vimeo" "label" "Vimeo" "icon" "link")
+  (dict "key" "tiktok" "label" "TikTok" "icon" "tiktok")
+  (dict "key" "wikipedia" "label" "Wikipedia" "icon" "globe")
+  (dict "key" "bluesky" "label" "Bluesky" "icon" "link")
+}}
+
+{{ $orderedLinks := slice }}
+{{ range $destinations }}
+  {{ $destination := . }}
+  {{ with index $linksByPlatform .key }}
+    {{ $orderedLinks = $orderedLinks | append (merge $destination (dict "url" .)) }}
+  {{ end }}
+{{ end }}
+
+{{ partial "components/explore-further.html" (dict
+  "links" $orderedLinks
+  "heading" "Explore Further"
+  "headingId" "artist-external-links-heading"
+  "sectionClass" "mb-10 w-full max-w-none not-prose"
+  "rowClass" "artist-external-link-row"
+  "iconClass" "artist-external-link-icon"
+) }}

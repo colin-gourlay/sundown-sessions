@@ -18,7 +18,7 @@
 
 1. {{< artist-wikilink "The Lathums" >}} - Stellar Cast
 2. {{< artist-wikilink "Killing Kind" >}} - This Beautiful World
-3. {{< artist-wikilink "The Essence" >}} - The Cat
+3. {{< artist-wikilink "The Essence" "the-essence-4" >}} - The Cat
 4. {{< artist-wikilink "The Charlatans" >}} - The Only One I Know
 5. {{< artist-wikilink "Pete Shelley" >}} - Telephone Operator
 

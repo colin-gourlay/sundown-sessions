@@ -5,7 +5,7 @@ artist_page: true
 ---
 ## About
 
-Sister Sledge is an American musical group formed in 1971, and originally consisted of sisters [url=https://www.discogs.com/artist/751549-Debbie-Sledge]Debbie[/url], [url=https://www.discogs.com/artist/690440-Joni-Sledge]Joni[/url], [url=https://www.discogs.com/artist/4683-Kathy-Sledge]Kathy[/url], and [url=https://www.discogs.com/artist/751550-Kim-Sledge]Kim[/url].
+Sister Sledge is an American musical group formed in 1971, and originally consisted of sisters [Debbie](https://www.discogs.com/artist/751549-Debbie-Sledge), [Joni](https://www.discogs.com/artist/690440-Joni-Sledge), [Kathy](https://www.discogs.com/artist/4683-Kathy-Sledge), and [Kim](https://www.discogs.com/artist/751550-Kim-Sledge).
 
 Known for their work with Chic in the late-1970s, Sister Sledge reached the height of their popularity during the disco era. The group was formed in Philadelphia, Pennsylvania in 1971, when their ages ranged from 12 to 16. They recorded their first single, "Time Will Tell," for the Philly-based 'Money Back' label. For the first few years, the group called itself Sisters Sledge.
 

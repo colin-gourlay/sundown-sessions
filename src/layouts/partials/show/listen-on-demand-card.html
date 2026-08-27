@@ -1,0 +1,27 @@
+{{- $url := .url | default "" -}}
+{{- $copy := .copy | default "Missed the live broadcast? Listen back in full on Mixcloud whenever it suits you." -}}
+
+<section class="show-listen-card not-prose" role="region" aria-label="Listen back">
+  {{- with $url }}
+    <a
+      class="show-listen-card__body show-listen-card__body--link"
+      href="{{ . | safeURL }}"
+      aria-label="Play this Sundown Sessions broadcast on Mixcloud, opens in a new tab"
+      data-analytics-event="listen_again_click"
+      data-analytics-provider="Mixcloud"
+      target="_blank"
+      rel="noopener noreferrer external">
+      <span class="show-listen-card__button" aria-hidden="true">
+        <span class="show-listen-card__button-icon">
+          {{ partial "icon.html" "play" }}
+        </span>
+        <span>Play on Mixcloud</span>
+      </span>
+      <p class="show-listen-card__copy">{{ $copy }}</p>
+    </a>
+  {{- else }}
+    <div class="show-listen-card__body">
+      <p class="show-listen-card__copy">{{ $copy }}</p>
+    </div>
+  {{- end }}
+</section>

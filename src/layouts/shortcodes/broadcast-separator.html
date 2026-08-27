@@ -1,0 +1,8 @@
+{{- $label := .Get 0 | default "Broadcast Break" -}}
+{{- $detail := .Get 1 | default "" -}}
+<div class="show-playlist-separator" role="separator" aria-label="{{ $label }}">
+  <span class="show-playlist-separator__label">{{ $label }}</span>
+  {{- with $detail }}
+    <span class="show-playlist-separator__detail">{{ . }}</span>
+  {{- end }}
+</div>

@@ -13,10 +13,6 @@ According to Billboard, Duran Duran have sold over 100 million records. They ach
 
 
 
-## Show(s) appeared on
-
-- [Show #5](/shows/featuring-white-china/) (7th July 2024) - Featuring: White China
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/duranduran](https://www.facebook.com/duranduran)" >}}

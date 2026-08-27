@@ -12,10 +12,6 @@ CCR's music remains popular and is a staple of U.S. classic rock radio airplay; 
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/CCR](https://www.facebook.com/CCR)" >}}

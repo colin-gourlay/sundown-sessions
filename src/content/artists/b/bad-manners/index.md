@@ -7,7 +7,7 @@ artist_page: true
 
 English ska and two-tone band led by Buster Bloodvessel (Douglas Trendle). Formed in 1976, stopped in 1987 and reformed since 1988.
 
-[u]Latest lineup includes:[/u]
+**Latest lineup includes:**
 Buster Bloodvessel - vocals
 Tom Massey - guitar
 Lee Thompson - bass

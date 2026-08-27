@@ -40,6 +40,30 @@ keywords:
  - 'A Projection'
  - 'IST IST'
  - 'Nick Cave & The Bad Seeds'
+tags:
+ - 'The Twist'
+ - 'Ennio Morricone'
+ - 'The Stranglers'
+ - 'Nirvana'
+ - 'Jacco Gardner'
+ - 'Karel Fialka'
+ - 'David Bowie'
+ - 'The Cult'
+ - 'Elvis Costello'
+ - 'The Civil Wars'
+ - 'Dean Martin'
+ - 'The Easybeats'
+ - 'AC/DC'
+ - 'Juicy Lucy'
+ - 'The Hollies'
+ - 'Talk Talk'
+ - 'Neil Young'
+ - 'Kubb'
+ - 'Sananda Maitreya'
+ - 'The Slow Readers Club'
+ - 'A Projection'
+ - 'IST IST'
+ - 'Nick Cave & The Bad Seeds'
 toc: true
 featured_image: '10-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -48,7 +72,7 @@ date: 2024-08-21T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/10/playlist" >}}
 
 ---
@@ -58,10 +82,11 @@ draft: true
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/10/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/10/track-info" >}}

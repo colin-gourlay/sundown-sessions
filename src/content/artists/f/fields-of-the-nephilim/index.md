@@ -11,7 +11,7 @@ Following the split, vocalist Carl McCoy pursued his The Nefilim project. The re
 
 In 1998 rumours of a Fields Of The Nephilim reunion were announced, but failed to see the light of day. In 2002 Jungle Records released a number of recordings without the consent of McCoy who regrouped and eventually produced the Mourning Sun album (2005).
 
-[u]Members:[/u]
+**Members:**
 **1984 - 1985**
 Carl McCoy - vocals
 Tony Pettit - bass

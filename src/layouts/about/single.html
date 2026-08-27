@@ -1,0 +1,117 @@
+{{ define "main" }}
+  {{ .Scratch.Set "scope" "single" }}
+  {{ $image := .Resources.GetMatch "about-sundown-sessions.png" }}
+  {{ if not $image }}{{ $image = .Resources.GetMatch "about-sundown-sessions.jpeg" }}{{ end }}
+
+  {{ $sameAs := slice }}
+  {{ range site.Params.Author.links }}
+    {{ range $service, $url := . }}
+      {{ with $url }}{{ $sameAs = $sameAs | append . }}{{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $jsonLD := dict
+    "@context" "https://schema.org"
+    "@type" "Organization"
+    "name" site.Title
+    "url" site.BaseURL
+    "description" .Description
+    "location" (dict "@type" "Place" "name" "Haddington, East Lothian, Scotland")
+    "sameAs" $sameAs
+  }}
+  <script type="application/ld+json">{{ $jsonLD | jsonify | safeJS }}</script>
+
+  <article class="about-page">
+    {{ partial "section-hero.html" . }}
+
+    <section class="about-section about-section--opening" aria-labelledby="about-opening-heading">
+      <h2 id="about-opening-heading" class="sr-only">An editorial introduction to Sundown Sessions</h2>
+      <div class="about-prose about-prose--lead">
+        <p>Some of the best music I have ever heard was not handed to me by an algorithm.</p>
+        <p>It came from recommendations, tiny venues, independent labels, late-night rabbit holes, old favourites, new obsessions, and records someone quietly insisted I should hear.</p>
+        <p>Sundown Sessions grew from that same belief: that discovering music should still feel personal, surprising and worth staying up for.</p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-what-heading">
+      <p class="about-kicker">What Sundown Sessions is</p>
+      <h2 id="about-what-heading">An independent home for alternative music after dark.</h2>
+      <div class="about-prose">
+        <p>Sundown Sessions is an independent home for alternative music after dark.</p>
+        <p>Each broadcast brings together new releases, overlooked artists, forgotten classics, deep cuts and songs that deserve a little more attention.</p>
+        <p>Alongside established favourites, Sundown Sessions actively champions independent artists, emerging bands and records that deserve a wider audience.</p>
+        <p>It is part radio show, part archive, part listening notebook - a place to hear the broadcasts, follow the track listings, explore featured artists and discover records that might otherwise pass you by.</p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-dark-heading">
+      <p class="about-kicker">Why after dark?</p>
+      <h2 id="about-dark-heading">The right time to properly listen.</h2>
+      <div class="about-prose">
+        <p>Sundown has always felt like the right time to properly listen.</p>
+        <p>The day slows down, distractions fade, and music has more room to breathe. That is the mood behind the show: curious, unhurried, atmospheric and open to the unexpected.</p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-discover-heading">
+      <p class="about-kicker">What you will discover</p>
+      <h2 id="about-discover-heading">Music chosen by hand, not by algorithm.</h2>
+      <div class="about-prose">
+        <p>You will find:</p>
+        <ul class="about-discovery-list">
+          <li>Carefully curated broadcasts</li>
+          <li>Complete track listings</li>
+          <li>Independent and emerging artists</li>
+          <li>New releases and overlooked records</li>
+          <li>Forgotten favourites and deep cuts</li>
+          <li>Artist and release pages for deeper exploration</li>
+          <li>Listen Again links for previous shows</li>
+          <li>Music chosen by hand, not by algorithm</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-curation-heading">
+      <p class="about-kicker">How the music is chosen</p>
+      <h2 id="about-curation-heading">Proper listening, followed by a thread.</h2>
+      <div class="about-prose">
+        <p>Music comes from everywhere: labels, promoters, artists, listeners, Bandcamp, record shops, live shows, old favourites, new obsessions and the occasional happy accident.</p>
+        <p>Some tracks arrive with a press release. Some are found by following a thread from one artist to another. Some simply refuse to leave the room.</p>
+        <p>That is the heart of Sundown Sessions: human curation, proper listening and the belief that discovery should still feel exciting.</p>
+      </div>
+    </section>
+
+    <section class="about-section" aria-labelledby="about-people-heading">
+      <p class="about-kicker">Meet Colin</p>
+      <h2 id="about-people-heading">Curated and hosted by Colin Gourlay.</h2>
+      <div class="about-presenter">
+        {{ with $image }}
+          <img
+            src="{{ .RelPermalink }}"
+            alt="Colin Gourlay presenting Sundown Sessions"
+            loading="lazy"
+            decoding="async">
+        {{ end }}
+        <div>
+          <p>Sundown Sessions is curated and hosted by Colin Gourlay.</p>
+          <p>What started as a radio show has grown into a wider music discovery project, bringing together broadcasts, track listings, artist features, release pages and carefully chosen recommendations.</p>
+          <p>The aim is simple: to share music with care, curiosity and enthusiasm.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="about-section about-section--closing" aria-labelledby="about-listen-heading">
+      <p class="about-kicker">Listen and explore</p>
+      <h2 id="about-listen-heading">Start with the music.</h2>
+      <div class="about-prose">
+        <p>You can listen live on Sundown Radio, explore previous broadcasts, or use the site as a growing archive of artists, releases and track listings.</p>
+        <p>Whether you are joining live, exploring past broadcasts or discovering an artist for the first time, I hope you leave with something new to listen to.</p>
+      </div>
+      <div class="about-actions">
+        <a class="about-button about-button--primary" href="{{ "/listen-live/" | relURL }}">Listen Live</a>
+        <a class="about-button about-button--secondary" href="{{ "/shows/" | relURL }}">Browse Shows</a>
+        <a class="about-button about-button--secondary" href="{{ "/contact/" | relURL }}">Contact</a>
+      </div>
+    </section>
+  </article>
+{{ end }}

@@ -40,6 +40,30 @@ keywords:
  - 'Sex Gang Children'
  - 'Ultravox'
  - 'Love'
+tags:
+ - 'Frank Sidebottom and The Man Behind The Mask'
+ - 'Balaam And The Angel'
+ - 'Maria McKee'
+ - 'Cosmic Rough Riders'
+ - 'Teenage Fanclub'
+ - 'The Freshies'
+ - 'Frank Sidebottom'
+ - 'The Damned'
+ - 'Skids'
+ - 'Dr. Feelgood'
+ - 'XTC'
+ - 'Bauhaus'
+ - 'The Mission'
+ - 'Killing Joke'
+ - 'The Cult'
+ - 'A'
+ - 'The Airborne Toxic Event'
+ - 'Alphabeat'
+ - 'Yeah Yeah Yeahs'
+ - 'Magazine'
+ - 'Sex Gang Children'
+ - 'Ultravox'
+ - 'Love'
 toc: true
 featured_image: '7-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -48,7 +72,7 @@ date: 2024-07-31T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/7/playlist" >}}
 
 ---
@@ -58,10 +82,11 @@ draft: true
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/7/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/7/track-info" >}}

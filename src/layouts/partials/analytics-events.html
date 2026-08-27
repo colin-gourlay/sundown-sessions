@@ -1,0 +1,100 @@
+{{- $pageType := .Section | default .Kind -}}
+{{- $viewEvent := "" -}}
+{{- if and .IsPage (eq .Section "artists") -}}
+  {{- $viewEvent = "artist_view" -}}
+{{- else if and .IsPage (eq .Section "releases") -}}
+  {{- $viewEvent = "release_view" -}}
+{{- else if and .IsPage (eq .Section "tracks") -}}
+  {{- $viewEvent = "track_view" -}}
+{{- end -}}
+<script>
+  window.sundownAnalytics = window.sundownAnalytics || {};
+
+  window.sundownAnalytics.track = function(eventName, params) {
+    params = params || {};
+
+    if (typeof window.gtag === "function") {
+      window.gtag("event", eventName, params);
+    }
+
+    if (typeof window.clarity === "function") {
+      window.clarity("event", eventName);
+    }
+  };
+
+  (function() {
+    const pageParams = {
+      title: {{ .Title | plainify | jsonify | safeJS }},
+      page_type: {{ $pageType | jsonify | safeJS }},
+      url: {{ .RelPermalink | jsonify | safeJS }}
+    };
+
+    function textFor(element) {
+      return (element.textContent || element.getAttribute("aria-label") || element.title || "").trim();
+    }
+
+    function closestFromEvent(event, selector) {
+      const target = event.target;
+      if (!target) return null;
+      const element = target.closest ? target : target.parentElement;
+      return element && element.closest ? element.closest(selector) : null;
+    }
+
+    document.addEventListener("click", event => {
+      const tracked = closestFromEvent(event, "[data-analytics-event]");
+      if (tracked) {
+        const params = Object.assign({}, pageParams, {
+          destination: tracked.href || tracked.getAttribute("action") || "",
+          taxonomy: tracked.dataset.analyticsTaxonomy || "",
+          provider: tracked.dataset.analyticsProvider || "",
+          link_text: textFor(tracked)
+        });
+        window.sundownAnalytics.track(tracked.dataset.analyticsEvent, params);
+      }
+
+      const link = closestFromEvent(event, "a[href]");
+      if (!link) return;
+
+      try {
+        const destination = new URL(link.href, window.location.href);
+        if ((destination.protocol === "http:" || destination.protocol === "https:") && destination.hostname !== window.location.hostname) {
+          window.sundownAnalytics.track("external_link_click", {
+            destination: destination.hostname,
+            link_text: textFor(link),
+            current_path: window.location.pathname
+          });
+        }
+      } catch (_) {}
+    });
+
+    document.addEventListener("submit", event => {
+      const form = closestFromEvent(event, "[data-analytics-event]");
+      if (!form) return;
+      window.sundownAnalytics.track(form.dataset.analyticsEvent, Object.assign({}, pageParams, {
+        destination: form.action || "",
+        provider: form.dataset.analyticsProvider || ""
+      }));
+    });
+
+    document.addEventListener("input", event => {
+      const input = closestFromEvent(event, "input[type='search'], #search-query, #search input");
+      if (!input) return;
+      window.clearTimeout(input.dataset.analyticsSearchTimer);
+      input.dataset.analyticsSearchTimer = window.setTimeout(() => {
+        const query = (input.value || "").trim();
+        if (query.length < 2) return;
+        window.sundownAnalytics.track("search", {
+          query: query,
+          page_type: "search",
+          url: window.location.pathname
+        });
+      }, 800);
+    });
+
+    {{- with $viewEvent }}
+      window.addEventListener("DOMContentLoaded", () => {
+        window.sundownAnalytics.track({{ . | jsonify | safeJS }}, pageParams);
+      }, { once: true });
+    {{- end }}
+  })();
+</script>

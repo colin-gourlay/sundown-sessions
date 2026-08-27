@@ -1,3 +1,266 @@
-{{ $path := .Get 0 }}
-{{ $content := readFile (printf "content/%s.md" $path) }}
-{{ $content | markdownify }}
+{{ $path := strings.TrimPrefix "/" (.Get 0) }}
+{{ $includedPage := site.GetPage $path }}
+{{ $contentPath := "" }}
+{{ with $includedPage }}
+  {{ with .File }}
+    {{ $contentPath = printf "content/%s" (replace .Path "\\" "/") }}
+  {{ end }}
+{{ end }}
+{{ if not $contentPath }}
+  {{ range slice (printf "content/%s.md" $path) (printf "content/%s" $path) }}
+    {{ if and (not $contentPath) (fileExists .) }}
+      {{ $contentPath = . }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+{{ with $contentPath }}
+  {{ $rawContent := readFile . }}
+  {{ $normalisedContent := replace $rawContent "\r\n" "\n" }}
+  {{ $content := $normalisedContent }}
+  {{ $frontMatter := "" }}
+
+  {{ if hasPrefix $normalisedContent "---\n" }}
+    {{ $parts := split $normalisedContent "\n---\n" }}
+    {{ if ge (len $parts) 2 }}
+      {{ $frontMatter = strings.TrimPrefix "---\n" (index $parts 0) }}
+      {{ $content = delimit (after 1 $parts) "\n---\n" }}
+    {{ end }}
+  {{ end }}
+
+  {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/listen-again") }}
+    {{ $mixcloudURL := "" }}
+    {{ $copy := "" }}
+    {{ with $includedPage }}
+      {{ $mixcloudURL = .Params.mixcloudUrl | default .Params.mixcloud_url | default .Params.url | default .Params.href | default "" }}
+      {{ $copy = .Params.listenOnDemandCopy | default .Params.listen_on_demand_copy | default .Params.copy | default "" }}
+    {{ end }}
+    {{ if not $mixcloudURL }}
+      {{ $mixcloudURL = $.Page.Params.mixcloudUrl | default $.Page.Params.mixcloud_url | default $.Page.Params.listenAgainUrl | default $.Page.Params.listen_again_url | default "" }}
+    {{ end }}
+    {{ if not $copy }}
+      {{ $copy = $.Page.Params.listenOnDemandCopy | default $.Page.Params.listen_on_demand_copy | default "" }}
+    {{ end }}
+    {{ if not $mixcloudURL }}
+      {{ range findRE `https?://[A-Za-z0-9./?&_%=#:+~-]+` $content }}
+        {{ if and (not $mixcloudURL) (in (lower .) "mixcloud.com") }}
+          {{ $mixcloudURL = . }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+    {{ partial "show/listen-on-demand-card.html" (dict "url" $mixcloudURL "copy" $copy) }}
+  {{ else }}
+  {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/featured-guest") }}
+    {{ $skipSection := false }}
+    {{ $spotlightLines := slice }}
+    {{ $linksByPlatform := dict }}
+    {{ $linkPattern := `\[(.*?)\]\((https?://[^)]+)\)` }}
+    {{ $content = replaceRE `(?is)\n\s*At the moment, I don.*?connect too\.\s*\n` "\n" $content }}
+    {{ $content = replaceRE `(?is)\n\s*I currently don.*?benefit of others\.\s*\n` "\n" $content }}
+
+    {{ range split $content "\n" }}
+      {{ $line := . }}
+      {{ $trimmed := strings.TrimSpace $line }}
+      {{ $plainHeading := $trimmed | replaceRE `^#+\s*` "" | replaceRE `\*\*` "" | strings.TrimSpace }}
+      {{ $plainHeadingLower := lower $plainHeading }}
+      {{ $isContactHeading := or (eq $plainHeadingLower "contact details") (eq $plainHeadingLower "contact detail") }}
+      {{ $isSocialHeading := or (eq $plainHeadingLower "social media") (eq $plainHeadingLower "social links") }}
+      {{ $isSkippedHeading := or $isContactHeading $isSocialHeading }}
+      {{ $isHeading := hasPrefix $trimmed "###" }}
+
+      {{ if $isSkippedHeading }}
+        {{ $skipSection = true }}
+      {{ else }}
+        {{ if and $skipSection $isHeading }}
+          {{ $skipSection = false }}
+        {{ end }}
+
+        {{ if $skipSection }}
+          {{ range findRESubmatch $linkPattern $line }}
+            {{ $label := index . 1 | strings.TrimSpace }}
+            {{ $url := index . 2 | strings.TrimSpace }}
+            {{ $prefix := $line | replaceRE `(?s)\[.*$` "" | replaceRE `^\s*-\s*` "" | replaceRE `\{\{<\s*new-tab-link\s+"?` "" | replaceRE `\*\*` "" | replaceRE `:` "" | strings.TrimSpace }}
+            {{ $platform := $prefix | default $label }}
+            {{ if or (eq $label "") (hasPrefix $label "http") }}
+              {{ $label = $prefix | default "Official Website" }}
+            {{ end }}
+            {{ $platformKey := lower $platform }}
+            {{ $platformKey = replace $platformKey " " "-" }}
+            {{ $platformKey = replace $platformKey "_" "-" }}
+            {{ $platformKey = replace $platformKey "." "" }}
+            {{ $urlLower := lower $url }}
+            {{ if or (in $platformKey "website") (in $platformKey "official-site") }}
+              {{ $platformKey = "website" }}
+            {{ else if in $platformKey "apple-music" }}
+              {{ $platformKey = "apple" }}
+            {{ else if or (in $platformKey "x-twitter") (eq $platformKey "x") (in $platformKey "twitter") }}
+              {{ $platformKey = "twitter" }}
+            {{ else if or (in $platformKey "facebook") (in $urlLower "facebook.com") }}
+              {{ $platformKey = "facebook" }}
+            {{ else if or (in $platformKey "instagram") (in $urlLower "instagram.com") }}
+              {{ $platformKey = "instagram" }}
+            {{ else if or (in $platformKey "youtube") (in $urlLower "youtube.com") (in $urlLower "youtu.be") }}
+              {{ $platformKey = "youtube" }}
+            {{ else if or (in $platformKey "bandcamp") (in $urlLower "bandcamp.com") }}
+              {{ $platformKey = "bandcamp" }}
+            {{ else if or (in $platformKey "spotify") (in $urlLower "spotify.com") }}
+              {{ $platformKey = "spotify" }}
+            {{ else if or (in $platformKey "discogs") (in $urlLower "discogs.com") }}
+              {{ $platformKey = "discogs" }}
+            {{ else if or (in $platformKey "musicbrainz") (in $urlLower "musicbrainz.org") }}
+              {{ $platformKey = "musicbrainz" }}
+            {{ else if or (in $platformKey "wikipedia") (in $urlLower "wikipedia.org") }}
+              {{ $platformKey = "wikipedia" }}
+            {{ else if or (in $platformKey "bluesky") (in $urlLower "bsky.app") }}
+              {{ $platformKey = "bluesky" }}
+            {{ end }}
+            {{ if eq $platformKey "website" }}
+              {{ $label = "Official Website" }}
+            {{ end }}
+            {{ if and $url (not (index $linksByPlatform $platformKey)) }}
+              {{ $linksByPlatform = merge $linksByPlatform (dict $platformKey $url) }}
+            {{ end }}
+          {{ end }}
+        {{ else if not (or (findRE `(?i)contact details|social media|social media links` $trimmed) (findRE `^-\s*~~` $trimmed)) }}
+          {{ $spotlightLines = $spotlightLines | append $line }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+
+    {{ $destinations := slice
+      (dict "key" "website" "label" "Official Website" "icon" "globe")
+      (dict "key" "bandcamp" "label" "Bandcamp" "icon" "music")
+      (dict "key" "spotify" "label" "Spotify" "icon" "spotify")
+      (dict "key" "apple" "label" "Apple Music" "icon" "apple")
+      (dict "key" "discogs" "label" "Discogs" "icon" "music")
+      (dict "key" "musicbrainz" "label" "MusicBrainz" "icon" "music")
+      (dict "key" "wikipedia" "label" "Wikipedia" "icon" "globe")
+      (dict "key" "youtube" "label" "YouTube" "icon" "youtube")
+      (dict "key" "facebook" "label" "Facebook" "icon" "facebook")
+      (dict "key" "instagram" "label" "Instagram" "icon" "instagram")
+      (dict "key" "twitter" "label" "X" "icon" "x-twitter")
+      (dict "key" "bluesky" "label" "Bluesky" "icon" "link")
+    }}
+    {{ $spotlightLinks := slice }}
+    {{ range $destinations }}
+      {{ $destination := . }}
+      {{ with index $linksByPlatform .key }}
+        {{ $spotlightLinks = $spotlightLinks | append (merge $destination (dict "url" .)) }}
+      {{ end }}
+    {{ end }}
+
+    {{ $content = delimit $spotlightLines "\n" | strings.TrimSpace }}
+    <div class="show-artist-spotlight not-prose">
+      <div class="show-artist-spotlight__card">
+        <div class="show-artist-spotlight__body prose max-w-none leading-relaxed dark:prose-invert">
+          {{ $.Page.RenderString $content }}
+        </div>
+        {{ partial "components/explore-further.html" (dict
+          "links" $spotlightLinks
+          "heading" "Explore Further"
+          "headingId" "show-artist-spotlight-explore-heading"
+          "sectionClass" "show-artist-spotlight__links not-prose"
+          "rowClass" "explore-further__row"
+          "iconClass" "explore-further__icon"
+        ) }}
+        <aside class="show-artist-spotlight__community" aria-label="Artist Spotlight community invitation">
+          <p class="show-artist-spotlight__community-heading">Know this artist?</p>
+          <p>If you spot missing or outdated links, or would like to recommend an artist for a future Artist Spotlight, I'd love to hear from you.</p>
+        </aside>
+      </div>
+    </div>
+  {{ else }}
+
+  {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/playlist") }}
+    {{ $lines := slice }}
+    {{ range split $content "\n" }}
+      {{ $line := . }}
+      {{ $trimmed := strings.TrimSpace $line }}
+      {{ $separatorLabel := "" }}
+      {{ $separatorDetail := "" }}
+
+      {{ if findRE `(?i)^-\s*advertising break\s*$` $trimmed }}
+        {{ $separatorLabel = "Advertising Break" }}
+      {{ else if findRE `(?i)^-\s*news\s*$` $trimmed }}
+        {{ $separatorLabel = "News" }}
+      {{ else if findRE `(?i)^--\s*adverts?\s*--?\s*(\[[^]]+\])?\s*$` $trimmed }}
+        {{ $separatorLabel = "Advertising Break" }}
+        {{ $separatorDetail = strings.TrimSpace (replaceRE `(?i)^--\s*adverts?\s*--?\s*(\[[^]]+\])?\s*$` "$1" $trimmed) }}
+      {{ else if findRE `(?i)^--\s*news\s*--?\s*(\[[^]]+\])?\s*$` $trimmed }}
+        {{ $separatorLabel = "News" }}
+        {{ $separatorDetail = strings.TrimSpace (replaceRE `(?i)^--\s*news\s*--?\s*(\[[^]]+\])?\s*$` "$1" $trimmed) }}
+      {{ end }}
+
+      {{ if $separatorLabel }}
+        {{ if $separatorDetail }}
+          {{ $line = printf `{{< broadcast-separator "%s" "%s" >}}` $separatorLabel $separatorDetail }}
+        {{ else }}
+          {{ $line = printf `{{< broadcast-separator "%s" >}}` $separatorLabel }}
+        {{ end }}
+      {{ end }}
+
+      {{ $lines = $lines | append $line }}
+    {{ end }}
+    {{ $content = delimit $lines "\n" }}
+  {{ end }}
+
+  {{ $forSaleTracks := slice }}
+  {{ with $includedPage }}
+    {{ with (.Params.forSaleTracks | default .Params.for_sale_tracks) }}
+      {{ if reflect.IsSlice . }}
+        {{ range . }}
+          {{ $forSaleTracks = $forSaleTracks | append . }}
+        {{ end }}
+      {{ else }}
+        {{ $forSaleTracks = $forSaleTracks | append . }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ $collectForSaleTracks := false }}
+  {{ if eq (len $forSaleTracks) 0 }}
+    {{ range split $frontMatter "\n" }}
+      {{ $line := strings.TrimSpace . }}
+      {{ if or (eq $line "forSaleTracks:") (eq $line "for_sale_tracks:") }}
+        {{ $collectForSaleTracks = true }}
+      {{ else if $collectForSaleTracks }}
+        {{ if hasPrefix $line "-" }}
+          {{ $track := strings.TrimSpace (strings.TrimPrefix "-" $line) }}
+          {{ $track = strings.Trim $track "\"'" }}
+          {{ with $track }}
+            {{ $forSaleTracks = $forSaleTracks | append . }}
+          {{ end }}
+        {{ else if ne $line "" }}
+          {{ $collectForSaleTracks = false }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if gt (len $forSaleTracks) 0 }}
+    {{ $lines := slice }}
+    {{ range split $content "\n" }}
+      {{ $line := . }}
+      {{ $isForSaleTrack := false }}
+      {{ $lowerLine := lower $line }}
+      {{ range $forSaleTracks }}
+        {{ if and (not $isForSaleTrack) (in $lowerLine (lower (printf "%v" .))) }}
+          {{ $isForSaleTrack = true }}
+        {{ end }}
+      {{ end }}
+      {{ if and $isForSaleTrack (not (in $line "{{< for-sale >}}")) }}
+        {{ $line = printf "%s {{< for-sale >}}" $line }}
+      {{ end }}
+      {{ $lines = $lines | append $line }}
+    {{ end }}
+    {{ $content = delimit $lines "\n" }}
+  {{ end }}
+
+  {{ if and (hasPrefix $path "shows/") (hasSuffix $path "/track-info") }}
+    {{ partial "show/track-guide.html" (dict "page" $.Page "content" $content) }}
+  {{ else }}
+    {{ $.Page.RenderString $content }}
+  {{ end }}
+  {{ end }}
+  {{ end }}
+{{ end }}

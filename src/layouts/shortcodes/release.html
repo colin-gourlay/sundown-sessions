@@ -1,0 +1,15 @@
+{{ $releaseInfo := .Get 0 }}
+{{ with $releaseInfo }}
+    {{ $parts := split . "--" }}
+    {{ $releaseName := index $parts 0 }}
+    {{ $artist := index $parts 1 }}
+    {{ $artistFirstChar := index $artist 0 | printf "%c" | lower }}
+    {{ $artistSlug := $artist | urlize }}
+    {{ $releaseSlug := $releaseName | urlize }}
+    {{ if ge (len $parts) 3 }}
+        {{ with index $parts 2 | strings.TrimSpace }}{{ $releaseSlug = . | urlize }}{{ end }}
+    {{ end }}
+    {{ $releasePage := $.Site.GetPage (printf "releases/%s/%s/%s" $artistFirstChar $artistSlug $releaseSlug) }}
+    {{ $badgeLabel := cond ($.Page.Scratch.Get "trackGuideReleaseMeta") "Available to Buy" "Available to buy" }}
+    {{ if $releasePage }}<a href="{{ $releasePage.Permalink }}">{{ $releaseName }}</a>{{ if $releasePage.Params.for_sale }} {{ partial "for-sale-badge.html" (dict "label" $badgeLabel) }}{{ end }}{{ else }}{{ $releaseName }}{{ end }}
+{{ end }}

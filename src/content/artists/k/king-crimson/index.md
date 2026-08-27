@@ -13,10 +13,6 @@ Following another hiatus (2009–2012), during which Fripp was thought to be ret
 
 
 
-## Show(s) appeared on
-
-- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/kingcrimsonofficial](https://www.facebook.com/kingcrimsonofficial)" >}}

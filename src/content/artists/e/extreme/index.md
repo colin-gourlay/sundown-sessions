@@ -11,10 +11,6 @@ Extreme achieved their greatest success with their 1990 album Pornograffitti, wh
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/extremeband](https://www.facebook.com/extremeband)" >}}

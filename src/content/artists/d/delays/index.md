@@ -10,10 +10,6 @@ Delays are an English indie band formed in Southampton, which consisted of broth
 
 
 
-## Show(s) appeared on
-
-- [Show #8](/shows/featuring-baby-bartok/) (th August 2024) - Featuring: Baby Bartok
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/thedelays](https://www.facebook.com/thedelays)" >}}

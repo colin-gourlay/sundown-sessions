@@ -1,0 +1,7 @@
+{{- $cardTitle := .Title | emojify -}}
+{{- $titleParts := split .Title ": " -}}
+{{- $titleBase := index $titleParts 0 -}}
+{{- if strings.HasPrefix $titleBase "Show #" -}}
+  {{- $cardTitle = replace $titleBase "Show #" "Sundown Sessions #" -}}
+{{- end -}}
+{{- return $cardTitle -}}

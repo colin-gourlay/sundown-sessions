@@ -2,6 +2,7 @@
 genres: ["Pop","Sophisti-Pop"]
 featured_image: artists/b/black/black.jpg
 title: Black
+discogs_name: "Black (2)"
 artist_page: true
 ---
 ## About
@@ -10,10 +11,6 @@ Colin Vearncombe (26 May 1962 – 26 January 2016), known by his stage name Blac
 William Ruhlmann of AllMusic described Vearncombe as a "smoky-voiced singer/songwriter, whose sophisticated jazz-pop songs and dramatic vocal delivery place him somewhere between Bryan Ferry and Morrissey". Michael Hann of The Guardian described his voice as a "slightly frayed baritone".
 
 
-
-## Show(s) appeared on
-
-- [Show #9](/shows/featuring-colin-gourlay-from-andysmanclub/) (4th August 2024) - Featuring: Colin Gourlay from ANDYSMANCLUB
 
 ## External Links
 

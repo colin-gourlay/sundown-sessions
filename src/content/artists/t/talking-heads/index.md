@@ -11,10 +11,6 @@ Byrne, Frantz, and Weymouth met as freshmen at the Rhode Island School of Design
 Talking Heads reached their commercial peak in 1983 with the U.S. Top 10 hit "Burning Down the House" from the album Speaking in Tongues. In 1984, they released the concert film Stop Making Sense, directed by Jonathan Demme. For these performances, they were joined by Worrell, the guitarist Alex Weir, the percussionist Steve Scales and the singers Lynn Mabry and Ednah Holt. In 1985, Talking Heads released their best-selling album, Little Creatures. They produced a soundtrack album for Byrne's film True Stories (1986), and released their final album, the worldbeat-influenced Naked (1988), before disbanding in 1991. Without Byrne, the other band members performed under the name Shrunken Heads, and released an album, No Talking, Just Head, as the Heads in 1996.
 In 2002, Talking Heads were inducted into the Rock and Roll Hall of Fame. Four of their albums appeared on Rolling Stone's 2003 list of the "500 Greatest Albums of All Time", and three of their songs ("Psycho Killer", "Life During Wartime", and "Once in a Lifetime") were included among the Rock and Roll Hall of Fame's 500 Songs That Shaped Rock and Roll. Talking Heads were also ranked number 64 on VH1's list of the "100 Greatest Artists of All Time". In the 2011 update of Rolling Stone's list of the "100 Greatest Artists of All Time", they were ranked number 100.
 
-## Show(s) appeared on
-
-- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/TalkingHeadsofficial](https://www.facebook.com/TalkingHeadsofficial)" >}}

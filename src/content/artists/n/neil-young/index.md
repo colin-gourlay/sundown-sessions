@@ -13,10 +13,6 @@ Young has received several Grammy and Juno Awards. The Rock and Roll Hall of Fam
 
 
 
-## Show(s) appeared on
-
-- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/NeilYoung](https://www.facebook.com/NeilYoung)" >}}

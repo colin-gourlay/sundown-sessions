@@ -12,8 +12,8 @@ I currently don't have contact information or social media links for Blue On Sho
 
 ### Social Media
 
-- ~~[Facebook]~~
-- ~~[Instagram]~~
-- ~~[Twitter]~~
-- ~~[LinkedIn]~~
-- ~~[YouTube]~~
+- ~~**Facebook:**~~
+- ~~**Instagram:**~~
+- ~~**Twitter:**~~
+- ~~**LinkedIn:**~~
+- ~~**YouTube:**~~

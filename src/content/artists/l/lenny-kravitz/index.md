@@ -11,10 +11,6 @@ Kravitz released his debut album Let Love Rule in 1989. This marked the beginnin
 Kravitz has won several awards, including the Grammy Award for Best Male Rock Vocal Performance, which he received four years in a row from 1999 to 2002, breaking the record for most wins in that category, and setting the record for most consecutive wins in one category by a male performer. Kravitz has sold over 40 million albums worldwide and was ranked 93 on VH1's "100 Greatest Artists of Hard Rock". 
 Aside from his music career, Kravitz has acted in films including Precious (2009) and the first two installments of The Hunger Games film series (2012–13). He also set up Kravitz Design Inc. He was previously married to Lisa Bonet, with whom he has a daughter, Zoë Kravitz.
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/lennykravitz](https://www.facebook.com/lennykravitz)" >}}

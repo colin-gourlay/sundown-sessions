@@ -1,0 +1,94 @@
+{{ $heroImageURL := "" }}
+{{ $heroOverlayBottomOffset := "7%" }}
+{{ with .Site.Params.homepage.homepageImage | default .Site.Params.defaultBackgroundImage }}
+  {{ if or (strings.HasPrefix . "http://") (strings.HasPrefix . "https://") }}
+    {{ $heroImageURL = . }}
+  {{ else }}
+    {{ with resources.Get . }}
+      {{ $heroImageURL = .RelPermalink }}
+    {{ else }}
+      {{ $heroImageURL = . | relURL }}
+    {{ end }}
+  {{ end }}
+{{ end }}
+
+<article class="space-y-10">
+  {{ if $heroImageURL }}
+    <div class="space-y-6">
+      <section
+        class="relative overflow-hidden rounded-2xl shadow-2xl"
+        role="region"
+        aria-labelledby="homepage-hero-heading">
+        <img
+          src="{{ $heroImageURL }}"
+          alt=""
+          role="presentation"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="h-72 w-full object-cover sm:h-80 lg:h-96"
+          {{ with .Site.Params.homepage.homepageImagePosition }}style="object-position: {{ . | safeCSS }};"{{ end }}>
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 bg-gradient-to-t from-neutral-950/80 via-neutral-950/45 to-neutral-950/20"></div>
+        <div
+          aria-hidden="true"
+          class="absolute inset-0 hero-overlay"></div>
+        <div class="absolute inset-x-0 top-0 flex items-center justify-center px-4" style="{{ printf "bottom: %s;" $heroOverlayBottomOffset | safeCSS }}">
+          <div class="mx-auto flex w-full max-w-4xl flex-col items-center text-center">
+            <h1 id="homepage-hero-heading" class="mt-0 text-4xl font-sans font-extrabold tracking-tight text-neutral-50 drop-shadow-2xl hero-text-shadow sm:text-5xl">
+              {{ .Params.headline | default .Title }}
+            </h1>
+            {{ with .Params.strapline }}
+              <p class="mt-2 text-base font-semibold tracking-widest text-neutral-200 drop-shadow-lg hero-text-shadow uppercase sm:text-lg">{{ . }}</p>
+            {{ end }}
+            
+          </div>
+        </div>
+      </section>
+      {{ with .Description }}
+        <p class="mx-auto max-w-2xl px-4 text-center text-base font-medium text-neutral-700 dark:text-neutral-300 sm:text-lg">{{ . }}</p>
+      {{ end }}
+    </div>
+    {{ with .Content }}
+      <section class="prose max-w-none pt-6 dark:prose-invert sm:pt-8" role="region" aria-labelledby="homepage-content-heading">
+        <h2 id="homepage-content-heading" class="sr-only">Homepage introduction</h2>
+        {{ . }}
+      </section>
+    {{ end }}
+  {{ else }}
+    <section class="prose dark:prose-invert" role="region" aria-labelledby="homepage-heading">
+      <h1 id="homepage-heading" class="mb-4 mt-0 text-4xl font-sans font-extrabold text-neutral-900 dark:text-neutral-100">
+        {{ .Params.headline | default .Title }}
+      </h1>
+      <div class="w-full">{{ .Content }}</div>
+    </section>
+  {{ end }}
+
+  {{/* Recent Shows */}}
+  {{ $showsSection := site.GetPage "shows" }}
+  {{ if $showsSection }}
+    {{ $showPages := where $showsSection.Pages ".Date.IsZero" false }}
+    {{ $recentShows := first 4 ($showPages.ByDate.Reverse) }}
+    {{ if $recentShows }}
+      <section role="region" aria-labelledby="recent-shows-heading">
+        <div class="mb-4 flex items-center justify-between">
+          <h2 id="recent-shows-heading" class="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+            Recent Shows
+          </h2>
+          <a
+            href="{{ $showsSection.RelPermalink }}"
+            class="text-sm font-medium text-primary-600 hover:underline hover:underline-offset-2 dark:text-primary-400">
+            View all shows →
+          </a>
+        </div>
+        <div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+          {{ range $recentShows }}
+            {{ partial "article-link/card.html" . }}
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+
+</article>

@@ -39,6 +39,29 @@ keywords:
  - 'Talking Heads'
  - 'Electric Light Orchestra'
  - 'Nick Cave & The Bad Seeds'
+tags:
+ - 'A celebration of Elektra Records'
+ - 'Death In Vegas'
+ - 'Squeeze'
+ - 'Chris Isaak'
+ - 'Fiona Apple'
+ - 'The Cars'
+ - 'Love'
+ - 'Clear Light'
+ - 'The Doors'
+ - 'The Stooges'
+ - 'Pixies'
+ - '10,000 Maniacs'
+ - 'Fairport Convention'
+ - 'The Cult'
+ - 'Sisters of Mercy'
+ - 'King Crimson'
+ - 'Prince'
+ - 'Kristin Hersh'
+ - 'Santana'
+ - 'Talking Heads'
+ - 'Electric Light Orchestra'
+ - 'Nick Cave & The Bad Seeds'
 toc: true
 featured_image: '11-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -47,7 +70,7 @@ date: 2024-08-28T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/11/playlist" >}}
 
 ---
@@ -57,10 +80,11 @@ draft: true
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/11/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/11/track-info" >}}

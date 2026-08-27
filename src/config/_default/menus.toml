@@ -1,0 +1,41 @@
+[[main]]
+  identifier = "shows"
+  name = "Shows"
+  title = "Browse Sundown Sessions shows (g then s)"
+  url = "/shows/"
+  weight = 10
+
+[[main]]
+  identifier = "about"
+  name = "About"
+  title = "Learn about Sundown Sessions (g then a)"
+  url = "/about/"
+  weight = 20
+
+[[main]]
+  identifier = "contact"
+  name = "Contact"
+  title = "Get in touch with the show (g then c)"
+  url = "/contact/"
+  weight = 30
+
+[[footer]]
+  identifier = "listen-again"
+  name = "Browse Shows"
+  title = "Browse the Sundown Sessions show archive"
+  url = "/shows/"
+  weight = 10
+
+[[footer]]
+  identifier = "contact"
+  name = "Contact"
+  title = "Get in touch with the show."
+  url = "/contact/"
+  weight = 20
+
+[[footer]]
+  identifier = "corrections"
+  name = "Suggest a correction"
+  title = "Report inaccurate, outdated or missing content."
+  url = "/corrections/"
+  weight = 30

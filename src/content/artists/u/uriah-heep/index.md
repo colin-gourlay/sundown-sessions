@@ -12,10 +12,6 @@ Uriah Heep have released twenty-five studio albums of original material, twenty 
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/uriahheepofficial](https://www.facebook.com/uriahheepofficial)" >}}

@@ -41,6 +41,31 @@ keywords:
  - 'Billy Preston'
  - 'Isobel Campbell'
  - 'Nick Cave & The Bad Seeds'
+tags:
+ - 'Baby Bartok'
+ - 'Gary Numan'
+ - 'Nick Lowe'
+ - 'John Lennon'
+ - 'R.E.M.'
+ - 'Wire'
+ - 'Dragons'
+ - 'IST IST'
+ - 'Delays'
+ - 'Air Traffic'
+ - 'Nadine Shah'
+ - 'The Associates'
+ - 'Simple Minds'
+ - 'Goldfrapp'
+ - 'Willie Nelson'
+ - 'Mean Gene Kelton'
+ - 'George Thorogood & The Destroyers'
+ - 'Nazareth'
+ - 'Juicy Lucy'
+ - 'Jackie Lomax'
+ - 'Ringo Starr'
+ - 'Billy Preston'
+ - 'Isobel Campbell'
+ - 'Nick Cave & The Bad Seeds'
 toc: true
 featured_image: '8-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -49,7 +74,7 @@ date: 2024-08-07T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/8/playlist" >}}
 
 ---
@@ -59,10 +84,11 @@ draft: true
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/8/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/8/track-info" >}}

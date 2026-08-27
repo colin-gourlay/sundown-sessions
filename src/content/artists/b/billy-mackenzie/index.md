@@ -1,9 +1,15 @@
 ---
 title: Billy MacKenzie
 featured_image: artists/b/billy-mackenzie/billy-mackenzie.jpg
+summary: "Dundee singer celebrated for his extraordinary vocal range, restless collaborations and singular work with the Associates."
+description: "Dundee singer and Associates frontman celebrated for his extraordinary vocal range, dramatic phrasing and adventurous art-pop collaborations."
+editorialSummary: >
+  Billy MacKenzie's astonishing voice could move from intimate restraint to operatic drama, giving every song an unmistakable emotional charge.
 artist_page: true
+lastReviewed: 2026-08-26
 ---
 ## About
 
-Billy MacKenzie (27 March 1957 - 22 January 1997) was born in Dundee, Scotland, United Kingdom. He joined forces with fellow musician Alan Rankine as Associates in the late 1970's and released their first 7" - a cover of David Bowie's Boys Keep Swinging. The pair then released a string of critically acclaimed albums and singles under the Associates name. After Billy and Alan split in 1982 the group continued. Now called The Associates, various line-ups (always with Billy on vocals and writing most of the material) continued to release records until 1991 when the group folded. Billy also released a few singles through the 1980's, variously as MacKenzie Sings Orbidoig, Holger Hiller Featuring Billy MacKenzie and BEF Featuring Billy MacKenzie. He also contributed vocal duties to a number of other artists such as Skids and Yello. His first proper solo excursions under his own name were in 1992 with the album Outernational and a clutch of solo singles. Billy continued recording and releasing material with Yello, Peach, Barry Adamson, Apollo Four Forty, Loom and Siobhan Fahey amongst others. Shortly after finishing work on what would have been his comeback album for Nude Records, MacKenzie took his own life in 1997, at Auchterhouse in the Sidlaw Hills by Dundee, Scotland. He was 39 years old.
+Billy MacKenzie was a Scottish singer and songwriter from Dundee whose remarkable range and dramatic phrasing defined the Associates. Working first with Alan Rankine, he helped turn art-pop, post-punk and electronic experimentation into records as exhilarating as "Party Fears Two" and *Sulk*.
 
+His later solo work and collaborations with artists including Yello, B.E.F. and Barry Adamson kept that exploratory spirit alive. MacKenzie's performances remain thrilling because technical brilliance always served the song's vulnerability, wit and emotional extremes.

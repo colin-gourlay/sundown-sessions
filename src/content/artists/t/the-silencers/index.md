@@ -10,7 +10,3 @@ The Silencers are a Scottish rock band formed in London in 1986 by Jimme O'Neill
 
 
 
-## Show(s) appeared on
-
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
-

@@ -43,6 +43,33 @@ keywords:
  - 'The Exploding Boy'
  - 'Soundmachine'
  - 'Runrig'
+tags:
+ - 'TBD'
+ - 'Sparks'
+ - 'Steven Lindsay'
+ - 'Teenage Fanclub'
+ - 'The Korgis'
+ - 'The Hollies'
+ - 'The Honeycombs'
+ - 'The Tornados'
+ - 'Fabienne DelSol'
+ - 'Jacco Gardner'
+ - 'The Idle Race'
+ - 'Alphaville'
+ - 'Win'
+ - 'The Blue Nile'
+ - 'The Knack'
+ - 'The Undertones'
+ - 'The Vapors'
+ - 'Squeeze'
+ - 'Monaco'
+ - 'Kylie Minogue'
+ - 'Bootblacks'
+ - 'A Projection'
+ - 'Dragons'
+ - 'The Exploding Boy'
+ - 'Soundmachine'
+ - 'Runrig'
 toc: true
 featured_image: '18-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -51,7 +78,7 @@ date: 2024-11-05T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/18/playlist" >}}
 
 ---
@@ -61,10 +88,11 @@ draft: true
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/18/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/18/track-info" >}}

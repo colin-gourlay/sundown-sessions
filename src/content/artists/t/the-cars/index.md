@@ -13,10 +13,6 @@ The Cars disbanded in 1988. Orr died in 2000 from pancreatic cancer. In 2007, Ea
 
 
 
-## Show(s) appeared on
-
-- [Show #11](/shows/featuring-a-celebration-of-elektra-records/) (28th August 2024) - Featuring: A celebration of Elektra Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/TheCars](https://www.facebook.com/TheCars)" >}}

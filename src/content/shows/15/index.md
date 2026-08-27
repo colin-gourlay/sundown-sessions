@@ -43,6 +43,33 @@ keywords:
  - 'The Ruts'
  - 'Patti Smith'
  - 'John Lennon'
+tags:
+ - 'A celebration of the e-bow'
+ - 'Balaam And The Angel'
+ - 'Big Country'
+ - 'The Mission'
+ - 'PJ Harvey'
+ - 'The Tony Hatch Orchestra'
+ - 'Wings'
+ - 'Something Happens'
+ - 'Nick Lowe'
+ - 'Dave Edmunds'
+ - 'Radio Stars'
+ - 'XTC'
+ - 'David Bowie'
+ - 'Space'
+ - 'Giorgio Moroder'
+ - 'Depeche Mode'
+ - 'R.E.M.'
+ - 'The Beatles'
+ - 'The Move'
+ - 'The Music Machine'
+ - 'Nazz'
+ - 'Toni Fisher'
+ - 'Skids'
+ - 'The Ruts'
+ - 'Patti Smith'
+ - 'John Lennon'
 toc: true
 featured_image: '15-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -51,7 +78,7 @@ date: 2024-10-15T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/15/playlist" >}}
 
 ---
@@ -61,10 +88,11 @@ draft: true
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/15/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/15/track-info" >}}

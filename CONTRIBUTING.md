@@ -1,0 +1,147 @@
+# Contributing
+
+Thank you for contributing to Sundown Sessions.
+
+This guide defines the repository branching convention and pull request workflow.
+
+> **Note — Blowfish migration in progress.** The Hugo site is being moved onto
+> the [Blowfish](https://github.com/nunocoracao/blowfish) theme in small,
+> independently mergeable slices. Until the cutover PR lands, the live theme
+> remains `sundown-sessions`. When working in `src/`:
+>
+> - Run `git submodule update --init --recursive` after cloning so the
+>   Blowfish theme under `src/themes/blowfish` is materialised.
+> - Do not edit files inside `src/themes/blowfish/`. Customisations belong in
+>   project-level overrides under `src/layouts/` and `src/assets/`.
+> - Avoid touching `src/themes/sundown-sessions/` unless the change is
+>   specifically scoped to the legacy theme.
+
+## Branching Model
+
+This repository uses trunk-based development.
+
+- `main` is the only long-lived branch.
+- All changes are made on short-lived branches.
+- Merge changes to `main` through pull requests.
+- Keep branches small and focused to reduce review and merge risk.
+
+## Branch Naming Convention
+
+Use the format:
+
+`type/workstream/short-description`
+
+Examples:
+
+- `feat/src/add-artist-social-links`
+- `fix/src/correct-show-ordering`
+- `docs/repo/clarify-local-setup`
+
+### Allowed Type Values
+
+The branch `type` should align with the conventional commit categories used in pull requests:
+
+- `feat`
+- `fix`
+- `docs`
+- `chore`
+- `refactor`
+- `test`
+- `build`
+- `ci`
+
+### Workstream Values
+
+Use a clear workstream segment that reflects the area being changed:
+
+- `src` for Hugo website work
+- `repo` for repository-level changes
+
+### Short Description Rules
+
+Use a concise, hyphenated summary:
+
+- lower-case letters, numbers, and hyphens only
+- describe intent, not implementation detail
+- keep it brief and readable
+
+## Pull Request Convention
+
+Create pull requests from your short-lived branch into `main`.
+
+### Title Format
+
+Pull request titles must follow conventional commits:
+
+`type(scope): summary`
+
+or:
+
+`type: summary`
+
+Accepted `type` values are:
+
+- `feat`
+- `fix`
+- `docs`
+- `chore`
+- `refactor`
+- `test`
+- `build`
+- `ci`
+
+Examples:
+
+- `fix(website): correct show ordering logic`
+- `docs: define repository branching convention`
+
+### Description Quality
+
+Pull request descriptions should clearly explain intent, context, and impact.
+
+## Accessibility Standard
+
+Sundown Sessions targets **WCAG 2.2 Level AA** as the minimum accessibility standard for public-facing website changes. Treat accessibility as part of normal design, development, content, review, and testing work.
+
+Before opening a pull request that changes `src/content/`, `src/layouts/`, `src/assets/`, or public-facing configuration, review the affected pages for keyboard access, visible focus, alternative text, colour contrast, semantic HTML, form labels, responsive reflow, and screen reader impact.
+
+The detailed accessibility baseline, review checklist, and automated/manual validation guidance are documented in [docs/accessibility.md](docs/accessibility.md).
+
+## Release and Deployment Notes
+
+### Website
+
+- Production deployment is triggered from `main`.
+
+### GitHub Actions Updates
+
+- Dependabot opens pull requests for GitHub Actions updates.
+- Review the upstream action release notes and repository before merging.
+- Confirm each pinned SHA matches the expected release tag.
+- Let the affected workflows pass before merging.
+- Keep non-action Docker image digests under separate review when they are introduced.
+
+## Markdown Linting
+
+All Markdown files in this repository are linted using [markdownlint](https://github.com/DavidAnson/markdownlint).
+
+The shared ruleset is defined in `.markdownlint.json` at the repository root.
+
+### Running Linting Locally
+
+Run the linter locally before opening a pull request:
+
+```bash
+npx markdownlint-cli2 "**/*.md" "!src/themes/**"
+```
+
+### GitHub Action
+
+The `Lint Markdown` workflow runs automatically on pull requests and pushes when Markdown files or the linting configuration change. The workflow must pass before changes are merged.
+
+## Additional Repository Standards
+
+- Use British English in documentation and user-facing text.
+- Keep edits scoped and avoid unrelated refactoring.
+
+For architecture and setup details, see [README.md](README.md).

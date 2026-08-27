@@ -1,10 +1,7 @@
 ---
 title: "Sundown Sessions"
-description: "An eclectic mix of aural delight for your listening pleasure"
+strapline: "Alternative Music After Dark"
+description: "Discover your next favourite sound through exclusive tracks, artist interviews, and hand-curated playlists."
 cascade:
-    featured_image: '/images/sundown-sessions-banner.jpg'
+    featured_image: '/images/sundown-sessions-banner.png'
 ---
-
-A radio show broadcast on East Coast FM on Tuesday evenings from 8pm - 10pm (UK time)
-
-This site is a supplement to that show

@@ -2,17 +2,17 @@
 genres: ["Blues Rock","Soul"]
 featured_image: artists/t/the-teskey-brothers/the-teskey-brothers.jpg
 title: The Teskey Brothers
+summary: "Australian soul-blues band known for warm vintage production, slow-burning grooves and Josh Teskey's vocal fire."
+description: "Australian soul-blues band from Warrandyte, known for warm vintage production, slow-burning grooves and Josh Teskey's powerful vocal fire."
+editorialSummary: >
+  The Teskey Brothers breathe new life into classic soul through heartfelt songwriting and remarkable musicianship.
 artist_page: true
+lastReviewed: 2026-07-13
 ---
+
 ## About
 
-The Teskey Brothers are an Australian blues rock band from Melbourne, named after the two brothers who formed the group in 2008: Josh Teskey (vocals, rhythm guitar) and Sam Teskey (lead guitar). In 2019, they signed with Glassnote Records and Ivy League Records. They have released three albums: Half Mile Harvest (2017), Run Home Slow (2019) and The Winding Way (2023). At the 2019 ARIA Music Awards, The Teskey Brothers were nominated for seven awards. They won three categories for the album Run Home Slow, Best Group, Best Blues and Roots Album and Engineer of the Year (Sam Teskey).
-
-
-
-## Show(s) appeared on
-
-- [Show #1](/shows/featuring-the-big-now/) (5th June 2024) - Featuring: The Big Now
+The Teskey Brothers are an Australian soul and blues-rock band from Melbourne, led by brothers Josh and Sam Teskey. Their records, including Half Mile Harvest, Run Home Slow and The Winding Way, channel classic soul warmth, gospel feeling and blues grit through a modern, deeply felt live-band sound.
 
 ## External Links
 

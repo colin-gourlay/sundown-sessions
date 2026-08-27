@@ -1,0 +1,83 @@
+{{/* Releases connected to an artist through release front matter or bundle path. */}}
+
+{{ $artistName := .Title }}
+{{ $artistTitleKey := lower (urlize $artistName) }}
+{{ $artistKey := $artistTitleKey }}
+{{ with .File }}
+  {{ $artistKey = lower (path.Base (strings.TrimSuffix "/" .Dir)) }}
+{{ end }}
+{{ $releases := slice }}
+
+{{ range where site.RegularPages "Section" "releases" }}
+  {{ $release := . }}
+  {{ $artistMatches := false }}
+
+  {{ range $field := slice .Params.artist .Params.artists }}
+    {{ with $field }}
+      {{ if reflect.IsSlice . }}
+        {{ range . }}
+          {{ $name := "" }}
+          {{ if reflect.IsMap . }}
+            {{ $name = index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug") | default "" }}
+          {{ else }}
+            {{ $name = . }}
+          {{ end }}
+          {{ $releaseArtistKey := lower (urlize (printf "%v" $name)) }}
+          {{ if or (eq $releaseArtistKey $artistKey) (eq $releaseArtistKey $artistTitleKey) }}{{ $artistMatches = true }}{{ end }}
+        {{ end }}
+      {{ else if reflect.IsMap . }}
+        {{ $name := index . "title" | default (index . "name") | default (index . "artist") | default (index . "slug") | default "" }}
+        {{ $releaseArtistKey := lower (urlize (printf "%v" $name)) }}
+        {{ if or (eq $releaseArtistKey $artistKey) (eq $releaseArtistKey $artistTitleKey) }}{{ $artistMatches = true }}{{ end }}
+      {{ else }}
+        {{ $releaseArtistKey := lower (urlize (printf "%v" .)) }}
+        {{ if or (eq $releaseArtistKey $artistKey) (eq $releaseArtistKey $artistTitleKey) }}{{ $artistMatches = true }}{{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if and (not $artistMatches) .File }}
+    {{ $releaseDir := strings.TrimSuffix "/" (replace .File.Dir "\\" "/") }}
+    {{ if eq (lower (urlize (path.Base (path.Dir $releaseDir)))) $artistKey }}
+      {{ $artistMatches = true }}
+    {{ end }}
+  {{ end }}
+
+  {{ if $artistMatches }}
+    {{ $releases = $releases | append $release }}
+  {{ end }}
+{{ end }}
+
+{{ if gt (len $releases) 0 }}
+  <section class="mb-10 not-prose" role="region" aria-labelledby="artist-featured-releases-heading">
+    <h2 id="artist-featured-releases-heading" class="mb-4 text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+      Releases Featured on Sundown Sessions
+    </h2>
+    <div class="release-discover-more__grid">
+      {{ range first 6 ($releases.ByTitle) }}
+        {{ $release := . }}
+        {{ $artworkURL := partial "release/artwork-url.html" $release }}
+
+        <article class="release-discover-card">
+          <a class="release-discover-card__link" href="{{ $release.RelPermalink }}">
+            {{ with $artworkURL }}
+              <span class="release-discover-card__media">
+                <img src="{{ . }}" alt="{{ $release.Title }} artwork" loading="lazy" decoding="async">
+              </span>
+            {{ end }}
+            <span class="release-discover-card__body">
+              <span class="release-discover-card__title">{{ $release.Title | emojify }}</span>
+              {{ with ($release.Params.releaseDate | default $release.Params.release_date | default $release.Params.releaseType | default $release.Params.release_type) }}
+                {{ $releaseMeta := printf "%v" . }}
+                {{ if gt (len (findRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}` $releaseMeta 1)) 0 }}
+                  {{ $releaseMeta = time.Format "2 January 2006" . }}
+                {{ end }}
+                <span class="release-discover-card__meta">{{ $releaseMeta }}</span>
+              {{ end }}
+            </span>
+          </a>
+        </article>
+      {{ end }}
+    </div>
+  </section>
+{{ end }}

@@ -1,0 +1,181 @@
+{{/* Artist Header — replaces the standard hero banner on artist pages.
+     Displays the artist image alongside key information: name, a short summary,
+     Sundown Sessions statistics, and a primary call to action. */}}
+
+{{/* Image resolution: mirrors the logic used in hero/basic.html and card.html */}}
+{{ $featured := "" }}
+{{ $featuredURL := "" }}
+{{ $featureImage := .Params.featureimage | default .Params.featured_image }}
+{{ with $featureImage }}
+  {{ if or (strings.HasPrefix . "http:") (strings.HasPrefix . "https:") }}
+    {{ $featuredURL = . }}
+  {{ else }}
+    {{ $featured = $.Resources.GetMatch . }}
+    {{ if not $featured }}{{ $featured = $.Resources.GetMatch (path.Base .) }}{{ end }}
+    {{ if not $featured }}{{ $featured = resources.Get . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not (or $featured $featuredURL) }}
+  {{ $images := .Resources.ByType "image" }}
+  {{ range slice "*feature*" "*cover*" "*thumbnail*" }}
+    {{ if not $featured }}{{ $featured = $images.GetMatch . }}{{ end }}
+  {{ end }}
+{{ end }}
+
+{{ if not $featuredURL }}
+  {{ with $featured }}
+    {{ $featuredURL = .RelPermalink }}
+  {{ end }}
+{{ end }}
+
+{{/* Artist summary — prefer editorial summary when present, fall back to factual summary */}}
+{{ $artistSummary := .Params.editorialSummary | default (.Params.summary | default .Description) }}
+{{ if not $artistSummary }}
+  {{ $contentSections := split .Content `<h2` }}
+  {{ $summarySource := .Content }}
+  {{ if ge (len $contentSections) 2 }}
+    {{ $introContent := index $contentSections 0 | strings.TrimSpace }}
+    {{ $firstSection := printf `<h2%s` (index $contentSections 1) }}
+    {{ $firstHeading := index (split $firstSection `</h2>`) 0 | plainify | strings.TrimSpace | replaceRE `\s*#\s*$` "" }}
+    {{ if eq $firstHeading "About" }}
+      {{ $summarySource = delimit (after 1 (split $firstSection `</h2>`)) `</h2>` | strings.TrimSpace }}
+    {{ else }}
+      {{ $summarySource = $introContent }}
+    {{ end }}
+  {{ end }}
+  {{ with findRE `(?s)<p>.*?</p>` $summarySource 1 }}
+    {{ $artistSummary = index . 0 | plainify | htmlUnescape | strings.TrimSpace }}
+  {{ end }}
+{{ end }}
+{{ if not $artistSummary }}
+  {{ $artistSummary = "" }}
+{{ end }}
+{{/* Keep summaries to ~2 lines in the desktop card by capping at 220 characters. */}}
+{{ $artistSummaryMaxLength := 220 }}
+{{ if $artistSummary }}
+  {{ $artistSummary = $artistSummary | truncate $artistSummaryMaxLength }}
+{{ end }}
+
+{{/* Sundown Sessions statistics — derive featured shows and tracks from playlists */}}
+{{ $artistArchiveStats := partial "artist-archive-stats.html" . }}
+{{ $featuredShows := $artistArchiveStats.featuredShows }}
+{{ $trackCount := $artistArchiveStats.trackCount }}
+
+{{ $showCount := len $featuredShows }}
+{{ $firstShow := "" }}
+{{ $latestShow := "" }}
+{{ if gt $showCount 0 }}
+  {{/* ByDate sorts ascending (oldest first); index 0 = earliest, last index = most recent */}}
+  {{ $sorted := $featuredShows.ByDate }}
+  {{ $firstShow = index $sorted 0 }}
+  {{ $latestShow = index $sorted (sub $showCount 1) }}
+{{ end }}
+{{ $dateFormat := site.Params.dateFormat | default "2 January 2006" }}
+{{ $latestShowPermalink := "" }}
+{{ $latestShowLinkText := "" }}
+{{ with $latestShow }}
+  {{ $latestShowPermalink = .RelPermalink }}
+  {{/* Match the existing show-card shorthand for titled broadcasts like
+       "Show #1: Broadcast …" while falling back to the page title for any
+       future formats. */}}
+  {{ if strings.HasPrefix .Title "Show #" }}
+    {{ $latestShowLinkText = .Title | replaceRE "^Show #" (printf "%s #" site.Title) | replaceRE ":.*$" "" | emojify }}
+  {{ else }}
+    {{ $latestShowLinkText = .Title | emojify }}
+  {{ end }}
+{{ end }}
+
+<section
+  class="mb-10 overflow-hidden rounded-2xl border border-neutral-200 bg-white/70 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/70"
+  role="region"
+  aria-labelledby="artist-header-heading">
+
+  <div class="flex flex-col sm:flex-row">
+
+    {{/* Artist image — reduced width to favour editorial content at larger breakpoints */}}
+    {{ if $featuredURL }}
+      <div class="shrink-0 bg-neutral-100 dark:bg-neutral-800 sm:w-44 lg:w-64">
+        <img
+          src="{{ $featuredURL }}"
+          alt="{{ .Title }}"
+          loading="eager"
+          decoding="async"
+          fetchpriority="high"
+          class="nozoom h-full w-full object-cover">
+      </div>
+    {{ end }}
+
+    {{/* Artist information */}}
+    <div class="flex flex-1 flex-col justify-center gap-4 p-6 sm:p-8">
+
+      {{/* Artist name */}}
+      <h1
+        id="artist-header-heading"
+        class="mt-0 text-3xl font-extrabold tracking-tight text-neutral-900 dark:text-neutral sm:text-4xl lg:text-5xl">
+        {{ .Title | emojify }}
+      </h1>
+
+      {{/* Artist summary */}}
+      {{ with $artistSummary }}
+        <p class="text-base text-neutral-600 dark:text-neutral-300">
+          {{ . }}
+        </p>
+      {{ end }}
+
+      {{/* Sundown Sessions statistics */}}
+      {{ if gt $showCount 0 }}
+        <dl class="artist-header-stats">
+          <div>
+            <dt>Featured on Sundown Sessions</dt>
+            <dd>{{ $showCount }} {{ if eq $showCount 1 }}broadcast{{ else }}broadcasts{{ end }}</dd>
+          </div>
+          {{ with $firstShow }}
+            <div>
+              <dt>First featured</dt>
+              <dd>{{ .Date | time.Format $dateFormat }}</dd>
+            </div>
+          {{ end }}
+          {{ with $latestShow }}
+            <div>
+              <dt>Last featured</dt>
+              <dd>
+                {{ with $latestShowLinkText }}
+                  <a
+                    href="{{ $latestShowPermalink }}"
+                    class="artist-header-stats-show-link"
+                    aria-label="View {{ . }} broadcast page">
+                    {{ . }}
+                  </a>
+                {{ end }}
+                {{ .Date | time.Format $dateFormat }}
+              </dd>
+            </div>
+          {{ end }}
+          <div>
+            <dt>Tracks played</dt>
+            <dd>{{ $trackCount }}</dd>
+          </div>
+        </dl>
+
+        {{/* Primary call to action */}}
+        {{ if eq $showCount 1 }}
+          {{ with $latestShow }}
+            <div>
+              <a href="{{ .RelPermalink }}" class="artist-header-cta">
+                View Featured Broadcast <span aria-hidden="true">→</span>
+              </a>
+            </div>
+          {{ end }}
+        {{ else }}
+          <div>
+            <a href="#artist-featured-shows-heading" class="artist-header-cta">
+              Explore Featured Broadcasts <span aria-hidden="true">→</span>
+            </a>
+          </div>
+        {{ end }}
+      {{ end }}
+
+    </div>
+  </div>
+</section>

@@ -10,27 +10,27 @@ US blues rock band from Atlanta, Georgia. Formed in 1989, with a 3 year hiatus b
 Disbanded in January 2015, over a dispute concerning Chris Robinson, who wanted drummer Gorman and brother Rich to surrender their share of the band.
 They reformed in late 2019 after the brothers Robinson resolved their differences, with an all new band behind them, and are planning a tour throughout 2021.
 **Members:**
-[u]Chris Robinson - Vocals[/u] 
+**Chris Robinson - Vocals**
 1989-present
 
-[u]Rich Robinson - Guitar[/u]
+**Rich Robinson - Guitar**
 1989-present
 
-[u]Isiah Mitchell - Guitar[/u]  
+**Isiah Mitchell - Guitar**  
 2019-present
 
-[u]Tim Lefebvre - Bass[/u]
+**Tim Lefebvre - Bass**
 2019-present
 
-[u]Joel Robinow - Keyboards[/u]
+**Joel Robinow - Keyboards**
 2019-present
 
-[u]Raj Ojha - Drums[/u]
+**Raj Ojha - Drums**
 2019-present
 
 
 **Former Members:**
-[u]Guitarists[/u]
+**Guitarists**
 Jeff Cease - 1989-1991
 Marc Ford - 1991-mid-2006
 Audley Freed - 1998-2002
@@ -38,18 +38,18 @@ Paul Stacey - 2006-2007
 Luther Dickinson - 2007-2011
 Jackie Greene - 2012-2015 (touring member)
 
-[u]Bassists[/u]
+**Bassists**
 Johnny Colt - 1989-1997
 Greg Rzab - 2000-mid-2000
 Andy Hess - mid-2000-2002
 Sven Pipien - 1998-2000, 2005-2015
 
-[u]Keyboardists[/u]
+**Keyboardists**
 Eddie Harsch - 1991-2002
 Rob Clores - 2006-2006
 Adam MacDougall - 2007-2015
 
-[u]Drummers[/u]
+**Drummers**
 Bill Dobrow - 2005-mid-2005
 Steve Gorman - 1989-2015
 

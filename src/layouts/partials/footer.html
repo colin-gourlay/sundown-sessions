@@ -1,0 +1,120 @@
+<footer id="site-footer" class="py-10 print:hidden">
+  {{ $currentPage := . }}
+  {{/* Footer menu */}}
+  {{ if .Site.Params.footer.showMenu | default true }}
+    {{ $listenURL := "/listen-live/" | relURL }}
+    {{ if or $listenURL .Site.Menus.footer }}
+      <nav class="pb-2 text-base font-medium text-neutral-500 dark:text-neutral-400" aria-label="Footer">
+        <ul class="flex list-none flex-wrap justify-center gap-x-5 gap-y-2 p-0 sm:justify-start">
+          <li class="flex">
+            <a
+              class="font-semibold text-primary-700 decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2 dark:text-primary-400"
+              href="{{ $listenURL }}"
+              data-analytics-event="listen_live_click"
+              data-analytics-provider="footer-listen-live"
+              aria-label="Listen live to Sundown Sessions"
+              title="Listen to Sundown Sessions live">
+              ▶ Listen Live
+            </a>
+          </li>
+          {{ range .Site.Menus.footer }}
+            {{ $isExternal := or (strings.HasPrefix .URL "http:") (strings.HasPrefix .URL "https:") }}
+            {{ $menuURL := .URL }}
+            {{ if and (eq .Identifier "corrections") (ne $currentPage.RelPermalink "/corrections/") }}
+              {{ $menuURL = printf "%s?page=%s" .URL ($currentPage.RelPermalink | urlquery) }}
+            {{ end }}
+            <li class="flex">
+              <a
+                class="decoration-primary-500 hover:underline hover:decoration-2 hover:underline-offset-2"
+                href="{{ $menuURL | safeURL }}"
+                {{ if $isExternal }}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                {{ end }}
+                title="{{ .Title }}">
+                {{ .Name | markdownify }}
+              </a>
+            </li>
+          {{ end }}
+        </ul>
+      </nav>
+    {{ end }}
+  {{ end }}
+  {{ with .Site.Params.Author.links }}
+    {{ $socialLabels := dict
+      "facebook" "Facebook"
+      "instagram" "Instagram"
+      "tiktok" "TikTok"
+      "mixcloud" "Mixcloud"
+      "pinterest" "Pinterest"
+      "x-twitter" "X"
+      "mastodon" "Mastodon"
+      "linkedin" "LinkedIn"
+    }}
+    <nav class="pb-5" aria-label="Sundown Sessions social links">
+      <ul class="flex list-none flex-wrap justify-center gap-4 p-0 sm:justify-start">
+        {{ range $links := . }}
+          {{ range $name, $url := $links }}
+            {{ $isEmail := eq $name "email" }}
+            {{ $label := index $socialLabels $name | default ($name | title) }}
+            <li class="flex">
+              <a
+                class="{{ cond $isEmail "email-link" "" }} text-neutral-500 transition hover:text-primary-700 dark:text-neutral-400 dark:hover:text-primary-400"
+                href="{{ cond $isEmail "#" ($url | safeURL) }}"
+                {{ if $isEmail }}
+                  data-email="{{ $url | base64Encode }}"
+                {{ else }}
+                  target="_blank"
+                {{ end }}
+                aria-label="Follow Sundown Sessions on {{ $label }}"
+                title="Follow Sundown Sessions on {{ $label }}"
+                rel="me noopener noreferrer">
+                <span class="inline-block align-text-bottom">{{ partial "icon.html" $name }}</span>
+              </a>
+            </li>
+          {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+  {{ end }}
+  <div class="flex flex-col items-center justify-between gap-2 text-center sm:flex-row sm:text-left">
+    {{/* Copyright */}}
+    {{ if .Site.Params.footer.showCopyright | default true }}
+      <p class="text-sm text-neutral-500 dark:text-neutral-400">
+        {{- with replace .Site.Params.copyright "{ year }" now.Year }}
+          {{ . | markdownify }}
+        {{- else }}
+          &copy;
+          {{ now.Format "2006" }}
+          {{ .Site.Params.Author.name | markdownify }}
+        {{- end }}
+      </p>
+    {{ end }}
+
+    {{/* Theme attribution */}}
+    {{ if .Site.Params.footer.showThemeAttribution | default true }}
+      <p class="text-xs text-neutral-500 dark:text-neutral-400">
+        {{ $hugo := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://gohugo.io/" target="_blank" rel="noopener noreferrer">Hugo</a>`
+        }}
+        {{ $blowfish := printf `<a class="hover:underline hover:decoration-primary-400 hover:text-primary-500"
+          href="https://blowfish.page/" target="_blank" rel="noopener noreferrer">Blowfish</a>`
+        }}
+        {{ i18n "footer.powered_by" (dict "Hugo" $hugo "Theme" $blowfish) | safeHTML }}
+      </p>
+    {{ end }}
+  </div>
+  {{ if not .Site.Params.disableImageZoom | default true }}
+    <script>
+      mediumZoom(document.querySelectorAll("img:not(.nozoom)"), {
+        margin: 24,
+        background: "rgba(0,0,0,0.5)",
+        scrollOffset: 0,
+      });
+    </script>
+  {{ end }}
+  {{/* Extend footer - eg. for extra scripts, etc. */}}
+  {{ if templates.Exists "partials/extend-footer.html" }}
+    {{ partialCached "extend-footer.html" . }}
+  {{ end }}
+</footer>

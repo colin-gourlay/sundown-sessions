@@ -12,7 +12,3 @@ Between 1979 and 1992, XTC had a total of 10 albums and 6 singles that reached t
 
 Due to poor management, XTC never received a share of profits from record sales (of which there were millions), nor from touring revenue, forcing them into debt throughout the 1980s and 1990s. In 1993, they went on strike against Virgin, citing an unfair recording contract, and soon extricated themselves from the label. Gregory left the band during the making of Apple Venus Volume 1 (1999), after which the XTC name was used by the duo of Partridge and Moulding. In 2006, Partridge announced that his creative partnership with Moulding had disintegrated, leaving XTC "in the past tense". Moulding and Chambers briefly reunited as the duo TC&I in the late 2010s. Partridge and Gregory remain musically active.
 
-## Show(s) appeared on
-
-- [Show #7](/shows/featuring-frank-sidebottom-and-the-man-behind-the-mask/) (1st July 2024) - Featuring: Frank Sidebottom and The Man Behind The Mask
-

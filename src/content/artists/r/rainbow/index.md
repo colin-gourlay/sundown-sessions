@@ -13,10 +13,6 @@ Rainbow were ranked No. 90 on VH1's 100 Greatest Artists of Hard Rock. The band 
 
 
 
-## Show(s) appeared on
-
-- [Show #12](/shows/featuring-a-celebration-of-vertigo-records/) (25th September 2024) - Featuring: A celebration of Vertigo Records
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/Rainbow-189246591087656](https://www.facebook.com/Rainbow-189246591087656)" >}}

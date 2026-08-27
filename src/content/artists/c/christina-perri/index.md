@@ -11,10 +11,6 @@ Perri also gained recognition for writing and recording "A Thousand Years," the 
 
 
 
-## Show(s) appeared on
-
-- [Show #13](/shows/featuring-becky-becky/) (1st October 2024) - Featuring: Becky Becky
-
 ## External Links
 
 - {{< new-tab-link "Facebook: [https://www.facebook.com/ChristinaPerriMusic](https://www.facebook.com/ChristinaPerriMusic)" >}}

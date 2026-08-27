@@ -40,6 +40,30 @@ keywords:
  - 'The Selecter'
  - 'Bad Manners'
  - 'The Specials'
+tags:
+ - 'TO BE DETERMINED'
+ - 'Robert Palmer'
+ - 'Adam Ant'
+ - 'Alice Cooper'
+ - 'T. Rex'
+ - 'Roxy Music'
+ - 'Thee Headcoats'
+ - 'R.E.M.'
+ - 'Wire'
+ - 'IST IST'
+ - 'The Exploding Boy'
+ - 'Hugh Cornwell'
+ - 'Fad Gadget'
+ - 'Tubeway Army'
+ - 'Electric Light Orchestra'
+ - 'The Move'
+ - 'Donovan'
+ - 'Tears For Fears'
+ - 'Soft Cell'
+ - 'Grandaddy'
+ - 'The Selecter'
+ - 'Bad Manners'
+ - 'The Specials'
 toc: true
 featured_image: '14-show-logo.jpeg'
 read_more_copy: Show notes...
@@ -48,7 +72,7 @@ date: 2024-10-08T22:00:00Z
 draft: true
 ---
 
-## Playlist
+## Broadcast Playlist
 {{< include_content "/shows/14/playlist" >}}
 
 ---
@@ -58,10 +82,11 @@ draft: true
 
 ---
 
-## Show discussion points
+## Show Notes
+Links, references, releases, gigs and further reading mentioned during the broadcast, gathered here so you can keep exploring after the show.
 {{< include_content "/shows/14/discussion-points" >}}
 
 ---
 
-## Track info
+## Track Guide
 {{< include_content "/shows/14/track-info" >}}

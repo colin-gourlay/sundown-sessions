@@ -1,0 +1,37 @@
+name: Test Listen Live Player
+
+on:
+  pull_request:
+    paths:
+      - src/assets/js/listen-live-player.js
+      - src/layouts/listen-live/**
+      - src/layouts/partials/listen-live/**
+      - tests/js/**
+      - .github/workflows/test-listen-live-player.yml
+  push:
+    branches:
+      - main
+    paths:
+      - src/assets/js/listen-live-player.js
+      - src/layouts/listen-live/**
+      - src/layouts/partials/listen-live/**
+      - tests/js/**
+      - .github/workflows/test-listen-live-player.yml
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source using v4.3.1
+        uses: actions/checkout@34e114876b0b11c390a56381ad16ebd13914f8d5 # v4.3.1
+
+      - name: Set up Node.js
+        uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v6.0.0
+        with:
+          node-version: 22
+
+      - name: Test live player recovery
+        run: node --test tests/js/*.test.cjs
