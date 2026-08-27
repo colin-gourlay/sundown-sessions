@@ -1,17 +1,13 @@
 ---
-genres: ["Darkwave", "Gothic Rock", "Post-Punk"]
+genres: ["Darkwave", "Post-Punk"]
 featured_image: artists/a/a-projection/a-projection.jpg
 title: A Projection
 artist_page: true
+lastReviewed: 2026-08-27
 ---
 ## About
 
-A Projection are a Swedish post-punk and darkwave band from Gothenburg, formed around 2010. Drawing on the cold, brooding atmospheres of post-punk forebears such as Joy Division and The Cure, they craft dark, melodic music built on reverb-drenched guitars, driving rhythms, and introspective lyrics. The band comprises Robin Beckmann (vocals/guitar), Joakim Lindberg, David Lindqvist, and Per-Erik Martinsson. Their studio catalogue includes *Shedding Skin* (2018) and *In A Different Light* (2022), both of which cemented their reputation within the international gothic rock and darkwave scenes.
-
-## Show(s) appeared on
-
-- [Show #10](/shows/featuring-the-twist/) (21st August 2024) - Featuring: The Twist
-- [Show #18](/shows/featuring-tbd/) (5th November 2024) - Featuring: TBD
+A Projection are a Stockholm-based Swedish post-punk and darkwave band formed in 2013. Their sound combines effects-driven guitars and synthesizers, bridging classic post-punk with electronic music. After an eponymous demo EP, they signed to Tapete Records and released *Exit* (2015) and *Framework* (2017); *Section* followed in 2019 and *In A Different Light* in 2022.
 
 ## External Links
 
@@ -19,5 +15,3 @@ A Projection are a Swedish post-punk and darkwave band from Gothenburg, formed a
 
 
 - {{< new-tab-link "Twitter: [https://twitter.com/aprojectionband](https://twitter.com/aprojectionband)" >}}
-
-
