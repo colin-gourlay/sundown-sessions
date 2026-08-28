@@ -14,7 +14,7 @@
 {{ end }}
 
 {{ if gt (len $related) 0 }}
-  <section class="release-featured-shows not-prose" role="region" aria-labelledby="related-tracks-heading">
+  <section class="track-section-card release-featured-shows not-prose" role="region" aria-labelledby="related-tracks-heading">
     <h2 id="related-tracks-heading" class="release-featured-shows__heading">Related Tracks</h2>
     <ul class="release-featured-shows__list">
       {{ range first 8 ($related.ByTitle) }}

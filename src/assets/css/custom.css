@@ -3654,6 +3654,16 @@ details[open] > .artist-biography-read-more .artist-biography-show-less {
   color: rgba(var(--color-primary-400), 1);
 }
 
+/* Track pages: keep the discovery sections connected after Blowfish prose
+   margins are applied. */
+.track-page-content .track-article-content > :first-child {
+  margin-top: 0;
+}
+
+.track-page-content .track-section-card {
+  margin: 0 0 2rem;
+}
+
 /* Artist featured tracks: a lightweight list group that follows the same
    heading and section rhythm as the surrounding artist discovery content. */
 

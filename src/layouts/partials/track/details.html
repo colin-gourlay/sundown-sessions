@@ -7,7 +7,7 @@
 {{ with .Params.genre }}{{ $fields = $fields | append (dict "term" "Genre" "value" .) }}{{ end }}
 
 {{ if gt (len $fields) 0 }}
-  <section class="mb-10 max-w-prose rounded-lg border border-neutral-200 bg-neutral-50/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/60" role="region" aria-labelledby="track-details-heading">
+  <section class="mb-8 max-w-prose rounded-lg border border-neutral-200 bg-neutral-50/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/60" role="region" aria-labelledby="track-details-heading">
     <h2 id="track-details-heading" class="mt-0 mb-4 text-xl font-bold text-neutral-800 dark:text-neutral-100">Track Details</h2>
     <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
       {{ range $fields }}
