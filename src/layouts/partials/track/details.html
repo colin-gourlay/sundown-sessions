@@ -1,21 +1,69 @@
-{{ $fields := slice }}
-{{ with .Params.artist }}{{ $fields = $fields | append (dict "term" "Artist" "value" .) }}{{ end }}
-{{ with .Params.release }}{{ $fields = $fields | append (dict "term" "Release" "value" .) }}{{ end }}
-{{ with .Params.release_date }}{{ $fields = $fields | append (dict "term" "Released" "value" .) }}{{ end }}
-{{ with .Params.duration }}{{ $fields = $fields | append (dict "term" "Duration" "value" .) }}{{ end }}
-{{ with .Params.label }}{{ $fields = $fields | append (dict "term" "Label" "value" .) }}{{ end }}
-{{ with .Params.genre }}{{ $fields = $fields | append (dict "term" "Genre" "value" .) }}{{ end }}
+{{- $artistName := "" -}}
+{{- with (.Params.artist | default .Params.artists) -}}
+  {{- $artistName = . -}}
+  {{- if reflect.IsSlice $artistName -}}{{- $artistName = delimit $artistName ", " -}}{{- end -}}
+  {{- $artistName = printf "%v" $artistName | strings.TrimSpace -}}
+{{- end -}}
+{{- $artistPage := false -}}
+{{- with $artistName -}}
+  {{- $artistSlug := $.Params.artist_slug | default (. | urlize) -}}
+  {{- $artistFirstChar := substr $artistSlug 0 1 | lower -}}
+  {{- with site.GetPage (printf "artists/%s/%s" $artistFirstChar $artistSlug) -}}
+    {{- $artistPage = . -}}
+  {{- end -}}
+{{- end -}}
 
-{{ if gt (len $fields) 0 }}
+{{- $releaseName := "" -}}
+{{- with (.Params.release | default .Params.album) -}}
+  {{- $releaseName = printf "%v" . | strings.TrimSpace -}}
+{{- end -}}
+{{- $releasePage := false -}}
+{{- if and $artistName $releaseName -}}
+  {{- $artistSlug := .Params.artist_slug | default ($artistName | urlize) -}}
+  {{- $releaseSlug := .Params.release_slug | default ($releaseName | urlize) -}}
+  {{- $artistFirstChar := substr $artistSlug 0 1 | lower -}}
+  {{- with site.GetPage (printf "releases/%s/%s/%s" $artistFirstChar $artistSlug $releaseSlug) -}}
+    {{- $releasePage = . -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $releaseYear := "" -}}
+{{- with $releasePage -}}
+  {{- $releaseDate := .Params.releaseDate | default .Params.release_date | default .Params.date -}}
+  {{- with $releaseDate -}}
+    {{- if and (not (reflect.IsMap .)) (not (reflect.IsSlice .)) -}}
+      {{- $dateText := printf "%v" . -}}
+      {{- if or (in $dateText "UTC") (in $dateText "+0000") -}}
+        {{- $releaseYear = time.Format "2006" . -}}
+      {{- else -}}
+        {{- $yearMatches := findRE `\b(1[89][0-9]{2}|20[0-9]{2})\b` $dateText 1 -}}
+        {{- if gt (len $yearMatches) 0 -}}{{- $releaseYear = index $yearMatches 0 -}}{{- end -}}
+      {{- end -}}
+    {{- end -}}
+  {{- end -}}
+{{- end -}}
+
+{{- $fields := slice -}}
+{{- with $artistName -}}{{- $fields = $fields | append (dict "term" "Artist" "value" . "page" $artistPage) -}}{{- end -}}
+{{- with $releaseName -}}{{- $fields = $fields | append (dict "term" "Release" "value" . "page" $releasePage) -}}{{- end -}}
+{{- with $releaseYear -}}{{- $fields = $fields | append (dict "term" "Year" "value" .) -}}{{- end -}}
+
+{{- if gt (len $fields) 0 -}}
   <section class="mb-8 max-w-prose rounded-lg border border-neutral-200 bg-neutral-50/70 p-5 shadow-sm dark:border-neutral-700 dark:bg-neutral-900/60" role="region" aria-labelledby="track-details-heading">
     <h2 id="track-details-heading" class="mt-0 mb-4 text-xl font-bold text-neutral-800 dark:text-neutral-100">Track Details</h2>
-    <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-2">
-      {{ range $fields }}
+    <dl class="m-0 grid gap-x-6 gap-y-3 sm:grid-cols-3">
+      {{- range $field := $fields }}
         <div class="min-w-0 border-t border-neutral-200 pt-3 first:border-t-0 first:pt-0 sm:first:border-t sm:first:pt-3 dark:border-neutral-700">
-          <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">{{ .term }}</dt>
-          <dd class="mt-1 break-words text-base font-medium text-neutral-900 dark:text-neutral-100">{{ .value }}</dd>
+          <dt class="text-xs font-semibold uppercase tracking-wide text-neutral-500 dark:text-neutral-400">{{ $field.term }}</dt>
+          <dd class="mt-1 break-words text-base font-medium text-neutral-900 dark:text-neutral-100">
+            {{- with $field.page -}}
+              <a class="text-primary-600 hover:text-primary-700 dark:text-primary-400 dark:hover:text-primary-300" href="{{ .RelPermalink }}">{{ $field.value }}</a>
+            {{- else -}}
+              {{ $field.value }}
+            {{- end -}}
+          </dd>
         </div>
-      {{ end }}
+      {{- end }}
     </dl>
   </section>
-{{ end }}
+{{- end -}}
