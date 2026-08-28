@@ -4,7 +4,7 @@
     {{ partial "track/hero.html" . }}
     {{ partial "track/details.html" . }}
 
-    <section class="flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
+    <section class="track-page-content flex flex-col max-w-full mt-0 prose dark:prose-invert lg:flex-row">
       {{ $enableToc := site.Params.article.showTableOfContents | default false }}
       {{ $enableToc = .Params.showTableOfContents | default $enableToc }}
       {{ $showToc := and $enableToc (in .TableOfContents "<ul") }}
@@ -19,7 +19,7 @@
 
       <div class="min-w-0 min-h-0 max-w-fit">
         {{ partial "series/series.html" . }}
-        <div class="article-content max-w-prose mb-10">
+        <div class="track-article-content article-content max-w-prose mb-8">
           {{ $trackContent := .Content | strings.TrimSpace }}
           {{ $trackContent = replaceRE `(?is)<h2\b[^>]*>\s*(External Links|Explore Further)\s*.*?</h2>\s*.*?(<h2\b[^>]*>|$)` "$2" $trackContent | strings.TrimSpace }}
           {{ $trackContent | safeHTML }}
