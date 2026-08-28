@@ -125,7 +125,7 @@ The detailed accessibility baseline, review checklist, and automated/manual vali
 
 All Markdown files in this repository are linted using [markdownlint](https://github.com/DavidAnson/markdownlint).
 
-The shared ruleset is defined in `.markdownlint.json` at the repository root.
+The shared ruleset is defined in `.markdownlint.jsonc` at the repository root.
 
 ### Running Linting Locally
 

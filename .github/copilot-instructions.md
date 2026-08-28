@@ -49,7 +49,7 @@ This applies to pages, microcopy, metadata, contact copy and all editorial prose
 
 ## Markdown Linting
 
-All Markdown files are linted using markdownlint. The shared ruleset is in `.markdownlint.json`. When authoring or editing Markdown, ensure content passes linting locally with:
+All Markdown files are linted using markdownlint. The shared ruleset is in `.markdownlint.jsonc`. When authoring or editing Markdown, ensure content passes linting locally with:
 
 ```bash
 npx markdownlint-cli2 "**/*.md" "!src/themes/**"

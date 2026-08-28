@@ -1,0 +1,61 @@
+{
+  // MD009 - Trailing spaces
+  // Disabled because Markdown hard line breaks use intentional trailing spaces.
+  "MD009": false,
+
+  // MD012 - Multiple consecutive blank lines
+  // Disabled because extra vertical spacing is used to separate content sections.
+  "MD012": false,
+
+  // MD013 - Line length
+  // Disabled because prose, links, and generated content can exceed a fixed limit.
+  "MD013": false,
+
+  // MD022 - Headings should be surrounded by blank lines
+  // Disabled because existing content does not consistently separate headings this way.
+  "MD022": false,
+
+  // MD024 - Multiple headings with the same content
+  // Duplicate headings are allowed only when they belong to different sections.
+  "MD024": { "siblings_only": true },
+
+  // MD025 - Multiple top-level headings in the same document
+  // Disabled because some pages intentionally contain more than one level-one heading.
+  "MD025": false,
+
+  // MD026 - Trailing punctuation in headings
+  // Question marks are allowed because question-style headings are intentional.
+  "MD026": { "punctuation": ",;:!¿?" },
+
+  // MD029 - Ordered list item prefix
+  // Disabled because lists may use either sequential or repeated numbering.
+  "MD029": false,
+
+  // MD033 - Inline HTML
+  // Disabled because content uses HTML for layout and features Markdown cannot express.
+  "MD033": false,
+
+  // MD034 - Bare URLs
+  // Disabled because displaying a URL as written is sometimes intentional.
+  "MD034": false,
+
+  // MD037 - Spaces inside emphasis markers
+  // Disabled to preserve spacing in existing authored and imported content.
+  "MD037": false,
+
+  // MD041 - First line in a file should be a top-level heading
+  // Disabled because Hugo front matter appears before page headings.
+  "MD041": false,
+
+  // MD047 - Files should end with a single newline character
+  // Disabled to avoid rewriting imported or generated Markdown solely for its final newline.
+  "MD047": false,
+
+  // MD052 - Reference links and images should use a defined label
+  // Disabled to tolerate incomplete references in imported or work-in-progress content.
+  "MD052": false,
+
+  // MD060 - Table column style
+  // Disabled because compact and aligned table pipe styles are both accepted.
+  "MD060": false
+}
