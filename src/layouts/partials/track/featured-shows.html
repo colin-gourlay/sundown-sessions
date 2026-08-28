@@ -21,11 +21,18 @@
     <h2 id="track-featured-shows-heading" class="release-featured-shows__heading">Featured in Shows</h2>
     <ul class="release-featured-shows__list">
       {{ range $featuredShows.ByDate.Reverse }}
+        {{ $showTitle := partial "release/show-card-title.html" . }}
+        {{ with .Params.description }}
+          {{ $editorialTitle := . | plainify | strings.TrimSpace | strings.FirstUpper }}
+          {{ if $editorialTitle }}
+            {{ $showTitle = printf "%s — %s" $showTitle $editorialTitle }}
+          {{ end }}
+        {{ end }}
         <li class="release-featured-shows__row">
           <a class="release-featured-shows__link" href="{{ .RelPermalink }}">
-            <span class="release-featured-shows__title">{{ partial "release/show-card-title.html" . }}</span>
+            <span class="release-featured-shows__title">{{ $showTitle }}</span>
             {{ if not .Date.IsZero }}
-              <span class="release-featured-shows__date">{{ .Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</span>
+              <time class="release-featured-shows__date" datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date | time.Format (site.Params.dateFormat | default "2 January 2006") }}</time>
             {{ end }}
           </a>
         </li>
