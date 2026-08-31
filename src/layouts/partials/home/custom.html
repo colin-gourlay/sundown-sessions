@@ -68,8 +68,9 @@
   {{/* Recent Shows */}}
   {{ $showsSection := site.GetPage "shows" }}
   {{ if $showsSection }}
-    {{ $showPages := where $showsSection.Pages ".Date.IsZero" false }}
-    {{ $recentShows := first 4 ($showPages.ByDate.Reverse) }}
+    {{ $publishedShows := where $showsSection.Pages ".Draft" false }}
+    {{ $datedShows := where $publishedShows ".Date.IsZero" false }}
+    {{ $recentShows := first 3 ($datedShows.ByDate.Reverse) }}
     {{ if $recentShows }}
       <section role="region" aria-labelledby="recent-shows-heading">
         <div class="mb-4 flex items-center justify-between">
@@ -82,7 +83,7 @@
             View all shows →
           </a>
         </div>
-        <div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
+        <div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
           {{ range $recentShows }}
             {{ partial "article-link/card.html" . }}
           {{ end }}
