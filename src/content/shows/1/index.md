@@ -3,6 +3,7 @@ title: 'Show #1: Broadcast 5th June 2024'
 slug: 'featuring-the-big-now'
 description: 'featuring The Big Now'
 heroTeaser: 'The first Sundown Sessions broadcast, introducing The Big Now alongside new discoveries and established favourites.'
+archiveSummary: 'The Big Now feature alongside IST IST, Becky Becky, Nick Cave & The Bad Seeds, and more.'
 summary: 'THE SUNDOWN SESSIONS returns with...
 
 - The Big Now

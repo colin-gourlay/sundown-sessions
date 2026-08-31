@@ -2,6 +2,7 @@
 title: 'Show #3: Broadcast 19th June 2024'
 slug: 'featuring-blue-on-shock'
 description: 'featuring Blue On Shock'
+archiveSummary: 'Blue On Shock feature alongside Magazine, Aimee Mann, Unbelievable Truth, and more.'
 summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Blue On Shock

@@ -2,6 +2,7 @@
 title: 'Show #4: Broadcast 26th June 2024'
 slug: 'featuring-kenny-armour-from-andysmanclub'
 description: 'featuring Kenny Armour from ANDYSMANCLUB'
+archiveSummary: 'Kenny Armour from ANDYSMANCLUB joins the broadcast alongside Angelfish, Melys, Goodbye Mr Mackenzie, and more.'
 summary: 'THE SUNDOWN SESSIONS returns with...
 
 - Kenny Armour from ANDYSMANCLUB
