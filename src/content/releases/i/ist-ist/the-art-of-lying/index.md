@@ -36,6 +36,7 @@ tracks:
   - trackNumber: 2
     title: "Fat Cats Drown in Milk"
     duration: "3:19"
+    url: "/tracks/i/ist-ist/fat-cats-drown-in-milk/"
   - trackNumber: 3
     title: "Middle Distance"
     duration: "3:43"
