@@ -89,17 +89,20 @@
 {{ if and (eq $featuredArtistCount 0) (gt (len $artistSource) (len $displayArtists)) }}
   {{ $hasMoreArtists = true }}
 {{ end }}
-{{ $discoverySummary := "" }}
-{{ if gt (len $displayArtists) 0 }}
+{{ $cardSummary := "" }}
+{{ with .Params.archivesummary }}
+  {{ $cardSummary = . | plainify | strings.TrimSpace }}
+{{ end }}
+{{ if and (eq $cardSummary "") (gt (len $displayArtists) 0) }}
   {{ $discoveryArtists := $displayArtists }}
   {{ if $hasMoreArtists }}
     {{ $discoveryArtists = $discoveryArtists | append "and more" }}
   {{ end }}
   {{ $artistList := delimit $discoveryArtists ", " ", " }}
-  {{ $discoverySummary = printf "Discover tracks from %s." $artistList }}
-{{ else }}
+  {{ $cardSummary = printf "Discover tracks from %s." $artistList }}
+{{ else if eq $cardSummary "" }}
   {{ with .Summary }}
-    {{ $discoverySummary = . | plainify | truncate 150 }}
+    {{ $cardSummary = . | plainify | truncate 150 }}
   {{ end }}
 {{ end }}
 
@@ -152,7 +155,7 @@
       {{ end }}
     </div>
 
-    {{ with $discoverySummary }}
+    {{ with $cardSummary }}
       <p class="show-card__summary">{{ . }}</p>
     {{ end }}
 
