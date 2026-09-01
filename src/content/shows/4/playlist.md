@@ -1,7 +1,7 @@
 ---
 ---
 1. {{< artist-wikilink "Paul McCartney" >}} - Smile Away
-2. {{< artist-wikilink "Elvis Costello & The Attractions" >}} - Pump It Up
+2. {{< artist-wikilink "Elvis Costello & The Attractions" "elvis-costello-and-the-attractions" >}} - Pump It Up
 3. {{< artist-wikilink "The Cult" >}} - Nirvana
 4. {{< artist-wikilink "Gaye Bykers On Acid" >}} - Nosedive Karma
 

@@ -9,10 +9,14 @@ on:
       - src/config/**
       - scripts/audit-release-types.py
       - scripts/audit-release-metadata.py
+      - scripts/audit-artist-links.py
+      - config/artist-link-exceptions.json
+      - docs/artist-link-validation.md
       - reports/release-type-audit.md
       - reports/release-metadata-audit.md
       - tests/test_audit_release_types.py
       - tests/test_audit_release_metadata.py
+      - tests/test_audit_artist_links.py
       - tests/test_correction_flow.py
       - tests/test_pagination.py
       - .github/workflows/validate-hugo-content.yml
@@ -26,10 +30,14 @@ on:
       - src/config/**
       - scripts/audit-release-types.py
       - scripts/audit-release-metadata.py
+      - scripts/audit-artist-links.py
+      - config/artist-link-exceptions.json
+      - docs/artist-link-validation.md
       - reports/release-type-audit.md
       - reports/release-metadata-audit.md
       - tests/test_audit_release_types.py
       - tests/test_audit_release_metadata.py
+      - tests/test_audit_artist_links.py
       - tests/test_correction_flow.py
       - tests/test_pagination.py
       - .github/workflows/validate-hugo-content.yml
@@ -67,6 +75,11 @@ jobs:
 
       - name: Test pagination boundaries and navigation
         run: python3 tests/test_pagination.py
+
+      - name: Audit published Artist links
+        run: |
+          python3 tests/test_audit_artist_links.py
+          python3 scripts/audit-artist-links.py
 
       - name: Validate release types
         run: |

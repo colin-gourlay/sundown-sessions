@@ -1,0 +1,4 @@
+{
+  "documentation": "Each exception must name one published source file, shortcode, artist, expected derived slug, and a specific editorial reason. Exceptions permit plain text only; they never create a link. Remove an exception as soon as a canonical Artist page or slug override is available.",
+  "exceptions": []
+}
