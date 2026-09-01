@@ -1,0 +1,58 @@
+{{- if gt .Paginator.TotalPages 1 -}}
+  <nav class="site-pagination" aria-label="Pagination">
+    <ul class="site-pagination__list" role="list">
+      {{- .Scratch.Set "paginator.ellipsed" false -}}
+      {{ if $.Paginator.HasPrev }}
+        <li>
+          <a
+            href="{{ $.Paginator.Prev.URL }}"
+            class="site-pagination__link hover:bg-primary-600 hover:text-neutral"
+            rel="prev"
+            aria-label="Previous page"
+            ><span aria-hidden="true">&larr;</span></a
+          >
+        </li>
+      {{ end }}
+      {{- range $.Paginator.Pagers -}}
+        {{- $right := sub .TotalPages .PageNumber -}}
+        {{- $showNumber := or (le .PageNumber 1) (eq $right 0) -}}
+        {{- $showNumber = or $showNumber (and (gt .PageNumber (sub $.Paginator.PageNumber 3)) (lt .PageNumber (add $.Paginator.PageNumber 3))) -}}
+        {{- if $showNumber -}}
+          {{- $.Scratch.Set "paginator.ellipsed" false -}}
+          {{- $.Scratch.Set "paginator.shouldEllipse" false -}}
+        {{- else -}}
+          {{- $.Scratch.Set "paginator.shouldEllipse" (not ($.Scratch.Get "paginator.ellipsed") ) -}}
+          {{- $.Scratch.Set "paginator.ellipsed" true -}}
+        {{- end -}}
+        {{- if $showNumber -}}
+          <li>
+            <a
+              href="{{ .URL }}"
+              class="site-pagination__link {{ if eq . $.Paginator }}
+                bg-primary-200 dark:bg-primary-400 dark:text-neutral-800
+              {{ end }} hover:bg-primary-600 hover:text-neutral"
+              aria-label="Page {{ .PageNumber }}{{ if eq . $.Paginator }}, current page{{ end }}"
+              {{- if eq . $.Paginator }} aria-current="page"{{ end -}}
+              >{{ .PageNumber }}</a
+            >
+          </li>
+        {{- else if ($.Scratch.Get "paginator.shouldEllipse") -}}
+          <li class="site-pagination__ellipsis" aria-hidden="true">
+            <span>&hellip;</span>
+          </li>
+        {{- end -}}
+      {{- end -}}
+      {{ if $.Paginator.HasNext }}
+        <li>
+          <a
+            href="{{ $.Paginator.Next.URL }}"
+            class="site-pagination__link hover:bg-primary-600 hover:text-neutral"
+            rel="next"
+            aria-label="Next page"
+            ><span aria-hidden="true">&rarr;</span></a
+          >
+        </li>
+      {{ end }}
+    </ul>
+  </nav>
+{{- end -}}

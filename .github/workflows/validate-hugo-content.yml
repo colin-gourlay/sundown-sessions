@@ -14,6 +14,7 @@ on:
       - tests/test_audit_release_types.py
       - tests/test_audit_release_metadata.py
       - tests/test_correction_flow.py
+      - tests/test_pagination.py
       - .github/workflows/validate-hugo-content.yml
   push:
     branches:
@@ -30,6 +31,7 @@ on:
       - tests/test_audit_release_types.py
       - tests/test_audit_release_metadata.py
       - tests/test_correction_flow.py
+      - tests/test_pagination.py
       - .github/workflows/validate-hugo-content.yml
 
 permissions:
@@ -62,6 +64,9 @@ jobs:
 
       - name: Test correction flow configuration
         run: python3 tests/test_correction_flow.py
+
+      - name: Test pagination boundaries and navigation
+        run: python3 tests/test_pagination.py
 
       - name: Validate release types
         run: |

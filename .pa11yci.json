@@ -13,6 +13,7 @@
     "http://127.0.0.1:1313/shows/1/",
     "http://127.0.0.1:1313/artists/",
     "http://127.0.0.1:1313/releases/",
+    "http://127.0.0.1:1313/releases/page/2/",
     "http://127.0.0.1:1313/listen-live/",
     "http://127.0.0.1:1313/contact/",
     "http://127.0.0.1:1313/corrections/",

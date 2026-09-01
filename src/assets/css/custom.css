@@ -123,6 +123,38 @@ label[for]:focus-visible {
   }
 }
 
+/* Pagination retains Blowfish behaviour with larger, wrapping controls. */
+.site-pagination {
+  margin-top: 2rem;
+}
+
+.site-pagination__list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.site-pagination__link,
+.site-pagination__ellipsis {
+  display: inline-flex;
+  min-width: 2.75rem;
+  min-height: 2.75rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.25rem;
+  text-align: center;
+}
+
+.site-pagination__link[aria-current="page"] {
+  font-weight: 700;
+  text-decoration: underline;
+  text-underline-offset: 0.2rem;
+}
+
 /* Listen Live page: scoped editorial listening layout. */
 
 .listen-live-page {
