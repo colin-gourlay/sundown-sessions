@@ -79,3 +79,8 @@ Manual testing is required for meaningful accessibility confidence. For substant
 - Screen reader spot checks with available assistive technology, such as NVDA, VoiceOver, or Narrator.
 
 Document the pages and journeys tested in the pull request. If a check cannot be completed locally, call out the limitation and any follow-up needed.
+
+Follow the [manual accessibility testing procedure](manual-accessibility-testing.md)
+for proportionate pull-request coverage, environment guidance and a reusable
+reporting template. The latest full-site record is the
+[3 September 2026 accessibility baseline](../reports/accessibility-baseline-2026-09-03.md).
