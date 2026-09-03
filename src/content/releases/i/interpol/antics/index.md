@@ -1,6 +1,9 @@
 ---
 title: "Antics"
 artist: "Interpol"
+# 1200px artwork from the 2004 Matador album on Apple Music.
+artwork: "cover.jpg"
+artwork_source: "https://music.apple.com/us/album/antics/1589250507"
 releaseDate: "2004-09-28"
 releaseType: "Album"
 genres:
