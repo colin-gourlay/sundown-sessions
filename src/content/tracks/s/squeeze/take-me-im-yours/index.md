@@ -3,9 +3,6 @@ title: Take Me I'm Yours
 artist: Squeeze
 release: Squeeze
 release_slug: squeeze
-release_date: "March 1978"
-duration: "3:46"
-label: A&M Records
 track_page: true
 ---
 ## About
@@ -14,9 +11,6 @@ track_page: true
 self-titled debut album, [Squeeze](/releases/s/squeeze/squeeze/). Its clipped
 rhythm, close harmonies and rushing momentum put Chris Difford and Glenn
 Tilbrook’s songwriting partnership firmly in focus.
-
-The 3:46 recording featured here is from the March 1978 UK A&M LP, catalogue
-number AMLH 68465. It is distinct from the shorter 2:45 single edit.
 
 ## External Links
 
