@@ -68,4 +68,4 @@ Peter Katis's production gives *Antics* a precision that rewards repeated listen
 
 ## External Links
 
-- {{< new-tab-link "[Discogs](https://www.discogs.com/master/25067-Interpol-Antics)" >}}
+- {{< new-tab-link "[Discogs](https://www.discogs.com/master/9238-Interpol-Antics)" >}}
