@@ -1,18 +1,32 @@
+(function (root, factory) {
+  "use strict";
+
+  if (typeof module === "object" && module.exports) {
+    module.exports = factory;
+  } else if (root && root.document) {
+    root.sundownSearch = factory(root);
+  }
+}(typeof window !== "undefined" ? window : this, function (windowObject) {
+"use strict";
+
+var documentObject = windowObject.document;
 var fuse;
-var showButton = document.getElementById("search-button");
-var showButtonMobile = document.getElementById("search-button-mobile");
-var hideButton = document.getElementById("close-search-button");
-var wrapper = document.getElementById("search-wrapper");
-var modal = document.getElementById("search-modal");
-var input = document.getElementById("search-query");
-var output = document.getElementById("search-results");
-var first = output.firstChild;
-var last = output.lastChild;
+var showButton = documentObject.getElementById("search-button");
+var showButtonMobile = documentObject.getElementById("search-button-mobile");
+var hideButton = documentObject.getElementById("close-search-button");
+var wrapper = documentObject.getElementById("search-wrapper");
+var modal = documentObject.getElementById("search-modal");
+var input = documentObject.getElementById("search-query");
+var output = documentObject.getElementById("search-results");
+if (!hideButton || !wrapper || !modal || !input || !output || !windowObject.sundownModalFocus) return null;
+
+var first = null;
+var last = null;
 var searchVisible = false;
 var indexed = false;
 var hasResults = false;
 var previousBodyOverflow = "";
-var modalFocus = window.sundownModalFocus.createController(modal);
+var modalFocus = windowObject.sundownModalFocus.createController(modal);
 
 showButton ? showButton.addEventListener("click", displaySearch) : null;
 showButtonMobile ? showButtonMobile.addEventListener("click", displaySearch) : null;
@@ -23,11 +37,11 @@ modal.addEventListener("click", function (event) {
   event.stopImmediatePropagation();
   return false;
 });
-document.addEventListener("keydown", function (event) {
+documentObject.addEventListener("keydown", function (event) {
   if (event.key === "Tab") modalFocus.trapTab(event);
 
   if (event.key === "/") {
-    var active = document.activeElement;
+    var active = documentObject.activeElement;
     var tag = active.tagName;
     var isInputField = tag === "INPUT" || tag === "TEXTAREA" || active.isContentEditable;
 
@@ -44,34 +58,34 @@ document.addEventListener("keydown", function (event) {
 
   if (event.key === "ArrowDown" && searchVisible && hasResults) {
     event.preventDefault();
-    if (document.activeElement === input) first.focus();
-    else if (document.activeElement === last) last.focus();
-    else document.activeElement.parentElement.nextSibling.firstElementChild.focus();
+    if (documentObject.activeElement === input) first.focus();
+    else if (documentObject.activeElement === last) last.focus();
+    else documentObject.activeElement.parentElement.nextSibling.firstElementChild.focus();
   }
 
   if (event.key === "ArrowUp" && searchVisible && hasResults) {
     event.preventDefault();
-    if (document.activeElement === input || document.activeElement === first) input.focus();
-    else document.activeElement.parentElement.previousSibling.firstElementChild.focus();
+    if (documentObject.activeElement === input || documentObject.activeElement === first) input.focus();
+    else documentObject.activeElement.parentElement.previousSibling.firstElementChild.focus();
   }
 
   if (event.key === "Enter" && searchVisible && hasResults) {
     event.preventDefault();
-    if (document.activeElement === input) first.focus();
-    else document.activeElement.click();
+    if (documentObject.activeElement === input) first.focus();
+    else documentObject.activeElement.click();
   }
 });
 
-input.onkeyup = function () {
+input.addEventListener("input", function () {
   executeQuery(this.value);
-};
+});
 
 function displaySearch(event) {
   if (!indexed) buildIndex();
   if (searchVisible) return;
 
-  previousBodyOverflow = document.body.style.overflow;
-  document.body.style.overflow = "hidden";
+  previousBodyOverflow = documentObject.body.style.overflow;
+  documentObject.body.style.overflow = "hidden";
   wrapper.style.visibility = "visible";
   searchVisible = true;
   modalFocus.open(event && event.currentTarget, input);
@@ -80,18 +94,17 @@ function displaySearch(event) {
 function hideSearch() {
   if (!searchVisible) return;
 
-  document.body.style.overflow = previousBodyOverflow;
+  documentObject.body.style.overflow = previousBodyOverflow;
   wrapper.style.visibility = "hidden";
   input.value = "";
-  output.innerHTML = "";
-  hasResults = false;
+  resetResults();
   searchVisible = false;
   modalFocus.close();
   wrapper.setAttribute("aria-hidden", "true");
 }
 
 function fetchJSON(path, callback) {
-  var httpRequest = new XMLHttpRequest();
+  var httpRequest = new windowObject.XMLHttpRequest();
   httpRequest.onreadystatechange = function () {
     if (httpRequest.readyState === 4 && httpRequest.status === 200) {
       var data = JSON.parse(httpRequest.responseText);
@@ -105,7 +118,7 @@ function fetchJSON(path, callback) {
 function buildIndex() {
   var baseURL = wrapper.getAttribute("data-url").replace(/\/?$/, "/");
   fetchJSON(baseURL + "index.json", function (data) {
-    fuse = new Fuse(data, {
+    fuse = new windowObject.Fuse(data, {
       shouldSort: true,
       ignoreLocation: true,
       threshold: 0.0,
@@ -122,13 +135,24 @@ function buildIndex() {
 }
 
 function executeQuery(term) {
+  var query = term.trim();
+  if (!query) {
+    resetResults();
+    return;
+  }
+
   if (!indexed) buildIndex();
   if (!fuse) return;
 
-  var results = fuse.search(term);
+  var results = fuse.search(query);
+  if (!results.length) {
+    renderNoResults();
+    return;
+  }
+
   var resultsHTML = "";
   results.forEach(function (value) {
-    var div = document.createElement("div");
+    var div = documentObject.createElement("div");
     div.innerHTML = value.item.summary;
     value.item.summary = div.textContent || div.innerText || "";
     var title = value.item.externalUrl
@@ -151,10 +175,40 @@ function executeQuery(term) {
     </li>`;
   });
 
-  hasResults = results.length > 0;
+  hasResults = true;
   output.innerHTML = resultsHTML;
-  if (hasResults && output.firstChild) {
+  if (output.firstChild) {
     first = output.firstChild.firstElementChild;
     last = output.lastChild.firstElementChild;
   }
 }
+
+function resetResults() {
+  output.innerHTML = "";
+  hasResults = false;
+  first = null;
+  last = null;
+}
+
+function renderNoResults() {
+  var baseURL = wrapper.getAttribute("data-url").replace(/\/?$/, "/");
+  hasResults = false;
+  first = null;
+  last = null;
+  output.innerHTML = `<li class="px-3 py-4 text-sm text-neutral-700 dark:text-neutral-200">
+    <p class="font-semibold" role="status">No search results found.</p>
+    <p class="mt-1">Try another search or browse
+      <a class="text-primary-600 hover:underline dark:text-primary-400" href="${baseURL}shows/">Shows</a>,
+      <a class="text-primary-600 hover:underline dark:text-primary-400" href="${baseURL}artists/">Artists</a>,
+      <a class="text-primary-600 hover:underline dark:text-primary-400" href="${baseURL}releases/">Releases</a> or
+      <a class="text-primary-600 hover:underline dark:text-primary-400" href="${baseURL}tracks/">Tracks</a>.
+    </p>
+  </li>`;
+}
+
+return {
+  close: hideSearch,
+  executeQuery: executeQuery,
+  open: displaySearch
+};
+}));
