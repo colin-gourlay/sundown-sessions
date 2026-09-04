@@ -2,6 +2,7 @@ const assert = require("node:assert/strict");
 const test = require("node:test");
 
 const createSearch = require("../../src/assets/js/search.js");
+const Fuse = require("../../src/themes/blowfish/assets/lib/fuse/fuse.min.cjs");
 
 class FakeElement {
   constructor(documentObject, tagName = "DIV") {
@@ -69,7 +70,7 @@ function keyboardEvent(key) {
   };
 }
 
-function createHarness() {
+function createHarness({ FuseImplementation, searchData = [] } = {}) {
   const elements = new Map();
   const listeners = new Map();
   const documentObject = {
@@ -110,7 +111,7 @@ function createHarness() {
     send() {
       this.readyState = 4;
       this.status = 200;
-      this.responseText = "[]";
+      this.responseText = JSON.stringify(searchData);
       this.onreadystatechange();
     }
   }
@@ -118,7 +119,7 @@ function createHarness() {
   let modalOpen = false;
   const controller = createSearch({
     document: documentObject,
-    Fuse: FakeFuse,
+    Fuse: FuseImplementation || FakeFuse,
     XMLHttpRequest: FakeXMLHttpRequest,
     sundownModalFocus: {
       createController() {
@@ -192,4 +193,48 @@ test("a no-result query shows restrained discovery links", () => {
   assert.match(harness.output.innerHTML, /href="\/artists\/">Artists<\/a>/);
   assert.match(harness.output.innerHTML, /href="\/releases\/">Releases<\/a>/);
   assert.match(harness.output.innerHTML, /href="\/tracks\/">Tracks<\/a>/);
+});
+
+test("space and hyphen separators match canonical taxonomy titles symmetrically", () => {
+  const harness = createHarness({
+    FuseImplementation: Fuse,
+    searchData: [
+      { title: "Post-Punk", permalink: "/genres/post-punk/", section: "Genres", summary: "" },
+      { title: "New Wave", permalink: "/genres/new-wave/", section: "Genres", summary: "" }
+    ]
+  });
+  harness.controller.open();
+
+  harness.controller.executeQuery("Post Punk");
+  assert.match(harness.output.innerHTML, />Post-Punk<\/div>/);
+
+  harness.controller.executeQuery("Post-Punk");
+  assert.match(harness.output.innerHTML, />Post-Punk<\/div>/);
+
+  harness.controller.executeQuery("New-Wave");
+  assert.match(harness.output.innerHTML, />New Wave<\/div>/);
+});
+
+test("exact artist, release and track titles retain their relevance ordering", () => {
+  const exactItems = [
+    { title: "Magazine", permalink: "/artists/magazine/", section: "Artists", summary: "" },
+    { title: "Real Life", permalink: "/releases/real-life/", section: "Releases", summary: "" },
+    { title: "Shot by Both Sides", permalink: "/tracks/shot-by-both-sides/", section: "Tracks", summary: "" }
+  ];
+  const searchData = exactItems.concat(exactItems.map((item) => ({
+    title: "Related page",
+    permalink: item.permalink + "related/",
+    section: item.section,
+    summary: item.title
+  })));
+  const harness = createHarness({ FuseImplementation: Fuse, searchData });
+  harness.controller.open();
+
+  exactItems.forEach((item) => {
+    harness.controller.executeQuery(item.title);
+    assert.ok(
+      harness.output.innerHTML.indexOf(`>${item.title}</div>`) < harness.output.innerHTML.indexOf(">Related page</div>"),
+      `${item.section} exact-title result should rank before a summary match`
+    );
+  });
 });

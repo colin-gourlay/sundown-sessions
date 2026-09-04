@@ -115,19 +115,32 @@ function fetchJSON(path, callback) {
   httpRequest.send();
 }
 
+function normaliseSearchSeparators(value) {
+  return typeof value === "string" ? value.replace(/[ -]+/g, " ") : value;
+}
+
+function buildSearchItem(item) {
+  return Object.assign({}, item, {
+    searchTitle: normaliseSearchSeparators(item.title),
+    searchSection: normaliseSearchSeparators(item.section),
+    searchSummary: normaliseSearchSeparators(item.summary),
+    searchContent: normaliseSearchSeparators(item.content)
+  });
+}
+
 function buildIndex() {
   var baseURL = wrapper.getAttribute("data-url").replace(/\/?$/, "/");
   fetchJSON(baseURL + "index.json", function (data) {
-    fuse = new windowObject.Fuse(data, {
+    fuse = new windowObject.Fuse(data.map(buildSearchItem), {
       shouldSort: true,
       ignoreLocation: true,
       threshold: 0.0,
       includeMatches: true,
       keys: [
-        { name: "title", weight: 0.8 },
-        { name: "section", weight: 0.2 },
-        { name: "summary", weight: 0.6 },
-        { name: "content", weight: 0.4 }
+        { name: "searchTitle", weight: 0.8 },
+        { name: "searchSection", weight: 0.2 },
+        { name: "searchSummary", weight: 0.6 },
+        { name: "searchContent", weight: 0.4 }
       ]
     });
     indexed = true;
@@ -135,7 +148,7 @@ function buildIndex() {
 }
 
 function executeQuery(term) {
-  var query = term.trim();
+  var query = normaliseSearchSeparators(term.trim());
   if (!query) {
     resetResults();
     return;
