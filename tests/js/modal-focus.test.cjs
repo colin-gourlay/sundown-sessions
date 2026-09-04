@@ -126,6 +126,24 @@ test("Tab and Shift+Tab wrap focus within the modal", () => {
   assert.equal(harness.documentObject.activeElement, harness.close);
 });
 
+test("focus trapping ignores controls inside an inert submenu", () => {
+  const harness = createHarness();
+  const submenu = new FakeElement(harness.documentObject);
+  const submenuLink = new FakeElement(harness.documentObject);
+  harness.modal.append(submenu);
+  submenu.append(submenuLink);
+  submenu.setAttribute("inert", "");
+  harness.modal.focusables = [harness.input, harness.close, submenuLink];
+  harness.controller.open(harness.invoker, harness.input);
+
+  harness.close.focus();
+  const event = tabEvent();
+  harness.controller.trapTab(event);
+
+  assert.equal(event.prevented, true);
+  assert.equal(harness.documentObject.activeElement, harness.input);
+});
+
 test("closing restores background state and focus to the invoking control", () => {
   const harness = createHarness();
   harness.page.setAttribute("aria-hidden", "false");

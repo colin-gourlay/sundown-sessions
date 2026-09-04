@@ -76,7 +76,14 @@
 
   function focusableElements(dialog) {
     return Array.prototype.filter.call(dialog.querySelectorAll(focusableSelector), function (element) {
-      return !element.hidden && element.getAttribute("aria-hidden") !== "true";
+      var candidate = element;
+      while (candidate && candidate !== dialog) {
+        if (candidate.hidden || candidate.hasAttribute("inert") || candidate.getAttribute("aria-hidden") === "true") {
+          return false;
+        }
+        candidate = candidate.parentElement;
+      }
+      return !dialog.hidden && !dialog.hasAttribute("inert") && dialog.getAttribute("aria-hidden") !== "true";
     });
   }
 
