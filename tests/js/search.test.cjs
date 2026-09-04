@@ -215,6 +215,65 @@ test("space and hyphen separators match canonical taxonomy titles symmetrically"
   assert.match(harness.output.innerHTML, />New Wave<\/div>/);
 });
 
+test("show numbers and displayed broadcast dates find the intended show", () => {
+  const show = {
+    title: "Show #3: Broadcast 19th June 2024",
+    permalink: "/shows/3/",
+    section: "Shows",
+    summary: "",
+    content: "",
+    date: "19 June 2024",
+    type: "shows"
+  };
+  const harness = createHarness({
+    FuseImplementation: Fuse,
+    searchData: [
+      {
+        title: "June archive",
+        permalink: "/archive/june/",
+        section: "Archive",
+        summary: "19 June 2024",
+        content: "",
+        type: "page"
+      },
+      show
+    ]
+  });
+  harness.controller.open();
+
+  ["19 June 2024", "19th June 2024", "Show #3", "Show 3"].forEach((query) => {
+    harness.controller.executeQuery(query);
+    assert.match(harness.output.innerHTML, />Show #3: Broadcast 19th June 2024<\/div>/);
+    const showPosition = harness.output.innerHTML.indexOf(">Show #3: Broadcast 19th June 2024</div>");
+    const archivePosition = harness.output.innerHTML.indexOf(">June archive</div>");
+    assert.ok(
+      archivePosition === -1 || showPosition < archivePosition,
+      `${query} should rank the intended Show first`
+    );
+  });
+});
+
+test("show identity metadata is not added to other content types", () => {
+  const harness = createHarness({
+    FuseImplementation: Fuse,
+    searchData: [
+      {
+        title: "June archive",
+        permalink: "/archive/june/",
+        section: "Archive",
+        summary: "",
+        content: "",
+        date: "19 June 2024",
+        type: "page"
+      }
+    ]
+  });
+  harness.controller.open();
+
+  harness.controller.executeQuery("19 June 2024");
+  assert.match(harness.output.innerHTML, /No search results found\./);
+});
+
 test("exact artist, release and track titles retain their relevance ordering", () => {
   const exactItems = [
     { title: "Magazine", permalink: "/artists/magazine/", section: "Artists", summary: "" },

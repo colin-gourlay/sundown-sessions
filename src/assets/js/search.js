@@ -116,7 +116,19 @@ function fetchJSON(path, callback) {
 }
 
 function normaliseSearchSeparators(value) {
+  if (Array.isArray(value)) return value.map(normaliseSearchSeparators);
   return typeof value === "string" ? value.replace(/[ -]+/g, " ") : value;
+}
+
+function buildShowIdentity(item) {
+  if (item.type !== "shows") return "";
+
+  var showNumber = item.title.match(/\bShow\s*#\s*(\d+)\b/i);
+  var identifiers = showNumber
+    ? ["Show #" + showNumber[1], "Show " + showNumber[1]]
+    : [];
+
+  return [item.date].concat(identifiers).filter(Boolean);
 }
 
 function buildSearchItem(item) {
@@ -124,7 +136,8 @@ function buildSearchItem(item) {
     searchTitle: normaliseSearchSeparators(item.title),
     searchSection: normaliseSearchSeparators(item.section),
     searchSummary: normaliseSearchSeparators(item.summary),
-    searchContent: normaliseSearchSeparators(item.content)
+    searchContent: normaliseSearchSeparators(item.content),
+    searchShowIdentity: normaliseSearchSeparators(buildShowIdentity(item))
   });
 }
 
@@ -140,7 +153,8 @@ function buildIndex() {
         { name: "searchTitle", weight: 0.8 },
         { name: "searchSection", weight: 0.2 },
         { name: "searchSummary", weight: 0.6 },
-        { name: "searchContent", weight: 0.4 }
+        { name: "searchContent", weight: 0.4 },
+        { name: "searchShowIdentity", weight: 0.8 }
       ]
     });
     indexed = true;
