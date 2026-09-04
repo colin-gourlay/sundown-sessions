@@ -4,6 +4,7 @@
   var chordTimeout;
   var awaitingGoTo = false;
   var shortcutTimeoutMs = 1500;
+  var helpModalFocus;
   var routes = {
     h: { label: "Home", path: "/" },
     s: { label: "Shows", path: "/shows/" },
@@ -71,6 +72,7 @@
     dialog.setAttribute("role", "dialog");
     dialog.setAttribute("aria-modal", "true");
     dialog.setAttribute("aria-labelledby", "keyboard-shortcuts-help-title");
+    dialog.setAttribute("aria-hidden", "true");
     dialog.setAttribute("hidden", "");
     dialog.innerHTML = [
       '<div class="keyboard-shortcuts-help__panel" role="document">',
@@ -90,6 +92,7 @@
     ].join("");
 
     document.body.appendChild(dialog);
+    helpModalFocus = window.sundownModalFocus.createController(dialog);
     dialog.querySelector(".keyboard-shortcuts-help__close").addEventListener("click", closeHelp);
     dialog.addEventListener("click", function (event) {
       if (event.target === dialog) closeHelp();
@@ -99,14 +102,20 @@
 
   function openHelp() {
     var dialog = ensureHelpDialog();
+    if (helpModalFocus.isOpen()) return;
+    var invokingElement = document.activeElement;
     dialog.removeAttribute("hidden");
     var closeButton = dialog.querySelector("button");
-    if (closeButton) closeButton.focus();
+    helpModalFocus.open(invokingElement, closeButton);
   }
 
   function closeHelp() {
     var dialog = document.getElementById("keyboard-shortcuts-help");
-    if (dialog) dialog.setAttribute("hidden", "");
+    if (dialog && helpModalFocus && helpModalFocus.isOpen()) {
+      helpModalFocus.close();
+      dialog.setAttribute("aria-hidden", "true");
+      dialog.setAttribute("hidden", "");
+    }
   }
 
   function addShortcutTitle(selector, shortcut) {
@@ -127,11 +136,15 @@
   }
 
   document.addEventListener("keydown", function (event) {
+    if (helpModalFocus && helpModalFocus.trapTab(event)) return;
     if (event.defaultPrevented || event.ctrlKey || event.metaKey || event.altKey || isEditableTarget(event.target)) return;
 
     var key = event.key.toLowerCase();
     if (key === "escape") {
-      closeHelp();
+      if (helpModalFocus && helpModalFocus.isTop()) {
+        event.preventDefault();
+        closeHelp();
+      }
       resetChord();
       return;
     }
