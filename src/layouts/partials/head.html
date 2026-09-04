@@ -160,7 +160,7 @@
   {{ end }}
 
   {{/* JS deferred */}}
-  {{ $jsResources := slice (resources.Get "js/modal-focus.js") }}
+  {{ $jsResources := slice (resources.Get "js/modal-focus.js") (resources.Get "js/mobile-navigation.js") }}
   {{ if site.Params.footer.showScrollToTop | default true }}
     {{ $jsResources = $jsResources | append (resources.Get "js/scroll-to-top.js") }}
   {{ end }}

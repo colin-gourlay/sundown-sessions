@@ -115,6 +115,25 @@ label[for]:focus-visible {
   outline-offset: 0.2rem;
 }
 
+body:has(#mobile-navigation[data-open="true"]) {
+  overflow: hidden;
+}
+
+@media (min-width: 853px) {
+  body:has(#mobile-navigation[data-open="true"]) {
+    overflow: visible;
+  }
+}
+
+#mobile-navigation[data-open="true"] {
+  visibility: visible;
+  opacity: 1;
+}
+
+.mobile-submenu[data-open="false"] {
+  grid-template-rows: 0fr;
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,
