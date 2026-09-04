@@ -12,7 +12,7 @@
         <div class="show-page-toc-column order-first lg:ms-auto px-0 lg:order-last lg:ps-8 lg:max-w-2xs">
           <div class="show-page-toc toc ps-5 print:hidden lg:sticky {{ $topClass }}">
             <p class="show-page-toc__heading hidden lg:block">On this page</p>
-            {{ partial "toc.html" . | replaceRE ">Broadcast Playlist<" ">Playlist<" | replaceRE ">Featured Artist<" ">Artist Spotlight<" | safeHTML }}
+            {{ partial "toc.html" . | replaceRE ` id="TableOfContents"` "" | replaceRE ">Broadcast Playlist<" ">Playlist<" | replaceRE ">Featured Artist<" ">Artist Spotlight<" | safeHTML }}
           </div>
         </div>
       {{ end }}
