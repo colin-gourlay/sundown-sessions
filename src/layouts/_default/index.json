@@ -1,0 +1,37 @@
+{{- /*
+  Keep the search index limited to intentional visitor destinations.
+
+  Regular Artist, Release, Track and Show pages are canonical destinations.
+  Genre terms are retained as useful discovery routes. The remaining taxonomy
+  kinds (tags, labels, producers, years, release types and categories) either
+  duplicate canonical content or expose catalogue metadata rather than a
+  distinct search journey. Section, home and utility pages are also omitted.
+*/ -}}
+{{- $index := slice -}}
+{{- $canonicalTypes := slice "artists" "releases" "tracks" "shows" -}}
+{{- $pages := .Site.Pages -}}
+{{- range .Site.Home.Translations -}}
+  {{- $pages = $pages | lang.Merge .Site.Pages -}}
+{{- end -}}
+{{- range $pages -}}
+  {{- $isCanonical := and (eq .Kind "page") (in $canonicalTypes .Type) -}}
+  {{- $isDiscovery := and (eq .Kind "term") (eq .Type "genres") -}}
+  {{- $hasIdentity := ne (strings.TrimSpace .Title) "" -}}
+  {{- if and (or $isCanonical $isDiscovery) $hasIdentity (not .Params.excludeFromSearch) -}}
+    {{- $section := .Site.GetPage "section" .Section -}}
+    {{- $item := dict
+      "title" (.Title | emojify | safeJS)
+      "section" ($section.Title | emojify | safeJS)
+      "summary" (.Summary | plainify | htmlUnescape | safeJS)
+      "content" (.Plain | safeJS)
+      "permalink" .RelPermalink
+      "externalUrl" .Params.externalUrl
+      "type" .Type
+    -}}
+    {{- if not .Date.IsZero -}}
+      {{- $item = merge $item (dict "date" (.Date | time.Format (.Site.Language.Params.dateFormat | default ":date_long"))) -}}
+    {{- end -}}
+    {{- $index = $index | append $item -}}
+  {{- end -}}
+{{- end -}}
+{{- $index | jsonify -}}
