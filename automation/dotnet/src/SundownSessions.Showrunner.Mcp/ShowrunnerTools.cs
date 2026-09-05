@@ -6,6 +6,19 @@ namespace SundownSessions.Showrunner.Mcp;
 [McpServerToolType]
 public sealed class ShowrunnerTools
 {
+    [McpServerTool(Name = "show_create", ReadOnly = false, Idempotent = false, UseStructuredContent = true)]
+    [Description("Creates an authoritative Showrunner show. Use show_get first when retrying an uncertain request; slugs are unique and duplicate creation is rejected.")]
+    public static async Task<ShowCreateToolResult> CreateShowAsync(
+        ShowrunnerService showrunnerService,
+        [Description("The unique slug, title and broadcast date for the new show.")] CreateShowCommand command,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await showrunnerService.CreateShowAsync(command, cancellationToken);
+        return result.IsSuccess
+            ? new ShowCreateToolResult(true, result.Value, null)
+            : new ShowCreateToolResult(false, null, result.Error);
+    }
+
     [McpServerTool(Name = "show_get", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
     [Description("Finds an authoritative Showrunner show by exactly one identifier: showId, slug, or showDate. Date lookups return every match and explicitly report ambiguity instead of selecting a show implicitly.")]
     public static async Task<ShowGetToolResult> GetShowAsync(
@@ -17,6 +30,19 @@ public sealed class ShowrunnerTools
         return result.IsSuccess
             ? new ShowGetToolResult(true, result.Value, null)
             : new ShowGetToolResult(false, null, result.Error);
+    }
+
+    [McpServerTool(Name = "recording_create", ReadOnly = false, Idempotent = false, UseStructuredContent = true)]
+    [Description("Creates an authoritative recording for Spotify and non-Spotify material. Use recording_history first to avoid creating a duplicate identity.")]
+    public static async Task<RecordingCreateToolResult> CreateRecordingAsync(
+        ShowrunnerService showrunnerService,
+        [Description("Known factual recording metadata. Artist, release title and notes may be omitted rather than guessed.")] CreateRecordingCommand command,
+        CancellationToken cancellationToken = default)
+    {
+        var result = await showrunnerService.CreateRecordingAsync(command, cancellationToken);
+        return result.IsSuccess
+            ? new RecordingCreateToolResult(true, result.Value, null)
+            : new RecordingCreateToolResult(false, null, result.Error);
     }
 
     [McpServerTool(Name = "show_reconciliation_evidence", ReadOnly = true, Idempotent = true, UseStructuredContent = true)]
