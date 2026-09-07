@@ -55,6 +55,10 @@
   {{ end }}
 {{ end }}
 
+{{/* Release artwork can live on the release itself or alongside a featured show. */}}
+{{ if $isReleaseCard }}
+  {{ $featuredURL = partial "release/artwork-url.html" $page }}
+{{ end }}
 
 {{/* For show cards, derive a shorter branded title: "Sundown Sessions #N"
      Show titles follow the pattern "Show #N: Broadcast [date]". The split
