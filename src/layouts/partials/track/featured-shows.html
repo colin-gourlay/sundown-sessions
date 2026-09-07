@@ -1,7 +1,8 @@
 {{ $artist := lower (printf "%v" (.Params.artist | default "")) }}
 {{ $title := lower .Title }}
 {{ $featuredShows := slice }}
-{{ $configuredShows := .Params.featuredInShows | default .Params.featured_in_shows }}
+{{ $titleReference := printf "title \"%s--%s" $title $artist }}
+{{ $featuredGuestReference := printf "track-info-featured-guest \"%s--%s" $title $artist }}
 
 {{ range where site.RegularPages "Section" "shows" }}
   {{ $show := . }}
@@ -12,19 +13,8 @@
       {{ $showText = printf "%s\n%s" $showText (lower (readFile $trackInfoPath)) }}
     {{ end }}
   {{ end }}
-  {{ if and (in $showText $title) (or (not $artist) (in $showText $artist)) }}
+  {{ if or (in $showText $titleReference) (in $showText $featuredGuestReference) }}
     {{ $featuredShows = $featuredShows | append $show }}
-  {{ end }}
-{{ end }}
-
-{{ with $configuredShows }}
-  {{ $featuredShows = slice }}
-  {{ range . }}
-    {{ $showRef := printf "%v" . | strings.TrimSpace | strings.TrimPrefix "/" | strings.TrimSuffix "/" }}
-    {{ $showRef = strings.TrimPrefix "shows/" $showRef }}
-    {{ with site.GetPage (printf "shows/%s" $showRef) }}
-      {{ $featuredShows = $featuredShows | append . }}
-    {{ end }}
   {{ end }}
 {{ end }}
 

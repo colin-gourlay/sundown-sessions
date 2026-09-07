@@ -3,8 +3,6 @@ title: Propaganda
 artist: Sparks
 release: Propaganda
 release_slug: propaganda
-featured_in_shows:
-  - "1"
 track_page: true
 ---
 ## About
