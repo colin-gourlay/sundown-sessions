@@ -1,18 +1,29 @@
 {{ $artist := lower (printf "%v" (.Params.artist | default "")) }}
 {{ $title := lower .Title }}
 {{ $featuredShows := slice }}
+{{ $configuredShows := .Params.shows }}
 
-{{ range where site.RegularPages "Section" "shows" }}
-  {{ $show := . }}
-  {{ $showText := lower .RawContent }}
-  {{ with .File }}
-    {{ $trackInfoPath := printf "content/%s/track-info.md" (path.Dir (replace .Path "\\" "/")) }}
-    {{ if fileExists $trackInfoPath }}
-      {{ $showText = printf "%s\n%s" $showText (lower (readFile $trackInfoPath)) }}
+{{ if $configuredShows }}
+  {{ range $configuredShows }}
+    {{ $showRef := printf "%v" . | strings.TrimSpace | strings.TrimPrefix "/" | strings.TrimSuffix "/" }}
+    {{ $showRef = strings.TrimPrefix "shows/" $showRef }}
+    {{ with site.GetPage (printf "shows/%s" $showRef) }}
+      {{ $featuredShows = $featuredShows | append . }}
     {{ end }}
   {{ end }}
-  {{ if and (in $showText $title) (or (not $artist) (in $showText $artist)) }}
-    {{ $featuredShows = $featuredShows | append $show }}
+{{ else }}
+  {{ range where site.RegularPages "Section" "shows" }}
+    {{ $show := . }}
+    {{ $showText := lower .RawContent }}
+    {{ with .File }}
+      {{ $trackInfoPath := printf "content/%s/track-info.md" (path.Dir (replace .Path "\\" "/")) }}
+      {{ if fileExists $trackInfoPath }}
+        {{ $showText = printf "%s\n%s" $showText (lower (readFile $trackInfoPath)) }}
+      {{ end }}
+    {{ end }}
+    {{ if and (in $showText $title) (or (not $artist) (in $showText $artist)) }}
+      {{ $featuredShows = $featuredShows | append $show }}
+    {{ end }}
   {{ end }}
 {{ end }}
 
