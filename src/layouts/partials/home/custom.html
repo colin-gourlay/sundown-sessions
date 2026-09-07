@@ -92,4 +92,36 @@
     {{ end }}
   {{ end }}
 
+  {{/* Available Now */}}
+  {{ $releasesSection := site.GetPage "releases" }}
+  {{ if $releasesSection }}
+    {{ $publishedReleases := where $releasesSection.RegularPagesRecursive ".Draft" false }}
+    {{ $availableReleases := where $publishedReleases "Params.for_sale" true }}
+    {{ $availableNow := first 3 $availableReleases.ByTitle }}
+    {{ with $availableNow }}
+      <section role="region" aria-labelledby="available-now-heading">
+        <div class="mb-5 flex flex-col gap-2 sm:flex-row sm:items-end sm:justify-between">
+          <div>
+            <h2 id="available-now-heading" class="text-2xl font-bold text-neutral-800 dark:text-neutral-200">
+              Available Now
+            </h2>
+            <p class="mt-2 max-w-2xl text-sm text-neutral-600 dark:text-neutral-300">
+              Discover music featured by Sundown Sessions that is currently available to buy.
+            </p>
+          </div>
+          <a
+            href="{{ $releasesSection.RelPermalink }}"
+            class="text-sm font-medium text-primary-600 hover:underline hover:underline-offset-2 dark:text-primary-400">
+            Explore all releases →
+          </a>
+        </div>
+        <div class="w-full grid gap-4 sm:grid-cols-2 md:grid-cols-3">
+          {{ range . }}
+            {{ partial "article-link/card.html" . }}
+          {{ end }}
+        </div>
+      </section>
+    {{ end }}
+  {{ end }}
+
 </article>
