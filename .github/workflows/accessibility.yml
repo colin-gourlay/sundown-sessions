@@ -2,11 +2,6 @@ name: Accessibility
 
 on:
   pull_request:
-    paths:
-      - src/**
-      - docs/accessibility.md
-      - .pa11yci.json
-      - .github/workflows/accessibility.yml
   push:
     branches:
       - main
@@ -22,6 +17,7 @@ permissions:
 
 jobs:
   pa11y:
+    name: Accessibility / Pa11y
     runs-on: ubuntu-latest
     env:
       HUGO_VERSION: 0.164.0
@@ -32,17 +28,56 @@ jobs:
           fetch-depth: 0
           submodules: recursive
 
+      - name: Check accessibility validation scope
+        id: accessibility_scope
+        shell: bash
+        run: |
+          set -euo pipefail
+
+          run_pa11y=true
+
+          if [[ "${{ github.event_name }}" == "pull_request" ]]; then
+            changed_paths="${RUNNER_TEMP}/accessibility-changed-paths.txt"
+
+            if git rev-parse --verify --quiet HEAD^2 >/dev/null; then
+              git diff --name-only HEAD^1 HEAD^2 > "${changed_paths}"
+            else
+              git diff --name-only \
+                "${{ github.event.pull_request.base.sha }}" \
+                "${{ github.event.pull_request.head.sha }}" \
+                > "${changed_paths}"
+            fi
+
+            echo "Changed paths considered for accessibility validation:"
+            sed 's/^/ - /' "${changed_paths}"
+
+            if grep -Eq '^(src/|docs/accessibility\.md$|\.pa11yci\.json$|\.github/workflows/accessibility\.yml$)' "${changed_paths}"; then
+              echo "Relevant public website or accessibility configuration changes found."
+            else
+              run_pa11y=false
+              echo "No public website or accessibility configuration changes found; skipping pa11y."
+            fi
+          fi
+
+          echo "run_pa11y=${run_pa11y}" >> "${GITHUB_OUTPUT}"
+
+      - name: Validate required-check contract
+        run: python3 tests/test_accessibility_workflow.py
+
       - name: Install Hugo CLI
+        if: steps.accessibility_scope.outputs.run_pa11y == 'true'
         run: |
           wget -O ${{ runner.temp }}/hugo.deb https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_linux-amd64.deb \
           && sudo dpkg -i ${{ runner.temp }}/hugo.deb
 
       - name: Set up Node.js using v6.0.0
+        if: steps.accessibility_scope.outputs.run_pa11y == 'true'
         uses: actions/setup-node@a0853c24544627f65ddf259abe73b1d18a591444 # v6.0.0
         with:
           node-version: 22
 
       - name: Build Hugo site
+        if: steps.accessibility_scope.outputs.run_pa11y == 'true'
         run: |
           hugo \
             --source src \
@@ -50,9 +85,11 @@ jobs:
             --baseURL http://127.0.0.1:1313/
 
       - name: Serve built site
+        if: steps.accessibility_scope.outputs.run_pa11y == 'true'
         run: |
           python3 -m http.server 1313 --bind 127.0.0.1 --directory ./src/public &
           echo $! > /tmp/sundown-http-server.pid
 
       - name: Run pa11y accessibility checks
+        if: steps.accessibility_scope.outputs.run_pa11y == 'true'
         run: npx --yes pa11y-ci --config .pa11yci.json

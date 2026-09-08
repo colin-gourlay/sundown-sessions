@@ -45,6 +45,27 @@ npx --yes pa11y-ci --config .pa11yci.json
 
 Automated results inform the review but do not replace the checks below.
 
+## Required pull-request check
+
+The required pull-request status check is **Accessibility / Pa11y** in the
+`Accessibility` workflow. It runs the configured `pa11y-ci` baseline for pull
+requests that change `src/**`, `docs/accessibility.md`, `.pa11yci.json` or
+`.github/workflows/accessibility.yml`.
+
+The workflow still starts for other pull requests so the required check can
+finish successfully instead of remaining pending when there are no matching
+public-website or accessibility configuration changes.
+
+To diagnose a failure, open the **Accessibility / Pa11y** job log, find the
+failing URL and selector reported by `pa11y-ci`, then reproduce locally with
+the build, server and `npx --yes pa11y-ci --config .pa11yci.json` commands
+above. Treat genuine failures as merge blockers until the regression is fixed.
+
+Emergency ruleset bypasses should be reserved for exceptional maintainer
+intervention, use GitHub's auditable bypass mechanism, and record the reason
+on the pull request. Do not add a routine bypass for real accessibility
+failures.
+
 ## Check each affected journey
 
 1. Use only the keyboard. Start at the address bar, move through the page in
