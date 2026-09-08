@@ -52,6 +52,10 @@ The required pull-request status check is **Accessibility / Pa11y** in the
 requests that change `src/**`, `docs/accessibility.md`, `.pa11yci.json` or
 `.github/workflows/accessibility.yml`.
 
+Require this exact check name in the `main` branch ruleset or branch protection
+settings. Do not require a path-filtered workflow status directly, because
+GitHub can leave skipped workflows pending.
+
 The workflow still starts for other pull requests so the required check can
 finish successfully instead of remaining pending when there are no matching
 public-website or accessibility configuration changes.
