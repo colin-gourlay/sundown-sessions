@@ -1,5 +1,7 @@
 ---
 title: The Vermin Poets
+aliases:
+  - /artists/v/vermin-poets/
 summary: "English garage-pop project linked to Billy Childish, mixing rough-edged poetry, melody and underground charm."
 description: "English garage-pop project linked to Billy Childish, mixing rough-edged poetry, melody and underground charm."
 genres: ["Garage Rock","Garage Punk","Indie Rock"]
