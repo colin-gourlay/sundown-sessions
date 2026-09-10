@@ -19,7 +19,8 @@ Albums such as *Crocodiles*, *Heaven Up Here* and *Ocean Rain* contain enduring 
 
 ## External Links
 
-- {{< new-tab-link "Facebook: [https://www.facebook.com/thebunnymen](https://www.facebook.com/thebunnymen)" >}}
+- {{< new-tab-link "Website: [https://www.bunnymen.com/](https://www.bunnymen.com/)" >}}
 
+- {{< new-tab-link "Facebook: [https://www.facebook.com/thebunnymen](https://www.facebook.com/thebunnymen)" >}}
 
 - {{< new-tab-link "Twitter: [https://twitter.com/OfficialEATB](https://twitter.com/OfficialEATB)" >}}
