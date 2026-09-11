@@ -43,7 +43,7 @@
     {{ end }}
   {{ end }}
 
-  {{/* Match release detail partial priority: `featuredInShows`, `featured_in_shows`, then existing `shows` content. */}}
+  {{/* Resolve show relationship from camelCase, snake_case, or legacy front matter key. */}}
   {{ $featuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows }}
 
   {{ if and $artistMatches $featuredShows }}
