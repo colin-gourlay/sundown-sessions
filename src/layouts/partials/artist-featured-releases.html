@@ -43,7 +43,7 @@
     {{ end }}
   {{ end }}
 
-  {{/* Resolve show relationship from camelCase, snake_case, or legacy front matter key. */}}
+  {{/* Resolve show relationship from aliases or the `shows` key used by existing release pages. */}}
   {{ $featuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows }}
 
   {{ if and $artistMatches $featuredShows }}

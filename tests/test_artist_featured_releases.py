@@ -44,7 +44,11 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
             cls.temporary_directory.cleanup()
 
     def test_echo_and_the_bunnymen_only_lists_supported_featured_releases(self):
-        self.assertIn("Releases Featured on Sundown Sessions", self.artist_page)
+        self.assertIn(
+            "Releases Featured on Sundown Sessions",
+            self.artist_page,
+            "Expected the artist featured-release heading to remain unchanged.",
+        )
         self.assertIn(
             'href="/releases/e/echo-the-bunnymen/the-best-of-echo-the-bunnymen/"',
             self.artist_page,
