@@ -43,7 +43,7 @@
     {{ end }}
   {{ end }}
 
-  {{/* Keep alias support aligned with release detail partials; new release content documents `shows` as the show relationship key. */}}
+  {{/* Match release detail partial priority: `featuredInShows`, `featured_in_shows`, then the documented `shows` key. */}}
   {{ $featuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows }}
 
   {{ if and $artistMatches $featuredShows }}
