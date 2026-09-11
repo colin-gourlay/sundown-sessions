@@ -7,8 +7,6 @@ labels:
 release_date: "1983"
 uk_chart_position: 2
 release_page: true
-shows:
-  - "4"
 tracks:
   - trackNumber: 1
     title: "The Cutter"

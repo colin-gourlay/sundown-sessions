@@ -1,4 +1,4 @@
-{{/* Releases connected to an artist through release front matter or bundle path. */}}
+{{/* Releases connected to an artist through release front matter or bundle path, and featured in a show. */}}
 
 {{ $artistName := .Title }}
 {{ $artistTitleKey := lower (urlize $artistName) }}
@@ -43,7 +43,9 @@
     {{ end }}
   {{ end }}
 
-  {{ if $artistMatches }}
+  {{ $featuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows }}
+
+  {{ if and $artistMatches $featuredShows }}
     {{ $releases = $releases | append $release }}
   {{ end }}
 {{ end }}
