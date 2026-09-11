@@ -48,10 +48,12 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         self.assertIn(
             'href="/releases/e/echo-the-bunnymen/the-best-of-echo-the-bunnymen/"',
             self.artist_page,
+            "Expected the supported Show 3 release relationship to remain visible.",
         )
         self.assertNotIn(
             'href="/releases/e/echo-the-bunnymen/porcupine/"',
             self.artist_page,
+            "Porcupine must not appear without a supported show relationship.",
         )
 
 

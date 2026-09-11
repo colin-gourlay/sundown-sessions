@@ -43,7 +43,7 @@
     {{ end }}
   {{ end }}
 
-  {{/* Match release detail partial priority: `featuredInShows`, `featured_in_shows`, then the documented `shows` key. */}}
+  {{/* Match release detail partial priority: `featuredInShows`, `featured_in_shows`, then existing `shows` content. */}}
   {{ $featuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows }}
 
   {{ if and $artistMatches $featuredShows }}
