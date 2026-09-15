@@ -8,6 +8,7 @@ on:
     paths:
       - src/content/artists/**
       - scripts/audit-artist-biographies.py
+      - tests/test_audit_artist_biographies.py
       - .github/workflows/audit-artist-biographies.yml
 
 permissions:
@@ -19,6 +20,9 @@ jobs:
     steps:
       - name: Checkout source using v4.3.1
         uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - name: Test artist biography report generation
+        run: python3 -m unittest discover -s tests -p test_audit_artist_biographies.py
 
       - name: Generate artist biography review report
         run: python3 scripts/audit-artist-biographies.py
