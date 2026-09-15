@@ -1,61 +1,51 @@
 name: 🐛 Bug Report
-description: Report a bug or unexpected behaviour
+description: Report something on the site or in the project that is not working as expected
 title: "[Bug] "
 labels: ["bug"]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to report a bug. Please include as much detail as possible.
+        Tell us what went wrong. A short description is enough to start; fill in optional details only if they help.
+        For incorrect or missing archive information, use Content Correction / Missing Content.
 
   - type: textarea
     id: description
     attributes:
-      label: Description
-      description: A clear and concise description of the bug.
-      placeholder: e.g. The save button disappears but no data is persisted.
-    validations:
-      required: true
-
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce
-      description: Step-by-step instructions.
-      placeholder: |
-        1. Go to Show Management
-        2. Click Save
-        3. Observe behaviour
+      label: What happened?
+      description: Describe the problem and where you noticed it. Include a page link if available.
+      placeholder: e.g. On a Show page, the track list is cut off on my phone.
     validations:
       required: true
 
   - type: textarea
     id: expected
     attributes:
-      label: Expected Behaviour
-      description: What should have happened?
+      label: What did you expect to happen?
+      description: If it helps explain the problem, describe what you expected instead.
     validations:
-      required: true
+      required: false
 
   - type: textarea
-    id: actual
+    id: steps
     attributes:
-      label: Actual Behaviour
-      description: What actually happened?
+      label: How did you encounter it?
+      description: If useful, describe what you were doing. You do not need to know how to make it happen again.
     validations:
-      required: true
+      required: false
 
   - type: input
     id: environment
     attributes:
-      label: Environment
-      description: Browser, OS, etc.
+      label: Device or browser
+      description: If relevant, tell us which device, browser or operating system you were using.
     validations:
       required: false
 
   - type: textarea
     id: additional
     attributes:
-      label: Additional Context
+      label: Supporting details
+      description: Add screenshots or any other context that helps explain the problem, if available.
     validations:
       required: false

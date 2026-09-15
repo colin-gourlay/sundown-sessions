@@ -1,47 +1,35 @@
 name: ✨ Feature Request
-description: Suggest a new feature or improvement
+description: Suggest a new capability or a better way to use the site or maintain the project
 title: "[Feature] "
 labels: ["enhancement"]
 body:
   - type: markdown
     attributes:
       value: |
-        Use this form to suggest a feature or improvement.
-
-  - type: textarea
-    id: description
-    attributes:
-      label: Description
-      description: What is the feature?
-    validations:
-      required: true
+        Tell us what could be better and who it would help. You do not need to work out how to build it.
+        For corrections or additions to archive information, use Content Correction / Missing Content.
 
   - type: textarea
     id: problem
     attributes:
-      label: Problem Statement
-      description: What problem does this solve?
+      label: Problem or opportunity
+      description: What is difficult, missing or worth improving for visitors or the project?
+      placeholder: e.g. As a listener, I find it hard to discover other Shows featuring an artist I like.
     validations:
       required: true
 
   - type: textarea
-    id: solution
+    id: outcome
     attributes:
-      label: Proposed Solution
-      description: Describe your solution.
-    validations:
-      required: true
-
-  - type: textarea
-    id: alternatives
-    attributes:
-      label: Alternatives Considered
+      label: Desired outcome
+      description: What would you like visitors or maintainers to be able to do? Leave blank if already covered above.
     validations:
       required: false
 
   - type: textarea
     id: additional
     attributes:
-      label: Additional Context
+      label: Supporting context
+      description: Add any useful examples, links, screenshots or ideas, if available.
     validations:
       required: false
