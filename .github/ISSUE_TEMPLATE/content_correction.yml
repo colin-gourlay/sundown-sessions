@@ -1,0 +1,34 @@
+name: Content Correction / Missing Content
+description: Report incorrect or missing archive information, links, imagery or editorial content
+title: "[Content] "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Spotted something incorrect or missing? Let us know below. A short report is welcome, and you do not need technical knowledge or a source for every correction.
+        This covers Artist, Release, Track and Show information, biographies, spelling, links, streaming destinations, imagery, Show notes and connections between archive entries.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What needs correcting or adding?
+      description: Tell us what is incorrect or missing and what it should say or include, if you know.
+      placeholder: e.g. The track list for Show 42 is missing the artist for the second track.
+    validations:
+      required: true
+
+  - type: textarea
+    id: location
+    attributes:
+      label: Where does this belong?
+      description: Add a page link or the Artist, Release, Track or Show name if not already mentioned above. For a missing page, a name is enough.
+    validations:
+      required: false
+
+  - type: textarea
+    id: sources
+    attributes:
+      label: Sources or supporting details
+      description: If available, share a reference, correct link, screenshot or other context that would help us check the report.
+    validations:
+      required: false
