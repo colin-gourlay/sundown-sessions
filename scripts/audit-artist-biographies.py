@@ -115,9 +115,23 @@ def write_report(findings: list[Finding], output: Path, today: dt.date, stale_da
 
     if findings:
         lines.extend(["## Findings", ""])
-        for finding in findings:
-            lines.append(f"### {finding.title}")
+        # Match MD026 in .markdownlint.jsonc; full stops are permitted.
+        titles = [finding.title.rstrip(" \t\r\n,;:!¿?") or "Artist" for finding in findings]
+        reserved = set(titles)
+        used: set[str] = set()
+        for finding, title in zip(findings, titles):
+            heading = title
+            suffix = 2
+            while heading in used:
+                heading = f"{title} ({suffix})"
+                suffix += 1
+                # Leave natural names such as "Artist (2)" available.
+                if heading in reserved:
+                    heading = title
+            used.add(heading)
+            lines.append(f"### {heading}")
             lines.append("")
+            lines.append(f"- Artist: {finding.title}")
             lines.append(f"- File: `{finding.path}`")
             for reason in finding.reasons:
                 lines.append(f"- Reason: {reason}")
