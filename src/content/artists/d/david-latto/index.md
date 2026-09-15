@@ -19,6 +19,6 @@ David Latto is a Scottish singer-songwriter whose work sits between folk-informe
 
 On Sundown Sessions, "Geordie Munro" has become a recurring touchpoint rather than a one-off selection, appearing in published shows #1, #2 and #3. The track's Kirkcaldy and Fife references, and its full release credit to David Latto & The Lang Spoons, make it a clear thread through the programme's early archive.
 
-## External Links
+## Explore Further
 
-- {{< new-tab-link "Apple Music: [https://music.apple.com/gb/album/geordie-munro-single/1632002571](https://music.apple.com/gb/album/geordie-munro-single/1632002571)" >}}
+- {{< new-tab-link "Apple Music: [Apple Music](https://music.apple.com/gb/album/geordie-munro-single/1632002571)" >}}
