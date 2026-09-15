@@ -15,4 +15,10 @@ lastReviewed: 2026-08-26
 
 ## About
 
-David Latto is a Scottish singer-songwriter whose folk-leaning songs put storytelling, melody and regional character at the centre. "Geordie Munro", heard on the first Sundown Sessions broadcast, captures the direct narrative style and acoustic warmth that make his work fit naturally beside classic and contemporary Scottish songwriting.
+David Latto is a Scottish singer-songwriter whose work sits between folk-informed storytelling and concise indie-rock craft, with melody and place at the centre of his writing. His recordings as David Latto and in collaboration with The Lang Spoons keep that balance of narrative detail and direct song structure.
+
+On Sundown Sessions, "Geordie Munro" has become a recurring touchpoint rather than a one-off selection, appearing in published shows #1, #2 and #3. The track's Kirkcaldy and Fife references, and its full release credit to David Latto & The Lang Spoons, make it a clear thread through the programme's early archive.
+
+## External Links
+
+- {{< new-tab-link "Apple Music: [https://music.apple.com/gb/album/geordie-munro-single/1632002571](https://music.apple.com/gb/album/geordie-munro-single/1632002571)" >}}
