@@ -11,10 +11,10 @@ lastReviewed: 2026-09-16
 
 ## About
 
-Blue On Shock were part of the late-1980s Fife music scene, with material surviving through both released recordings and privately preserved rehearsal tapes. The Sundown Sessions archive keeps those sources distinct rather than treating the rehearsal material as a conventional commercial release.
+Blue On Shock were a Scottish rock band rooted in the Fife and Kirkcaldy music scene. The local music-history archive Kirkcaldy Bands places them in that scene through an Abbotshall Hotel photograph from 1983, a documented 1989 7-inch recording and line-up details, while The Lost Café Sessions identifies them among the Scottish bands recorded at Sound Café Studios around 1991, with "It Ain't Easy" released through that archival project.
 
-Show #3 features three recordings from a private chrome rehearsal cassette — "Love Is A Venture", "Brand New Chevy" and "The Fighting's Never Won". Their rough-edged immediacy documents the band in rehearsal and provides a different perspective from the separately documented Blue On Shock recordings that circulated outside that cassette.
+On Sundown Sessions, Blue On Shock are represented differently: "Love Is A Venture", "Brand New Chevy" and "The Fighting's Never Won" come from a private chrome rehearsal cassette given to me so I could learn the songs. That cassette source is kept separate from the documented 1989 7-inch recording and The Lost Café Sessions material, preserving the recovery story without turning rehearsal-room recordings into conventional release metadata.
 
 ## Explore Further
 
-- {{< new-tab-link "[The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}
+- {{< new-tab-link "Archive: [The Lost Café Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}
