@@ -11,10 +11,16 @@ SHOW_THREE_TRACK_INFO = ROOT / "src/content/shows/3/track-info.md"
 
 
 class SparksArtistPageTests(unittest.TestCase):
-    def assert_track_guide_row(self, content, title, release):
+    def assert_track_guide_row(self, content, title_shortcode, release_shortcode):
         self.assertTrue(
-            any(title in line and release in line for line in content.splitlines()),
-            f"Expected {title!r} to reference {release!r} in the same track-guide row.",
+            any(
+                title_shortcode in line and release_shortcode in line
+                for line in content.splitlines()
+            ),
+            (
+                f"Expected {title_shortcode!r} to reference "
+                f"{release_shortcode!r} in the same track-guide row."
+            ),
         )
 
     def test_explore_further_prioritises_official_destination(self):
@@ -51,16 +57,29 @@ class SparksArtistPageTests(unittest.TestCase):
         show_three_playlist = SHOW_THREE_PLAYLIST.read_text(encoding="utf-8")
         show_three_track_info = SHOW_THREE_TRACK_INFO.read_text(encoding="utf-8")
 
-        for title in ("Propaganda", "At Home, At Work, At Play"):
-            with self.subTest(show=1, title=title):
+        show_one_tracks = (
+            (
+                "Propaganda",
+                '{{<title "Propaganda--Sparks">}}',
+                '{{<release "Propaganda (1974)--Sparks--propaganda">}}',
+            ),
+            (
+                "At Home, At Work, At Play",
+                '{{<title "At Home, At Work, At Play--Sparks">}}',
+                '{{<release "Propaganda (1974)--Sparks--propaganda">}}',
+            ),
+        )
+
+        for playlist_title, title_shortcode, release_shortcode in show_one_tracks:
+            with self.subTest(show=1, title=playlist_title):
                 self.assertIn(
-                    '{{< artist-wikilink "Sparks" >}} - ' + title,
+                    '{{< artist-wikilink "Sparks" >}} - ' + playlist_title,
                     show_one_playlist,
                 )
                 self.assert_track_guide_row(
                     show_one_track_info,
-                    f"{title}--Sparks",
-                    "Propaganda (1974)--Sparks--propaganda",
+                    title_shortcode,
+                    release_shortcode,
                 )
 
         self.assertIn(
@@ -69,8 +88,8 @@ class SparksArtistPageTests(unittest.TestCase):
         )
         self.assert_track_guide_row(
             show_three_track_info,
-            "Beat the Clock--Sparks",
-            "No. 1 In Heaven (1979)--Sparks--no-1-in-heaven",
+            '{{<title "Beat the Clock--Sparks">}}',
+            '{{<release "No. 1 In Heaven (1979)--Sparks--no-1-in-heaven">}}',
         )
 
 
