@@ -22,4 +22,4 @@ Later line-ups, with Kapranos and Hardy joined by Julian Corrie, Dino Bardot and
 
 - {{< new-tab-link "Instagram: [Instagram](https://www.instagram.com/franz_ferdinand/)" >}}
 
-- {{< new-tab-link "X: [X](https://twitter.com/Franz_Ferdinand)" >}}
+- {{< new-tab-link "X: [X](https://x.com/Franz_Ferdinand)" >}}
