@@ -1,3 +1,4 @@
+import re
 import unittest
 from pathlib import Path
 
@@ -51,15 +52,21 @@ class SparksArtistPageTests(unittest.TestCase):
                     '{{< artist-wikilink "Sparks" >}} - ' + title,
                     show_one_playlist,
                 )
-                self.assertIn(f"{title}--Sparks", show_one_track_info)
-                self.assertIn("Propaganda (1974)--Sparks--propaganda", show_one_track_info)
+                self.assertRegex(
+                    show_one_track_info,
+                    rf"{re.escape(title)}--Sparks.*"
+                    r"Propaganda \(1974\)--Sparks--propaganda",
+                )
 
         self.assertIn(
             '{{< artist-wikilink "Sparks" >}} - Beat The Clock',
             show_three_playlist,
         )
-        self.assertIn("Beat the Clock--Sparks", show_three_track_info)
-        self.assertIn("No. 1 In Heaven (1979)--Sparks--no-1-in-heaven", show_three_track_info)
+        self.assertRegex(
+            show_three_track_info,
+            r"Beat the Clock--Sparks.*"
+            r"No\. 1 In Heaven \(1979\)--Sparks--no-1-in-heaven",
+        )
 
 
 if __name__ == "__main__":
