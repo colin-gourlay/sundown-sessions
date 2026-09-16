@@ -19,7 +19,7 @@ Squeeze are an English band formed in Deptford, south-east London, in 1974, buil
 
 After a hiatus, the band returned with *Babylon and On* in 1987 and continued recording through the 1990s, with *Some Fantastic Place* (1993) marking a reflective, melodically rich chapter in their catalogue. Difford and Tilbrook have reconvened Squeeze periodically in the decades since, maintaining a reputation built on craft, wit and an ear for the particular detail that makes a lyric linger.
 
-## External Links
+## Explore Further
 
 - {{< new-tab-link "Official Website: [Official Website](https://www.squeezeofficial.com/)" >}}
 
@@ -27,5 +27,5 @@ After a hiatus, the band returned with *Babylon and On* in 1987 and continued re
 
 - {{< new-tab-link "Instagram: [Instagram](https://www.instagram.com/squeezeogram/)" >}}
 
-- {{< new-tab-link "Twitter: [Twitter](https://twitter.com/squeezeofficial)" >}}
+- {{< new-tab-link "X: [Squeeze on X](https://twitter.com/squeezeofficial)" >}}
 

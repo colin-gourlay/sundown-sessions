@@ -22,6 +22,7 @@ tracks:
     duration: "4:32"
   - trackNumber: 3
     title: "Third Rail"
+    url: "/tracks/s/squeeze/third-rail/"
     duration: "3:39"
   - trackNumber: 4
     title: "Loving You Tonight"
