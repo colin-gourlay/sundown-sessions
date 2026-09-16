@@ -43,6 +43,12 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         cls.ist_ist_architecture_page = (
             destination / "releases/i/ist-ist/architecture/index.html"
         ).read_text(encoding="utf-8")
+        cls.teskey_artist_page = (
+            destination / "artists/t/the-teskey-brothers/index.html"
+        ).read_text(encoding="utf-8")
+        cls.teskey_release_page = (
+            destination / "releases/t/the-teskey-brothers/run-home-slow/index.html"
+        ).read_text(encoding="utf-8")
 
     @classmethod
     def tearDownClass(cls):
@@ -136,6 +142,31 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         self.assertNotIn(
             'href="/shows/featuring-the-twist/"',
             self.ist_ist_architecture_page,
+        )
+
+    def test_teskey_brothers_release_and_track_history_follow_show_one(self):
+        self.assertIn(
+            'href="/releases/t/the-teskey-brothers/run-home-slow/"',
+            self.teskey_artist_page,
+            "Expected Run Home Slow to appear through the published Show 1 play.",
+        )
+        self.assertRegex(
+            self.teskey_artist_page,
+            r"<span class=\"artist-featured-track__title\">Rain</span>[\s\S]*"
+            r"<span class=\"artist-featured-track__release\">from Run Home Slow "
+            r"\(2019\)</span>[\s\S]*href=\"/shows/featuring-the-big-now/\"[\s\S]*"
+            r"Sundown Sessions #1[\s\S]*<time datetime=\"2024-06-05\">"
+            r"5 June 2024</time>",
+        )
+        self.assertIn(
+            'href="/shows/featuring-the-big-now/"',
+            self.teskey_release_page,
+            "Expected the Run Home Slow release page to link to Show 1.",
+        )
+        self.assertNotIn(
+            'href="/46"',
+            self.teskey_release_page,
+            "Run Home Slow must not render an unsupported Show 46 relationship.",
         )
 
 

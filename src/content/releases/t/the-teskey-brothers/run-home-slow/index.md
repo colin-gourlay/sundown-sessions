@@ -8,7 +8,6 @@ release_date: "2019"
 release_page: true
 shows:
   - "1"
-  - "46"
 tracks:
   - trackNumber: 1
     title: "Let Me Let You Down"
