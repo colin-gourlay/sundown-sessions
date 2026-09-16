@@ -96,8 +96,14 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
             with self.subTest(href=href):
                 self.assertIn(href, self.ist_ist_artist_page)
 
-        self.assertIn("<dd>3 broadcasts</dd>", self.ist_ist_artist_page)
-        self.assertIn("<dd>3</dd>", self.ist_ist_artist_page)
+        self.assertRegex(
+            self.ist_ist_artist_page,
+            r"<dt>\s*Featured on Sundown Sessions\s*</dt>\s*<dd>3 broadcasts</dd>",
+        )
+        self.assertRegex(
+            self.ist_ist_artist_page,
+            r"<dt>\s*Tracks played\s*</dt>\s*<dd>3</dd>",
+        )
         self.assertIn("5 June 2024", self.ist_ist_artist_page)
         self.assertIn("7 August 2024", self.ist_ist_artist_page)
         self.assertNotIn("Lost My Shadow", self.ist_ist_artist_page)
