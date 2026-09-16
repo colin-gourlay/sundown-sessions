@@ -14,12 +14,12 @@ class BlueOnShockArtistPageTests(unittest.TestCase):
         self.assertIn("local music-history archive Kirkcaldy Bands", content)
         self.assertIn("Abbotshall Hotel photograph from 1983", content)
         self.assertIn("documented 1989 7-inch recording", content)
-        self.assertIn("Sound Cafe Studios around 1991", content)
+        self.assertIn("Sound Café Studios around 1991", content)
         self.assertIn('"It Ain\'t Easy" released through that archival project', content)
         self.assertIn("private chrome rehearsal cassette", content)
         self.assertIn(
             "That cassette source is kept separate from the documented 1989 7-inch recording "
-            "and The Lost Cafe Sessions material",
+            "and The Lost Café Sessions material",
             content,
         )
 
@@ -28,7 +28,7 @@ class BlueOnShockArtistPageTests(unittest.TestCase):
         self.assertIn("## Explore Further", content)
         self.assertIn(
             '{{< new-tab-link "Archive: '
-            '[The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}',
+            '[The Lost Café Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}',
             content,
         )
         self.assertNotIn("TODO", content)

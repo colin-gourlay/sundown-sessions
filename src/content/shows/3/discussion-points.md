@@ -15,7 +15,7 @@ purpose: discussion-points
   - {{< new-tab-link "[The Wrecking Crew!](https://www.imdb.com/title/tt1185418/)" >}}
   - {{< new-tab-link "[Official Trailer](https://www.youtube.com/watch?v=SX5BCgmr7tg)" >}}
 - _Blue On Shock_
-  - {{< new-tab-link "[The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}
+  - {{< new-tab-link "[The Lost Café Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}
 - _Simple Minds_
   - Chelsea Girl - {{< new-tab-link "[The Old Grey Whistle Test](https://www.youtube.com/watch?v=Aref3Nj4YaQ)" >}}
 - _Unbelievable Truth_
