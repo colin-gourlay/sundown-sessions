@@ -6,9 +6,15 @@ description: "Scottish rock group represented in the archive by rare rehearsal-c
 editorialSummary: >
   Blue On Shock pair direct rock songwriting with the raw immediacy of rehearsal-room recordings rescued from a private cassette.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 
 ## About
 
-Blue On Shock are represented in the Sundown Sessions archive through three rehearsal recordings preserved on a private chrome cassette: "Love Is A Venture", "Brand New Chevy" and "The Fighting's Never Won". Their featured broadcast places those recordings in context and captures the energy of songs heard away from a formal studio release.
+Blue On Shock were part of the late-1980s Fife music scene, with material surviving through both released recordings and privately preserved rehearsal tapes. The Sundown Sessions archive keeps those sources distinct rather than treating the rehearsal material as a conventional commercial release.
+
+Show #3 features three recordings from a private chrome rehearsal cassette — "Love Is A Venture", "Brand New Chevy" and "The Fighting's Never Won". Their rough-edged immediacy documents the band in rehearsal and provides a different perspective from the separately documented Blue On Shock recordings that circulated outside that cassette.
+
+## Explore Further
+
+- {{< new-tab-link "[The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}
