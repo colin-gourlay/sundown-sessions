@@ -7,7 +7,7 @@ description: "Scottish rock band known for ringing, bagpipe-like guitars, anthem
 editorialSummary: >
   Big Country make ringing guitars feel vast and windswept, carrying anthemic melodies with urgency, pride and unmistakable emotional force.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 ## About
 
@@ -15,12 +15,7 @@ Big Country emerged from Dunfermline with a guitar sound unlike any of their con
 
 From "In a Big Country" and "Fields of Fire" to the darker sweep of *The Seer* and *The Buffalo Skinners*, their catalogue combines Scottish musical character, rock momentum and Adamson's searching, humane songwriting.
 
+## Explore Further
 
-
-## External Links
-
-- {{< new-tab-link "Facebook: [https://www.facebook.com/inabigcountry](https://www.facebook.com/inabigcountry)" >}}
-
-
-- {{< new-tab-link "Twitter: [https://twitter.com/bigcountryuk](https://twitter.com/bigcountryuk)" >}}
-
+- {{< new-tab-link "[Facebook](https://www.facebook.com/inabigcountry)" >}}
+- {{< new-tab-link "[X](https://twitter.com/bigcountryuk)" >}}
