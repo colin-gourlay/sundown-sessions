@@ -28,7 +28,9 @@
   {{ $platformKey = replace $platformKey "_" "-" }}
   {{ $platformKey = replace $platformKey "." "" }}
   {{ $label := $platform }}
+  {{ $isCustomLink := false }}
   {{ if in $customLabelKeys $platformKey }}
+    {{ $isCustomLink = true }}
     {{ $label = $displayLabel }}
     {{ $platformKey = lower $displayLabel }}
     {{ $platformKey = replace $platformKey " " "-" }}
@@ -69,14 +71,14 @@
 
   {{ if and $url (not (index $linksByPlatform $platformKey)) }}
     {{ $linksByPlatform = merge $linksByPlatform (dict $platformKey $url) }}
-    {{ if not (in $knownPlatformKeys $platformKey) }}
+    {{ if and $isCustomLink (not (in $knownPlatformKeys $platformKey)) }}
       {{ $customLinks = $customLinks | append (dict "key" $platformKey "label" $label "icon" "link" "url" $url) }}
     {{ end }}
   {{ end }}
 {{ end }}
 
-{{/* Keep the issue-defined discovery and social priorities first. Destinations
-     outside that sequence remain available, but follow the prioritised links. */}}
+{{/* Keep the issue-defined discovery and social priorities before explicit
+     archive/source/history links. */}}
 {{ $destinations := slice
   (dict "key" "website" "label" "Official Website" "icon" "globe")
   (dict "key" "bandcamp" "label" "Bandcamp" "icon" "music")
