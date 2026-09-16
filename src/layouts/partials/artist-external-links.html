@@ -28,10 +28,9 @@
   {{ $platformKey = replace $platformKey "_" "-" }}
   {{ $platformKey = replace $platformKey "." "" }}
   {{ if in $customLabelKeys $platformKey }}
-    {{ $customKey := printf "%s:%s" $platformKey $url }}
-    {{ if and $url (not (index $customLinksByKey $customKey)) }}
-      {{ $customLinksByKey = merge $customLinksByKey (dict $customKey true) }}
-      {{ $customLinks = $customLinks | append (dict "key" $customKey "label" $displayLabel "icon" "link" "url" $url) }}
+    {{ if and $url (not (index $customLinksByKey $url)) }}
+      {{ $customLinksByKey = merge $customLinksByKey (dict $url true) }}
+      {{ $customLinks = $customLinks | append (dict "key" $url "label" $displayLabel "icon" "link" "url" $url) }}
     {{ end }}
   {{ else }}
     {{ $urlLower := lower $url }}
