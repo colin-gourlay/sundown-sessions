@@ -108,10 +108,14 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
             self.ist_ist_artist_page,
             r"<dt>\s*First featured\s*</dt>\s*<dd>\s*0?5\s+June\s+2024\s*</dd>",
         )
+        last_featured_pattern = (
+            r"<dt>\s*Last featured\s*</dt>\s*<dd>[\s\S]*"
+            r'href="/shows/featuring-baby-bartok/"[\s\S]*'
+            r"0?7\s+August\s+2024[\s\S]*</dd>"
+        )
         self.assertRegex(
             self.ist_ist_artist_page,
-            r'(?s)<dt>\s*Last featured\s*</dt>\s*<dd>.*'
-            r'href="/shows/featuring-baby-bartok/".*0?7\s+August\s+2024.*</dd>',
+            last_featured_pattern,
         )
         self.assertNotIn("Lost My Shadow", self.ist_ist_artist_page)
         self.assertNotIn('href="/shows/featuring-the-twist/"', self.ist_ist_artist_page)
