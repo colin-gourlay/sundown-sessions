@@ -16,6 +16,7 @@ Sparks are an American art-pop duo formed by brothers Ron and Russell Mael in Lo
 
 ## Explore Further
 
-- {{< new-tab-link "[Facebook](https://www.facebook.com/sparksofficial)" >}}
-- {{< new-tab-link "[Instagram](https://www.instagram.com/sparks_official/)" >}}
-- {{< new-tab-link "[X](https://twitter.com/sparksofficial)" >}}
+- {{< new-tab-link "Website: [Official Sparks website](https://allsparks.com/)" >}}
+- {{< new-tab-link "Facebook: [Sparks on Facebook](https://www.facebook.com/sparksofficial)" >}}
+- {{< new-tab-link "Instagram: [Sparks on Instagram](https://www.instagram.com/sparks_official/)" >}}
+- {{< new-tab-link "X: [Sparks on X](https://twitter.com/sparksofficial)" >}}
