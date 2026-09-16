@@ -5,7 +5,7 @@ title: Franz Ferdinand
 summary: "Scottish indie rock band from Glasgow, known for angular guitars, dance-punk rhythm and sharp art-pop hooks."
 description: "Scottish indie rock band from Glasgow, formed in 2002 and known for angular guitars, dance-punk rhythms, sharp art-pop hooks and enduring alternative anthems."
 editorialSummary: >
-  Franz Ferdinand channel Glasgow art-school energy into razor-sharp guitars, infectious hooks and irresistible rhythmic momentum.
+  Franz Ferdinand fuse Glasgow art-school energy with razor-sharp guitars, infectious hooks and irresistible rhythmic momentum.
 artist_page: true
 lastReviewed: 2026-09-16
 ---
