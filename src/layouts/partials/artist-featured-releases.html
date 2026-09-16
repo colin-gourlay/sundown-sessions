@@ -6,6 +6,31 @@
 {{ with .File }}
   {{ $artistKey = lower (path.Base (strings.TrimSuffix "/" .Dir)) }}
 {{ end }}
+{{ $publishedShowRefs := dict }}
+{{ with site.GetPage "shows" }}
+  {{ range where (where .Pages ".Date.IsZero" false) "Draft" false }}
+    {{ $contentPath := "" }}
+    {{ with .File }}{{ $contentPath = strings.TrimSuffix "/" (replace .Path "\\" "/") }}{{ end }}
+    {{ $contentBundlePath := strings.TrimSuffix "/index.md" $contentPath }}
+    {{ $contentDirName := "" }}
+    {{ with .File }}{{ $contentDirName = path.Base (strings.TrimSuffix "/" .Dir) }}{{ end }}
+
+    {{ range slice
+      (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink))
+      .Slug
+      $contentPath
+      $contentBundlePath
+      (path.Base $contentBundlePath)
+      $contentDirName
+      (printf "shows/%s" $contentDirName)
+    }}
+      {{ $refKey := lower (printf "%v" .) | strings.TrimSpace }}
+      {{ if $refKey }}
+        {{ $publishedShowRefs = merge $publishedShowRefs (dict $refKey true) }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ $releases := slice }}
 
 {{ range where site.RegularPages "Section" "releases" }}
@@ -45,8 +70,33 @@
 
   {{/* Resolve show relationship from aliases or the `shows` key used by existing release pages. */}}
   {{ $featuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows }}
+  {{ $hasPublishedFeaturedShow := false }}
+  {{ with $featuredShows }}
+    {{ $entries := . }}
+    {{ if not (reflect.IsSlice $entries) }}
+      {{ $entries = slice $entries }}
+    {{ end }}
 
-  {{ if and $artistMatches $featuredShows }}
+    {{ range $entry := $entries }}
+      {{ $showRef := "" }}
+      {{ if reflect.IsMap $entry }}
+        {{ $showRef = index $entry "show" | default (index $entry "page") | default (index $entry "path") | default (index $entry "slug") | default (index $entry "url") | default "" }}
+      {{ else }}
+        {{ $showRef = $entry }}
+      {{ end }}
+
+      {{ $showRef = printf "%v" $showRef | strings.TrimSpace }}
+      {{ if and (not $hasPublishedFeaturedShow) $showRef }}
+        {{ $normalizedRef := lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" $showRef)) }}
+        {{ $normalizedRef = strings.TrimSuffix "/index.md" $normalizedRef }}
+        {{ if index $publishedShowRefs $normalizedRef }}
+          {{ $hasPublishedFeaturedShow = true }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if and $artistMatches $hasPublishedFeaturedShow }}
     {{ $releases = $releases | append $release }}
   {{ end }}
 {{ end }}

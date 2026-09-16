@@ -44,7 +44,7 @@ links:
 release_page: true
 shows:
   - "2"
-  - "10"
+  - "8"
 duration: "37:14"
 tracklist_source: "https://musicbrainz.org/release/795e95f2-7f7e-4278-ad46-fe7b1ca55d26"
 tracklist_edition: "2020-05-01 GB"
