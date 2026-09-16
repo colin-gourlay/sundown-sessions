@@ -84,9 +84,12 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         )
 
     def test_ist_ist_artist_history_matches_published_track_guides(self):
+        normalised_artist_page = self.ist_ist_artist_page.replace("&#39;", "'").replace(
+            "’", "'"
+        )
         for track in ("Black", "Fat Cats Drown in Milk", "You're Mine"):
             with self.subTest(track=track):
-                self.assertIn(track, self.ist_ist_artist_page)
+                self.assertIn(track, normalised_artist_page)
 
         for href in (
             'href="/shows/featuring-the-big-now/"',
