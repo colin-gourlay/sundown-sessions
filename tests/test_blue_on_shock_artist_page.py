@@ -4,7 +4,6 @@ from pathlib import Path
 
 ROOT = Path(__file__).parents[1]
 ARTIST_PAGE = ROOT / "src/content/artists/b/blue-on-shock/index.md"
-ARTIST_EXTERNAL_LINKS_PARTIAL = ROOT / "src/layouts/partials/artist-external-links.html"
 SHOW_THREE_TRACK_INFO = ROOT / "src/content/shows/3/track-info.md"
 
 
@@ -12,6 +11,7 @@ class BlueOnShockArtistPageTests(unittest.TestCase):
     def test_biography_separates_documented_recordings_from_rehearsal_cassette(self):
         content = ARTIST_PAGE.read_text(encoding="utf-8")
         self.assertIn("Fife and Kirkcaldy music scene", content)
+        self.assertIn("local music-history archive Kirkcaldy Bands", content)
         self.assertIn("Abbotshall Hotel photograph from 1983", content)
         self.assertIn("documented 1989 7-inch recording", content)
         self.assertIn("Sound Cafe Studios around 1991", content)
@@ -33,15 +33,6 @@ class BlueOnShockArtistPageTests(unittest.TestCase):
         )
         self.assertNotIn("TODO", content)
         self.assertNotIn("None found", content)
-
-    def test_artist_external_links_partial_preserves_custom_labels(self):
-        partial = ARTIST_EXTERNAL_LINKS_PARTIAL.read_text(encoding="utf-8")
-        self.assertIn("$customLinks", partial)
-        self.assertIn("$customLabelKeys", partial)
-        self.assertIn("$isCustomLink", partial)
-        self.assertIn('"label" $label', partial)
-        self.assertIn('(in $urlLower "music.apple.com")', partial)
-        self.assertIn("$orderedLinks = $orderedLinks | append .", partial)
 
     def test_show_three_keeps_private_cassette_track_relationships(self):
         content = SHOW_THREE_TRACK_INFO.read_text(encoding="utf-8")

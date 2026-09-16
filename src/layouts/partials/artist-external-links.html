@@ -14,11 +14,11 @@
 {{ $externalLinks := findRESubmatch $linkPattern $externalSection }}
 
 {{ $linksByPlatform := dict }}
-{{ $knownPlatformKeys := slice "website" "bandcamp" "spotify" "apple" "discogs" "musicbrainz" "facebook" "instagram" "youtube" "twitter" "vimeo" "tiktok" "wikipedia" "bluesky" }}
 {{/* Custom label keys preserve the inner Markdown label, so keep them distinct
-     from the known platform keys above. */}}
+     from the platform keys in the destination ordering below. */}}
 {{ $customLabelKeys := slice "archive" "source" "history" }}
 {{ $customLinks := slice }}
+{{ $customLinksByKey := dict }}
 {{ range $externalLinks }}
   {{ $platform := index . 1 | strings.TrimSpace }}
   {{ $displayLabel := index . 2 | strings.TrimSpace }}
@@ -27,15 +27,12 @@
   {{ $platformKey = replace $platformKey " " "-" }}
   {{ $platformKey = replace $platformKey "_" "-" }}
   {{ $platformKey = replace $platformKey "." "" }}
-  {{ $label := $platform }}
-  {{ $isCustomLink := false }}
   {{ if in $customLabelKeys $platformKey }}
-    {{ $isCustomLink = true }}
-    {{ $label = $displayLabel }}
-    {{ $platformKey = lower $displayLabel }}
-    {{ $platformKey = replace $platformKey " " "-" }}
-    {{ $platformKey = replace $platformKey "_" "-" }}
-    {{ $platformKey = replace $platformKey "." "" }}
+    {{ $customKey := printf "%s:%s" $platformKey $url }}
+    {{ if and $url (not (index $customLinksByKey $customKey)) }}
+      {{ $customLinksByKey = merge $customLinksByKey (dict $customKey true) }}
+      {{ $customLinks = $customLinks | append (dict "key" $customKey "label" $displayLabel "icon" "link" "url" $url) }}
+    {{ end }}
   {{ else }}
     {{ $urlLower := lower $url }}
     {{ if or (in $platformKey "website") (in $platformKey "official-site") }}
@@ -67,12 +64,9 @@
     {{ else if or (in $platformKey "bluesky") (in $urlLower "bsky.app") }}
       {{ $platformKey = "bluesky" }}
     {{ end }}
-  {{ end }}
 
-  {{ if and $url (not (index $linksByPlatform $platformKey)) }}
-    {{ $linksByPlatform = merge $linksByPlatform (dict $platformKey $url) }}
-    {{ if and $isCustomLink (not (in $knownPlatformKeys $platformKey)) }}
-      {{ $customLinks = $customLinks | append (dict "key" $platformKey "label" $label "icon" "link" "url" $url) }}
+    {{ if and $url (not (index $linksByPlatform $platformKey)) }}
+      {{ $linksByPlatform = merge $linksByPlatform (dict $platformKey $url) }}
     {{ end }}
   {{ end }}
 {{ end }}
