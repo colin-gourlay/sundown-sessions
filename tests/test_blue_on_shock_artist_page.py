@@ -19,7 +19,7 @@ class BlueOnShockArtistPageTests(unittest.TestCase):
         self.assertIn("private chrome rehearsal cassette", content)
         self.assertIn(
             "That cassette source is kept separate from the documented 1989 7-inch recording "
-            "and The Lost Cafe Sessions material",
+            "and The Lost Café Sessions material",
             content,
         )
 
@@ -28,7 +28,7 @@ class BlueOnShockArtistPageTests(unittest.TestCase):
         self.assertIn("## Explore Further", content)
         self.assertIn(
             '{{< new-tab-link "Archive: '
-            '[The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}',
+            '[The Lost Café Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}',
             content,
         )
         self.assertNotIn("TODO", content)

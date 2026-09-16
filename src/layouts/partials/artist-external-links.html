@@ -15,6 +15,8 @@
 
 {{ $linksByPlatform := dict }}
 {{ $knownPlatformKeys := slice "website" "bandcamp" "spotify" "apple" "discogs" "musicbrainz" "facebook" "instagram" "youtube" "twitter" "vimeo" "tiktok" "wikipedia" "bluesky" }}
+{{/* Custom label keys preserve the inner Markdown label, so keep them distinct
+     from the known platform keys above. */}}
 {{ $customLabelKeys := slice "archive" "source" "history" }}
 {{ $customLinks := slice }}
 {{ range $externalLinks }}
