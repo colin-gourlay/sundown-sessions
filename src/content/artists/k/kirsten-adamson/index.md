@@ -7,15 +7,14 @@ description: "Scottish singer-songwriter known for warm vocals, reflective roots
 editorialSummary: >
   Kirsten Adamson brings warmth and clarity to reflective country and folk songwriting, balancing personal history with a confident voice of her own.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 ## About
 
-Kirsten Adamson appears in the Sundown Sessions archive through the album *Landing Place* and the single *Take Me As I Am*, with “My Father's Songs”, “Without Warning” and “Take Me As I Am” each offering a different entry point into her recent catalogue.
+Kirsten Adamson is a Scottish singer-songwriter whose work draws on country, folk and roots rock while retaining a clear identity of its own. Her writing balances family history and personal reflection with warm, direct performances rather than leaning on inherited associations.
 
+The Sundown Sessions archive features material from *Landing Place* alongside "Take Me As I Am", with "My Father's Songs" providing an especially personal connection to the songwriting legacy of her father, Stuart Adamson.
 
-## External Links
+## Explore Further
 
-
-- {{< new-tab-link "Instagram: [https://www.instagram.com/kirsten_adamson/](https://www.instagram.com/kirsten_adamson/)" >}}
-
+- {{< new-tab-link "[Instagram](https://www.instagram.com/kirsten_adamson/)" >}}
