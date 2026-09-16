@@ -6,7 +6,34 @@
 {{ with .File }}
   {{ $artistKey = lower (path.Base (strings.TrimSuffix "/" .Dir)) }}
 {{ end }}
-{{ $showPages := where site.RegularPages "Section" "shows" }}
+{{ $publishedShowRefs := dict }}
+{{ with site.GetPage "shows" }}
+  {{ range where .Pages ".Date.IsZero" false }}
+    {{ if not .Draft }}
+      {{ $contentPath := "" }}
+      {{ with .File }}{{ $contentPath = strings.TrimSuffix "/" (replace .Path "\\" "/") }}{{ end }}
+      {{ $contentBundlePath := strings.TrimSuffix "/index.md" $contentPath }}
+      {{ $contentDirName := "" }}
+      {{ with .File }}{{ $contentDirName = path.Base (strings.TrimSuffix "/" .Dir) }}{{ end }}
+
+      {{ range slice
+        (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink))
+        .Slug
+        .Title
+        $contentPath
+        $contentBundlePath
+        (path.Base $contentBundlePath)
+        $contentDirName
+        (printf "shows/%s" $contentDirName)
+      }}
+        {{ $refKey := lower (printf "%v" .) | strings.TrimSpace }}
+        {{ if $refKey }}
+          {{ $publishedShowRefs = merge $publishedShowRefs (dict $refKey true) }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+{{ end }}
 {{ $releases := slice }}
 
 {{ range where site.RegularPages "Section" "releases" }}
@@ -65,31 +92,8 @@
       {{ if and (not $hasPublishedFeaturedShow) $showRef }}
         {{ $normalizedRef := lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" $showRef)) }}
         {{ $normalizedRef = strings.TrimSuffix "/index.md" $normalizedRef }}
-
-        {{ range $showPages }}
-          {{ $contentPath := "" }}
-          {{ with .File }}{{ $contentPath = strings.TrimSuffix "/" (replace .Path "\\" "/") }}{{ end }}
-          {{ $contentBundlePath := strings.TrimSuffix "/index.md" $contentPath }}
-          {{ $contentDirName := "" }}
-          {{ with .File }}{{ $contentDirName = path.Base (strings.TrimSuffix "/" .Dir) }}{{ end }}
-
-          {{ if and
-            (not $hasPublishedFeaturedShow)
-            (not .Draft)
-            (not .Date.IsZero)
-            (or
-              (eq (lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink))) $normalizedRef)
-              (eq (lower .Slug) $normalizedRef)
-              (eq (lower .Title) $normalizedRef)
-              (eq (lower $contentPath) $normalizedRef)
-              (eq (lower $contentBundlePath) $normalizedRef)
-              (eq (lower (path.Base $contentBundlePath)) $normalizedRef)
-              (eq (lower $contentDirName) $normalizedRef)
-              (eq (lower (printf "shows/%s" $contentDirName)) $normalizedRef)
-            )
-          }}
-            {{ $hasPublishedFeaturedShow = true }}
-          {{ end }}
+        {{ if index $publishedShowRefs $normalizedRef }}
+          {{ $hasPublishedFeaturedShow = true }}
         {{ end }}
       {{ end }}
     {{ end }}
