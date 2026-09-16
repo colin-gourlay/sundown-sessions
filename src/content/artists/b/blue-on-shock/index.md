@@ -6,7 +6,7 @@ description: "Scottish rock group represented in the archive by rare rehearsal-c
 editorialSummary: >
   Blue On Shock pair direct rock songwriting with the raw immediacy of rehearsal-room recordings rescued from a private cassette.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 
 ## About

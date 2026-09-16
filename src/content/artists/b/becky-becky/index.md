@@ -7,19 +7,15 @@ description: "Brighton synth-pop duo whose dark electronic pop blends literary d
 editorialSummary: >
   Becky Becky turn literary ideas, dark electronics and underground club energy into theatrical art-pop full of tension and unexpected melodic hooks.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 
 ## About
 
 Becky Becky are a Brighton electro-synth-pop duo built around Gemma L. Williams, who also records as {{< artist-wikilink "Woodpecker Wooliams" >}}, and {{< artist-wikilink "Peter J D Mason" >}}, previously of {{< artist-wikilink "Fence Collective" >}}. Their music pairs literary inspiration with dark, theatrical electronics, from the Jean Rhys-inspired {{< release "Good Morning, Midnight--Becky Becky" >}} onwards, while retaining the independent spirit associated with {{< label-wikilink "Robot Elephant Records" >}}.
 
-## External Links
+## Explore Further
 
-- {{< new-tab-link "Facebook: [https://www.facebook.com/beckybeckymusic](https://www.facebook.com/beckybeckymusic)" >}}
-
-- {{< new-tab-link "Instagram: [https://www.instagram.com/beckybeckymusic/](https://www.instagram.com/beckybeckymusic/)" >}}
-
-- {{< new-tab-link "Twitter: [https://twitter.com/beckybeckymusic](https://twitter.com/beckybeckymusic)" >}}
-
-
+- {{< new-tab-link "[Facebook](https://www.facebook.com/beckybeckymusic)" >}}
+- {{< new-tab-link "[Instagram](https://www.instagram.com/beckybeckymusic/)" >}}
+- {{< new-tab-link "[X](https://twitter.com/beckybeckymusic)" >}}

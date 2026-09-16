@@ -7,16 +7,13 @@ description: "Welsh independent rock band from Betws-y-Coed known for bilingual 
 editorialSummary: >
   Melys balance dreamy melody and fuzzy momentum with a playful experimental streak, making bilingual indie pop that remains warm, strange and immediately inviting.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 ## About
 
-Melys (English translation:"Sweet") are a Welsh independent rock band from Betws-y-Coed in Conwy, formed in 1996.  They sing in both English and Welsh. They have recorded eleven sessions for John Peel on BBC Radio 1, came first in his Festive Fifty in 2001 and won Best Welsh-language Act at the Welsh Music Awards in 2002.
+Melys are a Welsh independent band from Betws-y-Coed whose songs move between dreamy melody, fuzzy guitar pop and playful experimentation in both Welsh and English. Their long relationship with John Peel included numerous BBC Radio 1 sessions and helped bring their distinctive independent sound to a wider audience.
 
-## External Links
+## Explore Further
 
-- {{< new-tab-link "Facebook: [https://www.facebook.com/melysmusic](https://www.facebook.com/melysmusic)" >}}
-
-
-- {{< new-tab-link "Twitter: [https://twitter.com/melysmusic](https://twitter.com/melysmusic)" >}}
-
+- {{< new-tab-link "[Facebook](https://www.facebook.com/melysmusic)" >}}
+- {{< new-tab-link "[X](https://twitter.com/melysmusic)" >}}

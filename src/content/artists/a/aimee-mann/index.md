@@ -7,7 +7,7 @@ description: "American singer-songwriter known for literate, emotionally precise
 editorialSummary: >
   Aimee Mann turns sharp observation and emotional unease into beautifully crafted songs with melodies that linger long after the final note.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 ## About
 
@@ -15,13 +15,8 @@ Aimee Mann is an American singer-songwriter whose precise, sardonic writing ofte
 
 Albums including *Whatever*, *Bachelor No. 2* and *Mental Illness*, together with her songs for Paul Thomas Anderson's *Magnolia*, established Mann as an exacting independent artist with a gift for pairing difficult emotional territory with elegant melodies.
 
+## Explore Further
 
-
-## External Links
-
-- {{< new-tab-link "Facebook: [https://www.facebook.com/AimeeMann](https://www.facebook.com/AimeeMann)" >}}
-
-- {{< new-tab-link "Instagram: [https://www.instagram.com/realaimeemann/](https://www.instagram.com/realaimeemann/)" >}}
-
-- {{< new-tab-link "Twitter: [https://twitter.com/aimeemann](https://twitter.com/aimeemann)" >}}
-
+- {{< new-tab-link "[Facebook](https://www.facebook.com/AimeeMann)" >}}
+- {{< new-tab-link "[Instagram](https://www.instagram.com/realaimeemann/)" >}}
+- {{< new-tab-link "[X](https://twitter.com/aimeemann)" >}}
