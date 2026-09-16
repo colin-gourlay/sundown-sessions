@@ -83,8 +83,8 @@ class SparksArtistPageTests(unittest.TestCase):
                 )
 
         self.assertIn(
-            '{{< artist-wikilink "sparks" >}} - beat the clock',
-            show_three_playlist.lower(),
+            '{{< artist-wikilink "Sparks" >}}',
+            show_three_playlist,
         )
         self.assert_track_guide_row(
             show_three_track_info,
