@@ -1,4 +1,3 @@
-import re
 import unittest
 from pathlib import Path
 
@@ -12,6 +11,12 @@ SHOW_THREE_TRACK_INFO = ROOT / "src/content/shows/3/track-info.md"
 
 
 class SparksArtistPageTests(unittest.TestCase):
+    def assert_track_guide_row(self, content, title, release):
+        self.assertTrue(
+            any(title in line and release in line for line in content.splitlines()),
+            f"Expected {title!r} to reference {release!r} in the same track-guide row.",
+        )
+
     def test_explore_further_prioritises_official_destination(self):
         content = ARTIST_PAGE.read_text(encoding="utf-8")
         self.assertIn("## Explore Further", content)
@@ -52,20 +57,20 @@ class SparksArtistPageTests(unittest.TestCase):
                     '{{< artist-wikilink "Sparks" >}} - ' + title,
                     show_one_playlist,
                 )
-                self.assertRegex(
+                self.assert_track_guide_row(
                     show_one_track_info,
-                    rf"{re.escape(title)}--Sparks.*"
-                    r"Propaganda \(1974\)--Sparks--propaganda",
+                    f"{title}--Sparks",
+                    "Propaganda (1974)--Sparks--propaganda",
                 )
 
         self.assertIn(
             '{{< artist-wikilink "Sparks" >}} - Beat The Clock',
             show_three_playlist,
         )
-        self.assertRegex(
+        self.assert_track_guide_row(
             show_three_track_info,
-            r"Beat the Clock--Sparks.*"
-            r"No\. 1 In Heaven \(1979\)--Sparks--no-1-in-heaven",
+            "Beat the Clock--Sparks",
+            "No. 1 In Heaven (1979)--Sparks--no-1-in-heaven",
         )
 
 
