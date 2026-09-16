@@ -27,7 +27,7 @@ class BlueOnShockArtistPageTests(unittest.TestCase):
         content = ARTIST_PAGE.read_text(encoding="utf-8")
         self.assertIn("## Explore Further", content)
         self.assertIn(
-            '{{< new-tab-link "The Lost Cafe Sessions: '
+            '{{< new-tab-link "Archive: '
             '[The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}',
             content,
         )
@@ -37,7 +37,9 @@ class BlueOnShockArtistPageTests(unittest.TestCase):
     def test_artist_external_links_partial_preserves_custom_labels(self):
         partial = ARTIST_EXTERNAL_LINKS_PARTIAL.read_text(encoding="utf-8")
         self.assertIn("$customLinks", partial)
-        self.assertIn('"label" $platform', partial)
+        self.assertIn("$customLabelKeys", partial)
+        self.assertIn('"label" $label', partial)
+        self.assertIn('(in $urlLower "music.apple.com")', partial)
         self.assertIn("$orderedLinks = $orderedLinks | append .", partial)
 
     def test_show_three_keeps_private_cassette_track_relationships(self):

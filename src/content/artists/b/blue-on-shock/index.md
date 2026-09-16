@@ -17,4 +17,4 @@ On Sundown Sessions, Blue On Shock are represented differently: "Love Is A Ventu
 
 ## Explore Further
 
-- {{< new-tab-link "The Lost Cafe Sessions: [The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}
+- {{< new-tab-link "Archive: [The Lost Cafe Sessions](https://www.facebook.com/TheLostCafeSessions)" >}}
