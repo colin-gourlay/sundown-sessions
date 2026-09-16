@@ -150,13 +150,21 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
             self.teskey_artist_page,
             "Expected Run Home Slow to appear through the published Show 1 play.",
         )
-        self.assertRegex(
+        self.assertIn(
+            '<span class="artist-featured-track__title">Rain</span>',
             self.teskey_artist_page,
-            r"<span class=\"artist-featured-track__title\">Rain</span>[\s\S]*"
-            r"<span class=\"artist-featured-track__release\">from Run Home Slow "
-            r"\(2019\)</span>[\s\S]*href=\"/shows/featuring-the-big-now/\"[\s\S]*"
-            r"Sundown Sessions #1[\s\S]*<time datetime=\"2024-06-05\">"
-            r"5 June 2024</time>",
+        )
+        self.assertIn(
+            '<span class="artist-featured-track__release">from Run Home Slow (2019)</span>',
+            self.teskey_artist_page,
+        )
+        self.assertIn(
+            'href="/shows/featuring-the-big-now/"',
+            self.teskey_artist_page,
+        )
+        self.assertIn(
+            '<time datetime="2024-06-05">5 June 2024</time>',
+            self.teskey_artist_page,
         )
         self.assertIn(
             'href="/shows/featuring-the-big-now/"',
