@@ -7,16 +7,14 @@ description: "Scottish singer-songwriter and Aztec Camera founder celebrated for
 editorialSummary: >
   Roddy Frame combines intricate guitar work with clear-eyed writing, crafting graceful songs where bright pop surfaces carry tenderness, doubt and quiet resolve.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 ## About
 
-Roddy Frame (born 29 January 1964) is a Scottish singer-songwriter and musician. He was the founder of the 1980s new wave band Aztec Camera and has undertaken a solo career since the group's dissolution. In November 2013, journalist Brian Donaldson described Frame as: "Aztec Camera wunderkind-turned-elder statesman of intelligent, melodic, wistful Scotpop."
-Since the end of the Aztec Camera project, Frame has released four solo albums, the last of which is 2014's Seven Dials.
+Roddy Frame is a Scottish singer-songwriter and guitarist who founded Aztec Camera as a teenager, pairing intricate guitar playing with literate, melodic songwriting. Records such as *High Land, Hard Rain* and *Knife* established a bright, sophisticated pop language shaped by folk, soul and post-punk as much as conventional guitar pop.
 
-## External Links
+After Aztec Camera, Frame continued under his own name with a more intimate solo catalogue. Albums including *The North Star*, *Surf* and *Seven Dials* retain the clarity of his earlier writing while giving greater space to voice and guitar.
 
+## Explore Further
 
-
-- {{< new-tab-link "Twitter: [https://twitter.com/roddyframe](https://twitter.com/roddyframe)" >}}
-
+- {{< new-tab-link "[X](https://twitter.com/roddyframe)" >}}
