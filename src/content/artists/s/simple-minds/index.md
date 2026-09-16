@@ -7,7 +7,7 @@ description: "Glasgow rock band whose experimental post-punk beginnings develope
 editorialSummary: >
   Simple Minds unite restless art-rock invention with widescreen melodies, moving from taut post-punk experiments to songs built for vast rooms.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-16
 ---
 ## About
 
@@ -15,11 +15,8 @@ Simple Minds are a Scottish band built around Jim Kerr and Charlie Burchill. The
 
 Songs including "Love Song", "Promised You a Miracle", "Waterfront" and "Don't You (Forget About Me)" carried that atmosphere into larger spaces. Even at their most anthemic, the band's best work retains the rhythmic curiosity and sense of motion established in Glasgow's late-1970s scene.
 
-## External Links
+## Explore Further
 
-- {{< new-tab-link "Facebook: [https://www.facebook.com/simpleminds](https://www.facebook.com/simpleminds)" >}}
-
-- {{< new-tab-link "Instagram: [https://www.instagram.com/simplemindsmusic/](https://www.instagram.com/simplemindsmusic/)" >}}
-
-- {{< new-tab-link "Twitter: [https://twitter.com/simplemindscom](https://twitter.com/simplemindscom)" >}}
-
+- {{< new-tab-link "[Facebook](https://www.facebook.com/simpleminds)" >}}
+- {{< new-tab-link "[Instagram](https://www.instagram.com/simplemindsmusic/)" >}}
+- {{< new-tab-link "[X](https://twitter.com/simplemindscom)" >}}
