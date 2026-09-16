@@ -51,7 +51,7 @@ class SparksArtistPageTests(unittest.TestCase):
             content,
         )
 
-    def test_review_boundary_show_history_remains_intact(self):
+    def test_show_one_and_three_sparks_track_relationships(self):
         show_one_playlist = SHOW_ONE_PLAYLIST.read_text(encoding="utf-8")
         show_one_track_info = SHOW_ONE_TRACK_INFO.read_text(encoding="utf-8")
         show_three_playlist = SHOW_THREE_PLAYLIST.read_text(encoding="utf-8")
