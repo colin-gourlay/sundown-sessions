@@ -8,28 +8,25 @@
 {{ end }}
 {{ $publishedShowRefs := dict }}
 {{ with site.GetPage "shows" }}
-  {{ range where .Pages ".Date.IsZero" false }}
-    {{ if not .Draft }}
-      {{ $contentPath := "" }}
-      {{ with .File }}{{ $contentPath = strings.TrimSuffix "/" (replace .Path "\\" "/") }}{{ end }}
-      {{ $contentBundlePath := strings.TrimSuffix "/index.md" $contentPath }}
-      {{ $contentDirName := "" }}
-      {{ with .File }}{{ $contentDirName = path.Base (strings.TrimSuffix "/" .Dir) }}{{ end }}
+  {{ range where (where .Pages ".Date.IsZero" false) "Draft" false }}
+    {{ $contentPath := "" }}
+    {{ with .File }}{{ $contentPath = strings.TrimSuffix "/" (replace .Path "\\" "/") }}{{ end }}
+    {{ $contentBundlePath := strings.TrimSuffix "/index.md" $contentPath }}
+    {{ $contentDirName := "" }}
+    {{ with .File }}{{ $contentDirName = path.Base (strings.TrimSuffix "/" .Dir) }}{{ end }}
 
-      {{ range slice
-        (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink))
-        .Slug
-        .Title
-        $contentPath
-        $contentBundlePath
-        (path.Base $contentBundlePath)
-        $contentDirName
-        (printf "shows/%s" $contentDirName)
-      }}
-        {{ $refKey := lower (printf "%v" .) | strings.TrimSpace }}
-        {{ if $refKey }}
-          {{ $publishedShowRefs = merge $publishedShowRefs (dict $refKey true) }}
-        {{ end }}
+    {{ range slice
+      (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink))
+      .Slug
+      $contentPath
+      $contentBundlePath
+      (path.Base $contentBundlePath)
+      $contentDirName
+      (printf "shows/%s" $contentDirName)
+    }}
+      {{ $refKey := lower (printf "%v" .) | strings.TrimSpace }}
+      {{ if $refKey }}
+        {{ $publishedShowRefs = merge $publishedShowRefs (dict $refKey true) }}
       {{ end }}
     {{ end }}
   {{ end }}
