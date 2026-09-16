@@ -6,6 +6,7 @@
 {{ with .File }}
   {{ $artistKey = lower (path.Base (strings.TrimSuffix "/" .Dir)) }}
 {{ end }}
+{{ $showPages := where site.RegularPages "Section" "shows" }}
 {{ $releases := slice }}
 
 {{ range where site.RegularPages "Section" "releases" }}
@@ -45,8 +46,56 @@
 
   {{/* Resolve show relationship from aliases or the `shows` key used by existing release pages. */}}
   {{ $featuredShows := .Params.featuredInShows | default .Params.featured_in_shows | default .Params.shows }}
+  {{ $hasPublishedFeaturedShow := false }}
+  {{ with $featuredShows }}
+    {{ $entries := . }}
+    {{ if not (reflect.IsSlice $entries) }}
+      {{ $entries = slice $entries }}
+    {{ end }}
 
-  {{ if and $artistMatches $featuredShows }}
+    {{ range $entry := $entries }}
+      {{ $showRef := "" }}
+      {{ if reflect.IsMap $entry }}
+        {{ $showRef = index $entry "show" | default (index $entry "page") | default (index $entry "path") | default (index $entry "slug") | default (index $entry "url") | default "" }}
+      {{ else }}
+        {{ $showRef = $entry }}
+      {{ end }}
+
+      {{ $showRef = printf "%v" $showRef | strings.TrimSpace }}
+      {{ if and (not $hasPublishedFeaturedShow) $showRef }}
+        {{ $normalizedRef := lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" $showRef)) }}
+        {{ $normalizedRef = strings.TrimSuffix "/index.md" $normalizedRef }}
+
+        {{ range $showPages }}
+          {{ $contentPath := "" }}
+          {{ with .File }}{{ $contentPath = strings.TrimSuffix "/" (replace .Path "\\" "/") }}{{ end }}
+          {{ $contentBundlePath := strings.TrimSuffix "/index.md" $contentPath }}
+          {{ $contentDirName := "" }}
+          {{ with .File }}{{ $contentDirName = path.Base (strings.TrimSuffix "/" .Dir) }}{{ end }}
+
+          {{ if and
+            (not $hasPublishedFeaturedShow)
+            (not .Draft)
+            (not .Date.IsZero)
+            (or
+              (eq (lower (strings.TrimSuffix "/" (strings.TrimPrefix "/" .RelPermalink))) $normalizedRef)
+              (eq (lower .Slug) $normalizedRef)
+              (eq (lower .Title) $normalizedRef)
+              (eq (lower $contentPath) $normalizedRef)
+              (eq (lower $contentBundlePath) $normalizedRef)
+              (eq (lower (path.Base $contentBundlePath)) $normalizedRef)
+              (eq (lower $contentDirName) $normalizedRef)
+              (eq (lower (printf "shows/%s" $contentDirName)) $normalizedRef)
+            )
+          }}
+            {{ $hasPublishedFeaturedShow = true }}
+          {{ end }}
+        {{ end }}
+      {{ end }}
+    {{ end }}
+  {{ end }}
+
+  {{ if and $artistMatches $hasPublishedFeaturedShow }}
     {{ $releases = $releases | append $release }}
   {{ end }}
 {{ end }}

@@ -9,22 +9,9 @@
 
 {{ $maxDisplayed := 4 }}
 
-{{/* Find shows featuring this artist via case-insensitive tag matching */}}
-{{ $artistTitleLower := lower .Title }}
-{{ $featuredShows := slice }}
-{{ $showsSection := site.GetPage "shows" }}
-{{ if $showsSection }}
-  {{ range where $showsSection.Pages ".Date.IsZero" false }}
-    {{ $showPage := . }}
-    {{ $matched := false }}
-    {{ range .Params.tags }}
-      {{ if and (not $matched) (eq (lower .) $artistTitleLower) }}
-        {{ $featuredShows = $featuredShows | append $showPage }}
-        {{ $matched = true }}
-      {{ end }}
-    {{ end }}
-  {{ end }}
-{{ end }}
+{{/* Use the same published playlist-derived source as the header statistics. */}}
+{{ $artistArchiveStats := partial "artist-archive-stats.html" . }}
+{{ $featuredShows := $artistArchiveStats.featuredShows }}
 
 {{ $showCount := len $featuredShows }}
 
