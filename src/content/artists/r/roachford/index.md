@@ -17,5 +17,5 @@ Roachford is the British soul-pop and rock project led by singer, songwriter and
 ## Explore Further
 
 - {{< new-tab-link "Official Website: [Roachford](https://www.roachford.co.uk/)" >}}
-- {{< new-tab-link "Spotify: [Roachford](https://open.spotify.com/artist/2s6dK0xYiInRqFdtqfBRkV)" >}}
-- {{< new-tab-link "Apple Music: [Andrew Roachford](https://music.apple.com/us/artist/andrew-roachford/26379389)" >}}
+- {{< new-tab-link "Spotify: [Roachford](https://open.spotify.com/artist/5S3EbUETKlfsBRUiBKnqer)" >}}
+- {{< new-tab-link "Apple Music: [Roachford](https://music.apple.com/us/artist/roachford/14751396)" >}}
