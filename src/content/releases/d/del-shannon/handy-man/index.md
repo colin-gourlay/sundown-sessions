@@ -8,7 +8,6 @@ release_date: "1964"
 release_page: true
 shows:
   - "3"
-  - "5"
 tracks:
   - trackNumber: 1
     title: "Memphis"
