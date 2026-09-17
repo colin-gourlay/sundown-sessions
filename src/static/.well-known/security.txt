@@ -1,0 +1,4 @@
+Contact: mailto:vulnerability-reporting.entrench710@passmail.net
+Expires: 2027-06-17T00:00:00Z
+Preferred-Languages: en
+Canonical: https://sundownsessions.co.uk/.well-known/security.txt
