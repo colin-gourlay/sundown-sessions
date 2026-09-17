@@ -21,4 +21,5 @@ On Sundown Sessions, "Geordie Munro" has become a recurring touchpoint rather th
 
 ## Explore Further
 
-- {{< new-tab-link "Apple Music: [Apple Music](https://music.apple.com/gb/album/geordie-munro-single/1632002571)" >}}
+- {{< new-tab-link "Official Website: [Official Website](https://davidlattomusic.com/)" >}}
+- {{< new-tab-link "Spotify: [Spotify](https://open.spotify.com/artist/43vaq4W6XTDePNVTzyvgxZ)" >}}
