@@ -14,12 +14,10 @@ lastReviewed: 2026-07-13
 
 IST IST are a Manchester post-punk band known for brooding basslines, austere electronics and commanding live performances. Their records, including Architecture, The Art of Lying and Protagonists, carry the tension of classic northern post-punk while keeping the writing direct, modern and emotionally charged.
 
-## External Links
+## Explore Further
 
-- {{< new-tab-link "Facebook: [https://www.facebook.com/ististmusic](https://www.facebook.com/ististmusic)" >}}
-
-- {{< new-tab-link "Instagram: [https://www.instagram.com/ististmusic/](https://www.instagram.com/ististmusic/)" >}}
-
-- {{< new-tab-link "Twitter: [https://twitter.com/ististmusic](https://twitter.com/ististmusic)" >}}
-
-
+- {{< new-tab-link "Official Website: [IST IST](https://www.ististmusic.com/)" >}}
+- {{< new-tab-link "Spotify: [IST IST](https://open.spotify.com/artist/5YiRgqaj5yVjVtUp4G6iUq)" >}}
+- {{< new-tab-link "Facebook: [IST IST on Facebook](https://www.facebook.com/ististmusic)" >}}
+- {{< new-tab-link "Instagram: [IST IST on Instagram](https://www.instagram.com/ististmusic/)" >}}
+- {{< new-tab-link "X: [IST IST on X](https://twitter.com/ististmusic)" >}}
