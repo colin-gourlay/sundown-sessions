@@ -14,7 +14,8 @@ tracks:
     duration: "3:30"
   - trackNumber: 2
     title: "You're Mine"
-    duration: "2:32"
+    # Bandcamp and the Show #2 track guide agree on the album recording duration.
+    duration: "2:41"
   - trackNumber: 3
     title: "Black"
     duration: "3:23"
@@ -40,12 +41,13 @@ tracks:
     title: "Slowly We Escape"
     duration: "6:03"
 links:
+  Bandcamp: "https://ististmusic.bandcamp.com/album/architecture"
   MusicBrainz: "https://musicbrainz.org/release-group/0c536afe-dbc4-4af7-8c6d-79899dd813f3"
 release_page: true
 shows:
   - "2"
   - "8"
-duration: "37:14"
+duration: "37:23"
 tracklist_source: "https://musicbrainz.org/release/795e95f2-7f7e-4278-ad46-fe7b1ca55d26"
 tracklist_edition: "2020-05-01 GB"
 ---
