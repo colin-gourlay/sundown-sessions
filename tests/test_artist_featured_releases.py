@@ -43,6 +43,9 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         cls.ist_ist_architecture_page = (
             destination / "releases/i/ist-ist/architecture/index.html"
         ).read_text(encoding="utf-8")
+        cls.ist_ist_youre_mine_page = (
+            destination / "tracks/i/ist-ist/youre-mine/index.html"
+        ).read_text(encoding="utf-8")
         cls.teskey_artist_page = (
             destination / "artists/t/the-teskey-brothers/index.html"
         ).read_text(encoding="utf-8")
@@ -143,6 +146,20 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
             'href="/shows/featuring-the-twist/"',
             self.ist_ist_architecture_page,
         )
+
+    def test_ist_ist_show_two_track_has_canonical_relationships(self):
+        for page in (self.ist_ist_artist_page, self.ist_ist_architecture_page):
+            self.assertIn('href="/tracks/i/ist-ist/youre-mine/"', page)
+        for href in (
+            "/artists/i/ist-ist/",
+            "/releases/i/ist-ist/architecture/",
+            "/shows/featuring-the-receiving-end/",
+            "https://ististmusic.bandcamp.com/track/youre-mine-5",
+        ):
+            self.assertIn(f'href="{href}"', self.ist_ist_youre_mine_page)
+        self.assertIn('datetime="2024-06-12"', self.ist_ist_youre_mine_page)
+        self.assertIn("2:41", self.ist_ist_youre_mine_page)
+        self.assertIn('href="/tracks/i/ist-ist/black/"', self.ist_ist_artist_page)
 
     def test_teskey_brothers_release_and_track_history_follow_show_one(self):
         self.assertIn(
