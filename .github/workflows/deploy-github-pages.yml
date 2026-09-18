@@ -6,10 +6,12 @@ on:
       - main
     paths:
       - src/**
+      - tests/test_sitemap.py
       - .github/workflows/deploy-github-pages.yml
   pull_request:
     paths:
       - src/**
+      - tests/test_sitemap.py
       - .github/workflows/deploy-github-pages.yml
   workflow_dispatch:
 
@@ -69,13 +71,15 @@ jobs:
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
       - name: Build with Hugo
         env:
-          HUGO_ENVIRONMENT: githubPages
-          HUGO_ENV: githubPages
+          HUGO_ENVIRONMENT: production
+          HUGO_ENV: production
         run: |
           hugo \
             --source src \
             --minify \
             --baseURL "${{ steps.pages.outputs.base_url }}/"
+      - name: Validate production sitemap and crawler access
+        run: python3 tests/test_sitemap.py src/public
       - name: Verify security.txt is preserved
         run: cmp src/static/.well-known/security.txt src/public/.well-known/security.txt
       - name: Upload artifact using v5.0.0
