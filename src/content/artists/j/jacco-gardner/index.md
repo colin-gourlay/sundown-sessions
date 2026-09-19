@@ -7,19 +7,16 @@ description: "Dutch multi-instrumentalist and producer known for baroque psych-p
 editorialSummary: >
   Jacco Gardner creates beautifully crafted psychedelic pop inspired by the rich sounds and textures of the late sixties.
 artist_page: true
-lastReviewed: 2026-07-13
+lastReviewed: 2026-09-19
 ---
 
 ## About
 
 Jacco Gardner is a Dutch multi-instrumentalist and producer associated with baroque pop, psychedelia and ornate studio craft. His debut album Cabinet of Curiosities introduced a sound rich in harpsichord-like textures, analogue keyboards and 1960s colour, while later work moved further into cinematic and instrumental territory.
 
-## External Links
+## Explore Further
 
-- {{< new-tab-link "Facebook: [https://www.facebook.com/jaccogardnermusic](https://www.facebook.com/jaccogardnermusic)" >}}
-
-- {{< new-tab-link "Instagram: [https://www.instagram.com/jaccogardner/](https://www.instagram.com/jaccogardner/)" >}}
-
-- {{< new-tab-link "Twitter: [https://twitter.com/jaccogardner](https://twitter.com/jaccogardner)" >}}
-
-
+- {{< new-tab-link "Bandcamp: [Jacco Gardner on Bandcamp](https://jaccogardner.bandcamp.com/)" >}}
+- {{< new-tab-link "Facebook: [Jacco Gardner on Facebook](https://www.facebook.com/jaccogardnermusic)" >}}
+- {{< new-tab-link "Instagram: [Jacco Gardner on Instagram](https://instagram.com/jaccogardner/)" >}}
+- {{< new-tab-link "X: [Jacco Gardner on X](https://twitter.com/jaccogardner)" >}}
