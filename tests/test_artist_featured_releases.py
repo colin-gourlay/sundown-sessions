@@ -72,6 +72,100 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         self.assertNotIn("2001-04", section)
         self.assertNotIn("1 April 2001", section)
 
+    def test_detroit_cobras_canonical_tracks_and_complete_published_history(self):
+        artist_path = "/artists/t/the-detroit-cobras/"
+        artist = (self.destination / artist_path.lstrip("/") / "index.html").read_text()
+        section = re.search(
+            r'<section class="artist-featured-tracks\b[\s\S]*?</section>', artist
+        ).group()
+        rows = re.findall(
+            r'<article class="artist-featured-track">[\s\S]*?</article>', section
+        )
+        self.assertEqual(len(rows), 2)
+        cases = (
+            ("Cry On", "cry-on", "life-love-and-leaving",
+             1, "featuring-the-big-now", "2024-06-05", "5 June 2024"),
+            ("Shout Bama Lama", "shout-bama-lama", "life-love-and-leaving",
+             4, "featuring-kenny-armour-from-andysmanclub", "2024-06-26", "26 June 2024"),
+        )
+        for title, slug, release, number, show, date, display_date in cases:
+            with self.subTest(track=title):
+                track_path = f"/tracks/t/the-detroit-cobras/{slug}/"
+                release_path = f"/releases/t/the-detroit-cobras/{release}/"
+                show_path = f"/shows/{show}/"
+                row = next(row for row in rows if f'href="{track_path}"' in row)
+                self.assertIn(title, html.unescape(row))
+                self.assertIn(f'href="{show_path}"', row)
+                self.assertIn(f"Sundown Sessions #{number}", row)
+                self.assertIn(f'datetime="{date}"', row)
+                self.assertIn(display_date, row)
+                self.assertIn("View Broadcast", row)
+                self.assertIn(f'href="{release_path}"', artist)
+
+                track = (self.destination / track_path.lstrip("/") / "index.html").read_text()
+                for href in (artist_path, release_path):
+                    self.assertIn(f'href="{href}"', track)
+                history = re.search(
+                    r'<section[^>]*aria-labelledby="track-featured-shows-heading"[\s\S]*?</section>',
+                    track,
+                ).group()
+                self.assertEqual(history.count('class="release-featured-shows__link"'), 1)
+                self.assertIn(f'href="{show_path}"', history)
+                self.assertIn(f"Sundown Sessions #{number}", history)
+                self.assertIn(f'datetime="{date}"', history)
+                self.assertIn(display_date, history)
+
+    def test_detroit_cobras_track_content_has_no_duplicate_identities(self):
+        matches = {"Cry On": [], "Shout Bama Lama": []}
+        for path in (ROOT / "src/content/tracks").rglob("*.md"):
+            content = path.read_text(encoding="utf-8")
+            if not content.startswith("---\n"):
+                continue
+            frontmatter = content.split("---", 2)[1]
+            fields = {}
+            for key in ("title", "artist"):
+                match = re.search(rf"^{key}:\s*(.+)$", frontmatter, re.MULTILINE)
+                if match:
+                    fields[key] = match.group(1).strip().strip("\"'")
+            title = fields.get("title")
+            if fields.get("artist") == "The Detroit Cobras" and title in matches:
+                matches[title].append(path.relative_to(ROOT / "src/content/tracks").as_posix())
+        self.assertEqual(matches, {
+            "Cry On": ["t/the-detroit-cobras/cry-on/index.md"],
+            "Shout Bama Lama": ["t/the-detroit-cobras/shout-bama-lama/index.md"],
+        })
+
+    def test_detroit_cobras_artist_statistics_and_release_relationship(self):
+        artist = (
+            self.destination / "artists/t/the-detroit-cobras/index.html"
+        ).read_text()
+        for label, value in (
+            ("Featured on Sundown Sessions", "2 broadcasts"),
+            ("First featured", "5 June 2024"),
+            ("Tracks played", "2"),
+        ):
+            self.assertRegex(artist, rf"<dt>{label}</dt>\s*<dd>{value}</dd>")
+        last_featured = re.search(
+            r"<dt>Last featured</dt>\s*<dd>([\s\S]*?)</dd>", artist
+        ).group(1)
+        self.assertIn("26 June 2024", last_featured)
+        self.assertIn(
+            'href="/shows/featuring-kenny-armour-from-andysmanclub/"', last_featured
+        )
+        releases = re.search(
+            r'<section[^>]*aria-labelledby="artist-featured-releases-heading"[\s\S]*?</section>',
+            artist,
+        ).group()
+        self.assertEqual(releases.count('class="release-discover-card"'), 1)
+        self.assertIn(
+            'href="/releases/t/the-detroit-cobras/life-love-and-leaving/"', releases
+        )
+        release = (
+            self.destination / "releases/t/the-detroit-cobras/life-love-and-leaving/index.html"
+        ).read_text()
+        for slug in ("cry-on", "shout-bama-lama"):
+            self.assertIn(f'href="/tracks/t/the-detroit-cobras/{slug}/"', release)
+
     def test_elo_canonical_tracks_and_complete_published_history(self):
         artist_path = "/artists/e/electric-light-orchestra/"
         artist = (self.destination / artist_path.lstrip("/") / "index.html").read_text()
