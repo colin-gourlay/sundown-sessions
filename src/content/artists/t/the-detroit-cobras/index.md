@@ -7,9 +7,17 @@ description: "Detroit garage rock band celebrated for raw, soul-soaked covers, d
 editorialSummary: >
   The Detroit Cobras revive overlooked rhythm and blues with Rachel Nagy's commanding voice, raw garage-rock swagger and an infectious sense of joy.
 artist_page: true
-lastReviewed: 2026-08-26
+lastReviewed: 2026-09-20
 ---
 
 ## About
 
 The Detroit Cobras were an American garage-rock band from Detroit, formed in 1994 and fronted by Rachel Nagy. Rather than simply covering old rhythm and blues, soul and rock 'n' roll songs, they reanimated them with grit, swagger and punk energy, turning deep-cut material into raw, joyous performances.
+
+## Explore Further
+
+- {{< new-tab-link "Website: [Official Detroit Cobras website](https://www.officialdetroitcobras.com/)" >}}
+
+- {{< new-tab-link "Bandcamp: [The Detroit Cobras on Bandcamp](https://thedetroitcobras.bandcamp.com/music)" >}}
+
+- {{< new-tab-link "Spotify: [The Detroit Cobras on Spotify](https://open.spotify.com/artist/4tWFXbJnjC9lM3UzmOpUiR)" >}}
