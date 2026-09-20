@@ -7,9 +7,14 @@ description: "Birmingham rock band whose psychedelic pop, heavy riffs and Roy Wo
 editorialSummary: >
   The Move blended psychedelic pop and hard rock into adventurous songs that helped shape British rock music.
 artist_page: true
-lastReviewed: 2026-07-13
+lastReviewed: 2026-09-20
 ---
 
 ## About
 
 The Move were a British rock band formed in Birmingham in 1965 and led for much of their career by Roy Wood. Their run of UK hit singles mixed psychedelic pop, hard-rock energy and sharp melodic instincts, while the group's later evolution helped lead directly to the formation of Electric Light Orchestra.
+
+## Explore Further
+
+- {{< new-tab-link "Spotify: [The Move on Spotify](https://open.spotify.com/artist/2BLpGstUHxDc6vHfBEiaXm)" >}}
+- {{< new-tab-link "Apple Music: [The Move on Apple Music](https://music.apple.com/us/artist/the-move/14885365)" >}}
