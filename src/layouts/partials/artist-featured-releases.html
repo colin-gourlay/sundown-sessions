@@ -124,6 +124,8 @@
                 {{ $releaseMeta := printf "%v" . }}
                 {{ if gt (len (findRE `^[0-9]{4}-[0-9]{2}-[0-9]{2}` $releaseMeta 1)) 0 }}
                   {{ $releaseMeta = time.Format "2 January 2006" . }}
+                {{ else if gt (len (findRE `^[0-9]{4}-[0-9]{2}$` $releaseMeta 1)) 0 }}
+                  {{ $releaseMeta = time.Format "January 2006" (printf "%s-01" $releaseMeta) }}
                 {{ end }}
                 <span class="release-discover-card__meta">{{ $releaseMeta }}</span>
               {{ end }}

@@ -61,6 +61,17 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         if hasattr(cls, "temporary_directory"):
             cls.temporary_directory.cleanup()
 
+    def test_detroit_cobras_month_precision_release_date(self):
+        artist = (
+            self.destination / "artists/t/the-detroit-cobras/index.html"
+        ).read_text()
+        section = re.search(
+            r'<section[^>]*aria-labelledby="artist-featured-releases-heading"[\s\S]*?</section>', artist
+        ).group()
+        self.assertIn("April 2001", section)
+        self.assertNotIn("2001-04", section)
+        self.assertNotIn("1 April 2001", section)
+
     def test_elo_canonical_tracks_and_complete_published_history(self):
         artist_path = "/artists/e/electric-light-orchestra/"
         artist = (self.destination / artist_path.lstrip("/") / "index.html").read_text()
