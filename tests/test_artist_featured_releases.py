@@ -1,3 +1,5 @@
+import html
+import re
 import shutil
 import subprocess
 import tempfile
@@ -20,6 +22,7 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
             prefix="artist-featured-releases-test-", dir=CACHE_DIRECTORY
         )
         destination = Path(cls.temporary_directory.name)
+        cls.destination = destination
         subprocess.run(
             [
                 "hugo",
@@ -57,6 +60,96 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
     def tearDownClass(cls):
         if hasattr(cls, "temporary_directory"):
             cls.temporary_directory.cleanup()
+
+    def test_elo_canonical_tracks_and_complete_published_history(self):
+        artist_path = "/artists/e/electric-light-orchestra/"
+        artist = (self.destination / artist_path.lstrip("/") / "index.html").read_text()
+        section = re.search(
+            r'<section class="artist-featured-tracks\b[\s\S]*?</section>', artist
+        ).group()
+        rows = re.findall(
+            r'<article class="artist-featured-track">[\s\S]*?</article>', section
+        )
+        self.assertEqual(len(rows), 4)
+        cases = (
+            ("Four Little Diamonds", "four-little-diamonds", "secret-messages",
+             1, "featuring-the-big-now", "2024-06-05", "5 June 2024"),
+            ("Here Is The News", "here-is-the-news", "time",
+             2, "featuring-the-receiving-end", "2024-06-12", "12 June 2024"),
+            ("Don't Bring Me Down", "dont-bring-me-down", "discovery",
+             9, "featuring-colin-gourlay-from-andysmanclub", "2024-08-14", "14 August 2024"),
+            ("Mr. Blue Sky", "mr.-blue-sky", "out-of-the-blue",
+             11, "featuring-a-celebration-of-elektra-records", "2024-08-28", "28 August 2024"),
+        )
+        for title, slug, release, number, show, date, display_date in cases:
+            with self.subTest(track=title):
+                track_path = f"/tracks/e/electric-light-orchestra/{slug}/"
+                release_path = f"/releases/e/electric-light-orchestra/{release}/"
+                show_path = f"/shows/{show}/"
+                row = next(row for row in rows if f'href="{track_path}"' in row)
+                self.assertIn(title, html.unescape(row))
+                self.assertIn(f'href="{show_path}"', row)
+                self.assertIn(f"Sundown Sessions #{number}", row)
+                self.assertIn(f'datetime="{date}"', row)
+                self.assertIn(display_date, row)
+                self.assertIn("View Broadcast", row)
+                self.assertIn(f'href="{release_path}"', artist)
+
+                track = (self.destination / track_path.lstrip("/") / "index.html").read_text()
+                for href in (artist_path, release_path):
+                    self.assertIn(f'href="{href}"', track)
+                history = re.search(
+                    r'<section[^>]*aria-labelledby="track-featured-shows-heading"[\s\S]*?</section>',
+                    track,
+                ).group()
+                self.assertEqual(history.count('class="release-featured-shows__link"'), 1)
+                self.assertIn(f'href="{show_path}"', history)
+                self.assertIn(f"Sundown Sessions #{number}", history)
+                self.assertIn(f'datetime="{date}"', history)
+                self.assertIn(display_date, history)
+
+    def test_elo_artist_statistics_and_broadcast_navigation(self):
+        artist = (
+            self.destination / "artists/e/electric-light-orchestra/index.html"
+        ).read_text()
+        for label, value in (
+            ("Featured on Sundown Sessions", "4 broadcasts"),
+            ("First featured", "5 June 2024"),
+            ("Tracks played", "4"),
+        ):
+            self.assertRegex(artist, rf"<dt>{label}</dt>\s*<dd>{value}</dd>")
+        last_featured = re.search(
+            r"<dt>Last featured</dt>\s*<dd>([\s\S]*?)</dd>", artist
+        ).group(1)
+        self.assertIn("28 August 2024", last_featured)
+        self.assertIn(
+            'href="/shows/featuring-a-celebration-of-elektra-records/"', last_featured
+        )
+        self.assertRegex(
+            artist,
+            r'<a href="#artist-featured-shows-heading" class="artist-header-cta">'
+            r"\s*Explore Featured Broadcasts",
+        )
+        self.assertIn('id="artist-featured-shows-heading"', artist)
+
+        releases = re.search(
+            r'<section[^>]*aria-labelledby="artist-featured-releases-heading"[\s\S]*?</section>',
+            artist,
+        ).group()
+        cards = re.findall(
+            r'<article class="release-discover-card">[\s\S]*?</article>', releases
+        )
+        self.assertEqual(len(cards), 4)
+        for slug, date in (
+            ("secret-messages", "24 June 1983"),
+            ("time", "1981"),
+            ("discovery", "21 May 1979"),
+            ("out-of-the-blue", "28 October 1977"),
+        ):
+            with self.subTest(release=slug):
+                card = next(card for card in cards if f"/{slug}/" in card)
+                self.assertIn(f'class="release-discover-card__meta">{date}</span>', card)
+                self.assertRegex(card, r'<img[^>]+alt="[^"]+ artwork"')
 
     def test_echo_and_the_bunnymen_only_lists_supported_featured_releases(self):
         self.assertIn(
