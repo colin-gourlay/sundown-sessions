@@ -1052,6 +1052,7 @@ public sealed class ShowrunnerServiceTests
         await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("musicbrainz", "mbid-first"));
         await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("local-file", "private/first.flac"));
         await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("todoist", "task-first"));
+        await service.AddExternalIdentifierAsync(first.Id, new AddExternalIdentifierCommand("internal-catalogue", "private-record-key"));
         var show = (await service.CreateShowAsync(
             new CreateShowCommand("publication-order", "Publication order", new DateOnly(2026, 9, 5)))).Value!;
         await ShowrunnerTestOperations.FinaliseShowAsync(

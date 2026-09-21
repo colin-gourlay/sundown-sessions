@@ -12,21 +12,6 @@ public sealed class ShowrunnerMcpIntegrationTests
         using var harness = new SqliteTestHarness();
         using var files = new McpFileFixture();
         using var mixxx = new MixxxFixture();
-        Guid showId;
-        Guid missingRecordingId;
-        Guid detectedRecordingId;
-        await using (var context = harness.CreateContext())
-        {
-            var service = new ShowrunnerService(context);
-            showId = (await service.CreateShowAsync(
-                new CreateShowCommand("mcp-show", "MCP Show", new DateOnly(2026, 8, 21)))).Value!.Id;
-            missingRecordingId = (await service.CreateRecordingAsync(
-                new CreateRecordingCommand("Missing locally", "Test Artist"))).Value!.Id;
-            await service.PlanRecordingAsync(showId, new PlanRecordingCommand(missingRecordingId, 1));
-            detectedRecordingId = (await service.CreateRecordingAsync(
-                new CreateRecordingCommand("Detected title", "Detected artist"))).Value!.Id;
-            await service.CreateRecordingAsync(new CreateRecordingCommand("Detected title", "Different artist"));
-        }
 
         var dotnetDirectory = FindDotnetDirectory();
         var projectPath = Path.Combine(
@@ -44,7 +29,7 @@ public sealed class ShowrunnerMcpIntegrationTests
         {
             Name = "Sundown Showrunner integration test",
             Command = "dotnet",
-            Arguments = ["run", "--no-build", "--configuration", "Release", "--project", projectPath],
+            Arguments = ["run", "--configuration", "Release", "--project", projectPath],
             WorkingDirectory = dotnetDirectory,
             InheritEnvironmentVariables = false,
             EnvironmentVariables = environment,
@@ -58,10 +43,12 @@ public sealed class ShowrunnerMcpIntegrationTests
             [
             "backlog_candidate_import",
             "backlog_item_list",
+            "recording_create",
             "recording_external_identifier_add",
             "recording_history",
             "recording_resolve",
             "repeat_exception_create",
+            "show_create",
             "show_get",
             "show_plan_refresh",
             "show_prepare",
@@ -71,6 +58,57 @@ public sealed class ShowrunnerMcpIntegrationTests
             "show_reconciliation_finalise",
             ],
             tools.Select(tool => tool.Name).Order(StringComparer.Ordinal).ToArray());
+
+        var createShowResult = await client.CallToolAsync(
+            "show_create",
+            new Dictionary<string, object?>
+            {
+                ["command"] = new
+                {
+                    slug = "mcp-show",
+                    title = "MCP Show",
+                    showDate = "2026-08-21",
+                },
+            },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, createShowResult.IsError);
+        var showId = createShowResult.StructuredContent!.Value
+            .GetProperty("result")
+            .GetProperty("id")
+            .GetGuid();
+
+        async Task<Guid> CreateRecordingThroughMcpAsync(string title, string artist)
+        {
+            var createResult = await client.CallToolAsync(
+                "recording_create",
+                new Dictionary<string, object?>
+                {
+                    ["command"] = new { title, artist },
+                },
+                cancellationToken: timeout.Token);
+            Assert.NotEqual(true, createResult.IsError);
+            return createResult.StructuredContent!.Value
+                .GetProperty("result")
+                .GetProperty("id")
+                .GetGuid();
+        }
+
+        var missingRecordingId = await CreateRecordingThroughMcpAsync("Missing locally", "Test Artist");
+        var detectedRecordingId = await CreateRecordingThroughMcpAsync("Detected title", "Detected artist");
+        await CreateRecordingThroughMcpAsync("Detected title", "Different artist");
+
+        var initialPlanResult = await client.CallToolAsync(
+            "show_plan_refresh",
+            new Dictionary<string, object?>
+            {
+                ["showId"] = showId,
+                ["command"] = new
+                {
+                    items = new[] { new { recordingId = missingRecordingId } },
+                },
+            },
+            cancellationToken: timeout.Token);
+        Assert.NotEqual(true, initialPlanResult.IsError);
 
         var showGetResult = await client.CallToolAsync(
             "show_get",
