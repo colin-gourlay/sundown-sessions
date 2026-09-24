@@ -366,7 +366,7 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
             "Expected Run Home Slow to appear through the published Show 1 play.",
         )
         self.assertIn(
-            '<span class="artist-featured-track__title">Rain</span>',
+            '<a class="artist-featured-track__title" href="/tracks/t/the-teskey-brothers/rain/">Rain</a>',
             self.teskey_artist_page,
         )
         self.assertIn(
@@ -391,6 +391,40 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
             self.teskey_release_page,
             "Run Home Slow must not render an unsupported Show 46 relationship.",
         )
+
+    def test_teskey_rain_canonical_relationships_and_statistics(self):
+        track_path = "/tracks/t/the-teskey-brothers/rain/"
+        show_path = "/shows/featuring-the-big-now/"
+        track = (self.destination / track_path.lstrip("/") / "index.html").read_text()
+        for href in (
+            "/artists/t/the-teskey-brothers/",
+            "/releases/t/the-teskey-brothers/run-home-slow/",
+        ):
+            self.assertIn(f'href="{href}"', track)
+        history = re.search(
+            r'<section[^>]*aria-labelledby="track-featured-shows-heading"[\s\S]*?</section>',
+            track,
+        ).group()
+        self.assertEqual(history.count('class="release-featured-shows__link"'), 1)
+        self.assertIn(f'href="{show_path}"', history)
+        self.assertIn("Sundown Sessions #1 — Featuring The Big Now", history)
+        self.assertIn('datetime="2024-06-05"', history)
+        self.assertIn("5 June 2024", history)
+        self.assertIn(f'href="{track_path}"', self.teskey_release_page)
+        show = (self.destination / show_path.lstrip("/") / "index.html").read_text()
+        self.assertIn(f'href="https://sundownsessions.co.uk{track_path}"', show)
+        for label, value in (
+            ("Featured on Sundown Sessions", "1 broadcast"),
+            ("First featured", "5 June 2024"),
+            ("Tracks played", "1"),
+        ):
+            self.assertRegex(self.teskey_artist_page, rf"<dt>{label}</dt>\s*<dd>{value}</dd>")
+        last_featured = re.search(
+            r"<dt>Last featured</dt>\s*<dd>([\s\S]*?)</dd>", self.teskey_artist_page
+        ).group(1)
+        self.assertIn("5 June 2024", last_featured)
+        self.assertIn(f'href="{show_path}"', last_featured)
+        self.assertEqual(self.teskey_artist_page.count('class="artist-featured-track"'), 1)
 
 
 if __name__ == "__main__":
