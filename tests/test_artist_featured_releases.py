@@ -61,6 +61,43 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         if hasattr(cls, "temporary_directory"):
             cls.temporary_directory.cleanup()
 
+    def test_del_shannon_complete_published_archive(self):
+        artist_path = "/artists/d/del-shannon/"
+        artist = (self.destination / artist_path.lstrip("/") / "index.html").read_text()
+        for label, value in (
+            ("Featured on Sundown Sessions", "3 broadcasts"),
+            ("First featured", "5 June 2024"),
+            ("Tracks played", "3"),
+        ):
+            self.assertRegex(artist, rf"<dt>{label}</dt>\s*<dd>{value}</dd>")
+        last = re.search(r"<dt>Last featured</dt>\s*<dd>([\s\S]*?)</dd>", artist).group(1)
+        self.assertIn("24 July 2024", last)
+        self.assertIn('/shows/featuring-the-thieves/', last)
+        rows = re.findall(r'<article class="artist-featured-track">[\s\S]*?</article>', artist)
+        self.assertEqual(len(rows), 3)
+        cases = (
+            ("runaway", "runaway-the-very-best-of-del-shannon", "featuring-the-big-now", "2024-06-05"),
+            ("handy-man", "handy-man", "featuring-blue-on-shock", "2024-06-19"),
+            ("lost-in-a-memory", "rock-on", "featuring-the-thieves", "2024-07-24"),
+        )
+        for slug, release, show, date in cases:
+            with self.subTest(track=slug):
+                track_path = f"/tracks/d/del-shannon/{slug}/"
+                release_path = f"/releases/d/del-shannon/{release}/"
+                show_path = f"/shows/{show}/"
+                row = next(row for row in rows if f'href="{track_path}"' in row)
+                self.assertIn(f'href="{show_path}"', row)
+                self.assertIn(f'datetime="{date}"', row)
+                self.assertIn(f'href="{release_path}"', artist)
+                track = (self.destination / track_path.lstrip("/") / "index.html").read_text()
+                for href in (artist_path, release_path, show_path):
+                    self.assertIn(f'href="{href}"', track)
+                release_html = (self.destination / release_path.lstrip("/") / "index.html").read_text()
+                self.assertIn(f'href="{track_path}"', release_html)
+                show_html = (self.destination / show_path.lstrip("/") / "index.html").read_text()
+                self.assertRegex(show_html, rf'href="(?:https://sundownsessions\.co\.uk)?{re.escape(track_path)}"')
+                self.assertRegex(show_html, rf'href="(?:https://sundownsessions\.co\.uk)?{re.escape(release_path)}"')
+
     def test_detroit_cobras_month_precision_release_date(self):
         artist = (
             self.destination / "artists/t/the-detroit-cobras/index.html"

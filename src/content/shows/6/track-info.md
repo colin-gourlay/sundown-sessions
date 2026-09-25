@@ -20,7 +20,7 @@
 | 16 | {{<title "My Flash On You--Love">}}                                 | Love (1966)                           |   2:07   |                                                                                |
 | 17 | {{<title "Apache--The Southern Death Cult">}}                       | The Southern Death Cult (1983)        |   2:41   |                                                                                |
 | 18 | {{<title "Broken Land--The Adventures">}}                           | The Sea Of Love (1988)                |   5:04   |                                                                                |
-| 19 | {{<title "Lost In A Memory--Del Shannon">}}                         | Rock On! (2009)                       |   3:36   |                                                                                |
+| 19 | {{<title "Lost In A Memory--Del Shannon">}}                         | {{<release "Rock On! (1991)--Del Shannon--rock-on">}}                       |   3:36   |                                                                                |
 | 20 | {{<title "Sparrow (live)--Becky Becky">}}                                  | {{<release "Art School Dancing (2015)--Becky Becky--art-school-dancing">}} |   4:07   |                                                                                |
 | 21 | {{<title "Rock 'n' Roll / Night Clubbing--The Human League">}}      | Travelogue (1980)                     |   6:23   |                                                                                |
 | 22 | {{<title "Alone Again Or--Love">}}                                  | Forever Changes (1967)                |   3:17   |                                                                                |
