@@ -1,7 +1,7 @@
 ---
 title: "Havin' Such A Good Time"
 artist: "The Vintage Explosion"
-artwork: "https://coverartarchive.org/release-group/327865c0-9ed8-4b31-814e-2e5cdffb2610/front-500"
+artwork: "cover.jpg"
 releaseDate: "2023"
 releaseType: "Album"
 release-types:
