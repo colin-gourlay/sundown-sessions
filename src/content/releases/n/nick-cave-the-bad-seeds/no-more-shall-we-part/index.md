@@ -8,8 +8,6 @@ labels:
 release_date: "2001"
 uk_chart_position: 16
 release_page: true
-shows:
-  - "9"
 tracks:
   - discNumber: 1
     trackNumber: 1

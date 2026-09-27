@@ -61,6 +61,71 @@ class ArtistFeaturedReleasesTests(unittest.TestCase):
         if hasattr(cls, "temporary_directory"):
             cls.temporary_directory.cleanup()
 
+    def test_nick_cave_complete_published_archive(self):
+        artist_path = "/artists/n/nick-cave-the-bad-seeds/"
+        artist = (self.destination / artist_path.lstrip("/") / "index.html").read_text()
+        for label, value in (
+            ("Featured on Sundown Sessions", "5 broadcasts"),
+            ("First featured", "5 June 2024"),
+            ("Tracks played", "5"),
+        ):
+            self.assertRegex(artist, rf"<dt>{label}</dt>\s*<dd>{value}</dd>")
+        last = re.search(r"<dt>Last featured</dt>\s*<dd>([\s\S]*?)</dd>", artist).group(1)
+        self.assertIn("28 August 2024", last)
+        self.assertIn('/shows/featuring-a-celebration-of-elektra-records/', last)
+        rows = re.findall(r'<article class="artist-featured-track">[\s\S]*?</article>', artist)
+        self.assertEqual(len(rows), 5)
+        cases = (
+            ("from-her-to-eternity", "from-her-to-eternity", "featuring-the-big-now", "2024-06-05"),
+            ("jubilee-street", "push-the-sky-away", "featuring-the-receiving-end", "2024-06-12"),
+            ("into-my-arms", "the-boatmans-call", "featuring-baby-bartok", "2024-08-07"),
+            ("red-right-hand", "let-love-in", "featuring-the-twist", "2024-08-21"),
+            ("wild-god", "wild-god", "featuring-a-celebration-of-elektra-records", "2024-08-28"),
+        )
+        for slug, release, show, date in cases:
+            with self.subTest(track=slug):
+                track_path = f"/tracks/n/nick-cave-the-bad-seeds/{slug}/"
+                release_path = f"/releases/n/nick-cave-the-bad-seeds/{release}/"
+                show_path = f"/shows/{show}/"
+                row = next(row for row in rows if f'href="{track_path}"' in row)
+                self.assertIn(f'href="{show_path}"', row)
+                self.assertIn(f'datetime="{date}"', row)
+                self.assertIn(f'href="{release_path}"', artist)
+                track = (self.destination / track_path.lstrip("/") / "index.html").read_text()
+                for href in (artist_path, release_path, show_path):
+                    self.assertIn(f'href="{href}"', track)
+                release_html = (self.destination / release_path.lstrip("/") / "index.html").read_text()
+                self.assertIn(f'href="{track_path}"', release_html)
+                featured = re.search(
+                    r'<section[^>]+aria-labelledby="featured-in-shows"[\s\S]*?</section>',
+                    release_html,
+                ).group(0)
+                self.assertIn(f'href="{show_path}"', featured)
+                self.assertNotIn('/shows/featuring-colin-gourlay-from-andysmanclub/', featured)
+                show_html = (self.destination / show_path.lstrip("/") / "index.html").read_text()
+                self.assertRegex(show_html, rf'href="(?:https://sundownsessions\.co\.uk)?{re.escape(track_path)}"')
+                self.assertRegex(show_html, rf'href="(?:https://sundownsessions\.co\.uk)?{re.escape(release_path)}"')
+
+        discovery = re.search(
+            r'<section[^>]+aria-labelledby="artist-external-links-heading"[\s\S]*?</section>',
+            artist,
+        ).group(0)
+        destinations = re.findall(r'href="(https?://[^"]+)"', discovery)
+        self.assertEqual(destinations, [
+            "https://www.nickcave.com/",
+            "https://open.spotify.com/artist/4UXJsSlnKd7ltsrHebV79Q",
+            "https://www.facebook.com/nickcaveandthebadseeds",
+            "https://www.instagram.com/nickcaveofficial/",
+            "https://www.youtube.com/nickcavetv",
+        ])
+        self.assertNotRegex(discovery, r'>\s*https?://')
+        self.assertNotIn("O Children", artist)
+        releases = re.search(
+            r'<section[^>]+aria-labelledby="artist-featured-releases-heading"[\s\S]*?</section>',
+            artist,
+        ).group(0)
+        self.assertEqual(releases.count('class="release-discover-card"'), 5)
+
     def test_del_shannon_complete_published_archive(self):
         artist_path = "/artists/d/del-shannon/"
         artist = (self.destination / artist_path.lstrip("/") / "index.html").read_text()

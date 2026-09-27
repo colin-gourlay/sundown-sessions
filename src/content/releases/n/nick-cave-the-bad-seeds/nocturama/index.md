@@ -7,8 +7,6 @@ labels:
   - Mute Records
 release_date: "2003"
 release_page: true
-shows:
-  - "9"
 tracks:
   - trackNumber: 1
     title: "Wonderful Life"

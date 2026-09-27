@@ -7,8 +7,6 @@ labels:
   - Mute Records
 release_date: "1992"
 release_page: true
-shows:
-  - "9"
 tracks:
   - trackNumber: 1
     title: "Papa Won’t Leave You, Henry"

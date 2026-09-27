@@ -8,8 +8,6 @@ labels:
 release_date: "2016"
 uk_chart_position: 1
 release_page: true
-shows:
-  - "9"
 tracks:
   - trackNumber: 1
     title: "Jesus Alone"

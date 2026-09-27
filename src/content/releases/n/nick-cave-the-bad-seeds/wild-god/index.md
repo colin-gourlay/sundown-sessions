@@ -9,7 +9,7 @@ release_date: "2024"
 uk_chart_position: 1
 release_page: true
 shows:
-  - "9"
+  - "11"
 tracks:
   - trackNumber: 1
     title: "Wild God"

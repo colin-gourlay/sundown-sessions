@@ -104,7 +104,6 @@ uk_chart_position: 2
 release_page: true
 shows:
   - "2"
-  - "9"
 duration: "1:41:11"
 tracklist_source: "https://musicbrainz.org/release/bf5a2ddc-92af-4eef-b58a-61c2b438c65b"
 tracklist_edition: "2013 XE special deluxe edition"
