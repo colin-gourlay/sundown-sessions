@@ -8,8 +8,6 @@ labels:
 release_date: "1996"
 uk_chart_position: 8
 release_page: true
-shows:
-  - "9"
 tracks:
   - trackNumber: 1
     title: "Song of Joy"

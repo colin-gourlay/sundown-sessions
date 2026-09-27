@@ -8,7 +8,7 @@ labels:
 release_date: "1994"
 release_page: true
 shows:
-  - "9"
+  - "10"
 tracks:
   - trackNumber: 1
     title: "Do You Love Me?"

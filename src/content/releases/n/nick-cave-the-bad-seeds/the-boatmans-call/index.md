@@ -8,7 +8,7 @@ labels:
 release_date: "1997"
 release_page: true
 shows:
-  - "9"
+  - "8"
 tracks:
   - trackNumber: 1
     title: "Into My Arms"

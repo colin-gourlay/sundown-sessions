@@ -8,8 +8,6 @@ labels:
 release_date: "2008"
 uk_chart_position: 4
 release_page: true
-shows:
-  - "9"
 tracks:
   - trackNumber: 1
     title: "Dig, Lazarus, Dig!!! (single version)"
