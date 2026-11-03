@@ -90,8 +90,14 @@ dotnet run \
 
 The stdio server exposes focused tools:
 
+- `show_create` creates the authoritative show that the remaining lifecycle
+  operates on. Slugs are unique; after an uncertain retry, use `show_get`
+  before attempting another create.
 - `show_get` finds a show by its authoritative identifier, slug, or broadcast
   date and surfaces multiple shows on the same date as ambiguous.
+- `recording_create` creates a Spotify or non-Spotify recording identity. Use
+  `recording_history` first and surface ambiguity rather than creating a
+  duplicate identity.
 - `show_prepare` matches a plan, checks repeats, calculates timings and rebuilds
   the numbered folder only when preparation is fully resolved.
 - `recording_resolve` records an explicit choice of a candidate returned by
@@ -116,8 +122,10 @@ The stdio server exposes focused tools:
 - `show_reconciliation_finalise` persistently finalises an
   operator-confirmed reconciliation into permanent broadcast history.
 - `show_publication_export` returns the finalised, ordered factual show state
-  needed by a repository-aware publication agent. It excludes operator notes,
-  local-file references, Todoist task references and other workflow state.
+  needed by a repository-aware publication agent. External identifiers are
+  fail-closed to an explicit set of public sources; operator notes, local-file
+  references, Todoist task references, and unknown future integration sources
+  are excluded.
 - `recording_history` returns structured permanent broadcast history for an
   exact recording identifier, exact external identifier, or an ambiguity-safe
   title/artist lookup.
@@ -133,6 +141,55 @@ and Spotify availability cannot roll back or alter authoritative history.
 The host-neutral publication procedure and its editorial, schema-drift and
 validation safeguards are documented in
 [Showrunner publication workflow](../../docs/showrunner-publication-workflow.md).
+
+## Production operation
+
+Showrunner is a local stdio service, so the chosen MCP host starts one process
+for the operator rather than exposing a network listener. Publish the Release
+build to a stable operator-owned directory and configure the host to launch the
+resulting `SundownSessions.Showrunner.Mcp` executable:
+
+```bash
+dotnet publish \
+  automation/dotnet/src/SundownSessions.Showrunner.Mcp \
+  --configuration Release \
+  --output /path/to/showrunner
+```
+
+Give the process read access to the music and Mixxx database paths and write
+access only to the configured preparation root and Showrunner database
+directory. Do not run multiple writers against the same SQLite file. Startup
+applies committed EF Core migrations before accepting MCP requests; take a
+database backup before deploying a build that contains a new migration.
+
+For an online SQLite backup while Showrunner may be running, use SQLite's
+backup command rather than copying the live database file:
+
+```bash
+sqlite3 /path/to/showrunner.db ".backup '/path/to/backups/showrunner.db'"
+sqlite3 /path/to/backups/showrunner.db "PRAGMA integrity_check;"
+```
+
+Restoration is an operator action: stop the MCP process, preserve the current
+database for diagnosis, restore a backup to the configured database path, run
+`PRAGMA integrity_check`, and then restart the MCP host. The FLAC library and
+prepared broadcast folders are not authoritative history and can be rebuilt;
+the SQLite database is authoritative and must be included in workstation
+backups.
+
+Before the first live show, exercise the workflow against disposable paths:
+create a show and recordings through MCP, refresh its plan, prepare real FLACs,
+read representative Mixxx evidence, confirm and finalise a rehearsal, rerun
+finalisation to prove the no-op response, and export the publication payload.
+Retain that rehearsal database or its results as the deployment record.
+
+Automated Spotify access remains intentionally unavailable under the policy
+boundary described above. Todoist host connectivity and permissions are also
+environment-specific and must be validated with the selected MCP host before
+those external housekeeping steps can be called production-ready. Neither
+limitation affects deterministic preparation, reconciliation, finalisation, or
+history, but both prevent claiming that the complete #818 external workflow is
+feature-complete today.
 
 ## Verify
 

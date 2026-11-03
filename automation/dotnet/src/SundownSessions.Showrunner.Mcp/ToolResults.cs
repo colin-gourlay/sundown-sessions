@@ -5,6 +5,16 @@ public sealed record ShowGetToolResult(
     ShowLookupResult? Result,
     ApplicationError? Error);
 
+public sealed record ShowCreateToolResult(
+    bool IsSuccess,
+    ShowModel? Result,
+    ApplicationError? Error);
+
+public sealed record RecordingCreateToolResult(
+    bool IsSuccess,
+    RecordingModel? Result,
+    ApplicationError? Error);
+
 public sealed record ShowPrepareToolResult(
     bool IsSuccess,
     ShowPreparationResultModel? Result,

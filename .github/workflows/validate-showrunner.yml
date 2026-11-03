@@ -31,5 +31,19 @@ jobs:
       - name: Restore dependencies
         run: dotnet restore automation/dotnet/Showrunner.sln
 
+      - name: Verify formatting
+        run: dotnet format automation/dotnet/Showrunner.sln --verify-no-changes --no-restore
+
       - name: Build and test
         run: dotnet test automation/dotnet/Showrunner.sln --configuration Release --no-restore
+
+      - name: Audit NuGet dependencies
+        run: dotnet list automation/dotnet/Showrunner.sln package --vulnerable --include-transitive --no-restore
+
+      - name: Check EF Core migration consistency
+        run: |
+          dotnet tool install --global dotnet-ef --version 10.0.11
+          dotnet ef migrations has-pending-model-changes \
+            --project automation/dotnet/src/SundownSessions.Showrunner \
+            --no-build \
+            --configuration Release

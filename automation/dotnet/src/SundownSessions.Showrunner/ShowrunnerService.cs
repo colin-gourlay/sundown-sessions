@@ -5,6 +5,16 @@ namespace SundownSessions.Showrunner;
 
 public sealed class ShowrunnerService
 {
+    private static readonly HashSet<string> PublicationExternalIdentifierSources = new(StringComparer.Ordinal)
+    {
+        "bandcamp",
+        "isrc",
+        "musicbrainz",
+        "musicbrainz-recording",
+        "musicbrainz-release-track",
+        "spotify",
+    };
+
     private readonly ShowrunnerDbContext dbContext;
     private readonly IShowrunnerClock clock;
 
@@ -1161,7 +1171,7 @@ public sealed class ShowrunnerService
     private static IReadOnlyList<ExternalIdentifierModel> MapPublicationExternalIdentifiers(
         IEnumerable<RecordingExternalIdentifierEntity> identifiers)
         => MapExternalIdentifiers(identifiers.Where(item =>
-            item.Source is not "local-file" and not "todoist"));
+            PublicationExternalIdentifierSources.Contains(item.Source)));
 
     private static BacklogItemModel Map(BacklogItemEntity backlogItem)
         => new(backlogItem.Id, backlogItem.Summary, backlogItem.RecordingId, backlogItem.Notes, backlogItem.CreatedAtUtc);

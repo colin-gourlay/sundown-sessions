@@ -33,8 +33,11 @@ must not deploy the result.
    Nullable fields remain null (and may be omitted by the MCP serialiser) rather
    than being guessed.
 5. Map the facts to the conventions found in step 1. Treat Spotify and other
-   publication-safe identifiers equally. The export deliberately omits local
-   file and backlog-workflow references.
+   returned publication-safe identifiers equally. The export uses an explicit
+   public-source allowlist and deliberately omits local files, backlog workflow
+   references, and unknown future integration sources. Adding a newly supported
+   public identifier requires an application change and privacy review; it must
+   not become public merely because it was stored on a recording.
 6. Make the smallest deterministic change. Preserve existing show notes,
    biographies, commentary, reviews, images, promotional copy and unrelated
    front matter. Do not create editorial prose to make a factual update appear
